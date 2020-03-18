@@ -13,6 +13,7 @@ import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -50,7 +51,17 @@ public class ParsePlayerObjectIntoJson {
             Type type = new TypeToken<List<Player>>(){}.getType();
             List<Player> playerList = new Gson().fromJson(new FileReader("AllPlayers.json"),type);
 //          List<Player> playerList =new ArrayList<Player>();
-          playerList.add(player);
+            Iterator<Player> itr = playerList.iterator();
+            boolean isDuplicated = false;
+            while (itr.hasNext()){
+                Player player1 = itr.next();
+                if (player1.getUserName().equals(player.getUserName())){
+                    itr.remove();
+                }
+            }
+
+              playerList.add(player);
+
           String json =new Gson().toJson(playerList);
           PrintWriter pw1 =new PrintWriter(new File("AllPlayers.json"));
           pw1.write(json);

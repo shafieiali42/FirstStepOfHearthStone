@@ -26,18 +26,20 @@ public class PlayerManagement {
         String userName = myscanner.nextLine();
         System.out.print("Password:");
         String passWord = myscanner.nextLine();
-        //TODO check that is there any player with this username and password!
         Type type = new TypeToken<List<Player>>(){}.getType();
         List<Player> playerList = new Gson().fromJson(new FileReader("AllPlayers.json"),type);
         boolean valiUserNameAndPassword=false;
         for (Player player:playerList){
+            System.out.println(player.getUserName());
             if (userName.equals(player.getUserName()) && passWord.equals(player.getPassWord())){
+                System.out.println("salam chchchch"+player.getCurrentHero().getName());
                 valiUserNameAndPassword=true;
                 CLI.currentPlayer = player;
+                CLI.currentPlayer.setSigninOrSignup("Signin");
+                player.setSigninOrSignup("Signin");
                 CLI.secondPage();
             }
         }
-
         if (!valiUserNameAndPassword){
             System.out.println("invalid username or password!");
         }
@@ -49,7 +51,6 @@ public class PlayerManagement {
         String userName = myscanner.nextLine();
         System.out.print("Password:");
         String passWord = myscanner.nextLine();
-        //TODO check if there is not any player with this username!
         Type type = new TypeToken<List<Player>>(){}.getType();
         List<Player> playerList = new Gson().fromJson(new FileReader("AllPlayers.json"),type);
         boolean canSignUp = true;
@@ -59,8 +60,11 @@ public class PlayerManagement {
             }
         }
         if(canSignUp){
+            System.out.println("you can sign up");
             Player player = new Player(userName,passWord);
             CLI.currentPlayer=player;
+            CLI.currentPlayer.setSigninOrSignup("Signup");
+            player.setSigninOrSignup("Signup");
             CLI.secondPage();
         }else{
             System.out.println("There is an account with this username!");
@@ -68,7 +72,7 @@ public class PlayerManagement {
     }
 
     public void logOut() throws IOException {
-        ParsePlayerObjectIntoJson.serializePlayer(CLI.currentPlayer);//TODO replace the information of player into AllPlayers.json
+        ParsePlayerObjectIntoJson.serializePlayer(CLI.currentPlayer);
         CLI.currentPlayer=null;
     }
 

@@ -2,7 +2,6 @@ package Player;
 
 import Cards.Cards;
 import Heroes.*;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.gson.annotations.Expose;
 
 
@@ -15,7 +14,7 @@ public class Player {
     @Expose(serialize = true,deserialize = true)
     private String passWord;
     @Expose(serialize = true,deserialize = true)
-    private boolean loginStatus = false;
+    private String SigninOrSignup ;
     @Expose(serialize = true,deserialize = true)
     private int money;
     @Expose(serialize = true,deserialize = true)
@@ -33,14 +32,14 @@ public class Player {
 
 
 
-    @Expose(serialize = false,deserialize = false)
-    private  transient ArrayList<Cards> SalableCards = new ArrayList<Cards>();
-    @Expose(serialize = false,deserialize = false)
-    private transient ArrayList<Cards> BuyableCards = new ArrayList<Cards>();
-    @Expose(serialize = false,deserialize = false)
-    private transient ArrayList<Cards> NeutralCards = new ArrayList<Cards>();
-    @Expose(serialize = false,deserialize = false)
-    private transient ArrayList<Cards> availableCardsThatWeCanAddIntoOurDeck=new ArrayList<Cards>();
+    @Expose(serialize = true,deserialize = true)
+    private ArrayList<Cards> SalableCards = new ArrayList<Cards>();
+    @Expose(serialize = true,deserialize = true)
+    private ArrayList<Cards> BuyableCards = new ArrayList<Cards>();
+    @Expose(serialize = true,deserialize = true)
+    private ArrayList<Cards> NeutralCards = new ArrayList<Cards>();
+    @Expose(serialize = true,deserialize = true)
+    private ArrayList<Cards> availableCardsThatWeCanAddIntoOurDeck=new ArrayList<Cards>();
 
 
 
@@ -91,11 +90,11 @@ public class Player {
     public void setPassWord(String passWord) {
         this.passWord = passWord;
     }
-    public boolean getLoginStatus() {
-        return loginStatus;
+    public String getSigninOrSignup() {
+        return SigninOrSignup;
     }
-    public void setLoginStatus(boolean loginStatus) {
-        this.loginStatus = loginStatus;
+    public void setSigninOrSignup(String signinOrSignup) {
+        this.SigninOrSignup = signinOrSignup;
     }
     public int getMoney() {
         return money;
