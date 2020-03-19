@@ -19,7 +19,6 @@ public class Spell extends Cards {
 
     @Override
     public String toString(){
-        return "Minion [ name: "+getName()+", manaCost: "+ getManaCost()+ ",rarity"+getRarity()+
-                ",description:"+getDescription()+",classOfCard"+getClassOfCard()+"]";
+        return "["+"Name: "+this.getName()+" ,  classOfCard: "+ this.getClassOfCard()+" , Money"+this.getMoneyCost()+" ]";
     }
 }

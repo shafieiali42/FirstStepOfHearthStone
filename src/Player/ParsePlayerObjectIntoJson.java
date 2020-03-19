@@ -72,6 +72,27 @@ public class ParsePlayerObjectIntoJson {
 
         }
 
+        public static void removePlayer(Player player) throws FileNotFoundException {
+
+            Type type = new TypeToken<List<Player>>(){}.getType();
+            List<Player> playerList = new Gson().fromJson(new FileReader("AllPlayers.json"),type);
+//          List<Player> playerList =new ArrayList<Player>();
+            Iterator<Player> itr = playerList.iterator();
+            while (itr.hasNext()){
+                Player player1 = itr.next();
+                if (player1.getUserName().equals(player.getUserName())){
+                    itr.remove();
+                }
+            }
+
+            String json =new Gson().toJson(playerList);
+            PrintWriter pw1 =new PrintWriter(new File("AllPlayers.json"));
+            pw1.write(json);
+            pw1.flush();
+            pw1.close();
+
+        }
+
         public static Player deserializePlayer(Player player) throws IOException {
 
             File f =new File("player"+player.getUserName()+"_"+player.getPassWord()+".json");

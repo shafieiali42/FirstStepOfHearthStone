@@ -1,0 +1,24 @@
+Mar 19, 2020 11:21:35 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: Davood
+Mar 19, 2020 11:21:35 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: 1
+Mar 19, 2020 11:21:35 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/19 23:21:35
+Mar 19, 2020 11:21:35 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up Davood
+Mar 19, 2020 11:21:41 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 19, 2020 11:21:49 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out Davood
+Mar 19, 2020 11:22:15 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in Davood
+Mar 19, 2020 11:22:17 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 19, 2020 11:22:20 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out Davood
+Mar 19, 2020 11:22:45 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in Davood
+Mar 19, 2020 11:26:19 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in Davood
+Mar 19, 2020 11:26:26 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store

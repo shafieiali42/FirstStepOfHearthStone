@@ -17,12 +17,22 @@ public class Warlock extends  Heroes {
     public static Warlock getInstance(){
         return instance;
     }
+
     public static void setSpecialCardsOfWarlock() {
-       for (Cards card:Cards.getAllCards()){
-           if (card.getClassOfCard().toLowerCase().trim().equals("warlock")){
-               specialCardsOfWarlock.add(card);
-           }
-       }
+        for (Cards card:Cards.getAllCards()){
+            boolean isDuplicated=false;
+            for (Cards cardInSpecialCardsOfWarlock:specialCardsOfWarlock){
+                if (card.getName().equals(cardInSpecialCardsOfWarlock.getName())){
+                    isDuplicated=true;
+                }
+            }
+            if (!isDuplicated){
+                if (card.getClassOfCard().toLowerCase().trim().equals("warlock")){
+                    specialCardsOfWarlock.add(card);
+                }
+            }
+
+        }
     }
 
     public static ArrayList<Cards> getSpecialCardsOfWarlock() {

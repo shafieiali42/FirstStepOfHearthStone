@@ -1,6 +1,8 @@
 package CommandLineInterface;
 
+import Cards.Cards;
 import Cards.Spell;
+import Log.LoggerOfProject;
 import Player.Player;
 import Player.*;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -11,13 +13,14 @@ import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.Type;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class PlayerManagement {
     static Scanner myscanner = new Scanner(System.in);
@@ -32,11 +35,13 @@ public class PlayerManagement {
         for (Player player:playerList){
             System.out.println(player.getUserName());
             if (userName.equals(player.getUserName()) && passWord.equals(player.getPassWord())){
-                System.out.println("salam chchchch"+player.getCurrentHero().getName());
                 valiUserNameAndPassword=true;
                 CLI.currentPlayer = player;
                 CLI.currentPlayer.setSigninOrSignup("Signin");
                 player.setSigninOrSignup("Signin");
+//                player.setLoggerOfMyPlayer();
+                CLI.currentPlayer.setLoggerOfMyPlayer();
+                CLI.currentPlayer.getLoggerOfMyPlayer().info("sign_in "+CLI.currentPlayer.getUserName());
                 CLI.secondPage();
             }
         }
@@ -65,6 +70,21 @@ public class PlayerManagement {
             CLI.currentPlayer=player;
             CLI.currentPlayer.setSigninOrSignup("Signup");
             player.setSigninOrSignup("Signup");
+//            FileWriter fileWriter =new FileWriter(CLI.currentPlayer.getUserName()+".log");
+//            BufferedWriter bufferedWriter =new BufferedWriter(fileWriter);
+//            bufferedWriter.write("USER: "+CLI.currentPlayer.getUserName()+"\n");
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            Calendar cal = Calendar.getInstance();
+//            bufferedWriter.write("\nCREATED_AT: "+dateFormat.format(cal.getTime())+"\n");
+//            bufferedWriter.write("\nPASSWORD: "+ CLI.currentPlayer.getPassWord()+"\n");
+//            bufferedWriter.flush();
+//            fileWriter.flush();
+//            bufferedWriter.close();
+//            fileWriter.close();
+            CLI.currentPlayer.getLoggerOfMyPlayer().info("USER: "+CLI.currentPlayer.getUserName());
+            CLI.currentPlayer.getLoggerOfMyPlayer().info("PASSWORD: "+ CLI.currentPlayer.getPassWord());
+            CLI.currentPlayer.getLoggerOfMyPlayer().info("CREATED_AT:"+dateFormat.format(cal.getTime()));
+            CLI.currentPlayer.getLoggerOfMyPlayer().info("sign_up "+CLI.currentPlayer.getUserName());
             CLI.secondPage();
         }else{
             System.out.println("There is an account with this username!");
@@ -73,6 +93,8 @@ public class PlayerManagement {
 
     public void logOut() throws IOException {
         ParsePlayerObjectIntoJson.serializePlayer(CLI.currentPlayer);
+        CLI.currentPlayer.getLoggerOfMyPlayer().info("Log_out "+CLI.currentPlayer.getUserName());
+        CLI.currentPlayer.getLoggerOfMyPlayer().getHandlers()[0].close();
         CLI.currentPlayer=null;
     }
 
@@ -80,8 +102,32 @@ public class PlayerManagement {
         System.out.print("Password:");
         String password = myscanner.nextLine();
         if (password.equals(CLI.currentPlayer.getPassWord())){
-            //TODO remove player from AllPlayers.json
-            logOut();
+            File temp =new File("tem.log");
+            FileReader fileReader =new FileReader(CLI.currentPlayer.getUserName()+".log");
+            BufferedReader bufferedReader =new BufferedReader(fileReader);
+            FileWriter fileWriter =new FileWriter(temp);
+            BufferedWriter bufferedWriter =new BufferedWriter(fileWriter);
+            String st = new String();
+            while ((st=bufferedReader.readLine()) !=null){
+                bufferedWriter.write(st+"\n");
+                if (st.startsWith("PASSWORD")){
+                    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                    Calendar cal = Calendar.getInstance();
+                    bufferedWriter.write("DELETED_AT: "+dateFormat.format(cal.getTime()));
+                }
+            }
+
+            fileReader.close();fileWriter.close();bufferedReader.close();bufferedWriter.close();
+            FileReader fileReader1 =new FileReader(temp);
+            FileWriter fileWriter1 =new FileWriter(CLI.currentPlayer.getUserName()+".log");
+            BufferedReader bufferedReader1 =new BufferedReader(fileReader1);
+            BufferedWriter bufferedWriter1 =new BufferedWriter(fileWriter1);
+            String string =new String();
+            while ((string=bufferedReader1.readLine()) != null){
+                bufferedWriter1.write(string+"\n");
+            }
+            fileReader1.close();fileWriter1.flush();fileWriter1.close();bufferedReader1.close();bufferedWriter1.flush();bufferedWriter1.close();
+            ParsePlayerObjectIntoJson.removePlayer(CLI.currentPlayer);
             System.exit(0);
         }else {
             System.out.println("your password is incorrect!");

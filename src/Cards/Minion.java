@@ -29,9 +29,7 @@ public class Minion extends Cards {
 
     @Override
     public String toString(){
-        return "Minion [ name: "+getName()+", manaCost: "+ getManaCost()+ ",rarity: "+getRarity()+
-                " ,description: "+getDescription()+",classOfCard: "+getClassOfCard()+",attackPower: "+
-                attackPower+",healthPower: "+healthPower+"]";
+        return "["+"Name: "+this.getName()+" ,  classOfCard: "+ this.getClassOfCard()+" , Money"+this.getMoneyCost()+" ]";
     }
 
 

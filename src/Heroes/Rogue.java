@@ -20,9 +20,18 @@ public class Rogue extends Heroes {
 
     public static void setSpecialCardsOfRogue() {
         for (Cards card:Cards.getAllCards()){
-            if (card.getClassOfCard().toLowerCase().trim().equals("rogue")){
-                specialCardsOfRogue.add(card);
+            boolean isDuplicated=false;
+            for (Cards cardInSpecialCardsOfRogue:specialCardsOfRogue){
+                if (card.getName().equals(cardInSpecialCardsOfRogue.getName())){
+                    isDuplicated=true;
+                }
             }
+            if (!isDuplicated){
+                if (card.getClassOfCard().toLowerCase().trim().equals("rogue")){
+                    specialCardsOfRogue.add(card);
+                }
+            }
+
         }
     }
 

@@ -1,10 +1,12 @@
 package CommandLineInterface;
 
 import Cards.Cards;
+import Log.LoggerOfProject;
 
 import javax.smartcardio.Card;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 import static CommandLineInterface.CLI.FirstPage;
 import static CommandLineInterface.CLI.secondPage;
@@ -48,19 +50,29 @@ public class ShopManagement {
                             System.exit(0);
                             break;
                         case "wallet":
+                            CLI.currentPlayer.getLoggerOfMyPlayer().info("Show my walle");
                             System.out.println(CLI.currentPlayer.getMoney());
                             break;
                         case "ls -s":
+                            CLI.currentPlayer.getLoggerOfMyPlayer().info("List: Salable Cards");
                             System.out.println(CLI.currentPlayer.getSalableCards());
                             break;
 
                         case "ls -b":
+                            CLI.currentPlayer.getLoggerOfMyPlayer().info("List: Buyable Cards");
                             System.out.println(CLI.currentPlayer.getBuyableCards());
                             break;
 
                         case "return":
                             secondPage();
-
+                            break;
+                        case  "hearthstone --help":
+                            System.out.print("\tpress exit in order to logout\n\tpress exit -a in order to exit program\n\t" +
+                                    "press wallet in order to see your wallet\n\t" +
+                                    "press ls -s in order to see your salable cards\n\t" +
+                                    "press ls -b in order to see your buyable cards\n\tpress sell in order to sell a card\n\t" +
+                                    "press buy in order to buy a card\n");
+                            break;
                         default:
                             System.out.println(" Please Enter a valid command!");
                     }

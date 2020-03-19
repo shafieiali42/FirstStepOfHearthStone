@@ -1,10 +1,12 @@
 package CommandLineInterface;
 
 import Cards.Minion;
+import Log.LoggerOfProject;
 import Player.Player;
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class CLI {
     public static Player currentPlayer ;
@@ -36,6 +38,10 @@ public class CLI {
                 case "exit_a":
                     System.exit(0);
                     break;
+                case  "hearthstone --help":
+                    System.out.print("\tpress y in order to sign in\n\tpress n in order to sign up\n\t" +
+                                    "press exit -a in order to exit program\n");
+                    break;
                 default:
                     System.out.println(" Please Enter a valid command!");
             }
@@ -61,10 +67,18 @@ public class CLI {
                     playerManagement.DeletePlayer();
                     break;
                 case "collections":
+                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate: Collections");
                     CollectionManagement.CollectionPage();
                     break;
                 case "store":
+                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate: Store");
                     ShopManagement.ShopPage();
+                    break;
+                case  "hearthstone --help":
+                    System.out.print("\tpress exit in order to logout\n\tpress exit -a in order to exit program\n\t" +
+                            "press delete -player in order to Delete Your Account\n\t" +
+                            "press collections in order to go to collection page\n\t" +
+                            "press store in order to go to store page.\n");
                     break;
                 default:
                     System.out.println(" Please Enter a valid command!");

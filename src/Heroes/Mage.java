@@ -20,9 +20,18 @@ public class Mage extends Heroes {
 
     public static void setSpecialCardsOfMage() {
         for (Cards card:Cards.getAllCards()){
-            if (card.getClassOfCard().toLowerCase().trim().equals("mage")){
-                specialCardsOfMage.add(card);
+            boolean isDuplicated=false;
+            for (Cards cardInSpecialCardsOfMage:specialCardsOfMage){
+                if (card.getName().equals(cardInSpecialCardsOfMage.getName())){
+                    isDuplicated=true;
+                }
             }
+            if (!isDuplicated){
+                if (card.getClassOfCard().toLowerCase().trim().equals("mage")){
+                    specialCardsOfMage.add(card);
+                }
+            }
+
         }
     }
 
