@@ -36,21 +36,30 @@ public class CollectionManagement {
             }else {
                 if (input.length()>7 && input.substring(0, 5).equals("add [") && input.charAt(input.length() - 1) == ']') {
                     String cardsNameToAddToDeck = input.substring(5, input.length()-1).toLowerCase().trim();
-                    for (Cards card: Cards.getAllCards()){
-                        if (card.getName().toLowerCase().trim().equals(cardsNameToAddToDeck.toLowerCase().trim())){
-                            CLI.currentPlayer.addToDeck(card);
-                            System.out.println("added");
-                            break;
+                    if (currentPlayer.getAvailableDeckWithThisSituation().size()<15){
+                        for (Cards card: Cards.getAllCards()){
+                            if (card.getName().toLowerCase().trim().equals(cardsNameToAddToDeck.toLowerCase().trim())){
+                                CLI.currentPlayer.addToDeck(card);
+                                System.out.println("added");
+                                break;
+                            }
                         }
+                    }else{
+                        System.out.println("You cant add more than 15 cards into your deck!");
                     }
+
                 }else {
                     if (input.length()>10 && input.substring(0, 8).equals("remove [") && input.charAt(input.length() - 1) == ']'){
                         String cardsNameToRemoveFromDeck= input.substring(8, input.length()-1);
-                        for (Cards card: Cards.getAllCards()){
-                            if (card.getName().toLowerCase().trim().equals(cardsNameToRemoveFromDeck.toLowerCase().trim())){
-                                CLI.currentPlayer.removeFromDeck(card);
-                                break;
+                        if (currentPlayer.getAvailableDeckWithThisSituation().size()>0){
+                            for (Cards card: Cards.getAllCards()){
+                                if (card.getName().toLowerCase().trim().equals(cardsNameToRemoveFromDeck.toLowerCase().trim())){
+                                    CLI.currentPlayer.removeFromDeck(card);
+                                    break;
+                                }
                             }
+                        }else {
+                            System.out.println("There is not any card in your deck!");
                         }
                     }else{
                         switch (input){

@@ -345,72 +345,96 @@ public class Player {
 
 
     public void addToDeck(Cards card) throws IOException {
-        for (Cards cardsInAvailableCardInThisSituation:availableCardsWithThisSituation){
-            if (cardsInAvailableCardInThisSituation.getName().equals(card.getName())){
-                System.out.println("yes");
-                switch(currentHero.getName()){
-                    case "Mage":
-                        System.out.println(card.getClassOfCard());
-                        if (card.getClassOfCard().toLowerCase().trim().equals("mage")
-                                ||card.getClassOfCard().toLowerCase().trim().equals("neutral")  ){
-                            DeckOfPlayerForMage.add(card);
-                        }
-                        CLI.currentPlayer.getLoggerOfMyPlayer().info("Add: "+card.getName()+"Heroe Name: Mage");
-                        break;
-                    case "Rogue":
-                        if (card.getClassOfCard().toLowerCase().trim().equals("Rogue")
-                                ||card.getClassOfCard().toLowerCase().trim().equals("neutral")){
-                            DeckOfPlayerForRogue.add(card);
-                        }
-                        CLI.currentPlayer.getLoggerOfMyPlayer().info("Add: "+card.getName()+"Heroe Name: Rogue");
-                        break;
-                    case "Warlock":
-                        if (card.getClassOfCard().toLowerCase().trim().equals("Warlock")
-                                ||card.getClassOfCard().toLowerCase().trim().equals("neutral")){
-                            DeckOfPlayerForWarlock.add(card);
-                        }
-                        CLI.currentPlayer.getLoggerOfMyPlayer().info("Add: "+card.getName()+"Heroe Name: Warlock");
-                        break;
-
-                }
+        int numberOfThisCardInMyDeck=0;
+        for (Cards cardsInAvailableDeck:getAvailableDeckWithThisSituation()){
+            if (cardsInAvailableDeck.getName().toLowerCase().trim().equalsIgnoreCase(card.getName())){
+                numberOfThisCardInMyDeck++;
             }
         }
+        if (numberOfThisCardInMyDeck<=1){
+            for (Cards cardsInAvailableCardInThisSituation:availableCardsWithThisSituation){
+                if (cardsInAvailableCardInThisSituation.getName().equals(card.getName())){
+                    switch(currentHero.getName()){
+                        case "Mage":
+                            System.out.println(card.getClassOfCard());
+                            if (card.getClassOfCard().toLowerCase().trim().equals("mage")
+                                    ||card.getClassOfCard().toLowerCase().trim().equals("neutral")  ){
+                                DeckOfPlayerForMage.add(card);
+                            }
+                            CLI.currentPlayer.getLoggerOfMyPlayer().info("Add: "+card.getName()+"Heroe Name: Mage");
+                            break;
+                        case "Rogue":
+                            if (card.getClassOfCard().toLowerCase().trim().equals("Rogue")
+                                    ||card.getClassOfCard().toLowerCase().trim().equals("neutral")){
+                                DeckOfPlayerForRogue.add(card);
+                            }
+                            CLI.currentPlayer.getLoggerOfMyPlayer().info("Add: "+card.getName()+"Heroe Name: Rogue");
+                            break;
+                        case "Warlock":
+                            if (card.getClassOfCard().toLowerCase().trim().equals("Warlock")
+                                    ||card.getClassOfCard().toLowerCase().trim().equals("neutral")){
+                                DeckOfPlayerForWarlock.add(card);
+                            }
+                            CLI.currentPlayer.getLoggerOfMyPlayer().info("Add: "+card.getName()+"Heroe Name: Warlock");
+                            break;
+
+                    }
+                }
+            }
             setAvailableCardsThatWeCanAddIntoOurDeck();
+
+        }else {
+            System.out.println("You can not have more than 2 same cards!");
+        }
+
     }
 
     public void removeFromDeck(Cards card) throws IOException {
-                switch (currentHero.getName()) {
-                    case "Mage":
-                        Iterator<Cards> itr = DeckOfPlayerForMage.iterator();
-                        while (itr.hasNext()){
-                            Cards cardsInDeckForMage = itr.next();
-                            if (cardsInDeckForMage.getName().equals(card.getName())){
-                                itr.remove();
-                            }
+        boolean isThisCardInMyDeck=false;
+        for (Cards cardsInAvailableDeck:getAvailableDeckWithThisSituation()){
+            if (cardsInAvailableDeck.getName().toLowerCase().trim().equalsIgnoreCase(card.getName())){
+                isThisCardInMyDeck=true;
+            }
+        }
+        if (isThisCardInMyDeck){
+            switch (currentHero.getName()) {
+                case "Mage":
+                    Iterator<Cards> itr = DeckOfPlayerForMage.iterator();
+                    while (itr.hasNext()){
+                        Cards cardsInDeckForMage = itr.next();
+                        if (cardsInDeckForMage.getName().equals(card.getName())){
+                            itr.remove();
                         }
-                        CLI.currentPlayer.getLoggerOfMyPlayer().info("Remove: "+card.getName()+"Heroe Name:Mage");
-                        break;
-                    case "Rogue":
-                        Iterator<Cards> itr2 = DeckOfPlayerForRogue.iterator();
-                        while (itr2.hasNext()){
-                            Cards cardsInDeckForRogue = itr2.next();
-                            if (cardsInDeckForRogue.getName().equals(card.getName())){
-                                itr2.remove();
-                            }
+                    }
+                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Remove: "+card.getName()+"Heroe Name:Mage");
+                    break;
+                case "Rogue":
+                    Iterator<Cards> itr2 = DeckOfPlayerForRogue.iterator();
+                    while (itr2.hasNext()){
+                        Cards cardsInDeckForRogue = itr2.next();
+                        if (cardsInDeckForRogue.getName().equals(card.getName())){
+                            itr2.remove();
                         }
-                        CLI.currentPlayer.getLoggerOfMyPlayer().info("Remove: "+card.getName()+"Heroe Name: Rogue");
-                        break;
-                    case "Warlock":
-                        Iterator<Cards> itr3 = DeckOfPlayerForWarlock.iterator();
-                        while (itr3.hasNext()){
-                            Cards cardsInDeckForWarlock = itr3.next();
-                            if (cardsInDeckForWarlock.getName().equals(card.getName())){
-                                itr3.remove();
-                            }
+                    }
+                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Remove: "+card.getName()+"Heroe Name: Rogue");
+                    break;
+                case "Warlock":
+                    Iterator<Cards> itr3 = DeckOfPlayerForWarlock.iterator();
+                    while (itr3.hasNext()){
+                        Cards cardsInDeckForWarlock = itr3.next();
+                        if (cardsInDeckForWarlock.getName().equals(card.getName())){
+                            itr3.remove();
                         }
-                        CLI.currentPlayer.getLoggerOfMyPlayer().info("Remove: "+card.getName()+"Heroe Name: Warlock");
-                        break;
-                }
-                setAvailableCardsThatWeCanAddIntoOurDeck();
+                    }
+                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Remove: "+card.getName()+"Heroe Name: Warlock");
+                    break;
+            }
+            setAvailableCardsThatWeCanAddIntoOurDeck();
+        }else {
+            System.out.println("You don have this card in your deck!");
+        }
+
     }
+
+
 }

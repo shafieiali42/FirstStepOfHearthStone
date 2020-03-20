@@ -721,4 +721,3 @@ Mar 20, 2020 6:18:58 PM Player.Player removeFromDeck
 INFO: Remove: Stormwind KnightHeroe Name:Mage
 Mar 20, 2020 6:19:22 PM CommandLineInterface.CollectionManagement CollectionPage
 INFO: Show My Deck.
-Deleted Account!

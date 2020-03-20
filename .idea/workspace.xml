@@ -2,21 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3c03568-dd24-4d96-9cd6-b9cb7524ca1b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/temp.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ali Sahfiei.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/AllPlayers.json" beforeDir="false" afterPath="$PROJECT_DIR$/AllPlayers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/CommandLineInterface/PlayerManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/CommandLineInterface/PlayerManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/n.log" beforeDir="false" afterPath="$PROJECT_DIR$/n.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/CommandLineInterface/CollectionManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/CommandLineInterface/CollectionManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Heroes/Rogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Heroes/Rogue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Heroes/Warlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Heroes/Warlock.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cards/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards/Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player4_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerAbbas_123.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerAli Sahfiei_1380.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerAli_Sahfiei.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerDavood_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerFaraz_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerMehrshad_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerRealmadrid_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerbateni_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerhh_gg.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerlll_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playermm_mm.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playermn_mn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playern_n.json" beforeDir="false" afterPath="$PROJECT_DIR$/playern_n.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerp;_p;.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerss_ss.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/playervarzesh_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/q.log.lck" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CommandLineInterface/CollectionManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandLineInterface/CollectionManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CommandLineInterface/PlayerManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandLineInterface/PlayerManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Heroes/Heroes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heroes/Heroes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Heroes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heroes/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Heroes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heroes/Rogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Heroes/Warlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heroes/Warlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +65,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RunManager" selected="Application.main">
     <configuration name="JsonReaderForSpells" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -181,22 +196,22 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="627" y="235" key="FileChooserDialogImpl/0.0.1536.826@0.0.1536.826" timestamp="1584634913720" />
-    <state width="1492" height="272" key="GridCell.Tab.0.bottom" timestamp="1584709334382">
+    <state width="1492" height="272" key="GridCell.Tab.0.bottom" timestamp="1584715872033">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="272" key="GridCell.Tab.0.bottom/0.0.1536.826@0.0.1536.826" timestamp="1584709334382" />
-    <state width="1492" height="272" key="GridCell.Tab.0.center" timestamp="1584709334381">
+    <state width="1492" height="272" key="GridCell.Tab.0.bottom/0.0.1536.826@0.0.1536.826" timestamp="1584715872033" />
+    <state width="1492" height="272" key="GridCell.Tab.0.center" timestamp="1584715872033">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="272" key="GridCell.Tab.0.center/0.0.1536.826@0.0.1536.826" timestamp="1584709334381" />
-    <state width="1492" height="272" key="GridCell.Tab.0.left" timestamp="1584709334381">
+    <state width="1492" height="272" key="GridCell.Tab.0.center/0.0.1536.826@0.0.1536.826" timestamp="1584715872033" />
+    <state width="1492" height="272" key="GridCell.Tab.0.left" timestamp="1584715872032">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="272" key="GridCell.Tab.0.left/0.0.1536.826@0.0.1536.826" timestamp="1584709334381" />
-    <state width="1492" height="272" key="GridCell.Tab.0.right" timestamp="1584709334381">
+    <state width="1492" height="272" key="GridCell.Tab.0.left/0.0.1536.826@0.0.1536.826" timestamp="1584715872032" />
+    <state width="1492" height="272" key="GridCell.Tab.0.right" timestamp="1584715872033">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="272" key="GridCell.Tab.0.right/0.0.1536.826@0.0.1536.826" timestamp="1584709334381" />
+    <state width="1492" height="272" key="GridCell.Tab.0.right/0.0.1536.826@0.0.1536.826" timestamp="1584715872033" />
     <state width="1492" height="256" key="GridCell.Tab.1.bottom" timestamp="1584642204919">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
@@ -217,10 +232,10 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="439" y="117" key="NewModule_or_Project.wizard/0.0.1536.826@0.0.1536.826" timestamp="1584634687197" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1584651249116">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1584710076626">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.826@0.0.1536.826" timestamp="1584651249116" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.826@0.0.1536.826" timestamp="1584710076626" />
     <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1584679447979">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
@@ -237,9 +252,9 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="425" y="182" key="run.anything.popup/0.0.1536.826@0.0.1536.826" timestamp="1584650606421" />
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1584650638469">
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1584709930824">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1584650638469" />
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1584709930824" />
   </component>
 </project>
