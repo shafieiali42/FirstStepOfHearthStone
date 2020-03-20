@@ -55,7 +55,7 @@ public class Player {
         return loggerOfMyPlayer;
     }
     public void setLoggerOfMyPlayer() throws IOException {
-        this.loggerOfMyPlayer=LoggerOfProject.getMyLogger(this.getUserName()+".log");
+        this.loggerOfMyPlayer=LoggerOfProject.getMyLogger(this.getUserName()+".txt");
     }
 
     @Expose(serialize = true,deserialize = true)

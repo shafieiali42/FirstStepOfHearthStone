@@ -1,0 +1,14 @@
+Mar 20, 2020 12:59:30 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: 4
+Mar 20, 2020 12:59:30 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: 4
+DELETED_AT: 2020/03/20 01:00:15Mar 20, 2020 12:59:30 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 00:59:30
+Mar 20, 2020 12:59:30 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up 4
+Mar 20, 2020 12:59:38 AM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 12:59:45 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out 4
+Mar 20, 2020 1:00:07 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in 4
