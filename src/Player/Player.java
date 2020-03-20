@@ -7,8 +7,10 @@ import Log.LoggerOfProject;
 import com.google.gson.annotations.Expose;
 
 
+import javax.smartcardio.Card;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.TreeSet;
 import java.util.logging.Logger;
@@ -37,60 +39,78 @@ public class Player {
     private ArrayList<Heroes> availableHeroes = new ArrayList<Heroes>();
     @Expose(serialize = false,deserialize = false)
     private transient Logger loggerOfMyPlayer;
-
-
-
-
-    public TreeSet<Cards> getAllCardsOfPlayer() {
-        return allCardsOfPlayer;
-    }
-    public void setAllCardsOfPlayer() {
-        allCardsOfPlayer.addAll(availableCardsWithThisSituation);
-        allCardsOfPlayer.addAll(Mage.getSpecialCardsOfMage());
-        allCardsOfPlayer.addAll(Rogue.getSpecialCardsOfRogue());
-        allCardsOfPlayer.addAll(Warlock.getSpecialCardsOfWarlock());
-    }
-
-    public Logger getLoggerOfMyPlayer() {
-        return loggerOfMyPlayer;
-    }
-    public void setLoggerOfMyPlayer() throws IOException {
-        this.loggerOfMyPlayer=LoggerOfProject.getMyLogger(this.getUserName()+".txt");
-    }
-
     @Expose(serialize = true,deserialize = true)
-    private TreeSet<Cards> allCardsOfPlayer = new TreeSet<Cards>();
-
+    private ArrayList<Cards> allCardsOfPlayer = new ArrayList<Cards>();
 
     @Expose(serialize = true,deserialize = true)
     private ArrayList<Cards> SalableCards = new ArrayList<Cards>();
     @Expose(serialize = true,deserialize = true)
     private ArrayList<Cards> BuyableCards = new ArrayList<Cards>();
     @Expose(serialize = true,deserialize = true)
-    private ArrayList<Cards> NeutralCards = new ArrayList<Cards>();
+    private ArrayList<Cards> NeutralCardsOfPlayer = new ArrayList<Cards>();
     @Expose(serialize = true,deserialize = true)
     private ArrayList<Cards> availableCardsThatWeCanAddIntoOurDeck=new ArrayList<Cards>();
+
+    public ArrayList<Cards> getAllCardsOfPlayer() {
+        return allCardsOfPlayer;
+    }
+    public void setAllCardsOfPlayer() {
+        int i=0;
+            for (Cards card: Cards.getAllCards()){
+                if (i<9){
+                    if (card.getClassOfCard().toLowerCase().trim().equals("neutral")){
+                        allCardsOfPlayer.add(card);
+                        i++;
+                    }
+                }else{
+                    break;
+                }
+            }
+
+        allCardsOfPlayer.add(Mage.getSpecialCardsOfMage().get(0));
+    }
+
+    public Logger getLoggerOfMyPlayer() {
+        return loggerOfMyPlayer;
+    }
+    public void setLoggerOfMyPlayer() throws IOException {
+        this.loggerOfMyPlayer=LoggerOfProject.getMyLogger(this.getUserName()+".log");
+    }
+
+
+
+
+
 
 
 
 
     public void setAvailableCardsThatWeCanAddIntoOurDeck() {
+        availableCardsThatWeCanAddIntoOurDeck.clear();
         for (Cards card:availableCardsWithThisSituation){
             boolean canAddIntoDeck=true;
             for (Cards cardThatIsInOurDeck:getAvailableDeckWithThisSituation()){
-                if (card.getName().equals(cardThatIsInOurDeck.getName())){
+                if (card.getName().trim().equalsIgnoreCase(cardThatIsInOurDeck.getName())){
                     canAddIntoDeck=false;
                 }
             }
-            if (canAddIntoDeck){
+            boolean isDuplicated=false;
+            for (Cards cardInAvailableCardsThatWeCanAddIntoOurDeck:availableCardsThatWeCanAddIntoOurDeck){
+                if (card.getName().equals(cardInAvailableCardsThatWeCanAddIntoOurDeck.getName())){
+                    isDuplicated =true;
+                }
+            }
+            if (canAddIntoDeck && !isDuplicated){
                 this.availableCardsThatWeCanAddIntoOurDeck.add(card);
             }
         }
+        System.out.println("available cards with this su..."+availableCardsThatWeCanAddIntoOurDeck.size());
     }
 
 
 
     public void setBuyableCards(){
+        BuyableCards.clear();
         for (Cards card :Cards.getAllCards()){
             boolean isDuplicated =false;
             for (Cards cardInBuyableCards:BuyableCards){
@@ -98,26 +118,36 @@ public class Player {
                     isDuplicated=true;
                 }
             }
-            boolean isInAvailableCardsWithThisSituation=false;
+            boolean isInAllCardsOfPlayer=false;
             if (!isDuplicated){
-                for (Cards cardInAvailableCardsWithThisSituation:availableCardsWithThisSituation){
+                for (Cards cardInAvailableCardsWithThisSituation:allCardsOfPlayer){
                     if (card.getName().equals(cardInAvailableCardsWithThisSituation.getName())){
-                        isInAvailableCardsWithThisSituation=true;
+                        isInAllCardsOfPlayer=true;
                     }
                 }
-                if (!isInAvailableCardsWithThisSituation){
+                if (!isInAllCardsOfPlayer){
                     BuyableCards.add(card);
                 }
             }
 
         }
     };
+
     public void setSalableCards(){
-        for (Cards card:availableCardsWithThisSituation){
-            for (Cards cardsAvailableToAddIntoOurDeck:availableCardsThatWeCanAddIntoOurDeck){
-                if (card.getName().equals(cardsAvailableToAddIntoOurDeck.getName())){
-                    SalableCards.add(card);
+        SalableCards.clear();
+        HashSet<Cards> mergedSetOfAllDeck = new HashSet<Cards>();
+        mergedSetOfAllDeck.addAll(DeckOfPlayerForMage);
+        mergedSetOfAllDeck.addAll(DeckOfPlayerForRogue);
+        mergedSetOfAllDeck.addAll(DeckOfPlayerForWarlock);
+        for (Cards card:allCardsOfPlayer){
+            boolean isInMyDecks = false;
+            for (Cards cardsInMyDecks:mergedSetOfAllDeck){
+                if (card.getName().equals(cardsInMyDecks.getName())){
+                    isInMyDecks=true;
                 }
+            }
+            if (!isInMyDecks){
+                SalableCards.add(card);
             }
         }
     };
@@ -168,8 +198,8 @@ public class Player {
     public void setAvailableHeroes(ArrayList<Heroes> availableHeroes) {
         this.availableHeroes = availableHeroes;
     }
-    public ArrayList<Cards> getNeutralCards() {
-        return NeutralCards;
+    public ArrayList<Cards> getNeutralCardsOfPlayer() {
+        return NeutralCardsOfPlayer;
     }
     public ArrayList<Cards> getAvailableCardsWithThisSituation() {
         return availableCardsWithThisSituation;
@@ -180,10 +210,11 @@ public class Player {
         this.userName=userName;
         this.passWord=passWord;
         this.availableHeroes.add(Mage.getInstance());
-        this.availableHeroes.add(Rogue.getInstance());
-        this.availableHeroes.add(Warlock.getInstance());
-        System.out.println(NeutralCards.size());
-        this.setNeutralCards();
+        this.setAllCardsOfPlayer();
+        this.setNeutralCardsOfPlayer();
+//        this.availableHeroes.add(Rogue.getInstance());//TODO this hero is lock!
+//        this.availableHeroes.add(Warlock.getInstance());//TODO this hero is lock!
+
         this.setAvailableCardsWithThisSituation();
         this.setAvailableCardsThatWeCanAddIntoOurDeck();
         setBuyableCards();
@@ -209,27 +240,27 @@ public class Player {
     public void setAvailableCardsWithThisSituation(){
         if (currentHero.getName().equals("Mage")){
             ArrayList<Cards> mergedList = new ArrayList<Cards>();
-            for (Cards cards:NeutralCards){
+            for (Cards cards: NeutralCardsOfPlayer){
                 mergedList.add(cards);
             }
-            mergedList.addAll(Mage.getSpecialCardsOfMage());//Todo problemmmmmmmmmmmmmmmmm
+            mergedList.add(Mage.getSpecialCardsOfMage().get(0));//Todo problemmmmmmmmmmmmmmmmm
             availableCardsWithThisSituation=mergedList;
 
         }
         if (currentHero.getName().equals("Rogue")){
             ArrayList<Cards> mergedList = new ArrayList<Cards>();
-            for (Cards cards:NeutralCards){
+            for (Cards cards: NeutralCardsOfPlayer){
                 mergedList.add(cards);
             }
-            mergedList.addAll(Rogue.getSpecialCardsOfRogue());
+            mergedList.add(Rogue.getSpecialCardsOfRogue().get(0));
             availableCardsWithThisSituation=mergedList;
         }
         if (currentHero.getName().equals("Warlock")){
             ArrayList<Cards> mergedList = new ArrayList<Cards>();
-            for (Cards cards:NeutralCards){
+            for (Cards cards: NeutralCardsOfPlayer){
                 mergedList.add(cards);
             }
-            mergedList.addAll(Warlock.getSpecialCardsOfWarlock());
+            mergedList.add(Warlock.getSpecialCardsOfWarlock().get(0));
             availableCardsWithThisSituation=mergedList;
         }
         setBuyableCards();
@@ -237,40 +268,79 @@ public class Player {
     }
 
     public void buy(Cards card) throws IOException {
+        boolean canBuyThisCard= false;
         for (Cards cardInBuyableCards:BuyableCards){
             if (card.getName().equals(cardInBuyableCards.getName())&&this.money>=card.getMoneyCost()){
-                allCardsOfPlayer.add(card);
-                setAvailableCardsWithThisSituation();
+//                allCardsOfPlayer.add(card);
                 this.money-=card.getMoneyCost();
                 CLI.currentPlayer.getLoggerOfMyPlayer().info("Buy: "+card.getName());
+                canBuyThisCard=true;
+
             }
         }
+        if (canBuyThisCard){
+            Iterator<Cards> itr =BuyableCards.iterator();
+            while (itr.hasNext()){
+                Cards card1 =itr.next();
+                if (card.getName().equalsIgnoreCase(card1.getName())){
+                    itr.remove();
+                }
+            }
+        }
+
+        if (canBuyThisCard){
+            allCardsOfPlayer.add(card);
+        }
+        if (!canBuyThisCard){
+            System.out.println("you cant buy this cart");
+        }
+        setAvailableCardsWithThisSituation();
+        setBuyableCards();
     }
 
-    public void setNeutralCards() {//TODO needs to check!
-        for (Cards card :Cards.getAllCards()){
+
+    public void setNeutralCardsOfPlayer() {//TODO needs to check!
+        for (Cards card :this.allCardsOfPlayer){
             if (card.getClassOfCard().toLowerCase().trim().equals("neutral")){
-                NeutralCards.add(card);
+                NeutralCardsOfPlayer.add(card);
 
             }
         }
     }
 
     public void sell(Cards card) throws IOException {
+        System.out.println("in sell founc!");
+        boolean canSellThisCard=false;
         for (Cards cardInSalableCards:SalableCards){
             if (card.getName().equals(cardInSalableCards.getName())){
-                allCardsOfPlayer.remove(card);
-                setAvailableCardsWithThisSituation();
                 this.money+=card.getMoneyCost();
                 CLI.currentPlayer.getLoggerOfMyPlayer().info("Sell: "+card.getName());
+                canSellThisCard=true;
+                Iterator<Cards> itr =allCardsOfPlayer.iterator();
+                while (itr.hasNext()){
+                    Cards card1 =itr.next();
+                    if (card.getName().equalsIgnoreCase(card1.getName())){
+                        itr.remove();
+                    }
+                }
             }
         }
+        if (!canSellThisCard){
+            System.out.println("you dont have this card!");
+        }
+        setAvailableCardsWithThisSituation();
+        setSalableCards();
     }
 
     public void selectHero(Heroes hero) throws IOException {
-        this.currentHero=hero;
-        setAvailableCardsWithThisSituation();
-        CLI.currentPlayer.getLoggerOfMyPlayer().info("Select :" +hero.getName());
+        if (!hero.getIsLock()){
+            this.currentHero=hero;
+            setAvailableCardsWithThisSituation();
+            CLI.currentPlayer.getLoggerOfMyPlayer().info("Select :" +hero.getName());
+        }else {
+            System.out.println("Unfortunately this hero is lock for you!");
+        }
+
     }
 
 
@@ -305,12 +375,10 @@ public class Player {
                 }
             }
         }
-
+            setAvailableCardsThatWeCanAddIntoOurDeck();
     }
 
     public void removeFromDeck(Cards card) throws IOException {
-        System.out.println("Deck");
-        System.out.println(getAvailableDeckWithThisSituation());
                 switch (currentHero.getName()) {
                     case "Mage":
                         Iterator<Cards> itr = DeckOfPlayerForMage.iterator();
@@ -343,5 +411,6 @@ public class Player {
                         CLI.currentPlayer.getLoggerOfMyPlayer().info("Remove: "+card.getName()+"Heroe Name: Warlock");
                         break;
                 }
+                setAvailableCardsThatWeCanAddIntoOurDeck();
     }
 }

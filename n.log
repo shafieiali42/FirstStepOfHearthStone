@@ -1,0 +1,574 @@
+Mar 20, 2020 12:17:59 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 12:17:59 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 12:17:59
+Mar 20, 2020 12:17:59 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 12:17:59 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 12:18:03 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 12:18:05 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 12:18:15 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 12:18:19 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 12:18:23 PM CommandLineInterface.ShopManagement ShopPage
+INFO: Show my walle
+Mar 20, 2020 12:37:18 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 12:37:25 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show My Deck.
+Mar 20, 2020 12:37:31 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 12:39:26 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 12:39:26 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 12:39:26
+Mar 20, 2020 12:39:26 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 12:39:26 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 12:39:28 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 12:39:31 PM CommandLineInterface.ShopManagement ShopPage
+INFO: Show my walle
+Mar 20, 2020 12:39:33 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 12:39:46 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 12:39:52 PM CommandLineInterface.ShopManagement ShopPage
+INFO: Show my walle
+Mar 20, 2020 12:39:54 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 12:40:03 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 12:40:08 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 12:41:06 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 12:41:06 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 12:41:06
+Mar 20, 2020 12:41:06 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 12:41:06 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 12:41:09 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 12:41:17 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 12:41:39 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 12:41:52 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 12:41:56 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 12:42:30 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 12:42:30 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 12:42:30
+Mar 20, 2020 12:42:30 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 12:42:30 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 12:42:32 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 12:42:44 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 12:50:27 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 12:50:27 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 12:50:27
+Mar 20, 2020 12:50:27 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 12:50:27 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 12:50:30 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 12:50:32 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 12:50:42 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 12:52:05 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 12:52:05 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 12:52:05
+Mar 20, 2020 12:52:05 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 12:52:05 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 12:52:07 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 12:52:16 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 12:52:16 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 12:52:22 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 12:52:31 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 12:52:37 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 12:57:02 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 12:57:02 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 12:57:02
+Mar 20, 2020 12:57:02 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 12:57:02 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 12:57:04 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 12:57:13 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 12:57:21 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 12:57:21 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 12:57:21 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 12:57:24 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 12:57:35 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 12:57:43 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 1:04:15 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 1:04:15 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 13:04:15
+Mar 20, 2020 1:04:15 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 1:04:15 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 1:04:18 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 1:04:25 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 1:04:40 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 1:04:42 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 1:04:47 PM CommandLineInterface.ShopManagement ShopPage
+INFO: Show my walle
+Mar 20, 2020 1:04:58 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 1:05:19 PM Player.Player buy
+INFO: Buy: Young Priestess
+Mar 20, 2020 1:05:22 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 1:05:32 PM CommandLineInterface.ShopManagement ShopPage
+INFO: Show my walle
+Mar 20, 2020 1:06:30 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 1:06:30 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 13:06:30
+Mar 20, 2020 1:06:30 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 1:06:30 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 1:06:33 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 1:06:38 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 1:06:41 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 1:08:09 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 1:08:12 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 1:08:15 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 1:08:28 PM Player.Player buy
+INFO: Buy: Young Priestess
+Mar 20, 2020 1:08:35 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 1:08:44 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 1:09:19 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 1:09:22 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 1:09:40 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 1:10:31 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 1:10:31 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 13:10:31
+Mar 20, 2020 1:10:31 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 1:10:31 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 1:10:33 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 1:10:37 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 1:10:47 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 1:10:50 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 1:10:58 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 1:11:13 PM Player.Player buy
+INFO: Buy: Young Priestess
+Mar 20, 2020 1:11:19 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 1:11:36 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 1:12:08 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 1:12:08 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 13:12:08
+Mar 20, 2020 1:12:08 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 1:12:08 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 1:12:10 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 1:12:12 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 1:12:20 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 1:12:23 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 1:12:31 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 1:12:49 PM Player.Player buy
+INFO: Buy: Young Priestess
+Mar 20, 2020 2:10:08 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 2:10:08 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 14:10:08
+Mar 20, 2020 2:10:08 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 2:10:08 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 2:10:16 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 2:10:18 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 2:10:33 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 2:10:40 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 2:10:44 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 2:10:56 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 2:11:05 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 2:11:15 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 2:11:25 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 2:11:36 PM Player.Player buy
+INFO: Buy: Young Priestess
+Mar 20, 2020 2:16:52 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 2:16:52 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 14:16:52
+Mar 20, 2020 2:16:52 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 2:16:52 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 2:16:56 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 2:17:05 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 2:17:09 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 2:17:16 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 2:17:28 PM Player.Player buy
+INFO: Buy: Young Priestess
+Mar 20, 2020 2:18:29 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 2:18:29 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 14:18:29
+Mar 20, 2020 2:18:29 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 2:18:29 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 2:18:32 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 2:18:34 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 2:18:45 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 2:18:49 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 2:19:13 PM Player.Player buy
+INFO: Buy: Young Priestess
+Mar 20, 2020 2:19:19 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 2:19:37 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 2:20:24 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 2:20:30 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 2:20:48 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 2:20:48 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 14:20:48
+Mar 20, 2020 2:20:48 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 2:20:48 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 2:20:50 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 2:20:52 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 2:20:59 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 2:21:02 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 2:21:12 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 2:21:15 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 3:07:46 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 3:07:46 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 15:07:46
+Mar 20, 2020 3:07:46 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 3:07:46 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 3:07:48 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 3:07:51 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 3:07:56 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 3:08:27 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 3:08:30 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 3:08:38 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 3:08:52 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 3:08:57 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 3:09:09 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 3:11:01 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 3:11:01 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 15:11:01
+Mar 20, 2020 3:11:01 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 3:11:01 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 3:11:04 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 3:11:07 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 3:11:19 PM Player.Player buy
+INFO: Buy: Dreadscale
+Mar 20, 2020 3:12:40 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 3:12:40 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 15:12:40
+Mar 20, 2020 3:12:40 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 3:12:40 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 3:12:42 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 3:12:45 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 3:12:54 PM Player.Player buy
+INFO: Buy: Dreadscale
+Mar 20, 2020 3:20:35 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 3:20:35 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 15:20:35
+Mar 20, 2020 3:20:35 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 3:20:35 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 3:20:37 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 3:20:39 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 3:22:51 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 3:22:52 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 15:22:51
+Mar 20, 2020 3:22:52 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 3:22:52 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 3:22:54 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 3:23:13 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 3:23:22 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 3:35:18 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 3:35:18 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 15:35:18
+Mar 20, 2020 3:35:18 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 3:35:18 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 3:35:20 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 3:35:23 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 3:35:34 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 3:35:51 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 3:36:03 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 3:36:13 PM Player.Player buy
+INFO: Buy: Young Priestess
+Mar 20, 2020 3:41:40 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 3:41:40 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 15:41:40
+Mar 20, 2020 3:41:40 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 3:41:40 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 3:41:43 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 3:41:46 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 3:42:51 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 3:55:13 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 3:55:13 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 15:55:13
+Mar 20, 2020 3:55:13 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 3:55:13 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 3:55:21 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 3:55:25 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 3:55:38 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 3:55:40 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 3:55:50 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 3:55:55 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 3:55:59 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 3:56:09 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 3:56:13 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show My Deck.
+Mar 20, 2020 3:56:18 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 3:56:45 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 3:56:47 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 3:56:55 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 3:57:05 PM Player.Player buy
+INFO: Buy: Young Priestess
+Mar 20, 2020 3:58:17 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 3:58:17 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 15:58:17
+Mar 20, 2020 3:58:17 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 3:58:17 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 3:58:18 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 3:58:21 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 3:58:33 PM Player.Player buy
+INFO: Buy: Dreadscale
+Mar 20, 2020 3:58:38 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 3:58:53 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: n
+Mar 20, 2020 3:58:53 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 15:58:53
+Mar 20, 2020 3:58:54 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: n
+Mar 20, 2020 3:58:54 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up n
+Mar 20, 2020 3:58:57 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 3:59:00 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 3:59:06 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 3:59:08 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 3:59:13 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 3:59:29 PM Player.Player sell
+INFO: Sell: Young Priestess
+Mar 20, 2020 3:59:32 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 3:59:37 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 4:00:02 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 4:00:10 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show My Deck.
+Mar 20, 2020 4:00:15 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 4:00:34 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 4:01:57 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 4:02:08 PM Player.Player buy
+INFO: Buy: Young Priestess
+Mar 20, 2020 4:02:11 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Buyable Cards
+Mar 20, 2020 4:02:20 PM CommandLineInterface.ShopManagement ShopPage
+INFO: List: Salable Cards
+Mar 20, 2020 4:02:33 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 4:02:39 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Mar 20, 2020 4:05:01 PM Player.Player addToDeck
+INFO: Add: Novice EngineerHeroe Name: Mage
+Mar 20, 2020 4:05:13 PM Player.Player addToDeck
+INFO: Add: Stormwind KnightHeroe Name: Mage
+Mar 20, 2020 4:05:25 PM Player.Player addToDeck
+INFO: Add: Tournament MedicHeroe Name: Mage
+Mar 20, 2020 4:05:33 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show My Deck.
+Mar 20, 2020 4:05:42 PM Player.Player removeFromDeck
+INFO: Remove: Tournament MedicHeroe Name:Mage
+Mar 20, 2020 4:05:47 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show My Deck.
+Mar 20, 2020 4:06:03 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out n
+Mar 20, 2020 4:06:22 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in n
+Mar 20, 2020 4:06:26 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 4:06:36 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show My Deck.
+Mar 20, 2020 4:31:30 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in n
+Mar 20, 2020 4:31:37 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 4:31:42 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show My Deck.
+Mar 20, 2020 4:31:45 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out n
+Mar 20, 2020 4:35:22 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in n
+Mar 20, 2020 4:35:25 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 4:35:27 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out n

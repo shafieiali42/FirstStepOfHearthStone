@@ -3,16 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="c3c03568-dd24-4d96-9cd6-b9cb7524ca1b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ali Sahfiei.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/AllPlayers.json" beforeDir="false" afterPath="$PROJECT_DIR$/AllPlayers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Davood.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/CommandLineInterface/PlayerManagement$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/CommandLineInterface/PlayerManagement$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/CommandLineInterface/PlayerManagement$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/CommandLineInterface/PlayerManagement$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/CommandLineInterface/PlayerManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/CommandLineInterface/PlayerManagement.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cards/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards/Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommandLineInterface/CollectionManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandLineInterface/CollectionManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CommandLineInterface/PlayerManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandLineInterface/PlayerManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Heroes/Heroes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heroes/Heroes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Heroes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heroes/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Heroes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heroes/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Heroes/Warlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heroes/Warlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tem.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/varzesh.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,10 +153,10 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="494" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.826@0.0.1536.826" timestamp="1584629237695" />
-    <state x="574" y="105" key="#com.intellij.ide.util.MemberChooser" timestamp="1584637059056">
+    <state x="574" y="105" key="#com.intellij.ide.util.MemberChooser" timestamp="1584691956132">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="574" y="105" key="#com.intellij.ide.util.MemberChooser/0.0.1536.826@0.0.1536.826" timestamp="1584637059056" />
+    <state x="574" y="105" key="#com.intellij.ide.util.MemberChooser/0.0.1536.826@0.0.1536.826" timestamp="1584691956132" />
     <state x="466" y="89" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1584614526761">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
@@ -177,22 +181,22 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="627" y="235" key="FileChooserDialogImpl/0.0.1536.826@0.0.1536.826" timestamp="1584634913720" />
-    <state width="1492" height="272" key="GridCell.Tab.0.bottom" timestamp="1584679841689">
+    <state width="1492" height="272" key="GridCell.Tab.0.bottom" timestamp="1584709334382">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="272" key="GridCell.Tab.0.bottom/0.0.1536.826@0.0.1536.826" timestamp="1584679841689" />
-    <state width="1492" height="272" key="GridCell.Tab.0.center" timestamp="1584679841689">
+    <state width="1492" height="272" key="GridCell.Tab.0.bottom/0.0.1536.826@0.0.1536.826" timestamp="1584709334382" />
+    <state width="1492" height="272" key="GridCell.Tab.0.center" timestamp="1584709334381">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="272" key="GridCell.Tab.0.center/0.0.1536.826@0.0.1536.826" timestamp="1584679841689" />
-    <state width="1492" height="272" key="GridCell.Tab.0.left" timestamp="1584679841689">
+    <state width="1492" height="272" key="GridCell.Tab.0.center/0.0.1536.826@0.0.1536.826" timestamp="1584709334381" />
+    <state width="1492" height="272" key="GridCell.Tab.0.left" timestamp="1584709334381">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="272" key="GridCell.Tab.0.left/0.0.1536.826@0.0.1536.826" timestamp="1584679841689" />
-    <state width="1492" height="272" key="GridCell.Tab.0.right" timestamp="1584679841689">
+    <state width="1492" height="272" key="GridCell.Tab.0.left/0.0.1536.826@0.0.1536.826" timestamp="1584709334381" />
+    <state width="1492" height="272" key="GridCell.Tab.0.right" timestamp="1584709334381">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="272" key="GridCell.Tab.0.right/0.0.1536.826@0.0.1536.826" timestamp="1584679841689" />
+    <state width="1492" height="272" key="GridCell.Tab.0.right/0.0.1536.826@0.0.1536.826" timestamp="1584709334381" />
     <state width="1492" height="256" key="GridCell.Tab.1.bottom" timestamp="1584642204919">
       <screen x="0" y="0" width="1536" height="826" />
     </state>

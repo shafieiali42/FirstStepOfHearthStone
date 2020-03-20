@@ -106,7 +106,7 @@ public class PlayerManagement {
         String password = myscanner.nextLine();
         if (password.equals(CLI.currentPlayer.getPassWord())) {
             File temp = new File("temp.txt");
-            FileReader fileReader = new FileReader(CLI.currentPlayer.getUserName() + ".txt");
+            FileReader fileReader = new FileReader(CLI.currentPlayer.getUserName() + ".log");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             FileWriter fileWriter = new FileWriter(temp);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
@@ -116,7 +116,7 @@ public class PlayerManagement {
                 if (st.contains("PASSWORD")) {
                     DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
                     Calendar cal = Calendar.getInstance();
-                    bufferedWriter.write("DELETED_AT: " + dateFormat.format(cal.getTime()));
+                    bufferedWriter.write("DELETED_AT: " + dateFormat.format(cal.getTime())+"\n");
 //                    CLI.currentPlayer.getLoggerOfMyPlayer().info("DELETED_AT: " + dateFormat.format(cal.getTime()));
                 }
             }
@@ -125,7 +125,7 @@ public class PlayerManagement {
             fileReader.close();
             fileWriter.close();
             FileReader fileReader1 = new FileReader(temp);
-            FileWriter fileWriter1 = new FileWriter(CLI.currentPlayer.getUserName() + ".txt");
+            FileWriter fileWriter1 = new FileWriter(CLI.currentPlayer.getUserName() + ".log");
             BufferedReader bufferedReader1 = new BufferedReader(fileReader1);
             BufferedWriter bufferedWriter1 = new BufferedWriter(fileWriter1);
             String string = new String();

@@ -73,7 +73,7 @@ public class CollectionManagement {
                                 break;
                             case "ls -a -cards":
                                 currentPlayer.getLoggerOfMyPlayer().info("Show All of my cards.");
-                                System.out.println(currentPlayer.getAvailableCardsWithThisSituation());
+                                System.out.println(currentPlayer.getAllCardsOfPlayer());
                                 break;
                             case "ls -m -cards":
                                 currentPlayer.getLoggerOfMyPlayer().info("Show My Deck.");

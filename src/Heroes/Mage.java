@@ -11,6 +11,7 @@ public class Mage extends Heroes {
         this.name="Mage";
         this.healthPower=30;
         this.descrtiption="She is a skilled wizard who has special skills in using spells.";
+        this.isLock = false;
         setSpecialCardsOfMage();
     }
     public static Mage getInstance(){

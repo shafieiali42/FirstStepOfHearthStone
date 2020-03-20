@@ -68,7 +68,7 @@ public class Cards {
 
     @Override
     public String toString(){
-        return "["+"Name: "+this.getName()+" ,  classOfCard: "+ this.getClassOfCard()+" , Money"+this.getMoneyCost()+" ]";
+        return "["+"Name: "+this.getName()+" ,  classOfCard: "+ this.getClassOfCard()+" , Money: "+this.getMoneyCost()+" ]";
     }
 
 }
