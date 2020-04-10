@@ -1,7 +1,6 @@
 package Heroes;
 
 import Cards.Cards;
-
 import java.util.ArrayList;
 
 public class Rogue extends Heroes {
@@ -17,7 +16,6 @@ public class Rogue extends Heroes {
     public static Rogue getInstance(){
         return instance;
     }
-
 
     public static void setSpecialCardsOfRogue() {
         for (Cards card:Cards.getAllCards()){

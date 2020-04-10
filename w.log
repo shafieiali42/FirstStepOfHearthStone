@@ -1,0 +1,10 @@
+Mar 20, 2020 9:14:51 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: w
+Mar 20, 2020 9:14:51 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 21:14:51
+Mar 20, 2020 9:14:51 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: w
+Mar 20, 2020 9:14:51 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up w
+Mar 20, 2020 9:14:53 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out w

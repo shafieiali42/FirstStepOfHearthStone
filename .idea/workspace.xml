@@ -2,36 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3c03568-dd24-4d96-9cd6-b9cb7524ca1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/temp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_fasterxml_jackson_core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/com_fasterxml_jackson_core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_fasterxml_jackson_core1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_fasterxml_jackson_databind.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/com_fasterxml_jackson_databind.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jackson_all_1_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jackson_all_1_9_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jackson_all_1_9_01.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jackson_all_1_9_02.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jackson_annotations_2_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jackson_annotations_2_1_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AllPlayers.json" beforeDir="false" afterPath="$PROJECT_DIR$/AllPlayers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/n.log" beforeDir="false" afterPath="$PROJECT_DIR$/n.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/CommandLineInterface/CollectionManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/CommandLineInterface/CollectionManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Heroes/Rogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Heroes/Rogue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Heroes/Warlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Heroes/Warlock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestProjectInNoneGradle/Player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player4_4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playerAbbas_123.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playerAli Sahfiei_1380.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playerAli_Sahfiei.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playerDavood_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playerFaraz_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playerMehrshad_6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playerRealmadrid_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playerbateni_2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playerhh_gg.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playerlll_2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playermm_mm.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playermn_mn.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playern_n.json" beforeDir="false" afterPath="$PROJECT_DIR$/playern_n.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playerp;_p;.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playerss_ss.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playervarzesh_3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/q.log.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProjectInNoneGradle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TestProjectInNoneGradle.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cards/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards/Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cards/JsonReaderForMinions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards/JsonReaderForMinions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cards/JsonReaderForSpells.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards/JsonReaderForSpells.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cards/Minion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards/Minion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cards/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards/Spell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommandLineInterface/CLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandLineInterface/CLI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CommandLineInterface/CollectionManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandLineInterface/CollectionManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommandLineInterface/PlayerManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandLineInterface/PlayerManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommandLineInterface/ShopManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandLineInterface/ShopManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommandLineInterface/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandLineInterface/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Heroes/Heroes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heroes/Heroes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Heroes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heroes/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Heroes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heroes/Rogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Heroes/Warlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heroes/Warlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Log/LoggerOfProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Log/LoggerOfProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player/JArrayOfAllPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player/ParsePlayerObjectIntoJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/ParsePlayerObjectIntoJson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +62,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/gson-2.8.0.jar!/" />
+    <property name="last_opened_file_path" value="E:/JavaLibraries/Libraries for json/jackson-all-1.9.0.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Application.main">
     <configuration name="JsonReaderForSpells" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -122,8 +123,8 @@
     <list>
       <item itemvalue="Application.JsonReaderForSpells" />
       <item itemvalue="Application.LoggerOfProject" />
-      <item itemvalue="Application.main" />
       <item itemvalue="Application.ParsePlayerObjectIntoJson" />
+      <item itemvalue="Application.main" />
     </list>
     <recent_temporary>
       <list>
@@ -188,30 +189,30 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="495" y="81" key="#main/0.0.1536.826@0.0.1536.826" timestamp="1584630924492" />
-    <state x="523" y="131" key="DetectedRootsChooserDialog" timestamp="1584634915392">
+    <state x="523" y="131" key="DetectedRootsChooserDialog" timestamp="1586438932215">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="523" y="131" key="DetectedRootsChooserDialog/0.0.1536.826@0.0.1536.826" timestamp="1584634915392" />
-    <state x="627" y="235" key="FileChooserDialogImpl" timestamp="1584634913720">
+    <state x="523" y="131" key="DetectedRootsChooserDialog/0.0.1536.826@0.0.1536.826" timestamp="1586438932215" />
+    <state x="627" y="235" key="FileChooserDialogImpl" timestamp="1586439090682">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="627" y="235" key="FileChooserDialogImpl/0.0.1536.826@0.0.1536.826" timestamp="1584634913720" />
-    <state width="1492" height="272" key="GridCell.Tab.0.bottom" timestamp="1584715872033">
+    <state x="627" y="235" key="FileChooserDialogImpl/0.0.1536.826@0.0.1536.826" timestamp="1586439090682" />
+    <state width="1492" height="272" key="GridCell.Tab.0.bottom" timestamp="1584739700555">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="272" key="GridCell.Tab.0.bottom/0.0.1536.826@0.0.1536.826" timestamp="1584715872033" />
-    <state width="1492" height="272" key="GridCell.Tab.0.center" timestamp="1584715872033">
+    <state width="1492" height="272" key="GridCell.Tab.0.bottom/0.0.1536.826@0.0.1536.826" timestamp="1584739700555" />
+    <state width="1492" height="272" key="GridCell.Tab.0.center" timestamp="1584739700554">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="272" key="GridCell.Tab.0.center/0.0.1536.826@0.0.1536.826" timestamp="1584715872033" />
-    <state width="1492" height="272" key="GridCell.Tab.0.left" timestamp="1584715872032">
+    <state width="1492" height="272" key="GridCell.Tab.0.center/0.0.1536.826@0.0.1536.826" timestamp="1584739700554" />
+    <state width="1492" height="272" key="GridCell.Tab.0.left" timestamp="1584739700554">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="272" key="GridCell.Tab.0.left/0.0.1536.826@0.0.1536.826" timestamp="1584715872032" />
-    <state width="1492" height="272" key="GridCell.Tab.0.right" timestamp="1584715872033">
+    <state width="1492" height="272" key="GridCell.Tab.0.left/0.0.1536.826@0.0.1536.826" timestamp="1584739700554" />
+    <state width="1492" height="272" key="GridCell.Tab.0.right" timestamp="1584739700555">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state width="1492" height="272" key="GridCell.Tab.0.right/0.0.1536.826@0.0.1536.826" timestamp="1584715872033" />
+    <state width="1492" height="272" key="GridCell.Tab.0.right/0.0.1536.826@0.0.1536.826" timestamp="1584739700555" />
     <state width="1492" height="256" key="GridCell.Tab.1.bottom" timestamp="1584642204919">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
@@ -232,14 +233,14 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="439" y="117" key="NewModule_or_Project.wizard/0.0.1536.826@0.0.1536.826" timestamp="1584634687197" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1584710076626">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1586439094035">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.826@0.0.1536.826" timestamp="1584710076626" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1584679447979">
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.826@0.0.1536.826" timestamp="1586439094035" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1586533517371">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.826@0.0.1536.826" timestamp="1584679447979" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.826@0.0.1536.826" timestamp="1586533517371" />
     <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584490292119">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
@@ -252,9 +253,9 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="425" y="182" key="run.anything.popup/0.0.1536.826@0.0.1536.826" timestamp="1584650606421" />
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1584709930824">
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1584726763699">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1584709930824" />
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1584726763699" />
   </component>
 </project>

@@ -1,17 +1,11 @@
 package CommandLineInterface;
 
-import Cards.Cards;
-import Cards.Spell;
-import Log.LoggerOfProject;
+
 import Player.Player;
 import Player.*;
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.type.TypeReference;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -26,13 +20,12 @@ public class PlayerManagement {
     static Scanner myscanner = new Scanner(System.in);
 
     public void signIn() throws IOException {
-        System.out.print("Username:");
+        System.out.println("Username:");
         String userName = myscanner.nextLine();
-        System.out.print("Password:");
+        System.out.println("Password:");
         String passWord = myscanner.nextLine();
-        Type type = new TypeToken<List<Player>>() {
-        }.getType();
-        List<Player> playerList = new Gson().fromJson(new FileReader("AllPlayers.json"), type);
+        Type type = new TypeToken<List<Player>>() { }.getType();
+        List<Player> playerList = new Gson().fromJson(new FileReader("MinionSpells\\AllPlayers.json"), type);
         boolean valiUserNameAndPassword = false;
         for (Player player : playerList) {
             System.out.println(player.getUserName());
@@ -52,15 +45,13 @@ public class PlayerManagement {
         }
     }
 
-
     public void signUp() throws IOException {
-        System.out.print("Username:");
+        System.out.println("Username:");
         String userName = myscanner.nextLine();
-        System.out.print("Password:");
+        System.out.println("Password:");
         String passWord = myscanner.nextLine();
-        Type type = new TypeToken<List<Player>>() {
-        }.getType();
-        List<Player> playerList = new Gson().fromJson(new FileReader("AllPlayers.json"), type);
+        Type type = new TypeToken<List<Player>>() {}.getType();
+        List<Player> playerList = new Gson().fromJson(new FileReader("MinionSpells\\AllPlayers.json"), type);
         boolean canSignUp = true;
         for (Player player : playerList) {
             if (userName.equals(player.getUserName())) {
@@ -68,22 +59,12 @@ public class PlayerManagement {
             }
         }
         if (canSignUp) {
-            System.out.println("you can sign up");
             Player player = new Player(userName, passWord);
             CLI.currentPlayer = player;
             CLI.currentPlayer.setSigninOrSignup("Signup");
             player.setSigninOrSignup("Signup");
-//            FileWriter fileWriter =new FileWriter(CLI.currentPlayer.getUserName()+".log");
-//            BufferedWriter bufferedWriter =new BufferedWriter(fileWriter);
-//            bufferedWriter.write("USER: "+CLI.currentPlayer.getUserName()+"\n");
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             Calendar cal = Calendar.getInstance();
-//            bufferedWriter.write("\nCREATED_AT: "+dateFormat.format(cal.getTime())+"\n");
-//            bufferedWriter.write("\nPASSWORD: "+ CLI.currentPlayer.getPassWord()+"\n");
-//            bufferedWriter.flush();
-//            fileWriter.flush();
-//            bufferedWriter.close();
-//            fileWriter.close();
             CLI.currentPlayer.getLoggerOfMyPlayer().info("USER: " + CLI.currentPlayer.getUserName());
             CLI.currentPlayer.getLoggerOfMyPlayer().info("CREATED_AT:" + dateFormat.format(cal.getTime()));
             CLI.currentPlayer.getLoggerOfMyPlayer().info("PASSWORD: " + CLI.currentPlayer.getPassWord());
@@ -102,11 +83,11 @@ public class PlayerManagement {
     }
 
     public void DeletePlayer() throws IOException {
-        System.out.print("Password:");
+        System.out.println("Password:");
         String password = myscanner.nextLine();
         if (password.equals(CLI.currentPlayer.getPassWord())) {
-            File temp = new File("temp.txt");
-            FileReader fileReader = new FileReader(CLI.currentPlayer.getUserName() + ".log");
+            File temp = new File("logs\\"+"temp.txt");
+            FileReader fileReader = new FileReader("logs\\"+CLI.currentPlayer.getUserName() + ".log");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             FileWriter fileWriter = new FileWriter(temp);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
@@ -117,7 +98,6 @@ public class PlayerManagement {
                     DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
                     Calendar cal = Calendar.getInstance();
                     bufferedWriter.write("DELETED_AT: " + dateFormat.format(cal.getTime())+"\n");
-//                    CLI.currentPlayer.getLoggerOfMyPlayer().info("DELETED_AT: " + dateFormat.format(cal.getTime()));
                 }
             }
             bufferedReader.close();
@@ -125,13 +105,12 @@ public class PlayerManagement {
             fileReader.close();
             fileWriter.close();
             FileReader fileReader1 = new FileReader(temp);
-            FileWriter fileWriter1 = new FileWriter(CLI.currentPlayer.getUserName() + ".log");
+            FileWriter fileWriter1 = new FileWriter("logs\\"+CLI.currentPlayer.getUserName() + ".log");
             BufferedReader bufferedReader1 = new BufferedReader(fileReader1);
             BufferedWriter bufferedWriter1 = new BufferedWriter(fileWriter1);
             String string = new String();
             while ((string = bufferedReader1.readLine()) != null) {
                 bufferedWriter1.write(string + "\n");
-//                CLI.currentPlayer.getLoggerOfMyPlayer().info(string);
             }
             bufferedWriter1.write("Deleted Account!");
             bufferedReader1.close();

@@ -1,0 +1,24 @@
+Mar 20, 2020 8:49:12 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: Ali
+Mar 20, 2020 8:49:12 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 20:49:12
+Mar 20, 2020 8:49:12 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: Shafiei
+Mar 20, 2020 8:49:12 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up Ali
+Mar 20, 2020 8:49:15 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 8:49:18 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out Ali
+Mar 20, 2020 8:49:55 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in Ali
+Mar 20, 2020 8:49:58 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 8:49:59 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out Ali
+Mar 20, 2020 8:54:23 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in Ali
+Mar 20, 2020 8:54:27 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 8:54:30 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out Ali

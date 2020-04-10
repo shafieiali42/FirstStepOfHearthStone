@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="com.fasterxml.jackson.core">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Desktop/com.fasterxml.jackson.core.jar!/" />
+      <root url="jar://E:/JavaLibraries/Libraries for json/com.fasterxml.jackson.core.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

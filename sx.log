@@ -1,0 +1,30 @@
+Mar 20, 2020 9:13:43 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sx
+Mar 20, 2020 9:13:43 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/03/20 21:13:43
+Mar 20, 2020 9:13:43 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sx
+Mar 20, 2020 9:13:43 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sx
+Mar 20, 2020 9:13:47 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Mar 20, 2020 9:13:51 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sx
+Mar 20, 2020 9:14:15 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sx
+Mar 20, 2020 9:14:18 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Store
+Mar 20, 2020 9:14:19 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sx
+Mar 20, 2020 9:15:27 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sx
+Mar 20, 2020 9:15:30 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sx
+Mar 20, 2020 9:17:52 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sx
+Mar 20, 2020 9:17:55 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sx
+Mar 20, 2020 9:19:01 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sx
+Mar 20, 2020 9:19:03 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sx

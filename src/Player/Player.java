@@ -5,14 +5,10 @@ import CommandLineInterface.CLI;
 import Heroes.*;
 import Log.LoggerOfProject;
 import com.google.gson.annotations.Expose;
-
-
-import javax.smartcardio.Card;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.TreeSet;
 import java.util.logging.Logger;
 
 public class Player {
@@ -74,16 +70,8 @@ public class Player {
         return loggerOfMyPlayer;
     }
     public void setLoggerOfMyPlayer() throws IOException {
-        this.loggerOfMyPlayer=LoggerOfProject.getMyLogger(this.getUserName()+".log");
+        this.loggerOfMyPlayer=LoggerOfProject.getMyLogger("logs\\"+this.getUserName()+".log");
     }
-
-
-
-
-
-
-
-
 
     public void setAvailableCardsThatWeCanAddIntoOurDeck() {
         availableCardsThatWeCanAddIntoOurDeck.clear();
@@ -104,10 +92,7 @@ public class Player {
                 this.availableCardsThatWeCanAddIntoOurDeck.add(card);
             }
         }
-        System.out.println("available cards with this su..."+availableCardsThatWeCanAddIntoOurDeck.size());
     }
-
-
 
     public void setBuyableCards(){
         BuyableCards.clear();
@@ -151,9 +136,6 @@ public class Player {
             }
         }
     };
-
-
-
 
     public ArrayList<Cards> getAvailableCardsThatWeCanAddIntoOurDeck() {
         return availableCardsThatWeCanAddIntoOurDeck;
@@ -205,7 +187,6 @@ public class Player {
         return availableCardsWithThisSituation;
     }
 
-
     public Player(String userName, String passWord) throws IOException {
         this.userName=userName;
         this.passWord=passWord;
@@ -214,7 +195,6 @@ public class Player {
         this.setNeutralCardsOfPlayer();
 //        this.availableHeroes.add(Rogue.getInstance());//TODO this hero is lock!
 //        this.availableHeroes.add(Warlock.getInstance());//TODO this hero is lock!
-
         this.setAvailableCardsWithThisSituation();
         this.setAvailableCardsThatWeCanAddIntoOurDeck();
         setBuyableCards();
@@ -222,8 +202,6 @@ public class Player {
         setLoggerOfMyPlayer();
         this.money=500;
     }
-
-
 
     public ArrayList<Cards> getAvailableDeckWithThisSituation(){
         switch (this.currentHero.getName()){
@@ -243,7 +221,7 @@ public class Player {
             for (Cards cards: NeutralCardsOfPlayer){
                 mergedList.add(cards);
             }
-            mergedList.add(Mage.getSpecialCardsOfMage().get(0));//Todo problemmmmmmmmmmmmmmmmm
+            mergedList.add(Mage.getSpecialCardsOfMage().get(0));//there was a bad bug:(
             availableCardsWithThisSituation=mergedList;
 
         }
@@ -271,11 +249,9 @@ public class Player {
         boolean canBuyThisCard= false;
         for (Cards cardInBuyableCards:BuyableCards){
             if (card.getName().equals(cardInBuyableCards.getName())&&this.money>=card.getMoneyCost()){
-//                allCardsOfPlayer.add(card);
                 this.money-=card.getMoneyCost();
                 CLI.currentPlayer.getLoggerOfMyPlayer().info("Buy: "+card.getName());
                 canBuyThisCard=true;
-
             }
         }
         if (canBuyThisCard){
@@ -298,18 +274,15 @@ public class Player {
         setBuyableCards();
     }
 
-
     public void setNeutralCardsOfPlayer() {//TODO needs to check!
         for (Cards card :this.allCardsOfPlayer){
             if (card.getClassOfCard().toLowerCase().trim().equals("neutral")){
                 NeutralCardsOfPlayer.add(card);
-
             }
         }
     }
 
     public void sell(Cards card) throws IOException {
-        System.out.println("in sell founc!");
         boolean canSellThisCard=false;
         for (Cards cardInSalableCards:SalableCards){
             if (card.getName().equals(cardInSalableCards.getName())){
@@ -340,9 +313,7 @@ public class Player {
         }else {
             System.out.println("Unfortunately this hero is lock for you!");
         }
-
     }
-
 
     public void addToDeck(Cards card) throws IOException {
         int numberOfThisCardInMyDeck=0;
@@ -356,7 +327,6 @@ public class Player {
                 if (cardsInAvailableCardInThisSituation.getName().equals(card.getName())){
                     switch(currentHero.getName()){
                         case "Mage":
-                            System.out.println(card.getClassOfCard());
                             if (card.getClassOfCard().toLowerCase().trim().equals("mage")
                                     ||card.getClassOfCard().toLowerCase().trim().equals("neutral")  ){
                                 DeckOfPlayerForMage.add(card);
@@ -404,6 +374,7 @@ public class Player {
                         Cards cardsInDeckForMage = itr.next();
                         if (cardsInDeckForMage.getName().equals(card.getName())){
                             itr.remove();
+                            break;
                         }
                     }
                     CLI.currentPlayer.getLoggerOfMyPlayer().info("Remove: "+card.getName()+"Heroe Name:Mage");
@@ -414,6 +385,7 @@ public class Player {
                         Cards cardsInDeckForRogue = itr2.next();
                         if (cardsInDeckForRogue.getName().equals(card.getName())){
                             itr2.remove();
+                            break;
                         }
                     }
                     CLI.currentPlayer.getLoggerOfMyPlayer().info("Remove: "+card.getName()+"Heroe Name: Rogue");
@@ -424,6 +396,7 @@ public class Player {
                         Cards cardsInDeckForWarlock = itr3.next();
                         if (cardsInDeckForWarlock.getName().equals(card.getName())){
                             itr3.remove();
+                            break;
                         }
                     }
                     CLI.currentPlayer.getLoggerOfMyPlayer().info("Remove: "+card.getName()+"Heroe Name: Warlock");
@@ -431,10 +404,9 @@ public class Player {
             }
             setAvailableCardsThatWeCanAddIntoOurDeck();
         }else {
-            System.out.println("You don have this card in your deck!");
+            System.out.println("You dont have this card in your deck!");
         }
 
     }
-
 
 }
