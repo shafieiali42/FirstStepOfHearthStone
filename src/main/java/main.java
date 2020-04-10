@@ -3,9 +3,7 @@ import CommandLineInterface.CLI;
 import Heroes.Mage;
 import Heroes.Rogue;
 import Heroes.Warlock;
-import Player.Player;
 
-import javax.smartcardio.Card;
 import java.io.IOException;
 
 public class main {

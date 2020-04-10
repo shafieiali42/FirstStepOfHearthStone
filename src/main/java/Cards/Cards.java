@@ -13,9 +13,7 @@ public class Cards {
     private String type;
 
 
-
     private static ArrayList<Cards> allCards = new ArrayList<Cards>();
-
     public static ArrayList<Cards> getAllCards() {
         return allCards;
     }

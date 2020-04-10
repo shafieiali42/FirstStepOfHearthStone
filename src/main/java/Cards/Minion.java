@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Minion extends Cards {
 
-
     public static final int NUMBER_OF_MINIONS=10;
     private int attackPower;
     private int healthPower;
@@ -26,12 +25,9 @@ public class Minion extends Cards {
         return minions;
     }
 
-
     @Override
     public String toString(){
         return "["+"Name: "+this.getName()+" ,  classOfCard: "+ this.getClassOfCard()+" , Money"+this.getMoneyCost()+" ]";
     }
-
-
 
 }

@@ -1,12 +1,8 @@
 package CommandLineInterface;
 
 import Cards.Cards;
-import Log.LoggerOfProject;
-
-import javax.smartcardio.Card;
 import java.io.IOException;
 import java.util.Scanner;
-import java.util.logging.Logger;
 
 import static CommandLineInterface.CLI.FirstPage;
 import static CommandLineInterface.CLI.secondPage;
@@ -28,7 +24,6 @@ public class ShopManagement {
                         break;
                     }
                 }
-
             }else {
                 if (input.length()>8 && input.substring(0, 6).equals("sell [") && input.charAt(input.length() - 1) == ']') {
                     String cardsNameToSell =input.substring(6, input.length()-1);
@@ -58,12 +53,10 @@ public class ShopManagement {
                             CLI.currentPlayer.getLoggerOfMyPlayer().info("List: Salable Cards");
                             System.out.println(CLI.currentPlayer.getSalableCards());
                             break;
-
                         case "ls -b":
                             CLI.currentPlayer.getLoggerOfMyPlayer().info("List: Buyable Cards");
                             System.out.println(CLI.currentPlayer.getBuyableCards());
                             break;
-
                         case "return":
                             secondPage();
                             break;
@@ -80,9 +73,6 @@ public class ShopManagement {
                 }
             }
         }
-
-
-
 
     }
 }

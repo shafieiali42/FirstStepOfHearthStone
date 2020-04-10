@@ -3,11 +3,9 @@ package CommandLineInterface;
 import Cards.Cards;
 import Heroes.Heroes;
 import Heroes.*;
-import Log.LoggerOfProject;
 
 import java.io.IOException;
 import java.util.Scanner;
-import java.util.logging.Logger;
 
 import static CommandLineInterface.CLI.*;
 
@@ -40,7 +38,6 @@ public class CollectionManagement {
                         for (Cards card: Cards.getAllCards()){
                             if (card.getName().toLowerCase().trim().equals(cardsNameToAddToDeck.toLowerCase().trim())){
                                 CLI.currentPlayer.addToDeck(card);
-                                System.out.println("added");
                                 break;
                             }
                         }
@@ -94,7 +91,6 @@ public class CollectionManagement {
                                 currentPlayer.setAvailableCardsThatWeCanAddIntoOurDeck();
                                 System.out.println(currentPlayer.getAvailableCardsThatWeCanAddIntoOurDeck());
                                 break;
-
                             case "return":
                                 secondPage();
                                 break;
@@ -116,7 +112,6 @@ public class CollectionManagement {
                 }
             }
         }
-
 
     }
 }

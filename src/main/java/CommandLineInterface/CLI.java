@@ -1,12 +1,8 @@
 package CommandLineInterface;
 
-import Cards.Minion;
-import Log.LoggerOfProject;
 import Player.Player;
-
 import java.io.IOException;
 import java.util.Scanner;
-import java.util.logging.Logger;
 
 public class CLI {
     public static Player currentPlayer ;
@@ -26,15 +22,11 @@ public class CLI {
             System.out.println("Already have an account?(Y/N)");
             switch (myscanner.nextLine().toLowerCase()){
                 case "y":
-                    System.out.println("hi!");
                     playerManagement.signIn();
                     break;
                 case "n":
                     playerManagement.signUp();
                     break;
-//                case "exit":
-//                    playerManagement.logOut();
-//                    break;
                 case "exit_a":
                     playerManagement.logOut();
                     System.exit(0);
@@ -87,7 +79,5 @@ public class CLI {
             }
         }
     }
-
-
 
 }

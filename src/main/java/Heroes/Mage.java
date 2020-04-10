@@ -1,7 +1,6 @@
 package Heroes;
 
 import Cards.Cards;
-
 import java.util.ArrayList;
 
 public class Mage extends Heroes {

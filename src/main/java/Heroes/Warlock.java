@@ -1,8 +1,6 @@
 package Heroes;
 
 import Cards.Cards;
-import Cards.*;
-
 import java.util.ArrayList;
 
 public class Warlock extends  Heroes {
