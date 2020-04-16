@@ -1,0 +1,14 @@
+Apr 10, 2020 11:49:46 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: Ali
+Apr 10, 2020 11:49:46 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/04/10 23:49:46
+Apr 10, 2020 11:49:46 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: Shafiei
+Apr 10, 2020 11:49:46 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up Ali
+Apr 10, 2020 11:49:55 PM CommandLineInterface.CLI secondPage
+INFO: Navigate: Collections
+Apr 10, 2020 11:50:10 PM CommandLineInterface.CollectionManagement CollectionPage
+INFO: Show All of my cards.
+Apr 10, 2020 11:50:20 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out Ali

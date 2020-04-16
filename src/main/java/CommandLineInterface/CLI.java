@@ -13,6 +13,7 @@ public class CLI {
     public static void setStatus(Status status) {
         CLI.status = status;
     }
+
     public static void FirstPage() throws IOException {
         PlayerManagement playerManagement = new PlayerManagement();
         setStatus(Status.MAIN_PAGE);
