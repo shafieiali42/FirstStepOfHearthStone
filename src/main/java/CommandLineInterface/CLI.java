@@ -10,7 +10,8 @@ import java.util.Scanner;
 
 public class CLI {
     public static Player currentPlayer;
-    private static Status status = Status.MAIN_PAGE;
+
+    private static Status status;
 
     public static Status getStatus() {
         return status;

@@ -1,7 +1,9 @@
 package CommandLineInterface;
-//Not using in this phase
+
 public enum Status {
-    MAIN_PAGE,
+    LOGIN_PAGE,
     COLLECTIONS_PAGE,
-    SHOP_PAGE
+    BUY_PAGE,
+    SELL_PAGE,
+    WALLET_PAGE
 }

@@ -289,7 +289,7 @@ public class ManaPanel extends JPanel {
                 foundCards.add(card);
             }
         }
-        ShowCardsOnPanel.showCards(foundCards,CardPanel.getInstance());
+        ShowCardsOnPanel.showCards(foundCards,CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
     }//TODO make unlock cards gray:((
 
     public void filterByMana(int mana) throws IOException {
@@ -299,7 +299,7 @@ public class ManaPanel extends JPanel {
                 filteredByManaCards.add(card);
             }
         }
-        ShowCardsOnPanel.showCards(filteredByManaCards,CardPanel.getInstance());
+        ShowCardsOnPanel.showCards(filteredByManaCards,CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
     }//TODO make unlock cards gray:((
 
 }
