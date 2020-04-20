@@ -27,7 +27,7 @@ public class JsonReaderForSpells {
         // 1. JSON file to Java object
 
         for (int i = 1; i <= Spell.NUMBER_OF_SPELLS; i++) {
-            spell1 = gson.fromJson(new FileReader("MinionSpells\\Spell" + i + ".json"), Spell.class);
+            spell1 = gson.fromJson(new FileReader("MinionSpellsWeapons/Spells\\Spell" + i + ".json"), Spell.class);
             Spell.spells.add(spell1);
         }
         return spell1;

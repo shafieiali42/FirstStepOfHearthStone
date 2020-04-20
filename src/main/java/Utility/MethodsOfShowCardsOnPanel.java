@@ -9,7 +9,7 @@ import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ShowCardsOnPanel {
+public class MethodsOfShowCardsOnPanel {
 
     public static void showCards(ArrayList<Cards> cards, JPanel panel,int numOfCardInEveryRow) throws IOException { //TODO init X and Y coordinate:((
         int counter = 0;

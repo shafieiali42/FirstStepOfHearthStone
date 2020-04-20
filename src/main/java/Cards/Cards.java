@@ -26,10 +26,12 @@ public class Cards {
     public int MoneyCost;
     @Expose(serialize = false, deserialize = true)
     private String type;
+
+//    @Expose(serialize = false, deserialize = false) //TODO i changed here:))
+//    private transient Image imageOfThisCard;
+
     @Expose(serialize = false, deserialize = false)
-    private transient Image imageOfThisCard;
-    @Expose(serialize = false, deserialize = false)
-    private transient CardImagePanel thisCardImagePanel;
+    private transient CardImagePanel thisCardImagePanel= new CardImagePanel(this);
     @Expose(serialize = false, deserialize = false)
     private static ArrayList<Cards> allCards = new ArrayList<Cards>();
 
@@ -43,9 +45,9 @@ public class Cards {
 
     }
 
-    public void setImageOfThisCard(Image imageOfThisCard) {
-        this.imageOfThisCard = imageOfThisCard;
-    }
+//    public void setImageOfThisCard(Image imageOfThisCard) {//TODO i changed here:))
+//        this.imageOfThisCard = imageOfThisCard;
+//    }
 
 //    {
 //        ImageOfAllCards.setImageOfAllCardsList();
@@ -59,7 +61,7 @@ public class Cards {
         allCards.addAll(Spell.getSpells());
         allCards.addAll(Weapon.getWeapons());
         ImageOfAllCards.setImageOfAllCardsList();
-        System.out.println(ImageOfAllCards.getImageOfAllCardsList().size());
+
 
     }
 
@@ -120,9 +122,9 @@ public class Cards {
         MoneyCost = moneyCost;
     }
 
-    public Image getImageOfThisCard() {
-        return imageOfThisCard;
-    }
+//    public Image getImageOfThisCard() {
+//        return imageOfThisCard;
+//    }
 
     @Override
     public String toString() {

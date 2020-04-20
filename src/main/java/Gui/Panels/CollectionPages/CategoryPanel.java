@@ -2,9 +2,8 @@ package Gui.Panels.CollectionPages;
 
 import Cards.Cards;
 import CommandLineInterface.CLI;
-import Utility.ShowCardsOnPanel;
+import Utility.MethodsOfShowCardsOnPanel;
 
-import javax.smartcardio.Card;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -230,21 +229,21 @@ public class CategoryPanel extends JPanel {
                 filteredCardsByClassOfCard.add(card);
             }
         }
-        ShowCardsOnPanel.showCards(filteredCardsByClassOfCard,CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
+        MethodsOfShowCardsOnPanel.showCards(filteredCardsByClassOfCard,CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
     } //TODO show unlock cards with gray:((
 
 
 
     private void showAllCards() throws IOException {
-        ShowCardsOnPanel.showCards(Cards.getAllCards(),CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
+        MethodsOfShowCardsOnPanel.showCards(Cards.getAllCards(),CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
     }//TODO show unlock cards with gray:((
 
     private void showLockCards() throws IOException {
-        ShowCardsOnPanel.showCards(CLI.currentPlayer.getLockCards(),CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
+        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getLockCards(),CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
     }//TODO show unlock cards with gray:((
 
     private void showUnLockCards() throws IOException {
-        ShowCardsOnPanel.showCards(CLI.currentPlayer.getUnLockCards(),CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
+        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getUnLockCards(),CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
     }//TODO show unlock cards with gray:((
 
 }

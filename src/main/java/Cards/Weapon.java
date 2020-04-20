@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Weapon extends Cards {
 
-    public static final int NUMBER_OF_Weapons =0;
+    public static final int NUMBER_OF_Weapons =3;
     private int attackPower;
     private int useAmount;
     static ArrayList<Weapon> weapons=new ArrayList<Weapon>();

@@ -30,7 +30,7 @@ public class PlayerManagement {
         String userName = LogInPage.getInstance().getUserNameTextField().getText();
         String passWord= new String(LogInPage.getInstance().getPasswordField().getPassword()); //TODO check if getpassword?
         Type type = new TypeToken<List<Player>>() { }.getType();
-        List<Player> playerList = new Gson().fromJson(new FileReader("MinionSpells\\AllPlayers.json"), type);
+        List<Player> playerList = new Gson().fromJson(new FileReader("MinionSpellsWeapons/AllPlayers.json"), type);
         boolean valiUserNameAndPassword = false;
         for (Player player : playerList) {
             System.out.println(player.getUserName());
@@ -60,7 +60,7 @@ public class PlayerManagement {
         String userName = LogInPage.getInstance().getUserNameTextField().getText();
         String passWord= new String(LogInPage.getInstance().getPasswordField().getPassword()); //TODO check if getpassword?
         Type type = new TypeToken<List<Player>>() {}.getType();
-        List<Player> playerList = new Gson().fromJson(new FileReader("MinionSpells\\AllPlayers.json"), type);
+        List<Player> playerList = new Gson().fromJson(new FileReader("MinionSpellsWeapons/AllPlayers.json"), type);
         boolean canSignUp = true;
         for (Player player : playerList) {
             if (userName.equals(player.getUserName())) {

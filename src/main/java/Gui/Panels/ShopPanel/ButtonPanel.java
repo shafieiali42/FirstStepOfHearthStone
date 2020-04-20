@@ -3,7 +3,7 @@ package Gui.Panels.ShopPanel;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
 import Gui.Panels.CollectionPages.CardPanel;
-import Utility.ShowCardsOnPanel;
+import Utility.MethodsOfShowCardsOnPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -85,7 +85,7 @@ public class ButtonPanel extends JPanel {
 
     private void showSalableCards() throws IOException {
         CLI.setStatus(Status.SELL_PAGE);
-        ShowCardsOnPanel.showCards(CLI.currentPlayer.getSalableCards(), CardPanel.getInstance(),ShopCardPanel.getInstance().getNumOfCardInEveryRow());
+        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getSalableCards(), CardPanel.getInstance(),ShopCardPanel.getInstance().getNumOfCardInEveryRow());
     }
 
     private void initBuyableCardsBtn() {
@@ -106,7 +106,7 @@ public class ButtonPanel extends JPanel {
 
     private void showBuyableCards() throws IOException {
         CLI.setStatus(Status.BUY_PAGE);
-        ShowCardsOnPanel.showCards(CLI.currentPlayer.getBuyableCards(),CardPanel.getInstance(),ShopCardPanel.getInstance().getNumOfCardInEveryRow());
+        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getBuyableCards(),CardPanel.getInstance(),ShopCardPanel.getInstance().getNumOfCardInEveryRow());
     }
 
     private void initWalletBtn() {

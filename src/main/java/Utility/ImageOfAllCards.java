@@ -11,11 +11,8 @@ import java.util.ArrayList;
 
 public class ImageOfAllCards {
 
-    public static ArrayList<BufferedImage> getImageOfAllCardsList() {
-        return imageOfAllCardsList;
-    }
-
     private static ArrayList<BufferedImage> imageOfAllCardsList =new ArrayList<BufferedImage>();
+
 
     public static void setImageOfAllCardsList() throws IOException {
         for (Cards card : Cards.getAllCards()) {
@@ -24,5 +21,8 @@ public class ImageOfAllCards {
         }
     }
 
+    public static ArrayList<BufferedImage> getImageOfAllCardsList() {
+        return imageOfAllCardsList;
+    }
 
 }

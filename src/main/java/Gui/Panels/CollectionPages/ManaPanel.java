@@ -3,9 +3,8 @@ package Gui.Panels.CollectionPages;
 import Cards.Cards;
 import Gui.MyMainFrame;
 import Gui.Panels.MenuPanel.MainMenuPage;
-import Utility.ShowCardsOnPanel;
+import Utility.MethodsOfShowCardsOnPanel;
 
-import javax.smartcardio.Card;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -289,7 +288,7 @@ public class ManaPanel extends JPanel {
                 foundCards.add(card);
             }
         }
-        ShowCardsOnPanel.showCards(foundCards,CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
+        MethodsOfShowCardsOnPanel.showCards(foundCards,CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
     }//TODO make unlock cards gray:((
 
     public void filterByMana(int mana) throws IOException {
@@ -299,7 +298,7 @@ public class ManaPanel extends JPanel {
                 filteredByManaCards.add(card);
             }
         }
-        ShowCardsOnPanel.showCards(filteredByManaCards,CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
+        MethodsOfShowCardsOnPanel.showCards(filteredByManaCards,CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
     }//TODO make unlock cards gray:((
 
 }
