@@ -1,5 +1,6 @@
 import Cards.*;
 import CommandLineInterface.CLI;
+import Gui.MyMainFrame;
 import Heroes.Mage;
 import Heroes.Rogue;
 import Heroes.Warlock;

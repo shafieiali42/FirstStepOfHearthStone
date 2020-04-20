@@ -1,11 +1,15 @@
 package Gui.Panels.MenuPanel;
 
 
+import CommandLineInterface.PlayerManagement;
 import Gui.MyMainFrame;
+import Gui.Panels.CollectionPages.CollectionPage;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.AffineTransform;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class MainMenuPage extends JPanel {
 
@@ -18,7 +22,8 @@ public class MainMenuPage extends JPanel {
     private JButton shopBtn;
     private JButton statusBtn;
     private JButton settingBtn;
-    private JButton backBtn;
+    private JButton logOutBtn;
+    private JButton deletePlayerBtn;
     private JButton exitBtn;
 
 //     private Color marginColor = Color.decode("#FFE042");
@@ -36,7 +41,7 @@ public class MainMenuPage extends JPanel {
     }
 
     private MainMenuPage() {
-        setSize(MyMainFrame.getFrameWidth(), MyMainFrame.getFrameHeight());
+        setSize(MyMainFrame.getInstance().getMyFrameWidth(), MyMainFrame.getInstance().getMyFrameHeight());
         setLayout(null);
         initPanels();
         initButtons();
@@ -48,36 +53,79 @@ public class MainMenuPage extends JPanel {
 
 
     private void initButtons() {
-        initPalyBtn();
+        initPlayBtn();
         initCollectionBtn();
         initShopBtn();
         initStatusBtn();
         initSettingBtn();
-        initBackBtn();
+        initLogOutBtn();
         initExitBtn();
+        initDeleteBtn();
     }
 
 
 
-    private void initExitBtn() {
+    private void initDeleteBtn() {
+        deletePlayerBtn = new JButton("DeletePlayer");
+        deletePlayerBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
+        deletePlayerBtn.setForeground(colorOfTextOfBtn);
+        deletePlayerBtn.setBackground(colorOfBtn);
+        deletePlayerBtn.setSize(this.getWidth() / 4, this.getHeight() / 7);
+        deletePlayerBtn.setBounds(menuPanel.getWidth() / 2, menuPanel.getHeight() * 5 / 7, deletePlayerBtn.getWidth(),
+                                deletePlayerBtn.getHeight());
+        deletePlayerBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    PlayerManagement.DeletePlayer();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        menuPanel.add(deletePlayerBtn);
+    }
+
+    private void initLogOutBtn() {
+        logOutBtn = new JButton("LogOut");
+        logOutBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
+        logOutBtn.setForeground(colorOfTextOfBtn);
+        logOutBtn.setBackground(colorOfBtn);
+        logOutBtn.setSize(this.getWidth() / 4, this.getHeight() / 7);
+        logOutBtn.setBounds(0, menuPanel.getHeight() * 5 / 7, logOutBtn.getWidth(), logOutBtn.getHeight());
+        logOutBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    PlayerManagement.logOut();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        menuPanel.add(logOutBtn);
+
+    }
+
+    public void initExitBtn(){
         exitBtn = new JButton("Exit");
         exitBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
         exitBtn.setForeground(colorOfTextOfBtn);
         exitBtn.setBackground(colorOfBtn);
-        exitBtn.setSize(this.getWidth() / 4, this.getHeight() / 6);
-        exitBtn.setBounds(menuPanel.getWidth() / 2, menuPanel.getHeight() * 5 / 6, exitBtn.getWidth(), exitBtn.getHeight() - 10);
+        exitBtn.setSize(this.getWidth() / 2, this.getHeight() /7);
+        exitBtn.setBounds(0, menuPanel.getHeight() * 6 / 7, exitBtn.getWidth(), exitBtn.getHeight() -30);
+        exitBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    PlayerManagement.logOut();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+                System.exit(0);
+            }
+        });
         menuPanel.add(exitBtn);
-    }
-
-    private void initBackBtn() {
-        backBtn = new JButton("Back");
-        backBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
-        backBtn.setForeground(colorOfTextOfBtn);
-        backBtn.setBackground(colorOfBtn);
-        backBtn.setSize(this.getWidth() / 4, this.getHeight() / 6);
-        backBtn.setBounds(0, menuPanel.getHeight() * 5 / 6, backBtn.getWidth(), backBtn.getHeight() - 10);
-        menuPanel.add(backBtn);
-
     }
 
     private void initStatusBtn() {
@@ -85,8 +133,8 @@ public class MainMenuPage extends JPanel {
         statusBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
         statusBtn.setForeground(colorOfTextOfBtn);
         statusBtn.setBackground(colorOfBtn);
-        statusBtn.setSize(this.getWidth() / 2, this.getHeight() / 6);
-        statusBtn.setBounds(0, menuPanel.getHeight() * 3 / 6, statusBtn.getWidth(), statusBtn.getHeight());
+        statusBtn.setSize(this.getWidth() / 2, this.getHeight() /7);
+        statusBtn.setBounds(0, menuPanel.getHeight() * 3 / 7, statusBtn.getWidth(), statusBtn.getHeight());
         menuPanel.add(statusBtn);
 
     }
@@ -96,8 +144,8 @@ public class MainMenuPage extends JPanel {
         settingBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
         settingBtn.setForeground(colorOfTextOfBtn);
         settingBtn.setBackground(colorOfBtn);
-        settingBtn.setSize(this.getWidth() / 2, this.getHeight() / 6);
-        settingBtn.setBounds(0, menuPanel.getHeight() * 4 / 6, settingBtn.getWidth(), settingBtn.getHeight());
+        settingBtn.setSize(this.getWidth() / 2, this.getHeight() /7);
+        settingBtn.setBounds(0, menuPanel.getHeight() * 4 / 7, settingBtn.getWidth(), settingBtn.getHeight());
         menuPanel.add(settingBtn);
 
     }
@@ -107,8 +155,8 @@ public class MainMenuPage extends JPanel {
         shopBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
         shopBtn.setForeground(colorOfTextOfBtn);
         shopBtn.setBackground(colorOfBtn);
-        shopBtn.setSize(this.getWidth() / 2, this.getHeight() / 6);
-        shopBtn.setBounds(0, menuPanel.getHeight() * 2 / 6, shopBtn.getWidth(), shopBtn.getHeight());
+        shopBtn.setSize(this.getWidth() / 2, this.getHeight() / 7);
+        shopBtn.setBounds(0, menuPanel.getHeight() * 2 / 7, shopBtn.getWidth(), shopBtn.getHeight());
         menuPanel.add(shopBtn);
 
 
@@ -119,21 +167,28 @@ public class MainMenuPage extends JPanel {
         collectionBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
         collectionBtn.setForeground(Color.RED);
         collectionBtn.setBackground(colorOfBtn);
-        collectionBtn.setSize(this.getWidth() / 2, this.getHeight() / 6);
-        collectionBtn.setBounds(0, menuPanel.getHeight() / 6, collectionBtn.getWidth(), collectionBtn.getHeight());
+        collectionBtn.setSize(this.getWidth() / 2, this.getHeight() / 7);
+        collectionBtn.setBounds(0, menuPanel.getHeight() / 7, collectionBtn.getWidth(), collectionBtn.getHeight());
+        collectionBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
+            }
+        });
         menuPanel.add(collectionBtn);
     }
 
-    private void initPalyBtn() {
+    private void initPlayBtn() {
         playBtn = new JButton("Play");
         playBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
         playBtn.setForeground(Color.RED);
         playBtn.setBackground(colorOfBtn);
-        playBtn.setSize(this.getWidth() / 2, this.getHeight() / 6);
+        playBtn.setSize(this.getWidth() / 2, this.getHeight() / 7);
         playBtn.setBounds(0, 0, playBtn.getWidth(), playBtn.getHeight());
         menuPanel.add(playBtn);
 
     }
+
 
     private void initPanels() {
         initMarginPanels();

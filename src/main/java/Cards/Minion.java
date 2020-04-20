@@ -1,5 +1,6 @@
 package Cards;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Minion extends Cards {
@@ -8,6 +9,10 @@ public class Minion extends Cards {
     private int attackPower;
     private int healthPower;
     static ArrayList<Minion> minions=new ArrayList<Minion>();
+
+    public Minion() throws IOException {
+        super();
+    }
 
     public int getAttackPower() {
         return attackPower;

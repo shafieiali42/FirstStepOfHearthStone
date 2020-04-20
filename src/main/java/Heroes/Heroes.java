@@ -3,7 +3,7 @@ package Heroes;
 import Cards.Cards;
 import java.util.ArrayList;
 
-public abstract class Heroes {
+public class Heroes {
      public Heroes(){
 
      }

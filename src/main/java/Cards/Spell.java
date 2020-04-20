@@ -1,5 +1,6 @@
 package Cards;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Spell extends Cards {
@@ -13,6 +14,12 @@ public class Spell extends Cards {
     public static void setSpells(ArrayList<Spell> spells) {
         Spell.spells = spells;
     }
+
+    public Spell() throws IOException {
+        super();
+    }
+
+
 
     @Override
     public String toString(){

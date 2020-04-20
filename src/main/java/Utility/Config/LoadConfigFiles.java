@@ -10,7 +10,7 @@ import java.util.Set;
 public class LoadConfigFiles {
 
     private static LoadConfigFiles loadConfigFiles=new LoadConfigFiles();
-    private String mainConfigFilesAdress ="resources/LogicConfigFiles/MainConfigFiles.properties";
+    private String mainConfigFilesAdress ="src/main/resources/LogicConfigFiles/MainConfigFiles.properties";
     private HashMap<String,MyProperties> frameConfigs;
     private HashMap<String,MyProperties> panelConfigs;
     MyProperties properties;

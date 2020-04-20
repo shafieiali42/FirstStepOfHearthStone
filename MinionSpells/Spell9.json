@@ -1,1 +1,1 @@
-{"name":"Bloodfury Potion" , "type":"Spell" , "classOfCard":"Warlock" , "MoneyCost":20 , "manaCost":3 ,"rarity":"rare" ,"description":"Give a minion +3 attack. if it's a Demon also give it +3 Health." }
+{"name":"Bloodfury_Potion" , "type":"Spell" , "classOfCard":"Warlock" , "MoneyCost":20 , "manaCost":3 ,"rarity":"rare" ,"description":"Give a minion +3 attack. if it's a Demon also give it +3 Health." }

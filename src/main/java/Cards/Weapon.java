@@ -1,5 +1,6 @@
 package Cards;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Weapon extends Cards {
@@ -8,6 +9,10 @@ public class Weapon extends Cards {
     private int attackPower;
     private int useAmount;
     static ArrayList<Weapon> weapons=new ArrayList<Weapon>();
+
+    public Weapon() throws IOException {
+        super();
+    }
 
 
     public int getAttackPower() {

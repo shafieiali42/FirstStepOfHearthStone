@@ -1,12 +1,15 @@
 package CommandLineInterface;
 
 
+import Gui.Panels.LogInPanel.LogInPage;
+import Gui.Panels.MenuPanel.MainMenuPage;
 import Player.Player;
 import Player.*;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import javax.swing.*;
 import java.io.*;
 import java.lang.reflect.Type;
 import java.text.DateFormat;
@@ -19,11 +22,13 @@ import java.util.logging.Logger;
 public class PlayerManagement {
     static Scanner myscanner = new Scanner(System.in);
 
-    public void signIn() throws IOException {
-        System.out.println("Username:");
-        String userName = myscanner.nextLine();
-        System.out.println("Password:");
-        String passWord = myscanner.nextLine();
+    public static void signIn() throws IOException {
+//        System.out.println("Username:");
+//        String userName = myscanner.nextLine();
+//        System.out.println("Password:");
+//        String passWord = myscanner.nextLine();
+        String userName = LogInPage.getInstance().getUserNameTextField().getText();
+        String passWord= new String(LogInPage.getInstance().getPasswordField().getPassword()); //TODO check if getpassword?
         Type type = new TypeToken<List<Player>>() { }.getType();
         List<Player> playerList = new Gson().fromJson(new FileReader("MinionSpells\\AllPlayers.json"), type);
         boolean valiUserNameAndPassword = false;
@@ -40,16 +45,20 @@ public class PlayerManagement {
                 CLI.secondPage();
             }
         }
-        if (!valiUserNameAndPassword) {
+        if (!valiUserNameAndPassword) {//TODO mybe it should be frame instead of panel:((
             System.out.println("invalid username or password!");
+            JOptionPane.showMessageDialog(LogInPage.getInstance(),
+                    "Please Enter a Valid UserName or Password!","LogIn Error",JOptionPane.ERROR_MESSAGE);
         }
     }
 
-    public void signUp() throws IOException {
-        System.out.println("Username:");
-        String userName = myscanner.nextLine();
-        System.out.println("Password:");
-        String passWord = myscanner.nextLine();
+    public static void signUp() throws IOException {
+//        System.out.println("Username:");
+//        String userName = myscanner.nextLine();
+//        System.out.println("Password:");
+//        String passWord = myscanner.nextLine();
+        String userName = LogInPage.getInstance().getUserNameTextField().getText();
+        String passWord= new String(LogInPage.getInstance().getPasswordField().getPassword()); //TODO check if getpassword?
         Type type = new TypeToken<List<Player>>() {}.getType();
         List<Player> playerList = new Gson().fromJson(new FileReader("MinionSpells\\AllPlayers.json"), type);
         boolean canSignUp = true;
@@ -72,19 +81,23 @@ public class PlayerManagement {
             CLI.secondPage();
         } else {
             System.out.println("There is an account with this username!");
+            JOptionPane.showMessageDialog(LogInPage.getInstance(),
+                    "There is an account with this username!","SignUp Error",JOptionPane.ERROR_MESSAGE);
         }
     }
 
-    public void logOut() throws IOException {
+    public static void logOut() throws IOException {
         ParsePlayerObjectIntoJson.serializePlayer(CLI.currentPlayer);
         CLI.currentPlayer.getLoggerOfMyPlayer().info("Log_out " + CLI.currentPlayer.getUserName());
         CLI.currentPlayer.getLoggerOfMyPlayer().getHandlers()[0].close();
         CLI.currentPlayer = null;
+        CLI.FirstPage();
     }
 
-    public void DeletePlayer() throws IOException {
-        System.out.println("Password:");
-        String password = myscanner.nextLine();
+    public static void DeletePlayer() throws IOException {
+//        System.out.println("Password:");
+//        String password = myscanner.nextLine();
+        String password =JOptionPane.showInputDialog("Please Enter your Password:");
         if (password.equals(CLI.currentPlayer.getPassWord())) {
             File temp = new File("logs\\"+"temp.txt");
             FileReader fileReader = new FileReader("logs\\"+CLI.currentPlayer.getUserName() + ".log");
@@ -121,7 +134,8 @@ public class PlayerManagement {
             ParsePlayerObjectIntoJson.removePlayer(CLI.currentPlayer);
             System.exit(0);
         } else {
-            System.out.println("your password is incorrect!");
+//            System.out.println("your password is incorrect!");
+            JOptionPane.showMessageDialog(MainMenuPage.getInstance(),"Wrong Password!","Error",JOptionPane.ERROR_MESSAGE);
         }
     }
 }

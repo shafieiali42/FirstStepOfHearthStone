@@ -9,14 +9,23 @@ public class MyMainFrame extends JFrame {
     private FrameConfig frameConfig;
     private static int  width;
     private static int height;
+    private static MyMainFrame myFrame =new MyMainFrame();
+    public static MyMainFrame getInstance(){return myFrame;}
 
 
-    public static int getFrameHeight() {
+    public  int getMyFrameHeight() {
         return height;
     }
-    public static int getFrameWidth(){return width;}
+    public  int getMyFrameWidth(){return width;}
 
-    public MyMainFrame(){
+
+    public static void switchPanel(JPanel firstPanel,JPanel secondPanel){
+        getInstance().remove(firstPanel);
+        getInstance().setContentPane(secondPanel);
+        getInstance().setVisible(true);
+    }
+
+    private MyMainFrame(){
 
         this.initFrame();
 

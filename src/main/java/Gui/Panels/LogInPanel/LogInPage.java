@@ -1,12 +1,15 @@
 package Gui.Panels.LogInPanel;
 
 
+import CommandLineInterface.PlayerManagement;
 import Gui.MyMainFrame;
 import Utility.ImageBackGround;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -23,8 +26,6 @@ public class LogInPage extends JPanel {
     private JButton exitBtn;
     private ImageBackGround imageBackGround = new ImageBackGround();
     private static LogInPage logInPage;
-
-
 
 
     static {
@@ -48,30 +49,21 @@ public class LogInPage extends JPanel {
         g2d.setFont(new Font("TimesRoman", Font.ITALIC, 50));
         Rectangle2D bounds = g.getFontMetrics().getStringBounds(welcome, g2d);
         int lengthOfMessage = (int) bounds.getWidth();
-        g2d.drawString(welcome, MyMainFrame.getFrameWidth() / 2 + (MyMainFrame.getFrameWidth() / 2 - lengthOfMessage) / 2, 100);
+        g2d.drawString(welcome, MyMainFrame.getInstance().getMyFrameWidth() / 2 + (MyMainFrame.getInstance().getMyFrameWidth() / 2 - lengthOfMessage) / 2, 100);
         String message = "Enjoy your time";
         g2d.setFont(new Font("TimesRoman", Font.ITALIC, 30));
         Rectangle2D bounds1 = g.getFontMetrics().getStringBounds(message, g2d);
         int lengthOfMessage1 = (int) bounds1.getWidth();
-        g2d.drawString(message, MyMainFrame.getFrameWidth() / 2 + (MyMainFrame.getFrameWidth() / 2 - lengthOfMessage1) / 2, 150);
+        g2d.drawString(message, MyMainFrame.getInstance().getMyFrameWidth() / 2 + (MyMainFrame.getInstance().getMyFrameWidth() / 2 - lengthOfMessage1) / 2, 150);
     }
 
     private LogInPage() throws IOException {
-        setSize(MyMainFrame.getFrameWidth(), MyMainFrame.getFrameHeight());
+        setSize(MyMainFrame.getInstance().getMyFrameWidth(), MyMainFrame.getInstance().getMyFrameHeight());
         setLayout(null);
         setBackground(Color.GRAY);
         initImagePanel();
         initLabelsAndFields();
         initButtons();
-        add(imageBackGround);
-        add(userNameLabel);
-        add(userNameTextField);
-        add(passwordLabel);
-        add(passwordField);
-        add(logInBtn);
-        add(signUpBtn);
-        add(exitBtn);
-
     }
 
     private void initButtons() {
@@ -82,9 +74,16 @@ public class LogInPage extends JPanel {
     private void initExitButton() {
         exitBtn = new JButton("Exit");
         exitBtn.setSize(100, 40);
-        exitBtn.setBounds(MyMainFrame.getFrameWidth() / 2 + (MyMainFrame.getFrameWidth() / 2 - exitBtn.getWidth()) / 2,
+        exitBtn.setBounds(MyMainFrame.getInstance().getMyFrameWidth() / 2 + (MyMainFrame.getInstance().getMyFrameWidth() / 2 - exitBtn.getWidth()) / 2,
                 signUpBtn.getY() + 50,
                 exitBtn.getWidth(), exitBtn.getHeight());
+        exitBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+        this.add(exitBtn);
     }
 
     private void initLogInSignUpButton() {
@@ -92,16 +91,41 @@ public class LogInPage extends JPanel {
         logInBtn = new JButton("LogIn");
         logInBtn.setSize(100, 40);
         signUpBtn.setSize(100, 40);
-        signUpBtn.setBounds(MyMainFrame.getFrameWidth() / 2 +
-                           (MyMainFrame.getFrameWidth() / 2 - logInBtn.getWidth() - signUpBtn.getWidth()) / 2 +
-                           logInBtn.getWidth() + 5,
-                          passwordLabel.getY() + 50, logInBtn.getWidth(), logInBtn.getHeight());
+        signUpBtn.setBounds(MyMainFrame.getInstance().getMyFrameWidth() / 2 +
+                        (MyMainFrame.getInstance().getMyFrameWidth() / 2 - logInBtn.getWidth() - signUpBtn.getWidth()) / 2 +
+                        logInBtn.getWidth() + 5,
+                passwordLabel.getY() + 50, logInBtn.getWidth(), logInBtn.getHeight());
 
-        logInBtn.setBounds(MyMainFrame.getFrameWidth() / 2 + (MyMainFrame.getFrameWidth() / 2 -
-                            logInBtn.getWidth() - signUpBtn.getWidth()) / 2,
-                            passwordLabel.getY() + 50, logInBtn.getWidth(), logInBtn.getHeight());
+        logInBtn.setBounds(MyMainFrame.getInstance().getMyFrameWidth() / 2 + (MyMainFrame.getInstance().getMyFrameWidth() / 2 -
+                        logInBtn.getWidth() - signUpBtn.getWidth()) / 2,
+                passwordLabel.getY() + 50, logInBtn.getWidth(), logInBtn.getHeight());
+
+        signUpBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    PlayerManagement.signUp();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        logInBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    PlayerManagement.signIn();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        this.add(logInBtn);
+        this.add(signUpBtn);
+
     }
-
 
 
     private void initLabelsAndFields() {
@@ -114,28 +138,43 @@ public class LogInPage extends JPanel {
         passwordLabel.setSize(60, 20);
         userNameTextField.setSize(80, 20);
         passwordField.setSize(80, 20);
-        userNameLabel.setBounds(MyMainFrame.getFrameWidth() / 2 +
-                        (MyMainFrame.getFrameWidth() / 2 - userNameLabel.getWidth() - userNameTextField.getWidth()) / 2,
+        userNameLabel.setBounds(MyMainFrame.getInstance().getMyFrameWidth() / 2 +
+                        (MyMainFrame.getInstance().getMyFrameWidth() / 2 - userNameLabel.getWidth() - userNameTextField.getWidth()) / 2,
                 350, userNameLabel.getWidth(), userNameLabel.getHeight());
-        passwordLabel.setBounds(MyMainFrame.getFrameWidth() / 2 +
-                        (MyMainFrame.getFrameWidth() / 2 - userNameLabel.getWidth() - userNameTextField.getWidth()) / 2,
+        passwordLabel.setBounds(MyMainFrame.getInstance().getMyFrameWidth() / 2 +
+                        (MyMainFrame.getInstance().getMyFrameWidth() / 2 - userNameLabel.getWidth() - userNameTextField.getWidth()) / 2,
                 400, passwordLabel.getWidth(), passwordLabel.getHeight());
 
-        userNameTextField.setBounds(MyMainFrame.getFrameWidth() / 2 +
-                        (MyMainFrame.getFrameWidth() / 2 - userNameLabel.getWidth() - userNameTextField.getWidth()) / 2+
+        userNameTextField.setBounds(MyMainFrame.getInstance().getMyFrameWidth() / 2 +
+                        (MyMainFrame.getInstance().getMyFrameWidth() / 2 - userNameLabel.getWidth() - userNameTextField.getWidth()) / 2 +
                         userNameLabel.getWidth() + 5,
                 350, userNameTextField.getWidth(), userNameTextField.getHeight());
-        passwordField.setBounds(MyMainFrame.getFrameWidth() / 2 +
-                        (MyMainFrame.getFrameWidth() / 2 - userNameLabel.getWidth() - userNameTextField.getWidth()) / 2 + passwordLabel.getWidth() + 8,
+        passwordField.setBounds(MyMainFrame.getInstance().getMyFrameWidth() / 2 +
+                        (MyMainFrame.getInstance().getMyFrameWidth() / 2 - userNameLabel.getWidth() - userNameTextField.getWidth()) / 2 + passwordLabel.getWidth() + 8,
                 400, passwordField.getWidth(), passwordField.getHeight());
-    }
-    private void initImagePanel() throws IOException {
-        BufferedImage image = ImageIO.read(new File("Assets/6.jpg"));
-        imageBackGround.setSize(MyMainFrame.getFrameWidth() / 2, MyMainFrame.getFrameHeight());
-        imageBackGround.setImageBackGround(image);
-        imageBackGround.setBounds(0, 0, imageBackGround.getWidth(), imageBackGround.getHeight());
+
+        this.add(userNameLabel);
+        this.add(userNameTextField);
+        this.add(passwordLabel);
+        this.add(passwordField);
     }
 
+    private void initImagePanel() throws IOException {
+        BufferedImage image = ImageIO.read(new File("src/main/resources/Assets/LogInImage.jpg"));
+        imageBackGround.setSize(MyMainFrame.getInstance().getMyFrameWidth() / 2, MyMainFrame.getInstance().getMyFrameHeight());
+        imageBackGround.setImageBackGround(image);
+        imageBackGround.setBounds(0, 0, imageBackGround.getWidth(), imageBackGround.getHeight());
+        this.add(imageBackGround);
+    }
+
+
+    public JTextField getUserNameTextField() {
+        return userNameTextField;
+    }
+
+    public JPasswordField getPasswordField() {
+        return passwordField;
+    }
 
 
 }

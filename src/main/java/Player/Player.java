@@ -46,6 +46,19 @@ public class Player {
     private ArrayList<Cards> NeutralCardsOfPlayer = new ArrayList<Cards>();
     @Expose(serialize = true,deserialize = true)
     private ArrayList<Cards> availableCardsThatWeCanAddIntoOurDeck=new ArrayList<Cards>();
+    @Expose(serialize = true,deserialize = true)
+    private ArrayList<Cards> lockCards =new ArrayList<Cards>();//TODO needs to be init:))
+    @Expose(serialize = true,deserialize = true)
+    private ArrayList<Cards> unLockCards =new ArrayList<Cards>();//TODO needs to be init:))
+
+
+
+    public ArrayList<Cards> getLockCards() {
+        return lockCards;
+    }
+    public ArrayList<Cards> getUnLockCards() {
+        return unLockCards;
+    }
 
     public ArrayList<Cards> getAllCardsOfPlayer() {
         return allCardsOfPlayer;
