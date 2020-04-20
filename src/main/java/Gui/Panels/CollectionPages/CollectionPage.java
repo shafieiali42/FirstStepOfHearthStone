@@ -34,5 +34,10 @@ public class CollectionPage extends JPanel {
         add(panel);
     }
 
+//    public void addPanel(JScrollPane jScrollPane,int x, int y, int width,int height){
+//        jScrollPane.setBounds(x,y,width,height);
+//        add(jScrollPane);
+//    }
+
 
 }

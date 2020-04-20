@@ -26,7 +26,7 @@ public class CardImagePanel extends JPanel {
 //        imageOfCard=card.getImageOfThisCard();
 //        imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/"+card.getName()+".png"));
 
-        imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/PlaguedKnife.png"));
+        imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/"+card.getName()+".png"));
     }
 
 

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Minion extends Cards {
 
-    public static final int NUMBER_OF_MINIONS=10;
+    public static final int NUMBER_OF_MINIONS=16;
     private int attackPower;
     private int healthPower;
     static ArrayList<Minion> minions=new ArrayList<Minion>();

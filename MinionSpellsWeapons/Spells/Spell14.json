@@ -1,1 +1,1 @@
-{"name":"PharaohsBlessing" , "type":"Spell" , "classOfCard":"Neutral" , "MoneyCost": , "manaCost":6 ,"rarity":"Rare" , "description":"Give a minion +4/+4, Divine Shield, and Taunt." }
+{"name":"PharaohsBlessing" , "type":"Spell" , "classOfCard":"Neutral" , "MoneyCost":10 , "manaCost":6 ,"rarity":"Rare" , "description":"Give a minion +4/+4, Divine Shield, and Taunt." }

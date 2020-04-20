@@ -102,3 +102,81 @@ Apr 21, 2020 1:24:54 AM CommandLineInterface.PlayerManagement signIn
 INFO: sign_in sss
 Apr 21, 2020 1:27:06 AM CommandLineInterface.PlayerManagement signIn
 INFO: sign_in sss
+Apr 21, 2020 1:31:46 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 1:32:27 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 1:32:47 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+Apr 21, 2020 1:40:00 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 1:49:18 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 2:06:38 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 2:07:31 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 2:10:07 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 2:10:47 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 2:11:21 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 2:36:46 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 2:47:06 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 2:49:30 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 2:51:08 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 3:17:15 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 3:33:47 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 3:34:44 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 3:41:10 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+Apr 21, 2020 3:41:10 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/04/21 03:41:10
+Apr 21, 2020 3:41:10 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+Apr 21, 2020 3:41:10 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+Apr 21, 2020 3:42:54 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+Apr 21, 2020 3:42:54 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/04/21 03:42:54
+Apr 21, 2020 3:42:54 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+Apr 21, 2020 3:42:54 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+Apr 21, 2020 3:43:04 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+Apr 21, 2020 3:47:55 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 3:48:15 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+Apr 21, 2020 4:21:15 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+Apr 21, 2020 4:21:15 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/04/21 04:21:15
+Apr 21, 2020 4:21:15 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+Apr 21, 2020 4:21:15 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+Apr 21, 2020 4:21:22 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+Apr 21, 2020 4:21:32 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 4:21:43 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+Apr 21, 2020 4:22:27 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 4:22:37 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+Apr 21, 2020 4:24:35 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+Apr 21, 2020 4:24:45 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss

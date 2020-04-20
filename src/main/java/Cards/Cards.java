@@ -1,7 +1,7 @@
 package Cards;
 
 
-import Utility.ImageOfAllCards;
+//import Utility.ImageOfAllCards;
 import com.google.gson.annotations.Expose;
 
 import javax.imageio.ImageIO;
@@ -31,7 +31,7 @@ public class Cards {
 //    private transient Image imageOfThisCard;
 
     @Expose(serialize = false, deserialize = false)
-    private transient CardImagePanel thisCardImagePanel= new CardImagePanel(this);
+    private transient CardImagePanel thisCardImagePanel;
     @Expose(serialize = false, deserialize = false)
     private static ArrayList<Cards> allCards = new ArrayList<Cards>();
 
@@ -39,9 +39,13 @@ public class Cards {
         return allCards;
     }
 
-
+    private transient static int count=0;
     public Cards() throws IOException {
-
+        count++;
+        if (count==Minion.NUMBER_OF_MINIONS+Spell.NUMBER_OF_SPELLS+Weapon.NUMBER_OF_Weapons+20000){
+            System.out.println(count);
+            thisCardImagePanel=new CardImagePanel(this);
+        }
 
     }
 
@@ -60,7 +64,7 @@ public class Cards {
         allCards.addAll(Minion.getMinions());
         allCards.addAll(Spell.getSpells());
         allCards.addAll(Weapon.getWeapons());
-        ImageOfAllCards.setImageOfAllCardsList();
+//        ImageOfAllCards.setImageOfAllCardsList();
 
 
     }
