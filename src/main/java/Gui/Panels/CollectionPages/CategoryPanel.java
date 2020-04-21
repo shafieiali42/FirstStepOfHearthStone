@@ -47,7 +47,7 @@ public class CategoryPanel extends JPanel {
     }
 
     private CategoryPanel() {
-        setBackground(Color.cyan);
+        setBackground(Color.gray);
         setLayout(new FlowLayout(NUMBER_OF_BTN, 20, 20));
         initButtons();
     }
@@ -225,7 +225,6 @@ public class CategoryPanel extends JPanel {
         ArrayList<Cards> filteredCardsByClassOfCard =new ArrayList<Cards>();
         for (Cards card:Cards.getAllCards()){
             if (card.getClassOfCard().equalsIgnoreCase(className)){
-                System.out.println("equal");
                 filteredCardsByClassOfCard.add(card);
             }
         }

@@ -2,7 +2,9 @@ package Gui.Panels.ShopPanel;
 
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
+import Gui.MyMainFrame;
 import Gui.Panels.CollectionPages.CardPanel;
+import Gui.Panels.MenuPanel.MainMenuPage;
 import Utility.MethodsOfShowCardsOnPanel;
 
 import javax.swing.*;
@@ -17,7 +19,9 @@ public class ButtonPanel extends JPanel {
     public static final int WIDTH_OF_BTN=90;
     public static final int HEIGHT_OF_BTN =90;
 
-    private static final int WIDTH_OF_BUTTON_PANEL =1200;      //TODO NEEDS TO CHANGE
+    private static final int WIDTH_OF_BUTTON_PANEL =1400;      //TODO NEEDS TO CHANGE
+    private static final int HEIGHT_OF_BUTTON_PANEL =80;     //TODO NEEDS TO CHANGE
+
 
     public  int getWidthOfButtonPanel() {
         return WIDTH_OF_BUTTON_PANEL;
@@ -27,7 +31,6 @@ public class ButtonPanel extends JPanel {
         return HEIGHT_OF_BUTTON_PANEL;
     }
 
-    private static final int HEIGHT_OF_BUTTON_PANEL =80;     //TODO NEEDS TO CHANGE
 
     private Color colorOfTextOfBtn = new Color(255, 0, 0);
     private Color colorOfBtn = new Color(48, 48, 45);
@@ -38,6 +41,7 @@ public class ButtonPanel extends JPanel {
     private JButton walletBtn;
     private JButton buyableCardsBtn;
     private JButton salableCardsBtn;
+    private JButton backBtn;
 
 
 
@@ -49,11 +53,13 @@ public class ButtonPanel extends JPanel {
     }
 
     private void initButtons() {
+        initBackBtn();
         initWalletBtn();
         initBuyableCardsBtn();
         initSalableCardsBtn();
 
     }
+
 
     public void designBtn(JButton btn){
         btn.setSize(WIDTH_OF_BTN, HEIGHT_OF_BTN);
@@ -63,6 +69,17 @@ public class ButtonPanel extends JPanel {
 
     }
 
+    private void initBackBtn() {
+        backBtn = new JButton("Back");
+        designBtn(backBtn);
+        backBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
+            }
+        });
+        add(backBtn);
+    }
 
 
 
@@ -85,7 +102,7 @@ public class ButtonPanel extends JPanel {
 
     private void showSalableCards() throws IOException {
         CLI.setStatus(Status.SELL_PAGE);
-        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getSalableCards(), CardPanel.getInstance(),ShopCardPanel.getInstance().getNumOfCardInEveryRow());
+        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getSalableCards(), ShopCardPanel.getInstance(),ShopCardPanel.getInstance().getNumOfCardInEveryRow());
     }
 
     private void initBuyableCardsBtn() {
@@ -110,14 +127,14 @@ public class ButtonPanel extends JPanel {
     }
 
     private void initWalletBtn() {
-        walletBtn = new JButton("Lock");
+        walletBtn = new JButton("Wallet");
         designBtn(walletBtn);
         walletBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CLI.setStatus(Status.WALLET_PAGE);
                 JOptionPane.showConfirmDialog(null, "You have "+ CLI.currentPlayer.getMoney()+" Money!",
-                        "Wallet", JOptionPane.INFORMATION_MESSAGE);
+                        "Wallet", JOptionPane.DEFAULT_OPTION);
             }
         });
         add(walletBtn);

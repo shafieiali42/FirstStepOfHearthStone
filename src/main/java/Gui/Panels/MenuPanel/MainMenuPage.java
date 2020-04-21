@@ -4,6 +4,7 @@ package Gui.Panels.MenuPanel;
 import CommandLineInterface.PlayerManagement;
 import Gui.MyMainFrame;
 import Gui.Panels.CollectionPages.CollectionPage;
+import Gui.Panels.ShopPanel.ShopPage;
 
 import javax.swing.*;
 import java.awt.*;
@@ -157,6 +158,12 @@ public class MainMenuPage extends JPanel {
         shopBtn.setBackground(colorOfBtn);
         shopBtn.setSize(this.getWidth() / 2, this.getHeight() / 7);
         shopBtn.setBounds(0, menuPanel.getHeight() * 2 / 7, shopBtn.getWidth(), shopBtn.getHeight());
+        shopBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MyMainFrame.getInstance().setContentPane(ShopPage.getInstance());
+            }
+        });
         menuPanel.add(shopBtn);
 
 

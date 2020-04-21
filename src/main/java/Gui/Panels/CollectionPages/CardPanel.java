@@ -1,5 +1,7 @@
 package Gui.Panels.CollectionPages;
 
+import Gui.MyMainFrame;
+
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
@@ -11,7 +13,7 @@ public class CardPanel extends JPanel {
     private static final int NUM_OF_CARD_IN_EVERY_ROW = 5; //TODO NEEDS TO CHANGE
 
 
-    private JScrollPane jScrollPane;
+    public JScrollPane jScrollPane;
     public static int getNumOfCardInEveryRow() {
         return NUM_OF_CARD_IN_EVERY_ROW;
     }
@@ -30,9 +32,16 @@ public class CardPanel extends JPanel {
     private CardPanel(){
 //        setBackground(Color.green);
         setLayout(null);
-        jScrollPane =new JScrollPane(this,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane.setBackground(Color.GREEN);
+        setMinimumSize(new Dimension(this.getWidthOfCardPanel(),this.getHeightOfCardPanel()));
+         jScrollPane =new JScrollPane(this,
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+//        jScrollPane.setPreferredSize(new Dimension(this.getWidth(),this.getHeight()));
+
+//
     }
+
 
 
     public JScrollPane getJScrollPane() {

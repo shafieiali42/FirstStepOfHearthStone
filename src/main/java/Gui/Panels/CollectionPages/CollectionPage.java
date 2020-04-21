@@ -3,6 +3,7 @@ package Gui.Panels.CollectionPages;
 import Gui.MyMainFrame;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class CollectionPage extends JPanel {
 
@@ -18,8 +19,9 @@ public class CollectionPage extends JPanel {
 
         this.addPanel(DeckPanel.getInstance(),CategoryPanel.getInstance().getWidthOfCategoryPanel(),0,
                       DeckPanel.getInstance().getWidthOfDeckPanel(),DeckPanel.getInstance().getHeightOfDeckPanel());
+        //TODO I CHANGE THIS:)))))))))))))))))))))))))))))))))))))
 
-        this.addPanel(CardPanel.getInstance(),0,CategoryPanel.getInstance().getHeightOfCategoryPanel(),
+        this.addPanel(CardPanel.getInstance().getJScrollPane(),0,CategoryPanel.getInstance().getHeightOfCategoryPanel(),
                       CardPanel.getInstance().getWidthOfCardPanel(),CardPanel.getInstance().getHeightOfCardPanel());
 
         this.addPanel(ManaPanel.getInstance(),0,
@@ -34,10 +36,10 @@ public class CollectionPage extends JPanel {
         add(panel);
     }
 
-//    public void addPanel(JScrollPane jScrollPane,int x, int y, int width,int height){
-//        jScrollPane.setBounds(x,y,width,height);
-//        add(jScrollPane);
-//    }
+    public void addPanel(JScrollPane jScrollPane,int x, int y, int width,int height){
+        jScrollPane.setBounds(x,y,width,height);
+        add(jScrollPane);
+    }
 
 
 }
