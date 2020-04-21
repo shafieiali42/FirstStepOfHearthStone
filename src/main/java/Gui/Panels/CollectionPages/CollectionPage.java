@@ -21,11 +21,28 @@ public class CollectionPage extends JPanel {
                       DeckPanel.getInstance().getWidthOfDeckPanel(),DeckPanel.getInstance().getHeightOfDeckPanel());
         //TODO I CHANGE THIS:)))))))))))))))))))))))))))))))))))))
 
-        this.addPanel(CardPanel.getInstance().getJScrollPane(),0,CategoryPanel.getInstance().getHeightOfCategoryPanel(),
-                      CardPanel.getInstance().getWidthOfCardPanel(),CardPanel.getInstance().getHeightOfCardPanel());
+//        this.addPanel(CardPanel.getInstance().getJScrollPane(),0,CategoryPanel.getInstance().getHeightOfCategoryPanel(),
+//                      CardPanel.getInstance().getWidthOfCardPanel(),CardPanel.getInstance().getHeightOfCardPanel());
 
+//        CardPanel.getInstance().jScrollPane=new JScrollPane(CardPanel.getInstance());
+//        CardPanel.getInstance().jScrollPane.setBounds(0,CategoryPanel.getInstance().getHeightOfCategoryPanel(),
+//                CardPanel.getInstance().getWidthOfCardPanel(),620);
+//        CardPanel.getInstance().jScrollPane.setFocusable(false);
+//        CardPanel.getInstance().jScrollPane.revalidate();
+//        CardPanel.getInstance().jScrollPane.repaint();
+        this.add(CardPanel.getInstance().jScrollPane);
+
+
+
+
+
+
+
+
+
+//        this.add(CardPanel.getInstance().jScrollPane);
         this.addPanel(ManaPanel.getInstance(),0,
-                (CategoryPanel.getInstance().getHeightOfCategoryPanel()+CardPanel.getInstance().getHeightOfCardPanel()),
+                (CategoryPanel.getInstance().getHeightOfCategoryPanel()+CardPanel.getInstance().getJScrollPane().getHeight()),
                 ManaPanel.getInstance().getWidthOfManaPanel(),ManaPanel.getInstance().getHeightOfManaPanel());
 
 

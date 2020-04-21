@@ -56,7 +56,7 @@ public class ManaPanel extends JPanel {
 
 
     private ManaPanel() {
-        setBackground(Color.gray);
+        setBackground(Color.pink);
         setLayout(new FlowLayout(NUM_OF_COMPONENT, 20, 20));
         initButtons();
         initSearchTools();

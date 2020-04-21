@@ -47,7 +47,7 @@ public class CategoryPanel extends JPanel {
     }
 
     private CategoryPanel() {
-        setBackground(Color.gray);
+        setBackground(Color.cyan);
         setLayout(new FlowLayout(NUMBER_OF_BTN, 20, 20));
         initButtons();
     }

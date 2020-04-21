@@ -33,7 +33,7 @@ public class DeckPanel extends JPanel {
     public static DeckPanel getInstance(){return deckPanel;}
 
     private DeckPanel(){
-        setBackground(Color.gray);
+        setBackground(Color.blue);
         setLayout(new FlowLayout(1,20,20));
         initNewDeckBtn();
         showDecksOfDeckList();
