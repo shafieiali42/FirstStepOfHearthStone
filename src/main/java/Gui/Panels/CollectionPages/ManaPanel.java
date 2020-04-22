@@ -3,6 +3,7 @@ package Gui.Panels.CollectionPages;
 import Cards.Cards;
 import Gui.MyMainFrame;
 import Gui.Panels.MenuPanel.MainMenuPage;
+import Gui.Panels.ShopPanel.ShopCardPanel;
 import Utility.MethodsOfShowCardsOnPanel;
 
 import javax.swing.*;
@@ -271,6 +272,9 @@ public class ManaPanel extends JPanel {
         backBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                CardPanel.getInstance().removeAll();
+                CardPanel.getInstance().repaint();
+                CardPanel.getInstance().revalidate();
                 goBack();
             }
         });
@@ -280,6 +284,9 @@ public class ManaPanel extends JPanel {
     private void goBack() {
         MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
     }
+
+
+
 
     private void searchInCards(String searchFieldText) throws IOException {
         ArrayList<Cards> foundCards =new ArrayList<Cards>();

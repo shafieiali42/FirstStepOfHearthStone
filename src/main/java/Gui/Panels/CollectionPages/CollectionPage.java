@@ -24,25 +24,20 @@ public class CollectionPage extends JPanel {
 //        this.addPanel(CardPanel.getInstance().getJScrollPane(),0,CategoryPanel.getInstance().getHeightOfCategoryPanel(),
 //                      CardPanel.getInstance().getWidthOfCardPanel(),CardPanel.getInstance().getHeightOfCardPanel());
 
-//        CardPanel.getInstance().jScrollPane=new JScrollPane(CardPanel.getInstance());
-//        CardPanel.getInstance().jScrollPane.setBounds(0,CategoryPanel.getInstance().getHeightOfCategoryPanel(),
-//                CardPanel.getInstance().getWidthOfCardPanel(),620);
-//        CardPanel.getInstance().jScrollPane.setFocusable(false);
-//        CardPanel.getInstance().jScrollPane.revalidate();
-//        CardPanel.getInstance().jScrollPane.repaint();
-        this.add(CardPanel.getInstance().jScrollPane);
+        CardPanel.getInstance().setPreferredSize(new Dimension(1200,1600));
+        CardPanel.getInstance().setFocusable(true);
+        CardPanel.getInstance().requestFocus();
+        CardPanel.getInstance().setJScrollPane(new JScrollPane(CardPanel.getInstance()));
+        CardPanel.getInstance().getJScrollPane().setBounds(0,CategoryPanel.getInstance().getHeightOfCategoryPanel(),1200,620);
+        CardPanel.getInstance().getJScrollPane().setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        CardPanel.getInstance().getJScrollPane().setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        CardPanel.getInstance().getJScrollPane().setBorder(null);
+        CardPanel.getInstance().getJScrollPane().setFocusable(false);
+        this.add(CardPanel.getInstance().getJScrollPane());
 
 
-
-
-
-
-
-
-
-//        this.add(CardPanel.getInstance().jScrollPane);
         this.addPanel(ManaPanel.getInstance(),0,
-                (CategoryPanel.getInstance().getHeightOfCategoryPanel()+CardPanel.getInstance().getJScrollPane().getHeight()),
+                (CategoryPanel.getInstance().getHeightOfCategoryPanel()+620/*CardPanel.getInstance().getJScrollPane().getHeight()*/),
                 ManaPanel.getInstance().getWidthOfManaPanel(),ManaPanel.getInstance().getHeightOfManaPanel());
 
 

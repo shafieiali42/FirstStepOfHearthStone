@@ -44,8 +44,6 @@ public class ButtonPanel extends JPanel {
     private JButton backBtn;
 
 
-
-
     private ButtonPanel(){
         setLayout(new FlowLayout(NUMBER_OF_BTN, 20, 20));
         initButtons();
@@ -59,7 +57,6 @@ public class ButtonPanel extends JPanel {
         initSalableCardsBtn();
 
     }
-
 
     public void designBtn(JButton btn){
         btn.setSize(WIDTH_OF_BTN, HEIGHT_OF_BTN);
@@ -75,13 +72,18 @@ public class ButtonPanel extends JPanel {
         backBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
+                ShopCardPanel.getInstance().removeAll();
+                ShopCardPanel.getInstance().repaint();
+                ShopCardPanel.getInstance().revalidate();
+                goBack();
             }
         });
         add(backBtn);
     }
 
-
+    private void goBack() {
+        MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
+    }
 
     private void initSalableCardsBtn() {
         salableCardsBtn = new JButton("SalableCards");
@@ -100,11 +102,6 @@ public class ButtonPanel extends JPanel {
         add(salableCardsBtn);
     }
 
-    private void showSalableCards() throws IOException {
-        CLI.setStatus(Status.SELL_PAGE);
-        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getSalableCards(), ShopCardPanel.getInstance(),ShopCardPanel.getInstance().getNumOfCardInEveryRow());
-    }
-
     private void initBuyableCardsBtn() {
         buyableCardsBtn = new JButton("BuyableCards");
         designBtn(buyableCardsBtn);
@@ -119,11 +116,6 @@ public class ButtonPanel extends JPanel {
             }
         });
         add(buyableCardsBtn);
-    }
-
-    private void showBuyableCards() throws IOException {
-        CLI.setStatus(Status.BUY_PAGE);
-        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getBuyableCards(),CardPanel.getInstance(),ShopCardPanel.getInstance().getNumOfCardInEveryRow());
     }
 
     private void initWalletBtn() {
@@ -141,4 +133,15 @@ public class ButtonPanel extends JPanel {
     }
 
 
+
+
+    private void showSalableCards() throws IOException {
+        CLI.setStatus(Status.SELL_PAGE);
+        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getSalableCards(), ShopCardPanel.getInstance(),ShopCardPanel.getInstance().getNumOfCardInEveryRow());
+    }
+
+    private void showBuyableCards() throws IOException {
+        CLI.setStatus(Status.BUY_PAGE);
+        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getBuyableCards(),ShopCardPanel.getInstance(),ShopCardPanel.getInstance().getNumOfCardInEveryRow());
+    }
 }

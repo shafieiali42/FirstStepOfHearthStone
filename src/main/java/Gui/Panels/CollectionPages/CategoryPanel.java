@@ -64,13 +64,11 @@ public class CategoryPanel extends JPanel {
         initLockBtn();
     }
 
-
     public void designBtn(JButton btn){
         btn.setSize(WIDTH_OF_BTN, HEIGHT_OF_BTN);
         btn.setFont(new Font("TimesRoman", Font.ITALIC, 20));
         btn.setForeground(colorOfTextOfBtn);
         btn.setBackground(colorOfBtn);
-
     }
 
     private void initLockBtn() {

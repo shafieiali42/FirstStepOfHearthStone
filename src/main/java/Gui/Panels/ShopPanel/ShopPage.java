@@ -5,6 +5,7 @@ import Gui.Panels.CollectionPages.CardPanel;
 import Gui.Panels.CollectionPages.CategoryPanel;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class ShopPage extends JPanel {
 
@@ -19,8 +20,20 @@ public class ShopPage extends JPanel {
         this.addPanel(ButtonPanel.getInstance(),0,0,ButtonPanel.getInstance().getWidthOfButtonPanel(),
                 ButtonPanel.getInstance().getHeightOfButtonPanel());
 
-        this.addPanel(ShopCardPanel.getInstance(),0,ButtonPanel.getInstance().getHeightOfButtonPanel(),
-                ShopCardPanel.getInstance().getWidthOfShopCardPanel(),ShopCardPanel.getInstance().getHeightOfShopCardPanel());
+//        this.addPanel(ShopCardPanel.getInstance(),0,ButtonPanel.getInstance().getHeightOfButtonPanel(),
+//                ShopCardPanel.getInstance().getWidthOfShopCardPanel(),ShopCardPanel.getInstance().getHeightOfShopCardPanel());
+
+        ShopCardPanel.getInstance().setPreferredSize(new Dimension(1400,1600));
+        ShopCardPanel.getInstance().setFocusable(true);
+        ShopCardPanel.getInstance().requestFocus();
+        ShopCardPanel.getInstance().setJScrollPane(new JScrollPane(ShopCardPanel.getInstance()));
+        ShopCardPanel.getInstance().getJScrollPane().setBounds(0,ButtonPanel.getInstance().getHeightOfButtonPanel(),1400,720);
+        ShopCardPanel.getInstance().getJScrollPane().setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        ShopCardPanel.getInstance().getJScrollPane().setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        ShopCardPanel.getInstance().getJScrollPane().setBorder(null);
+        ShopCardPanel.getInstance().getJScrollPane().setFocusable(false);
+        this.add(ShopCardPanel.getInstance().getJScrollPane());
+
 
     }
 
