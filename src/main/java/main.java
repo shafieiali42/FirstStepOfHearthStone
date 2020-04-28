@@ -1,6 +1,7 @@
 import Cards.*;
 import CommandLineInterface.CLI;
 import Gui.MyMainFrame;
+import Gui.Panels.CollectionPages.LittleCardPanel;
 import Heroes.Mage;
 import Heroes.Rogue;
 import Heroes.Warlock;
@@ -15,6 +16,7 @@ public class main {
         Mage.setSpecialCardsOfMage();
         Warlock.setSpecialCardsOfWarlock();
         Rogue.setSpecialCardsOfRogue();
+        LittleCardPanel.setAllLittleCardPanels();
         CLI cli = new CLI();
         cli.FirstPage();
 

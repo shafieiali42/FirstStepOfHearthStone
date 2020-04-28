@@ -1,14 +1,11 @@
 package Gui.Panels.CollectionPages;
 
-import Gui.MyMainFrame;
-
 import javax.swing.*;
-import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 
 public class CardPanel extends JPanel {
 
-    private static final int WIDTH_OF_CARD_PANEL=1200;      //TODO NEEDS TO CHANGE
+    private static final int WIDTH_OF_CARD_PANEL=1155;      //TODO NEEDS TO CHANGE
     private static final int HEIGHT_OF_CARD_PANEL=620;     //TODO NEEDS TO CHANGE
     private static final int NUM_OF_CARD_IN_EVERY_ROW = 6; //TODO NEEDS TO CHANGE
 
@@ -24,14 +21,18 @@ public class CardPanel extends JPanel {
         return HEIGHT_OF_CARD_PANEL;
     }
 
-    private static CardPanel cardPanel=new CardPanel();
-    public static CardPanel getInstance(){return cardPanel;}
+    private static CardPanel cardPanelForCollectionPage =new CardPanel();
+    public static CardPanel getInstanceOfCollectionPage(){return cardPanelForCollectionPage;}
+
+    private static CardPanel cardPanelForDeckPage=new CardPanel();
+    public static CardPanel getInstanceOfDeckPage(){return cardPanelForDeckPage;}
 
 
 
     private CardPanel(){
         setBackground(Color.gray);
         setLayout(null);
+        setJScrollPane(new JScrollPane(this));
 
     }
 

@@ -1,10 +1,14 @@
 package Gui.Panels.MenuPanel;
 
 
+import CommandLineInterface.CLI;
 import CommandLineInterface.PlayerManagement;
+import CommandLineInterface.Status;
 import Gui.MyMainFrame;
 import Gui.Panels.CollectionPages.CollectionPage;
+import Gui.Panels.CollectionPages.DeckPanel;
 import Gui.Panels.ShopPanel.ShopPage;
+import Gui.Panels.StatusPanel.StatusPage;
 
 import javax.swing.*;
 import java.awt.*;
@@ -136,6 +140,13 @@ public class MainMenuPage extends JPanel {
         statusBtn.setBackground(colorOfBtn);
         statusBtn.setSize(this.getWidth() / 2, this.getHeight() /7);
         statusBtn.setBounds(0, menuPanel.getHeight() * 3 / 7, statusBtn.getWidth(), statusBtn.getHeight());
+        statusBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                MyMainFrame.getInstance().setContentPane(StatusPage.getInstance());
+            }
+        });
         menuPanel.add(statusBtn);
 
     }
@@ -161,6 +172,7 @@ public class MainMenuPage extends JPanel {
         shopBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                CLI.setStatus(Status.SHOP_PAGE);
                 MyMainFrame.getInstance().setContentPane(ShopPage.getInstance());
             }
         });
@@ -179,6 +191,8 @@ public class MainMenuPage extends JPanel {
         collectionBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                CLI.setStatus(Status.COLLECTIONS_PAGE);
+                DeckPanel.getInstance().showDeckButtons();
                 MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
             }
         });

@@ -23,16 +23,19 @@ public class ShopPage extends JPanel {
 //        this.addPanel(ShopCardPanel.getInstance(),0,ButtonPanel.getInstance().getHeightOfButtonPanel(),
 //                ShopCardPanel.getInstance().getWidthOfShopCardPanel(),ShopCardPanel.getInstance().getHeightOfShopCardPanel());
 
-        ShopCardPanel.getInstance().setPreferredSize(new Dimension(1400,1600));
+        ShopCardPanel.getInstance().setPreferredSize(new Dimension(1000,1800));
         ShopCardPanel.getInstance().setFocusable(true);
         ShopCardPanel.getInstance().requestFocus();
         ShopCardPanel.getInstance().setJScrollPane(new JScrollPane(ShopCardPanel.getInstance()));
-        ShopCardPanel.getInstance().getJScrollPane().setBounds(0,ButtonPanel.getInstance().getHeightOfButtonPanel(),1400,720);
+        ShopCardPanel.getInstance().getJScrollPane().setBounds(0,ButtonPanel.getInstance().getHeightOfButtonPanel(),1000,720);
         ShopCardPanel.getInstance().getJScrollPane().setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         ShopCardPanel.getInstance().getJScrollPane().setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
         ShopCardPanel.getInstance().getJScrollPane().setBorder(null);
         ShopCardPanel.getInstance().getJScrollPane().setFocusable(false);
         this.add(ShopCardPanel.getInstance().getJScrollPane());
+
+        this.addPanel(BuySellPanel.getInstance(),1000,ButtonPanel.getInstance().getHeight(),
+                BuySellPanel.getWidthOfBuySellPanel(),BuySellPanel.getHeightOfBuySellPanel());
 
 
     }

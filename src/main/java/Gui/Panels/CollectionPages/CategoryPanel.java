@@ -16,7 +16,7 @@ public class CategoryPanel extends JPanel {
     public static final int NUMBER_OF_BTN = 9;
     public static final int WIDTH_OF_BTN=90;
     public static final int HEIGHT_OF_BTN =90;
-    private static final int WIDTH_OF_CATEGORY_PANEL=1200;      //TODO NEEDS TO CHANGE
+    private static final int WIDTH_OF_CATEGORY_PANEL=1155;      //TODO NEEDS TO CHANGE
     private static final int HEIGHT_OF_CATEGORY_PANEL=80;     //TODO NEEDS TO CHANGE
 
     public  int getWidthOfCategoryPanel() {
@@ -226,21 +226,21 @@ public class CategoryPanel extends JPanel {
                 filteredCardsByClassOfCard.add(card);
             }
         }
-        MethodsOfShowCardsOnPanel.showCards(filteredCardsByClassOfCard,CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
+        MethodsOfShowCardsOnPanel.showCards(filteredCardsByClassOfCard,CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
     } //TODO show unlock cards with gray:((
 
 
 
     private void showAllCards() throws IOException {
-        MethodsOfShowCardsOnPanel.showCards(Cards.getAllCards(),CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
+        MethodsOfShowCardsOnPanel.showCards(Cards.getAllCards(),CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
     }//TODO show unlock cards with gray:((
 
     private void showLockCards() throws IOException {
-        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getLockCards(),CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
+        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getLockCards(),CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
     }//TODO show unlock cards with gray:((
 
     private void showUnLockCards() throws IOException {
-        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getUnLockCards(),CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
+        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getUnLockCards(),CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
     }//TODO show unlock cards with gray:((
 
 }

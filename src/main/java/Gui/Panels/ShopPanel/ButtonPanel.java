@@ -4,6 +4,7 @@ import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
 import Gui.MyMainFrame;
 import Gui.Panels.CollectionPages.CardPanel;
+import Gui.Panels.CollectionPages.CollectionPage;
 import Gui.Panels.MenuPanel.MainMenuPage;
 import Utility.MethodsOfShowCardsOnPanel;
 
@@ -45,6 +46,7 @@ public class ButtonPanel extends JPanel {
 
 
     private ButtonPanel(){
+        setBackground(Color.gray);
         setLayout(new FlowLayout(NUMBER_OF_BTN, 20, 20));
         initButtons();
 
@@ -82,7 +84,12 @@ public class ButtonPanel extends JPanel {
     }
 
     private void goBack() {
+
+        if (CLI.getStatus().equals(Status.BUY_PAGE_FROM_COLLECTION)){
+            MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
+        }else {
         MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
+        }
     }
 
     private void initSalableCardsBtn() {
@@ -135,12 +142,12 @@ public class ButtonPanel extends JPanel {
 
 
 
-    private void showSalableCards() throws IOException {
+    public static void showSalableCards() throws IOException {
         CLI.setStatus(Status.SELL_PAGE);
         MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getSalableCards(), ShopCardPanel.getInstance(),ShopCardPanel.getInstance().getNumOfCardInEveryRow());
     }
 
-    private void showBuyableCards() throws IOException {
+    public static void showBuyableCards() throws IOException {
         CLI.setStatus(Status.BUY_PAGE);
         MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getBuyableCards(),ShopCardPanel.getInstance(),ShopCardPanel.getInstance().getNumOfCardInEveryRow());
     }

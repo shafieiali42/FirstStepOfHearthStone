@@ -1,68 +1,82 @@
 package Gui.Panels.CollectionPages;
 
+import CommandLineInterface.CLI;
+import CommandLineInterface.Status;
+import Deck.Deck;
+import Gui.MyMainFrame;
+import Heroes.Heroes;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
+
+import Heroes.*;
 
 public class DeckPanel extends JPanel {
 
 
-    private static final int WIDTH_OF_DECK_PANEL=205;      //TODO NEEDS TO CHANGE
-    private static final int HEIGHT_OF_DECK_PANEL=800;     //TODO NEEDS TO CHANGE
-
-    public  int getWidthOfDeckPanel() {
-        return WIDTH_OF_DECK_PANEL;
-    }
-
-    public  int getHeightOfDeckPanel() {
-        return HEIGHT_OF_DECK_PANEL;
-    }
-
-    private static final int WIDTH_OF_BTN=50;
-    private static final int HEIGHT_OF_BTN=20;
+    private static final int WIDTH_OF_DECK_PANEL = 250;      //TODO NEEDS TO CHANGE
+    private static final int HEIGHT_OF_DECK_PANEL = 1600;     //TODO NEEDS TO CHANGE
+    private static final int WIDTH_OF_BTN = 50;
+    private static final int HEIGHT_OF_BTN = 20;
     private Color colorOfTextOfNewDeckBtn = new Color(255, 0, 0);
     private Color colorOfNewDeckBtn = new Color(48, 48, 45);
     private Color colorOfDeckBtn = new Color(48, 48, 45);
+    private static DeckPanel deckPanel = new DeckPanel();
+
+    public static DeckPanel getInstance() {
+        return deckPanel;
+    }
+
+
+    public int getWidthOfDeckPanel() {
+        return WIDTH_OF_DECK_PANEL;
+    }
+
+    public int getHeightOfDeckPanel() {
+        return HEIGHT_OF_DECK_PANEL;
+    }
+
 
     private JButton newDeckBtn;
-    private ArrayList<JButton> listOfButtonsOfDecks=new ArrayList<JButton>();
+    private JScrollPane jScrollPane;
 
-    private static DeckPanel deckPanel =new DeckPanel();
-    public static DeckPanel getInstance(){return deckPanel;}
+    public JScrollPane getJScrollPane() {
+        return jScrollPane;
+    }
 
-    private DeckPanel(){
+    public void setJScrollPane(JScrollPane jScrollPane) {
+        this.jScrollPane = jScrollPane;
+    }
+
+    private DeckPanel() {
         setBackground(Color.blue);
-        setLayout(new FlowLayout(1,20,20));
+        setLayout(new FlowLayout(1, 20, 20));
+        setJScrollPane(new JScrollPane(this));
+        setBounds(0, 0, WIDTH_OF_DECK_PANEL, HEIGHT_OF_DECK_PANEL);
         initNewDeckBtn();
-        showDecksOfDeckList();
-
     }
 
-    public void designDeckBtn(JButton btn){
-        btn.setSize(WIDTH_OF_BTN, HEIGHT_OF_BTN);
+    public void designDeckBtn(JButton btn) {
         btn.setFont(new Font("TimesRoman", Font.ITALIC, 20));
-        btn.setForeground(colorOfDeckBtn);
+        btn.setForeground(colorOfTextOfNewDeckBtn);
         btn.setBackground(colorOfNewDeckBtn);
+        btn.setSize(WIDTH_OF_BTN, HEIGHT_OF_BTN);
     }
-
-    private void initListOfButtonsOfDecks() {
-        JButton mage1Btn =new JButton("Mage1");
-        JButton rogue1Btn =new JButton("Rogue1");
-        JButton warlock1Btn =new JButton("Warlock1");
-        JButton hunter1Btn =new JButton("Hunter1");
-        JButton priest1Btn =new JButton("Priest1");
-        designDeckBtn(mage1Btn);
-        designDeckBtn(rogue1Btn);
-        designDeckBtn(warlock1Btn);
-        designDeckBtn(hunter1Btn);
-        designDeckBtn(priest1Btn);
-
+    public void initButtonForDeck(Deck deck) {
+        JButton button = new JButton(deck.getName());
+        designDeckBtn(button);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CLI.setStatus(Status.CHANGE_DECK);
+                DeckPage.getInstance().setDeckTOChange(deck);
+                showDeck();
+            }
+        });
+        this.add(button);
     }
-
-    public void showDecksOfDeckList(){}//TODO NEEDS TO DEFINE:))
-
     private void initNewDeckBtn() {
         newDeckBtn = new JButton("New Deck");
         newDeckBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
@@ -72,14 +86,88 @@ public class DeckPanel extends JPanel {
         newDeckBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                CLI.setStatus(Status.MAKE_DECK);
                 makeNewDeck();
             }
         });
         this.add(newDeckBtn);
     }
 
-    private void makeNewDeck() {
-    }//TODO NEEDS TO DEFINE:))
+    private void makeNewDeck() { //TODO NEEDS TO DEFINE:))
+        DeckPage.getInstance().setDeckTOChange(new Deck());
+        DeckPage.getInstance().getDeckTOChange().setName(JOptionPane.showInputDialog("Enter your favorite name!"));
+
+        Object[] possibilities = {"Mage", "Rogue", "Warlock", "Hunter", "Priest"};
+        Icon questionError = UIManager.getIcon("OptionPane.questionIcon");
+        String s = (String) JOptionPane.showInputDialog(
+                null,
+                "Select Your favorite Hero:",
+                "Select Hero",
+                JOptionPane.PLAIN_MESSAGE,
+                questionError,
+                possibilities,
+                "Mage");
+
+
+        switch (s) { // TODO needs changesssssssssssssssssssssssssss:(((((((((((
+            case ("Mage"):
+                DeckPage.getInstance().getDeckTOChange().setHero(Mage.getInstance());
+                break;
+            case ("Rogue"):
+                DeckPage.getInstance().getDeckTOChange().setHero(Rogue.getInstance());
+                break;
+            case ("Warlock"):
+                DeckPage.getInstance().getDeckTOChange().setHero(Warlock.getInstance());
+                break;
+            case ("Hunter"):
+                DeckPage.getInstance().getDeckTOChange().setHero(Hunter.getInstance());
+                break;
+            case ("Priest"):
+                DeckPage.getInstance().getDeckTOChange().setHero(Priest.getInstance());
+                break;
+
+            default:
+                throw new IllegalStateException("Unexpected value: " + s);
+        }
+        //define deck;s name and hero then go to deck page then press done:
+        MyMainFrame.getInstance().setContentPane(DeckPage.getInstance());
+    }
+
+    public void showDeckButtons() {
+        DeckPanel.getInstance().removeAll();
+        DeckPanel.getInstance().repaint();
+        DeckPanel.getInstance().revalidate();
+        this.add(newDeckBtn);
+        if (CLI.currentPlayer.getAllDecksOfPlayer() != null) {
+            for (Deck deck : CLI.currentPlayer.getAllDecksOfPlayer()) {
+                initButtonForDeck(deck);
+            }
+        }
+    }
+
+
+
+    private void showDeck() {
+        MyMainFrame.getInstance().setContentPane(DeckPage.getInstance());
+        DeckViewer.getInstance().showCardsInDecK();
+
+    }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

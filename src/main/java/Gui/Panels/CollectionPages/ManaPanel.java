@@ -1,9 +1,10 @@
 package Gui.Panels.CollectionPages;
 
 import Cards.Cards;
+import CommandLineInterface.CLI;
+import CommandLineInterface.Status;
 import Gui.MyMainFrame;
 import Gui.Panels.MenuPanel.MainMenuPage;
-import Gui.Panels.ShopPanel.ShopCardPanel;
 import Utility.MethodsOfShowCardsOnPanel;
 
 import javax.swing.*;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 
 public class ManaPanel extends JPanel {
 
-    private static final int WIDTH_OF_MANA_PANEL = 1200;      //TODO NEEDS TO CHANGE
+    private static final int WIDTH_OF_MANA_PANEL = 1155;      //TODO NEEDS TO CHANGE
     private static final int HEIGHT_OF_MANA_PANEL = 100;     //TODO NEEDS TO CHANGE
 
     public int getWidthOfManaPanel() {
@@ -49,10 +50,16 @@ public class ManaPanel extends JPanel {
     private JButton nineManaBtn;
     private JButton tenManaBtn;
 
-    private static ManaPanel manaPanel = new ManaPanel();
+    private static ManaPanel manaPanelForCollectionPage = new ManaPanel();
 
-    public static ManaPanel getInstance() {
-        return manaPanel;
+    public static ManaPanel getInstanceOfCollectionPage() {
+        return manaPanelForCollectionPage;
+    }
+
+    private static ManaPanel manaPanelForDeckPage = new ManaPanel();
+
+    public static ManaPanel getInstanceOfDeckPage() {
+        return manaPanelForDeckPage;
     }
 
 
@@ -272,9 +279,9 @@ public class ManaPanel extends JPanel {
         backBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CardPanel.getInstance().removeAll();
-                CardPanel.getInstance().repaint();
-                CardPanel.getInstance().revalidate();
+                CardPanel.getInstanceOfCollectionPage().removeAll();
+                CardPanel.getInstanceOfCollectionPage().repaint();
+                CardPanel.getInstanceOfCollectionPage().revalidate();
                 goBack();
             }
         });
@@ -282,30 +289,44 @@ public class ManaPanel extends JPanel {
     }
 
     private void goBack() {
-        MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
+        if (CLI.getStatus().equals(Status.COLLECTIONS_PAGE)) {
+            MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
+        } else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
+            DeckPanel.getInstance().showDeckButtons();
+            MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
+        }
     }
 
 
-
-
     private void searchInCards(String searchFieldText) throws IOException {
-        ArrayList<Cards> foundCards =new ArrayList<Cards>();
-        for (Cards card:Cards.getAllCards()){
-            if (card.getName().toLowerCase().contains(searchFieldText)){
+        ArrayList<Cards> foundCards = new ArrayList<Cards>();
+        for (Cards card : Cards.getAllCards()) {
+            if (card.getName().toLowerCase().contains(searchFieldText)) {
                 foundCards.add(card);
             }
         }
-        MethodsOfShowCardsOnPanel.showCards(foundCards,CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
+        if (CLI.getStatus().equals(Status.COLLECTIONS_PAGE)) {
+            MethodsOfShowCardsOnPanel.showCards(foundCards, CardPanel.getInstanceOfCollectionPage(), CardPanel.getNumOfCardInEveryRow());
+        } else if (CLI.getStatus().equals(Status.CHANGE_DECK) || CLI.getStatus().equals(Status.MAKE_DECK)) {
+            MethodsOfShowCardsOnPanel.showCards(foundCards, CardPanel.getInstanceOfDeckPage(), CardPanel.getNumOfCardInEveryRow());
+        }
+
+
     }//TODO make unlock cards gray:((
 
     public void filterByMana(int mana) throws IOException {
-        ArrayList<Cards> filteredByManaCards=new ArrayList<Cards>();
-        for (Cards card:Cards.getAllCards()){
-            if (card.getManaCost()==mana){
+        ArrayList<Cards> filteredByManaCards = new ArrayList<Cards>();
+        for (Cards card : Cards.getAllCards()) {
+            if (card.getManaCost() == mana) {
                 filteredByManaCards.add(card);
             }
         }
-        MethodsOfShowCardsOnPanel.showCards(filteredByManaCards,CardPanel.getInstance(),CardPanel.getNumOfCardInEveryRow());
+        if (CLI.getStatus().equals(Status.COLLECTIONS_PAGE)) {
+            MethodsOfShowCardsOnPanel.showCards(filteredByManaCards, CardPanel.getInstanceOfCollectionPage(), CardPanel.getNumOfCardInEveryRow());
+        } else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
+            MethodsOfShowCardsOnPanel.showCards(filteredByManaCards, CardPanel.getInstanceOfDeckPage(), CardPanel.getNumOfCardInEveryRow());
+        }
+
     }//TODO make unlock cards gray:((
 
 }

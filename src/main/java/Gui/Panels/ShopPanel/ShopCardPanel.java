@@ -7,9 +7,9 @@ import java.awt.*;
 
 public class ShopCardPanel extends JPanel {
 
-    private static final int WIDTH_OF_SHOP_CARD_PANEL=1400;      //TODO NEEDS TO CHANGE
+    private static final int WIDTH_OF_SHOP_CARD_PANEL=100;      //TODO NEEDS TO CHANGE
     private static final int HEIGHT_OF_SHOP_CARD_PANEL=720;     //TODO NEEDS TO CHANGE
-    private static final int NUM_OF_CARD_IN_EVERY_ROW = 7; //TODO NEEDS TO CHANGE
+    private static final int NUM_OF_CARD_IN_EVERY_ROW = 4; //TODO NEEDS TO CHANGE
 
 
     private JScrollPane jScrollPane;
@@ -18,7 +18,7 @@ public class ShopCardPanel extends JPanel {
 
 
     private ShopCardPanel(){
-//        setBackground(Color.green);
+        setBackground(Color.darkGray);
         setLayout(null);
 
 
