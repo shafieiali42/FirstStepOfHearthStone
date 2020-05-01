@@ -3,6 +3,7 @@ package Deck;
 import Cards.Cards;
 import Gui.Panels.CollectionPages.LittleCardPanel;
 import Heroes.Heroes;
+import com.google.gson.annotations.Expose;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,15 +19,37 @@ public class Deck implements Comparable<Deck> {
     private ArrayList<Cards> listOfCards;
     private Cards mostUsedCard;
     private int manaAvg;
+    //    @Expose(serialize = false,deserialize = false)
+    private transient ArrayList<LittleCardPanel> littleCardPanelsOfThisDeck= LittleCardPanel.getAllLittleCardPanels();
+    private HashMap<String, Integer> usesHashMap =new HashMap<String, Integer>();
 
-    private transient ArrayList<LittleCardPanel> littleCardPanelsOfThisDeck=LittleCardPanel.getAllLittleCardPanels();
-//    private HashMap<String, Integer> usesHashMap =new HashMap<String, Integer>();
+    public void defineUsesHashMap(){
+        usesHashMap.clear();
+        for (LittleCardPanel littleCardPanel:littleCardPanelsOfThisDeck){
+            usesHashMap.put(littleCardPanel.getNameLabel().getText(),Integer.parseInt(littleCardPanel.getUsedLabel().getText()));
+        }
+    }
+
+
+    public void setLittleCardsListFromHashMap(){
+        for (String cardName:usesHashMap.keySet()){
+            int useOfCard=usesHashMap.get(cardName);
+            for (LittleCardPanel littleCardPanel:littleCardPanelsOfThisDeck){
+                if (littleCardPanel.getNameLabel().getText().equalsIgnoreCase(cardName)){
+                    littleCardPanel.getUsedLabel().setText(useOfCard+"");
+                }
+            }
+        }
+    }
+
+
 
 
 
     public ArrayList<LittleCardPanel> getLittleCardPanelsOfThisDeck() {
         return littleCardPanelsOfThisDeck;
     }
+
     public void setLittleCardPanelsOfThisDeck(ArrayList<LittleCardPanel> littleCardPanelsOfThisDeck) {
         this.littleCardPanelsOfThisDeck = littleCardPanelsOfThisDeck;
     }
@@ -48,9 +71,7 @@ public class Deck implements Comparable<Deck> {
     }
 
 
-
-    public Deck(){
-
+    public Deck() {
         this.listOfCards = new ArrayList<Cards>();
     }
 
@@ -155,12 +176,12 @@ public class Deck implements Comparable<Deck> {
 
     @Override
     public boolean equals(Object obj) {
-        Deck deck =(Deck) obj;
+        Deck deck = (Deck) obj;
         return this.name.equals(deck.name);
     }
 
     @Override
     public String toString() {
-        return "Deck Name: "+this.name +"Deck Hero: "+this.hero+" cards: "+this.listOfCards;
+        return "Deck Name: " + this.name + "Deck Hero: " + this.hero + " cards: " + this.listOfCards;
     }
 }

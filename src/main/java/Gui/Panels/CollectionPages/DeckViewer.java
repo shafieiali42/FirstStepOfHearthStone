@@ -41,6 +41,7 @@ public class DeckViewer extends JPanel {
 
     private DeckViewer() {
         setLayout(null);
+        setBackground(Color.gray);
         setSize(WIDTH_OF_DECK_VIEWER,HEIGHT_OF_DECK_VIEWER);
         initDoneBtn();
 
@@ -70,12 +71,11 @@ public class DeckViewer extends JPanel {
     }
 
     private void done() {
-//        DeckPage.getInstance().setDeckTOChange(new Deck());
-//        DeckViewer.getInstance().removeAll();
-//        CardPanel.getInstanceOfDeckPage().removeAll();
-//        DeckPage.getInstance().repaint();
-//        DeckPage.getInstance().revalidate();
+        DeckViewer.getInstance().removeAll();
+        DeckViewer.getInstance().repaint();
+        DeckViewer.getInstance().revalidate();
         if (CLI.getStatus().equals(Status.CHANGE_DECK)){
+            DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
             DeckPage.getInstance().setDeckTOChange(new Deck());
             CLI.setStatus(Status.COLLECTIONS_PAGE);
             //TODO maybe we should update collection page:)))))
@@ -83,6 +83,7 @@ public class DeckViewer extends JPanel {
             DeckPanel.getInstance().showDeckButtons();
         }else if (CLI.getStatus().equals(Status.MAKE_DECK)){
             CLI.currentPlayer.getAllDecksOfPlayer().add(DeckPage.getInstance().getDeckTOChange());
+            DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
             DeckPage.getInstance().setDeckTOChange(new Deck());
             CLI.setStatus(Status.COLLECTIONS_PAGE);
             //TODO maybe we should update collection page:)))))
@@ -103,7 +104,7 @@ public class DeckViewer extends JPanel {
                             (DeckViewer.WIDTH_OF_DECK_VIEWER-littleCardPanel.getWidth())/2,yCoordinate,
                             littleCardPanel.getWidth(),littleCardPanel.getHeight());
 
-                    yCoordinate+=littleCardPanel.getHeight();
+                    yCoordinate+=littleCardPanel.getHeight()+5;
                     break;
                 }
             }

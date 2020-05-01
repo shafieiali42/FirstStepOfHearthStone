@@ -1,5 +1,6 @@
-package Cards;
+package Gui.Panels;
 
+import Cards.Cards;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
 import Gui.MyMainFrame;
@@ -43,29 +44,44 @@ public class CardImagePanel extends JPanel implements MouseListener {
     }
 
 
-    private static int WidthOfCardImage = 150;  //TODO IT SHOULD CHANGE:))
-    private static int HeightOfCardImage = 170;    //TODO IT SHOULD CHANGE:))
+    private  int WidthOfCardImage;  //TODO IT SHOULD CHANGE:))
+    private  int HeightOfCardImage;    //TODO IT SHOULD CHANGE:))
 
-    public static void setWidthOfCardImage(int widthOfCardImage) {
+    public  void setWidthOfCardImage(int widthOfCardImage) {
         WidthOfCardImage = widthOfCardImage;
     }
 
-    public static void setHeightOfCardImage(int heightOfCardImage) {
+    public  void setHeightOfCardImage(int heightOfCardImage) {
         HeightOfCardImage = heightOfCardImage;
     }
 
-    public static int getWidthOfCardImage() {
-        return WidthOfCardImage;
-    }
+//    public  int getWidthOfCardImage() {
+//        return WidthOfCardImage;
+//    }
 
-    public static int getHeightOfCardImage() {
-        return HeightOfCardImage;
-    }
+//    public  int getHeightOfCardImage() {
+//        return HeightOfCardImage;
+//    }
 
+
+    public CardImagePanel(Cards card,int width,int height) throws IOException {
+
+        setLayout(null);
+        setSize(width,height);
+        this.card = card;
+        setIsLock(card);
+        if (this.isLock) {
+            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/GreyCardImage/" + card.getName() + ".png"));
+        } else {
+            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + card.getName() + ".png"));
+        }
+        addMouseListener(this);
+    }
 
     public CardImagePanel(Cards card) throws IOException {
 
         setLayout(null);
+        setSize(150,170);
         this.card = card;
         setIsLock(card);
         if (this.isLock) {

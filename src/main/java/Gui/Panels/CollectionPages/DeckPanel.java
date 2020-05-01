@@ -71,7 +71,9 @@ public class DeckPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CLI.setStatus(Status.CHANGE_DECK);
+                LittleCardPanel.setAllLittleCardPanels();
                 DeckPage.getInstance().setDeckTOChange(deck);
+                DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
                 showDeck();
             }
         });
@@ -94,7 +96,12 @@ public class DeckPanel extends JPanel {
     }
 
     private void makeNewDeck() { //TODO NEEDS TO DEFINE:))
+        DeckViewer.getInstance().removeAll();
+        DeckViewer.getInstance().repaint();
+        DeckViewer.getInstance().revalidate();
+        LittleCardPanel.setAllLittleCardPanels();
         DeckPage.getInstance().setDeckTOChange(new Deck());
+        DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
         DeckPage.getInstance().getDeckTOChange().setName(JOptionPane.showInputDialog("Enter your favorite name!"));
 
         Object[] possibilities = {"Mage", "Rogue", "Warlock", "Hunter", "Priest"};

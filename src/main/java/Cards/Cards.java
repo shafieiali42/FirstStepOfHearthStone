@@ -2,11 +2,9 @@ package Cards;
 
 
 //import Utility.ImageOfAllCards;
+import Gui.Panels.CardImagePanel;
 import com.google.gson.annotations.Expose;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -43,22 +41,11 @@ public class Cards {
     public Cards() throws IOException {
         count++;
         if (count==Minion.NUMBER_OF_MINIONS+Spell.NUMBER_OF_SPELLS+Weapon.NUMBER_OF_Weapons+20000){
-            System.out.println(count);
             thisCardImagePanel=new CardImagePanel(this);
         }
 
     }
 
-//    public void setImageOfThisCard(Image imageOfThisCard) {//TODO i changed here:))
-//        this.imageOfThisCard = imageOfThisCard;
-//    }
-
-//    {
-//        ImageOfAllCards.setImageOfAllCardsList();
-////        imageOfThisCard = ImageOfAllCards.getImageOfAllCardsList().get(0);
-//////        this.imageOfThisCard = ImageIO.read(new File("Assets/CardsImage/LogInImage.jpg"));//TODO need another check!
-//        thisCardImagePanel = new CardImagePanel(this);
-//    }
 
     public static void setAllCards() throws IOException {
         allCards.addAll(Minion.getMinions());

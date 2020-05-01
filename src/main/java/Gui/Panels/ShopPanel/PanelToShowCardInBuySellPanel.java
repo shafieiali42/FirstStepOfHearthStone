@@ -1,7 +1,7 @@
 package Gui.Panels.ShopPanel;
 
 
-import Cards.CardImagePanel;
+import Gui.Panels.CardImagePanel;
 import Utility.LengthOfMessage;
 import Utility.MethodsOfShowCardsOnPanel;
 

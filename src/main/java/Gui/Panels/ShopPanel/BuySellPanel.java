@@ -1,20 +1,13 @@
 package Gui.Panels.ShopPanel;
 
-import Cards.CardImagePanel;
 import Cards.Cards;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
-import Utility.LengthOfMessage;
-import Utility.MethodsOfShowCardsOnPanel;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.Rectangle2D;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 public class BuySellPanel extends JPanel {

@@ -49,7 +49,7 @@ public class LittleCardPanel extends JPanel implements MouseListener, Serializab
 
     private LittleCardPanel(int mana, String name, int used) {
         setLayout(null);
-        setSize(WIDTH_OF_LITTLE_CARD,HEIGHT_OF_LITTLE_CARD);
+        setSize(WIDTH_OF_LITTLE_CARD, HEIGHT_OF_LITTLE_CARD);
         manaLabel = new JLabel();
         manaLabel.setHorizontalAlignment(SwingConstants.CENTER);
         manaLabel.setText(mana + "");
@@ -62,6 +62,51 @@ public class LittleCardPanel extends JPanel implements MouseListener, Serializab
         nameLabel.setOpaque(true);
         nameLabel.setBackground(Color.ORANGE);
         nameLabel.setBounds(HEIGHT_OF_LITTLE_CARD, 0, (WIDTH_OF_LITTLE_CARD - 2 * HEIGHT_OF_LITTLE_CARD), HEIGHT_OF_LITTLE_CARD);
+        nameLabel.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                System.out.println("hhhhhhhhhhhhhhhh");
+                if (SwingUtilities.isLeftMouseButton(e)) {
+                    Iterator<Cards> itr = DeckPage.getInstance().getDeckTOChange().getListOfCards().iterator();
+                    while (itr.hasNext()) {
+                        Cards card = itr.next();
+                        if (card.getName().equalsIgnoreCase(nameLabel.getText())) {
+                            if (Integer.parseInt(usedLabel.getText()) == 1) {
+                                itr.remove();
+                                DeckViewer.getInstance().showCardsInDecK();
+                                break;
+                            } else if (Integer.parseInt(usedLabel.getText()) == 2) {
+                                usedLabel.setText(1 + "");
+                                break;
+                            }
+                            DeckViewer.getInstance().showCardsInDecK();
+//                    DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
+//                    DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
         usedLabel = new JLabel();
         usedLabel.setHorizontalAlignment(SwingConstants.CENTER);
         usedLabel.setText(used + "");
@@ -83,6 +128,7 @@ public class LittleCardPanel extends JPanel implements MouseListener, Serializab
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        System.out.println("hhhhhhhhhhhhhhhh");
         if (SwingUtilities.isLeftMouseButton(e)) {
             Iterator<Cards> itr = DeckPage.getInstance().getDeckTOChange().getListOfCards().iterator();
             while (itr.hasNext()) {
@@ -95,6 +141,9 @@ public class LittleCardPanel extends JPanel implements MouseListener, Serializab
                         this.usedLabel.setText(1 + "");
                         break;
                     }
+                    DeckViewer.getInstance().showCardsInDecK();
+//                    DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
+//                    DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
                 }
             }
         }

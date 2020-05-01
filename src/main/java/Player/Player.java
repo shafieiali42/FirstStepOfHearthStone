@@ -55,6 +55,10 @@ public class Player {
     private ArrayList<Cards> unLockCards = new ArrayList<Cards>();//TODO needs to be init:))
     @Expose(serialize = true, deserialize = true)
     private ArrayList<Deck> allDecksOfPlayer=new ArrayList<Deck>();
+    @Expose(serialize = true, deserialize = true)
+    private Deck currentDeck;
+
+
 
 
     public Player(String userName, String passWord) throws IOException {
@@ -71,6 +75,7 @@ public class Player {
         setSalableCards();
         setLoggerOfMyPlayer();
         this.money = 500;
+        currentDeck=new Deck();
 
 
     }
@@ -155,7 +160,9 @@ public class Player {
         }
         return null;
     }
-
+    public Deck getCurrentDeck() {
+        return currentDeck;
+    }
 
 
     public void buy(Cards card) throws IOException {
@@ -447,6 +454,12 @@ public class Player {
                 SalableCards.add(card);
             }
         }
+    }
+
+
+
+    public void setCurrentDeck(Deck currentDeck) {
+        this.currentDeck = currentDeck;
     }
 
 
