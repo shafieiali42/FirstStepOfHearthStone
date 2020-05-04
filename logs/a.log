@@ -24,3 +24,11 @@ Apr 28, 2020 3:55:11 AM CommandLineInterface.PlayerManagement signUp
 INFO: sign_up a
 Apr 28, 2020 3:55:39 AM CommandLineInterface.PlayerManagement logOut
 INFO: Log_out a
+May 03, 2020 12:45:25 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: a
+May 03, 2020 12:45:25 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/03 00:45:25
+May 03, 2020 12:45:25 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: a
+May 03, 2020 12:45:25 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up a

@@ -3,7 +3,8 @@ package Utility;
 import Cards.Cards;
 import Gui.Panels.CardImagePanel;
 import Gui.Panels.CollectionPages.LittleCardPanel;
-import Gui.Panels.GamePage.HandsCardsPanel;
+import Gui.Panels.GamePage.PlayPanel;
+import Logic.Alliance;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -39,31 +40,67 @@ public class MethodsOfShowCardsOnPanel {
         }
     }
 
-    public static void showHandsCards(ArrayList<Cards> cards, JPanel panel, int numOfCardInEveryRow) throws IOException { //TODO init X and Y coordinate:((
-        panel.removeAll();
-        panel.repaint();
-        panel.revalidate();
+    public static void showHandsCards(ArrayList<Cards> cards, JPanel panel, int numOfCardInEveryRow, Alliance alliance) throws IOException { //TODO init X and Y coordinate:((
+//        panel.removeAll();
+//        panel.repaint();
+//        panel.revalidate();
         int counter = 0;
         int xCoordinate = 10;
-        int yCoordinate = 10;
-        int xSapce = 170;
+        int yCoordinate =0;
+        int xSapce = 20;
+        int ySpace = 10;
+
+        if (alliance.equals(Alliance.ME)) {
+            yCoordinate=690;
+            for (Cards card : cards) {
+                counter++;
+                CardImagePanel cardImagePanel = new CardImagePanel(card, PlayPanel.getWidthOfEachCardHandsCards(),
+                        PlayPanel.getHeightOfEachCardHandsCards());
+
+//            CardPanel.getInstance().setBackground(Color.white);
+                addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),
+                        cardImagePanel.getHeight());
+
+                if (counter % numOfCardInEveryRow == 0) {
+                    xCoordinate = 10;
+                    yCoordinate += cardImagePanel.getHeight() + ySpace;
+                } else {
+                    xCoordinate += xSapce + PlayPanel.getWidthOfEachCardHandsCards();
+                }
+            }
+        }else if (alliance.equals(Alliance.OPPONENT)){ //TODO show back of cards:(((
+
+        }
+
+    }
+
+    public static void showBattleGroundCards(ArrayList<Cards> cards, JPanel panel, int numOfCardInEveryRow, Alliance alliance) throws IOException { //TODO init X and Y coordinate:((
+
+        int counter = 0;
+        int xCoordinate = 50;
+        int yCoordinate = 0;
+        if (alliance.equals(Alliance.ME)) {
+            yCoordinate = 395;
+        } else if (alliance.equals(Alliance.OPPONENT)) {
+            yCoordinate = 385-10-PlayPanel.getHeightOfEachCardGamePanel();
+        }
+        int xSapce = 50;
         int ySpace = 10;
 
         for (Cards card : cards) {
-
             counter++;
-            CardImagePanel cardImagePanel = new CardImagePanel(card,HandsCardsPanel.getWidthOfEachCard(),
-                                                                    HandsCardsPanel.getHeightOfEachCard());
+            CardImagePanel cardImagePanel = new CardImagePanel(card, PlayPanel.getWidthOfEachCardGamePanel(),
+                    PlayPanel.getHeightOfEachCardGamePanel());
 
 //            CardPanel.getInstance().setBackground(Color.white);
             addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),
                     cardImagePanel.getHeight());
 
             if (counter % numOfCardInEveryRow == 0) {
-                xCoordinate = 10;
+                xCoordinate = 100;
                 yCoordinate += cardImagePanel.getHeight() + ySpace;
             } else {
-                xCoordinate += xSapce;
+                xCoordinate += xSapce + PlayPanel.getWidthOfEachCardGamePanel();
             }
         }
     }

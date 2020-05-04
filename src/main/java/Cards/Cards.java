@@ -8,7 +8,7 @@ import com.google.gson.annotations.Expose;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Cards {
+public class Cards implements Comparable<Cards> {
 
     @Expose(serialize = false, deserialize = true)
     private String name;
@@ -24,6 +24,8 @@ public class Cards {
     public int MoneyCost;
     @Expose(serialize = false, deserialize = true)
     private String type;
+    @Expose(serialize = false, deserialize = false)
+    private  transient int rarityInt;
 
 //    @Expose(serialize = false, deserialize = false) //TODO i changed here:))
 //    private transient Image imageOfThisCard;
@@ -113,9 +115,18 @@ public class Cards {
         MoneyCost = moneyCost;
     }
 
-//    public Image getImageOfThisCard() {
-//        return imageOfThisCard;
-//    }
+
+    public void defineRarityInt(){
+        if (rarity.equalsIgnoreCase("common")){
+            rarityInt=0;
+        }else if (rarity.equalsIgnoreCase("rare")){
+            rarityInt=1;
+        }else if (rarity.equalsIgnoreCase("epic")) {
+            rarityInt =2;
+        }else if (rarity.equalsIgnoreCase("legendary")) {
+            rarityInt =3;
+        }
+    }
 
     @Override
     public String toString() {
@@ -133,4 +144,23 @@ public class Cards {
     }
 
 
+    @Override
+    public int compareTo(Cards card) {
+        defineRarityInt();
+        if (this.rarityInt<card.rarityInt){
+            return 1;
+        }else if (this.rarityInt>card.rarityInt){
+            return -1;
+        }else if (this.manaCost<card.manaCost){
+            return 1;
+        }else if (this.manaCost>card.manaCost){
+            return -1;
+        }else if (card.type.equalsIgnoreCase("minion")&& !this.type.equalsIgnoreCase("minion")){
+            return 1;
+        }else if (!card.type.equalsIgnoreCase("minion")&& this.type.equalsIgnoreCase("minion")){
+            return -1;
+        }else {
+            return 1;// todo every thing is equal:))
+        }
+    }
 }

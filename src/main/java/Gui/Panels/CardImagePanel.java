@@ -3,27 +3,35 @@ package Gui.Panels;
 import Cards.Cards;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
+import Gui.Mapper;
 import Gui.MyMainFrame;
 import Gui.Panels.CollectionPages.DeckPage;
 import Gui.Panels.CollectionPages.DeckViewer;
+
+//import Gui.Panels.GamePage.GraphicLoop;
 import Gui.Panels.ShopPanel.BuySellPanel;
 import Gui.Panels.ShopPanel.PanelToShowCardInBuySellPanel;
 import Gui.Panels.ShopPanel.ShopPage;
+import Logic.GameState;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class CardImagePanel extends JPanel implements MouseListener {
+public class CardImagePanel extends JPanel implements MouseListener, MouseMotionListener {
 
     private BufferedImage imageOfCard;
     private boolean isLock;
     private Cards card; //TODO maybe it is wrong to define card for cardImagePanel:((
+    boolean dragging = false;
+    int x, y;
 
     public boolean getIsLock() {
         return isLock;
@@ -44,14 +52,14 @@ public class CardImagePanel extends JPanel implements MouseListener {
     }
 
 
-    private  int WidthOfCardImage;  //TODO IT SHOULD CHANGE:))
-    private  int HeightOfCardImage;    //TODO IT SHOULD CHANGE:))
+    private int WidthOfCardImage;  //TODO IT SHOULD CHANGE:))
+    private int HeightOfCardImage;    //TODO IT SHOULD CHANGE:))
 
-    public  void setWidthOfCardImage(int widthOfCardImage) {
+    public void setWidthOfCardImage(int widthOfCardImage) {
         WidthOfCardImage = widthOfCardImage;
     }
 
-    public  void setHeightOfCardImage(int heightOfCardImage) {
+    public void setHeightOfCardImage(int heightOfCardImage) {
         HeightOfCardImage = heightOfCardImage;
     }
 
@@ -64,10 +72,12 @@ public class CardImagePanel extends JPanel implements MouseListener {
 //    }
 
 
-    public CardImagePanel(Cards card,int width,int height) throws IOException {
+    public CardImagePanel(Cards card, int width, int height) throws IOException {
 
         setLayout(null);
-        setSize(width,height);
+        setSize(width, height);
+        this.addMouseListener(this);
+        this.addMouseMotionListener(this);
         this.card = card;
         setIsLock(card);
         if (this.isLock) {
@@ -75,13 +85,15 @@ public class CardImagePanel extends JPanel implements MouseListener {
         } else {
             imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + card.getName() + ".png"));
         }
-        addMouseListener(this);
     }
 
     public CardImagePanel(Cards card) throws IOException {
 
         setLayout(null);
-        setSize(150,170);
+        setSize(150, 170);
+
+        this.addMouseListener(this);
+        this.addMouseMotionListener(this);
         this.card = card;
         setIsLock(card);
         if (this.isLock) {
@@ -89,7 +101,7 @@ public class CardImagePanel extends JPanel implements MouseListener {
         } else {
             imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + card.getName() + ".png"));
         }
-        addMouseListener(this);
+
     }
 
     @Override
@@ -102,6 +114,7 @@ public class CardImagePanel extends JPanel implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        System.out.println("Clicked");
         if (SwingUtilities.isRightMouseButton(e)) {
             UIManager UI = new UIManager();
             UI.put("OptionPane.background", Color.cyan);
@@ -165,14 +178,47 @@ public class CardImagePanel extends JPanel implements MouseListener {
 
     }
 
+
+
     @Override
     public void mousePressed(MouseEvent e) {
+        if (CLI.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || CLI.getStatus().equals(Status.PLAY_PAGE)) {
+//            GraphicLoop.getInstance().stop();
+            System.out.println("Start");
+            x = e.getX();
+            y = e.getY();
+        }
 
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
+//        if (CLI.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || CLI.getStatus().equals(Status.PLAY_PAGE)) {
+//            if (e.getComponent().getX() > GamePanel.getMinXForPutCards() &&
+//                    e.getComponent().getX() < GamePanel.getMaxXForPutCards() &&
+//                    e.getComponent().getY() > GamePanel.getMinYForPutCards() &&
+//                    e.getComponent().getY() < GamePanel.getMaxYForPutCards()) {
 
+            GameState.getInstance().setPlayingCard(this.card);
+            Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS);
+            Mapper.getInstance().executeRequests();
+            dragging=false;
+            System.out.println("finish");
+
+    }
+//        }
+//    }
+
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+        System.out.println("Drag");
+        if (CLI.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || CLI.getStatus().equals(Status.PLAY_PAGE)) {
+            dragging = true;
+            e.getComponent().setLocation(e.getX() + e.getComponent().getX() - x, e.getY() + e.getComponent().getY() - y);
+//            repaint();
+//            revalidate();
+        }
     }
 
     @Override
@@ -185,12 +231,11 @@ public class CardImagePanel extends JPanel implements MouseListener {
 
     }
 
-//    private void makeItGrey(boolean isLock,Graphics2D graphics2D) {
-//        if (isLock){
-//            graphics2D.setColor(new Color(50,50,50,150));
-//            graphics2D.fillRect(7,15,this.getWidth()-10,this.getHeight()-15);
-//        }
-//    }
+
+    @Override
+    public void mouseMoved(MouseEvent e) {
+        System.out.println("Moved");
+    }
 
 
 }

@@ -7,6 +7,9 @@ import CommandLineInterface.Status;
 import Gui.MyMainFrame;
 import Gui.Panels.CollectionPages.CollectionPage;
 import Gui.Panels.CollectionPages.DeckPanel;
+import Gui.Panels.GamePage.GamePage;
+//import Gui.Panels.GamePage.GraphicLoop;
+import Gui.Panels.GamePage.GraphicLoop;
 import Gui.Panels.ShopPanel.ShopPage;
 import Gui.Panels.StatusPanel.StatusPage;
 
@@ -206,6 +209,14 @@ public class MainMenuPage extends JPanel {
         playBtn.setBackground(colorOfBtn);
         playBtn.setSize(this.getWidth() / 2, this.getHeight() / 7);
         playBtn.setBounds(0, 0, playBtn.getWidth(), playBtn.getHeight());
+        playBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CLI.setStatus(Status.PLAY_PAGE);
+                GraphicLoop.getInstance().start();
+                MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
+            }
+        });
         menuPanel.add(playBtn);
 
     }

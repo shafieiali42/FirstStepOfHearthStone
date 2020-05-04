@@ -39,6 +39,7 @@ public class CategoryPanelOfChangeDeck extends JPanel {
     private JButton changeNameBtn;
     private JButton changeHeroBtn;
     private JButton removeDeckBtn;
+    private JButton selectDeckBtn;
 
 
 
@@ -58,9 +59,28 @@ public class CategoryPanelOfChangeDeck extends JPanel {
         initNeutralBtn();
         initChangeNameBtn();
         initChangeHeroBtn();
+        initSelectDeckBtn();
         initRemoveDeckBtn();
 
   
+    }
+
+
+    private void initSelectDeckBtn() {
+        selectDeckBtn = new JButton("Select Deck");
+        designBtn(selectDeckBtn);
+        selectDeckBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                selectDeck();
+            }
+        });
+        add(selectDeckBtn);
+    }
+
+    private void selectDeck() {
+        CLI.currentPlayer.setCurrentDeck(DeckPage.getInstance().getDeckTOChange());
+        JOptionPane.showMessageDialog(null, "Your Deck is:"+DeckPage.getInstance().getDeckTOChange().getName());
     }
 
     private void initChangeNameBtn() {
@@ -117,8 +137,13 @@ public class CategoryPanelOfChangeDeck extends JPanel {
     }
 
     private void removeDeck() {
+        System.out.println(CLI.currentPlayer.getAllDecksOfPlayer().size());
         CLI.currentPlayer.getAllDecksOfPlayer().remove(DeckPage.getInstance().getDeckTOChange());
+        DeckPanel.getInstance().showDeckButtons();
+        CollectionPage.getInstance().repaint();
+        CollectionPage.getInstance().revalidate();
         MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
+        System.out.println(CLI.currentPlayer.getAllDecksOfPlayer().size());
     } //TODO maybe needs to be changed:))
 
 

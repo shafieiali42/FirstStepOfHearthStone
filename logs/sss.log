@@ -1346,3 +1346,411 @@ May 01, 2020 1:43:58 PM CommandLineInterface.PlayerManagement signIn
 INFO: sign_in sss
 May 01, 2020 1:44:57 PM CommandLineInterface.PlayerManagement signIn
 INFO: sign_in sss
+May 02, 2020 6:26:10 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 6:28:38 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 6:29:17 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 6:42:40 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:22:36 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:48:22 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:50:17 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:51:42 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:52:22 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:52:47 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:53:19 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:54:05 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:55:05 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:55:31 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:56:00 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:58:10 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:59:06 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 7:59:56 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 8:00:53 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 8:01:24 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 8:01:49 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 8:06:48 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 8:12:19 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 8:17:33 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 8:20:49 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 8:25:15 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 02, 2020 8:25:33 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 12:17:03 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 12:22:03 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 12:23:04 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 12:26:38 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 12:30:07 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 12:31:50 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 03, 2020 12:33:51 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 03, 2020 12:33:51 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/03 00:33:51
+May 03, 2020 12:33:51 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+May 03, 2020 12:33:51 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 03, 2020 12:34:36 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 03, 2020 12:34:57 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 12:36:00 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 03, 2020 12:36:00 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/03 00:36:00
+May 03, 2020 12:36:00 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+May 03, 2020 12:36:00 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 03, 2020 12:36:43 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 03, 2020 12:36:54 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 12:38:10 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 03, 2020 12:38:31 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 12:40:53 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 03, 2020 12:41:06 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 12:43:34 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 03, 2020 1:19:55 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 1:25:59 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 1:26:20 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 1:27:33 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 1:28:55 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 1:29:06 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 03, 2020 1:29:17 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 2:20:16 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 2:21:28 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 2:22:36 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 2:30:09 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 2:31:27 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 2:36:02 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 2:37:00 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 2:38:07 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 2:38:55 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 2:41:18 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 2:43:28 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 2:46:03 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 2:55:01 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:01:25 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:03:47 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:04:26 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:07:26 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:11:18 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:13:02 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:15:59 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:24:21 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:27:05 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:29:27 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:30:40 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:31:31 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:35:11 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:38:20 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:40:14 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 3:41:46 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:16:47 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:17:56 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:19:09 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:21:01 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:23:24 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:24:42 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:25:07 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:29:55 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:32:41 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:41:31 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:44:44 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 4:29:40 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 4:32:17 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 4:48:58 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 4:49:52 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 4:50:52 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:55:58 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:58:46 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 5:59:25 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:00:46 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:02:54 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:03:50 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:05:33 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:06:16 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:10:07 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:11:32 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:13:17 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:15:07 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:15:35 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:20:54 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:26:02 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:34:21 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:34:53 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:35:52 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:40:23 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:42:06 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:45:33 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:51:21 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 6:58:13 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:01:53 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:06:59 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:13:53 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:19:04 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:25:44 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:28:14 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:29:16 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:30:09 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:30:39 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:31:10 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:32:18 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:33:48 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:36:30 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:37:24 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:39:49 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:41:02 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:43:29 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:45:23 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:47:07 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:49:00 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 7:57:41 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 8:04:43 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 8:23:17 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 8:24:29 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 8:25:36 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 8:26:18 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 8:27:01 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 8:29:20 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 8:33:01 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 9:45:22 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 9:47:42 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 9:49:34 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 9:50:24 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 9:57:46 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 9:59:00 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:00:11 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:02:44 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:05:48 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:08:28 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:09:29 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:11:36 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:15:12 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:17:07 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:22:03 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:23:36 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:24:58 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:27:11 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:27:30 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:30:02 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:32:31 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:33:23 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 10:41:47 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 11:35:11 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 11:46:53 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 03, 2020 11:51:49 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 12:21:32 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 12:27:30 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 12:38:00 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 12:39:21 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 12:40:17 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 1:18:55 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 1:36:38 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 1:41:47 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 2:18:10 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 2:24:06 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 2:25:23 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 2:26:08 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 2:28:41 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 2:32:12 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 3:02:24 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 3:04:48 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 3:10:26 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 3:11:45 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 3:13:01 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 3:15:32 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 4:29:27 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 5:09:57 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 5:15:27 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 04, 2020 5:17:41 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss

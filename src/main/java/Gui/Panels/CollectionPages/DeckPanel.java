@@ -18,8 +18,8 @@ public class DeckPanel extends JPanel {
 
     private static final int WIDTH_OF_DECK_PANEL = 250;      //TODO NEEDS TO CHANGE
     private static final int HEIGHT_OF_DECK_PANEL = 1600;     //TODO NEEDS TO CHANGE
-    private static final int WIDTH_OF_BTN = 50;
-    private static final int HEIGHT_OF_BTN = 20;
+    private static final int WIDTH_OF_BTN = 180;
+    private static final int HEIGHT_OF_BTN = 40;
     private Color colorOfTextOfNewDeckBtn = new Color(255, 0, 0);
     private Color colorOfNewDeckBtn = new Color(48, 48, 45);
     private Color colorOfDeckBtn = new Color(48, 48, 45);
@@ -60,9 +60,12 @@ public class DeckPanel extends JPanel {
 
     public void designDeckBtn(JButton btn) {
         btn.setFont(new Font("TimesRoman", Font.ITALIC, 20));
+//        btn.setSize(WIDTH_OF_BTN, HEIGHT_OF_BTN);
+        btn.setPreferredSize(new Dimension(WIDTH_OF_BTN,HEIGHT_OF_BTN));
+        btn.setMaximumSize(new Dimension(WIDTH_OF_BTN,HEIGHT_OF_BTN));
+        btn.setMinimumSize(new Dimension(WIDTH_OF_BTN,HEIGHT_OF_BTN));
         btn.setForeground(colorOfTextOfNewDeckBtn);
         btn.setBackground(colorOfNewDeckBtn);
-        btn.setSize(WIDTH_OF_BTN, HEIGHT_OF_BTN);
     }
     public void initButtonForDeck(Deck deck) {
         JButton button = new JButton(deck.getName());
@@ -156,6 +159,9 @@ public class DeckPanel extends JPanel {
 
     private void showDeck() {
         MyMainFrame.getInstance().setContentPane(DeckPage.getInstance());
+        DeckViewer.getInstance().removeAll();
+        DeckViewer.getInstance().repaint();
+        DeckViewer.getInstance().revalidate();
         DeckViewer.getInstance().showCardsInDecK();
 
     }

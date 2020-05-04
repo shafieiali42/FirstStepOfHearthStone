@@ -202,6 +202,7 @@ public class RankedPanel extends JPanel {
     private void showDeckNumber(int deckNumber) {
         sortDecks();
         ShowDeckInfoPanel.getInstance().setDeckToShow(CLI.currentPlayer.getAllDecksOfPlayer().get(deckNumber-1));
+        ShowDeckInfoPanel.getInstance().setReadyToShow(true);
         ShowDeckInfoPanel.getInstance().repaint();
         ShowDeckInfoPanel.getInstance().revalidate();
     }
@@ -219,6 +220,7 @@ public class RankedPanel extends JPanel {
     private static ShowDeckInfoPanel showDeckInfoPanel=new ShowDeckInfoPanel();
     public static ShowDeckInfoPanel getInstance(){return showDeckInfoPanel;}
     private Deck deckToShow;
+    private boolean readyToShow=false;
 
      public Deck getDeckToShow() {
          return deckToShow;
@@ -226,6 +228,14 @@ public class RankedPanel extends JPanel {
 
      public void setDeckToShow(Deck deckToShow) {
          this.deckToShow = deckToShow;
+     }
+
+     public boolean isReadyToShow() {
+         return readyToShow;
+     }
+
+     public void setReadyToShow(boolean readyToShow) {
+         this.readyToShow = readyToShow;
      }
 
      private ShowDeckInfoPanel(){
@@ -240,25 +250,31 @@ public class RankedPanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-//        Graphics2D graphics2D=(Graphics2D)g;
-//        String name = "Name: "+deckToShow.getName();int lengthOfName= LengthOfMessage.lengthOfMessage(name,graphics2D);
-//        String heroName="Hero: "+deckToShow.getHeroName();int lengthOfHeroName= LengthOfMessage.lengthOfMessage(heroName,graphics2D);
-//        String wins = "Wins:"+deckToShow.getNumberOfWins();int lengthOfWins= LengthOfMessage.lengthOfMessage(wins,graphics2D);
-//        String use= "Uses: "+deckToShow.getNumberOfUses();int lengthOfUse= LengthOfMessage.lengthOfMessage(use,graphics2D);
-//        String mostUsedCard ="Most Used Card: "+deckToShow.getMostUsedCard().getName();
-//        int lengthOfCard= LengthOfMessage.lengthOfMessage(mostUsedCard,graphics2D);
-//        String manaAvg="Average of Mana: "+deckToShow.getManaAvg();
-//        int lengthOfMana= LengthOfMessage.lengthOfMessage(manaAvg,graphics2D);
-//        String winsPerPlay = "Wins per Play: "+(deckToShow.getNumberOfWins()/deckToShow.getNumberOfWins())*100+" %";
-//        int lengthOfWinsPerPlay= LengthOfMessage.lengthOfMessage(winsPerPlay,graphics2D);
-//
-//        graphics2D.drawString(name,(this.getWidth()-lengthOfName)/2,50);
-//        graphics2D.drawString(heroName,(this.getWidth()-lengthOfHeroName)/2,50);
-//        graphics2D.drawString(wins,(this.getWidth()-lengthOfWins)/2,50);
-//        graphics2D.drawString(use,(this.getWidth()-lengthOfUse)/2,50);
-//        graphics2D.drawString(mostUsedCard,(this.getWidth()-lengthOfCard)/2,50);
-//        graphics2D.drawString(manaAvg,(this.getWidth()-lengthOfMana)/2,50);
-//        graphics2D.drawString(winsPerPlay,(this.getWidth()-lengthOfWinsPerPlay)/2,50);
+        Graphics2D graphics2D=(Graphics2D)g;
+        if(readyToShow){
+            deckToShow.defineMostUsedCard();
+        String name = "Name: "+deckToShow.getName();int lengthOfName= LengthOfMessage.lengthOfMessage(name,graphics2D);
+        String heroName="Hero: "+deckToShow.getHeroName();int lengthOfHeroName= LengthOfMessage.lengthOfMessage(heroName,graphics2D);
+        String wins = "Wins:"+deckToShow.getNumberOfWins();int lengthOfWins= LengthOfMessage.lengthOfMessage(wins,graphics2D);
+        String use= "Uses: "+deckToShow.getNumberOfUses();int lengthOfUse= LengthOfMessage.lengthOfMessage(use,graphics2D);
+        String mostUsedCard ="Most Used Card: "+deckToShow.getMostUsedCard().getName();
+        int lengthOfCard= LengthOfMessage.lengthOfMessage(mostUsedCard,graphics2D);
+        String manaAvg="Average of Mana: "+deckToShow.getManaAvg();
+        int lengthOfMana= LengthOfMessage.lengthOfMessage(manaAvg,graphics2D);
+        if (deckToShow.getNumberOfUses()==0){
+            deckToShow.setNumberOfUses(1);
+        }
+        String winsPerPlay = "Wins per Play: "+(deckToShow.getNumberOfWins()/deckToShow.getNumberOfUses())*100+" %";
+        int lengthOfWinsPerPlay= LengthOfMessage.lengthOfMessage(winsPerPlay,graphics2D);
+        graphics2D.drawString(name,(this.getWidth()-lengthOfName)/2,50);
+        graphics2D.drawString(heroName,(this.getWidth()-lengthOfHeroName)/2,100);
+        graphics2D.drawString(wins,(this.getWidth()-lengthOfWins)/2,150);
+        graphics2D.drawString(use,(this.getWidth()-lengthOfUse)/2,200);
+        graphics2D.drawString(mostUsedCard,(this.getWidth()-lengthOfCard)/2,250);
+        graphics2D.drawString(manaAvg,(this.getWidth()-lengthOfMana)/2,300);
+        graphics2D.drawString(winsPerPlay,(this.getWidth()-lengthOfWinsPerPlay)/2,350);
+        }
+
 
 
     }

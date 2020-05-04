@@ -6,9 +6,10 @@ import Heroes.Heroes;
 import com.google.gson.annotations.Expose;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
-public class Deck implements Comparable<Deck> {
+public class Deck implements Comparable<Deck>,Cloneable {
 
     private String name;
     private String heroName;
@@ -141,6 +142,10 @@ public class Deck implements Comparable<Deck> {
         this.mostUsedCard = mostUsedCard;
     }
 
+    public void defineMostUsedCard(){
+        Collections.sort(listOfCards);
+        mostUsedCard=listOfCards.get(0);
+    }
 
     @Override
     public int compareTo(Deck deck) {
@@ -183,5 +188,14 @@ public class Deck implements Comparable<Deck> {
     @Override
     public String toString() {
         return "Deck Name: " + this.name + "Deck Hero: " + this.hero + " cards: " + this.listOfCards;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    public HashMap<String, Integer> getUsesHashMap() {
+        return usesHashMap;
     }
 }
