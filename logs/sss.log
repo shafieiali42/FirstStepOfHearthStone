@@ -1,1756 +1,374 @@
-Apr 19, 2020 9:00:15 PM CommandLineInterface.PlayerManagement signUp
+May 05, 2020 2:27:35 AM CommandLineInterface.PlayerManagement signUp
 INFO: USER: sss
-Apr 19, 2020 9:00:15 PM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/19 21:00:15
-Apr 19, 2020 9:00:15 PM CommandLineInterface.PlayerManagement signUp
+May 05, 2020 2:27:35 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/05 02:27:35
+May 05, 2020 2:27:35 AM CommandLineInterface.PlayerManagement signUp
 INFO: PASSWORD: sss
-Apr 19, 2020 9:00:15 PM CommandLineInterface.PlayerManagement signUp
+May 05, 2020 2:27:35 AM CommandLineInterface.PlayerManagement signUp
 INFO: sign_up sss
-Apr 19, 2020 9:00:22 PM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 19, 2020 9:01:26 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 9:11:04 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 9:19:38 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 9:23:21 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 9:25:03 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 9:26:12 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 9:32:08 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 9:32:53 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 9:33:17 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 9:37:01 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 9:46:32 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 9:47:30 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 10:07:11 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 10:07:51 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 10:08:17 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 10:08:45 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 10:09:50 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 10:10:38 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 10:11:02 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 10:11:53 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 10:13:16 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 10:14:06 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 11:07:50 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 11:33:41 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 19, 2020 11:43:09 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:01:17 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:22:41 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:25:56 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:27:07 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:27:44 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:31:43 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:32:48 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:35:01 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:38:59 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:40:02 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:40:24 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:41:07 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:41:49 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:42:24 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:43:53 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 20, 2020 12:44:34 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 1:01:15 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 1:01:38 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 1:02:15 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 1:03:21 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 1:24:54 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 1:27:06 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 1:31:46 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 1:32:27 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 1:32:47 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 21, 2020 1:40:00 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 1:49:18 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 2:06:38 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 2:07:31 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 2:10:07 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 2:10:47 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 2:11:21 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 2:36:46 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 2:47:06 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 2:49:30 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 2:51:08 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 3:17:15 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 3:33:47 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 3:34:44 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 3:41:10 AM CommandLineInterface.PlayerManagement signUp
+May 05, 2020 2:27:43 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 2:27:46 AM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Mage cards
+May 05, 2020 2:27:46 AM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Rogue cards
+May 05, 2020 2:27:47 AM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Warlock cards
+May 05, 2020 2:27:59 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 2:28:00 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 2:28:00 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 2:28:00 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 2:28:02 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 2:28:04 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 2:28:05 AM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 2:28:06 AM Gui.Panels.ShopPanel.ButtonPanel$4 actionPerformed
+INFO: Show Wallet
+May 05, 2020 2:28:09 AM Gui.Panels.ShopPanel.ButtonPanel$3 actionPerformed
+INFO: Show buyable cards
+May 05, 2020 2:28:10 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 2:28:11 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 2:28:15 AM Player.Player buy
+INFO: Buy: Sathrovarr
+May 05, 2020 2:28:16 AM Player.Player buy
+INFO: Buy Sathrovarr
+May 05, 2020 2:28:18 AM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 05, 2020 2:28:21 AM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:28:21 AM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 1
+May 05, 2020 2:28:48 AM CommandLineInterface.PlayerManagement signUp
 INFO: USER: sss
-Apr 21, 2020 3:41:10 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/21 03:41:10
-Apr 21, 2020 3:41:10 AM CommandLineInterface.PlayerManagement signUp
+May 05, 2020 2:28:48 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/05 02:28:48
+May 05, 2020 2:28:48 AM CommandLineInterface.PlayerManagement signUp
 INFO: PASSWORD: sss
-Apr 21, 2020 3:41:10 AM CommandLineInterface.PlayerManagement signUp
+May 05, 2020 2:28:48 AM CommandLineInterface.PlayerManagement signUp
 INFO: sign_up sss
-Apr 21, 2020 3:42:54 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 21, 2020 3:42:54 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/21 03:42:54
-Apr 21, 2020 3:42:54 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 21, 2020 3:42:54 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 21, 2020 3:43:04 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 21, 2020 3:47:55 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 3:48:15 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 21, 2020 4:21:15 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 21, 2020 4:21:15 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/21 04:21:15
-Apr 21, 2020 4:21:15 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 21, 2020 4:21:15 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 21, 2020 4:21:22 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 21, 2020 4:21:32 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 4:21:43 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 21, 2020 4:22:27 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 4:22:37 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 21, 2020 4:24:35 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 4:24:45 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 21, 2020 4:37:27 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 4:40:30 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 4:42:11 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 4:44:05 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 4:47:41 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 4:50:22 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 4:55:58 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 4:57:51 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 4:58:52 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 4:59:59 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 5:07:27 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 5:09:21 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 5:11:21 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 5:11:38 PM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 21, 2020 5:13:13 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 5:14:07 PM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 21, 2020 5:18:46 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 5:27:54 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 5:29:14 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 5:33:27 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 5:33:57 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 5:41:10 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 5:52:46 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 5:56:10 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 6:03:23 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 6:54:13 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 6:55:40 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 7:23:37 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:10:38 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:13:49 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:14:30 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:15:32 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:16:42 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:17:47 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:18:22 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:19:05 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:24:26 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:35:26 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:36:02 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:36:38 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:42:36 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:43:47 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:45:36 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:48:09 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:51:02 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:52:06 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:53:52 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 8:55:17 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 9:02:07 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 9:05:53 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 9:07:58 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 9:09:00 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 9:18:29 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 9:19:05 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 9:21:15 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 9:21:43 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 9:22:19 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:05:29 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:06:45 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:07:11 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:07:58 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:09:49 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:11:11 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:26:49 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:28:27 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:29:22 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:30:37 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:36:19 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:38:12 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:43:07 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:43:58 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:46:58 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:48:37 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:49:20 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:51:08 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:52:44 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:53:30 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:55:37 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:57:26 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 21, 2020 11:57:48 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:09:35 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:10:43 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:11:23 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:12:10 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:13:44 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:15:18 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:22:24 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:22:59 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:24:54 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:26:00 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:33:11 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:34:14 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:35:37 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 12:45:46 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:01:36 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:05:24 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:09:25 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:10:32 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:19:02 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:25:08 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:26:04 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:27:57 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:29:55 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:30:32 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:45:33 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:46:22 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:48:23 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:50:30 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:51:58 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 1:58:20 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:13:28 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:17:19 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:18:56 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:20:44 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:24:30 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:25:44 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:30:47 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:34:03 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:35:53 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 3:38:07 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:41:11 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:53:32 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:57:03 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:57:52 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 3:58:06 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 3:59:40 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:04:53 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 4:07:33 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:11:28 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 4:20:58 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:21:50 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 4:30:47 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:38:28 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:38:53 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 4:42:45 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:44:07 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:46:27 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:46:48 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 4:47:24 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:47:34 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 4:48:34 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:48:41 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 4:49:11 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:49:18 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 4:51:20 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:52:27 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:54:03 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:55:54 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 4:57:58 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:01:14 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:01:23 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 5:08:19 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:08:26 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 5:09:26 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:11:12 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:11:32 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 5:12:03 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:12:55 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:13:28 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:14:03 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:14:50 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:15:12 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:16:56 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:18:08 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:18:38 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:19:00 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:19:29 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:23:21 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:25:19 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:25:44 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 5:16:21 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:17:22 PM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 5:21:17 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:23:09 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:52:26 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:55:04 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:55:58 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:56:48 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:57:18 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 5:58:02 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 6:01:59 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 6:02:51 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 6:04:33 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 6:05:04 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 6:07:08 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 6:15:57 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 6:16:22 PM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 6:22:12 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 6:24:16 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 6:24:36 PM Player.Player buy
-INFO: Buy: Moonfire
-Apr 22, 2020 7:02:01 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 7:02:24 PM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 7:07:16 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 7:07:47 PM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 7:09:17 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 7:09:41 PM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 7:10:19 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 8:04:01 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 8:04:54 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 8:42:00 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 8:42:12 PM Player.Player buy
-INFO: Buy: Moonfire
-Apr 22, 2020 8:42:38 PM Player.Player sell
-INFO: Sell: CosmicAnomaly
-Apr 22, 2020 8:43:02 PM Player.Player sell
-INFO: Sell: LeperGnome
-Apr 22, 2020 8:43:25 PM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 22, 2020 8:44:22 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 8:44:46 PM Player.Player buy
-INFO: Buy: SwampKingDred
-Apr 22, 2020 8:45:22 PM Player.Player sell
-INFO: Sell: Moonfire
-Apr 22, 2020 8:56:15 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 9:02:31 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 9:02:48 PM Player.Player buy
-INFO: Buy: Dreadscale
-Apr 22, 2020 9:02:59 PM Player.Player sell
+May 05, 2020 2:28:49 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 2:28:51 AM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Rogue cards
+May 05, 2020 2:28:51 AM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Mage cards
+May 05, 2020 2:28:52 AM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Warlock cards
+May 05, 2020 2:28:58 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 2:28:59 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 2:29:00 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 2:29:01 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 2:29:02 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 2:29:07 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 2:29:09 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 2:29:10 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 05, 2020 2:29:12 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 2:29:15 AM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 2:29:17 AM Gui.Panels.ShopPanel.ButtonPanel$4 actionPerformed
+INFO: Show Wallet
+May 05, 2020 2:29:20 AM Gui.Panels.ShopPanel.ButtonPanel$3 actionPerformed
+INFO: Show buyable cards
+May 05, 2020 2:29:21 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 2:29:23 AM Player.Player buy
+INFO: Buy: SecurityRover
+May 05, 2020 2:29:24 AM Player.Player buy
+INFO: Buy SecurityRover
+May 05, 2020 2:29:26 AM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 2:29:26 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 2:29:28 AM Player.Player sell
 INFO: Sell: StormwindKnight
-Apr 22, 2020 9:41:11 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 9:43:51 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 22, 2020 9:44:24 PM CommandLineInterface.PlayerManagement logOut
+May 05, 2020 2:29:28 AM Player.Player sell
+INFO: Sell StormwindKnight
+May 05, 2020 2:29:30 AM Gui.Panels.ShopPanel.ButtonPanel$4 actionPerformed
+INFO: Show Wallet
+May 05, 2020 2:29:33 AM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 05, 2020 2:29:35 AM CommandLineInterface.PlayerManagement logOut
 INFO: Log_out sss
-Apr 23, 2020 12:39:13 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 23, 2020 12:40:02 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 23, 2020 12:41:27 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 23, 2020 12:41:37 AM Player.Player buy
-INFO: Buy: BloodfuryPotion
-Apr 24, 2020 12:20:58 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 12:25:49 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 2:06:32 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 2:08:12 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 2:11:49 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 3:52:54 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 3:54:01 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 3:55:39 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 3:56:15 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 3:57:47 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 3:58:56 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 4:03:03 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 4:04:10 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 4:04:40 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 4:37:51 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 4:46:32 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 4:48:16 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 4:54:33 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 4:56:47 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 4:57:17 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 4:57:42 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 5:00:07 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 7:38:32 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 7:40:56 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 7:50:20 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 8:28:03 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 8:29:16 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 8:30:05 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 8:31:01 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 8:36:41 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 8:37:10 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 8:38:25 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 8:41:16 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 8:41:40 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 8:42:23 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 8:43:24 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 8:49:54 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 8:50:33 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 9:33:49 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 9:34:14 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 9:36:35 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 9:37:29 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 9:38:29 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 9:39:51 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 9:40:45 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 9:48:21 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 9:48:58 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 9:50:07 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 9:51:13 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:05:35 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:06:29 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:09:05 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:09:29 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:12:57 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:14:57 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:16:19 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:17:19 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:17:54 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:18:28 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:18:56 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:22:58 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:23:29 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:24:04 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:24:38 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:25:45 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:27:23 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:30:14 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:30:46 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:33:24 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:34:31 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:35:01 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:35:55 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:38:51 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:39:25 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:40:12 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:42:25 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:42:53 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:43:28 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:45:31 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:48:21 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:49:10 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:52:57 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 10:53:50 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 11:17:09 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 11:18:10 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 11:19:19 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 11:21:07 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 11:22:07 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 11:23:00 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 11:24:34 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 11:25:52 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 11:29:47 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 11:31:28 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 24, 2020 11:33:10 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 12:41:02 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:03:17 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:03:27 AM Player.Player sell
-INFO: Sell: StormwindKnight
-Apr 25, 2020 1:04:38 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:04:48 AM Player.Player sell
-INFO: Sell: TournamentMedic
-Apr 25, 2020 1:05:40 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:05:48 AM Player.Player sell
-INFO: Sell: StormwindKnight
-Apr 25, 2020 1:06:50 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:06:56 AM Player.Player sell
-INFO: Sell: StormwindKnight
-Apr 25, 2020 1:07:48 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:09:21 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:09:33 AM Player.Player sell
-INFO: Sell: TournamentMedic
-Apr 25, 2020 1:10:09 AM Player.Player buy
-INFO: Buy: TournamentMedic
-Apr 25, 2020 1:10:21 AM Player.Player sell
-INFO: Sell: StormwindKnight
-Apr 25, 2020 1:10:51 AM Player.Player sell
-INFO: Sell: CrazedAlchemist
-Apr 25, 2020 1:11:48 AM Player.Player sell
-INFO: Sell: Moonfire
-Apr 25, 2020 1:12:09 AM Player.Player sell
-INFO: Sell: MaidenOfTheLake
-Apr 25, 2020 1:12:20 AM Player.Player sell
-INFO: Sell: RiverCrocolisk
-Apr 25, 2020 1:12:27 AM Player.Player sell
-INFO: Sell: TombWarden
-Apr 25, 2020 1:12:32 AM Player.Player sell
-INFO: Sell: TournamentMedic
-Apr 25, 2020 1:12:37 AM Player.Player sell
-INFO: Sell: NoviceEngineer
-Apr 25, 2020 1:12:42 AM Player.Player sell
-INFO: Sell: YoungPriestess
-Apr 25, 2020 1:15:31 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:15:40 AM Player.Player sell
-INFO: Sell: TournamentMedic
-Apr 25, 2020 1:16:20 AM Player.Player buy
-INFO: Buy: TournamentMedic
-Apr 25, 2020 1:20:04 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:21:47 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:21:56 AM Player.Player sell
-INFO: Sell: TournamentMedic
-Apr 25, 2020 1:23:06 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:23:14 AM Player.Player sell
-INFO: Sell: StormwindKnight
-Apr 25, 2020 1:32:14 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:32:27 AM Player.Player sell
-INFO: Sell: TombWarden
-Apr 25, 2020 1:36:00 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:36:11 AM Player.Player sell
-INFO: Sell: TournamentMedic
-Apr 25, 2020 1:39:33 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 1:39:46 AM Player.Player sell
-INFO: Sell: TournamentMedic
-Apr 25, 2020 1:39:55 AM Player.Player sell
-INFO: Sell: RiverCrocolisk
-Apr 25, 2020 1:42:47 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 5:30:01 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 5:32:07 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 5:32:22 PM CommandLineInterface.PlayerManagement logOut
+May 05, 2020 3:44:49 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 3:44:51 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 3:45:40 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 3:45:41 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 3:46:02 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 3:46:03 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 3:48:45 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 3:48:46 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 3:52:54 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 3:52:55 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:20:04 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:20:05 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:20:43 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:20:44 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:21:20 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:21:21 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:21:27 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:21:45 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select Ali for main deck
+May 05, 2020 5:21:46 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 05, 2020 5:21:47 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:21:48 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:21:49 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:21:50 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:21:57 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:22:53 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:22:54 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:23:13 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:23:14 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:23:17 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:23:28 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 05, 2020 5:23:30 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:23:31 AM CommandLineInterface.PlayerManagement logOut
 INFO: Log_out sss
-Apr 25, 2020 5:32:51 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 6:19:09 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 6:20:15 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 6:20:49 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 6:21:36 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 6:24:38 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 6:26:55 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 6:27:30 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 6:44:23 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 6:45:50 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 6:47:36 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 8:50:54 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 8:53:10 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 8:57:41 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 8:58:51 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 8:59:30 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:00:41 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:02:55 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:14:34 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:16:17 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:17:04 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:18:34 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:19:14 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:21:31 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:23:12 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:25:58 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:54:37 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:55:11 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:55:38 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:58:23 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 9:59:53 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 10:00:52 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 10:01:36 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 10:02:39 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 10:03:17 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 10:05:10 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 10:31:57 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 10:33:44 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 10:34:51 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 10:40:41 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 10:41:12 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 25, 2020 10:41:30 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 6:04:15 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 6:10:30 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 6:30:31 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 6:32:14 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 6:32:54 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 6:33:55 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 6:36:52 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 6:40:50 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 6:44:05 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 7:33:43 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 7:34:26 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 7:38:00 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 7:40:01 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 7:40:49 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 26, 2020 7:41:30 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 12:38:14 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 6:22:53 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 9:32:46 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 9:49:25 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 9:51:56 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 9:56:08 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 9:57:16 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 10:00:03 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:18:24 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:21:39 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:23:08 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:25:44 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:26:51 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:28:40 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:30:10 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:37:17 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:43:13 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:45:43 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:48:28 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:49:27 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:51:12 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:52:21 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 27, 2020 11:54:49 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 12:00:10 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 12:01:32 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 12:05:25 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 12:18:50 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 12:19:47 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 12:37:49 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 12:39:55 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 12:49:12 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 12:52:43 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 12:56:07 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:00:32 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:12:26 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:15:50 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:18:16 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:20:37 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:21:58 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:28:38 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:30:17 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:36:29 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:40:39 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:41:40 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:42:45 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:46:12 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:47:12 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 1:52:08 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 2:31:00 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 2:33:03 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 2:34:24 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 2:36:26 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 2:48:39 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 2:48:39 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 02:48:39
-Apr 28, 2020 2:48:39 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 2:48:39 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 2:52:53 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 2:52:53 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 02:52:53
-Apr 28, 2020 2:52:53 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 2:52:53 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 2:54:20 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 2:54:20 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 02:54:20
-Apr 28, 2020 2:54:20 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 2:54:20 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 3:15:43 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 3:15:43 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 03:15:43
-Apr 28, 2020 3:15:43 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 3:15:43 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 3:16:08 AM CommandLineInterface.PlayerManagement logOut
+May 05, 2020 5:23:49 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:23:57 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:24:21 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:24:24 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:24:28 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select Ali for main deck
+May 05, 2020 5:24:29 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 05, 2020 5:24:31 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:24:32 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:24:33 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:24:34 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:24:34 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:24:34 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:24:50 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:24:51 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:24:55 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select Ali for main deck
+May 05, 2020 5:24:56 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 05, 2020 5:24:58 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:25:00 AM CommandLineInterface.PlayerManagement logOut
 INFO: Log_out sss
-Apr 28, 2020 3:16:24 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 3:19:06 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 9:04:54 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 9:04:54 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 09:04:54
-Apr 28, 2020 9:04:54 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 9:04:54 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 9:05:47 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 9:05:47 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 09:05:47
-Apr 28, 2020 9:05:47 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 9:05:47 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 9:08:29 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 9:08:29 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 09:08:29
-Apr 28, 2020 9:08:29 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 9:08:29 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 9:10:02 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 9:10:02 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 09:10:02
-Apr 28, 2020 9:10:02 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 9:10:02 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 9:17:27 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 9:17:27 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 09:17:27
-Apr 28, 2020 9:17:27 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 9:17:27 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 9:21:57 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 9:21:57 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 09:21:57
-Apr 28, 2020 9:21:57 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 9:21:57 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 9:25:57 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 9:25:57 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 09:25:57
-Apr 28, 2020 9:25:57 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 9:25:57 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 9:27:42 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 9:27:42 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 09:27:42
-Apr 28, 2020 9:27:42 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 9:27:42 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 9:29:45 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 9:29:45 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 09:29:45
-Apr 28, 2020 9:29:45 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 9:29:45 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 9:36:50 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 9:36:50 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 09:36:50
-Apr 28, 2020 9:36:50 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 9:36:50 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 9:48:56 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 9:48:56 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 09:48:56
-Apr 28, 2020 9:48:56 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 9:48:56 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 9:50:03 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 9:50:03 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 09:50:03
-Apr 28, 2020 9:50:03 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 9:50:03 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 9:51:54 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 9:51:54 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 09:51:54
-Apr 28, 2020 9:51:54 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 9:51:54 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 9:52:22 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 28, 2020 9:52:34 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 10:05:00 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 11:23:23 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 11:23:23 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 11:23:23
-Apr 28, 2020 11:23:23 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 11:23:23 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 11:25:02 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 11:25:02 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 11:25:02
-Apr 28, 2020 11:25:02 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 11:25:02 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 11:25:58 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 11:25:58 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 11:25:58
-Apr 28, 2020 11:25:58 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 11:25:58 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 11:27:34 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 11:27:34 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 11:27:34
-Apr 28, 2020 11:27:34 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 11:27:34 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 11:30:21 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 11:30:21 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 11:30:21
-Apr 28, 2020 11:30:21 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 11:30:21 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 11:30:51 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 28, 2020 11:31:01 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 11:32:21 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 28, 2020 11:45:45 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-Apr 28, 2020 11:45:45 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/04/28 11:45:45
-Apr 28, 2020 11:45:45 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-Apr 28, 2020 11:45:45 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-Apr 28, 2020 11:47:37 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 28, 2020 11:47:50 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 11:49:14 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 28, 2020 11:49:25 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 11:50:08 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 28, 2020 11:50:19 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 11:50:35 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 28, 2020 2:55:24 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 2:56:22 PM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 28, 2020 2:59:34 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 3:18:05 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 3:19:02 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 3:21:43 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 3:24:38 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 3:31:57 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-Apr 28, 2020 3:32:35 PM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-Apr 28, 2020 3:32:46 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 01, 2020 1:42:49 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 01, 2020 1:43:58 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 01, 2020 1:44:57 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 6:26:10 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 6:28:38 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 6:29:17 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 6:42:40 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:22:36 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:48:22 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:50:17 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:51:42 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:52:22 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:52:47 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:53:19 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:54:05 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:55:05 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:55:31 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:56:00 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:58:10 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:59:06 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 7:59:56 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 8:00:53 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 8:01:24 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 8:01:49 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 8:06:48 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 8:12:19 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 8:17:33 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 8:20:49 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 8:25:15 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 02, 2020 8:25:33 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 12:17:03 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 12:22:03 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 12:23:04 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 12:26:38 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 12:30:07 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 12:31:50 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-May 03, 2020 12:33:51 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-May 03, 2020 12:33:51 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/05/03 00:33:51
-May 03, 2020 12:33:51 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-May 03, 2020 12:33:51 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-May 03, 2020 12:34:36 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-May 03, 2020 12:34:57 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 12:36:00 AM CommandLineInterface.PlayerManagement signUp
-INFO: USER: sss
-May 03, 2020 12:36:00 AM CommandLineInterface.PlayerManagement signUp
-INFO: CREATED_AT:2020/05/03 00:36:00
-May 03, 2020 12:36:00 AM CommandLineInterface.PlayerManagement signUp
-INFO: PASSWORD: sss
-May 03, 2020 12:36:00 AM CommandLineInterface.PlayerManagement signUp
-INFO: sign_up sss
-May 03, 2020 12:36:43 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-May 03, 2020 12:36:54 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 12:38:10 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-May 03, 2020 12:38:31 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 12:40:53 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-May 03, 2020 12:41:06 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 12:43:34 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-May 03, 2020 1:19:55 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 1:25:59 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 1:26:20 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 1:27:33 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 1:28:55 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 1:29:06 AM CommandLineInterface.PlayerManagement logOut
-INFO: Log_out sss
-May 03, 2020 1:29:17 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 2:20:16 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 2:21:28 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 2:22:36 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 2:30:09 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 2:31:27 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 2:36:02 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 2:37:00 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 2:38:07 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 2:38:55 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 2:41:18 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 2:43:28 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 2:46:03 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 2:55:01 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:01:25 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:03:47 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:04:26 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:07:26 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:11:18 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:13:02 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:15:59 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:24:21 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:27:05 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:29:27 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:30:40 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:31:31 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:35:11 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:38:20 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:40:14 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 3:41:46 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:16:47 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:17:56 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:19:09 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:21:01 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:23:24 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:24:42 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:25:07 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:29:55 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:32:41 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:41:31 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:44:44 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 4:29:40 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 4:32:17 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 4:48:58 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 4:49:52 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 4:50:52 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:55:58 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:58:46 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 5:59:25 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:00:46 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:02:54 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:03:50 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:05:33 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:06:16 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:10:07 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:11:32 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:13:17 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:15:07 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:15:35 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:20:54 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:26:02 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:34:21 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:34:53 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:35:52 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:40:23 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:42:06 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:45:33 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:51:21 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 6:58:13 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:01:53 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:06:59 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:13:53 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:19:04 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:25:44 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:28:14 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:29:16 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:30:09 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:30:39 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:31:10 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:32:18 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:33:48 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:36:30 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:37:24 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:39:49 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:41:02 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:43:29 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:45:23 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:47:07 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:49:00 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 7:57:41 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 8:04:43 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 8:23:17 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 8:24:29 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 8:25:36 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 8:26:18 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 8:27:01 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 8:29:20 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 8:33:01 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 9:45:22 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 9:47:42 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 9:49:34 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 9:50:24 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 9:57:46 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 9:59:00 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:00:11 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:02:44 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:05:48 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:08:28 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:09:29 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:11:36 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:15:12 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:17:07 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:22:03 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:23:36 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:24:58 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:27:11 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:27:30 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:30:02 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:32:31 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:33:23 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 10:41:47 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 11:35:11 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 11:46:53 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 03, 2020 11:51:49 PM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 12:21:32 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 12:27:30 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 12:38:00 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 12:39:21 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 12:40:17 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 1:18:55 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 1:36:38 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 1:41:47 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 2:18:10 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 2:24:06 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 2:25:23 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 2:26:08 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 2:28:41 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 2:32:12 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 3:02:24 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 3:04:48 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 3:10:26 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 3:11:45 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 3:13:01 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 3:15:32 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 4:29:27 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 5:09:57 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 5:15:27 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
-May 04, 2020 5:17:41 AM CommandLineInterface.PlayerManagement signIn
-INFO: sign_in sss
+May 05, 2020 5:26:04 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:26:05 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:26:06 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:26:07 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:26:07 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:26:07 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:26:07 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:26:09 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:26:11 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:26:13 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:26:24 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:26:27 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:26:28 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:26:28 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:26:32 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:26:35 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:26:37 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:26:43 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:26:45 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:26:45 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:27:35 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:27:41 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:27:42 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:27:43 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:27:43 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:27:43 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:27:43 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:27:45 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:27:46 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:27:48 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:27:50 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:27:52 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:31:46 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:31:49 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:40:02 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:40:04 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:40:05 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:40:05 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:40:05 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:40:06 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:40:06 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:40:07 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:40:10 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:40:12 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:40:15 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:02 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:41:03 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:41:04 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:04 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:05 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:05 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:05 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:07 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:09 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:11 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:13 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:14 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:37 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:41:38 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:41:40 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:40 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:40 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:40 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:40 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:40 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:41 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:42 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:45 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:47 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:48 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:50 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:52 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:54 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:55 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:56 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:56 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:41:58 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:41:59 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:42:01 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:42:02 AM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 5:42:07 AM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 5:57:14 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:57:16 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page

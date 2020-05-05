@@ -191,6 +191,7 @@ public class Player {
         if (!canBuyThisCard) {
             JOptionPane.showMessageDialog(null, "You don't have enough money!");
         }
+        this.getLoggerOfMyPlayer().info("Buy "+card.getName());
         setAvailableCardsWithThisSituation();
         setBuyableCards();
     }
@@ -215,6 +216,7 @@ public class Player {
         if (!canSellThisCard) {
             JOptionPane.showMessageDialog(null, "You can't sell this card:((");
         }
+        this.getLoggerOfMyPlayer().info("Sell "+card.getName());
         setAvailableCardsWithThisSituation();
         setSalableCards();
     }

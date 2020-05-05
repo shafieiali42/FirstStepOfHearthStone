@@ -78,6 +78,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
+                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Show lock cards ");
                     showLockCards();
                 } catch (IOException ex) {
                     ex.printStackTrace();
@@ -95,6 +96,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
+                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Show unlock cards ");
                     showUnLockCards();
                 } catch (IOException ex) {
                     ex.printStackTrace();
@@ -111,6 +113,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
+                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Show all cards ");
                     showAllCards();
                 } catch (IOException ex) {
                     ex.printStackTrace();
@@ -227,6 +230,8 @@ public class CategoryPanel extends JPanel {
             }
         }
         MethodsOfShowCardsOnPanel.showCards(filteredCardsByClassOfCard,CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
+
+        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show "+className+" cards");
     } //TODO show unlock cards with gray:((
 
 

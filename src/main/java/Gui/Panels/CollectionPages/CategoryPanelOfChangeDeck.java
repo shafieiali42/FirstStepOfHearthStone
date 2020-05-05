@@ -81,6 +81,7 @@ public class CategoryPanelOfChangeDeck extends JPanel {
     private void selectDeck() {
         CLI.currentPlayer.setCurrentDeck(DeckPage.getInstance().getDeckTOChange());
         JOptionPane.showMessageDialog(null, "Your Deck is:"+DeckPage.getInstance().getDeckTOChange().getName());
+        CLI.currentPlayer.getLoggerOfMyPlayer().info("select "+DeckPage.getInstance().getDeckTOChange().getName()+" for main deck");
     }
 
     private void initChangeNameBtn() {
@@ -98,7 +99,7 @@ public class CategoryPanelOfChangeDeck extends JPanel {
     private void changeName() {
         System.out.println(DeckPage.getInstance().getDeckTOChange().getName());
         DeckPage.getInstance().getDeckTOChange().setName(JOptionPane.showInputDialog("Enter your favorite name!"));
-        System.out.println(DeckPage.getInstance().getDeckTOChange().getName());
+        CLI.currentPlayer.getLoggerOfMyPlayer().info("Change name of deck ");
     }
 
     private void changeHero() {
@@ -133,6 +134,7 @@ public class CategoryPanelOfChangeDeck extends JPanel {
             default:
                 throw new IllegalStateException("Unexpected value: " + s);
         }
+        CLI.currentPlayer.getLoggerOfMyPlayer().info("Changed hero to "+s);
 
     }
 
@@ -143,7 +145,7 @@ public class CategoryPanelOfChangeDeck extends JPanel {
         CollectionPage.getInstance().repaint();
         CollectionPage.getInstance().revalidate();
         MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
-        System.out.println(CLI.currentPlayer.getAllDecksOfPlayer().size());
+        CLI.currentPlayer.getLoggerOfMyPlayer().info("Removed "+DeckPage.getInstance().getDeckTOChange().getName());
     } //TODO maybe needs to be changed:))
 
 
@@ -172,6 +174,7 @@ public class CategoryPanelOfChangeDeck extends JPanel {
         removeDeckBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 removeDeck();
             }
         });
@@ -218,6 +221,7 @@ public class CategoryPanelOfChangeDeck extends JPanel {
             }
         }
         MethodsOfShowCardsOnPanel.showCards(filteredCardsByClassOfCard,CardPanel.getInstanceOfDeckPage(),CardPanel.getNumOfCardInEveryRow());
+        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show " +className+" cards");
     } //TODO show unlock cards with gray:((
 
 

@@ -5,6 +5,7 @@ import Gui.Panels.CollectionPages.LittleCardPanel;
 import Heroes.Mage;
 import Heroes.Rogue;
 import Heroes.Warlock;
+import Utility.Constant;
 
 import java.io.IOException;
 
@@ -17,6 +18,8 @@ public class main {
         Warlock.setSpecialCardsOfWarlock();
         Rogue.setSpecialCardsOfRogue();
         LittleCardPanel.setAllLittleCardPanels();
+        Constant.getInstance().defineHeroImagesHashMap();
+        Constant.getInstance().defineHeroPowerImagesHashMap();
         CLI cli = new CLI();
         cli.FirstPage();
 

@@ -74,6 +74,7 @@ public class ButtonPanel extends JPanel {
         backBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                CLI.currentPlayer.getLoggerOfMyPlayer().info("Back from shop page");
                 ShopCardPanel.getInstance().removeAll();
                 ShopCardPanel.getInstance().repaint();
                 ShopCardPanel.getInstance().revalidate();
@@ -99,6 +100,7 @@ public class ButtonPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
+                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Show salable cards");
                     showSalableCards();
                 } catch (IOException ex) {
                     ex.printStackTrace();
@@ -116,6 +118,7 @@ public class ButtonPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
+                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Show buyable cards");
                     showBuyableCards();
                 } catch (IOException ex) {
                     ex.printStackTrace();
@@ -131,6 +134,7 @@ public class ButtonPanel extends JPanel {
         walletBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                CLI.currentPlayer.getLoggerOfMyPlayer().info("Show Wallet");
                 CLI.setStatus(Status.WALLET_PAGE);
                 JOptionPane.showConfirmDialog(null, "You have "+ CLI.currentPlayer.getMoney()+" Money!",
                         "Wallet", JOptionPane.DEFAULT_OPTION);
@@ -151,4 +155,6 @@ public class ButtonPanel extends JPanel {
         CLI.setStatus(Status.BUY_PAGE);
         MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getBuyableCards(),ShopCardPanel.getInstance(),ShopCardPanel.getInstance().getNumOfCardInEveryRow());
     }
+
+
 }

@@ -92,6 +92,7 @@ public class ManaPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
+                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Search for card: "+searchField.getText());
                     searchInCards(searchField.getText());
                 } catch (IOException ex) {
                     ex.printStackTrace();
@@ -282,6 +283,7 @@ public class ManaPanel extends JPanel {
                 CardPanel.getInstanceOfCollectionPage().removeAll();
                 CardPanel.getInstanceOfCollectionPage().repaint();
                 CardPanel.getInstanceOfCollectionPage().revalidate();
+                CLI.currentPlayer.getLoggerOfMyPlayer().info("Go back from collection page");
                 goBack();
             }
         });
@@ -326,6 +328,7 @@ public class ManaPanel extends JPanel {
         } else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
             MethodsOfShowCardsOnPanel.showCards(filteredByManaCards, CardPanel.getInstanceOfDeckPage(), CardPanel.getNumOfCardInEveryRow());
         }
+        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show cards with mana: "+mana);
 
     }//TODO make unlock cards gray:((
 

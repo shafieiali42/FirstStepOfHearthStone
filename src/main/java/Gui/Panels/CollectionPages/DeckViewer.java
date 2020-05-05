@@ -75,6 +75,7 @@ public class DeckViewer extends JPanel {
         DeckViewer.getInstance().repaint();
         DeckViewer.getInstance().revalidate();
         if (CLI.getStatus().equals(Status.CHANGE_DECK)){
+            CLI.currentPlayer.getLoggerOfMyPlayer().info("Changed deck "+DeckPage.getInstance().getDeckTOChange().getName());
             DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
             DeckPage.getInstance().setDeckTOChange(new Deck());
             CLI.setStatus(Status.COLLECTIONS_PAGE);
@@ -89,6 +90,7 @@ public class DeckViewer extends JPanel {
             //TODO maybe we should update collection page:)))))
             MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
             DeckPanel.getInstance().showDeckButtons();
+            CLI.currentPlayer.getLoggerOfMyPlayer().info("Make new deck");
         }
     }
 

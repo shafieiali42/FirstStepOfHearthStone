@@ -2,10 +2,14 @@ package Gui.Panels.GamePage;
 
 import Logic.Alliance;
 import Logic.GameState;
+import Utility.Constant;
 import Utility.MethodsOfShowCardsOnPanel;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 
 public class PlayPanel extends JPanel {
@@ -27,17 +31,35 @@ public class PlayPanel extends JPanel {
     private static final int WIDTH_OF_HANDS_PANEL = 1115;
     private static final int HEIGHT_OF_HANDS_PANEL = 85;
 
+    private static final int WIDTH_OF_HERO_IMAGE = 150;
+    private static final int HEIGHT_OF_HERO_IMAGE = 100;
+    private static final int X_COORDINATE_OF_HERO_IMAGE = (WIDTH_OF_GAME_PANEL - WIDTH_OF_HERO_IMAGE) / 2;
+    private static final int Y_COORDINATE_OF_HERO_IMAGE = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_HERO_IMAGE;
+
+
+    private static final int WIDTH_OF_HERO_POWER_IMAGE = 100;
+    private static final int HEIGHT_OF_HERO_POWER_IMAGE = 100;
+    private static final int X_COORDINATE_OF_HERO_POWER_IMAGE = X_COORDINATE_OF_HERO_IMAGE + WIDTH_OF_HERO_IMAGE;
+    private static final int Y_COORDINATE_OF_HERO_POWER_IMAGE = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_HERO_POWER_IMAGE;
+
+
+    private static final int WIDTH_OF_WEAPON_IMAGE = 100;
+    private static final int HEIGHT_OF_WEAPON_IMAGE = 100;
+    private static final int X_COORDINATE_OF_WEAPON = X_COORDINATE_OF_HERO_IMAGE - WIDTH_OF_WEAPON_IMAGE;
+    private static final int Y_COORDINATE_OF_WEAPON = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_WEAPON_IMAGE;
+
+
+    private BufferedImage heroImage;
+    private BufferedImage heroPowerImage;
+    private BufferedImage weaponImage;
+
+
     private boolean needsToRepaint = true;
 
-    public boolean isNeedsToRepaint() {
-        return needsToRepaint;
-    }
 
-    public void setNeedsToRepaint(boolean needsToRepaint) {
-        this.needsToRepaint = needsToRepaint;
-    }
+    private static PlayPanel playPanel= new PlayPanel();
 
-    private static PlayPanel playPanel = new PlayPanel();
+
 
     public static PlayPanel getInstance() {
         return playPanel;
@@ -46,19 +68,20 @@ public class PlayPanel extends JPanel {
     private static final int WIDTH_OF_PLAY_PANEL = 1115;
     private static final int HEIGHT_OF_PLAY_PANEL = 770;
 
-    public static int getWidthOfPlayPanel() {
-        return WIDTH_OF_PLAY_PANEL;
-    }
 
-    public static int getHeightOfPlayPanel() {
-        return HEIGHT_OF_PLAY_PANEL;
-    }
-
-
-    private PlayPanel() {
+    private PlayPanel(){
         setLayout(null);
-//        setBackground(Color.cyan);
+        setBackground(Color.gray);
         setSize(WIDTH_OF_PLAY_PANEL, HEIGHT_OF_PLAY_PANEL);
+    }
+
+
+    public void defineImagesOfHeroAndHeroPower() throws IOException {
+        heroImage = ImageIO.read(new File(
+                Constant.getInstance().getHeroImages().get(GameState.getInstance().getPlayer().getCurrentHero().getName())));
+
+        heroPowerImage = ImageIO.read(
+                new File(Constant.getInstance().getHeroPowerImages().get(GameState.getInstance().getPlayer().getCurrentHero().getName())));
 
     }
 
@@ -84,6 +107,23 @@ public class PlayPanel extends JPanel {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        try {
+            defineImagesOfHeroAndHeroPower();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        graphics2D.drawImage(heroImage, X_COORDINATE_OF_HERO_IMAGE, Y_COORDINATE_OF_HERO_IMAGE,
+                WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE, null);
+
+        graphics2D.drawImage(heroPowerImage, X_COORDINATE_OF_HERO_POWER_IMAGE, Y_COORDINATE_OF_HERO_POWER_IMAGE,
+                WIDTH_OF_HERO_POWER_IMAGE, HEIGHT_OF_HERO_POWER_IMAGE, null);
+
+//        graphics2D.drawImage(heroImage, X_COORDINATE_OF_WEAPON, Y_COORDINATE_OF_WEAPON,
+//                WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE, null);
+
+        graphics2D.drawOval(X_COORDINATE_OF_WEAPON, Y_COORDINATE_OF_WEAPON,
+                WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE);
 
 
     }
@@ -121,7 +161,6 @@ public class PlayPanel extends JPanel {
         return HEIGHT_OF_GAME_PANEL;
     }
 
-
     public static int getWidthOfEachCardHandsCards() {
         return WIDTH_OF_EACH_CARD_HANDS_CARDS;
     }
@@ -136,6 +175,22 @@ public class PlayPanel extends JPanel {
 
     public static int getHeightOfHandsPanel() {
         return HEIGHT_OF_HANDS_PANEL;
+    }
+
+    public boolean getNeedsToRepaint() {
+        return needsToRepaint;
+    }
+
+    public void setNeedsToRepaint(boolean needsToRepaint) {
+        this.needsToRepaint = needsToRepaint;
+    }
+
+    public static int getWidthOfPlayPanel() {
+        return WIDTH_OF_PLAY_PANEL;
+    }
+
+    public static int getHeightOfPlayPanel() {
+        return HEIGHT_OF_PLAY_PANEL;
     }
 
 

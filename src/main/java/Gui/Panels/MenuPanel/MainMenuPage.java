@@ -146,7 +146,7 @@ public class MainMenuPage extends JPanel {
         statusBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into status page");
                 MyMainFrame.getInstance().setContentPane(StatusPage.getInstance());
             }
         });
@@ -161,6 +161,12 @@ public class MainMenuPage extends JPanel {
         settingBtn.setBackground(colorOfBtn);
         settingBtn.setSize(this.getWidth() / 2, this.getHeight() /7);
         settingBtn.setBounds(0, menuPanel.getHeight() * 4 / 7, settingBtn.getWidth(), settingBtn.getHeight());
+        settingBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into setting page");
+            }
+        });
         menuPanel.add(settingBtn);
 
     }
@@ -176,6 +182,7 @@ public class MainMenuPage extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CLI.setStatus(Status.SHOP_PAGE);
+                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into shop page");
                 MyMainFrame.getInstance().setContentPane(ShopPage.getInstance());
             }
         });
@@ -195,6 +202,7 @@ public class MainMenuPage extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CLI.setStatus(Status.COLLECTIONS_PAGE);
+                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into collection page");
                 DeckPanel.getInstance().showDeckButtons();
                 MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
             }
@@ -213,6 +221,7 @@ public class MainMenuPage extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CLI.setStatus(Status.PLAY_PAGE);
+                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into play page");
                 GraphicLoop.getInstance().start();
                 MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
             }

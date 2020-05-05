@@ -3,6 +3,7 @@ package Deck;
 import Cards.Cards;
 import Gui.Panels.CollectionPages.LittleCardPanel;
 import Heroes.Heroes;
+import Logic.GameState;
 import com.google.gson.annotations.Expose;
 
 import java.util.ArrayList;
@@ -145,6 +146,13 @@ public class Deck implements Comparable<Deck>,Cloneable {
     public void defineMostUsedCard(){
         Collections.sort(listOfCards);
         mostUsedCard=listOfCards.get(0);
+    }
+    public int numberOfCardsInDeck(){
+        int numberOFAllCardsInDeck=0;
+        for (String key: getUsesHashMap().keySet()){
+            numberOFAllCardsInDeck+=getUsesHashMap().get(key);
+        }
+        return numberOFAllCardsInDeck;
     }
 
     @Override

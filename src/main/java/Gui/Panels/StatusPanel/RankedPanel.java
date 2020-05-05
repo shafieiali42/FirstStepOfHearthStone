@@ -205,6 +205,7 @@ public class RankedPanel extends JPanel {
         ShowDeckInfoPanel.getInstance().setReadyToShow(true);
         ShowDeckInfoPanel.getInstance().repaint();
         ShowDeckInfoPanel.getInstance().revalidate();
+        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show best deck, deck number: "+ deckNumber);
     }
 
 

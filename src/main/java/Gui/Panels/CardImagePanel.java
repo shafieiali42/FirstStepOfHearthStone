@@ -9,6 +9,7 @@ import Gui.Panels.CollectionPages.DeckPage;
 import Gui.Panels.CollectionPages.DeckViewer;
 
 //import Gui.Panels.GamePage.GraphicLoop;
+import Gui.Panels.GamePage.PlayPanel;
 import Gui.Panels.ShopPanel.BuySellPanel;
 import Gui.Panels.ShopPanel.PanelToShowCardInBuySellPanel;
 import Gui.Panels.ShopPanel.ShopPage;
@@ -179,12 +180,10 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     }
 
 
-
     @Override
     public void mousePressed(MouseEvent e) {
         if (CLI.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || CLI.getStatus().equals(Status.PLAY_PAGE)) {
 //            GraphicLoop.getInstance().stop();
-            System.out.println("Start");
             x = e.getX();
             y = e.getY();
         }
@@ -193,26 +192,24 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     @Override
     public void mouseReleased(MouseEvent e) {
-//        if (CLI.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || CLI.getStatus().equals(Status.PLAY_PAGE)) {
-//            if (e.getComponent().getX() > GamePanel.getMinXForPutCards() &&
-//                    e.getComponent().getX() < GamePanel.getMaxXForPutCards() &&
-//                    e.getComponent().getY() > GamePanel.getMinYForPutCards() &&
-//                    e.getComponent().getY() < GamePanel.getMaxYForPutCards()) {
+        if (CLI.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || CLI.getStatus().equals(Status.PLAY_PAGE)) {
+//            if (e.getComponent().getX() > PlayPanel.getMinXForPutCards() &&
+//                    e.getComponent().getX() < PlayPanel.getMaxXForPutCards() &&
+//                    e.getComponent().getY() > PlayPanel.getMinYForPutCards() &&
+//                    e.getComponent().getY() < PlayPanel.getMaxYForPutCards()) {
 
-            GameState.getInstance().setPlayingCard(this.card);
-            Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS);
-            Mapper.getInstance().executeRequests();
-            dragging=false;
-            System.out.println("finish");
+                GameState.getInstance().setPlayingCard(this.card);
+                Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS);
+                Mapper.getInstance().executeRequests();
+                dragging = false;
 
+//            }
+        }
     }
-//        }
-//    }
 
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        System.out.println("Drag");
         if (CLI.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || CLI.getStatus().equals(Status.PLAY_PAGE)) {
             dragging = true;
             e.getComponent().setLocation(e.getX() + e.getComponent().getX() - x, e.getY() + e.getComponent().getY() - y);
@@ -234,7 +231,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        System.out.println("Moved");
+
     }
 
 

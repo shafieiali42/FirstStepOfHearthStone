@@ -22,10 +22,10 @@ public class GameState {
     private Alliance currentAlliance;
     private Cards playingCard;
 
+
     public Cards getPlayingCard() {
         return playingCard;
     }
-
     public void setPlayingCard(Cards playingCard) {
         this.playingCard = playingCard;
     }
