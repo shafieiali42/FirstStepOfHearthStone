@@ -155,11 +155,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 } else {
                     JOptionPane.showMessageDialog(null, "You can't Buy this card:((");
                 }
-            }
-
-
-
-            else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
+            } else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
                 for (int i = 0; i < DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().size(); i++) {
                     if (this.card.getName().equalsIgnoreCase(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getNameLabel().getText())) {
                         if (Integer.parseInt(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().getText()) < 2) {
@@ -170,7 +166,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                             int k = Integer.parseInt(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().getText()) + 1;
                             DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().setText(k + "");
                             break;
-                        } else if (!this.isLock){
+                        } else if (!this.isLock) {
                             JOptionPane.showMessageDialog(null,
                                     "You have two card of this card in your Deck!", "Add To Deck Error", JOptionPane.ERROR_MESSAGE);
                         }
@@ -196,12 +192,16 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     @Override
     public void mouseReleased(MouseEvent e) {
         if (CLI.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || CLI.getStatus().equals(Status.PLAY_PAGE)) {
-//            if (e.getComponent().getX() > PlayPanel.getMinXForPutCards() &&
-//                    e.getComponent().getX() < PlayPanel.getMaxXForPutCards() &&
-//                    e.getComponent().getY() > PlayPanel.getMinYForPutCards() &&
-//                    e.getComponent().getY() < PlayPanel.getMaxYForPutCards()) {
-            System.out.println(GameState.getInstance().getBattleGroundCards().size());
-            if (GameState.getInstance().getBattleGroundCards().size() <= 7 - 1) {
+//            if (e.getComponent().getX() >= PlayPanel.getMinXForPutCards() &&
+//                    e.getComponent().getX() <= PlayPanel.getMaxXForPutCards() &&
+//                    e.getComponent().getY() >= PlayPanel.getMinYForPutCards() &&
+//                    e.getComponent().getY() <= PlayPanel.getMaxYForPutCards()) {
+            if (!this.card.getType().equalsIgnoreCase("minion")) {
+                GameState.getInstance().setPlayingCard(this.card);
+                Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS);
+                Mapper.getInstance().executeRequests();
+                dragging = false;
+            } else if (GameState.getInstance().getBattleGroundCards().size() <= 7 - 1) {
 
                 GameState.getInstance().setPlayingCard(this.card);
                 Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS);

@@ -14,6 +14,7 @@ public class main {
     public static void main(String[] args) throws IOException {
         JsonReaderForSpells.main(args);
         JsonReaderForMinions.main(args);
+        JsonReaderForWeapons.main(args);
         JsonReaderForPassives.main(args);
         Cards.setAllCards();
         Spell.defineQuestAndRewardCardList();

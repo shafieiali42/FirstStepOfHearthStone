@@ -11,6 +11,7 @@ import Gui.Panels.GamePage.GamePage;
 //import Gui.Panels.GamePage.GraphicLoop;
 import Gui.Panels.GamePage.GraphicLoop;
 import Gui.Panels.GamePage.InfoPassivePage;
+import Gui.Panels.SettingPanel.SettingPage;
 import Gui.Panels.ShopPanel.ShopPage;
 import Gui.Panels.StatusPanel.StatusPage;
 import Utility.DrawRotate;
@@ -168,6 +169,7 @@ public class MainMenuPage extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into setting page");
+                MyMainFrame.getInstance().setContentPane(SettingPage.getInstance());
             }
         });
         menuPanel.add(settingBtn);
@@ -223,18 +225,19 @@ public class MainMenuPage extends JPanel {
         playBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(CLI.currentPlayer.getCurrentDeck());
-                if (CLI.currentPlayer.getCurrentDeck().getHero()==null){
-                    JOptionPane.showMessageDialog(null,"First you should select your deck",
-                            "Eroor",JOptionPane.ERROR_MESSAGE);
+                if (CLI.currentPlayer.getCurrentDeck().getHero() == null) {
+                    JOptionPane.showMessageDialog(null, "First you should select your deck",
+                            "Eroor", JOptionPane.ERROR_MESSAGE);
                     CLI.setStatus(Status.COLLECTION_PAGE_FROM_PLAY);
                     MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
 
-                }else {
-                CLI.setStatus(Status.PLAY_PAGE);
-                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into play page");
+                } else {
+                    CLI.setStatus(Status.PLAY_PAGE);
+                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into play page");
 //                GraphicLoop.getInstance().start();
-                MyMainFrame.getInstance().setContentPane(InfoPassivePage.getInstance());
+                    InfoPassivePage.getInstance().repaint();
+                    InfoPassivePage.getInstance().revalidate();
+                    MyMainFrame.getInstance().setContentPane(InfoPassivePage.getInstance());
                 }
             }
         });
@@ -287,7 +290,7 @@ class MarginPanels extends JPanel {
 
     private MarginPanels(int witchPanel) {
         setLayout(null);
-        setSize(new Dimension( MyMainFrame.getInstance().getMyFrameWidth()/4, MyMainFrame.getInstance().getMyFrameHeight()));
+        setSize(new Dimension(MyMainFrame.getInstance().getMyFrameWidth() / 4, MyMainFrame.getInstance().getMyFrameHeight()));
         setBackground(marginColor);
         this.witchPanel = witchPanel;
 
@@ -299,13 +302,13 @@ class MarginPanels extends JPanel {
         Graphics2D graphics2D = (Graphics2D) g;
         graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 30));
         if (witchPanel == 1) {
-            String text="The Best Card Game ever made in the World!";
-            int length= LengthOfMessage.lengthOfMessage(text,graphics2D);
-            DrawRotate.drawRotate(graphics2D,(double)this.getWidth()/2,(double) (this.getHeight()+length)/2-60,270,text);
+            String text = "The Best Card Game ever made in the World!";
+            int length = LengthOfMessage.lengthOfMessage(text, graphics2D);
+            DrawRotate.drawRotate(graphics2D, (double) this.getWidth() / 2, (double) (this.getHeight() + length) / 2 - 60, 270, text);
         } else if (witchPanel == 2) {
-            String text="Enjoy playing HearthStone!";
-            int length= LengthOfMessage.lengthOfMessage(text,graphics2D);
-            DrawRotate.drawRotate(graphics2D,(double)this.getWidth()/2,(double)(this.getHeight()-length)/2,90,text);
+            String text = "Enjoy playing HearthStone!";
+            int length = LengthOfMessage.lengthOfMessage(text, graphics2D);
+            DrawRotate.drawRotate(graphics2D, (double) this.getWidth() / 2, (double) (this.getHeight() - length) / 2, 90, text);
         }
 
 

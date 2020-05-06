@@ -21,6 +21,7 @@ public class GameState {
     private Deck deckOfOpponent;
     private ArrayList<Cards> battleGroundCards;
     private ArrayList<Cards> battleGroundCardsOfOpponent;
+    private Weapon currentWeapon;
     private int mana;
     private int turn;
     private Alliance currentAlliance;
@@ -42,6 +43,13 @@ public class GameState {
 
     public void setPlayingCard(Cards playingCard) {
         this.playingCard = playingCard;
+    }
+
+    public Weapon getCurrentWeapon() {
+        return currentWeapon;
+    }
+    public void setCurrentWeapon(Weapon currentWeapon) {
+        this.currentWeapon = currentWeapon;
     }
 
     private static GameState gameState;
@@ -137,7 +145,7 @@ public class GameState {
         passivesToChoose.add(Passive.getPassives().get(randomNumber.get(0)));
         passivesToChoose.add(Passive.getPassives().get(randomNumber.get(1)));
         passivesToChoose.add(Passive.getPassives().get(randomNumber.get(2)));
-
+        System.out.println(randomNumber);
 
 
     }

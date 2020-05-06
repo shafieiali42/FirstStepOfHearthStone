@@ -4,6 +4,7 @@ import Cards.Cards;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
 import Deck.Deck;
+import Utility.Sounds;
 
 import javax.swing.*;
 import java.awt.*;
@@ -112,6 +113,7 @@ public class BuySellPanel extends JPanel {
                         if (reply == JOptionPane.YES_OPTION) {
                             try {
                                 CLI.currentPlayer.buy(BuySellPanel.getInstance().card);
+                                Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/BuyCard.wav");
                                 BuySellPanel.getInstance().setCard(null);
                                 PanelToShowCardInBuySellPanel.getInstance().removeAll();
                                 PanelToShowCardInBuySellPanel.getInstance().repaint();
@@ -146,6 +148,7 @@ public class BuySellPanel extends JPanel {
                                     }
                                     if (canSell){
                                     CLI.currentPlayer.sell(BuySellPanel.getInstance().card);
+                                        Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/SellCard.wav");
                                     ButtonPanel.showSalableCards();
                                     BuySellPanel.getInstance().setCard(null);
                                     PanelToShowCardInBuySellPanel.getInstance().removeAll();

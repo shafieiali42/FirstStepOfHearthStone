@@ -1,12 +1,14 @@
 package Gui;
 
 import Cards.Cards;
+import Cards.*;
 import CommandLineInterface.CLI;
 import Gui.Panels.GamePage.GamePage;
 import Gui.Panels.GamePage.LogPanel;
 import Gui.Panels.GamePage.PlayPanel;
 import Interfaces.Request;
 import Logic.GameState;
+import Utility.Sounds;
 import jdk.nashorn.internal.scripts.JO;
 
 import javax.sound.midi.Soundbank;
@@ -63,9 +65,22 @@ public class Mapper {
 
 
     public static void playCard(Cards playingCard) {
-        GameState.getInstance().getHandsCards().remove(playingCard);
-        GameState.getInstance().getBattleGroundCards().add(playingCard);
-        GameState.getInstance().setMana(GameState.getInstance().getMana() - playingCard.getManaCost());
+        if (playingCard.getManaCost() > GameState.getInstance().getMana()) {
+            JOptionPane.showMessageDialog(null, "You don't have enough mana");
+        } else if (playingCard.getManaCost() <= GameState.getInstance().getMana()) {
+            GameState.getInstance().getHandsCards().remove(playingCard);
+            if (playingCard.getType().equalsIgnoreCase("minion")) {
+                GameState.getInstance().getBattleGroundCards().add(playingCard);
+
+            } else if (playingCard.getType().equalsIgnoreCase("weapon")) {
+                GameState.getInstance().setCurrentWeapon((Weapon)playingCard);
+
+            }else if (playingCard.getType().contains("Spell")){
+                //TODO PLAY SPELL
+            }
+            GameState.getInstance().setMana(GameState.getInstance().getMana() - playingCard.getManaCost());
+        }
+
         StringBuilder addToLog = new StringBuilder(LogPanel.getInstance().getLog() + "Play");
         for (int i = 0; i < playingCard.getName().length(); i++) {
             char c = playingCard.getName().charAt(i);
@@ -79,6 +94,7 @@ public class Mapper {
         LogPanel.getInstance().setLog(addToLog.toString() + "\n\n");
         LogPanel.getInstance().repaint();
         LogPanel.getInstance().revalidate();
+        Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/PlayCards.wav");
         CLI.currentPlayer.getLoggerOfMyPlayer().info("Play minion");
     }
 
@@ -90,16 +106,16 @@ public class Mapper {
         if (GameState.getInstance().getHandsCards().size() < 12) {
             if (GameState.getInstance().getCardsOfDeckInGameState().size() == 0) {
                 JOptionPane.showMessageDialog(null,
-                        "Your deck is empty.\nContinue game with your hand's cards","Error",JOptionPane.ERROR_MESSAGE);
+                        "Your deck is empty.\nContinue game with your hand's cards", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
                 GameState.getInstance().getHandsCards().add(GameState.getInstance().getCardsOfDeckInGameState().get(0));
                 GameState.getInstance().getCardsOfDeckInGameState().remove(0);
             }
-        }else {
+        } else {
             JOptionPane.showMessageDialog(null,
-                    "You can't have more than 12 cards in your hand","Error", JOptionPane.ERROR_MESSAGE);
+                    "You can't have more than 12 cards in your hand", "Error", JOptionPane.ERROR_MESSAGE);
         }
-
+        Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/EndTurn.wav");
         CLI.currentPlayer.getLoggerOfMyPlayer().info("End turn");
     }
 
