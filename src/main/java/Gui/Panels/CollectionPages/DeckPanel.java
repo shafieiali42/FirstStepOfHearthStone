@@ -98,7 +98,7 @@ public class DeckPanel extends JPanel {
         this.add(newDeckBtn);
     }
 
-    private void makeNewDeck() { //TODO NEEDS TO DEFINE:))
+    private void makeNewDeck() {
         DeckViewer.getInstance().removeAll();
         DeckViewer.getInstance().repaint();
         DeckViewer.getInstance().revalidate();

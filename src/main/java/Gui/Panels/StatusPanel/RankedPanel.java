@@ -2,8 +2,10 @@ package Gui.Panels.StatusPanel;
 
 
 import CommandLineInterface.CLI;
+import CommandLineInterface.Status;
 import Deck.Deck;
 import Gui.MyMainFrame;
+import Gui.Panels.MenuPanel.MainMenuPage;
 import Utility.LengthOfMessage;
 
 import javax.swing.*;
@@ -17,7 +19,7 @@ public class RankedPanel extends JPanel {
     private Color colorOfTextOfBtn = new Color(255, 0, 0);
     private Color colorOfBtn = new Color(48, 48, 45);
     public static final int WIDTH_OF_BTN=MyMainFrame.getInstance().getWidth()/2;
-    public static final int HEIGHT_OF_BTN = 78;
+    public static final int HEIGHT_OF_BTN = 71;
     private static final int WIDE_OF_RANKED_PANEL =700;
     private static final int HEIGHT_OF_RANKED_PANEL=800;
 
@@ -35,6 +37,7 @@ public class RankedPanel extends JPanel {
     private JButton eighthBtn;
     private JButton ninthBtn;
     private JButton tenthBtn;
+    private JButton backBtn;
 
     private RankedPanel(){
         setLayout(null);
@@ -61,6 +64,30 @@ public class RankedPanel extends JPanel {
         initEighthBtn();
         initNinthBtn();
         initTenthBtn();
+        initBackBtn();
+    }
+
+    private void initBackBtn() {
+        backBtn=new JButton("Back");
+        designBtn(backBtn);
+        backBtn.setBounds(0,backBtn.getHeight()*10,backBtn.getWidth(),backBtn.getHeight());
+        backBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CLI.currentPlayer.getLoggerOfMyPlayer().info("Go back from status page");
+                goBack();
+            }
+        });
+        add(backBtn);
+    }
+
+    private void goBack() {
+        CLI.setStatus(Status.MAIN_MENU_PAGE);
+        ShowDeckInfoPanel.getInstance().setReadyToShow(false);
+        ShowDeckInfoPanel.getInstance().removeAll();
+        ShowDeckInfoPanel.getInstance().repaint();
+        ShowDeckInfoPanel.getInstance().revalidate();
+        MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
     }
 
     private void initTenthBtn() {
@@ -205,6 +232,7 @@ public class RankedPanel extends JPanel {
         ShowDeckInfoPanel.getInstance().setReadyToShow(true);
         ShowDeckInfoPanel.getInstance().repaint();
         ShowDeckInfoPanel.getInstance().revalidate();
+
         CLI.currentPlayer.getLoggerOfMyPlayer().info("Show best deck, deck number: "+ deckNumber);
     }
 
@@ -252,6 +280,7 @@ public class RankedPanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D graphics2D=(Graphics2D)g;
+        graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 20));
         if(readyToShow){
             deckToShow.defineMostUsedCard();
         String name = "Name: "+deckToShow.getName();int lengthOfName= LengthOfMessage.lengthOfMessage(name,graphics2D);

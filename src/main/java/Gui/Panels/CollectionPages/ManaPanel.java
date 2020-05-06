@@ -4,6 +4,8 @@ import Cards.Cards;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
 import Gui.MyMainFrame;
+import Gui.Panels.GamePage.GamePage;
+import Gui.Panels.GamePage.PlayPanel;
 import Gui.Panels.MenuPanel.MainMenuPage;
 import Utility.MethodsOfShowCardsOnPanel;
 
@@ -294,8 +296,15 @@ public class ManaPanel extends JPanel {
         if (CLI.getStatus().equals(Status.COLLECTIONS_PAGE)) {
             MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
         } else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
-            DeckPanel.getInstance().showDeckButtons();
-            MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
+            JOptionPane.showMessageDialog(null,"You should press done button","Error",JOptionPane.ERROR_MESSAGE);
+        }else if (CLI.getStatus().equals(Status.COLLECTION_PAGE_FROM_PLAY)){
+            if (CLI.currentPlayer.getCurrentDeck().getHero()!=null){
+                CLI.setStatus(Status.PLAY_PAGE);
+            MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
+            }else {
+                CLI.setStatus(Status.MAIN_MENU_PAGE);
+                MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
+            }
         }
     }
 

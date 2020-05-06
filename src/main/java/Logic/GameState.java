@@ -1,11 +1,14 @@
 package Logic;
 
 import Cards.Cards;
+import Cards.*;
 import CommandLineInterface.CLI;
 import Deck.Deck;
 import Player.Player;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class GameState {
 
@@ -13,7 +16,8 @@ public class GameState {
     private Player opponentPlayer;
     private ArrayList<Cards> handsCards;
     private ArrayList<Cards> handsCardsOfOpponent;
-    private Deck deck;
+    //    private Deck deck;
+    private ArrayList<Cards> cardsOfDeckInGameState;
     private Deck deckOfOpponent;
     private ArrayList<Cards> battleGroundCards;
     private ArrayList<Cards> battleGroundCardsOfOpponent;
@@ -21,11 +25,21 @@ public class GameState {
     private int turn;
     private Alliance currentAlliance;
     private Cards playingCard;
+    private Passive infoPassive;
+    private ArrayList<Passive> passivesToChoose;
 
+    public Passive getInfoPassive() {
+        return infoPassive;
+    }
+
+    public void setInfoPassive(Passive infoPassive) {
+        this.infoPassive = infoPassive;
+    }
 
     public Cards getPlayingCard() {
         return playingCard;
     }
+
     public void setPlayingCard(Cards playingCard) {
         this.playingCard = playingCard;
     }
@@ -35,7 +49,7 @@ public class GameState {
     static {
         try {
             gameState = new GameState();
-        } catch (CloneNotSupportedException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -68,14 +82,63 @@ public class GameState {
         return gameState;
     }
 
-    public GameState() throws CloneNotSupportedException {
+    public static void setGameState(GameState gameState) {
+        GameState.gameState = gameState;
+    }
+
+    public GameState() throws IOException {
+        initGameState();
+    }
+
+    public ArrayList<Passive> getPassivesToChoose() {
+        return passivesToChoose;
+    }
+
+    public void initGameState() throws IOException {
         player = CLI.currentPlayer;
-        handsCards = new ArrayList<Cards>();
-        deck = (Deck) CLI.currentPlayer.getCurrentDeck().clone();
+        playingCard = new Cards();
         battleGroundCards = new ArrayList<Cards>();
-        currentAlliance=Alliance.ME;
-        mana = 0;
+        cardsOfDeckInGameState = (ArrayList<Cards>) CLI.currentPlayer.getCurrentDeck().getListOfCards().clone();
+
+        handsCards = new ArrayList<Cards>();
+        Collections.shuffle(cardsOfDeckInGameState);
+        boolean hasQuestCard = false;
+        a:
+        for (Cards quest : Spell.getQuestAndRewardCards()) {
+            for (Cards card : cardsOfDeckInGameState) {
+                if (quest.equals(card)) {
+                    hasQuestCard = true;
+                    handsCards.add(quest);
+                    cardsOfDeckInGameState.remove(card);
+                    break a;
+                }
+            }
+        }
+
+        handsCards.add(cardsOfDeckInGameState.get(0));
+        cardsOfDeckInGameState.remove(0);
+        handsCards.add(cardsOfDeckInGameState.get(0));
+        cardsOfDeckInGameState.remove(0);
+        if (!hasQuestCard) {
+            handsCards.add(cardsOfDeckInGameState.get(0));
+            cardsOfDeckInGameState.remove(0);
+        }
+
+
+        currentAlliance = Alliance.ME;
+        mana = 1;
         turn = 0;
+        passivesToChoose = new ArrayList<Passive>();
+        ArrayList<Integer> randomNumber = new ArrayList<Integer>();
+        for (int i = 0; i < Passive.NUMBER_OF_PASSIVES; i++) {
+            randomNumber.add(i);
+        }
+        Collections.shuffle(randomNumber);
+        passivesToChoose.add(Passive.getPassives().get(randomNumber.get(0)));
+        passivesToChoose.add(Passive.getPassives().get(randomNumber.get(1)));
+        passivesToChoose.add(Passive.getPassives().get(randomNumber.get(2)));
+
+
 
     }
 
@@ -112,12 +175,12 @@ public class GameState {
         this.handsCardsOfOpponent = handsCardsOfOpponent;
     }
 
-    public Deck getDeck() {
-        return deck;
+    public ArrayList<Cards> getCardsOfDeckInGameState() {
+        return cardsOfDeckInGameState;
     }
 
-    public void setDeck(Deck deck) {
-        this.deck = deck;
+    public void setCardsOfDeckInGameState(ArrayList<Cards> cardsOfDeckInGameState) {
+        this.cardsOfDeckInGameState = cardsOfDeckInGameState;
     }
 
     public Deck getDeckOfOpponent() {

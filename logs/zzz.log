@@ -1,0 +1,52 @@
+May 06, 2020 1:57:49 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: zzz
+May 06, 2020 1:57:49 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/06 01:57:49
+May 06, 2020 1:57:49 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: zzz
+May 06, 2020 1:57:49 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up zzz
+May 06, 2020 1:57:51 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:58:00 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 06, 2020 1:58:23 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 06, 2020 1:58:25 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck zzz
+May 06, 2020 1:58:30 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:58:31 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out zzz
+May 06, 2020 1:58:45 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in zzz
+May 06, 2020 1:58:46 AM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 06, 2020 1:58:48 AM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 06, 2020 1:58:50 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:58:53 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck zzz
+May 06, 2020 1:58:54 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:59:00 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck zzz
+May 06, 2020 1:59:05 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select zzz for main deck
+May 06, 2020 1:59:07 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck zzz
+May 06, 2020 1:59:08 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:59:09 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:59:11 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:59:15 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:59:36 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out zzz
+May 06, 2020 1:59:47 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in zzz
+May 06, 2020 1:59:48 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page

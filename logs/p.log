@@ -1,0 +1,36 @@
+May 06, 2020 2:26:49 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: p
+May 06, 2020 2:26:49 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/06 02:26:49
+May 06, 2020 2:26:49 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: p
+May 06, 2020 2:26:49 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up p
+May 06, 2020 2:26:50 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 2:26:57 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 06, 2020 2:27:11 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 06, 2020 2:27:13 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 2:27:14 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out p
+May 06, 2020 2:27:26 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in p
+May 06, 2020 2:27:27 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 2:27:31 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select p for main deck
+May 06, 2020 2:27:33 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck p
+May 06, 2020 2:27:38 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 2:27:41 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 2:27:43 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 2:27:45 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 2:27:49 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page

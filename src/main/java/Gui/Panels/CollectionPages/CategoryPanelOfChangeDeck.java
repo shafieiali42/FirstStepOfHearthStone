@@ -2,6 +2,7 @@ package Gui.Panels.CollectionPages;
 
 import Cards.Cards;
 import CommandLineInterface.CLI;
+import Deck.Deck;
 import Gui.MyMainFrame;
 import Heroes.Heroes;
 import Utility.MethodsOfShowCardsOnPanel;
@@ -72,13 +73,17 @@ public class CategoryPanelOfChangeDeck extends JPanel {
         selectDeckBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                selectDeck();
+                try {
+                    selectDeck();
+                } catch (CloneNotSupportedException ex) {
+                    ex.printStackTrace();
+                }
             }
         });
         add(selectDeckBtn);
     }
 
-    private void selectDeck() {
+    private void selectDeck() throws CloneNotSupportedException {
         CLI.currentPlayer.setCurrentDeck(DeckPage.getInstance().getDeckTOChange());
         JOptionPane.showMessageDialog(null, "Your Deck is:"+DeckPage.getInstance().getDeckTOChange().getName());
         CLI.currentPlayer.getLoggerOfMyPlayer().info("select "+DeckPage.getInstance().getDeckTOChange().getName()+" for main deck");

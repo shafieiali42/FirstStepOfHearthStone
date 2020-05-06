@@ -2,6 +2,8 @@ package CommandLineInterface;
 
 public enum Status {
     LOGIN_PAGE,
+    MAIN_MENU_PAGE,
+    COLLECTION_PAGE_FROM_PLAY,
     COLLECTIONS_PAGE,
     MAKE_DECK,
     CHANGE_DECK,

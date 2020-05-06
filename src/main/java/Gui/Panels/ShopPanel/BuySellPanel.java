@@ -3,6 +3,7 @@ package Gui.Panels.ShopPanel;
 import Cards.Cards;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
+import Deck.Deck;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,7 +23,7 @@ public class BuySellPanel extends JPanel {
     private static final int WIDTH_OF_BUY_SELL_PANEL = 400;      //TODO NEEDS TO CHANGE
     private static final int HEIGHT_OF_BUY_SELL_PANEL = 730;
 
-    private JLabel coinLabel;
+
     private JLabel priceLabel;
     private JButton transactionBtn;
 
@@ -94,6 +95,7 @@ public class BuySellPanel extends JPanel {
         transactionBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 if (BuySellPanel.getInstance().card == null) {
                     JOptionPane.showMessageDialog(null,
                             "Please select a card!",
@@ -134,6 +136,15 @@ public class BuySellPanel extends JPanel {
                                         "Sell", JOptionPane.YES_NO_OPTION);
 
                                 if (reply == JOptionPane.YES_OPTION) {
+
+                                    boolean canSell=true;
+                                    for (Deck deck:CLI.currentPlayer.getAllDecksOfPlayer()){
+                                        if (deck.getListOfCards().contains(BuySellPanel.getInstance().card)){
+                                            canSell=false;
+                                            break;
+                                        }
+                                    }
+                                    if (canSell){
                                     CLI.currentPlayer.sell(BuySellPanel.getInstance().card);
                                     ButtonPanel.showSalableCards();
                                     BuySellPanel.getInstance().setCard(null);
@@ -141,6 +152,15 @@ public class BuySellPanel extends JPanel {
                                     PanelToShowCardInBuySellPanel.getInstance().repaint();
                                     PanelToShowCardInBuySellPanel.getInstance().revalidate();
                                     BuySellPanel.getInstance().getPriceLabel().setText("");
+                                    }else {
+                                        JOptionPane.showMessageDialog(null,"This card is in your deck",
+                                                "Error",JOptionPane.ERROR_MESSAGE);
+                                        BuySellPanel.getInstance().card=null;
+                                        PanelToShowCardInBuySellPanel.getInstance().removeAll();
+                                        PanelToShowCardInBuySellPanel.getInstance().repaint();
+                                        PanelToShowCardInBuySellPanel.getInstance().revalidate();
+                                        BuySellPanel.getInstance().getPriceLabel().setText("");
+                                    }
                                 }
                             }
                         } catch (IOException ex) {

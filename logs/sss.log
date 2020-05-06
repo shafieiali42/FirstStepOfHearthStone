@@ -372,3 +372,2221 @@ May 05, 2020 5:57:14 AM CommandLineInterface.PlayerManagement signIn
 INFO: sign_in sss
 May 05, 2020 5:57:16 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
 INFO: Navigate into play page
+May 05, 2020 12:59:54 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 12:59:57 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:01:24 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:01:25 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:02:41 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:02:42 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:04:11 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:04:13 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:10:44 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:10:45 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:11:35 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:11:36 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:13:30 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:13:31 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:15:47 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:15:49 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:22:14 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:22:14 PM Gui.Panels.MenuPanel.MainMenuPage$5 actionPerformed
+INFO: Navigate into setting page
+May 05, 2020 1:22:16 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:23:11 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:23:12 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:23:36 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:23:36 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:24:28 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:24:29 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:25:23 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:25:24 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:25:55 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:25:56 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:26:42 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:26:44 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:27:13 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:27:14 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 1:49:12 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:50:07 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:50:47 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:51:07 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:51:32 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:54:31 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:55:16 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 1:59:22 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:03:25 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:04:30 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:04:55 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:05:51 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:06:02 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 2:16:03 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:16:04 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:16:06 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 2:16:10 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:16:11 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 1
+May 05, 2020 2:16:13 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 2:16:14 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:17:47 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:17:53 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:17:54 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 1
+May 05, 2020 2:17:56 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 2:17:57 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:19:05 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:19:06 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:19:08 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 1
+May 05, 2020 2:19:09 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 2:19:10 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:19:51 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:19:52 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:19:53 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 1
+May 05, 2020 2:19:54 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 2:19:55 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:19:57 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 2:19:58 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:20:16 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:20:17 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:20:18 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 1
+May 05, 2020 2:20:19 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 2:20:20 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:20:22 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 2:23:02 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:23:02 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:23:03 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 1
+May 05, 2020 2:23:05 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 2:23:06 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:23:08 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 1
+May 05, 2020 2:23:09 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 2:23:10 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 2:23:39 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:23:40 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:23:42 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 1
+May 05, 2020 2:23:43 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 2:23:44 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:23:46 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 1
+May 05, 2020 2:24:44 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:24:48 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:24:50 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 2:24:52 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 2:25:04 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 2:25:09 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 2:25:26 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck changeName
+INFO: Change name of deck 
+May 05, 2020 2:25:28 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 2:25:36 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 2:25:38 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 2:25:39 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 2:25:40 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 1
+May 05, 2020 2:25:41 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 2
+May 05, 2020 2:25:43 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 3
+May 05, 2020 2:25:44 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 4
+May 05, 2020 2:25:49 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 2:25:51 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 2:25:54 PM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 05, 2020 2:25:55 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 2:25:57 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 2:25:58 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 2:38:24 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 2:38:27 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 3:32:42 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 3:32:43 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 3:33:57 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 3:33:58 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 3:34:00 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:01 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:02 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:02 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:02 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:03 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:03 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:03 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:03 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:47 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 3:34:48 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 3:34:50 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:51 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:52 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:52 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:52 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:53 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:53 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:54 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:54 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:55 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:34:55 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:35:33 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 3:35:34 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 3:35:36 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:35:38 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 3:35:40 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:35:40 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:35:42 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 3:35:44 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:35:45 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:35:45 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:35:45 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:35:48 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 3:38:26 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 3:38:27 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 3:38:35 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 3:38:37 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 4:04:57 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:04:58 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:05:32 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:05:33 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:05:38 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:05:39 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:06:48 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:06:49 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:07:01 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:09:03 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:09:04 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:09:06 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 4:09:07 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 4:09:08 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 4:09:10 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 4:09:14 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 4:09:16 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:09:19 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:09:55 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:09:56 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:09:58 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 4:09:59 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 4:10:01 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 4:10:05 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 4:10:07 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Hunter cards
+May 05, 2020 4:10:08 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Warlock cards
+May 05, 2020 4:10:09 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Rogue cards
+May 05, 2020 4:10:10 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Mage cards
+May 05, 2020 4:10:48 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:10:54 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:11:00 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 4:11:03 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 4:11:05 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 4:11:07 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 4:11:12 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 4:11:14 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Hunter cards
+May 05, 2020 4:11:20 PM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 05, 2020 4:11:24 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Hunter cards
+May 05, 2020 4:11:26 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Hunter cards
+May 05, 2020 4:11:27 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Warlock cards
+May 05, 2020 4:11:28 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Hunter cards
+May 05, 2020 4:11:29 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Priest cards
+May 05, 2020 4:11:30 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 4:11:37 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:41 PM Gui.Panels.CollectionPages.CategoryPanel$3 actionPerformed
+INFO: Show all cards 
+May 05, 2020 4:11:47 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:48 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:49 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:50 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:50 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:50 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:51 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:51 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:51 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:52 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:52 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:52 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:52 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:52 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:11:53 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:12:01 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select Ali for main deck
+May 05, 2020 4:12:03 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 05, 2020 4:12:04 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:12:07 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 4:12:10 PM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 05, 2020 4:12:11 PM Gui.Panels.MenuPanel.MainMenuPage$4 actionPerformed
+INFO: Navigate into status page
+May 05, 2020 4:12:12 PM Gui.Panels.StatusPanel.RankedPanel showDeckNumber
+INFO: Show best deck, deck number: 1
+May 05, 2020 4:12:17 PM Gui.Panels.StatusPanel.RankedPanel$1 actionPerformed
+INFO: Go back from status page
+May 05, 2020 4:12:21 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:12:23 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:12:23 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:12:23 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:12:24 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:12:24 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:12:24 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:12:24 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:12:24 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:12:25 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:14:06 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:14:08 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:14:11 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 4:14:16 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 4:14:17 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:14:19 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:14:26 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 4:21:18 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:21:19 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:21 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:22 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:22 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:22 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:26 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 4:21:28 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:21:29 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:30 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:30 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:30 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:30 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:31 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:31 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:31 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:31 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:31 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:31 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:32 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:32 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:32 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:21:32 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:04 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:22:06 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:07 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:08 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:08 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:08 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:08 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:08 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:09 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:09 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:09 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:09 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:09 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:09 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:09 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:10 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:51 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:22:52 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:53 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:53 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:53 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:53 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:53 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:53 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:54 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:54 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:54 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:22:55 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 4:22:57 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Warlock cards
+May 05, 2020 4:22:58 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Rogue cards
+May 05, 2020 4:22:58 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Mage cards
+May 05, 2020 4:23:00 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:23:02 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 4:23:03 PM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 4:23:08 PM Player.Player sell
+INFO: Sell: TournamentMedic
+May 05, 2020 4:23:08 PM Player.Player sell
+INFO: Sell TournamentMedic
+May 05, 2020 4:23:09 PM Gui.Panels.ShopPanel.ButtonPanel$3 actionPerformed
+INFO: Show buyable cards
+May 05, 2020 4:23:13 PM Gui.Panels.ShopPanel.ButtonPanel$4 actionPerformed
+INFO: Show Wallet
+May 05, 2020 4:23:17 PM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 05, 2020 4:23:18 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:23:18 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:23:18 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:23:19 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:23:19 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:23:19 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:23:23 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 4:27:59 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:28:04 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:28:05 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 4:29:51 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:29:52 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:33:21 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:33:29 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:33:31 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 4:39:16 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:41:30 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:44:20 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:44:22 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 4:44:25 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select Ali for main deck
+May 05, 2020 4:44:26 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 05, 2020 4:44:28 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:44:29 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:44:31 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 4:44:34 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 4:44:38 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:45:04 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 4:45:22 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:45:23 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 4:45:27 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select Ali for main deck
+May 05, 2020 4:45:28 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 05, 2020 4:45:30 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:45:31 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 4:46:00 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:46:01 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:46:02 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:46:03 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:46:03 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:46:03 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:46:03 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:46:05 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:46:07 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 4:46:08 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 4:46:09 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:46:11 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 4:46:13 PM Gui.Panels.ShopPanel.ButtonPanel$3 actionPerformed
+INFO: Show buyable cards
+May 05, 2020 4:46:14 PM Gui.Panels.ShopPanel.ButtonPanel$4 actionPerformed
+INFO: Show Wallet
+May 05, 2020 4:46:17 PM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 05, 2020 4:46:18 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:49:19 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:49:20 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:52:23 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:52:29 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 4:53:00 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 4:53:01 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:16:20 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:16:21 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:17:15 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:17:16 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:17:21 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:17:46 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:17:53 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:19:46 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:19:48 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:19:51 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:20:30 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 05, 2020 5:20:33 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:20:34 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 5:22:09 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:22:10 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:22:14 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:22:31 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck removeDeck
+INFO: Removed Ali
+May 05, 2020 5:22:42 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 5:22:44 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:22:45 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:24:00 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:24:02 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:24:05 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:25:10 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:25:12 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:25:16 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:25:20 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 05, 2020 5:25:23 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:25:31 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 5:25:32 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:25:33 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:25:37 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 05, 2020 5:29:56 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 05, 2020 5:29:56 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/05 17:29:56
+May 05, 2020 5:29:56 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+May 05, 2020 5:29:56 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 05, 2020 5:30:00 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 5:32:08 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:32:15 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 5:32:37 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:32:39 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 5:33:16 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:33:19 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 5:33:38 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:33:39 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 5:34:10 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:34:11 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 5:34:37 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:34:39 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 5:35:19 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:35:20 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 5:36:21 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:36:23 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 5:38:39 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:38:41 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 5:39:00 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:39:06 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:39:13 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 5:39:20 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 5:39:23 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:39:28 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 5:39:29 PM Gui.Panels.ShopPanel.ButtonPanel$3 actionPerformed
+INFO: Show buyable cards
+May 05, 2020 5:39:31 PM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 5:39:36 PM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 05, 2020 5:39:37 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:39:43 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 5:39:46 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:39:57 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 5:39:58 PM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 5:40:06 PM Player.Player sell
+INFO: Sell: LeperGnome
+May 05, 2020 5:40:06 PM Player.Player sell
+INFO: Sell LeperGnome
+May 05, 2020 5:40:08 PM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 05, 2020 5:40:09 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:40:17 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:40:22 PM Gui.Panels.CollectionPages.CategoryPanel filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:40:28 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:46:18 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:46:19 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:46:25 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:46:36 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 5:46:38 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:46:38 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 5:46:40 PM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 5:46:48 PM Gui.Panels.ShopPanel.ButtonPanel$4 actionPerformed
+INFO: Show Wallet
+May 05, 2020 5:47:02 PM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 05, 2020 5:47:03 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 5:47:06 PM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 5:47:16 PM Player.Player sell
+INFO: Sell: CosmicAnomaly
+May 05, 2020 5:47:16 PM Player.Player sell
+INFO: Sell CosmicAnomaly
+May 05, 2020 5:48:15 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:48:17 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 5:48:20 PM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 05, 2020 5:48:22 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:48:27 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:48:35 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 5:48:37 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:48:38 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 5:48:40 PM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 5:50:25 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:50:26 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:50:31 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:50:41 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 5:50:44 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:50:48 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 5:50:49 PM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 5:50:52 PM Gui.Panels.ShopPanel.ButtonPanel$4 actionPerformed
+INFO: Show Wallet
+May 05, 2020 5:51:07 PM Gui.Panels.ShopPanel.ButtonPanel$3 actionPerformed
+INFO: Show buyable cards
+May 05, 2020 5:51:09 PM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 5:52:09 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:52:11 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:52:16 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:52:27 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 5:52:29 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:52:30 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 5:52:31 PM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 5:52:33 PM Gui.Panels.ShopPanel.ButtonPanel$4 actionPerformed
+INFO: Show Wallet
+May 05, 2020 5:52:35 PM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 5:53:12 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:53:13 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:53:20 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 5:53:26 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 5:53:27 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:53:28 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 5:53:29 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:53:30 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 5:53:31 PM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 5:53:40 PM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 05, 2020 5:53:41 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 5:54:33 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:54:34 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 5:54:36 PM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 5:55:59 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:56:00 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 5:56:02 PM Gui.Panels.ShopPanel.ButtonPanel$2 actionPerformed
+INFO: Show salable cards
+May 05, 2020 5:59:00 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 5:59:01 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 5:59:04 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 5:59:07 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 5:59:10 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 6:05:52 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 6:06:06 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 6:06:09 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 6:06:14 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select ali for main deck
+May 05, 2020 6:06:16 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 6:06:18 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 6:06:19 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 6:07:21 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 6:07:26 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select ali for main deck
+May 05, 2020 6:07:28 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 6:07:32 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 6:07:36 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 6:08:24 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 6:09:29 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 6:09:30 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 6:09:34 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select ali for main deck
+May 05, 2020 6:09:35 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 6:09:39 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 6:09:40 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 6:09:48 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 6:09:57 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 6:09:58 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 6:09:59 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 6:09:59 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 6:10:00 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 6:10:22 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 6:10:23 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 6:10:27 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 6:10:30 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select ali for main deck
+May 05, 2020 6:10:39 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 6:10:42 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 6:10:43 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 6:10:44 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 6:10:45 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 6:10:46 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 6:10:46 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 6:10:48 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 6:10:50 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 6:10:51 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 6:10:53 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 6:10:54 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 6:10:57 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 6:11:00 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 6:11:03 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 6:42:44 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 6:42:48 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 8:00:08 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 8:00:10 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 8:00:14 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 8:00:54 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Mage cards
+May 05, 2020 8:00:58 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 8:01:04 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select ali for main deck
+May 05, 2020 8:01:05 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 8:01:06 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 8:01:09 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 8:01:12 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:01:14 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:01:15 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:01:17 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:17 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:18 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:18 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:19 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:20 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:01:22 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:01:24 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:01:27 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:27 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:28 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:28 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:29 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:29 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:30 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:33 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:34 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:01:38 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:04:11 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 8:04:18 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 8:04:20 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 8:04:25 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 8:04:41 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 8:04:44 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 8:14:13 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 8:14:15 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 8:14:18 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 8:14:31 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 8:14:36 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select ali for main deck
+May 05, 2020 8:14:37 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 8:14:39 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 8:14:40 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 8:14:41 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:14:41 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:14:42 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:14:44 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:14:46 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:14:47 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:14:49 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:14:50 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:14:53 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:14:54 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:14:55 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:14:57 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:14:59 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:15:04 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:16:06 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 8:16:07 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 8:16:10 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 8:16:17 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 8:16:20 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select ali for main deck
+May 05, 2020 8:16:22 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 8:16:23 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 8:16:24 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 8:16:25 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:16:32 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:17:42 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 8:17:43 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 8:17:46 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 8:18:02 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select ali for main deck
+May 05, 2020 8:18:03 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 8:18:05 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 8:18:07 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 8:18:08 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:18:08 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:18:09 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:18:09 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:18:13 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:18:15 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:18:17 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:18:18 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:18:20 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:18:23 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:18:25 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 8:18:26 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:18:27 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:22:07 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 8:22:09 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 8:22:12 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 8:22:32 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 8:22:37 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select ali for main deck
+May 05, 2020 8:22:39 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 8:22:41 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 8:22:42 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 8:22:44 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:22:51 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:22:55 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:22:57 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:22:58 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:22:58 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:23:05 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:23:06 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:23:07 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:23:11 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 8:25:22 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 8:25:23 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 8:25:27 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 8:25:49 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 8:25:54 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select ali for main deck
+May 05, 2020 8:25:55 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 8:25:56 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 8:25:57 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 05, 2020 9:29:00 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 9:29:01 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 9:29:04 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:29:19 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:29:28 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:29:35 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:29:41 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:29:42 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:29:44 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:29:45 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:29:47 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:29:48 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:29:50 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:29:51 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:29:56 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:30:01 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:30:16 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:30:27 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:30:31 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:31:18 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 9:31:34 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 9:31:36 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 05, 2020 9:31:38 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 05, 2020 9:31:39 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 9:35:14 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 9:35:15 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 9:35:22 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:35:24 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:35:24 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:35:25 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:35:25 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:35:26 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:35:26 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:35:27 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:35:29 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:35:30 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:35:31 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:35:32 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:35:33 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:35:35 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:35:37 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:35:41 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:35:42 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:35:42 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:35:43 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:35:48 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:35:54 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:36:11 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 9:36:12 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 9:36:14 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:36:17 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:36:17 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:36:20 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:39:00 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 9:39:02 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 9:39:07 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:39:10 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:39:11 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:39:11 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:39:20 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:39:21 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:39:22 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:39:24 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:39:26 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:39:28 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:39:30 PM Gui.Mapper playCard
+INFO: Play minion
+May 05, 2020 9:39:33 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:39:37 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:39:39 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:39:41 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:39:44 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:39:46 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:39:49 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:39:51 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:39:53 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 9:52:53 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 9:52:55 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 9:53:01 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 9:54:09 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Mage cards
+May 05, 2020 9:54:11 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Mage cards
+May 05, 2020 9:54:26 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck changeName
+INFO: Change name of deck 
+May 05, 2020 9:55:38 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 9:55:39 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 05, 2020 9:55:41 PM Gui.Panels.ShopPanel.ButtonPanel$1 actionPerformed
+INFO: Back from shop page
+May 05, 2020 9:55:42 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 9:55:49 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 10:28:53 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 10:28:54 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 11:07:25 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 11:07:27 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 11:07:57 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 11:07:58 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 11:36:43 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 11:36:44 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 11:36:46 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 11:37:06 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 11:37:11 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 11:37:24 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 11:37:27 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 11:38:46 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 11:38:47 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 11:38:52 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 11:38:58 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 11:39:03 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 11:39:16 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 11:39:21 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 11:39:25 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 11:40:05 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 11:40:12 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 11:40:14 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 11:40:30 PM Gui.Mapper endTurn
+INFO: End turn
+May 05, 2020 11:41:49 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 11:41:50 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 11:41:57 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 11:42:50 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 11:42:50 PM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 05, 2020 11:42:55 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 11:43:01 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 11:43:31 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 11:47:41 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 11:47:43 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 11:48:09 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 11:49:11 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 11:49:12 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 11:49:17 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 11:50:06 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 05, 2020 11:50:07 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 05, 2020 11:50:11 PM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 05, 2020 11:50:49 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 11:51:56 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 05, 2020 11:51:58 PM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 12:54:40 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 12:54:41 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 12:54:58 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 12:55:51 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 12:55:52 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 12:56:00 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 12:56:27 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 12:56:28 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 12:56:34 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:00:52 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:00:53 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:00:58 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:01:02 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:01:12 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:02:18 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:02:19 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:02:23 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:02:28 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:02:30 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:02:32 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:03:25 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:03:26 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:03:28 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:03:30 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:03:35 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:03:36 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:04:17 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:04:18 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:04:20 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:04:22 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:04:27 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:08:45 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:08:46 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:08:48 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:08:49 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:08:54 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:10:03 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:10:04 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:10:07 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:10:08 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:10:13 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:11:14 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:11:18 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:11:23 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:11:29 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:15:41 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:15:42 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:15:44 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:15:47 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:15:53 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:15:54 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:16:06 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:16:07 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:16:08 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:16:54 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:16:55 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:16:57 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:16:58 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:17:01 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:17:04 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:17:05 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:17:05 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:17:06 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:17:07 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:17:07 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:17:11 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:17:13 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:17:14 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:17:16 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:17:34 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:17:48 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:17:49 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:18:04 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 06, 2020 1:18:10 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:18:13 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:21:20 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:21:22 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:23:04 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:23:05 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:25:57 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 06, 2020 1:25:57 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/06 01:25:57
+May 06, 2020 1:25:57 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+May 06, 2020 1:25:57 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 06, 2020 1:25:58 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:26:03 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 06, 2020 1:26:26 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 06, 2020 1:26:28 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:26:30 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 06, 2020 1:26:44 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:26:47 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:26:50 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 06, 2020 1:26:54 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 06, 2020 1:26:56 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 06, 2020 1:27:00 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:27:11 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select ali for main deck
+May 06, 2020 1:27:14 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 06, 2020 1:27:16 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:27:17 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 06, 2020 1:27:30 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:27:31 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:27:33 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:27:36 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:27:40 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:27:47 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:27:48 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:27:54 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:28:01 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:28:03 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:30:22 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:30:23 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:30:26 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 06, 2020 1:54:35 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:54:36 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:54:39 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 06, 2020 1:54:42 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:54:43 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:54:50 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 06, 2020 1:55:06 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 06, 2020 1:55:10 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:55:12 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:55:17 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:55:33 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:55:46 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:55:55 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:56:06 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:56:11 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 06, 2020 1:56:14 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck aaa
+May 06, 2020 1:56:16 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:56:17 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:56:22 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:56:25 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 06, 2020 1:56:26 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:56:31 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 06, 2020 1:56:43 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 1:56:44 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:56:48 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 06, 2020 1:56:51 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck aaa
+May 06, 2020 1:56:52 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:56:57 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:57:01 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 1:57:07 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:57:10 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 06, 2020 1:57:13 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck aaa
+May 06, 2020 1:57:16 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:57:19 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 1:57:22 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 1:57:26 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 1:57:30 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ali
+May 06, 2020 1:57:32 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 1:57:33 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 06, 2020 3:05:45 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 06, 2020 3:05:45 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/06 03:05:45
+May 06, 2020 3:05:45 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+May 06, 2020 3:05:45 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 06, 2020 3:05:55 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 3:05:57 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 3:06:02 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 06, 2020 3:06:37 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 06, 2020 3:06:41 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select Ali for main deck
+May 06, 2020 3:06:43 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 06, 2020 3:06:46 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 3:06:48 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 06, 2020 3:07:02 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 3:07:04 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:07:05 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:07:06 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:07:08 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 3:07:09 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 3:07:13 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 3:07:20 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 06, 2020 3:07:21 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 3:07:22 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:11:21 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 3:11:34 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:11:36 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:11:38 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 3:11:42 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:11:52 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 06, 2020 3:14:26 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 3:14:27 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:14:29 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:14:31 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 3:14:35 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:20:20 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 3:20:21 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:20:32 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:20:34 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 3:20:38 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:20:40 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:23:35 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 3:23:36 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:23:42 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:23:45 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 3:23:49 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:24:57 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 3:24:58 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:25:04 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:25:06 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 3:25:08 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:25:08 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:25:09 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:25:11 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 3:25:17 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:29:50 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 3:29:51 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:30:04 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 3:30:10 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck Ali
+May 06, 2020 3:30:13 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 3:30:15 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:30:24 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:30:28 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:30:30 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:32:46 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 3:32:47 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:32:51 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:32:54 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:35:10 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 3:35:12 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:35:14 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:35:18 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:36:41 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 3:36:44 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:36:48 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:36:50 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:39:06 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 3:39:10 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:39:26 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:40:43 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 3:40:44 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:40:56 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 4:15:26 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 4:15:29 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 4:16:11 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 06, 2020 4:16:11 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/06 04:16:11
+May 06, 2020 4:16:11 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+May 06, 2020 4:16:11 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 06, 2020 4:16:12 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 4:16:18 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 06, 2020 4:16:42 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 06, 2020 4:16:50 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select ssss for main deck
+May 06, 2020 4:16:51 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ssss
+May 06, 2020 4:16:53 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 4:16:54 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 4:16:59 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:17:09 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:17:16 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 4:25:26 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 06, 2020 4:25:26 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/06 04:25:26
+May 06, 2020 4:25:26 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+May 06, 2020 4:25:26 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 06, 2020 4:25:37 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 4:25:43 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 06, 2020 4:26:00 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 06, 2020 4:26:03 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select sss for main deck
+May 06, 2020 4:26:04 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck sss
+May 06, 2020 4:26:05 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 4:26:18 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 4:26:24 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:26:28 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:26:31 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:26:38 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 4:26:41 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:28:18 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 06, 2020 4:28:18 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/06 04:28:18
+May 06, 2020 4:28:18 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+May 06, 2020 4:28:18 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 06, 2020 4:28:19 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 4:28:28 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 06, 2020 4:28:37 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 06, 2020 4:28:40 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select sss for main deck
+May 06, 2020 4:28:42 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck sss
+May 06, 2020 4:28:43 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 4:28:44 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 4:28:47 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:28:50 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:28:59 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 4:29:03 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:09 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 4:29:12 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:12 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:13 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:13 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:13 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:14 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:17 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 4:29:18 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 4:29:20 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 4:29:21 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 4:29:23 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 4:29:24 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:24 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:27 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:28 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:28 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:29 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:39 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:43 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:29:45 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 4:29:46 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 4:29:57 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 4:29:58 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:30:08 AM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 06, 2020 4:48:30 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 4:48:32 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 4:49:04 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 4:49:07 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 4:51:05 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 4:51:06 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 4:51:32 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 4:51:33 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 4:51:40 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:51:40 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:51:41 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:51:42 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:51:42 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:51:43 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 4:51:43 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 5:46:05 AM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 06, 2020 5:46:06 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 5:46:14 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 5:46:22 AM Gui.Mapper playCard
+INFO: Play minion
+May 06, 2020 5:46:25 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page

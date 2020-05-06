@@ -10,19 +10,23 @@ import Gui.Panels.CollectionPages.DeckPanel;
 import Gui.Panels.GamePage.GamePage;
 //import Gui.Panels.GamePage.GraphicLoop;
 import Gui.Panels.GamePage.GraphicLoop;
+import Gui.Panels.GamePage.InfoPassivePage;
 import Gui.Panels.ShopPanel.ShopPage;
 import Gui.Panels.StatusPanel.StatusPage;
+import Utility.DrawRotate;
+import Utility.LengthOfMessage;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.Collections;
 
 public class MainMenuPage extends JPanel {
 
-    private JPanel leftMarginPanel;
-    private JPanel rightMarginPanel;
+    private MarginPanels leftMarginPanel;
+    private MarginPanels rightMarginPanel;
     private JPanel menuPanel;
 
     private JButton playBtn;
@@ -39,8 +43,8 @@ public class MainMenuPage extends JPanel {
 //    E71989
 
     private Color colorOfBtn = new Color(48, 48, 45);
-    private Color marginColor = new Color(255, 146, 56);
-    private Color colorOfTextOfBtn=new Color(255,0,0);
+
+    private Color colorOfTextOfBtn = new Color(255, 0, 0);
 
     private static MainMenuPage mainMenuPage = new MainMenuPage();
 
@@ -59,7 +63,6 @@ public class MainMenuPage extends JPanel {
     }
 
 
-
     private void initButtons() {
         initPlayBtn();
         initCollectionBtn();
@@ -72,7 +75,6 @@ public class MainMenuPage extends JPanel {
     }
 
 
-
     private void initDeleteBtn() {
         deletePlayerBtn = new JButton("DeletePlayer");
         deletePlayerBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
@@ -80,7 +82,7 @@ public class MainMenuPage extends JPanel {
         deletePlayerBtn.setBackground(colorOfBtn);
         deletePlayerBtn.setSize(this.getWidth() / 4, this.getHeight() / 7);
         deletePlayerBtn.setBounds(menuPanel.getWidth() / 2, menuPanel.getHeight() * 5 / 7, deletePlayerBtn.getWidth(),
-                                deletePlayerBtn.getHeight());
+                deletePlayerBtn.getHeight());
         deletePlayerBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -115,13 +117,13 @@ public class MainMenuPage extends JPanel {
 
     }
 
-    public void initExitBtn(){
+    public void initExitBtn() {
         exitBtn = new JButton("Exit");
         exitBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
         exitBtn.setForeground(colorOfTextOfBtn);
         exitBtn.setBackground(colorOfBtn);
-        exitBtn.setSize(this.getWidth() / 2, this.getHeight() /7);
-        exitBtn.setBounds(0, menuPanel.getHeight() * 6 / 7, exitBtn.getWidth(), exitBtn.getHeight() -30);
+        exitBtn.setSize(this.getWidth() / 2, this.getHeight() / 7);
+        exitBtn.setBounds(0, menuPanel.getHeight() * 6 / 7, exitBtn.getWidth(), exitBtn.getHeight() - 30);
         exitBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -130,6 +132,7 @@ public class MainMenuPage extends JPanel {
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
+                GraphicLoop.getInstance().stop();
                 System.exit(0);
             }
         });
@@ -141,7 +144,7 @@ public class MainMenuPage extends JPanel {
         statusBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
         statusBtn.setForeground(colorOfTextOfBtn);
         statusBtn.setBackground(colorOfBtn);
-        statusBtn.setSize(this.getWidth() / 2, this.getHeight() /7);
+        statusBtn.setSize(this.getWidth() / 2, this.getHeight() / 7);
         statusBtn.setBounds(0, menuPanel.getHeight() * 3 / 7, statusBtn.getWidth(), statusBtn.getHeight());
         statusBtn.addActionListener(new ActionListener() {
             @Override
@@ -159,7 +162,7 @@ public class MainMenuPage extends JPanel {
         settingBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
         settingBtn.setForeground(colorOfTextOfBtn);
         settingBtn.setBackground(colorOfBtn);
-        settingBtn.setSize(this.getWidth() / 2, this.getHeight() /7);
+        settingBtn.setSize(this.getWidth() / 2, this.getHeight() / 7);
         settingBtn.setBounds(0, menuPanel.getHeight() * 4 / 7, settingBtn.getWidth(), settingBtn.getHeight());
         settingBtn.addActionListener(new ActionListener() {
             @Override
@@ -220,10 +223,19 @@ public class MainMenuPage extends JPanel {
         playBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                System.out.println(CLI.currentPlayer.getCurrentDeck());
+                if (CLI.currentPlayer.getCurrentDeck().getHero()==null){
+                    JOptionPane.showMessageDialog(null,"First you should select your deck",
+                            "Eroor",JOptionPane.ERROR_MESSAGE);
+                    CLI.setStatus(Status.COLLECTION_PAGE_FROM_PLAY);
+                    MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
+
+                }else {
                 CLI.setStatus(Status.PLAY_PAGE);
                 CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into play page");
-                GraphicLoop.getInstance().start();
-                MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
+//                GraphicLoop.getInstance().start();
+                MyMainFrame.getInstance().setContentPane(InfoPassivePage.getInstance());
+                }
             }
         });
         menuPanel.add(playBtn);
@@ -245,14 +257,57 @@ public class MainMenuPage extends JPanel {
     }
 
     private void initMarginPanels() {
-        leftMarginPanel = new JPanel();
-        leftMarginPanel.setSize(new Dimension(this.getWidth() / 4, this.getHeight()));
+        leftMarginPanel = MarginPanels.getInstanceOfLeftPanel();
         leftMarginPanel.setBounds(0, 0, leftMarginPanel.getWidth(), leftMarginPanel.getHeight());
-        leftMarginPanel.setBackground(marginColor);
-        rightMarginPanel = new JPanel();
-        rightMarginPanel.setSize(new Dimension(this.getWidth() / 4, this.getHeight()));
+
+        rightMarginPanel = MarginPanels.getInstanceOfRightPanel();
         rightMarginPanel.setBounds(this.getWidth() * 3 / 4, 0, rightMarginPanel.getWidth(), rightMarginPanel.getHeight());
-        rightMarginPanel.setBackground(marginColor);
+
+
+    }
+
+
+}
+
+class MarginPanels extends JPanel {
+
+    private static MarginPanels leftPanel = new MarginPanels(1);
+    private static MarginPanels rightPanel = new MarginPanels(2);
+
+    public static MarginPanels getInstanceOfLeftPanel() {
+        return leftPanel;
+    }
+
+    public static MarginPanels getInstanceOfRightPanel() {
+        return rightPanel;
+    }
+
+    private Color marginColor = new Color(255, 146, 56);
+    private int witchPanel;
+
+    private MarginPanels(int witchPanel) {
+        setLayout(null);
+        setSize(new Dimension( MyMainFrame.getInstance().getMyFrameWidth()/4, MyMainFrame.getInstance().getMyFrameHeight()));
+        setBackground(marginColor);
+        this.witchPanel = witchPanel;
+
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Graphics2D graphics2D = (Graphics2D) g;
+        graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 30));
+        if (witchPanel == 1) {
+            String text="The Best Card Game ever made in the World!";
+            int length= LengthOfMessage.lengthOfMessage(text,graphics2D);
+            DrawRotate.drawRotate(graphics2D,(double)this.getWidth()/2,(double) (this.getHeight()+length)/2-60,270,text);
+        } else if (witchPanel == 2) {
+            String text="Enjoy playing HearthStone!";
+            int length= LengthOfMessage.lengthOfMessage(text,graphics2D);
+            DrawRotate.drawRotate(graphics2D,(double)this.getWidth()/2,(double)(this.getHeight()-length)/2,90,text);
+        }
+
 
     }
 

@@ -464,5 +464,9 @@ public class Player {
         this.currentDeck = currentDeck;
     }
 
+//    @Override
+//    public Object clone() throws CloneNotSupportedException {
+//        return super.clone();
+//    }
 
 }

@@ -1,12 +1,16 @@
 package Gui.Panels.GamePage;
 
 import Gui.Mapper;
+import Gui.MyMainFrame;
+import Gui.Panels.MenuPanel.MainMenuPage;
 import Logic.GameState;
+import Utility.DrawRotate;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class DeckAndEndTurnBtnPanel extends JPanel {
 
@@ -14,8 +18,10 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
 
     private static final int WIDTH_OF_END_TURN_PANEL=200;
     private static final int HEIGHT_OF_END_TURN_PANEL=810;
-    public static final int WIDTH_OF_BTN=150;
-    public static final int HEIGHT_OF_BTN =80;
+    private static final int WIDTH_OF_BTN=150;
+    private static final int HEIGHT_OF_BTN =80;
+    private static final int WIDTH_OF_QIT_BTN=100;
+    private static final int HEIGHT_OF_QUIT_BTN=50;
 
 
     private Color colorOfTextOfBtn = new Color(255, 0, 0);
@@ -29,7 +35,7 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
     }
 
     private JButton endTurnBtn;
-    private JLabel manaLabel;
+    private JButton quitGameBtn;
     private static DeckAndEndTurnBtnPanel deckAndEndTurnBtnPanel=new DeckAndEndTurnBtnPanel();
     public static DeckAndEndTurnBtnPanel getInstance(){return deckAndEndTurnBtnPanel;}
 
@@ -41,20 +47,51 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
         initEndTurnBtn();
         initFirstDeck();
         initSecondDeck();
-        initManaLabel();
+        initQuitGameBtn();
 
 
     }
 
-    private void initManaLabel() {
-        manaLabel=new JLabel();
-        manaLabel.setForeground(Color.BLACK);
-        manaLabel.setBackground(Color.BLUE);
-        manaLabel.setText(""); //todo define text:))
-        manaLabel.setSize(WIDTH_OF_END_TURN_PANEL,50);
-        manaLabel.setBounds(0,0,manaLabel.getWidth(),manaLabel.getHeight());//init xCoordinate and yCoordinate
-        add(manaLabel);
+    private void initQuitGameBtn() {
+        quitGameBtn=new JButton("Quit");
+        quitGameBtn.setSize(WIDTH_OF_QIT_BTN, HEIGHT_OF_QUIT_BTN);
+        quitGameBtn.setFont(new Font("TimesRoman", Font.ITALIC, 20));
+        quitGameBtn.setBounds((WIDTH_OF_END_TURN_PANEL-WIDTH_OF_QIT_BTN)/2,720,WIDTH_OF_QIT_BTN,HEIGHT_OF_QUIT_BTN);
+        quitGameBtn.setForeground(colorOfTextOfBtn);
+        quitGameBtn.setBackground(colorOfBtn);
+        quitGameBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int result = JOptionPane.showConfirmDialog((Component) null, "Are you sure to leave game?\n" + "This will make you lose",
+                        "Warning", JOptionPane.OK_CANCEL_OPTION);
+
+                if(result == JOptionPane.OK_OPTION) {
+                    try {
+                        GameState.getInstance().initGameState();
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                    System.out.println(GameState.getInstance().getCardsOfDeckInGameState().size()+"  fffffff");
+                    PlayPanel.getInstance().removeAll();
+                    PlayPanel.getInstance().setNeedsToRepaint(true);
+                    PlayPanel.getInstance().repaint();
+                    PlayPanel.getInstance().revalidate();
+                    LogPanel.getInstance().removeAll();
+                    LogPanel.getInstance().setLog("");
+                    LogPanel.getInstance().repaint();
+                    LogPanel.getInstance().revalidate();
+//                    DeckAndEndTurnBtnPanel.getInstance().removeAll();
+//                    DeckAndEndTurnBtnPanel.getInstance().repaint();
+//                    DeckAndEndTurnBtnPanel.getInstance().revalidate();
+
+                    MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
+
+                }
+            }
+        });
+        add(quitGameBtn);
     }
+
 
     private void initSecondDeck() {
         DeckViewerInPlay.getInstanceOfSecondDeck().setBounds(60,50,DeckViewerInPlay.getWidthOfDeck(),DeckViewerInPlay.getHeightOfDeck());
@@ -67,7 +104,7 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
         DeckViewerInPlay.getInstanceOfFirstDeck().setBounds(60,460,DeckViewerInPlay.getWidthOfDeck(),DeckViewerInPlay.getHeightOfDeck());
 
        DeckViewerInPlay.getInstanceOfFirstDeck().setToolTipText("You have "+
-               GameState.getInstance().getDeck().numberOfCardsInDeck()+ "cards in your deck");
+               GameState.getInstance().getCardsOfDeckInGameState().size()+ "cards in your deck");
         add(DeckViewerInPlay.getInstanceOfFirstDeck());
     }
 
@@ -85,12 +122,23 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
                 Mapper.getInstance().addRequest(Mapper.RequestTypes.END_TURN);
                 Mapper.getInstance().executeRequests();
                 DeckViewerInPlay.getInstanceOfFirstDeck().setToolTipText("You have "+
-                        GameState.getInstance().getDeck().numberOfCardsInDeck()+ "cards in your deck");
+                        GameState.getInstance().getCardsOfDeckInGameState().size()+ "cards in your deck");
             }
         });
         add(endTurnBtn);
     }
 
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.setFont(new Font("TimesRoman", Font.ITALIC, 30));
+        g.drawString(GameState.getInstance().getMana()+"/"+"10",60,700);
+        DeckViewerInPlay.getInstanceOfFirstDeck().setToolTipText("You have "+
+                GameState.getInstance().getCardsOfDeckInGameState().size()+ "cards in your deck");
+        DeckViewerInPlay.getInstanceOfSecondDeck().setToolTipText("There are 0 cards in this Deck");//TODO needs to change in next phase:))
+
+
+    }
 }
 
 
@@ -121,26 +169,20 @@ class DeckViewerInPlay extends JPanel{
         this.witchPanel=witchPanel;
     }
 
-    public static void drawRotate(Graphics2D g2d, double x, double y, int angle, String text)
-    {
-        g2d.translate((float)x,(float)y);
-        g2d.rotate(Math.toRadians(angle));
-        g2d.drawString(text,0,0);
-        g2d.rotate(-Math.toRadians(angle));
-        g2d.translate(-(float)x,-(float)y);
-    }
+
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D graphics2D=(Graphics2D)g;
         if (witchPanel==1){
-            drawRotate(graphics2D,WIDTH_OF_DECK/2,10,45,"First");
+            DrawRotate.drawRotate(graphics2D,WIDTH_OF_DECK/2-10,15,90,"Player's Deck");
 
 
         }else if(witchPanel==2){
-            drawRotate(graphics2D,WIDTH_OF_DECK/2,10,45,"Second");
+            DrawRotate.drawRotate(graphics2D,WIDTH_OF_DECK/2-10,15,90,"Enemy's Deck");
         }
+
 
 
     }

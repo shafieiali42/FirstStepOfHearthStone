@@ -1,0 +1,26 @@
+May 06, 2020 3:41:58 AM CommandLineInterface.PlayerManagement signUp
+INFO: USER: ccc
+May 06, 2020 3:41:58 AM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/06 03:41:58
+May 06, 2020 3:41:58 AM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: ccc
+May 06, 2020 3:41:58 AM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up ccc
+May 06, 2020 3:41:59 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 06, 2020 3:42:04 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck filterByClassOfCard
+INFO: Show Neutral cards
+May 06, 2020 3:42:25 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Make new deck
+May 06, 2020 3:42:29 AM Gui.Panels.CollectionPages.CategoryPanelOfChangeDeck selectDeck
+INFO: select ccc for main deck
+May 06, 2020 3:42:31 AM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck ccc
+May 06, 2020 3:42:33 AM Gui.Panels.CollectionPages.ManaPanel$12 actionPerformed
+INFO: Go back from collection page
+May 06, 2020 3:42:34 AM Gui.Panels.MenuPanel.MainMenuPage$8 actionPerformed
+INFO: Navigate into play page
+May 06, 2020 3:42:42 AM Gui.Mapper endTurn
+INFO: End turn
+May 06, 2020 3:42:44 AM Gui.Mapper endTurn
+INFO: End turn

@@ -65,7 +65,6 @@ public class LittleCardPanel extends JPanel implements MouseListener, Serializab
         nameLabel.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                System.out.println("hhhhhhhhhhhhhhhh");
                 if (SwingUtilities.isLeftMouseButton(e)) {
                     Iterator<Cards> itr = DeckPage.getInstance().getDeckTOChange().getListOfCards().iterator();
                     while (itr.hasNext()) {
@@ -128,7 +127,6 @@ public class LittleCardPanel extends JPanel implements MouseListener, Serializab
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        System.out.println("hhhhhhhhhhhhhhhh");
         if (SwingUtilities.isLeftMouseButton(e)) {
             Iterator<Cards> itr = DeckPage.getInstance().getDeckTOChange().getListOfCards().iterator();
             while (itr.hasNext()) {

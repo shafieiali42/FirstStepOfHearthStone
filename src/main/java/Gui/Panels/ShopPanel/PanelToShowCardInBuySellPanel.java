@@ -31,6 +31,7 @@ public class PanelToShowCardInBuySellPanel extends JPanel {
         super.paintComponent(g);
 
         Graphics2D graphics2D = (Graphics2D) g;
+
         if (BuySellPanel.getInstance().getCard() == null) {
 
             int lenghtOfMessage = LengthOfMessage.lengthOfMessage("Click on your Intended Card!", graphics2D);

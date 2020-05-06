@@ -17,9 +17,10 @@ public class GraphicLoop extends Loop {
 
     @Override
     public void update() {
-        PlayPanel.getInstance().repaint();
-        PlayPanel.getInstance().revalidate();
-        GamePage.getInstance().repaint();
-        GamePage.getInstance().revalidate();
+
+        MyMainFrame.getInstance().repaint();
+        MyMainFrame.getInstance().revalidate();
+//        GamePage.getInstance().repaint();
+//        GamePage.getInstance().revalidate();
     }
 }

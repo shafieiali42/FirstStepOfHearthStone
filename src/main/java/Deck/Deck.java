@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
-public class Deck implements Comparable<Deck>,Cloneable {
+public class Deck implements Comparable<Deck> {
 
     private String name;
     private String heroName;
@@ -198,10 +198,10 @@ public class Deck implements Comparable<Deck>,Cloneable {
         return "Deck Name: " + this.name + "Deck Hero: " + this.hero + " cards: " + this.listOfCards;
     }
 
-    @Override
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
+//    @Override
+//    public Object clone() throws CloneNotSupportedException {
+//        return super.clone();
+//    }
 
     public HashMap<String, Integer> getUsesHashMap() {
         return usesHashMap;

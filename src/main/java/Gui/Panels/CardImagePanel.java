@@ -155,19 +155,22 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 } else {
                     JOptionPane.showMessageDialog(null, "You can't Buy this card:((");
                 }
-            } else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
+            }
+
+
+
+            else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
                 for (int i = 0; i < DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().size(); i++) {
                     if (this.card.getName().equalsIgnoreCase(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getNameLabel().getText())) {
                         if (Integer.parseInt(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().getText()) < 2) {
-//                            System.out.println(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOftHISdECK().get(i).getUsedLabel().getText());
-                            if (!DeckPage.getInstance().getDeckTOChange().getListOfCards().contains(this.card) && !this.isLock) {
+                            if (!this.isLock) {
                                 DeckPage.getInstance().getDeckTOChange().getListOfCards().add(this.card);
                             }
                             DeckViewer.getInstance().showCardsInDecK();
                             int k = Integer.parseInt(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().getText()) + 1;
                             DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().setText(k + "");
                             break;
-                        } else {
+                        } else if (!this.isLock){
                             JOptionPane.showMessageDialog(null,
                                     "You have two card of this card in your Deck!", "Add To Deck Error", JOptionPane.ERROR_MESSAGE);
                         }
@@ -197,11 +200,17 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 //                    e.getComponent().getX() < PlayPanel.getMaxXForPutCards() &&
 //                    e.getComponent().getY() > PlayPanel.getMinYForPutCards() &&
 //                    e.getComponent().getY() < PlayPanel.getMaxYForPutCards()) {
+            System.out.println(GameState.getInstance().getBattleGroundCards().size());
+            if (GameState.getInstance().getBattleGroundCards().size() <= 7 - 1) {
 
                 GameState.getInstance().setPlayingCard(this.card);
                 Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS);
                 Mapper.getInstance().executeRequests();
                 dragging = false;
+            } else {
+                JOptionPane.showMessageDialog(null,
+                        "It's illegal to have more than 7 cards in the battleGround.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
 
 //            }
         }
