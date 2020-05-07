@@ -1,9 +1,9 @@
 package Gui.Panels.ShopPanel;
 
 
-import View.CardView.CardImagePanel;
+import Controller.Administer;
 import Utility.LengthOfMessage;
-import Utility.MethodsOfShowCardsOnPanel;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -32,15 +32,15 @@ public class PanelToShowCardInBuySellPanel extends JPanel {
 
         Graphics2D graphics2D = (Graphics2D) g;
 
-        if (BuySellPanel.getInstance().getCard() == null) {
+        if (Administer.isShopStateCardNull()) {
 
             int lenghtOfMessage = LengthOfMessage.lengthOfMessage("Click on your Intended Card!", graphics2D);
             graphics2D.drawString("Click on your Intended Card!", (300 - lenghtOfMessage) / 2, 250);
         } else {
             try {
-
-                CardImagePanel cardImagePanel = new CardImagePanel(BuySellPanel.getInstance().getCard());
-                MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, this, 0, 0,this.getWidth() , this.getHeight());
+                Administer.showShopStateCardInBuySellPanel(this);
+//                CardImagePanel cardImagePanel = new CardImagePanel(BuySellPanel.getInstance().getCard());
+//                MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, this, 0, 0,this.getWidth() , this.getHeight());
             } catch (IOException e) {
                 e.printStackTrace();
             }

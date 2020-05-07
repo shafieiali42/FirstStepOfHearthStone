@@ -6,16 +6,21 @@ import Gui.Panels.CollectionPages.CardPanel;
 import Gui.Panels.CollectionPages.DeckPage;
 import Gui.Panels.CollectionPages.DeckViewer;
 import Gui.Panels.CollectionPages.LittleCardPanel;
+import Gui.Panels.ShopPanel.BuySellPanel;
 import Gui.Panels.ShopPanel.ShopCardPanel;
 import Logic.CollectionState;
+import Logic.ShopState;
 import Models.Cards.Cards;
 import Models.Deck.Deck;
 import Models.Heroes.*;
 import Utility.MethodsOfShowCardsOnPanel;
+import Utility.Sounds;
+import View.CardView.CardImagePanel;
 
 import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Administer {
 
@@ -31,18 +36,84 @@ public class Administer {
 
 
 
-    public static void showSalableCards(JPanel panel,int numberOfCardsPerRow) throws IOException {
+    public static void initializeAllLittleCardPanels(){
+        for (Cards card : Cards.getAllCards()) {
+            LittleCardPanel.getAllLittleCardPanels().add(new LittleCardPanel(card.getManaCost(), card.getName(), 0));
+        }
+    }
+
+
+    public static void removeThisCardFromCollectionStatesDeck(LittleCardPanel littleCardPanel) {
+        Iterator<Cards> itr = CollectionState.getInstance().getDeckToChange().getListOfCards().iterator();
+        while (itr.hasNext()) {
+            Cards card = itr.next();
+            if (card.getName().equalsIgnoreCase(littleCardPanel.getNameLabel().getText())) {
+                if (Integer.parseInt(littleCardPanel.getUsedLabel().getText()) == 1) {
+                    itr.remove();
+//                    DeckViewer.getInstance().showCardsInDecK();//TODO MAYBE ITS WRONG
+                    break;
+                } else if (Integer.parseInt(littleCardPanel.getUsedLabel().getText()) == 2) {
+                    littleCardPanel.getUsedLabel().setText(1 + "");
+                    break;
+                }
+//                DeckViewer.getInstance().showCardsInDecK();
+//                    DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
+//                    DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
+            }
+        }
+
+    }
+
+    public static void showShopStateCardInBuySellPanel(JPanel panel) throws IOException {
+        CardImagePanel cardImagePanel = new CardImagePanel(ShopState.getInstance().getCardsToBuyOrSell());
+        MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, panel, 0, 0,panel.getWidth() , panel.getHeight());
+    }
+
+    public static void sellShopStateCard() throws IOException {
+        CLI.currentPlayer.sell(ShopState.getInstance().getCardsToBuyOrSell());
+    }
+
+    public static boolean isShopStateCardInMyDecks(){
+        for (Deck deck : CLI.currentPlayer.getAllDecksOfPlayer()) {
+            if (deck.getListOfCards().contains(ShopState.getInstance().getCardsToBuyOrSell())) {
+               return true;
+            }
+        }
+        return false;
+    }
+
+    public static void playActionSounds(String action) {
+        Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/"+action+".wav");
+    }
+
+    public static int getMoneyOfShopStatesCard() {
+        return ShopState.getInstance().getCardsToBuyOrSell().getMoneyCost();
+    }
+
+    public static boolean isShopStateCardNull() {
+        return ShopState.getInstance().getCardsToBuyOrSell() == null;
+    }
+
+    public static void makeShopStateCardNull() {
+        ShopState.getInstance().setCardsToBuyOrSell(null);
+    }
+
+    public static void buyShopStateCard() throws IOException {
+        CLI.currentPlayer.buy(ShopState.getInstance().getCardsToBuyOrSell());
+    }
+
+    public static void showSalableCards(JPanel panel, int numberOfCardsPerRow) throws IOException {
         MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getSalableCards(),
                 panel, numberOfCardsPerRow);
     }
 
-    public static void showBuyableCards(JPanel panel,int numberOfCardsPerRow) throws IOException {
+    public static void showBuyableCards(JPanel panel, int numberOfCardsPerRow) throws IOException {
         MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getBuyableCards(),
                 panel, numberOfCardsPerRow);
     }
 
-    public static void showCardsWithSpecifiedManaCost(int mana,JPanel cardPanelOfCollectionPage,
-                                                      JPanel cardPanelOfDeckPage,int numberOfCardsPerRow) throws IOException {
+    public static void showCardsWithSpecifiedManaCost(int mana, JPanel cardPanelOfCollectionPage,
+                                                      JPanel cardPanelOfDeckPage, int numberOfCardsPerRow) throws IOException {
         ArrayList<Cards> filteredByManaCards = new ArrayList<Cards>();
         for (Cards card : Cards.getAllCards()) {
             if (card.getManaCost() == mana) {
@@ -52,13 +123,13 @@ public class Administer {
         if (CLI.getStatus().equals(Status.COLLECTIONS_PAGE)) {
             MethodsOfShowCardsOnPanel.showCards(filteredByManaCards, cardPanelOfCollectionPage, numberOfCardsPerRow);
         } else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
-            MethodsOfShowCardsOnPanel.showCards(filteredByManaCards, cardPanelOfDeckPage,numberOfCardsPerRow);
+            MethodsOfShowCardsOnPanel.showCards(filteredByManaCards, cardPanelOfDeckPage, numberOfCardsPerRow);
         }
-        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show cards with mana: "+mana);
+        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show cards with mana: " + mana);
     }
 
-    public static void showSearchedCards(String searchFieldText,JPanel cardPanelOfCollectionPage,
-                                         JPanel cardPanelOfDeckPage,int numberOfCardsPerRow ) throws IOException {
+    public static void showSearchedCards(String searchFieldText, JPanel cardPanelOfCollectionPage,
+                                         JPanel cardPanelOfDeckPage, int numberOfCardsPerRow) throws IOException {
         ArrayList<Cards> foundCards = new ArrayList<Cards>();
         for (Cards card : Cards.getAllCards()) {
             if (card.getName().toLowerCase().contains(searchFieldText)) {
@@ -72,8 +143,8 @@ public class Administer {
         }
     }
 
-    public static boolean isCurrentPlayersCurrentDeckNull(){
-       return CLI.currentPlayer.getCurrentDeck().getHero()==null;
+    public static boolean isCurrentPlayersCurrentDeckNull() {
+        return CLI.currentPlayer.getCurrentDeck().getHero() == null;
     }
 
     public static void showLittleCardPanelOnDeckViewer(LittleCardPanel littleCardPanel, JPanel panel, int xCoordinate, int yCoordinate) {
@@ -168,7 +239,7 @@ public class Administer {
     public static void makeNewDeck(String name, String heroName) {
         CollectionState.getInstance().setDeckToChange(new Deck());
         CollectionState.getInstance().getDeckToChange().setName(name);
-        CollectionState.getInstance().getDeckToChange().setLittleCardsListFromHashMap();
+//        CollectionState.getInstance().getDeckToChange().setLittleCardsListFromHashMap();
         switch (heroName) {
             case ("Mage"):
                 CollectionState.getInstance().getDeckToChange().setHero(Mage.getInstance());
@@ -213,7 +284,7 @@ public class Administer {
     }
 
     public static void defineUsesHashMap() {
-        CollectionState.getInstance().getDeckToChange().defineUsesHashMap();
+        CollectionState.getInstance().getDeckToChange().defineUsesHashMapFromArrayList();
 
     }
 
@@ -226,9 +297,10 @@ public class Administer {
         CLI.currentPlayer.getAllDecksOfPlayer().add(CollectionState.getInstance().getDeckToChange());
     }
 
-    public static void writeLog(String log){
+    public static void writeLog(String log) {
         CLI.currentPlayer.getLoggerOfMyPlayer().info(log);
     }
+
 
 
 }

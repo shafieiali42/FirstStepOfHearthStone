@@ -1,10 +1,11 @@
 package Gui.Panels.ShopPanel;
 
-import Models.Cards.Cards;
+import Controller.Administer;
+
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
-import Models.Deck.Deck;
-import Utility.Sounds;
+
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -83,7 +84,7 @@ public class BuySellPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                if (BuySellPanel.getInstance().cardName == null) {
+                if (Administer.isShopStateCardNull()) {
                     JOptionPane.showMessageDialog(null,
                             "Please select a card!",
                             "Error",
@@ -93,14 +94,17 @@ public class BuySellPanel extends JPanel {
                     if (CLI.getStatus().equals(Status.BUY_PAGE)) {
 
                         int reply = JOptionPane.showConfirmDialog(null, "Are you sure that you want buy this card?\n" +
-                                        "this card cost" + BuySellPanel.getInstance().card.getMoneyCost() + "$",
+                                        "this card cost" + Administer.getMoneyOfShopStatesCard()+ "$",
                                 "Buy", JOptionPane.YES_NO_OPTION);
 
                         if (reply == JOptionPane.YES_OPTION) {
                             try {
-                                CLI.currentPlayer.buy(BuySellPanel.getInstance().card);
-                                Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/BuyCard.wav");
-                                BuySellPanel.getInstance().setCard(null);
+                                Administer.buyShopStateCard();
+//                                CLI.currentPlayer.buy(BuySellPanel.getInstance().card);
+                                Administer.playActionSounds("BuyCard");
+//                                Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/BuyCard.wav");
+//                                BuySellPanel.getInstance().setCard(null);
+                                Administer.makeShopStateCardNull();
                                 PanelToShowCardInBuySellPanel.getInstance().removeAll();
                                 PanelToShowCardInBuySellPanel.getInstance().repaint();
                                 PanelToShowCardInBuySellPanel.getInstance().revalidate();
@@ -114,29 +118,32 @@ public class BuySellPanel extends JPanel {
                         }
                     } else if (CLI.getStatus().equals(Status.SELL_PAGE)) {
                         try {
-                            if (BuySellPanel.getInstance().card == null) {
+                            if (Administer.isShopStateCardNull()) {
                                 JOptionPane.showConfirmDialog(null, "Please select a card!",
                                         "Error", JOptionPane.ERROR_MESSAGE);
                             } else {
                                 int reply = JOptionPane.showConfirmDialog(null,
                                         "Are you sure that you want sell this card?\n" +
-                                                "this card cost" + BuySellPanel.getInstance().card.getMoneyCost() + "$",
+                                                "this card cost" + Administer.getMoneyOfShopStatesCard() + "$",
                                         "Sell", JOptionPane.YES_NO_OPTION);
 
                                 if (reply == JOptionPane.YES_OPTION) {
 
-                                    boolean canSell = true;
-                                    for (Deck deck : CLI.currentPlayer.getAllDecksOfPlayer()) {
-                                        if (deck.getListOfCards().contains(BuySellPanel.getInstance().card)) {
-                                            canSell = false;
-                                            break;
-                                        }
-                                    }
-                                    if (canSell) {
-                                        CLI.currentPlayer.sell(BuySellPanel.getInstance().card);
-                                        Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/SellCard.wav");
+//                                    boolean canSell = true;
+//                                    for (Deck deck : CLI.currentPlayer.getAllDecksOfPlayer()) {
+//                                        if (deck.getListOfCards().contains(BuySellPanel.getInstance().card)) {
+//                                            canSell = false;
+//                                            break;
+//                                        }
+//                                    }
+                                    if (!Administer.isShopStateCardInMyDecks()) {
+                                        Administer.sellShopStateCard();
+//                                        CLI.currentPlayer.sell(BuySellPanel.getInstance().card);
+                                        Administer.playActionSounds("SellCard");
+//                                        Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/SellCard.wav");
                                         ButtonPanel.showSalableCards();
-                                        BuySellPanel.getInstance().setCard(null);
+//                                        BuySellPanel.getInstance().setCard(null);
+                                        Administer.makeShopStateCardNull();
                                         PanelToShowCardInBuySellPanel.getInstance().removeAll();
                                         PanelToShowCardInBuySellPanel.getInstance().repaint();
                                         PanelToShowCardInBuySellPanel.getInstance().revalidate();
@@ -144,7 +151,8 @@ public class BuySellPanel extends JPanel {
                                     } else {
                                         JOptionPane.showMessageDialog(null, "This card is in your deck",
                                                 "Error", JOptionPane.ERROR_MESSAGE);
-                                        BuySellPanel.getInstance().card = null;
+//                                        BuySellPanel.getInstance().card = null;
+                                        Administer.makeShopStateCardNull();
                                         PanelToShowCardInBuySellPanel.getInstance().removeAll();
                                         PanelToShowCardInBuySellPanel.getInstance().repaint();
                                         PanelToShowCardInBuySellPanel.getInstance().revalidate();

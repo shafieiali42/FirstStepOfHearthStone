@@ -104,6 +104,7 @@ public class DeckPanel extends JPanel {
         DeckViewer.getInstance().repaint();
         DeckViewer.getInstance().revalidate();
         LittleCardPanel.setAllLittleCardPanels();
+        Administer.makeCollectionStatesDeckToNull();
         DeckPage.getInstance().setNameOfDeckToChange("");
 //        DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
 

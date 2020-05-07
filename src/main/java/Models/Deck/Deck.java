@@ -21,39 +21,58 @@ public class Deck implements Comparable<Deck> {
     private Cards mostUsedCard;
     private int manaAvg;
     //    @Expose(serialize = false,deserialize = false)
-    private transient ArrayList<LittleCardPanel> littleCardPanelsOfThisDeck= LittleCardPanel.getAllLittleCardPanels();
+//    private transient ArrayList<LittleCardPanel> littleCardPanelsOfThisDeck= LittleCardPanel.getAllLittleCardPanels();
+
     private HashMap<String, Integer> usesHashMap =new HashMap<String, Integer>();
 
-    public void defineUsesHashMap(){
+    public void defineUsesHashMapFromArrayList(){
         usesHashMap.clear();
-        for (LittleCardPanel littleCardPanel:littleCardPanelsOfThisDeck){
-            usesHashMap.put(littleCardPanel.getNameLabel().getText(),Integer.parseInt(littleCardPanel.getUsedLabel().getText()));
-        }
-    }
-
-
-    public void setLittleCardsListFromHashMap(){
-        for (String cardName:usesHashMap.keySet()){
-            int useOfCard=usesHashMap.get(cardName);
-            for (LittleCardPanel littleCardPanel:littleCardPanelsOfThisDeck){
-                if (littleCardPanel.getNameLabel().getText().equalsIgnoreCase(cardName)){
-                    littleCardPanel.getUsedLabel().setText(useOfCard+"");
+        for (Cards card:listOfCards){
+            boolean isInHashMap=false;
+            for (String key:usesHashMap.keySet()){
+                if (key.equals(card.getName())){
+                    isInHashMap=true;
+                    usesHashMap.put(key,usesHashMap.get(key)+1);
+                    break;
                 }
             }
+            if (!isInHashMap){
+                usesHashMap.put(card.getName(),1);
+            }
+
         }
     }
 
+//    public void defineUsesHashMap(){
+//        usesHashMap.clear();
+//        for (LittleCardPanel littleCardPanel:littleCardPanelsOfThisDeck){
+//            usesHashMap.put(littleCardPanel.getNameLabel().getText(),Integer.parseInt(littleCardPanel.getUsedLabel().getText()));
+//        }
+//    }
+
+
+//    public void setLittleCardsListFromHashMap(){
+//        for (String cardName:usesHashMap.keySet()){
+//            int useOfCard=usesHashMap.get(cardName);
+//            for (LittleCardPanel littleCardPanel:littleCardPanelsOfThisDeck){
+//                if (littleCardPanel.getNameLabel().getText().equalsIgnoreCase(cardName)){
+//                    littleCardPanel.getUsedLabel().setText(useOfCard+"");
+//                }
+//            }
+//        }
+//    }
 
 
 
 
-    public ArrayList<LittleCardPanel> getLittleCardPanelsOfThisDeck() {
-        return littleCardPanelsOfThisDeck;
-    }
 
-    public void setLittleCardPanelsOfThisDeck(ArrayList<LittleCardPanel> littleCardPanelsOfThisDeck) {
-        this.littleCardPanelsOfThisDeck = littleCardPanelsOfThisDeck;
-    }
+//    public ArrayList<LittleCardPanel> getLittleCardPanelsOfThisDeck() {
+//        return littleCardPanelsOfThisDeck;
+//    }
+
+//    public void setLittleCardPanelsOfThisDeck(ArrayList<LittleCardPanel> littleCardPanelsOfThisDeck) {
+//        this.littleCardPanelsOfThisDeck = littleCardPanelsOfThisDeck;
+//    }
 
     public static int getMaxCapacityOfDeck() {
         return MAX_CAPACITY_OF_DECK;
@@ -146,13 +165,14 @@ public class Deck implements Comparable<Deck> {
         Collections.sort(listOfCards);
         mostUsedCard=listOfCards.get(0);
     }
-    public int numberOfCardsInDeck(){
-        int numberOFAllCardsInDeck=0;
-        for (String key: getUsesHashMap().keySet()){
-            numberOFAllCardsInDeck+=getUsesHashMap().get(key);
-        }
-        return numberOFAllCardsInDeck;
-    }
+
+//    public int numberOfCardsInDeck(){
+//        int numberOFAllCardsInDeck=0;
+//        for (String key: getUsesHashMap().keySet()){
+//            numberOFAllCardsInDeck+=getUsesHashMap().get(key);
+//        }
+//        return numberOFAllCardsInDeck;
+//    }
 
     @Override
     public int compareTo(Deck deck) {
@@ -202,7 +222,7 @@ public class Deck implements Comparable<Deck> {
 //        return super.clone();
 //    }
 
-    public HashMap<String, Integer> getUsesHashMap() {
-        return usesHashMap;
-    }
+//    public HashMap<String, Integer> getUsesHashMap() {
+//        return usesHashMap;
+//    }
 }

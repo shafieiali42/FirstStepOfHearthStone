@@ -20,8 +20,6 @@ public class ShopCardPanel extends JPanel {
     private ShopCardPanel(){
         setBackground(Color.darkGray);
         setLayout(null);
-
-
     }
 
 
