@@ -1,9 +1,9 @@
 package Logic;
 
-import Cards.Cards;
-import Cards.*;
+import Models.Cards.*;
 import CommandLineInterface.CLI;
-import Deck.Deck;
+
+import Models.Deck.Deck;
 import Player.Player;
 
 import java.io.IOException;
@@ -16,7 +16,7 @@ public class GameState {
     private Player opponentPlayer;
     private ArrayList<Cards> handsCards;
     private ArrayList<Cards> handsCardsOfOpponent;
-    //    private Deck deck;
+    //    private Models.Deck deck;
     private ArrayList<Cards> cardsOfDeckInGameState;
     private Deck deckOfOpponent;
     private ArrayList<Cards> battleGroundCards;

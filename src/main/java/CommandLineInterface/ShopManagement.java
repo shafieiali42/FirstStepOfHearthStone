@@ -1,12 +1,5 @@
 package CommandLineInterface;
 
-import Cards.Cards;
-import java.io.IOException;
-import java.util.Scanner;
-
-import static CommandLineInterface.CLI.FirstPage;
-import static CommandLineInterface.CLI.secondPage;
-
 public class ShopManagement {
 
 //    public static void ShopPage() throws IOException {
@@ -18,7 +11,7 @@ public class ShopManagement {
 //            String input=myscanner.nextLine().toLowerCase();
 //            if (input.length()>7&& input.substring(0,5).equals("buy [") && input.charAt(input.length()-1)==']'){
 //                String cardsNameToBuy=input.substring(5,input.length()-1);
-//                for (Cards card: Cards.getAllCards()){
+//                for (Models.Cards card: Models.Cards.getAllCards()){
 //                    if (card.getName().toLowerCase().trim().equals(cardsNameToBuy.toLowerCase().trim())){
 //                        CLI.currentPlayer.buy(card);
 //                        break;
@@ -27,7 +20,7 @@ public class ShopManagement {
 //            }else {
 //                if (input.length()>8 && input.substring(0, 6).equals("sell [") && input.charAt(input.length() - 1) == ']') {
 //                    String cardsNameToSell =input.substring(6, input.length()-1);
-//                    for (Cards card: Cards.getAllCards()){
+//                    for (Models.Cards card: Models.Cards.getAllCards()){
 //                        if (card.getName().toLowerCase().trim().equals(cardsNameToSell.toLowerCase().trim())){
 //                            CLI.currentPlayer.sell(card);
 //                            break;
@@ -50,11 +43,11 @@ public class ShopManagement {
 //                            System.out.println(CLI.currentPlayer.getMoney());
 //                            break;
 //                        case "ls -s":
-//                            CLI.currentPlayer.getLoggerOfMyPlayer().info("List: Salable Cards");
+//                            CLI.currentPlayer.getLoggerOfMyPlayer().info("List: Salable Models.Cards");
 //                            System.out.println(CLI.currentPlayer.getSalableCards());
 //                            break;
 //                        case "ls -b":
-//                            CLI.currentPlayer.getLoggerOfMyPlayer().info("List: Buyable Cards");
+//                            CLI.currentPlayer.getLoggerOfMyPlayer().info("List: Buyable Models.Cards");
 //                            System.out.println(CLI.currentPlayer.getBuyableCards());
 //                            break;
 //                        case "return":

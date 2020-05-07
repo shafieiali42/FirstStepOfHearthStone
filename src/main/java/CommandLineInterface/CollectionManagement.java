@@ -1,14 +1,5 @@
 package CommandLineInterface;
 
-import Cards.Cards;
-import Heroes.Heroes;
-import Heroes.*;
-
-import java.io.IOException;
-import java.util.Scanner;
-
-import static CommandLineInterface.CLI.*;
-
 public class CollectionManagement {
 
 
@@ -17,7 +8,7 @@ public class CollectionManagement {
 //        PlayerManagement playerManagement = new PlayerManagement();
 //        Scanner myscanner =new Scanner(System.in);
 //        boolean repeat = true;
-//        System.out.println("what can I do for you?\n1)Exit\n2)Exit_a\n3)Show Heroes\n4)Choose Hero\n5)Show Cards\n6)Add/Remove Card\n7)return");
+//        System.out.println("what can I do for you?\n1)Exit\n2)Exit_a\n3)Show Models.Heroes\n4)Choose Hero\n5)Show Models.Cards\n6)Add/Remove Card\n7)return");
 //        while (repeat){
 //            String input=myscanner.nextLine().toLowerCase();
 //            if (input.length()>10 && input.substring(0,8).equals("select [") && input.charAt(input.length()-1)==']'){
@@ -37,7 +28,7 @@ public class CollectionManagement {
 //                if (input.length()>7 && input.substring(0, 5).equals("add [") && input.charAt(input.length() - 1) == ']') {
 //                    String cardsNameToAddToDeck = input.substring(5, input.length()-1).toLowerCase().trim();
 //                    if (currentPlayer.getAvailableDeckWithThisSituation().size()<15){
-//                        for (Cards card: Cards.getAllCards()){
+//                        for (Models.Cards card: Models.Cards.getAllCards()){
 //                            if (card.getName().toLowerCase().trim().equals(cardsNameToAddToDeck.toLowerCase().trim())){
 //                                CLI.currentPlayer.addToDeck(card);
 //                                break;
@@ -51,7 +42,7 @@ public class CollectionManagement {
 //                    if (input.length()>10 && input.substring(0, 8).equals("remove [") && input.charAt(input.length() - 1) == ']'){
 //                        String cardsNameToRemoveFromDeck= input.substring(8, input.length()-1);
 //                        if (currentPlayer.getAvailableDeckWithThisSituation().size()>0){
-//                            for (Cards card: Cards.getAllCards()){
+//                            for (Models.Cards card: Models.Cards.getAllCards()){
 //                                if (card.getName().toLowerCase().trim().equals(cardsNameToRemoveFromDeck.toLowerCase().trim())){
 //                                    CLI.currentPlayer.removeFromDeck(card);
 //                                    break;
@@ -77,7 +68,7 @@ public class CollectionManagement {
 //                                break;
 //                            case "ls -m -heroes":
 //                                currentPlayer.getLoggerOfMyPlayer().info("Show My Hero.");
-//                                Heroes hero1=currentPlayer.getCurrentHero();
+//                                Models.Heroes hero1=currentPlayer.getCurrentHero();
 //                                System.out.println(hero1.getName());
 //                                break;
 //                            case "ls -a -cards":
@@ -85,7 +76,7 @@ public class CollectionManagement {
 //                                System.out.println(currentPlayer.getAllCardsOfPlayer());
 //                                break;
 //                            case "ls -m -cards":
-//                                currentPlayer.getLoggerOfMyPlayer().info("Show My Deck.");
+//                                currentPlayer.getLoggerOfMyPlayer().info("Show My Models.Deck.");
 //                                System.out.println(currentPlayer.getAvailableDeckWithThisSituation());
 //                                break;
 //                            case "ls -n -cards":

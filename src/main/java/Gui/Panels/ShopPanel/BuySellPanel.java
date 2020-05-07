@@ -1,9 +1,9 @@
 package Gui.Panels.ShopPanel;
 
-import Cards.Cards;
+import Models.Cards.Cards;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
-import Deck.Deck;
+import Models.Deck.Deck;
 import Utility.Sounds;
 
 import javax.swing.*;
@@ -15,32 +15,10 @@ import java.io.IOException;
 public class BuySellPanel extends JPanel {
 
 
-    private Color colorOfTextOfBtn = new Color(255, 0, 0);
-    private Color colorOfBtn = new Color(48, 48, 45);
-    public static final int WIDTH_OF_BTN = 140;
-    public static final int HEIGHT_OF_BTN = 60;
-
-
-    private static final int WIDTH_OF_BUY_SELL_PANEL = 400;      //TODO NEEDS TO CHANGE
-    private static final int HEIGHT_OF_BUY_SELL_PANEL = 730;
-
-
-    private JLabel priceLabel;
-    private JButton transactionBtn;
-
-    private boolean isFirstTime = true;
-    private Cards card;
-
-    public boolean getIsFirstTime() {
-        return isFirstTime;
-    }
-
-    public void setFirstTime(boolean firstTime) {
-        isFirstTime = firstTime;
-    }
-
     private static BuySellPanel buySellPanel;
-
+    public static BuySellPanel getInstance() {
+        return buySellPanel;
+    }
     static {
         try {
             buySellPanel = new BuySellPanel();
@@ -49,18 +27,37 @@ public class BuySellPanel extends JPanel {
         }
     }
 
+    private Color colorOfTextOfBtn = new Color(255, 0, 0);
+    private Color colorOfBtn = new Color(48, 48, 45);
+    public static final int WIDTH_OF_BTN = 140;
+    public static final int HEIGHT_OF_BTN = 60;
+    private static final int WIDTH_OF_BUY_SELL_PANEL = 400;      //TODO NEEDS TO CHANGE
+    private static final int HEIGHT_OF_BUY_SELL_PANEL = 730;
+    private JLabel priceLabel;
+    private JButton transactionBtn;
 
-    public static BuySellPanel getInstance() {
-        return buySellPanel;
+
+
+    private boolean isFirstTime = true;
+    private String cardName;
+    //    private Cards card;
+//    public Cards getCard() {
+//        return card;
+//    }
+//    public void setCard(Cards card) {
+//        this.card = card;
+//    }
+
+
+    private void initPriceLabel() {
+        priceLabel = new JLabel();
+        priceLabel.setBounds(100, 75, 150, 30);
+        add(priceLabel);
     }
-
     private BuySellPanel() throws IOException {
 //        setBackground(Color.cyan);
         setLayout(null);
-
-//        initCoinLabel();
         initPriceLabel();
-//        initCardImagePanel();
         initTransactionBtn();
 
         PanelToShowCardInBuySellPanel.getInstance().setBounds(
@@ -71,20 +68,9 @@ public class BuySellPanel extends JPanel {
         add(PanelToShowCardInBuySellPanel.getInstance());
     }
 
-    public JLabel getPriceLabel() {
-        return priceLabel;
-    }
 
-    public void setPriceLabel(JLabel priceLabel) {
-        this.priceLabel = priceLabel;
-    }
 
-    private void initPriceLabel() {
-        priceLabel = new JLabel();
-        priceLabel.setBounds(100, 75, 150, 30);
-        add(priceLabel);
 
-    }
 
     private void initTransactionBtn() {
         transactionBtn = new JButton("Transaction");
@@ -97,7 +83,7 @@ public class BuySellPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                if (BuySellPanel.getInstance().card == null) {
+                if (BuySellPanel.getInstance().cardName == null) {
                     JOptionPane.showMessageDialog(null,
                             "Please select a card!",
                             "Error",
@@ -139,26 +125,26 @@ public class BuySellPanel extends JPanel {
 
                                 if (reply == JOptionPane.YES_OPTION) {
 
-                                    boolean canSell=true;
-                                    for (Deck deck:CLI.currentPlayer.getAllDecksOfPlayer()){
-                                        if (deck.getListOfCards().contains(BuySellPanel.getInstance().card)){
-                                            canSell=false;
+                                    boolean canSell = true;
+                                    for (Deck deck : CLI.currentPlayer.getAllDecksOfPlayer()) {
+                                        if (deck.getListOfCards().contains(BuySellPanel.getInstance().card)) {
+                                            canSell = false;
                                             break;
                                         }
                                     }
-                                    if (canSell){
-                                    CLI.currentPlayer.sell(BuySellPanel.getInstance().card);
+                                    if (canSell) {
+                                        CLI.currentPlayer.sell(BuySellPanel.getInstance().card);
                                         Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/SellCard.wav");
-                                    ButtonPanel.showSalableCards();
-                                    BuySellPanel.getInstance().setCard(null);
-                                    PanelToShowCardInBuySellPanel.getInstance().removeAll();
-                                    PanelToShowCardInBuySellPanel.getInstance().repaint();
-                                    PanelToShowCardInBuySellPanel.getInstance().revalidate();
-                                    BuySellPanel.getInstance().getPriceLabel().setText("");
-                                    }else {
-                                        JOptionPane.showMessageDialog(null,"This card is in your deck",
-                                                "Error",JOptionPane.ERROR_MESSAGE);
-                                        BuySellPanel.getInstance().card=null;
+                                        ButtonPanel.showSalableCards();
+                                        BuySellPanel.getInstance().setCard(null);
+                                        PanelToShowCardInBuySellPanel.getInstance().removeAll();
+                                        PanelToShowCardInBuySellPanel.getInstance().repaint();
+                                        PanelToShowCardInBuySellPanel.getInstance().revalidate();
+                                        BuySellPanel.getInstance().getPriceLabel().setText("");
+                                    } else {
+                                        JOptionPane.showMessageDialog(null, "This card is in your deck",
+                                                "Error", JOptionPane.ERROR_MESSAGE);
+                                        BuySellPanel.getInstance().card = null;
                                         PanelToShowCardInBuySellPanel.getInstance().removeAll();
                                         PanelToShowCardInBuySellPanel.getInstance().repaint();
                                         PanelToShowCardInBuySellPanel.getInstance().revalidate();
@@ -177,21 +163,32 @@ public class BuySellPanel extends JPanel {
     }
 
 
+
+
+
+
+
+
+
     public static int getWidthOfBuySellPanel() {
         return WIDTH_OF_BUY_SELL_PANEL;
     }
-
     public static int getHeightOfBuySellPanel() {
         return HEIGHT_OF_BUY_SELL_PANEL;
     }
-
-    public Cards getCard() {
-        return card;
+    public boolean getIsFirstTime() {
+        return isFirstTime;
+    }
+    public void setFirstTime(boolean firstTime) {
+        isFirstTime = firstTime;
+    }
+    public JLabel getPriceLabel() {
+        return priceLabel;
+    }
+    public void setPriceLabel(JLabel priceLabel) {
+        this.priceLabel = priceLabel;
     }
 
-    public void setCard(Cards card) {
-        this.card = card;
-    }
 
 }
 

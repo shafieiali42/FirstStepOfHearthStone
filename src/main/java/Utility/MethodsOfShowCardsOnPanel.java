@@ -1,7 +1,7 @@
 package Utility;
 
-import Cards.Cards;
-import Gui.Panels.CardImagePanel;
+import Models.Cards.Cards;
+import View.CardView.CardImagePanel;
 import Gui.Panels.CollectionPages.LittleCardPanel;
 import Gui.Panels.GamePage.PlayPanel;
 import Logic.Alliance;

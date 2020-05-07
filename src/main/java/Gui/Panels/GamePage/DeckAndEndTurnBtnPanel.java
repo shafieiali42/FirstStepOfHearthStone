@@ -96,7 +96,7 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
     private void initSecondDeck() {
         DeckViewerInPlay.getInstanceOfSecondDeck().setBounds(60,50,DeckViewerInPlay.getWidthOfDeck(),DeckViewerInPlay.getHeightOfDeck());
 
-        DeckViewerInPlay.getInstanceOfSecondDeck().setToolTipText("There are 0 cards in this Deck");//TODO needs to change in next phase:))
+        DeckViewerInPlay.getInstanceOfSecondDeck().setToolTipText("There are 0 cards in this Models.Deck");//TODO needs to change in next phase:))
         add(DeckViewerInPlay.getInstanceOfSecondDeck());
     }
 
@@ -135,7 +135,7 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
         g.drawString(GameState.getInstance().getMana()+"/"+"10",60,700);
         DeckViewerInPlay.getInstanceOfFirstDeck().setToolTipText("You have "+
                 GameState.getInstance().getCardsOfDeckInGameState().size()+ "cards in your deck");
-        DeckViewerInPlay.getInstanceOfSecondDeck().setToolTipText("There are 0 cards in this Deck");//TODO needs to change in next phase:))
+        DeckViewerInPlay.getInstanceOfSecondDeck().setToolTipText("There are 0 cards in this Models.Deck");//TODO needs to change in next phase:))
 
 
     }
@@ -176,11 +176,11 @@ class DeckViewerInPlay extends JPanel{
         super.paintComponent(g);
         Graphics2D graphics2D=(Graphics2D)g;
         if (witchPanel==1){
-            DrawRotate.drawRotate(graphics2D,WIDTH_OF_DECK/2-10,15,90,"Player's Deck");
+            DrawRotate.drawRotate(graphics2D,WIDTH_OF_DECK/2-10,15,90,"Player's Models.Deck");
 
 
         }else if(witchPanel==2){
-            DrawRotate.drawRotate(graphics2D,WIDTH_OF_DECK/2-10,15,90,"Enemy's Deck");
+            DrawRotate.drawRotate(graphics2D,WIDTH_OF_DECK/2-10,15,90,"Enemy's Models.Deck");
         }
 
 

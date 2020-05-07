@@ -1,15 +1,12 @@
 package Gui.Panels.CollectionPages;
 
-import Cards.Cards;
-import CommandLineInterface.CLI;
-import Utility.MethodsOfShowCardsOnPanel;
-
+import Controller.Administer;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.util.ArrayList;
+
 
 public class CategoryPanel extends JPanel {
 
@@ -78,8 +75,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Show lock cards ");
-                    showLockCards();
+                    Administer.showLockCards(CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -96,8 +92,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Show unlock cards ");
-                    showUnLockCards();
+                    Administer.showUnLockCards(CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -113,8 +108,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Show all cards ");
-                    showAllCards();
+                    Administer.showAllCards(CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -130,7 +124,8 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    filterByClassOfCard("Neutral");
+                    Administer.showCardsOnCardPanelWithSpecifiedClass("Neutral",
+                            CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -146,7 +141,8 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    filterByClassOfCard("Priest");
+                    Administer.showCardsOnCardPanelWithSpecifiedClass("Priest",
+                            CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -162,7 +158,8 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    filterByClassOfCard("Hunter");
+                    Administer.showCardsOnCardPanelWithSpecifiedClass("Hunter",
+                            CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -178,7 +175,8 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    filterByClassOfCard("Warlock");
+                    Administer.showCardsOnCardPanelWithSpecifiedClass("Warlock",
+                            CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -194,7 +192,8 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    filterByClassOfCard("Rogue");
+                    Administer.showCardsOnCardPanelWithSpecifiedClass("Rogue",
+                            CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -210,7 +209,9 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    filterByClassOfCard("Mage");
+                    Administer.showCardsOnCardPanelWithSpecifiedClass("Mage",
+                            CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
+//                    filterByClassOfCard("Mage");
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -222,30 +223,30 @@ public class CategoryPanel extends JPanel {
 
 
 
-    public void filterByClassOfCard(String className) throws IOException {
-        ArrayList<Cards> filteredCardsByClassOfCard =new ArrayList<Cards>();
-        for (Cards card:Cards.getAllCards()){
-            if (card.getClassOfCard().equalsIgnoreCase(className)){
-                filteredCardsByClassOfCard.add(card);
-            }
-        }
-        MethodsOfShowCardsOnPanel.showCards(filteredCardsByClassOfCard,CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
+//    public void filterByClassOfCard(String className) throws IOException {
+//        ArrayList<Cards> filteredCardsByClassOfCard =new ArrayList<Cards>();
+//        for (Cards card:Cards.getAllCards()){
+//            if (card.getClassOfCard().equalsIgnoreCase(className)){
+//                filteredCardsByClassOfCard.add(card);
+//            }
+//        }
+//        MethodsOfShowCardsOnPanel.showCards(filteredCardsByClassOfCard,CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
+//
+//        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show "+className+" cards");
+//    }
 
-        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show "+className+" cards");
-    } //TODO show unlock cards with gray:((
 
 
-
-    private void showAllCards() throws IOException {
-        MethodsOfShowCardsOnPanel.showCards(Cards.getAllCards(),CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
-    }//TODO show unlock cards with gray:((
-
-    private void showLockCards() throws IOException {
-        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getLockCards(),CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
-    }//TODO show unlock cards with gray:((
-
-    private void showUnLockCards() throws IOException {
-        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getUnLockCards(),CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
-    }//TODO show unlock cards with gray:((
+//    private void showAllCards() throws IOException {
+//        MethodsOfShowCardsOnPanel.showCards(Cards.getAllCards(),CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
+//    }
+//
+//    private void showLockCards() throws IOException {
+//        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getLockCards(),CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
+//    }
+//
+//    private void showUnLockCards() throws IOException {
+//        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getUnLockCards(),CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
+//    }
 
 }

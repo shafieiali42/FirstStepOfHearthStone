@@ -1,17 +1,14 @@
 package Gui;
 
-import Cards.Cards;
-import Cards.*;
+import Models.Cards.Cards;
 import CommandLineInterface.CLI;
-import Gui.Panels.GamePage.GamePage;
 import Gui.Panels.GamePage.LogPanel;
 import Gui.Panels.GamePage.PlayPanel;
 import Interfaces.Request;
 import Logic.GameState;
+import Models.Cards.Weapon;
 import Utility.Sounds;
-import jdk.nashorn.internal.scripts.JO;
 
-import javax.sound.midi.Soundbank;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -26,7 +23,15 @@ public class Mapper {
     }
 
     private ArrayList<Request> requests;
+   private Cards cards;
 
+    public Cards getCards() {
+        return cards;
+    }
+
+    public void setCards(Cards cards) {
+        this.cards = cards;
+    }
 
     private Mapper() {
         requests = new ArrayList<Request>();
@@ -59,8 +64,19 @@ public class Mapper {
             public void execute() {
                 endTurn();
             }
-        };
+        },
+        SET_PLAYING_CARDS_OF_GAME_STATE(){
 
+
+
+            @Override
+            public void execute() {
+                setPlayingCardsOfGameState();
+            }
+        },
+
+    }
+    private static void setPlayingCardsOfGameState() {
     }
 
 

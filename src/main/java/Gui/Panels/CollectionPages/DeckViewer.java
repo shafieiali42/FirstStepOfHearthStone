@@ -1,12 +1,10 @@
 package Gui.Panels.CollectionPages;
 
-import Cards.Cards;
+import Controller.Administer;
+import Models.Cards.Cards;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
-import Deck.Deck;
 import Gui.MyMainFrame;
-import Utility.MethodsOfShowCardsOnPanel;
-import jdk.nashorn.internal.scripts.JO;
 
 import javax.swing.*;
 import java.awt.*;
@@ -45,8 +43,6 @@ public class DeckViewer extends JPanel {
         setBackground(Color.gray);
         setSize(WIDTH_OF_DECK_VIEWER, HEIGHT_OF_DECK_VIEWER);
         initDoneBtn();
-
-
     }
 
 
@@ -61,7 +57,7 @@ public class DeckViewer extends JPanel {
         doneBtn = new JButton("Done");
         designBtn(doneBtn);
         doneBtn.setBounds((DeckViewer.WIDTH_OF_DECK_VIEWER - doneBtn.getWidth()) / 2,
-                Deck.getMaxCapacityOfDeck() * LittleCardPanel.getHeightOfLittleCard() + 100, doneBtn.getWidth(), doneBtn.getHeight());
+                30* LittleCardPanel.getHeightOfLittleCard() + 100, doneBtn.getWidth(), doneBtn.getHeight());
         doneBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -72,8 +68,8 @@ public class DeckViewer extends JPanel {
     }
 
     private void done() {
-        if (DeckPage.getInstance().getDeckTOChange().getListOfCards().size() < 15) {
-            System.out.println(DeckPage.getInstance().getDeckTOChange().getListOfCards().size());
+        if (Administer.getListOfCardsOfCollectionStatesDeck().size() < 15) {
+
             JOptionPane.showMessageDialog(null,
                     "You must select at least 15 cards.", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
@@ -81,20 +77,26 @@ public class DeckViewer extends JPanel {
             DeckViewer.getInstance().repaint();
             DeckViewer.getInstance().revalidate();
             if (CLI.getStatus().equals(Status.CHANGE_DECK)) {
-                CLI.currentPlayer.getLoggerOfMyPlayer().info("Changed deck " + DeckPage.getInstance().getDeckTOChange().getName());
-                DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
-                DeckPage.getInstance().setDeckTOChange(new Deck());
-                CLI.setStatus(Status.COLLECTIONS_PAGE);
+                CLI.currentPlayer.getLoggerOfMyPlayer().info("Changed deck " + DeckPage.getInstance().getNameOfDeckToChange());
+                Administer.defineUsesHashMap();
+                Administer.makeCollectionStatesDeckToNull();
+//                DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
+//                DeckPage.getInstance().setDeckTOChange(new Deck());
+//                CLI.setStatus(Status.COLLECTIONS_PAGE);
                 MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
                 DeckPanel.getInstance().showDeckButtons();
             } else if (CLI.getStatus().equals(Status.MAKE_DECK)) {
-                DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
-                CLI.currentPlayer.getAllDecksOfPlayer().add(DeckPage.getInstance().getDeckTOChange());
-                DeckPage.getInstance().setDeckTOChange(new Deck());
+//                DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
+                Administer.defineUsesHashMap();
+                Administer.addCollectionStatesDeckToPlayersDecksList();
+//                CLI.currentPlayer.getAllDecksOfPlayer().add(DeckPage.getInstance().getDeckTOChange());
+                Administer.makeCollectionStatesDeckToNull();
+//                DeckPage.getInstance().setDeckTOChange(new Deck());
                 CLI.setStatus(Status.COLLECTIONS_PAGE);
                 MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
                 DeckPanel.getInstance().showDeckButtons();
-                CLI.currentPlayer.getLoggerOfMyPlayer().info("Make new deck");
+                Administer.writeLog("Make new Deck");
+//                CLI.currentPlayer.getLoggerOfMyPlayer().info("Make new deck");
             }
         }
     }
@@ -104,12 +106,14 @@ public class DeckViewer extends JPanel {
         DeckViewer.getInstance().repaint();
         DeckViewer.getInstance().revalidate();
         int yCoordinate = 0;
-        for ( LittleCardPanel littleCardPanel : DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck()) {
-            for (Cards card : DeckPage.getInstance().getDeckTOChange().getListOfCards()) {
+        for ( LittleCardPanel littleCardPanel : Administer.getLittleCardPanelOfCollectionStatesDeck()) {
+            for (Cards card : Administer.getListOfCardsOfCollectionStatesDeck()) {
                 if (littleCardPanel.getNameLabel().getText().equalsIgnoreCase(card.getName())) {
-                    MethodsOfShowCardsOnPanel.addPanel(littleCardPanel, this,
-                            (DeckViewer.WIDTH_OF_DECK_VIEWER - littleCardPanel.getWidth()) / 2, yCoordinate,
-                            littleCardPanel.getWidth(), littleCardPanel.getHeight());
+                    Administer.showLittleCardPanelOnDeckViewer(littleCardPanel, this,
+                            (DeckViewer.WIDTH_OF_DECK_VIEWER - littleCardPanel.getWidth()) / 2, yCoordinate);
+//                    MethodsOfShowCardsOnPanel.addPanel(littleCardPanel, this,
+//                            (DeckViewer.WIDTH_OF_DECK_VIEWER - littleCardPanel.getWidth()) / 2, yCoordinate,
+//                            littleCardPanel.getWidth(), littleCardPanel.getHeight());
 
                     yCoordinate += littleCardPanel.getHeight() + 5;
                     break;

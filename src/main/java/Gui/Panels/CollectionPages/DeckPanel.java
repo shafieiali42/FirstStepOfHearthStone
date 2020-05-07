@@ -2,16 +2,16 @@ package Gui.Panels.CollectionPages;
 
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
-import Deck.Deck;
+import Controller.Administer;
+import Models.Deck.Deck;
 import Gui.MyMainFrame;
-import Heroes.Heroes;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import Heroes.*;
+import Models.Heroes.*;
 
 public class DeckPanel extends JPanel {
 
@@ -67,16 +67,17 @@ public class DeckPanel extends JPanel {
         btn.setForeground(colorOfTextOfNewDeckBtn);
         btn.setBackground(colorOfNewDeckBtn);
     }
-    public void initButtonForDeck(Deck deck) {
-        JButton button = new JButton(deck.getName());
+    public void initButtonForDeck(String deckName) {
+        JButton button = new JButton(deckName);
         designDeckBtn(button);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CLI.setStatus(Status.CHANGE_DECK);
                 LittleCardPanel.setAllLittleCardPanels();
-                DeckPage.getInstance().setDeckTOChange(deck);
-                DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
+                Administer.setCollectionDeck(deckName);
+//                DeckPage.getInstance().setDeckTOChange(deck);
+//                DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
                 showDeck();
             }
         });
@@ -103,13 +104,13 @@ public class DeckPanel extends JPanel {
         DeckViewer.getInstance().repaint();
         DeckViewer.getInstance().revalidate();
         LittleCardPanel.setAllLittleCardPanels();
-        DeckPage.getInstance().setDeckTOChange(new Deck());
-        DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
-        DeckPage.getInstance().getDeckTOChange().setName(JOptionPane.showInputDialog("Enter your favorite name!"));
+        DeckPage.getInstance().setNameOfDeckToChange("");
+//        DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
 
+        String name=JOptionPane.showInputDialog("Enter your favorite name!");
         Object[] possibilities = {"Mage", "Rogue", "Warlock", "Hunter", "Priest"};
         Icon questionError = UIManager.getIcon("OptionPane.questionIcon");
-        String s = (String) JOptionPane.showInputDialog(
+        String heroName = (String) JOptionPane.showInputDialog(
                 null,
                 "Select Your favorite Hero:",
                 "Select Hero",
@@ -118,27 +119,28 @@ public class DeckPanel extends JPanel {
                 possibilities,
                 "Mage");
 
+        Administer.makeNewDeck(name,heroName);
 
-        switch (s) { // TODO needs changesssssssssssssssssssssssssss:(((((((((((
-            case ("Mage"):
-                DeckPage.getInstance().getDeckTOChange().setHero(Mage.getInstance());
-                break;
-            case ("Rogue"):
-                DeckPage.getInstance().getDeckTOChange().setHero(Rogue.getInstance());
-                break;
-            case ("Warlock"):
-                DeckPage.getInstance().getDeckTOChange().setHero(Warlock.getInstance());
-                break;
-            case ("Hunter"):
-                DeckPage.getInstance().getDeckTOChange().setHero(Hunter.getInstance());
-                break;
-            case ("Priest"):
-                DeckPage.getInstance().getDeckTOChange().setHero(Priest.getInstance());
-                break;
-
-            default:
-                throw new IllegalStateException("Unexpected value: " + s);
-        }
+//        switch (heroName) { // TODO needs changesssssssssssssssssssssssssss:(((((((((((
+//            case ("Mage"):
+//                DeckPage.getInstance().getDeckTOChange().setHero(Mage.getInstance());
+//                break;
+//            case ("Rogue"):
+//                DeckPage.getInstance().getDeckTOChange().setHero(Rogue.getInstance());
+//                break;
+//            case ("Warlock"):
+//                DeckPage.getInstance().getDeckTOChange().setHero(Warlock.getInstance());
+//                break;
+//            case ("Hunter"):
+//                DeckPage.getInstance().getDeckTOChange().setHero(Hunter.getInstance());
+//                break;
+//            case ("Priest"):
+//                DeckPage.getInstance().getDeckTOChange().setHero(Priest.getInstance());
+//                break;
+//
+//            default:
+//                throw new IllegalStateException("Unexpected value: " + s);
+//        }
         //define deck;s name and hero then go to deck page then press done:
         MyMainFrame.getInstance().setContentPane(DeckPage.getInstance());
     }
@@ -149,8 +151,8 @@ public class DeckPanel extends JPanel {
         DeckPanel.getInstance().revalidate();
         this.add(newDeckBtn);
         if (CLI.currentPlayer.getAllDecksOfPlayer() != null) {
-            for (Deck deck : CLI.currentPlayer.getAllDecksOfPlayer()) {
-                initButtonForDeck(deck);
+            for (String deckName : Administer.getListOfPlayersDeckNames()) {
+                initButtonForDeck(deckName);
             }
         }
     }

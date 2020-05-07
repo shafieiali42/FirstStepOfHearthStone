@@ -1,36 +1,30 @@
 package Gui.Panels.CollectionPages;
 
-import Cards.Cards;
-import CommandLineInterface.CLI;
-import Deck.Deck;
+import Controller.Administer;
 import Gui.MyMainFrame;
-import Heroes.Heroes;
-import Utility.MethodsOfShowCardsOnPanel;
-import Heroes.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class CategoryPanelOfChangeDeck extends JPanel {
 
 
     public static final int NUMBER_OF_BTN = 9;
-    public static final int WIDTH_OF_BTN=90;
-    public static final int HEIGHT_OF_BTN =90;
-    private static final int WIDTH_OF_CATEGORY_PANEL_DECK_PAGE=1155;      //TODO NEEDS TO CHANGE
-    private static final int HEIGHT_OF_CATEGORY_PANEL_DECK_PAGE=80;     //TODO NEEDS TO CHANGE
+    public static final int WIDTH_OF_BTN = 90;
+    public static final int HEIGHT_OF_BTN = 90;
+    private static final int WIDTH_OF_CATEGORY_PANEL_DECK_PAGE = 1155;      //TODO NEEDS TO CHANGE
+    private static final int HEIGHT_OF_CATEGORY_PANEL_DECK_PAGE = 80;     //TODO NEEDS TO CHANGE
     private Color colorOfTextOfBtn = new Color(255, 0, 0);
     private Color colorOfBtn = new Color(48, 48, 45);
 
-    public  int getWidthOfCategoryPanelDeckPage() {
+    public int getWidthOfCategoryPanelDeckPage() {
         return WIDTH_OF_CATEGORY_PANEL_DECK_PAGE;
     }
 
-    public  int getHeightOfCategoryPanelDeckPage() {
+    public int getHeightOfCategoryPanelDeckPage() {
         return HEIGHT_OF_CATEGORY_PANEL_DECK_PAGE;
     }
 
@@ -43,8 +37,8 @@ public class CategoryPanelOfChangeDeck extends JPanel {
     private JButton selectDeckBtn;
 
 
-
     private static CategoryPanelOfChangeDeck categoryPanelOfChangeDeck = new CategoryPanelOfChangeDeck();
+
     public static CategoryPanelOfChangeDeck getInstance() {
         return categoryPanelOfChangeDeck;
     }
@@ -63,30 +57,27 @@ public class CategoryPanelOfChangeDeck extends JPanel {
         initSelectDeckBtn();
         initRemoveDeckBtn();
 
-  
+
     }
 
 
     private void initSelectDeckBtn() {
-        selectDeckBtn = new JButton("Select Deck");
+        selectDeckBtn = new JButton("Select Models.Deck");
         designBtn(selectDeckBtn);
         selectDeckBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    selectDeck();
-                } catch (CloneNotSupportedException ex) {
-                    ex.printStackTrace();
-                }
+                selectDeck();
             }
         });
         add(selectDeckBtn);
     }
 
-    private void selectDeck() throws CloneNotSupportedException {
-        CLI.currentPlayer.setCurrentDeck(DeckPage.getInstance().getDeckTOChange());
-        JOptionPane.showMessageDialog(null, "Your Deck is:"+DeckPage.getInstance().getDeckTOChange().getName());
-        CLI.currentPlayer.getLoggerOfMyPlayer().info("select "+DeckPage.getInstance().getDeckTOChange().getName()+" for main deck");
+    private void selectDeck() {
+//        CLI.currentPlayer.setCurrentDeck(DeckPage.getInstance().getDeckTOChange());
+        Administer.selectMainDeck();
+        JOptionPane.showMessageDialog(null, "Your Deck is:" + DeckPage.getInstance().getNameOfDeckToChange());
+//        CLI.currentPlayer.getLoggerOfMyPlayer().info("select " + DeckPage.getInstance().getDeckTOChange().getName() + " for main deck");
     }
 
     private void initChangeNameBtn() {
@@ -102,59 +93,14 @@ public class CategoryPanelOfChangeDeck extends JPanel {
     }
 
     private void changeName() {
-        System.out.println(DeckPage.getInstance().getDeckTOChange().getName());
-        DeckPage.getInstance().getDeckTOChange().setName(JOptionPane.showInputDialog("Enter your favorite name!"));
-        CLI.currentPlayer.getLoggerOfMyPlayer().info("Change name of deck ");
+        String name=JOptionPane.showInputDialog("Enter your favorite name!");
+        Administer.changeNameOfDeck(name);
+//        DeckPage.getInstance().getDeckTOChange().setName(JOptionPane.showInputDialog("Enter your favorite name!"));
+//        CLI.currentPlayer.getLoggerOfMyPlayer().info("Change name of deck ");
     }
 
-    private void changeHero() {
-        Object[] possibilities = {"Mage", "Rogue", "Warlock","Hunter","Priest"};
-        Icon questionError = UIManager.getIcon("OptionPane.questionIcon");
-        String s = (String)JOptionPane.showInputDialog(
-                null,
-                "Select Your favorite Hero:",
-                "Select Hero",
-                JOptionPane.PLAIN_MESSAGE,
-                questionError,
-                possibilities,
-                DeckPage.getInstance().getDeckTOChange().getHeroName());
 
-        switch (s){ // TODO needs changesssssssssssssssssssssssssss:(((((((((((
-            case ("Mage"):
-                DeckPage.getInstance().getDeckTOChange().setHero(Mage.getInstance());
-                break;
-            case ("Rogue"):
-                DeckPage.getInstance().getDeckTOChange().setHero(Rogue.getInstance());
-                break;
-            case ("Warlock"):
-                DeckPage.getInstance().getDeckTOChange().setHero(Warlock.getInstance());
-                break;
-            case ("Hunter"):
-                DeckPage.getInstance().getDeckTOChange().setHero(Hunter.getInstance());
-                break;
-            case ("Priest"):
-                DeckPage.getInstance().getDeckTOChange().setHero(Priest.getInstance());
-                break;
-
-            default:
-                throw new IllegalStateException("Unexpected value: " + s);
-        }
-        CLI.currentPlayer.getLoggerOfMyPlayer().info("Changed hero to "+s);
-
-    }
-
-    private void removeDeck() {
-        System.out.println(CLI.currentPlayer.getAllDecksOfPlayer().size());
-        CLI.currentPlayer.getAllDecksOfPlayer().remove(DeckPage.getInstance().getDeckTOChange());
-        DeckPanel.getInstance().showDeckButtons();
-        CollectionPage.getInstance().repaint();
-        CollectionPage.getInstance().revalidate();
-        MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
-        CLI.currentPlayer.getLoggerOfMyPlayer().info("Removed "+DeckPage.getInstance().getDeckTOChange().getName());
-    } //TODO maybe needs to be changed:))
-
-
-    public void designBtn(JButton btn){
+    public void designBtn(JButton btn) {
         btn.setSize(WIDTH_OF_BTN, HEIGHT_OF_BTN);
         btn.setFont(new Font("TimesRoman", Font.ITALIC, 20));
         btn.setForeground(colorOfTextOfBtn);
@@ -173,8 +119,45 @@ public class CategoryPanelOfChangeDeck extends JPanel {
         add(changeHeroBtn);
     }
 
+    private void changeHero() {
+        Object[] possibilities = {"Mage", "Rogue", "Warlock", "Hunter", "Priest"};
+        Icon questionError = UIManager.getIcon("OptionPane.questionIcon");
+        String s = (String) JOptionPane.showInputDialog(
+                null,
+                "Select Your favorite Hero:",
+                "Select Hero",
+                JOptionPane.PLAIN_MESSAGE,
+                questionError,
+                possibilities,
+                Administer.getHeroNameOfDeckToChange());
+
+        Administer.changeHeroOfDeck(s);
+//        switch (s){ // TODO needs changesssssssssssssssssssssssssss:(((((((((((
+//            case ("Mage"):
+//                DeckPage.getInstance().getDeckTOChange().setHero(Mage.getInstance());
+//                break;
+//            case ("Rogue"):
+//                DeckPage.getInstance().getDeckTOChange().setHero(Rogue.getInstance());
+//                break;
+//            case ("Warlock"):
+//                DeckPage.getInstance().getDeckTOChange().setHero(Warlock.getInstance());
+//                break;
+//            case ("Hunter"):
+//                DeckPage.getInstance().getDeckTOChange().setHero(Hunter.getInstance());
+//                break;
+//            case ("Priest"):
+//                DeckPage.getInstance().getDeckTOChange().setHero(Priest.getInstance());
+//                break;
+//
+//            default:
+//                throw new IllegalStateException("Unexpected value: " + s);
+//        }
+//        CLI.currentPlayer.getLoggerOfMyPlayer().info("Changed hero to "+s);
+
+    }
+
     private void initRemoveDeckBtn() {
-        removeDeckBtn = new JButton("Remove Deck");
+        removeDeckBtn = new JButton("Remove Models.Deck");
         designBtn(removeDeckBtn);
         removeDeckBtn.addActionListener(new ActionListener() {
             @Override
@@ -186,6 +169,16 @@ public class CategoryPanelOfChangeDeck extends JPanel {
         add(removeDeckBtn);
     }
 
+    private void removeDeck() {
+//        CLI.currentPlayer.getAllDecksOfPlayer().remove(DeckPage.getInstance().getDeckTOChange());
+        Administer.removeDeck();
+        DeckPanel.getInstance().showDeckButtons();
+        CollectionPage.getInstance().repaint();
+        CollectionPage.getInstance().revalidate();
+        MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
+//        CLI.currentPlayer.getLoggerOfMyPlayer().info("Removed "+DeckPage.getInstance().getDeckTOChange().getName());
+    }
+
     private void initNeutralBtn() {
         neutralBtn = new JButton("Neutral");
         designBtn(neutralBtn);
@@ -193,7 +186,8 @@ public class CategoryPanelOfChangeDeck extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    filterByClassOfCard("Neutral");
+                    Administer.showCardsOnCardPanelWithSpecifiedClass("Neutral",
+                            CardPanel.getInstanceOfDeckPage(), CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -203,13 +197,14 @@ public class CategoryPanelOfChangeDeck extends JPanel {
     }
 
     private void initHeroCardsBtn() {
-        HeroCardsBtn = new JButton("Hero Cards");
+        HeroCardsBtn = new JButton("Hero Models.Cards");
         designBtn(HeroCardsBtn);
         HeroCardsBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    filterByClassOfCard(DeckPage.getInstance().getDeckTOChange().getHero().getName());
+                    Administer.showCardsOnCardPanelWithSpecifiedClass(Administer.getHeroNameOfDeckToChange(),
+                            CardPanel.getInstanceOfDeckPage(), CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -218,16 +213,16 @@ public class CategoryPanelOfChangeDeck extends JPanel {
         add(HeroCardsBtn);
     }
 
-    public void filterByClassOfCard(String className) throws IOException {
-        ArrayList<Cards> filteredCardsByClassOfCard =new ArrayList<Cards>();
-        for (Cards card:Cards.getAllCards()){
-            if (card.getClassOfCard().equalsIgnoreCase(className)){
-                filteredCardsByClassOfCard.add(card);
-            }
-        }
-        MethodsOfShowCardsOnPanel.showCards(filteredCardsByClassOfCard,CardPanel.getInstanceOfDeckPage(),CardPanel.getNumOfCardInEveryRow());
-        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show " +className+" cards");
-    } //TODO show unlock cards with gray:((
+//    public void filterByClassOfCard(String className) throws IOException {
+//        ArrayList<Cards> filteredCardsByClassOfCard =new ArrayList<Cards>();
+//        for (Cards card:Cards.getAllCards()){
+//            if (card.getClassOfCard().equalsIgnoreCase(className)){
+//                filteredCardsByClassOfCard.add(card);
+//            }
+//        }
+//        MethodsOfShowCardsOnPanel.showCards(filteredCardsByClassOfCard,CardPanel.getInstanceOfDeckPage(),CardPanel.getNumOfCardInEveryRow());
+//        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show " +className+" cards");
+//    } //TODO show unlock cards with gray:((
 
 
 }

@@ -1,9 +1,9 @@
 package Player;
 
-import Cards.Cards;
+import Models.Cards.Cards;
 import CommandLineInterface.CLI;
-import Deck.Deck;
-import Heroes.*;
+import Models.Deck.Deck;
+import Models.Heroes.*;
 import Log.LoggerOfProject;
 import com.google.gson.annotations.Expose;
 

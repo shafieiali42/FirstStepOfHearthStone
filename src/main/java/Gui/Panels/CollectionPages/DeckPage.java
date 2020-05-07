@@ -1,6 +1,6 @@
 package Gui.Panels.CollectionPages;
 
-import Deck.Deck;
+import Models.Deck.Deck;
 import Gui.MyMainFrame;
 
 import javax.swing.*;
@@ -11,19 +11,29 @@ public class DeckPage extends JPanel {
     private static DeckPage deckPage=new DeckPage();
     public static DeckPage getInstance(){return deckPage;}
 
-    public Deck getDeckTOChange() {
-        return deckTOChange;
+    private String nameOfDeckToChange;
+
+    public String getNameOfDeckToChange() {
+        return nameOfDeckToChange;
     }
 
-    public void setDeckTOChange(Deck deckTOChange) {
-        this.deckTOChange = deckTOChange;
+    public void setNameOfDeckToChange(String nameOfDeckToChange) {
+        this.nameOfDeckToChange = nameOfDeckToChange;
     }
+    //    public Deck getDeckTOChange() {
+//        return deckTOChange;
+//    }
 
-    private Deck deckTOChange;
+//    public void setDeckTOChange(Deck deckTOChange) {
+//        this.deckTOChange = deckTOChange;
+//    }
+
+//    private Deck deckTOChange;
 
     private DeckPage(){
 
-        deckTOChange=new Deck();
+        nameOfDeckToChange="";
+//        deckTOChange=new Deck();
         setSize(MyMainFrame.getInstance().getMyFrameWidth(),MyMainFrame.getInstance().getMyFrameHeight());
         setLayout(null);
         this.addPanel(CategoryPanelOfChangeDeck.getInstance(),0,0,CategoryPanelOfChangeDeck.getInstance().getWidthOfCategoryPanelDeckPage(),

@@ -3,7 +3,7 @@ package Gui.Panels.StatusPanel;
 
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
-import Deck.Deck;
+import Models.Deck.Deck;
 import Gui.MyMainFrame;
 import Gui.Panels.MenuPanel.MainMenuPage;
 import Utility.LengthOfMessage;
@@ -91,7 +91,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initTenthBtn() {
-        tenthBtn=new JButton("Tenth Deck");
+        tenthBtn=new JButton("Tenth Models.Deck");
         designBtn(tenthBtn);
         tenthBtn.setBounds(0,firstBtn.getHeight()*9,secondBtn.getWidth(),secondBtn.getHeight());
         tenthBtn.addActionListener(new ActionListener() {
@@ -104,7 +104,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initNinthBtn() {
-        ninthBtn=new JButton("Ninth Deck");
+        ninthBtn=new JButton("Ninth Models.Deck");
         designBtn(ninthBtn);
         ninthBtn.setBounds(0,firstBtn.getHeight()*8,secondBtn.getWidth(),secondBtn.getHeight());
         ninthBtn.addActionListener(new ActionListener() {
@@ -117,7 +117,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initEighthBtn() {
-        eighthBtn=new JButton("Eighth Deck");
+        eighthBtn=new JButton("Eighth Models.Deck");
         designBtn(eighthBtn);
         eighthBtn.setBounds(0,firstBtn.getHeight()*7,secondBtn.getWidth(),secondBtn.getHeight());
         eighthBtn.addActionListener(new ActionListener() {
@@ -130,7 +130,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initSeventhBtn() {
-        seventhBtn=new JButton("Seventh Deck");
+        seventhBtn=new JButton("Seventh Models.Deck");
         designBtn(seventhBtn);
         seventhBtn.setBounds(0,firstBtn.getHeight()*6,secondBtn.getWidth(),secondBtn.getHeight());
         seventhBtn.addActionListener(new ActionListener() {
@@ -143,7 +143,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initSixthBtn() {
-        sixthBtn=new JButton("Sixth Deck");
+        sixthBtn=new JButton("Sixth Models.Deck");
         designBtn(sixthBtn);
         sixthBtn.setBounds(0,firstBtn.getHeight()*5,secondBtn.getWidth(),secondBtn.getHeight());
         sixthBtn.addActionListener(new ActionListener() {
@@ -156,7 +156,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initFifthBtn() {
-        fifthBtn=new JButton("Fifth Deck");
+        fifthBtn=new JButton("Fifth Models.Deck");
         designBtn(fifthBtn);
         fifthBtn.setBounds(0,firstBtn.getHeight()*4,secondBtn.getWidth(),secondBtn.getHeight());
         fifthBtn.addActionListener(new ActionListener() {
@@ -169,7 +169,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initFourthBtn() {
-        fourthBtn=new JButton("Fourth Deck");
+        fourthBtn=new JButton("Fourth Models.Deck");
         designBtn(fourthBtn);
         fourthBtn.setBounds(0,firstBtn.getHeight()*3,secondBtn.getWidth(),secondBtn.getHeight());
         fourthBtn.addActionListener(new ActionListener() {
@@ -182,7 +182,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initThirdBtn() {
-        thirdBtn=new JButton("Third Deck");
+        thirdBtn=new JButton("Third Models.Deck");
         designBtn(thirdBtn);
         thirdBtn.setBounds(0,firstBtn.getHeight()*2,secondBtn.getWidth(),secondBtn.getHeight());
         thirdBtn.addActionListener(new ActionListener() {
@@ -195,7 +195,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initSecondBtn() {
-        secondBtn=new JButton("Second Deck");
+        secondBtn=new JButton("Second Models.Deck");
         designBtn(secondBtn);
         secondBtn.setBounds(0,firstBtn.getHeight(),secondBtn.getWidth(),secondBtn.getHeight());
         secondBtn.addActionListener(new ActionListener() {
@@ -208,7 +208,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initFirstBtn() {
-        firstBtn=new JButton("First Deck");
+        firstBtn=new JButton("First Models.Deck");
         designBtn(firstBtn);
         firstBtn.setBounds(0,0,firstBtn.getWidth(),firstBtn.getHeight());
         firstBtn.addActionListener(new ActionListener() {

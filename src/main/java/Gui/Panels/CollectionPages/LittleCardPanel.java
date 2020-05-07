@@ -1,7 +1,6 @@
 package Gui.Panels.CollectionPages;
 
-import Cards.Cards;
-import CommandLineInterface.CLI;
+import Models.Cards.Cards;
 
 import javax.swing.*;
 import java.awt.*;

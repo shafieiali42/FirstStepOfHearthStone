@@ -1,11 +1,12 @@
-import Cards.*;
+import Models.Cards.*;
+
+import Utility.JsonReaders.*;
 import CommandLineInterface.CLI;
-import Gui.MyMainFrame;
 import Gui.Panels.CollectionPages.LittleCardPanel;
 import Gui.Panels.GamePage.GraphicLoop;
-import Heroes.Mage;
-import Heroes.Rogue;
-import Heroes.Warlock;
+import Models.Heroes.Mage;
+import Models.Heroes.Rogue;
+import Models.Heroes.Warlock;
 import Utility.Constant;
 
 import java.io.IOException;

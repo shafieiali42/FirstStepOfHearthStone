@@ -1,6 +1,6 @@
 package Gui.Panels.GamePage;
 
-import Gui.Panels.CardImagePanel;
+import View.CardView.CardImagePanel;
 import Logic.Alliance;
 import Logic.GameState;
 import Utility.Constant;

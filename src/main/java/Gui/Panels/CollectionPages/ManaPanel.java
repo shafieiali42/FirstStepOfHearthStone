@@ -1,20 +1,19 @@
 package Gui.Panels.CollectionPages;
 
-import Cards.Cards;
+import Controller.Administer;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
 import Gui.MyMainFrame;
 import Gui.Panels.GamePage.GamePage;
-import Gui.Panels.GamePage.PlayPanel;
 import Gui.Panels.MenuPanel.MainMenuPage;
-import Utility.MethodsOfShowCardsOnPanel;
+
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.util.ArrayList;
+
 
 public class ManaPanel extends JPanel {
 
@@ -94,7 +93,8 @@ public class ManaPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Search for card: "+searchField.getText());
+                    Administer.writeLog("Search for card: "+searchField.getText());
+//                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Search for card: "+searchField.getText());
                     searchInCards(searchField.getText());
                 } catch (IOException ex) {
                     ex.printStackTrace();
@@ -104,6 +104,9 @@ public class ManaPanel extends JPanel {
         add(searchField);
         add(searchBtn);
     }
+
+
+
 
     public void designBtn(JButton btn) {
         btn.setSize(WIDTH_OF_MANA_BTN, HEIGHT_OF_MANA_BTN);
@@ -273,6 +276,8 @@ public class ManaPanel extends JPanel {
         this.add(oneManaBtn);
     }
 
+
+
     private void initBackBtn() {
         backBtn = new JButton("Back");
         backBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
@@ -285,7 +290,8 @@ public class ManaPanel extends JPanel {
                 CardPanel.getInstanceOfCollectionPage().removeAll();
                 CardPanel.getInstanceOfCollectionPage().repaint();
                 CardPanel.getInstanceOfCollectionPage().revalidate();
-                CLI.currentPlayer.getLoggerOfMyPlayer().info("Go back from collection page");
+                Administer.writeLog("Go back from collection page");
+//                CLI.currentPlayer.getLoggerOfMyPlayer().info("Go back from collection page");
                 goBack();
             }
         });
@@ -298,7 +304,7 @@ public class ManaPanel extends JPanel {
         } else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
             JOptionPane.showMessageDialog(null,"You should press done button","Error",JOptionPane.ERROR_MESSAGE);
         }else if (CLI.getStatus().equals(Status.COLLECTION_PAGE_FROM_PLAY)){
-            if (CLI.currentPlayer.getCurrentDeck().getHero()!=null){
+            if (!Administer.isCurrentPlayersCurrentDeckNull()){
                 CLI.setStatus(Status.PLAY_PAGE);
             MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
             }else {
@@ -310,35 +316,37 @@ public class ManaPanel extends JPanel {
 
 
     private void searchInCards(String searchFieldText) throws IOException {
-        ArrayList<Cards> foundCards = new ArrayList<Cards>();
-        for (Cards card : Cards.getAllCards()) {
-            if (card.getName().toLowerCase().contains(searchFieldText)) {
-                foundCards.add(card);
-            }
-        }
-        if (CLI.getStatus().equals(Status.COLLECTIONS_PAGE)) {
-            MethodsOfShowCardsOnPanel.showCards(foundCards, CardPanel.getInstanceOfCollectionPage(), CardPanel.getNumOfCardInEveryRow());
-        } else if (CLI.getStatus().equals(Status.CHANGE_DECK) || CLI.getStatus().equals(Status.MAKE_DECK)) {
-            MethodsOfShowCardsOnPanel.showCards(foundCards, CardPanel.getInstanceOfDeckPage(), CardPanel.getNumOfCardInEveryRow());
-        }
-
-
-    }//TODO make unlock cards gray:((
+        Administer.showSearchedCards(searchFieldText,CardPanel.getInstanceOfCollectionPage(),
+                CardPanel.getInstanceOfDeckPage(),CardPanel.getNumOfCardInEveryRow());
+//        ArrayList<Cards> foundCards = new ArrayList<Cards>();
+//        for (Cards card : Cards.getAllCards()) {
+//            if (card.getName().toLowerCase().contains(searchFieldText)) {
+//                foundCards.add(card);
+//            }
+//        }
+//        if (CLI.getStatus().equals(Status.COLLECTIONS_PAGE)) {
+//            MethodsOfShowCardsOnPanel.showCards(foundCards, CardPanel.getInstanceOfCollectionPage(), CardPanel.getNumOfCardInEveryRow());
+//        } else if (CLI.getStatus().equals(Status.CHANGE_DECK) || CLI.getStatus().equals(Status.MAKE_DECK)) {
+//            MethodsOfShowCardsOnPanel.showCards(foundCards, CardPanel.getInstanceOfDeckPage(), CardPanel.getNumOfCardInEveryRow());
+//        }
+    }
 
     public void filterByMana(int mana) throws IOException {
-        ArrayList<Cards> filteredByManaCards = new ArrayList<Cards>();
-        for (Cards card : Cards.getAllCards()) {
-            if (card.getManaCost() == mana) {
-                filteredByManaCards.add(card);
-            }
-        }
-        if (CLI.getStatus().equals(Status.COLLECTIONS_PAGE)) {
-            MethodsOfShowCardsOnPanel.showCards(filteredByManaCards, CardPanel.getInstanceOfCollectionPage(), CardPanel.getNumOfCardInEveryRow());
-        } else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
-            MethodsOfShowCardsOnPanel.showCards(filteredByManaCards, CardPanel.getInstanceOfDeckPage(), CardPanel.getNumOfCardInEveryRow());
-        }
-        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show cards with mana: "+mana);
+        Administer.showCardsWithSpecifiedManaCost(mana,CardPanel.getInstanceOfCollectionPage(),
+                CardPanel.getInstanceOfDeckPage(),CardPanel.getNumOfCardInEveryRow());
+//        ArrayList<Cards> filteredByManaCards = new ArrayList<Cards>();
+//        for (Cards card : Cards.getAllCards()) {
+//            if (card.getManaCost() == mana) {
+//                filteredByManaCards.add(card);
+//            }
+//        }
+//        if (CLI.getStatus().equals(Status.COLLECTIONS_PAGE)) {
+//            MethodsOfShowCardsOnPanel.showCards(filteredByManaCards, CardPanel.getInstanceOfCollectionPage(), CardPanel.getNumOfCardInEveryRow());
+//        } else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
+//            MethodsOfShowCardsOnPanel.showCards(filteredByManaCards, CardPanel.getInstanceOfDeckPage(), CardPanel.getNumOfCardInEveryRow());
+//        }
+//        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show cards with mana: "+mana);
 
-    }//TODO make unlock cards gray:((
+    }
 
 }
