@@ -43,11 +43,16 @@ public class PlayPanel extends JPanel {
     private static final int X_COORDINATE_OF_HERO_POWER_IMAGE = X_COORDINATE_OF_HERO_IMAGE + WIDTH_OF_HERO_IMAGE;
     private static final int Y_COORDINATE_OF_HERO_POWER_IMAGE = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_HERO_POWER_IMAGE;
 
+    private static final int WIDTH_OF_HEAL_FIELD=10;
+    private static final int HEIGHT_OF_HEAL_FIELD=10;
+    private static final int X_COORDINATE_OF_HEAL_FIELD=X_COORDINATE_OF_HERO_IMAGE+WIDTH_OF_HERO_IMAGE-35;
+    private static final int Y_COORDINATE_OF_HEAL_FIELD=Y_COORDINATE_OF_HERO_IMAGE+HEIGHT_OF_HERO_IMAGE;
 
     private static final int WIDTH_OF_WEAPON_IMAGE = 80;
     private static final int HEIGHT_OF_WEAPON_IMAGE = 100;
     private static final int X_COORDINATE_OF_WEAPON = X_COORDINATE_OF_HERO_IMAGE - WIDTH_OF_WEAPON_IMAGE;
     private static final int Y_COORDINATE_OF_WEAPON = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_WEAPON_IMAGE;
+
 
 
     private BufferedImage heroImage;
@@ -130,6 +135,9 @@ public class PlayPanel extends JPanel {
 
 
         Administer.showWeaponOfGameState(this,WIDTH_OF_WEAPON_IMAGE,HEIGHT_OF_WEAPON_IMAGE,X_COORDINATE_OF_WEAPON,Y_COORDINATE_OF_WEAPON);
+        graphics2D.setColor(Color.red);
+        graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 25));
+        graphics2D.drawString(Administer.getHealthOfCurrentHeroInGameState()+"",X_COORDINATE_OF_HEAL_FIELD,Y_COORDINATE_OF_HEAL_FIELD);
 //        if (GameState.getInstance().getCurrentWeapon()!=null){
 //            try {
 //                CardImagePanel cardImagePanel=new CardImagePanel(GameState.getInstance().getCurrentWeapon().getName(),

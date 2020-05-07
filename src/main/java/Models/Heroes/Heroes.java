@@ -34,4 +34,11 @@ public class Heroes {
           return "[ Name: "+this.getName()+", healthPower: "+this.healthPower+"]";
      }
 
+     public int getHealthPower() {
+          return healthPower;
+     }
+
+     public void setHealthPower(int healthPower) {
+          this.healthPower = healthPower;
+     }
 }

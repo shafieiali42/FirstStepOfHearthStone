@@ -51,14 +51,12 @@ public class Player {
     private ArrayList<Cards> availableCardsThatWeCanAddIntoOurDeck = new ArrayList<Cards>();
     @Expose(serialize = true, deserialize = true)
     private ArrayList<Cards> lockCards = new ArrayList<Cards>();//TODO needs to be init:))
+//    @Expose(serialize = true, deserialize = true)
+//    private ArrayList<Cards> unLockCards = new ArrayList<Cards>();//TODO needs to be init:))
     @Expose(serialize = true, deserialize = true)
-    private ArrayList<Cards> unLockCards = new ArrayList<Cards>();//TODO needs to be init:))
-    @Expose(serialize = true, deserialize = true)
-    private ArrayList<Deck> allDecksOfPlayer=new ArrayList<Deck>();
+    private ArrayList<Deck> allDecksOfPlayer = new ArrayList<Deck>();
     @Expose(serialize = true, deserialize = true)
     private Deck currentDeck;
-
-
 
 
     public Player(String userName, String passWord) throws IOException {
@@ -75,13 +73,10 @@ public class Player {
         setSalableCards();
         setLoggerOfMyPlayer();
         this.money = 500;
-        currentDeck=new Deck();
+        currentDeck = new Deck();
 
 
     }
-
-
-
 
 
     public ArrayList<Deck> getAllDecksOfPlayer() {
@@ -92,9 +87,9 @@ public class Player {
         return lockCards;
     }
 
-    public ArrayList<Cards> getUnLockCards() {
-        return unLockCards;
-    }
+//    public ArrayList<Cards> getUnLockCards() {
+//        return unLockCards;
+//    }
 
     public ArrayList<Cards> getAllCardsOfPlayer() {
         return allCardsOfPlayer;
@@ -160,6 +155,7 @@ public class Player {
         }
         return null;
     }
+
     public Deck getCurrentDeck() {
         return currentDeck;
     }
@@ -191,7 +187,7 @@ public class Player {
         if (!canBuyThisCard) {
             JOptionPane.showMessageDialog(null, "You don't have enough money!");
         }
-        this.getLoggerOfMyPlayer().info("Buy "+card.getName());
+        this.getLoggerOfMyPlayer().info("Buy " + card.getName());
         setAvailableCardsWithThisSituation();
         setBuyableCards();
     }
@@ -216,7 +212,7 @@ public class Player {
         if (!canSellThisCard) {
             JOptionPane.showMessageDialog(null, "You can't sell this card:((");
         }
-        this.getLoggerOfMyPlayer().info("Sell "+card.getName());
+        this.getLoggerOfMyPlayer().info("Sell " + card.getName());
         setAvailableCardsWithThisSituation();
         setSalableCards();
     }
@@ -326,13 +322,14 @@ public class Player {
     }
 
 
-
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
     public void setAvailableHeroes(ArrayList<Heroes> availableHeroes) {
         this.availableHeroes = availableHeroes;
     }
+
     public void setAllCardsOfPlayer() {
         int i = 0;
         for (Cards card : Cards.getAllCards()) {
@@ -348,9 +345,11 @@ public class Player {
 
         allCardsOfPlayer.add(Mage.getSpecialCardsOfMage().get(0));
     }
+
     public void setMoney(int money) {
         this.money = money;
     }
+
     public void setNeutralCardsOfPlayer() {//TODO needs to check!
         for (Cards card : this.allCardsOfPlayer) {
             if (card.getClassOfCard().toLowerCase().trim().equals("neutral")) {
@@ -358,6 +357,7 @@ public class Player {
             }
         }
     }
+
     public void setAvailableCardsWithThisSituation() {
         if (currentHero.getName().equals("Mage")) {
             ArrayList<Cards> mergedList = new ArrayList<Cards>();
@@ -387,15 +387,19 @@ public class Player {
         setBuyableCards();
         setSalableCards();
     }
+
     public void setSigninOrSignup(String signinOrSignup) {
         this.SigninOrSignup = signinOrSignup;
     }
+
     public void setPassWord(String passWord) {
         this.passWord = passWord;
     }
+
     public void setLoggerOfMyPlayer() throws IOException {
         this.loggerOfMyPlayer = LoggerOfProject.getMyLogger("logs\\" + this.getUserName() + ".log");
     }
+
     public void setAvailableCardsThatWeCanAddIntoOurDeck() {
         availableCardsThatWeCanAddIntoOurDeck.clear();
         for (Cards card : availableCardsWithThisSituation) {
@@ -416,6 +420,7 @@ public class Player {
             }
         }
     }
+
     public void setBuyableCards() {
         BuyableCards.clear();
         for (Cards card : Cards.getAllCards()) {
@@ -439,6 +444,7 @@ public class Player {
 
         }
     }
+
     public void setSalableCards() {
         SalableCards.clear();
         HashSet<Cards> mergedSetOfAllDeck = new HashSet<Cards>();
@@ -459,6 +465,14 @@ public class Player {
     }
 
 
+    public void setLockCardsList() {
+        lockCards.clear();
+        for (Cards cards : Cards.getAllCards()) {
+            if (!allCardsOfPlayer.contains(cards)) {
+                lockCards.add(cards);
+            }
+        }
+    }
 
     public void setCurrentDeck(Deck currentDeck) {
         this.currentDeck = currentDeck;

@@ -39,16 +39,18 @@ public class Administer {
     }
 
 
+    public static int getHealthOfCurrentHeroInGameState() {
+        return GameState.getInstance().getPlayer().getCurrentHero().getHealthPower();
+    }
 
-
-    public static void showWeaponOfGameState(JPanel panel,int widthOfWeaponImage,int heightOfWeaponImage,int xCoordinateOfWeapon,int yCoordinateOfWeapon){
-        if (GameState.getInstance().getCurrentWeapon()!=null){
+    public static void showWeaponOfGameState(JPanel panel, int widthOfWeaponImage, int heightOfWeaponImage, int xCoordinateOfWeapon, int yCoordinateOfWeapon) {
+        if (GameState.getInstance().getCurrentWeapon() != null) {
             try {
-                CardImagePanel cardImagePanel=new CardImagePanel(GameState.getInstance().getCurrentWeapon().getName(),
-                        widthOfWeaponImage,heightOfWeaponImage);
+                CardImagePanel cardImagePanel = new CardImagePanel(GameState.getInstance().getCurrentWeapon().getName(),
+                        widthOfWeaponImage, heightOfWeaponImage);
 
-                MethodsOfShowCardsOnPanel.addPanel(cardImagePanel,panel,
-                        xCoordinateOfWeapon,yCoordinateOfWeapon,widthOfWeaponImage,heightOfWeaponImage);
+                MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, panel,
+                        xCoordinateOfWeapon, yCoordinateOfWeapon, widthOfWeaponImage, heightOfWeaponImage);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -60,12 +62,11 @@ public class Administer {
     }
 
     public static void showBattleGroundCardsOfMeAllianceInPlay(JPanel panel, int numberOfCardsPerRowGamePanel) throws IOException {
-        MethodsOfShowCardsOnPanel.showBattleGroundCards(GameState.getInstance().getBattleGroundCards(),panel,numberOfCardsPerRowGamePanel, Alliance.ME);
+        MethodsOfShowCardsOnPanel.showBattleGroundCards(GameState.getInstance().getBattleGroundCards(), panel, numberOfCardsPerRowGamePanel, Alliance.ME);
     }
 
 
-
-    public static String getNameOfCurrentHeroOfGameState(){
+    public static String getNameOfCurrentHeroOfGameState() {
         return GameState.getInstance().getPlayer().getCurrentHero().getName();
     }
 
@@ -190,7 +191,7 @@ public class Administer {
         for (int i = 0; i < DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().size(); i++) {
             if (cards.getName().equalsIgnoreCase(DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().get(i).getNameLabel().getText())) {
                 if (Integer.parseInt(DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().get(i).getUsedLabel().getText()) < 2) {
-                    System.out.println(cards.getName()+" kjjjjjjjjj");
+                    System.out.println(cards.getName() + " kjjjjjjjjj");
                     if (!isLock) {
                         CollectionState.getInstance().getDeckToChange().getListOfCards().add(cards);
                     }
@@ -508,12 +509,14 @@ public class Administer {
     }
 
     public static void showLockCards(JPanel panel, int numberOfCardsPerRow) throws IOException {
+        CLI.currentPlayer.setLockCardsList();
         MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getLockCards(), panel, numberOfCardsPerRow);
         CLI.currentPlayer.getLoggerOfMyPlayer().info("Show lock cards ");
     }
 
     public static void showUnLockCards(JPanel panel, int numberOfCardsPerRow) throws IOException {
-        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getUnLockCards(), panel, numberOfCardsPerRow);
+        CLI.currentPlayer.setAllCardsOfPlayer();
+        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getAllCardsOfPlayer(), panel, numberOfCardsPerRow);
         CLI.currentPlayer.getLoggerOfMyPlayer().info("Show unlock cards ");
 
     }

@@ -3940,3 +3940,87 @@ May 07, 2020 8:39:02 PM Controller.Administer writeLog
 INFO: Navigate into play page
 May 07, 2020 8:39:10 PM Gui.Mapper endTurn
 INFO: End turn
+May 07, 2020 8:40:34 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:40:36 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:40:37 PM Controller.Administer showLockCards
+INFO: Show lock cards 
+May 07, 2020 8:40:42 PM Controller.Administer showAllCards
+INFO: Show all cards 
+May 07, 2020 8:40:43 PM Controller.Administer showUnLockCards
+INFO: Show unlock cards 
+May 07, 2020 8:46:44 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:46:47 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:46:49 PM Controller.Administer showUnLockCards
+INFO: Show unlock cards 
+May 07, 2020 8:46:51 PM Controller.Administer showLockCards
+INFO: Show lock cards 
+May 07, 2020 8:46:55 PM Controller.Administer showAllCards
+INFO: Show all cards 
+May 07, 2020 9:39:17 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 9:39:19 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 9:39:25 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 9:39:40 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 9:39:43 PM Controller.Administer selectMainDeck
+INFO: select x for main deck
+May 07, 2020 9:39:45 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck x
+May 07, 2020 9:39:47 PM Controller.Administer writeLog
+INFO: Go back from collection page
+May 07, 2020 9:39:48 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 07, 2020 9:40:02 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 9:40:04 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 9:41:13 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 9:41:14 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 9:43:03 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 9:43:04 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 9:43:44 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 9:43:57 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 9:44:54 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 9:44:55 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 9:45:39 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 9:45:41 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 9:46:07 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 9:46:08 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 9:46:39 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 9:46:40 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 9:47:12 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 9:47:14 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 9:48:29 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 9:48:30 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 9:49:13 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 9:49:15 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 9:49:47 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 9:49:48 PM Controller.Administer writeLog
+INFO: Navigate into play page
