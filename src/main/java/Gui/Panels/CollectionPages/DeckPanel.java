@@ -13,12 +13,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import Models.Heroes.*;
+import Utility.Constant;
 
 public class DeckPanel extends JPanel {
 
 
-    private static final int WIDTH_OF_DECK_PANEL = 250;      //TODO NEEDS TO CHANGE
-    private static final int HEIGHT_OF_DECK_PANEL = 1600;     //TODO NEEDS TO CHANGE
+//    private static final int WIDTH_OF_DECK_PANEL = 250;
+//    private static final int HEIGHT_OF_DECK_PANEL = 1600;
     private static final int WIDTH_OF_BTN = 180;
     private static final int HEIGHT_OF_BTN = 40;
     private Color colorOfTextOfNewDeckBtn = new Color(255, 0, 0);
@@ -31,13 +32,13 @@ public class DeckPanel extends JPanel {
     }
 
 
-    public int getWidthOfDeckPanel() {
-        return WIDTH_OF_DECK_PANEL;
-    }
-
-    public int getHeightOfDeckPanel() {
-        return HEIGHT_OF_DECK_PANEL;
-    }
+//    public int getWidthOfDeckPanel() {
+//        return WIDTH_OF_DECK_PANEL;
+//    }
+//
+//    public int getHeightOfDeckPanel() {
+//        return HEIGHT_OF_DECK_PANEL;
+//    }
 
 
     private JButton newDeckBtn;
@@ -55,7 +56,7 @@ public class DeckPanel extends JPanel {
         setBackground(Color.blue);
         setLayout(new FlowLayout(1, 20, 20));
         setJScrollPane(new JScrollPane(this));
-        setBounds(0, 0, WIDTH_OF_DECK_PANEL, HEIGHT_OF_DECK_PANEL);
+        setBounds(0, 0, Constant.WIDTH_OF_DECK_PANEL, Constant.HEIGHT_OF_DECK_PANEL);
         initNewDeckBtn();
     }
 

@@ -4,7 +4,7 @@ import Controller.Administer;
 
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
-
+import Utility.Constant;
 
 
 import javax.swing.*;
@@ -32,8 +32,8 @@ public class BuySellPanel extends JPanel {
     private Color colorOfBtn = new Color(48, 48, 45);
     public static final int WIDTH_OF_BTN = 140;
     public static final int HEIGHT_OF_BTN = 60;
-    private static final int WIDTH_OF_BUY_SELL_PANEL = 400;      //TODO NEEDS TO CHANGE
-    private static final int HEIGHT_OF_BUY_SELL_PANEL = 730;
+//    private static final int WIDTH_OF_BUY_SELL_PANEL = 400;
+//    private static final int HEIGHT_OF_BUY_SELL_PANEL = 730;
     private JLabel priceLabel;
     private JButton transactionBtn;
 
@@ -62,7 +62,7 @@ public class BuySellPanel extends JPanel {
         initTransactionBtn();
 
         PanelToShowCardInBuySellPanel.getInstance().setBounds(
-                (BuySellPanel.getWidthOfBuySellPanel() - PanelToShowCardInBuySellPanel.getInstance().getWidth()) / 2, 100,
+                (Constant.WIDTH_OF_BUY_SELL_PANEL - PanelToShowCardInBuySellPanel.getInstance().getWidth()) / 2, 100,
                 PanelToShowCardInBuySellPanel.getInstance().getWidth(),
                 PanelToShowCardInBuySellPanel.getInstance().getHeight());
 
@@ -178,12 +178,12 @@ public class BuySellPanel extends JPanel {
 
 
 
-    public static int getWidthOfBuySellPanel() {
-        return WIDTH_OF_BUY_SELL_PANEL;
-    }
-    public static int getHeightOfBuySellPanel() {
-        return HEIGHT_OF_BUY_SELL_PANEL;
-    }
+//    public static int getWidthOfBuySellPanel() {
+//        return WIDTH_OF_BUY_SELL_PANEL;
+//    }
+//    public static int getHeightOfBuySellPanel() {
+//        return HEIGHT_OF_BUY_SELL_PANEL;
+//    }
     public boolean getIsFirstTime() {
         return isFirstTime;
     }

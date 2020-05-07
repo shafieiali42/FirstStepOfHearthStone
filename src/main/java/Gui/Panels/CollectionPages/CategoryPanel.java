@@ -13,16 +13,16 @@ public class CategoryPanel extends JPanel {
     public static final int NUMBER_OF_BTN = 9;
     public static final int WIDTH_OF_BTN=90;
     public static final int HEIGHT_OF_BTN =90;
-    private static final int WIDTH_OF_CATEGORY_PANEL=1155;      //TODO NEEDS TO CHANGE
-    private static final int HEIGHT_OF_CATEGORY_PANEL=80;     //TODO NEEDS TO CHANGE
-
-    public  int getWidthOfCategoryPanel() {
-        return WIDTH_OF_CATEGORY_PANEL;
-    }
-
-    public  int getHeightOfCategoryPanel() {
-        return HEIGHT_OF_CATEGORY_PANEL;
-    }
+//    private static final int WIDTH_OF_CATEGORY_PANEL=1155;      //TODO NEEDS TO CHANGE
+//    private static final int HEIGHT_OF_CATEGORY_PANEL=80;     //TODO NEEDS TO CHANGE
+//
+//    public  int getWidthOfCategoryPanel() {
+//        return WIDTH_OF_CATEGORY_PANEL;
+//    }
+//
+//    public  int getHeightOfCategoryPanel() {
+//        return HEIGHT_OF_CATEGORY_PANEL;
+//    }
 
     private JButton mageBtn;
     private JButton rogueBtn;

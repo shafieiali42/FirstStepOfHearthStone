@@ -5,6 +5,7 @@ import Models.Cards.Cards;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
 import Gui.MyMainFrame;
+import Utility.Constant;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,17 +18,17 @@ public class DeckViewer extends JPanel {
     private Color colorOfBtn = new Color(48, 48, 45);
     public static final int WIDTH_OF_BTN = 90;
     public static final int HEIGHT_OF_BTN = 90;
-    private static final int WIDTH_OF_DECK_VIEWER = 250;      //TODO NEEDS TO CHANGE
+//    private static final int WIDTH_OF_DECK_VIEWER = 250;      //TODO NEEDS TO CHANGE
+//    private static final int HEIGHT_OF_DECK_VIEWER = 800;     //TODO NEEDS TO CHANGE
 
-    public static int getWidthOfDeckViewer() {
-        return WIDTH_OF_DECK_VIEWER;
-    }
+//    public static int getWidthOfDeckViewer() {
+//        return WIDTH_OF_DECK_VIEWER;
+//    }
+//
+//    public static int getHeightOfDeckViewer() {
+//        return HEIGHT_OF_DECK_VIEWER;
+//    }
 
-    public static int getHeightOfDeckViewer() {
-        return HEIGHT_OF_DECK_VIEWER;
-    }
-
-    private static final int HEIGHT_OF_DECK_VIEWER = 800;     //TODO NEEDS TO CHANGE
 
     private static DeckViewer deckViewer = new DeckViewer();
 
@@ -41,7 +42,7 @@ public class DeckViewer extends JPanel {
     private DeckViewer() {
         setLayout(null);
         setBackground(Color.gray);
-        setSize(WIDTH_OF_DECK_VIEWER, HEIGHT_OF_DECK_VIEWER);
+        setSize(Constant.WIDTH_OF_DECK_VIEWER, Constant.HEIGHT_OF_DECK_VIEWER);
         initDoneBtn();
     }
 
@@ -56,8 +57,8 @@ public class DeckViewer extends JPanel {
     private void initDoneBtn() {
         doneBtn = new JButton("Done");
         designBtn(doneBtn);
-        doneBtn.setBounds((DeckViewer.WIDTH_OF_DECK_VIEWER - doneBtn.getWidth()) / 2,
-                30* LittleCardPanel.getHeightOfLittleCard() + 100, doneBtn.getWidth(), doneBtn.getHeight());
+        doneBtn.setBounds((Constant.WIDTH_OF_DECK_VIEWER - doneBtn.getWidth()) / 2,
+                30* Constant.HEIGHT_OF_LITTLE_CARD + 100, doneBtn.getWidth(), doneBtn.getHeight());
         doneBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -114,7 +115,7 @@ public class DeckViewer extends JPanel {
                 if (littleCardPanel.getNameLabel().getText().equalsIgnoreCase(card.getName())) {
 
                     Administer.showLittleCardPanelOnDeckViewer(littleCardPanel, this,
-                            (DeckViewer.WIDTH_OF_DECK_VIEWER - littleCardPanel.getWidth()) / 2, yCoordinate);
+                            (Constant.WIDTH_OF_DECK_VIEWER - littleCardPanel.getWidth()) / 2, yCoordinate);
 //                    MethodsOfShowCardsOnPanel.addPanel(littleCardPanel, this,
 //                            (DeckViewer.WIDTH_OF_DECK_VIEWER - littleCardPanel.getWidth()) / 2, yCoordinate,
 //                            littleCardPanel.getWidth(), littleCardPanel.getHeight());

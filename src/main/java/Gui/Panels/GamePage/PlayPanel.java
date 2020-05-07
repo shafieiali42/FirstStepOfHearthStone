@@ -13,45 +13,46 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+import static Utility.Constant.*;
+
 public class PlayPanel extends JPanel {
 
-    private static final int WIDTH_OF_GAME_PANEL = 1115;
-    private static final int HEIGHT_OF_GAME_PANEL = 600;
-    private static final int WIDTH_OF_EACH_CARD_GAME_PANEL = 95;
-    private static final int HEIGHT_OF_EACH_CARD_GAME_PANEL = 110;
-    private static final int NUMBER_OF_CARDS_PER_ROW_GAME_PANEL = 7;
-    private static final int MIN_X_FOR_PUT_CARDS = 50;
-    private static final int MAX_X_FOR_PUT_CARDS = (NUMBER_OF_CARDS_PER_ROW_GAME_PANEL-1)*(WIDTH_OF_EACH_CARD_GAME_PANEL+50)+50;
-    private static final int MIN_Y_FOR_PUT_CARDS = 395;
-    private static final int MAX_Y_FOR_PUT_CARDS = MIN_Y_FOR_PUT_CARDS+HEIGHT_OF_EACH_CARD_GAME_PANEL;
-
-
-    private static final int NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS = 12;
-    private static final int WIDTH_OF_EACH_CARD_HANDS_CARDS = 65;
-    private static final int HEIGHT_OF_EACH_CARD_HANDS_CARDS = 80;
-    private static final int WIDTH_OF_HANDS_PANEL = 1115;
-    private static final int HEIGHT_OF_HANDS_PANEL = 85;
-
-    private static final int WIDTH_OF_HERO_IMAGE = 150;
-    private static final int HEIGHT_OF_HERO_IMAGE = 100;
-    private static final int X_COORDINATE_OF_HERO_IMAGE = (WIDTH_OF_GAME_PANEL - WIDTH_OF_HERO_IMAGE) / 2;
-    private static final int Y_COORDINATE_OF_HERO_IMAGE = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_HERO_IMAGE;
-
-
-    private static final int WIDTH_OF_HERO_POWER_IMAGE = 100;
-    private static final int HEIGHT_OF_HERO_POWER_IMAGE = 100;
-    private static final int X_COORDINATE_OF_HERO_POWER_IMAGE = X_COORDINATE_OF_HERO_IMAGE + WIDTH_OF_HERO_IMAGE;
-    private static final int Y_COORDINATE_OF_HERO_POWER_IMAGE = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_HERO_POWER_IMAGE;
-
-    private static final int WIDTH_OF_HEAL_FIELD=10;
-    private static final int HEIGHT_OF_HEAL_FIELD=10;
-    private static final int X_COORDINATE_OF_HEAL_FIELD=X_COORDINATE_OF_HERO_IMAGE+WIDTH_OF_HERO_IMAGE-35;
-    private static final int Y_COORDINATE_OF_HEAL_FIELD=Y_COORDINATE_OF_HERO_IMAGE+HEIGHT_OF_HERO_IMAGE;
-
-    private static final int WIDTH_OF_WEAPON_IMAGE = 80;
-    private static final int HEIGHT_OF_WEAPON_IMAGE = 100;
-    private static final int X_COORDINATE_OF_WEAPON = X_COORDINATE_OF_HERO_IMAGE - WIDTH_OF_WEAPON_IMAGE;
-    private static final int Y_COORDINATE_OF_WEAPON = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_WEAPON_IMAGE;
+//    private static final int WIDTH_OF_GAME_PANEL = 1115;
+//    private static final int HEIGHT_OF_GAME_PANEL = 600;
+//    private static final int WIDTH_OF_EACH_CARD_GAME_PANEL = 95;
+//    private static final int HEIGHT_OF_EACH_CARD_GAME_PANEL = 110;
+//    private static final int NUMBER_OF_CARDS_PER_ROW_GAME_PANEL = 7;
+//    private static final int MIN_X_FOR_PUT_CARDS = 50;
+//    private static final int MAX_X_FOR_PUT_CARDS = (NUMBER_OF_CARDS_PER_ROW_GAME_PANEL-1)*(WIDTH_OF_EACH_CARD_GAME_PANEL+50)+50;
+//    private static final int MIN_Y_FOR_PUT_CARDS = 395;
+//    private static final int MAX_Y_FOR_PUT_CARDS = MIN_Y_FOR_PUT_CARDS+HEIGHT_OF_EACH_CARD_GAME_PANEL;
+//
+//
+//    private static final int NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS = 12;
+//    private static final int WIDTH_OF_EACH_CARD_HANDS_CARDS = 65;
+//    private static final int HEIGHT_OF_EACH_CARD_HANDS_CARDS = 80;
+//    private static final int WIDTH_OF_HANDS_PANEL = 1115;
+//    private static final int HEIGHT_OF_HANDS_PANEL = 85;
+//
+//    private static final int WIDTH_OF_HERO_IMAGE = 150;
+//    private static final int HEIGHT_OF_HERO_IMAGE = 100;
+//    private static final int X_COORDINATE_OF_HERO_IMAGE = (WIDTH_OF_GAME_PANEL - WIDTH_OF_HERO_IMAGE) / 2;
+//    private static final int Y_COORDINATE_OF_HERO_IMAGE = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_HERO_IMAGE;
+//
+//
+//    private static final int WIDTH_OF_HERO_POWER_IMAGE = 100;
+//    private static final int HEIGHT_OF_HERO_POWER_IMAGE = 100;
+//    private static final int X_COORDINATE_OF_HERO_POWER_IMAGE = X_COORDINATE_OF_HERO_IMAGE + WIDTH_OF_HERO_IMAGE;
+//    private static final int Y_COORDINATE_OF_HERO_POWER_IMAGE = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_HERO_POWER_IMAGE;
+//
+//
+//    private static final int X_COORDINATE_OF_HEAL_FIELD=X_COORDINATE_OF_HERO_IMAGE+WIDTH_OF_HERO_IMAGE-35;
+//    private static final int Y_COORDINATE_OF_HEAL_FIELD=Y_COORDINATE_OF_HERO_IMAGE+HEIGHT_OF_HERO_IMAGE;
+//
+//    private static final int WIDTH_OF_WEAPON_IMAGE = 80;
+//    private static final int HEIGHT_OF_WEAPON_IMAGE = 100;
+//    private static final int X_COORDINATE_OF_WEAPON = X_COORDINATE_OF_HERO_IMAGE - WIDTH_OF_WEAPON_IMAGE;
+//    private static final int Y_COORDINATE_OF_WEAPON = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_WEAPON_IMAGE;
 
 
 
@@ -98,7 +99,7 @@ public class PlayPanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D graphics2D = (Graphics2D) g;
-        graphics2D.drawLine(0, HEIGHT_OF_HANDS_PANEL, WIDTH_OF_GAME_PANEL, HEIGHT_OF_HANDS_PANEL);
+        graphics2D.drawLine(0, Constant.HEIGHT_OF_HANDS_PANEL, WIDTH_OF_GAME_PANEL, HEIGHT_OF_HANDS_PANEL);
 
         graphics2D.drawLine(0, HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL / 2,
                 WIDTH_OF_GAME_PANEL, HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL / 2);

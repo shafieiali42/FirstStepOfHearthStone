@@ -14,6 +14,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static Utility.Constant.HEIGHT_OF_RANKED_PANEL;
+import static Utility.Constant.WIDE_OF_RANKED_PANEL;
+
 
 public class RankedPanel extends JPanel {
 
@@ -21,8 +24,8 @@ public class RankedPanel extends JPanel {
     private Color colorOfBtn = new Color(48, 48, 45);
     public static final int WIDTH_OF_BTN=MyMainFrame.getInstance().getWidth()/2;
     public static final int HEIGHT_OF_BTN = 71;
-    private static final int WIDE_OF_RANKED_PANEL =700;
-    private static final int HEIGHT_OF_RANKED_PANEL=800;
+//    private static final int WIDE_OF_RANKED_PANEL =700;
+//    private static final int HEIGHT_OF_RANKED_PANEL=800;
 
 
     private static RankedPanel rankedPanel=new RankedPanel();

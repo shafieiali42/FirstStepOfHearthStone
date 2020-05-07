@@ -4024,3 +4024,25 @@ May 07, 2020 9:49:47 PM CommandLineInterface.PlayerManagement signIn
 INFO: sign_in sss
 May 07, 2020 9:49:48 PM Controller.Administer writeLog
 INFO: Navigate into play page
+May 07, 2020 11:31:17 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 11:31:19 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 11:31:23 PM Controller.Administer writeLog
+INFO: Go back from collection page
+May 07, 2020 11:31:26 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck 
+May 07, 2020 11:31:30 PM Controller.Administer writeLog
+INFO: Go back from collection page
+May 07, 2020 11:31:31 PM Controller.Administer writeLog
+INFO: Navigate into shop page
+May 07, 2020 11:31:33 PM Controller.Administer writeLog
+INFO: Show buyable cards
+May 07, 2020 11:31:39 PM Controller.Administer writeLog
+INFO: Back from shop page
+May 07, 2020 11:31:41 PM Controller.Administer writeLog
+INFO: Navigate into status page
+May 07, 2020 11:31:44 PM Controller.Administer writeLog
+INFO: Go back from status page
+May 07, 2020 11:32:47 PM Controller.Administer writeLog
+INFO: Navigate into setting page

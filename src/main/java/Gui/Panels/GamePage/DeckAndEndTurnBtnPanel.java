@@ -13,27 +13,29 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
+import static Utility.Constant.*;
+
 public class DeckAndEndTurnBtnPanel extends JPanel {
 
 
-    private static final int WIDTH_OF_END_TURN_PANEL = 200;
-    private static final int HEIGHT_OF_END_TURN_PANEL = 810;
+//    private static final int WIDTH_OF_END_TURN_PANEL = 200;
+//    private static final int HEIGHT_OF_END_TURN_PANEL = 810;
     private static final int WIDTH_OF_BTN = 150;
     private static final int HEIGHT_OF_BTN = 80;
-    private static final int WIDTH_OF_QIT_BTN = 100;
-    private static final int HEIGHT_OF_QUIT_BTN = 50;
+//    private static final int WIDTH_OF_QIT_BTN = 100;
+//    private static final int HEIGHT_OF_QUIT_BTN = 50;
 
 
     private Color colorOfTextOfBtn = new Color(255, 0, 0);
     private Color colorOfBtn = new Color(48, 48, 45);
 
-    public static int getWidthOfEndTurnPanel() {
-        return WIDTH_OF_END_TURN_PANEL;
-    }
-
-    public static int getHeightOfEndTurnPanel() {
-        return HEIGHT_OF_END_TURN_PANEL;
-    }
+//    public static int getWidthOfEndTurnPanel() {
+//        return WIDTH_OF_END_TURN_PANEL;
+//    }
+//
+//    public static int getHeightOfEndTurnPanel() {
+//        return HEIGHT_OF_END_TURN_PANEL;
+//    }
 
     private JButton endTurnBtn;
     private JButton quitGameBtn;

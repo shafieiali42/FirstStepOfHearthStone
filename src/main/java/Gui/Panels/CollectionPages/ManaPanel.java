@@ -6,6 +6,7 @@ import CommandLineInterface.Status;
 import Gui.MyMainFrame;
 import Gui.Panels.GamePage.GamePage;
 import Gui.Panels.MenuPanel.MainMenuPage;
+import Utility.Constant;
 
 
 import javax.swing.*;
@@ -14,25 +15,28 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
+import static Utility.Constant.HEIGHT_OF_MANA_BTN;
+import static Utility.Constant.WIDTH_OF_MANA_BTN;
+
 
 public class ManaPanel extends JPanel {
 
-    private static final int WIDTH_OF_MANA_PANEL = 1155;      //TODO NEEDS TO CHANGE
-    private static final int HEIGHT_OF_MANA_PANEL = 100;     //TODO NEEDS TO CHANGE
+//    private static final int WIDTH_OF_MANA_PANEL = 1155;      //TODO NEEDS TO CHANGE
+//    private static final int HEIGHT_OF_MANA_PANEL = 100;     //TODO NEEDS TO CHANGE
 
-    public int getWidthOfManaPanel() {
-        return WIDTH_OF_MANA_PANEL;
-    }
-
-    public int getHeightOfManaPanel() {
-        return HEIGHT_OF_MANA_PANEL;
-    }
+//    public int getWidthOfManaPanel() {
+//        return WIDTH_OF_MANA_PANEL;
+//    }
+//
+//    public int getHeightOfManaPanel() {
+//        return HEIGHT_OF_MANA_PANEL;
+//    }
 
     private static final int NUM_OF_COMPONENT = 13;
-    private static final int WIDTH_OF_MANA_BTN = 20;
-    private static final int HEIGHT_OF_MANA_BTN = 8;
-    private static final int WIDTH_OF_BACK_BTN = 20;
-    private static final int HEIGHT_OF_BACK_BTN = 20;
+//    private static final int WIDTH_OF_MANA_BTN = 20;
+//    private static final int HEIGHT_OF_MANA_BTN = 8;
+//    private static final int WIDTH_OF_BACK_BTN = 20;
+//    private static final int HEIGHT_OF_BACK_BTN = 20;
     private Color colorOfManaBtn = new Color(255, 0, 0);
     private Color colorOfTextOfBtn = new Color(48, 48, 45);
     private Color colorOfBackBtn = new Color(255, 0, 0);
@@ -283,7 +287,7 @@ public class ManaPanel extends JPanel {
         backBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
         backBtn.setForeground(colorOfTextOfBtn);
         backBtn.setBackground(colorOfBackBtn);
-        backBtn.setSize(WIDTH_OF_BACK_BTN, HEIGHT_OF_BACK_BTN);
+        backBtn.setSize(Constant.WIDTH_OF_BACK_BTN_IN_MANA_PANEL, Constant.HEIGHT_OF_BACK_BTN_IN_MANA_PANEL);
         backBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

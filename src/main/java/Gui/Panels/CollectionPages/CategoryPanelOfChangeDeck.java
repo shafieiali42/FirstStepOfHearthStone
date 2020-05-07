@@ -15,18 +15,18 @@ public class CategoryPanelOfChangeDeck extends JPanel {
     public static final int NUMBER_OF_BTN = 9;
     public static final int WIDTH_OF_BTN = 90;
     public static final int HEIGHT_OF_BTN = 90;
-    private static final int WIDTH_OF_CATEGORY_PANEL_DECK_PAGE = 1155;      //TODO NEEDS TO CHANGE
-    private static final int HEIGHT_OF_CATEGORY_PANEL_DECK_PAGE = 80;     //TODO NEEDS TO CHANGE
+//    private static final int WIDTH_OF_CATEGORY_PANEL_DECK_PAGE = 1155;      //TODO NEEDS TO CHANGE
+//    private static final int HEIGHT_OF_CATEGORY_PANEL_DECK_PAGE = 80;     //TODO NEEDS TO CHANGE
     private Color colorOfTextOfBtn = new Color(255, 0, 0);
     private Color colorOfBtn = new Color(48, 48, 45);
-
-    public int getWidthOfCategoryPanelDeckPage() {
-        return WIDTH_OF_CATEGORY_PANEL_DECK_PAGE;
-    }
-
-    public int getHeightOfCategoryPanelDeckPage() {
-        return HEIGHT_OF_CATEGORY_PANEL_DECK_PAGE;
-    }
+//
+//    public int getWidthOfCategoryPanelDeckPage() {
+//        return WIDTH_OF_CATEGORY_PANEL_DECK_PAGE;
+//    }
+//
+//    public int getHeightOfCategoryPanelDeckPage() {
+//        return HEIGHT_OF_CATEGORY_PANEL_DECK_PAGE;
+//    }
 
 
     private JButton HeroCardsBtn;

@@ -3,6 +3,7 @@ package Gui.Panels.GamePage;
 import Gui.MyMainFrame;
 import Gui.Panels.CollectionPages.CategoryPanel;
 import Gui.Panels.CollectionPages.DeckPanel;
+import Utility.Constant;
 
 import javax.swing.*;
 import java.awt.*;
@@ -40,7 +41,7 @@ public class GamePage extends JPanel {
 
 
         this.addPanel(DeckAndEndTurnBtnPanel.getInstance(),LogPanel.getWidthOfLogPanel()+PlayPanel.getWidthOfPlayPanel(),0,
-                      DeckAndEndTurnBtnPanel.getWidthOfEndTurnPanel(), DeckAndEndTurnBtnPanel.getHeightOfEndTurnPanel());
+                      Constant.WIDTH_OF_END_TURN_PANEL, Constant.HEIGHT_OF_END_TURN_PANEL);
 
 //        this.addPanel(HandsCardsPanel.getInstanceOfMyHandsCardsPanel(),LogPanel.getWidthOfLogPanel(),
 //                   HandsCardsPanel.getHeightOfHandsPanel()+GamePanel.getHeightOfGamePanel(),

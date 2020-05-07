@@ -2,13 +2,16 @@ package Gui.Panels.GamePage;
 
 import Controller.Administer;
 import Gui.MyMainFrame;
-
+import Utility.Constant;
 
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import static Utility.Constant.X_COORDINATE_OF_FIRST_BTN;
+import static Utility.Constant.Y_COORDINATE_OF_FIRST_BTN;
 
 public class InfoPassivePage extends JPanel {
 
@@ -18,8 +21,8 @@ public class InfoPassivePage extends JPanel {
     public static final int WIDTH_OF_BTN = 200;
     public static final int HEIGHT_OF_BTN = 200;
     public static final int NUMBER_OF_BTN = 3;
-    private static final int X_COORDINATE_OF_FIRST_BTN = (MyMainFrame.getInstance().getWidth() - 3 * WIDTH_OF_BTN) / 4;
-    private static final int Y_COORDINATE_OF_FIRST_BTN = (MyMainFrame.getInstance().getHeight() - 40 - HEIGHT_OF_BTN) / 2;
+//    private static final int X_COORDINATE_OF_FIRST_BTN = (MyMainFrame.getInstance().getWidth() - 3 * WIDTH_OF_BTN) / 4;
+//    private static final int Y_COORDINATE_OF_FIRST_BTN = (MyMainFrame.getInstance().getHeight() - 40 - HEIGHT_OF_BTN) / 2;
     private static InfoPassivePage infoPassivePage = new InfoPassivePage();
 
     public static InfoPassivePage getInstance() {

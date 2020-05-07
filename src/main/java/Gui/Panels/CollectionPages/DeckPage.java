@@ -2,6 +2,7 @@ package Gui.Panels.CollectionPages;
 
 import Models.Deck.Deck;
 import Gui.MyMainFrame;
+import Utility.Constant;
 
 import javax.swing.*;
 import java.awt.*;
@@ -48,10 +49,10 @@ public class DeckPage extends JPanel {
 //        deckTOChange=new Deck();
         setSize(MyMainFrame.getInstance().getMyFrameWidth(),MyMainFrame.getInstance().getMyFrameHeight());
         setLayout(null);
-        this.addPanel(CategoryPanelOfChangeDeck.getInstance(),0,0,CategoryPanelOfChangeDeck.getInstance().getWidthOfCategoryPanelDeckPage(),
-                CategoryPanelOfChangeDeck.getInstance().getHeightOfCategoryPanelDeckPage());
+        this.addPanel(CategoryPanelOfChangeDeck.getInstance(),0,0, Constant.WIDTH_OF_CATEGORY_PANEL_DECK_PAGE,
+                Constant.HEIGHT_OF_CATEGORY_PANEL_DECK_PAGE);
 
-        this.addPanel(DeckViewer.getInstance(),CategoryPanelOfChangeDeck.getInstance().getWidthOfCategoryPanelDeckPage(),0,
+        this.addPanel(DeckViewer.getInstance(),Constant.WIDTH_OF_CATEGORY_PANEL_DECK_PAGE,0,
                 DeckViewer.getInstance().getWidth(),DeckViewer.getInstance().getHeight());
 
         //TODO I CHANGE THIS:)))))))))))))))))))))))))))))))))))))
@@ -63,7 +64,7 @@ public class DeckPage extends JPanel {
         CardPanel.getInstanceOfDeckPage().setFocusable(true);
         CardPanel.getInstanceOfDeckPage().requestFocus();
 //        CardPanel.getInstance().setJScrollPane(new JScrollPane(CardPanel.getInstance()));
-        CardPanel.getInstanceOfDeckPage().getJScrollPane().setBounds(0,CategoryPanel.getInstance().getHeightOfCategoryPanel(),1155,620);
+        CardPanel.getInstanceOfDeckPage().getJScrollPane().setBounds(0,Constant.HEIGHT_OF_CATEGORY_PANEL,1155,620);
         CardPanel.getInstanceOfDeckPage().getJScrollPane().setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         CardPanel.getInstanceOfDeckPage().getJScrollPane().setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
         CardPanel.getInstanceOfDeckPage().getJScrollPane().setBorder(null);
@@ -72,8 +73,8 @@ public class DeckPage extends JPanel {
 
 
         this.addPanel(ManaPanel.getInstanceOfDeckPage(),0,
-                (CategoryPanel.getInstance().getHeightOfCategoryPanel()+620/*CardPanel.getInstance().getJScrollPane().getHeight()*/),
-                ManaPanel.getInstanceOfDeckPage().getWidthOfManaPanel(),ManaPanel.getInstanceOfDeckPage().getHeightOfManaPanel());
+                (Constant.HEIGHT_OF_CATEGORY_PANEL+620/*CardPanel.getInstance().getJScrollPane().getHeight()*/),
+                Constant.WIDTH_OF_MANA_PANEL,Constant.HEIGHT_OF_MANA_PANEL);
 
 
     }

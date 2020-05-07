@@ -1,6 +1,7 @@
 package Gui.Panels.CollectionPages;
 
 import Controller.Administer;
+import Utility.Constant;
 
 
 import javax.swing.*;
@@ -10,20 +11,23 @@ import java.awt.event.MouseListener;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import static Utility.Constant.HEIGHT_OF_LITTLE_CARD;
+import static Utility.Constant.WIDTH_OF_LITTLE_CARD;
+
 
 public class LittleCardPanel extends JPanel implements MouseListener, Serializable {
 
 
-    private static final int WIDTH_OF_LITTLE_CARD = 225;
-    private static final int HEIGHT_OF_LITTLE_CARD = 20;
+//    private static final int WIDTH_OF_LITTLE_CARD = 225;
+//    private static final int HEIGHT_OF_LITTLE_CARD = 20;
 
-    public static int getWidthOfLittleCard() {
-        return WIDTH_OF_LITTLE_CARD;
-    }
-
-    public static int getHeightOfLittleCard() {
-        return HEIGHT_OF_LITTLE_CARD;
-    }
+//    public static int getWidthOfLittleCard() {
+//        return WIDTH_OF_LITTLE_CARD;
+//    }
+//
+//    public static int getHeightOfLittleCard() {
+//        return HEIGHT_OF_LITTLE_CARD;
+//    }
 
     public JLabel getManaLabel() {
         return manaLabel;

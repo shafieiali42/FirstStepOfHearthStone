@@ -4,7 +4,6 @@ import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
 import Controller.Administer;
 import Gui.MyMainFrame;
-import Gui.Panels.CollectionPages.CardPanel;
 import Gui.Panels.CollectionPages.CollectionPage;
 import Gui.Panels.MenuPanel.MainMenuPage;
 
@@ -20,17 +19,17 @@ public class ButtonPanel extends JPanel {
     public static final int WIDTH_OF_BTN = 90;
     public static final int HEIGHT_OF_BTN = 90;
 
-    private static final int WIDTH_OF_BUTTON_PANEL = 1400;      //TODO NEEDS TO CHANGE
-    private static final int HEIGHT_OF_BUTTON_PANEL = 80;     //TODO NEEDS TO CHANGE
+//    private static final int WIDTH_OF_BUTTON_PANEL_IN_SHOP = 1400;
+//    private static final int HEIGHT_OF_BUTTON_PANEL_IN_SHOP = 80;
 
-
-    public int getWidthOfButtonPanel() {
-        return WIDTH_OF_BUTTON_PANEL;
-    }
-
-    public int getHeightOfButtonPanel() {
-        return HEIGHT_OF_BUTTON_PANEL;
-    }
+//
+//    public int getWidthOfButtonPanel() {
+//        return WIDTH_OF_BUTTON_PANEL_IN_SHOP;
+//    }
+//
+//    public int getHeightOfButtonPanel() {
+//        return HEIGHT_OF_BUTTON_PANEL_IN_SHOP;
+//    }
 
 
     private Color colorOfTextOfBtn = new Color(255, 0, 0);

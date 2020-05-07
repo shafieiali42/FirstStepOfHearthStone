@@ -7,13 +7,13 @@ public class CardPanel extends JPanel {
 
 //    private static final int WIDTH_OF_CARD_PANEL=1155;      //TODO NEEDS TO CHANGE
 //    private static final int HEIGHT_OF_CARD_PANEL=620;     //TODO NEEDS TO CHANGE
-//    private static final int NUM_OF_CARD_IN_EVERY_ROW = 6; //TODO NEEDS TO CHANGE
+    private static final int NUM_OF_CARD_IN_EVERY_ROW = 6; //TODO NEEDS TO CHANGE
 
 
     private JScrollPane jScrollPane;
-//    public static int getNumOfCardInEveryRow() {
-//        return NUM_OF_CARD_IN_EVERY_ROW;
-//    }
+    public static int getNumOfCardInEveryRow() {
+        return NUM_OF_CARD_IN_EVERY_ROW;
+    }
 //    public  int getWidthOfCardPanel() {
 //        return WIDTH_OF_CARD_PANEL;
 //    }
