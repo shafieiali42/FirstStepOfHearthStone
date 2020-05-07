@@ -21,8 +21,7 @@ public class InfoPassivePage extends JPanel {
     public static final int WIDTH_OF_BTN = 200;
     public static final int HEIGHT_OF_BTN = 200;
     public static final int NUMBER_OF_BTN = 3;
-//    private static final int X_COORDINATE_OF_FIRST_BTN = (MyMainFrame.getInstance().getWidth() - 3 * WIDTH_OF_BTN) / 4;
-//    private static final int Y_COORDINATE_OF_FIRST_BTN = (MyMainFrame.getInstance().getHeight() - 40 - HEIGHT_OF_BTN) / 2;
+
     private static InfoPassivePage infoPassivePage = new InfoPassivePage();
 
     public static InfoPassivePage getInstance() {

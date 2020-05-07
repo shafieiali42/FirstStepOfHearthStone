@@ -17,56 +17,12 @@ import static Utility.Constant.*;
 
 public class PlayPanel extends JPanel {
 
-//    private static final int WIDTH_OF_GAME_PANEL = 1115;
-//    private static final int HEIGHT_OF_GAME_PANEL = 600;
-//    private static final int WIDTH_OF_EACH_CARD_GAME_PANEL = 95;
-//    private static final int HEIGHT_OF_EACH_CARD_GAME_PANEL = 110;
-//    private static final int NUMBER_OF_CARDS_PER_ROW_GAME_PANEL = 7;
-//    private static final int MIN_X_FOR_PUT_CARDS = 50;
-//    private static final int MAX_X_FOR_PUT_CARDS = (NUMBER_OF_CARDS_PER_ROW_GAME_PANEL-1)*(WIDTH_OF_EACH_CARD_GAME_PANEL+50)+50;
-//    private static final int MIN_Y_FOR_PUT_CARDS = 395;
-//    private static final int MAX_Y_FOR_PUT_CARDS = MIN_Y_FOR_PUT_CARDS+HEIGHT_OF_EACH_CARD_GAME_PANEL;
-//
-//
-//    private static final int NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS = 12;
-//    private static final int WIDTH_OF_EACH_CARD_HANDS_CARDS = 65;
-//    private static final int HEIGHT_OF_EACH_CARD_HANDS_CARDS = 80;
-//    private static final int WIDTH_OF_HANDS_PANEL = 1115;
-//    private static final int HEIGHT_OF_HANDS_PANEL = 85;
-//
-//    private static final int WIDTH_OF_HERO_IMAGE = 150;
-//    private static final int HEIGHT_OF_HERO_IMAGE = 100;
-//    private static final int X_COORDINATE_OF_HERO_IMAGE = (WIDTH_OF_GAME_PANEL - WIDTH_OF_HERO_IMAGE) / 2;
-//    private static final int Y_COORDINATE_OF_HERO_IMAGE = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_HERO_IMAGE;
-//
-//
-//    private static final int WIDTH_OF_HERO_POWER_IMAGE = 100;
-//    private static final int HEIGHT_OF_HERO_POWER_IMAGE = 100;
-//    private static final int X_COORDINATE_OF_HERO_POWER_IMAGE = X_COORDINATE_OF_HERO_IMAGE + WIDTH_OF_HERO_IMAGE;
-//    private static final int Y_COORDINATE_OF_HERO_POWER_IMAGE = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_HERO_POWER_IMAGE;
-//
-//
-//    private static final int X_COORDINATE_OF_HEAL_FIELD=X_COORDINATE_OF_HERO_IMAGE+WIDTH_OF_HERO_IMAGE-35;
-//    private static final int Y_COORDINATE_OF_HEAL_FIELD=Y_COORDINATE_OF_HERO_IMAGE+HEIGHT_OF_HERO_IMAGE;
-//
-//    private static final int WIDTH_OF_WEAPON_IMAGE = 80;
-//    private static final int HEIGHT_OF_WEAPON_IMAGE = 100;
-//    private static final int X_COORDINATE_OF_WEAPON = X_COORDINATE_OF_HERO_IMAGE - WIDTH_OF_WEAPON_IMAGE;
-//    private static final int Y_COORDINATE_OF_WEAPON = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_WEAPON_IMAGE;
-
-
-
     private BufferedImage heroImage;
     private BufferedImage heroPowerImage;
     private BufferedImage weaponImage;
-
-
     private boolean needsToRepaint = true;
-
-
+    private int typeOfBackOfCards=1;
     private static PlayPanel playPanel= new PlayPanel();
-
-
 
     public static PlayPanel getInstance() {
         return playPanel;
@@ -84,8 +40,6 @@ public class PlayPanel extends JPanel {
 
 
     public void defineImagesOfHeroAndHeroPower() throws IOException {
-//        heroImage = ImageIO.read(new File(
-//                Constant.getInstance().getHeroImages().get(GameState.getInstance().getPlayer().getCurrentHero().getName())));
 
         heroImage = ImageIO.read(new File(
                 Constant.getInstance().getHeroImages().get(Administer.getNameOfCurrentHeroOfGameState())));
@@ -93,6 +47,14 @@ public class PlayPanel extends JPanel {
         heroPowerImage = ImageIO.read(
                 new File(Constant.getInstance().getHeroPowerImages().get(Administer.getNameOfCurrentHeroOfGameState())));
 
+    }
+
+    public int getTypeOfBackOfCards() {
+        return typeOfBackOfCards;
+    }
+
+    public void setTypeOfBackOfCards(int typeOfBackOfCards) {
+        this.typeOfBackOfCards = typeOfBackOfCards;
     }
 
     @Override
@@ -111,6 +73,7 @@ public class PlayPanel extends JPanel {
                 this.removeAll();
                 Administer.showHandsCardOfMeAllianceInPlay(this,NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS);
                 Administer.showBattleGroundCardsOfMeAllianceInPlay(this,NUMBER_OF_CARDS_PER_ROW_GAME_PANEL);
+                Administer.showHandsCardOfOpponentAllianceInPlay(this,NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS,typeOfBackOfCards);
 //                MethodsOfShowCardsOnPanel.showHandsCards(GameState.getInstance().getHandsCards(), this, NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS, Alliance.ME);
 //                MethodsOfShowCardsOnPanel.showBattleGroundCards(GameState.getInstance().getBattleGroundCards(), this, NUMBER_OF_CARDS_PER_ROW_GAME_PANEL, Alliance.ME);
                 this.revalidate();
@@ -139,22 +102,6 @@ public class PlayPanel extends JPanel {
         graphics2D.setColor(Color.red);
         graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 25));
         graphics2D.drawString(Administer.getHealthOfCurrentHeroInGameState()+"",X_COORDINATE_OF_HEAL_FIELD,Y_COORDINATE_OF_HEAL_FIELD);
-//        if (GameState.getInstance().getCurrentWeapon()!=null){
-//            try {
-//                CardImagePanel cardImagePanel=new CardImagePanel(GameState.getInstance().getCurrentWeapon().getName(),
-//                        WIDTH_OF_WEAPON_IMAGE,HEIGHT_OF_WEAPON_IMAGE);
-//
-//            MethodsOfShowCardsOnPanel.addPanel(cardImagePanel,this,
-//                    X_COORDINATE_OF_WEAPON,Y_COORDINATE_OF_WEAPON,WIDTH_OF_WEAPON_IMAGE,HEIGHT_OF_WEAPON_IMAGE);
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
-
-
-//        graphics2D.drawOval(X_COORDINATE_OF_WEAPON, Y_COORDINATE_OF_WEAPON,
-//                WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE);
-
 
     }
 

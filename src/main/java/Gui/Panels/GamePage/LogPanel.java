@@ -11,9 +11,6 @@ import static Utility.Constant.WIDTH_OF_LOG_PANEL;
 public class LogPanel extends JPanel {
 
 
-
-//    private static final int WIDTH_OF_LOG_PANEL=85;
-//    private static final int HEIGHT_OF_LOG_PANEL=810;
     private JScrollPane jScrollPane;
     private  String log;
     private Color colorOfLogOfEnemy=Color.red;

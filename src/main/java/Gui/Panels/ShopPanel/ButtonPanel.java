@@ -19,18 +19,6 @@ public class ButtonPanel extends JPanel {
     public static final int WIDTH_OF_BTN = 90;
     public static final int HEIGHT_OF_BTN = 90;
 
-//    private static final int WIDTH_OF_BUTTON_PANEL_IN_SHOP = 1400;
-//    private static final int HEIGHT_OF_BUTTON_PANEL_IN_SHOP = 80;
-
-//
-//    public int getWidthOfButtonPanel() {
-//        return WIDTH_OF_BUTTON_PANEL_IN_SHOP;
-//    }
-//
-//    public int getHeightOfButtonPanel() {
-//        return HEIGHT_OF_BUTTON_PANEL_IN_SHOP;
-//    }
-
 
     private Color colorOfTextOfBtn = new Color(255, 0, 0);
     private Color colorOfBtn = new Color(48, 48, 45);
@@ -154,15 +142,13 @@ public class ButtonPanel extends JPanel {
     public static void showSalableCards() throws IOException {
         CLI.setStatus(Status.SELL_PAGE);
         Administer.showSalableCards(ShopCardPanel.getInstance(), ShopCardPanel.getInstance().getNumOfCardInEveryRow());
-//        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getSalableCards(),
-//        ShopCardPanel.getInstance(), ShopCardPanel.getInstance().getNumOfCardInEveryRow());
+
     }
 
     public static void showBuyableCards() throws IOException {
         CLI.setStatus(Status.BUY_PAGE);
         Administer.showBuyableCards(ShopCardPanel.getInstance(), ShopCardPanel.getInstance().getNumOfCardInEveryRow());
-//        MethodsOfShowCardsOnPanel.showCards(CLI.currentPlayer.getBuyableCards(),
-//                ShopCardPanel.getInstance(), ShopCardPanel.getInstance().getNumOfCardInEveryRow());
+
     }
 
 

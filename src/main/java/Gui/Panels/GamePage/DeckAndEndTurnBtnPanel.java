@@ -17,25 +17,10 @@ import static Utility.Constant.*;
 
 public class DeckAndEndTurnBtnPanel extends JPanel {
 
-
-//    private static final int WIDTH_OF_END_TURN_PANEL = 200;
-//    private static final int HEIGHT_OF_END_TURN_PANEL = 810;
     private static final int WIDTH_OF_BTN = 150;
     private static final int HEIGHT_OF_BTN = 80;
-//    private static final int WIDTH_OF_QIT_BTN = 100;
-//    private static final int HEIGHT_OF_QUIT_BTN = 50;
-
-
     private Color colorOfTextOfBtn = new Color(255, 0, 0);
     private Color colorOfBtn = new Color(48, 48, 45);
-
-//    public static int getWidthOfEndTurnPanel() {
-//        return WIDTH_OF_END_TURN_PANEL;
-//    }
-//
-//    public static int getHeightOfEndTurnPanel() {
-//        return HEIGHT_OF_END_TURN_PANEL;
-//    }
 
     private JButton endTurnBtn;
     private JButton quitGameBtn;
@@ -85,10 +70,7 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
                     LogPanel.getInstance().setLog("");
                     LogPanel.getInstance().repaint();
                     LogPanel.getInstance().revalidate();
-//                    DeckAndEndTurnBtnPanel.getInstance().removeAll();
-//                    DeckAndEndTurnBtnPanel.getInstance().repaint();
-//                    DeckAndEndTurnBtnPanel.getInstance().revalidate();
-
+                    Administer.playMainSound("src/main/resources/Sounds/FirstAudio.wav");
                     MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
 
                 }
@@ -143,8 +125,7 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
 
         DeckViewerInPlay.getInstanceOfFirstDeck().setToolTipText("You have "+
                 Administer.getNumberOfCardsOfDeckInGameState()+ "cards in your deck");
-//        DeckViewerInPlay.getInstanceOfFirstDeck().setToolTipText("You have "+
-//                GameState.getInstance().getCardsOfDeckInGameState().size()+ "cards in your deck");
+
         DeckViewerInPlay.getInstanceOfSecondDeck().setToolTipText("There are 0 cards in this Models.Deck");//TODO needs to change in next phase:))
     }
 

@@ -16,7 +16,6 @@ public class GameState {
     private Player opponentPlayer;
     private ArrayList<Cards> handsCards;
     private ArrayList<Cards> handsCardsOfOpponent;
-    //    private Models.Deck deck;
     private ArrayList<Cards> cardsOfDeckInGameState;
     private Deck deckOfOpponent;
     private ArrayList<Cards> battleGroundCards;
@@ -109,6 +108,7 @@ public class GameState {
         cardsOfDeckInGameState = (ArrayList<Cards>) CLI.currentPlayer.getCurrentDeck().getListOfCards().clone();
 
         handsCards = new ArrayList<Cards>();
+        handsCardsOfOpponent=new ArrayList<Cards>();
         Collections.shuffle(cardsOfDeckInGameState);
         boolean hasQuestCard = false;
         a:
@@ -117,6 +117,7 @@ public class GameState {
                 if (quest.equals(card)) {
                     hasQuestCard = true;
                     handsCards.add(quest);
+                    handsCardsOfOpponent.add(quest);
                     cardsOfDeckInGameState.remove(card);
                     break a;
                 }
@@ -124,18 +125,22 @@ public class GameState {
         }
 
         handsCards.add(cardsOfDeckInGameState.get(0));
+        handsCardsOfOpponent.add(cardsOfDeckInGameState.get(0));
         cardsOfDeckInGameState.remove(0);
         handsCards.add(cardsOfDeckInGameState.get(0));
+        handsCardsOfOpponent.add(cardsOfDeckInGameState.get(0));
         cardsOfDeckInGameState.remove(0);
         if (!hasQuestCard) {
             handsCards.add(cardsOfDeckInGameState.get(0));
+            handsCardsOfOpponent.add(cardsOfDeckInGameState.get(0));
             cardsOfDeckInGameState.remove(0);
         }
 
 
+
         currentAlliance = Alliance.ME;
         mana = 1;
-        turn = 0;
+        turn = 1;
         passivesToChoose = new ArrayList<Passive>();
         ArrayList<Integer> randomNumber = new ArrayList<Integer>();
         for (int i = 0; i < Passive.NUMBER_OF_PASSIVES; i++) {

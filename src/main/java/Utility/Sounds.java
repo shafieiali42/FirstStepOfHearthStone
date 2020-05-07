@@ -15,16 +15,23 @@ public class Sounds {
     private static Clip clipOfMainSound;
     private static Clip clipOfActionSounds;
 
+
     private static boolean muteSound = false;
 
     public static Sounds getInstance() {
         return SoundInstance;
     }
 
+
     public static void playMainSound(String path) {
         if (clipOfActionSounds != null) {
+
             clipOfActionSounds.stop();
         }
+        if (clipOfMainSound!=null){
+            clipOfMainSound.stop();
+        }
+
         try {
             audioInputStream = AudioSystem.getAudioInputStream(new File(path));
             clipOfMainSound = AudioSystem.getClip();

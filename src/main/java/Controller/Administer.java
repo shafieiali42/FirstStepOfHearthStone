@@ -7,6 +7,7 @@ import CommandLineInterface.Status;
 import Gui.Panels.CollectionPages.DeckPage;
 import Gui.Panels.CollectionPages.DeckViewer;
 import Gui.Panels.CollectionPages.LittleCardPanel;
+import Gui.Panels.GamePage.PlayPanel;
 import Gui.Panels.LogInPanel.LogInPage;
 import Gui.Panels.MenuPanel.MainMenuPage;
 
@@ -55,6 +56,15 @@ public class Administer {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static void showHandsCardOfOpponentAllianceInPlay(JPanel panel, int numberOfCardsPerRowHandsCards, int typeOfBackOfCards) throws IOException {
+        MethodsOfShowCardsOnPanel.showHandsCardsOfOpponent(GameState.getInstance().getHandsCardsOfOpponent(),
+                panel, numberOfCardsPerRowHandsCards, typeOfBackOfCards);
+    }
+
+    public static void changeBackOfCards(int typeOfBackOfCards) {
+        PlayPanel.getInstance().setTypeOfBackOfCards(typeOfBackOfCards);
     }
 
     public static void showHandsCardOfMeAllianceInPlay(JPanel panel, int numberOfCardsPerRowHandsCards) throws IOException {
@@ -295,13 +305,17 @@ public class Administer {
         return false;
     }
 
-    public static void playMainSound() {
-        Sounds.playMainSound("src/main/resources/Sounds/FirstAudio.wav");
+    public static void playMainSound(String path) {
+        Sounds.playMainSound(path);
     }
 
     public static void playActionSounds(String action) {
         Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/" + action + ".wav");
     }
+
+//    public static void playGameSounds() {
+//        Sounds.playGameSound("src/main/resources/Sounds/.wav");
+//    }
 
     public static int getMoneyOfShopStatesCard() {
         return ShopState.getInstance().getCardsToBuyOrSell().getMoneyCost();

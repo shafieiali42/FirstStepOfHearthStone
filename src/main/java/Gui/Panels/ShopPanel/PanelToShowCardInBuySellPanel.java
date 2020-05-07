@@ -39,8 +39,6 @@ public class PanelToShowCardInBuySellPanel extends JPanel {
         } else {
             try {
                 Administer.showShopStateCardInBuySellPanel(this);
-//                CardImagePanel cardImagePanel = new CardImagePanel(BuySellPanel.getInstance().getCard());
-//                MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, this, 0, 0,this.getWidth() , this.getHeight());
             } catch (IOException e) {
                 e.printStackTrace();
             }

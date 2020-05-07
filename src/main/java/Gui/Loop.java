@@ -25,12 +25,11 @@ public abstract class Loop implements Runnable {
 
 
             while (running) {
-//                System.out.println("is running......................");
                 long now = System.nanoTime();
                 delta += (now - lastTime) / nsPerUpdate;
                 lastTime = now;
                 while (delta >= 1) {
-                    update(); //must take less than 16 million nano seconds
+                    update();
                     delta--;
                 }
 
@@ -47,14 +46,14 @@ public abstract class Loop implements Runnable {
         running = true;
         gameThread.start();
     }
-
-    public void reStart() {
-
-        gameThread = new Thread(this);
-        running = true;
-        gameThread.start();
-
-    }
+//
+//    public void reStart() {
+//
+//        gameThread = new Thread(this);
+//        running = true;
+//        gameThread.start();
+//
+//    }
 
 
     public void stop() {

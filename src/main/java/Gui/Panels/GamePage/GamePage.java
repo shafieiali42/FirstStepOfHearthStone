@@ -18,7 +18,6 @@ public class GamePage extends JPanel {
         setSize(MyMainFrame.getInstance().getMyFrameWidth(),MyMainFrame.getInstance().getMyFrameHeight());
         setLayout(null);
 
-//        this.addPanel(LogPanel.getInstance(),0,0,LogPanel.getWidthOfLogPanel(),LogPanel.getHeightOfLogPanel());
         LogPanel.getInstance().setPreferredSize(new Dimension(LogPanel.getWidthOfLogPanel(),1600));
         LogPanel.getInstance().setFocusable(true);
         LogPanel.getInstance().requestFocus();
@@ -31,32 +30,18 @@ public class GamePage extends JPanel {
         LogPanel.getInstance().getJScrollPane().setFocusable(false);
         this.add(LogPanel.getInstance().getJScrollPane());
 
-//        this.addPanel(HandsCardsPanel.getInstanceOfOpponentCardsPanel(),LogPanel.getWidthOfLogPanel(),0,
-//                HandsCardsPanel.getWidthOfHandsPanel(),HandsCardsPanel.getHeightOfHandsPanel());
-//
-//        this.addPanel(GamePanel.getInstance(),LogPanel.getWidthOfLogPanel(),HandsCardsPanel.getHeightOfHandsPanel(),
-//                      GamePanel.getWidthOfGamePanel(),GamePanel.getHeightOfGamePanel());
-
         this.addPanel(PlayPanel.getInstance(),LogPanel.getWidthOfLogPanel(),0,PlayPanel.getWidthOfPlayPanel(),PlayPanel.getHeightOfPlayPanel());
 
 
         this.addPanel(DeckAndEndTurnBtnPanel.getInstance(),LogPanel.getWidthOfLogPanel()+PlayPanel.getWidthOfPlayPanel(),0,
                       Constant.WIDTH_OF_END_TURN_PANEL, Constant.HEIGHT_OF_END_TURN_PANEL);
 
-//        this.addPanel(HandsCardsPanel.getInstanceOfMyHandsCardsPanel(),LogPanel.getWidthOfLogPanel(),
-//                   HandsCardsPanel.getHeightOfHandsPanel()+GamePanel.getHeightOfGamePanel(),
-//                      HandsCardsPanel.getWidthOfHandsPanel(),HandsCardsPanel.getHeightOfHandsPanel());
-
     }
-
-
-
 
 
     public void addPanel(JPanel panel,int x, int y, int width,int height){
         panel.setBounds(x,y,width,height);
         add(panel);
     }
-
 
 }

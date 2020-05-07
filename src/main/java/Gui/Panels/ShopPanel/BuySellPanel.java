@@ -32,8 +32,7 @@ public class BuySellPanel extends JPanel {
     private Color colorOfBtn = new Color(48, 48, 45);
     public static final int WIDTH_OF_BTN = 140;
     public static final int HEIGHT_OF_BTN = 60;
-//    private static final int WIDTH_OF_BUY_SELL_PANEL = 400;
-//    private static final int HEIGHT_OF_BUY_SELL_PANEL = 730;
+
     private JLabel priceLabel;
     private JButton transactionBtn;
 
@@ -41,13 +40,7 @@ public class BuySellPanel extends JPanel {
 
     private boolean isFirstTime = true;
     private String cardName;
-    //    private Cards card;
-//    public Cards getCard() {
-//        return card;
-//    }
-//    public void setCard(Cards card) {
-//        this.card = card;
-//    }
+
 
 
     private void initPriceLabel() {
@@ -100,10 +93,7 @@ public class BuySellPanel extends JPanel {
                         if (reply == JOptionPane.YES_OPTION) {
                             try {
                                 Administer.buyShopStateCard();
-//                                CLI.currentPlayer.buy(BuySellPanel.getInstance().card);
                                 Administer.playActionSounds("BuyCard");
-//                                Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/BuyCard.wav");
-//                                BuySellPanel.getInstance().setCard(null);
                                 Administer.makeShopStateCardNull();
                                 PanelToShowCardInBuySellPanel.getInstance().removeAll();
                                 PanelToShowCardInBuySellPanel.getInstance().repaint();
@@ -129,20 +119,10 @@ public class BuySellPanel extends JPanel {
 
                                 if (reply == JOptionPane.YES_OPTION) {
 
-//                                    boolean canSell = true;
-//                                    for (Deck deck : CLI.currentPlayer.getAllDecksOfPlayer()) {
-//                                        if (deck.getListOfCards().contains(BuySellPanel.getInstance().card)) {
-//                                            canSell = false;
-//                                            break;
-//                                        }
-//                                    }
                                     if (!Administer.isShopStateCardInMyDecks()) {
                                         Administer.sellShopStateCard();
-//                                        CLI.currentPlayer.sell(BuySellPanel.getInstance().card);
                                         Administer.playActionSounds("SellCard");
-//                                        Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/SellCard.wav");
                                         ButtonPanel.showSalableCards();
-//                                        BuySellPanel.getInstance().setCard(null);
                                         Administer.makeShopStateCardNull();
                                         PanelToShowCardInBuySellPanel.getInstance().removeAll();
                                         PanelToShowCardInBuySellPanel.getInstance().repaint();
@@ -151,7 +131,6 @@ public class BuySellPanel extends JPanel {
                                     } else {
                                         JOptionPane.showMessageDialog(null, "This card is in your deck",
                                                 "Error", JOptionPane.ERROR_MESSAGE);
-//                                        BuySellPanel.getInstance().card = null;
                                         Administer.makeShopStateCardNull();
                                         PanelToShowCardInBuySellPanel.getInstance().removeAll();
                                         PanelToShowCardInBuySellPanel.getInstance().repaint();
@@ -171,19 +150,6 @@ public class BuySellPanel extends JPanel {
     }
 
 
-
-
-
-
-
-
-
-//    public static int getWidthOfBuySellPanel() {
-//        return WIDTH_OF_BUY_SELL_PANEL;
-//    }
-//    public static int getHeightOfBuySellPanel() {
-//        return HEIGHT_OF_BUY_SELL_PANEL;
-//    }
     public boolean getIsFirstTime() {
         return isFirstTime;
     }

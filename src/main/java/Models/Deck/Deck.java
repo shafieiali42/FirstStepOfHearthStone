@@ -20,8 +20,6 @@ public class Deck implements Comparable<Deck> {
     private ArrayList<Cards> listOfCards;
     private Cards mostUsedCard;
     private int manaAvg;
-    //    @Expose(serialize = false,deserialize = false)
-//    private transient ArrayList<LittleCardPanel> littleCardPanelsOfThisDeck= LittleCardPanel.getAllLittleCardPanels();
 
     private HashMap<String, Integer> usesHashMap =new HashMap<String, Integer>();
 
@@ -42,37 +40,6 @@ public class Deck implements Comparable<Deck> {
 
         }
     }
-
-//    public void defineUsesHashMap(){
-//        usesHashMap.clear();
-//        for (LittleCardPanel littleCardPanel:littleCardPanelsOfThisDeck){
-//            usesHashMap.put(littleCardPanel.getNameLabel().getText(),Integer.parseInt(littleCardPanel.getUsedLabel().getText()));
-//        }
-//    }
-
-
-//    public void setLittleCardsListFromHashMap(){
-//        for (String cardName:usesHashMap.keySet()){
-//            int useOfCard=usesHashMap.get(cardName);
-//            for (LittleCardPanel littleCardPanel:littleCardPanelsOfThisDeck){
-//                if (littleCardPanel.getNameLabel().getText().equalsIgnoreCase(cardName)){
-//                    littleCardPanel.getUsedLabel().setText(useOfCard+"");
-//                }
-//            }
-//        }
-//    }
-
-
-
-
-
-//    public ArrayList<LittleCardPanel> getLittleCardPanelsOfThisDeck() {
-//        return littleCardPanelsOfThisDeck;
-//    }
-
-//    public void setLittleCardPanelsOfThisDeck(ArrayList<LittleCardPanel> littleCardPanelsOfThisDeck) {
-//        this.littleCardPanelsOfThisDeck = littleCardPanelsOfThisDeck;
-//    }
 
     public static int getMaxCapacityOfDeck() {
         return MAX_CAPACITY_OF_DECK;
@@ -166,13 +133,6 @@ public class Deck implements Comparable<Deck> {
         mostUsedCard=listOfCards.get(0);
     }
 
-//    public int numberOfCardsInDeck(){
-//        int numberOFAllCardsInDeck=0;
-//        for (String key: getUsesHashMap().keySet()){
-//            numberOFAllCardsInDeck+=getUsesHashMap().get(key);
-//        }
-//        return numberOFAllCardsInDeck;
-//    }
 
     @Override
     public int compareTo(Deck deck) {

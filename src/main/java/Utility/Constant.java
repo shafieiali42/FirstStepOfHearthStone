@@ -119,10 +119,12 @@ public class Constant {
     public static final int WIDTH_OF_BTN_IN_SETTING = 220;
     public static final int HEIGHT_OF_BTN_IN_SETTING = 90;
     public static final int X_COORDINATE_OF_BUTTONS_IN_SETTING = (MyMainFrame.getInstance().getWidth()- WIDTH_OF_BTN_IN_SETTING)/2;
+    public static final int Y_COORDINATE_OF_CHANGE_BACK_OF_CARDS_BTN = 100;
     public static final int Y_COORDINATE_OF_INCREASE_BTN = 200;
     public static final int Y_COORDINATE_OF_DECREASE_BTN = 300;
     public static final int Y_COORDINATE_OF_MUTE_BTN = 400;
     public static final int Y_COORDINATE_OF_BACK_BTN = 500;
+
 
     public static final int WIDTH_OF_BUTTON_PANEL_IN_SHOP = 1400;
     public static final int HEIGHT_OF_BUTTON_PANEL_IN_SHOP = 80;

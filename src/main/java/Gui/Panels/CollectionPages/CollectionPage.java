@@ -18,8 +18,7 @@ public class CollectionPage extends JPanel {
         this.addPanel(CategoryPanel.getInstance(),0,0, Constant.WIDTH_OF_CATEGORY_PANEL,
                                                             Constant.HEIGHT_OF_CATEGORY_PANEL);
 
-//        this.addPanel(DeckPage.getInstance(),CategoryPanel.getInstance().getWidthOfCategoryPanel(),0,
-//                      DeckPage.getInstance().getWidthOfDeckPanel(),DeckPage.getInstance().getHeightOfDeckPanel());
+
         DeckPanel.getInstance().setPreferredSize(new Dimension(250,1600));
         DeckPanel.getInstance().setFocusable(true);
         DeckPanel.getInstance().requestFocus();
@@ -31,15 +30,12 @@ public class CollectionPage extends JPanel {
         DeckPanel.getInstance().getJScrollPane().setBorder(null);
         DeckPanel.getInstance().getJScrollPane().setFocusable(false);
         this.add(DeckPanel.getInstance().getJScrollPane());
-        //TODO I CHANGE THIS:)))))))))))))))))))))))))))))))))))))
 
-//        this.addPanel(CardPanel.getInstance().getJScrollPane(),0,CategoryPanel.getInstance().getHeightOfCategoryPanel(),
-//                      CardPanel.getInstance().getWidthOfCardPanel(),CardPanel.getInstance().getHeightOfCardPanel());
 
         CardPanel.getInstanceOfCollectionPage().setPreferredSize(new Dimension(1155,1600));
         CardPanel.getInstanceOfCollectionPage().setFocusable(true);
         CardPanel.getInstanceOfCollectionPage().requestFocus();
-//        CardPanel.getInstance().setJScrollPane(new JScrollPane(CardPanel.getInstance()));
+
         CardPanel.getInstanceOfCollectionPage().getJScrollPane().setBounds(0,Constant.HEIGHT_OF_CATEGORY_PANEL_DECK_PAGE,1155,620);
         CardPanel.getInstanceOfCollectionPage().getJScrollPane().setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         CardPanel.getInstanceOfCollectionPage().getJScrollPane().setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);

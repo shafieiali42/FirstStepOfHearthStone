@@ -38,9 +38,6 @@ public class MainMenuPage extends JPanel {
     private JButton deletePlayerBtn;
     private JButton exitBtn;
 
-//     private Color marginColor = Color.decode("#FFE042");
-//    private Color colorOfBtn = Color.decode("#FFE042");
-//    E71989
 
     private Color colorOfBtn = new Color(48, 48, 45);
 
@@ -239,6 +236,8 @@ public class MainMenuPage extends JPanel {
                     MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
 
                 } else {
+//                    Administer.playMainSound("src/main/resources/Sounds/SecondAudio.wav");
+                    Administer.playMainSound("src/main/resources/Sounds/SecondAudio.wav");
                     CLI.setStatus(Status.PLAY_PAGE);
                     Administer.writeLog("Navigate into play page");
 //                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into play page");

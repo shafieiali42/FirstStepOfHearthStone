@@ -1,8 +1,6 @@
 package Gui.Panels.CollectionPages;
 
 import Controller.Administer;
-import Utility.Constant;
-
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,17 +15,6 @@ import static Utility.Constant.WIDTH_OF_LITTLE_CARD;
 
 public class LittleCardPanel extends JPanel implements MouseListener, Serializable {
 
-
-//    private static final int WIDTH_OF_LITTLE_CARD = 225;
-//    private static final int HEIGHT_OF_LITTLE_CARD = 20;
-
-//    public static int getWidthOfLittleCard() {
-//        return WIDTH_OF_LITTLE_CARD;
-//    }
-//
-//    public static int getHeightOfLittleCard() {
-//        return HEIGHT_OF_LITTLE_CARD;
-//    }
 
     public JLabel getManaLabel() {
         return manaLabel;
@@ -72,24 +59,6 @@ public class LittleCardPanel extends JPanel implements MouseListener, Serializab
                 if (SwingUtilities.isLeftMouseButton(e)) {
                     Administer.removeThisCardFromCollectionStatesDeck(LittleCardPanel.this);
                     DeckViewer.getInstance().showCardsInDecK();
-//                    Iterator<Cards> itr = DeckPage.getInstance().getDeckTOChange().getListOfCards().iterator();
-//                    while (itr.hasNext()) {
-//                        Cards card = itr.next();
-//                        if (card.getName().equalsIgnoreCase(nameLabel.getText())) {
-//                            if (Integer.parseInt(usedLabel.getText()) == 1) {
-//                                itr.remove();
-//                                DeckViewer.getInstance().showCardsInDecK();
-//                                break;
-//                            } else if (Integer.parseInt(usedLabel.getText()) == 2) {
-//                                usedLabel.setText(1 + "");
-//                                break;
-//                            }
-//                            DeckViewer.getInstance().showCardsInDecK();
-////                    DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
-////                    DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
-//                        }
-//                    }
-
 
                 }
             }
@@ -128,9 +97,6 @@ public class LittleCardPanel extends JPanel implements MouseListener, Serializab
     public static void setAllLittleCardPanels() {
         allLittleCardPanels.clear();
         Administer.initializeAllLittleCardPanels();
-//        for (Cards card : Cards.getAllCards()) {
-//            allLittleCardPanels.add(new LittleCardPanel(card.getManaCost(), card.getName(), 0));
-//        }
     }
 
 
@@ -139,22 +105,7 @@ public class LittleCardPanel extends JPanel implements MouseListener, Serializab
         if (SwingUtilities.isLeftMouseButton(e)) {
             Administer.removeThisCardFromCollectionStatesDeck(LittleCardPanel.this);
             DeckViewer.getInstance().showCardsInDecK();
-//            Iterator<Cards> itr = DeckPage.getInstance().getDeckTOChange().getListOfCards().iterator();
-//            while (itr.hasNext()) {
-//                Cards card = itr.next();
-//                if (card.getName().equalsIgnoreCase(this.nameLabel.getText())) {
-//                    if (Integer.parseInt(this.usedLabel.getText()) == 1) {
-//                        itr.remove();
-//                        break;
-//                    } else if (Integer.parseInt(this.usedLabel.getText()) == 2) {
-//                        this.usedLabel.setText(1 + "");
-//                        break;
-//                    }
-//                    DeckViewer.getInstance().showCardsInDecK();
-//                    DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
-//                    DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
-//                }
-//            }
+
         }
     }
 

@@ -18,16 +18,6 @@ public class DeckViewer extends JPanel {
     private Color colorOfBtn = new Color(48, 48, 45);
     public static final int WIDTH_OF_BTN = 90;
     public static final int HEIGHT_OF_BTN = 90;
-//    private static final int WIDTH_OF_DECK_VIEWER = 250;      //TODO NEEDS TO CHANGE
-//    private static final int HEIGHT_OF_DECK_VIEWER = 800;     //TODO NEEDS TO CHANGE
-
-//    public static int getWidthOfDeckViewer() {
-//        return WIDTH_OF_DECK_VIEWER;
-//    }
-//
-//    public static int getHeightOfDeckViewer() {
-//        return HEIGHT_OF_DECK_VIEWER;
-//    }
 
 
     private static DeckViewer deckViewer = new DeckViewer();
@@ -82,25 +72,20 @@ public class DeckViewer extends JPanel {
                 Administer.defineUsesHashMap();
                 Administer.makeCollectionStatesDeckToNull();
                 DeckPage.getInstance().setListOfLittleCardsPanelOfDeckToChange(LittleCardPanel.getAllLittleCardPanels());
-//                DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
-//                DeckPage.getInstance().setDeckTOChange(new Deck());
-//                CLI.setStatus(Status.COLLECTIONS_PAGE);
+
                 CLI.setStatus(Status.COLLECTIONS_PAGE);
                 MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
                 DeckPanel.getInstance().showDeckButtons();
             } else if (CLI.getStatus().equals(Status.MAKE_DECK)) {
-//                DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
                 Administer.defineUsesHashMap();
                 Administer.addCollectionStatesDeckToPlayersDecksList();
-//                CLI.currentPlayer.getAllDecksOfPlayer().add(DeckPage.getInstance().getDeckTOChange());
                 Administer.makeCollectionStatesDeckToNull();
                 DeckPage.getInstance().setListOfLittleCardsPanelOfDeckToChange(LittleCardPanel.getAllLittleCardPanels());
-//                DeckPage.getInstance().setDeckTOChange(new Deck());
+
                 CLI.setStatus(Status.COLLECTIONS_PAGE);
                 MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
                 DeckPanel.getInstance().showDeckButtons();
                 Administer.writeLog("Make new Deck");
-//                CLI.currentPlayer.getLoggerOfMyPlayer().info("Make new deck");
             }
         }
     }
@@ -116,9 +101,6 @@ public class DeckViewer extends JPanel {
 
                     Administer.showLittleCardPanelOnDeckViewer(littleCardPanel, this,
                             (Constant.WIDTH_OF_DECK_VIEWER - littleCardPanel.getWidth()) / 2, yCoordinate);
-//                    MethodsOfShowCardsOnPanel.addPanel(littleCardPanel, this,
-//                            (DeckViewer.WIDTH_OF_DECK_VIEWER - littleCardPanel.getWidth()) / 2, yCoordinate,
-//                            littleCardPanel.getWidth(), littleCardPanel.getHeight());
 
                     yCoordinate += littleCardPanel.getHeight() + 5;
                     break;

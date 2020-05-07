@@ -7,10 +7,8 @@ import java.awt.*;
 
 public class ShopCardPanel extends JPanel {
 
-//    private static final int WIDTH_OF_SHOP_CARD_PANEL=100;
-//    private static final int HEIGHT_OF_SHOP_CARD_PANEL=720;
-    private static final int NUM_OF_CARD_IN_EVERY_ROW = 4;
 
+    private static final int NUM_OF_CARD_IN_EVERY_ROW = 4;
 
     private JScrollPane jScrollPane;
     private static ShopCardPanel shopCardPanel=new ShopCardPanel();
@@ -31,13 +29,6 @@ public class ShopCardPanel extends JPanel {
     public JScrollPane getJScrollPane() {
         return jScrollPane;
     }
-
-//    public  int getWidthOfShopCardPanel() {
-//        return WIDTH_OF_SHOP_CARD_PANEL;
-//    }
-//    public  int getHeightOfShopCardPanel() {
-//        return HEIGHT_OF_SHOP_CARD_PANEL;
-//    }
     public int getNumOfCardInEveryRow(){return NUM_OF_CARD_IN_EVERY_ROW;}
 
 }

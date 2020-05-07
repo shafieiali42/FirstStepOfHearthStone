@@ -17,9 +17,6 @@ import Utility.Constant;
 
 public class DeckPanel extends JPanel {
 
-
-//    private static final int WIDTH_OF_DECK_PANEL = 250;
-//    private static final int HEIGHT_OF_DECK_PANEL = 1600;
     private static final int WIDTH_OF_BTN = 180;
     private static final int HEIGHT_OF_BTN = 40;
     private Color colorOfTextOfNewDeckBtn = new Color(255, 0, 0);
@@ -32,13 +29,6 @@ public class DeckPanel extends JPanel {
     }
 
 
-//    public int getWidthOfDeckPanel() {
-//        return WIDTH_OF_DECK_PANEL;
-//    }
-//
-//    public int getHeightOfDeckPanel() {
-//        return HEIGHT_OF_DECK_PANEL;
-//    }
 
 
     private JButton newDeckBtn;
@@ -79,9 +69,6 @@ public class DeckPanel extends JPanel {
                 CLI.setStatus(Status.CHANGE_DECK);
                 LittleCardPanel.setAllLittleCardPanels();
                 Administer.setCollectionDeck(deckName);
-//                DeckPage.getInstance().setDeckTOChange(deck);
-//                DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
-
                 showDeck();
             }
         });
@@ -112,7 +99,6 @@ public class DeckPanel extends JPanel {
         LittleCardPanel.setAllLittleCardPanels();
         Administer.makeCollectionStatesDeckToNull();
         DeckPage.getInstance().setNameOfDeckToChange("");
-//        DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
 
         String name = JOptionPane.showInputDialog("Enter your favorite name!");
         Object[] possibilities = {"Mage", "Rogue", "Warlock", "Hunter", "Priest"};
@@ -129,27 +115,6 @@ public class DeckPanel extends JPanel {
         Administer.makeNewDeck(name, heroName);
         DeckPage.getInstance().setNameOfDeckToChange(name);
 
-//        switch (heroName) { // TODO needs changesssssssssssssssssssssssssss:(((((((((((
-//            case ("Mage"):
-//                DeckPage.getInstance().getDeckTOChange().setHero(Mage.getInstance());
-//                break;
-//            case ("Rogue"):
-//                DeckPage.getInstance().getDeckTOChange().setHero(Rogue.getInstance());
-//                break;
-//            case ("Warlock"):
-//                DeckPage.getInstance().getDeckTOChange().setHero(Warlock.getInstance());
-//                break;
-//            case ("Hunter"):
-//                DeckPage.getInstance().getDeckTOChange().setHero(Hunter.getInstance());
-//                break;
-//            case ("Priest"):
-//                DeckPage.getInstance().getDeckTOChange().setHero(Priest.getInstance());
-//                break;
-//
-//            default:
-//                throw new IllegalStateException("Unexpected value: " + s);
-//        }
-        //define deck;s name and hero then go to deck page then press done:
         MyMainFrame.getInstance().setContentPane(DeckPage.getInstance());
     }
 
@@ -177,17 +142,6 @@ public class DeckPanel extends JPanel {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

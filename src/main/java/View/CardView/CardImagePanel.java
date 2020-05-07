@@ -1,6 +1,7 @@
 package View.CardView;
 
 import Controller.Administer;
+import Logic.Alliance;
 import Models.Cards.Cards;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
@@ -30,21 +31,15 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     private BufferedImage imageOfCard;
     private boolean isLock;
     private String cardName;
-//    private Cards card; //TODO maybe it is wrong to define card for cardImagePanel:((
     boolean dragging = false;
     int x, y;
 
     public boolean getIsLock() {
         return isLock;
     }
-    public void setIsLock(String cardName) throws IOException {
-        isLock= Administer.isThisCardLock(cardName);
-//            if (CLI.currentPlayer.getAllCardsOfPlayer().contains(card)) {
-//                isLock = false;
-//            } else {
-//                isLock = true;
-//            }
 
+    public void setIsLock(String cardName) throws IOException {
+        isLock = Administer.isThisCardLock(cardName);
     }
 
     public BufferedImage getImageOfCard() {
@@ -52,9 +47,17 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     }
 
 
-//    private int WidthOfCardImage;  //TODO IT SHOULD CHANGE:))
-//    private int HeightOfCardImage;    //TODO IT SHOULD CHANGE:))
+    public CardImagePanel(Alliance alliance, int width, int height, int typeOfBackOfCard) throws IOException {
+        setLayout(null);
+        setSize(width, height);
+        this.addMouseListener(this);
+        this.addMouseMotionListener(this);
 
+
+        imageOfCard = ImageIO.read(new File("src/main/resources/BackOfCards/BackOfCards" + typeOfBackOfCard+ ".png"));
+
+
+    }
 
     public CardImagePanel(String cardName, int width, int height) throws IOException {
 
@@ -63,12 +66,12 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
         this.addMouseListener(this);
         this.addMouseMotionListener(this);
 //        this.card = card;
-        this.cardName=cardName;
+        this.cardName = cardName;
         setIsLock(this.cardName);
         if (this.isLock) {
             imageOfCard = ImageIO.read(new File("src/main/resources/Assets/GreyCardImage/" + cardName + ".png"));
         } else {
-            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName+ ".png"));
+            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
         }
     }
 
@@ -97,10 +100,6 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     }
 
 
-
-
-
-
     @Override
     public void mouseClicked(MouseEvent e) {
         if (SwingUtilities.isRightMouseButton(e)) {
@@ -122,7 +121,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 //                BuySellPanel.getInstance().setCard(this.card);
                 Administer.defineShopStateCard(cardName);
 //                BuySellPanel.getInstance().getPriceLabel().setText("Price " + this.card.getMoneyCost() + " $");
-                BuySellPanel.getInstance().getPriceLabel().setText("Price " +Administer.getMoneyOfShopStatesCard() + " $");
+                BuySellPanel.getInstance().getPriceLabel().setText("Price " + Administer.getMoneyOfShopStatesCard() + " $");
                 PanelToShowCardInBuySellPanel.getInstance().repaint();
                 PanelToShowCardInBuySellPanel.getInstance().revalidate();
 
@@ -134,7 +133,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 //                BuySellPanel.getInstance().setCard(this.card);
                 Administer.defineShopStateCard(cardName);
 //                BuySellPanel.getInstance().getPriceLabel().setText("Price " + this.card.getMoneyCost() + " $");
-                BuySellPanel.getInstance().getPriceLabel().setText("Price " +Administer.getMoneyOfShopStatesCard() + " $");
+                BuySellPanel.getInstance().getPriceLabel().setText("Price " + Administer.getMoneyOfShopStatesCard() + " $");
                 PanelToShowCardInBuySellPanel.getInstance().repaint();
                 PanelToShowCardInBuySellPanel.getInstance().revalidate();
 
@@ -149,26 +148,11 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
             } else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
 
                 try {
-                    Administer.addGivenCardToCollectionDeck(cardName,isLock);
+                    Administer.addGivenCardToCollectionDeck(cardName, isLock);
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
-//                for (int i = 0; i < DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().size(); i++) {
-//                    if (this.card.getName().equalsIgnoreCase(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getNameLabel().getText())) {
-//                        if (Integer.parseInt(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().getText()) < 2) {
-//                            if (!this.isLock) {
-//                                DeckPage.getInstance().getDeckTOChange().getListOfCards().add(this.card);
-//                            }
-//                            DeckViewer.getInstance().showCardsInDecK();
-//                            int k = Integer.parseInt(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().getText()) + 1;
-//                            DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().setText(k + "");
-//                            break;
-//                        } else if (!this.isLock) {
-//                            JOptionPane.showMessageDialog(null,
-//                                    "You have two card of this card in your Models.Deck!", "Add To Deck Error", JOptionPane.ERROR_MESSAGE);
-//                        }
-//                    }
-//                }
+
             }
 
         }
@@ -185,9 +169,6 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
         }
 
     }
-
-
-
 
 
     @Override

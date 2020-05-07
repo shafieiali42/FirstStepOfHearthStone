@@ -3,6 +3,7 @@ package Gui.Panels.SettingPanel;
 import Controller.Administer;
 import Gui.MyMainFrame;
 import Gui.Panels.CollectionPages.CardPanel;
+import Gui.Panels.GamePage.PlayPanel;
 import Gui.Panels.MenuPanel.MainMenuPage;
 import Utility.Constant;
 
@@ -17,13 +18,7 @@ public class SettingPage extends JPanel {
 
     private Color colorOfTextOfBtn = new Color(255, 0, 0);
     private Color colorOfBtn = new Color(48, 48, 45);
-//    public static final int WIDTH_OF_BTN = 220;
-//    public static final int HEIGHT_OF_BTN = 90;
-//    private static final int X_COORDINATE_OF_BUTTONS_IN_SETTING = (MyMainFrame.getInstance().getWidth()-WIDTH_OF_BTN)/2;
-//    private static final int Y_COORDINATE_OF_INCREASE_BTN = 200;
-//    private static final int Y_COORDINATE_OF_DECREASE_BTN = 300;
-//    private static final int Y_COORDINATE_OF_MUTE_BTN = 400;
-//    private static final int Y_COORDINATE_OF_BACK_BTN = 500;
+
     private static int numberOfPushMuteBtn = 0;
 
 
@@ -33,6 +28,7 @@ public class SettingPage extends JPanel {
         return settingPage;
     }
 
+    private JButton changeBackOfCardsBtn;
     private JButton increaseVolumeBtn;
     private JButton decreaseVolumeBtn;
     private JButton muteSoundsBtn;
@@ -45,10 +41,35 @@ public class SettingPage extends JPanel {
     }
 
     private void initButtons() {
+        initChangeBackOfCards();
         initMuteSoundsBtn();
         initIncreaseBtn();
         initDecreaseBtn();
         initBackBtn();
+    }
+
+    private void initChangeBackOfCards() {
+        changeBackOfCardsBtn = new JButton("Change card design");
+        designBtn(changeBackOfCardsBtn);
+        changeBackOfCardsBtn.setBounds(X_COORDINATE_OF_BUTTONS_IN_SETTING, Y_COORDINATE_OF_CHANGE_BACK_OF_CARDS_BTN, Constant.WIDTH_OF_BTN_IN_SETTING,
+                Constant.HEIGHT_OF_BTN_IN_SETTING);
+        changeBackOfCardsBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int a = PlayPanel.getInstance().getTypeOfBackOfCards() + 1;
+                if (a == 3) {
+                    a = 3;
+                }else{
+                    a=a%3;
+                }
+
+                Administer.changeBackOfCards(a);
+                JOptionPane.showMessageDialog(null,
+                        "Type of Back of cards changed to " + PlayPanel.getInstance().getTypeOfBackOfCards(), "Info", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+        this.add(changeBackOfCardsBtn);
+
     }
 
     private void initBackBtn() {
@@ -59,9 +80,9 @@ public class SettingPage extends JPanel {
         backBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CardPanel.getInstanceOfCollectionPage().removeAll();
-                CardPanel.getInstanceOfCollectionPage().repaint();
-                CardPanel.getInstanceOfCollectionPage().revalidate();
+//                CardPanel.getInstanceOfCollectionPage().removeAll();
+//                CardPanel.getInstanceOfCollectionPage().repaint();
+//                CardPanel.getInstanceOfCollectionPage().revalidate();
                 Administer.writeLog("Go back from setting page");
 //                CLI.currentPlayer.getLoggerOfMyPlayer().info("Go back from setting page");
                 MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());

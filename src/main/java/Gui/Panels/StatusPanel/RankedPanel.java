@@ -24,8 +24,6 @@ public class RankedPanel extends JPanel {
     private Color colorOfBtn = new Color(48, 48, 45);
     public static final int WIDTH_OF_BTN=MyMainFrame.getInstance().getWidth()/2;
     public static final int HEIGHT_OF_BTN = 71;
-//    private static final int WIDE_OF_RANKED_PANEL =700;
-//    private static final int HEIGHT_OF_RANKED_PANEL=800;
 
 
     private static RankedPanel rankedPanel=new RankedPanel();
@@ -231,25 +229,20 @@ public class RankedPanel extends JPanel {
 
 
 
-
-
     public void sortDecks(){
         Administer.sortDecksOfCurrentPlayer();
-//        Collections.sort(CLI.currentPlayer.getAllDecksOfPlayer());
+
     }
 
 
     private void showDeckNumber(int deckNumber) {
         sortDecks();
         Administer.setDeckToShowOFStatusState(deckNumber-1);
-//        ShowDeckInfoPanel.getInstance().setDeckToShow(CLI.currentPlayer.getAllDecksOfPlayer().get(deckNumber-1));
         ShowDeckInfoPanel.getInstance().setReadyToShow(true);
         ShowDeckInfoPanel.getInstance().repaint();
         ShowDeckInfoPanel.getInstance().revalidate();
         Administer.writeLog("Show best deck, deck number: "+ deckNumber);
-//        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show best deck, deck number: "+ deckNumber);
     }
-
 
 
 }
@@ -272,14 +265,7 @@ public class RankedPanel extends JPanel {
      public void setNameOfDeckToShow(String nameOfDeckToShow) {
          this.nameOfDeckToShow = nameOfDeckToShow;
      }
-//    private Deck deckToShow;
 
-//     public Deck getDeckToShow() {
-//         return deckToShow;
-//     }
-//     public void setDeckToShow(Deck deckToShow) {
-//         this.deckToShow = deckToShow;
-//     }
 
      public boolean isReadyToShow() {
          return readyToShow;

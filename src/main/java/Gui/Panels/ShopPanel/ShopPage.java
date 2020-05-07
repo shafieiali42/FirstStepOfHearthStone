@@ -21,9 +21,6 @@ public class ShopPage extends JPanel {
         this.addPanel(ButtonPanel.getInstance(),0,0, Constant.WIDTH_OF_BUTTON_PANEL_IN_SHOP,
                 Constant.HEIGHT_OF_BUTTON_PANEL_IN_SHOP);
 
-//        this.addPanel(ShopCardPanel.getInstance(),0,ButtonPanel.getInstance().getHeightOfButtonPanel(),
-//                ShopCardPanel.getInstance().getWidthOfShopCardPanel(),ShopCardPanel.getInstance().getHeightOfShopCardPanel());
-
         ShopCardPanel.getInstance().setPreferredSize(new Dimension(1000,1800));
         ShopCardPanel.getInstance().setFocusable(true);
         ShopCardPanel.getInstance().requestFocus();
@@ -38,9 +35,7 @@ public class ShopPage extends JPanel {
         this.addPanel(BuySellPanel.getInstance(),1000,ButtonPanel.getInstance().getHeight(),
                 Constant.WIDTH_OF_BUY_SELL_PANEL,Constant.HEIGHT_OF_BUY_SELL_PANEL);
 
-
     }
-
 
 
     public void addPanel(JPanel panel,int x, int y, int width,int height){

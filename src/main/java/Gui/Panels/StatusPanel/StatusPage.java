@@ -18,6 +18,4 @@ public class StatusPage extends JPanel {
         add(ShowDeckInfoPanel.getInstance());
     }
 
-
-
 }

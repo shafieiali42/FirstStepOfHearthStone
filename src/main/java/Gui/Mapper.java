@@ -23,7 +23,7 @@ public class Mapper {
     }
 
     private ArrayList<Request> requests;
-   private Cards cards;
+    private Cards cards;
 
     public Cards getCards() {
         return cards;
@@ -64,19 +64,7 @@ public class Mapper {
             public void execute() {
                 endTurn();
             }
-        },
-        SET_PLAYING_CARDS_OF_GAME_STATE(){
-
-
-
-            @Override
-            public void execute() {
-                setPlayingCardsOfGameState();
-            }
-        },
-
-    }
-    private static void setPlayingCardsOfGameState() {
+        }
     }
 
 
@@ -89,29 +77,30 @@ public class Mapper {
                 GameState.getInstance().getBattleGroundCards().add(playingCard);
 
             } else if (playingCard.getType().equalsIgnoreCase("weapon")) {
-                GameState.getInstance().setCurrentWeapon((Weapon)playingCard);
+                GameState.getInstance().setCurrentWeapon((Weapon) playingCard);
 
-            }else if (playingCard.getType().contains("Spell")){
+            } else if (playingCard.getType().contains("Spell")) {
                 //TODO PLAY SPELL
             }
             GameState.getInstance().setMana(GameState.getInstance().getMana() - playingCard.getManaCost());
+
+            StringBuilder addToLog = new StringBuilder(LogPanel.getInstance().getLog() + "Play");
+            for (int i = 0; i < playingCard.getName().length(); i++) {
+                char c = playingCard.getName().charAt(i);
+                if (Character.isUpperCase(c)) {
+                    addToLog.append("\n");
+                    addToLog.append(c);
+                } else {
+                    addToLog.append(c);
+                }
+            }
+            LogPanel.getInstance().setLog(addToLog.toString() + "\n\n");
+            LogPanel.getInstance().repaint();
+            LogPanel.getInstance().revalidate();
+            Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/PlayCards.wav");
+            CLI.currentPlayer.getLoggerOfMyPlayer().info("Play minion");
         }
 
-        StringBuilder addToLog = new StringBuilder(LogPanel.getInstance().getLog() + "Play");
-        for (int i = 0; i < playingCard.getName().length(); i++) {
-            char c = playingCard.getName().charAt(i);
-            if (Character.isUpperCase(c)) {
-                addToLog.append("\n");
-                addToLog.append(c);
-            } else {
-                addToLog.append(c);
-            }
-        }
-        LogPanel.getInstance().setLog(addToLog.toString() + "\n\n");
-        LogPanel.getInstance().repaint();
-        LogPanel.getInstance().revalidate();
-        Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/PlayCards.wav");
-        CLI.currentPlayer.getLoggerOfMyPlayer().info("Play minion");
     }
 
 
@@ -125,6 +114,9 @@ public class Mapper {
                         "Your deck is empty.\nContinue game with your hand's cards", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
                 GameState.getInstance().getHandsCards().add(GameState.getInstance().getCardsOfDeckInGameState().get(0));
+
+                GameState.getInstance().getHandsCardsOfOpponent().
+                        add(GameState.getInstance().getCardsOfDeckInGameState().get(0));//TODO just for show back of cards
                 GameState.getInstance().getCardsOfDeckInGameState().remove(0);
             }
         } else {
