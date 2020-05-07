@@ -3410,3 +3410,533 @@ May 07, 2020 1:09:27 AM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
 INFO: Navigate into collection page
 May 07, 2020 1:09:28 AM Gui.Panels.CollectionPages.CategoryPanel$3 actionPerformed
 INFO: Show all cards 
+May 07, 2020 4:51:25 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 07, 2020 4:51:25 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/07 16:51:25
+May 07, 2020 4:51:25 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+May 07, 2020 4:51:25 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 07, 2020 4:51:27 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 07, 2020 4:51:29 PM Controller.Administer showAllCards
+INFO: Show all cards 
+May 07, 2020 4:51:50 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 4:52:11 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 07, 2020 4:52:11 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/07 16:52:11
+May 07, 2020 4:52:11 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+May 07, 2020 4:52:11 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 07, 2020 4:52:13 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 07, 2020 4:52:56 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 07, 2020 4:52:56 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/07 16:52:56
+May 07, 2020 4:52:56 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+May 07, 2020 4:52:56 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 07, 2020 4:52:57 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 07, 2020 4:53:00 PM Controller.Administer writeLog
+INFO: Show salable cards
+May 07, 2020 4:53:02 PM Controller.Administer writeLog
+INFO: Show buyable cards
+May 07, 2020 4:53:05 PM Controller.Administer writeLog
+INFO: Show Wallet
+May 07, 2020 4:54:35 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 07, 2020 4:54:35 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/07 16:54:35
+May 07, 2020 4:54:35 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+May 07, 2020 4:54:35 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 07, 2020 4:54:38 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 07, 2020 4:54:40 PM Controller.Administer writeLog
+INFO: Show salable cards
+May 07, 2020 4:58:07 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 07, 2020 4:58:07 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/07 16:58:07
+May 07, 2020 4:58:07 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: sss
+May 07, 2020 4:58:07 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 07, 2020 4:58:09 PM Gui.Panels.MenuPanel.MainMenuPage$6 actionPerformed
+INFO: Navigate into shop page
+May 07, 2020 4:58:14 PM Controller.Administer writeLog
+INFO: Show salable cards
+May 07, 2020 4:58:28 PM Player.Player sell
+INFO: Sell: TournamentMedic
+May 07, 2020 4:58:28 PM Player.Player sell
+INFO: Sell TournamentMedic
+May 07, 2020 4:58:34 PM Controller.Administer writeLog
+INFO: Show buyable cards
+May 07, 2020 4:58:36 PM Controller.Administer writeLog
+INFO: Show Wallet
+May 07, 2020 4:58:40 PM Controller.Administer writeLog
+INFO: Show Wallet
+May 07, 2020 4:58:45 PM Controller.Administer writeLog
+INFO: Back from shop page
+May 07, 2020 4:58:47 PM Gui.Panels.MenuPanel.MainMenuPage$5 actionPerformed
+INFO: Navigate into setting page
+May 07, 2020 4:58:48 PM Gui.Panels.SettingPanel.SettingPage$1 actionPerformed
+INFO: Go back from setting page
+May 07, 2020 4:58:52 PM Gui.Panels.MenuPanel.MainMenuPage$7 actionPerformed
+INFO: Navigate into collection page
+May 07, 2020 4:58:54 PM Controller.Administer showAllCards
+INFO: Show all cards 
+May 07, 2020 7:11:56 PM CommandLineInterface.PlayerManagement signUp
+INFO: USER: sss
+May 07, 2020 7:11:56 PM CommandLineInterface.PlayerManagement signUp
+INFO: CREATED_AT:2020/05/07 19:11:56
+May 07, 2020 7:11:56 PM CommandLineInterface.PlayerManagement signUp
+INFO: PASSWORD: ssss
+May 07, 2020 7:11:56 PM CommandLineInterface.PlayerManagement signUp
+INFO: sign_up sss
+May 07, 2020 7:12:00 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 07, 2020 7:18:07 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:18:09 PM Controller.Administer writeLog
+INFO: Navigate into setting page
+May 07, 2020 7:18:29 PM Controller.Administer writeLog
+INFO: Go back from setting page
+May 07, 2020 7:18:30 PM Controller.Administer writeLog
+INFO: Navigate into shop page
+May 07, 2020 7:18:33 PM Controller.Administer writeLog
+INFO: Show Wallet
+May 07, 2020 7:18:35 PM Controller.Administer writeLog
+INFO: Show buyable cards
+May 07, 2020 7:18:40 PM Player.Player buy
+INFO: Buy: Sathrovarr
+May 07, 2020 7:18:42 PM Player.Player buy
+INFO: Buy Sathrovarr
+May 07, 2020 7:18:45 PM Controller.Administer writeLog
+INFO: Show salable cards
+May 07, 2020 7:18:51 PM Controller.Administer writeLog
+INFO: Back from shop page
+May 07, 2020 7:18:53 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:18:55 PM Controller.Administer showCardsWithSpecifiedManaCost
+INFO: Show cards with mana: 1
+May 07, 2020 7:18:57 PM Controller.Administer showCardsWithSpecifiedManaCost
+INFO: Show cards with mana: 2
+May 07, 2020 7:18:58 PM Controller.Administer showCardsWithSpecifiedManaCost
+INFO: Show cards with mana: 3
+May 07, 2020 7:18:59 PM Controller.Administer showCardsWithSpecifiedManaCost
+INFO: Show cards with mana: 4
+May 07, 2020 7:19:00 PM Controller.Administer showCardsWithSpecifiedManaCost
+INFO: Show cards with mana: 5
+May 07, 2020 7:19:06 PM Controller.Administer writeLog
+INFO: Search for card: poly
+May 07, 2020 7:21:41 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:21:44 PM Controller.Administer writeLog
+INFO: Navigate into setting page
+May 07, 2020 7:21:46 PM Controller.Administer writeLog
+INFO: Go back from setting page
+May 07, 2020 7:21:50 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:21:56 PM Controller.Administer writeLog
+INFO: Go back from collection page
+May 07, 2020 7:21:58 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 07, 2020 7:25:45 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:25:46 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:25:53 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:25:55 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:25:57 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:26:00 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:34:47 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:34:49 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:34:53 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:35:02 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:35:03 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:35:10 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:35:28 PM Controller.Administer showCardsWithSpecifiedManaCost
+INFO: Show cards with mana: 1
+May 07, 2020 7:35:29 PM Controller.Administer showCardsWithSpecifiedManaCost
+INFO: Show cards with mana: 1
+May 07, 2020 7:35:31 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:35:34 PM Controller.Administer writeLog
+INFO: Go back from collection page
+May 07, 2020 7:35:37 PM CommandLineInterface.PlayerManagement logOut
+INFO: Log_out sss
+May 07, 2020 7:37:02 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:37:03 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:37:09 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:38:32 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:38:34 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:38:39 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:38:42 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:38:43 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:38:45 PM Controller.Administer showCardsWithSpecifiedManaCost
+INFO: Show cards with mana: 1
+May 07, 2020 7:40:04 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:40:06 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:40:12 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:40:13 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:40:14 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:40:15 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:40:23 PM Controller.Administer showCardsWithSpecifiedManaCost
+INFO: Show cards with mana: 1
+May 07, 2020 7:40:28 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:40:40 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 7:40:49 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck sss
+May 07, 2020 7:42:13 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:42:16 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:42:17 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Priest cards
+May 07, 2020 7:42:20 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Hunter cards
+May 07, 2020 7:42:21 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Rogue cards
+May 07, 2020 7:42:22 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Mage cards
+May 07, 2020 7:42:30 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:42:32 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:43:12 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 7:43:14 PM Controller.Administer writeLog
+INFO: Go back from collection page
+May 07, 2020 7:43:19 PM Controller.Administer selectMainDeck
+INFO: select c for main deck
+May 07, 2020 7:43:21 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck c
+May 07, 2020 7:43:23 PM Controller.Administer writeLog
+INFO: Go back from collection page
+May 07, 2020 7:43:27 PM Controller.Administer selectMainDeck
+INFO: select c for main deck
+May 07, 2020 7:43:31 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck c
+May 07, 2020 7:43:32 PM Controller.Administer writeLog
+INFO: Go back from collection page
+May 07, 2020 7:44:40 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:44:42 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:44:47 PM Controller.Administer showAllCards
+INFO: Show all cards 
+May 07, 2020 7:44:48 PM Controller.Administer showCardsWithSpecifiedManaCost
+INFO: Show cards with mana: 2
+May 07, 2020 7:44:54 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:45:04 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 7:45:07 PM Controller.Administer writeLog
+INFO: Go back from collection page
+May 07, 2020 7:45:14 PM Controller.Administer selectMainDeck
+INFO: select sss for main deck
+May 07, 2020 7:45:16 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck sss
+May 07, 2020 7:45:18 PM Controller.Administer writeLog
+INFO: Go back from collection page
+May 07, 2020 7:45:19 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 7:45:25 PM Gui.Mapper playCard
+INFO: Play minion
+May 07, 2020 7:45:27 PM Gui.Mapper endTurn
+INFO: End turn
+May 07, 2020 7:45:30 PM Gui.Mapper endTurn
+INFO: End turn
+May 07, 2020 7:45:34 PM Gui.Mapper playCard
+INFO: Play minion
+May 07, 2020 7:45:35 PM Gui.Mapper endTurn
+INFO: End turn
+May 07, 2020 7:45:37 PM Gui.Mapper endTurn
+INFO: End turn
+May 07, 2020 7:45:39 PM Gui.Mapper playCard
+INFO: Play minion
+May 07, 2020 7:45:53 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 7:46:00 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:49:03 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:49:11 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:49:17 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:49:18 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:49:37 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 7:53:37 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:53:38 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:53:45 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:53:45 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:53:49 PM Controller.Administer showCardsWithSpecifiedManaCost
+INFO: Show cards with mana: 1
+May 07, 2020 7:55:44 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:55:46 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:55:50 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:55:56 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:56:01 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 7:56:06 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:56:08 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:56:37 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:56:38 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:56:42 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 7:58:17 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 7:58:19 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 7:58:28 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:00:35 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:00:36 PM Controller.Administer writeLog
+INFO: Navigate into setting page
+May 07, 2020 8:00:37 PM Controller.Administer writeLog
+INFO: Go back from setting page
+May 07, 2020 8:00:38 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:00:53 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:00:54 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:00:54 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:00:54 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:00:54 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:00:55 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:00:55 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:00:55 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:00:55 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:00:55 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:00:55 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:00:56 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:00:57 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:00:58 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:02:03 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:02:04 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:02:08 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:02:12 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:03:37 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:03:38 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:03:46 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:03:47 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show null cards
+May 07, 2020 8:04:30 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:04:32 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:04:36 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Mage cards
+May 07, 2020 8:04:38 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:04:57 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 8:05:03 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck xxx
+May 07, 2020 8:08:33 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:08:37 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:08:44 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:08:46 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Mage cards
+May 07, 2020 8:08:52 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:09:00 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 8:11:44 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:11:45 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:11:53 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:12:06 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 8:13:10 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:13:12 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:13:18 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:13:28 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 8:14:50 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:14:51 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:14:56 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:15:28 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 8:16:11 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:16:12 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:16:19 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:16:31 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 8:17:51 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:17:52 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:17:59 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:20:17 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:20:19 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:20:25 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:20:37 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 8:25:37 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:25:40 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:25:46 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:26:08 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 8:26:22 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Mage cards
+May 07, 2020 8:26:23 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:27:36 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:27:38 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:27:43 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:28:03 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 8:31:04 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:31:06 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:31:11 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:31:35 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 8:36:58 PM CommandLineInterface.PlayerManagement signIn
+INFO: sign_in sss
+May 07, 2020 8:36:59 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:37:02 PM Controller.Administer showAllCards
+INFO: Show all cards 
+May 07, 2020 8:37:05 PM Controller.Administer writeLog
+INFO: Show buyable cards
+May 07, 2020 8:37:09 PM Player.Player buy
+INFO: Buy: Sathrovarr
+May 07, 2020 8:37:10 PM Player.Player buy
+INFO: Buy Sathrovarr
+May 07, 2020 8:37:12 PM Controller.Administer writeLog
+INFO: Back from shop page
+May 07, 2020 8:37:13 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+May 07, 2020 8:37:18 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Mage cards
+May 07, 2020 8:37:20 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+May 07, 2020 8:37:39 PM Controller.Administer writeLog
+INFO: Make new Deck
+May 07, 2020 8:37:50 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck c
+May 07, 2020 8:37:52 PM Controller.Administer writeLog
+INFO: Go back from collection page
+May 07, 2020 8:38:21 PM Controller.Administer selectMainDeck
+INFO: select c for main deck
+May 07, 2020 8:38:35 PM Controller.Administer changeNameOfDeck
+INFO: Change name of deck 
+May 07, 2020 8:38:37 PM Controller.Administer selectMainDeck
+INFO: select ali for main deck
+May 07, 2020 8:38:42 PM Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck c
+May 07, 2020 8:38:44 PM Controller.Administer writeLog
+INFO: Go back from collection page
+May 07, 2020 8:38:45 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 8:38:51 PM Gui.Mapper playCard
+INFO: Play minion
+May 07, 2020 8:38:52 PM Gui.Mapper endTurn
+INFO: End turn
+May 07, 2020 8:38:54 PM Gui.Mapper endTurn
+INFO: End turn
+May 07, 2020 8:38:57 PM Gui.Mapper playCard
+INFO: Play minion
+May 07, 2020 8:39:02 PM Controller.Administer writeLog
+INFO: Navigate into play page
+May 07, 2020 8:39:10 PM Gui.Mapper endTurn
+INFO: End turn

@@ -25,7 +25,7 @@ public class MethodsOfShowCardsOnPanel {
         for (Cards card : cards) {
 
             counter++;
-            CardImagePanel cardImagePanel = new CardImagePanel(card);
+            CardImagePanel cardImagePanel = new CardImagePanel(card.getName());
 
 //            CardPanel.getInstance().setBackground(Color.white);
             addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),
@@ -54,7 +54,7 @@ public class MethodsOfShowCardsOnPanel {
             yCoordinate=690;
             for (Cards card : cards) {
                 counter++;
-                CardImagePanel cardImagePanel = new CardImagePanel(card, PlayPanel.getWidthOfEachCardHandsCards(),
+                CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getWidthOfEachCardHandsCards(),
                         PlayPanel.getHeightOfEachCardHandsCards());
 
 //            CardPanel.getInstance().setBackground(Color.white);
@@ -89,7 +89,7 @@ public class MethodsOfShowCardsOnPanel {
 
         for (Cards card : cards) {
             counter++;
-            CardImagePanel cardImagePanel = new CardImagePanel(card, PlayPanel.getWidthOfEachCardGamePanel(),
+            CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getWidthOfEachCardGamePanel(),
                     PlayPanel.getHeightOfEachCardGamePanel());
 
 //            CardPanel.getInstance().setBackground(Color.white);

@@ -1,6 +1,6 @@
 package Models.Deck;
 
-import Gui.Panels.CollectionPages.LittleCardPanel;
+
 
 import Models.Cards.Cards;
 import Models.Heroes.Heroes;
@@ -222,7 +222,7 @@ public class Deck implements Comparable<Deck> {
 //        return super.clone();
 //    }
 
-//    public HashMap<String, Integer> getUsesHashMap() {
-//        return usesHashMap;
-//    }
+    public HashMap<String, Integer> getUsesHashMap() {
+        return usesHashMap;
+    }
 }

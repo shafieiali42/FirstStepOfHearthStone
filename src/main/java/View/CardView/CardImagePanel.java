@@ -1,5 +1,6 @@
 package View.CardView;
 
+import Controller.Administer;
 import Models.Cards.Cards;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
@@ -28,22 +29,22 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     private BufferedImage imageOfCard;
     private boolean isLock;
-    private Cards card; //TODO maybe it is wrong to define card for cardImagePanel:((
+    private String cardName;
+//    private Cards card; //TODO maybe it is wrong to define card for cardImagePanel:((
     boolean dragging = false;
     int x, y;
 
     public boolean getIsLock() {
         return isLock;
     }
+    public void setIsLock(String cardName) throws IOException {
+        isLock= Administer.isThisCardLock(cardName);
+//            if (CLI.currentPlayer.getAllCardsOfPlayer().contains(card)) {
+//                isLock = false;
+//            } else {
+//                isLock = true;
+//            }
 
-    public void setIsLock(Cards card) {
-        for (Cards cards : Cards.getAllCards()) {
-            if (CLI.currentPlayer.getAllCardsOfPlayer().contains(card)) {
-                isLock = false;
-            } else {
-                isLock = true;
-            }
-        }
     }
 
     public BufferedImage getImageOfCard() {
@@ -51,54 +52,39 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     }
 
 
-    private int WidthOfCardImage;  //TODO IT SHOULD CHANGE:))
-    private int HeightOfCardImage;    //TODO IT SHOULD CHANGE:))
-
-    public void setWidthOfCardImage(int widthOfCardImage) {
-        WidthOfCardImage = widthOfCardImage;
-    }
-
-    public void setHeightOfCardImage(int heightOfCardImage) {
-        HeightOfCardImage = heightOfCardImage;
-    }
-
-//    public  int getWidthOfCardImage() {
-//        return WidthOfCardImage;
-//    }
-
-//    public  int getHeightOfCardImage() {
-//        return HeightOfCardImage;
-//    }
+//    private int WidthOfCardImage;  //TODO IT SHOULD CHANGE:))
+//    private int HeightOfCardImage;    //TODO IT SHOULD CHANGE:))
 
 
-    public CardImagePanel(Cards card, int width, int height) throws IOException {
+    public CardImagePanel(String cardName, int width, int height) throws IOException {
 
         setLayout(null);
         setSize(width, height);
         this.addMouseListener(this);
         this.addMouseMotionListener(this);
-        this.card = card;
-        setIsLock(card);
+//        this.card = card;
+        this.cardName=cardName;
+        setIsLock(this.cardName);
         if (this.isLock) {
-            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/GreyCardImage/" + card.getName() + ".png"));
+            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/GreyCardImage/" + cardName + ".png"));
         } else {
-            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + card.getName() + ".png"));
+            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName+ ".png"));
         }
     }
 
-    public CardImagePanel(Cards card) throws IOException {
+    public CardImagePanel(String cardName) throws IOException {
 
         setLayout(null);
         setSize(150, 170);
 
         this.addMouseListener(this);
         this.addMouseMotionListener(this);
-        this.card = card;
-        setIsLock(card);
+        this.cardName = cardName;
+        setIsLock(cardName);
         if (this.isLock) {
-            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/GreyCardImage/" + card.getName() + ".png"));
+            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/GreyCardImage/" + cardName + ".png"));
         } else {
-            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + card.getName() + ".png"));
+            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
         }
 
     }
@@ -111,14 +97,17 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     }
 
 
+
+
+
+
     @Override
     public void mouseClicked(MouseEvent e) {
-        System.out.println("Clicked");
         if (SwingUtilities.isRightMouseButton(e)) {
             UIManager UI = new UIManager();
             UI.put("OptionPane.background", Color.cyan);
             UI.put("Panel.background", Color.cyan);
-            UIManager.put("OptionPane.minimumSize", new Dimension(WidthOfCardImage * 3, HeightOfCardImage * 3));
+            UIManager.put("OptionPane.minimumSize", new Dimension(this.getWidth() * 3, this.getHeight() * 3));
             JOptionPane.showMessageDialog(null, this, "Information", JOptionPane.INFORMATION_MESSAGE);
             UI.put("OptionPane.background", Color.white);
             UI.put("Panel.background", Color.white);
@@ -130,8 +119,10 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 PanelToShowCardInBuySellPanel.getInstance().repaint();
                 PanelToShowCardInBuySellPanel.getInstance().revalidate();
                 BuySellPanel.getInstance().getPriceLabel().setText("");
-                BuySellPanel.getInstance().setCard(this.card);
-                BuySellPanel.getInstance().getPriceLabel().setText("Price " + this.card.getMoneyCost() + " $");
+//                BuySellPanel.getInstance().setCard(this.card);
+                Administer.defineShopStateCard(cardName);
+//                BuySellPanel.getInstance().getPriceLabel().setText("Price " + this.card.getMoneyCost() + " $");
+                BuySellPanel.getInstance().getPriceLabel().setText("Price " +Administer.getMoneyOfShopStatesCard() + " $");
                 PanelToShowCardInBuySellPanel.getInstance().repaint();
                 PanelToShowCardInBuySellPanel.getInstance().revalidate();
 
@@ -140,8 +131,10 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 PanelToShowCardInBuySellPanel.getInstance().repaint();
                 PanelToShowCardInBuySellPanel.getInstance().revalidate();
                 BuySellPanel.getInstance().getPriceLabel().setText("");
-                BuySellPanel.getInstance().setCard(this.card);
-                BuySellPanel.getInstance().getPriceLabel().setText("Price " + this.card.getMoneyCost() + " $");
+//                BuySellPanel.getInstance().setCard(this.card);
+                Administer.defineShopStateCard(cardName);
+//                BuySellPanel.getInstance().getPriceLabel().setText("Price " + this.card.getMoneyCost() + " $");
+                BuySellPanel.getInstance().getPriceLabel().setText("Price " +Administer.getMoneyOfShopStatesCard() + " $");
                 PanelToShowCardInBuySellPanel.getInstance().repaint();
                 PanelToShowCardInBuySellPanel.getInstance().revalidate();
 
@@ -154,22 +147,28 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                     JOptionPane.showMessageDialog(null, "You can't Buy this card:((");
                 }
             } else if (CLI.getStatus().equals(Status.MAKE_DECK) || CLI.getStatus().equals(Status.CHANGE_DECK)) {
-                for (int i = 0; i < DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().size(); i++) {
-                    if (this.card.getName().equalsIgnoreCase(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getNameLabel().getText())) {
-                        if (Integer.parseInt(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().getText()) < 2) {
-                            if (!this.isLock) {
-                                DeckPage.getInstance().getDeckTOChange().getListOfCards().add(this.card);
-                            }
-                            DeckViewer.getInstance().showCardsInDecK();
-                            int k = Integer.parseInt(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().getText()) + 1;
-                            DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().setText(k + "");
-                            break;
-                        } else if (!this.isLock) {
-                            JOptionPane.showMessageDialog(null,
-                                    "You have two card of this card in your Models.Deck!", "Add To Models.Deck Error", JOptionPane.ERROR_MESSAGE);
-                        }
-                    }
+
+                try {
+                    Administer.addGivenCardToCollectionDeck(cardName,isLock);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
                 }
+//                for (int i = 0; i < DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().size(); i++) {
+//                    if (this.card.getName().equalsIgnoreCase(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getNameLabel().getText())) {
+//                        if (Integer.parseInt(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().getText()) < 2) {
+//                            if (!this.isLock) {
+//                                DeckPage.getInstance().getDeckTOChange().getListOfCards().add(this.card);
+//                            }
+//                            DeckViewer.getInstance().showCardsInDecK();
+//                            int k = Integer.parseInt(DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().getText()) + 1;
+//                            DeckPage.getInstance().getDeckTOChange().getLittleCardPanelsOfThisDeck().get(i).getUsedLabel().setText(k + "");
+//                            break;
+//                        } else if (!this.isLock) {
+//                            JOptionPane.showMessageDialog(null,
+//                                    "You have two card of this card in your Models.Deck!", "Add To Deck Error", JOptionPane.ERROR_MESSAGE);
+//                        }
+//                    }
+//                }
             }
 
         }
@@ -187,21 +186,30 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     }
 
+
+
+
+
     @Override
-    public void mouseReleased(MouseEvent e) {
+
+    public void mouseReleased(MouseEvent e) {//TODO can change better inorder to separate logic and GUI
         if (CLI.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || CLI.getStatus().equals(Status.PLAY_PAGE)) {
 //            if (e.getComponent().getX() >= PlayPanel.getMinXForPutCards() &&
 //                    e.getComponent().getX() <= PlayPanel.getMaxXForPutCards() &&
 //                    e.getComponent().getY() >= PlayPanel.getMinYForPutCards() &&
 //                    e.getComponent().getY() <= PlayPanel.getMaxYForPutCards()) {
-            if (!this.card.getType().equalsIgnoreCase("minion")) {
-                GameState.getInstance().setPlayingCard(this.card);
+
+
+            if (!Administer.getTypeOfGivenCard(this.cardName).equalsIgnoreCase("minion")) {
+//                GameState.getInstance().setPlayingCard(this.card);
+                Administer.setPlayingCardOfGameState(this.cardName);
                 Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS);
                 Mapper.getInstance().executeRequests();
                 dragging = false;
-            } else if (GameState.getInstance().getBattleGroundCards().size() <= 7 - 1) {
+            } else if (Administer.canAddMinionToBattleGround()) {
 
-                GameState.getInstance().setPlayingCard(this.card);
+//                GameState.getInstance().setPlayingCard(this.card);
+                Administer.setPlayingCardOfGameState(this.cardName);
                 Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS);
                 Mapper.getInstance().executeRequests();
                 dragging = false;

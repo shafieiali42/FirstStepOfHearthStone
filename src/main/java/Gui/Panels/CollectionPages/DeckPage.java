@@ -5,11 +5,23 @@ import Gui.MyMainFrame;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class DeckPage extends JPanel {
 
     private static DeckPage deckPage=new DeckPage();
     public static DeckPage getInstance(){return deckPage;}
+
+
+    private ArrayList<LittleCardPanel> listOfLittleCardsPanelOfDeckToChange=new ArrayList<LittleCardPanel>();
+
+    public ArrayList<LittleCardPanel> getListOfLittleCardsPanelOfDeckToChange() {
+        return listOfLittleCardsPanelOfDeckToChange;
+    }
+
+    public void setListOfLittleCardsPanelOfDeckToChange(ArrayList<LittleCardPanel> listOfLittleCardsPanelOfDeckToChange) {
+        this.listOfLittleCardsPanelOfDeckToChange = listOfLittleCardsPanelOfDeckToChange;
+    }
 
     private String nameOfDeckToChange;
 

@@ -1,9 +1,11 @@
 package CommandLineInterface;
 
+import Controller.Administer;
 import Gui.MyMainFrame;
 import Gui.Panels.LogInPanel.LogInPage;
 import Gui.Panels.MenuPanel.MainMenuPage;
 import Player.Player;
+import Utility.Sounds;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -91,8 +93,9 @@ public class CLI {
 //            }
 //        }
 //    }
-    public static void secondPage() throws IOException {
-
+    public static void secondPage() {
+//        Sounds.playMainSound("src/main/resources/Sounds/FirstAudio.wav");
+        Administer.playMainSound();
         MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
     }
 

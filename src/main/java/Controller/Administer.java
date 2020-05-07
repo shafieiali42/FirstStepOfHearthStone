@@ -1,25 +1,33 @@
 package Controller;
 
 import CommandLineInterface.CLI;
+import CommandLineInterface.PlayerManagement;
 import CommandLineInterface.Status;
-import Gui.Panels.CollectionPages.CardPanel;
+
 import Gui.Panels.CollectionPages.DeckPage;
 import Gui.Panels.CollectionPages.DeckViewer;
 import Gui.Panels.CollectionPages.LittleCardPanel;
-import Gui.Panels.ShopPanel.BuySellPanel;
-import Gui.Panels.ShopPanel.ShopCardPanel;
-import Logic.CollectionState;
-import Logic.ShopState;
+import Gui.Panels.LogInPanel.LogInPage;
+import Gui.Panels.MenuPanel.MainMenuPage;
+
+
+import Logic.*;
 import Models.Cards.Cards;
 import Models.Deck.Deck;
 import Models.Heroes.*;
+
+
+import Utility.LengthOfMessage;
 import Utility.MethodsOfShowCardsOnPanel;
 import Utility.Sounds;
 import View.CardView.CardImagePanel;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 
 public class Administer {
@@ -33,10 +41,214 @@ public class Administer {
 
 
 
+    public static void showWeaponOfGameState(JPanel panel,int widthOfWeaponImage,int heightOfWeaponImage,int xCoordinateOfWeapon,int yCoordinateOfWeapon){
+        if (GameState.getInstance().getCurrentWeapon()!=null){
+            try {
+                CardImagePanel cardImagePanel=new CardImagePanel(GameState.getInstance().getCurrentWeapon().getName(),
+                        widthOfWeaponImage,heightOfWeaponImage);
+
+                MethodsOfShowCardsOnPanel.addPanel(cardImagePanel,panel,
+                        xCoordinateOfWeapon,yCoordinateOfWeapon,widthOfWeaponImage,heightOfWeaponImage);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void showHandsCardOfMeAllianceInPlay(JPanel panel, int numberOfCardsPerRowHandsCards) throws IOException {
+        MethodsOfShowCardsOnPanel.showHandsCards(GameState.getInstance().getHandsCards(), panel, numberOfCardsPerRowHandsCards, Alliance.ME);
+    }
+
+    public static void showBattleGroundCardsOfMeAllianceInPlay(JPanel panel, int numberOfCardsPerRowGamePanel) throws IOException {
+        MethodsOfShowCardsOnPanel.showBattleGroundCards(GameState.getInstance().getBattleGroundCards(),panel,numberOfCardsPerRowGamePanel, Alliance.ME);
+    }
 
 
 
-    public static void initializeAllLittleCardPanels(){
+    public static String getNameOfCurrentHeroOfGameState(){
+        return GameState.getInstance().getPlayer().getCurrentHero().getName();
+    }
+
+
+    public static String getNameOfPassive(int numberOfPassive) {
+        return GameState.getInstance().getPassivesToChoose().get(numberOfPassive).getName();
+    }
+
+
+    public static void setInfoPassiveOfGameState(int numberOfPassive) {
+        GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(numberOfPassive));
+    }
+
+
+    public static int getManaOfGameState() {
+        return GameState.getInstance().getMana();
+    }
+
+    public static int getNumberOfCardsOfDeckInGameState() {
+        return GameState.getInstance().getCardsOfDeckInGameState().size();
+    }
+
+
+    public static void initializeGameState() throws IOException {
+        GameState.getInstance().initGameState();
+    }
+
+
+    public static void setDeckToShowOFStatusState(int deckNumber) {
+        StatusState.getInstance().setDeckToShow(CLI.currentPlayer.getAllDecksOfPlayer().get(deckNumber - 1));
+    }
+
+
+    public static void showDeckOfStatusState(JPanel panel, Graphics2D graphics2D) {
+        String name = "Name: " + StatusState.getInstance().getDeckTosHOW().getName();
+        int lengthOfName = LengthOfMessage.lengthOfMessage(name, graphics2D);
+        String heroName = "Hero: " + StatusState.getInstance().getDeckTosHOW().getHero().getName();
+        int lengthOfHeroName = LengthOfMessage.lengthOfMessage(heroName, graphics2D);
+        String wins = "Wins:" + StatusState.getInstance().getDeckTosHOW().getNumberOfWins();
+        int lengthOfWins = LengthOfMessage.lengthOfMessage(wins, graphics2D);
+        String use = "Uses: " + StatusState.getInstance().getDeckTosHOW().getNumberOfUses();
+        int lengthOfUse = LengthOfMessage.lengthOfMessage(use, graphics2D);
+        String mostUsedCard = "Most Used Card: " + StatusState.getInstance().getDeckTosHOW().getMostUsedCard().getName();
+        int lengthOfCard = LengthOfMessage.lengthOfMessage(mostUsedCard, graphics2D);
+        String manaAvg = "Average of Mana: " + StatusState.getInstance().getDeckTosHOW().getManaAvg();
+        int lengthOfMana = LengthOfMessage.lengthOfMessage(manaAvg, graphics2D);
+        if (StatusState.getInstance().getDeckTosHOW().getNumberOfUses() == 0) {
+            StatusState.getInstance().getDeckTosHOW().setNumberOfUses(1);
+        }
+        String winsPerPlay = "Wins per Play: " +
+                (StatusState.getInstance().getDeckTosHOW().getNumberOfWins() / StatusState.getInstance().getDeckTosHOW().getNumberOfUses()) * 100 + " %";
+        int lengthOfWinsPerPlay = LengthOfMessage.lengthOfMessage(winsPerPlay, graphics2D);
+        graphics2D.drawString(name, (panel.getWidth() - lengthOfName) / 2, 50);
+        graphics2D.drawString(heroName, (panel.getWidth() - lengthOfHeroName) / 2, 100);
+        graphics2D.drawString(wins, (panel.getWidth() - lengthOfWins) / 2, 150);
+        graphics2D.drawString(use, (panel.getWidth() - lengthOfUse) / 2, 200);
+        graphics2D.drawString(mostUsedCard, (panel.getWidth() - lengthOfCard) / 2, 250);
+        graphics2D.drawString(manaAvg, (panel.getWidth() - lengthOfMana) / 2, 300);
+        graphics2D.drawString(winsPerPlay, (panel.getWidth() - lengthOfWinsPerPlay) / 2, 350);
+    }
+
+
+    public static void defineMostUsedCardInDeck(String deckName) {
+        for (Deck deck : CLI.currentPlayer.getAllDecksOfPlayer()) {
+            if (deck.getName().equals(deckName)) {
+                deck.defineMostUsedCard();
+            }
+        }
+    }
+
+    public static void changeStatusOfSound(int numberOfPushMuteBtn) {
+        Sounds.changeStatus(numberOfPushMuteBtn);
+    }
+
+    public static void increaseSound() {
+        Sounds.increaseSound();
+    }
+
+    public static void decreaseSound() {
+        Sounds.decreaseSound();
+    }
+
+    public static void showJOptionPaneWrongPassWordErrorForDeletePlayer() {
+        JOptionPane.showMessageDialog(MainMenuPage.getInstance(), "Wrong Password!", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public static void showJOptionPaneOfLogInError() {
+        JOptionPane.showMessageDialog(LogInPage.getInstance(),
+                "Please Enter a Valid UserName or Password!", "LogIn Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public static void signUpErrorJOptionPane() {
+        JOptionPane.showMessageDialog(LogInPage.getInstance(),
+                "There is an account with this username!", "SignUp Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public static void deletePlayer(String passWord) throws IOException {
+        PlayerManagement.DeletePlayer(passWord);
+    }
+
+    public static void logOut() throws IOException {
+        PlayerManagement.logOut();
+    }
+
+    public static void signUp(String userName, String passWord) throws IOException {
+        PlayerManagement.signUp(userName, passWord);
+    }
+
+    public static void signIn(String userName, String passWord) throws IOException {
+        PlayerManagement.signIn(userName, passWord);
+    }
+
+    public static void addGivenCardToCollectionDeck(String cardName, boolean isLock) throws IOException {//todo maybe needs to changeee
+        Cards cards = null;
+        for (Cards cards1 : Cards.getAllCards()) {
+            if (cards1.getName().equals(cardName)) {
+                cards = cards1;
+            }
+        }
+
+
+        for (int i = 0; i < DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().size(); i++) {
+            if (cards.getName().equalsIgnoreCase(DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().get(i).getNameLabel().getText())) {
+                if (Integer.parseInt(DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().get(i).getUsedLabel().getText()) < 2) {
+                    System.out.println(cards.getName()+" kjjjjjjjjj");
+                    if (!isLock) {
+                        CollectionState.getInstance().getDeckToChange().getListOfCards().add(cards);
+                    }
+                    DeckViewer.getInstance().showCardsInDecK();
+                    int k = Integer.parseInt(DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().get(i).getUsedLabel().getText()) + 1;
+                    DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().get(i).getUsedLabel().setText(k + "");
+                    break;
+                } else if (!isLock) {
+                    JOptionPane.showMessageDialog(null,
+                            "You have two card of this card in your Deck!", "Add To Deck Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        }
+    }
+
+
+    public static boolean canAddMinionToBattleGround() {
+        return GameState.getInstance().getBattleGroundCards().size() <= 7 - 1;
+    }
+
+    public static String getTypeOfGivenCard(String cardName) {
+        for (Cards cards : Cards.getAllCards()) {
+            if (cards.getName().equals(cardName)) {
+                return cards.getType();
+            }
+        }
+        return null;
+    }
+
+
+    public static void setPlayingCardOfGameState(String cardName) {
+        for (Cards cards : Cards.getAllCards()) {
+            if (cards.getName().equals(cardName)) {
+                GameState.getInstance().setPlayingCard(cards);
+            }
+        }
+    }
+
+    public static void defineShopStateCard(String cardName) {
+        for (Cards cards : Cards.getAllCards()) {
+            if (cards.getName().equals(cardName)) {
+                ShopState.getInstance().setCardsToBuyOrSell(cards);
+            }
+        }
+    }
+
+
+    public static boolean isThisCardLock(String cardName) throws IOException {
+        for (Cards card : Cards.getAllCards()) {
+            if (card.getName().equals(cardName)) {
+                return !CLI.currentPlayer.getAllCardsOfPlayer().contains(card);
+            }
+        }
+        return true;
+    }
+
+
+    public static void initializeAllLittleCardPanels() {
         for (Cards card : Cards.getAllCards()) {
             LittleCardPanel.getAllLittleCardPanels().add(new LittleCardPanel(card.getManaCost(), card.getName(), 0));
         }
@@ -64,26 +276,30 @@ public class Administer {
 
     }
 
-    public static void showShopStateCardInBuySellPanel(JPanel panel) throws IOException {
-        CardImagePanel cardImagePanel = new CardImagePanel(ShopState.getInstance().getCardsToBuyOrSell());
-        MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, panel, 0, 0,panel.getWidth() , panel.getHeight());
+    public static void showShopStateCardInBuySellPanel(JPanel panel) throws IOException {//todo check.....
+        CardImagePanel cardImagePanel = new CardImagePanel(ShopState.getInstance().getCardsToBuyOrSell().getName());
+        MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, panel, 0, 0, panel.getWidth(), panel.getHeight());
     }
 
     public static void sellShopStateCard() throws IOException {
         CLI.currentPlayer.sell(ShopState.getInstance().getCardsToBuyOrSell());
     }
 
-    public static boolean isShopStateCardInMyDecks(){
+    public static boolean isShopStateCardInMyDecks() {
         for (Deck deck : CLI.currentPlayer.getAllDecksOfPlayer()) {
             if (deck.getListOfCards().contains(ShopState.getInstance().getCardsToBuyOrSell())) {
-               return true;
+                return true;
             }
         }
         return false;
     }
 
+    public static void playMainSound() {
+        Sounds.playMainSound("src/main/resources/Sounds/FirstAudio.wav");
+    }
+
     public static void playActionSounds(String action) {
-        Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/"+action+".wav");
+        Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/" + action + ".wav");
     }
 
     public static int getMoneyOfShopStatesCard() {
@@ -152,8 +368,9 @@ public class Administer {
                 xCoordinate, yCoordinate, littleCardPanel.getWidth(), littleCardPanel.getHeight());
     }
 
-    public static ArrayList<LittleCardPanel> getLittleCardPanelOfCollectionStatesDeck() {
-        return CollectionState.getInstance().getDeckToChange().getLittleCardPanelsOfThisDeck();
+    public static ArrayList<LittleCardPanel> getLittleCardPanelOfDeckToChangeFromDeckPage() {
+//        return CollectionState.getInstance().getDeckToChange().getLittleCardPanelsOfThisDeck();
+        return DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange();
     }
 
     public static ArrayList<Cards> getListOfCardsOfCollectionStatesDeck() {
@@ -202,6 +419,7 @@ public class Administer {
 
     public static void showCardsOnCardPanelWithSpecifiedClass(String className, JPanel panel, int numberOfCardsPerRow) throws IOException {
         ArrayList<Cards> filteredCardsByClassOfCard = new ArrayList<Cards>();
+        System.out.println(className);
         for (Cards card : Cards.getAllCards()) {
             if (card.getClassOfCard().equalsIgnoreCase(className)) {
                 filteredCardsByClassOfCard.add(card);
@@ -232,9 +450,25 @@ public class Administer {
 
     public static void setCollectionDeck(String deckName) {
         CollectionState.getInstance().setDeckToChange(getDeckThatIsInPlayersDeck(deckName));
-        CollectionState.getInstance().getDeckToChange().setLittleCardsListFromHashMap();
+//        CollectionState.getInstance().getDeckToChange().setLittleCardsListFromHashMap();
+        DeckPage.getInstance().setListOfLittleCardsPanelOfDeckToChange(
+                setLittleCardsListFromHashMap(CollectionState.getInstance().getDeckToChange().getUsesHashMap()));
 
     }
+
+    public static ArrayList<LittleCardPanel> setLittleCardsListFromHashMap(HashMap<String, Integer> hashMap) {
+        ArrayList<LittleCardPanel> littleCardPanelsOfThisHashMap = LittleCardPanel.getAllLittleCardPanels();
+        for (String cardName : hashMap.keySet()) {
+            int useOfCard = hashMap.get(cardName);
+            for (LittleCardPanel littleCardPanel : littleCardPanelsOfThisHashMap) {
+                if (littleCardPanel.getNameLabel().getText().equalsIgnoreCase(cardName)) {
+                    littleCardPanel.getUsedLabel().setText(useOfCard + "");
+                }
+            }
+        }
+        return littleCardPanelsOfThisHashMap;
+    }
+
 
     public static void makeNewDeck(String name, String heroName) {
         CollectionState.getInstance().setDeckToChange(new Deck());
@@ -261,10 +495,11 @@ public class Administer {
                 throw new IllegalStateException("Unexpected value: " + heroName);
         }
         DeckPage.getInstance().setNameOfDeckToChange(CollectionState.getInstance().getDeckToChange().getName());
+        DeckPage.getInstance().setListOfLittleCardsPanelOfDeckToChange(LittleCardPanel.getAllLittleCardPanels());
     }
 
     public static String getHeroNameOfDeckToChange() {
-        return CollectionState.getInstance().getDeckToChange().getHeroName();
+        return CollectionState.getInstance().getDeckToChange().getHero().getName();
     }
 
     public static void showAllCards(JPanel panel, int numberOfCardsPerRow) throws IOException {
@@ -290,7 +525,7 @@ public class Administer {
 
     public static void makeCollectionStatesDeckToNull() {
         CollectionState.getInstance().setDeckToChange(new Deck());
-        CLI.setStatus(Status.COLLECTIONS_PAGE);
+
     }
 
     public static void addCollectionStatesDeckToPlayersDecksList() {
@@ -301,6 +536,7 @@ public class Administer {
         CLI.currentPlayer.getLoggerOfMyPlayer().info(log);
     }
 
-
-
+    public static void sortDecksOfCurrentPlayer() {
+        Collections.sort(CLI.currentPlayer.getAllDecksOfPlayer());
+    }
 }

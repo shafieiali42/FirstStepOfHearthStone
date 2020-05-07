@@ -1,6 +1,7 @@
 package Gui.Panels.SettingPanel;
 
 import CommandLineInterface.CLI;
+import Controller.Administer;
 import Gui.MyMainFrame;
 import Gui.Panels.CollectionPages.CardPanel;
 import Gui.Panels.MenuPanel.MainMenuPage;
@@ -39,7 +40,6 @@ public class SettingPage extends JPanel {
     private SettingPage() {
         setLayout(null);
         setBackground(Color.gray);
-
         initButtons();
     }
 
@@ -60,7 +60,8 @@ public class SettingPage extends JPanel {
                 CardPanel.getInstanceOfCollectionPage().removeAll();
                 CardPanel.getInstanceOfCollectionPage().repaint();
                 CardPanel.getInstanceOfCollectionPage().revalidate();
-                CLI.currentPlayer.getLoggerOfMyPlayer().info("Go back from setting page");
+                Administer.writeLog("Go back from setting page");
+//                CLI.currentPlayer.getLoggerOfMyPlayer().info("Go back from setting page");
                 MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
             }
         });
@@ -82,7 +83,8 @@ public class SettingPage extends JPanel {
         muteSoundsBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Sounds.changeStatus(numberOfPushMuteBtn);
+                Administer.changeStatusOfSound(numberOfPushMuteBtn);
+//                Sounds.changeStatus(numberOfPushMuteBtn);
                 numberOfPushMuteBtn++;
             }
         });
@@ -97,7 +99,8 @@ public class SettingPage extends JPanel {
         increaseVolumeBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Sounds.increaseSound();
+                Administer.increaseSound();
+//                Sounds.increaseSound();
             }
         });
         add(increaseVolumeBtn);
@@ -111,7 +114,8 @@ public class SettingPage extends JPanel {
         decreaseVolumeBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Sounds.decreaseSound();
+                Administer.decreaseSound();
+//                Sounds.decreaseSound();
             }
         });
         add(decreaseVolumeBtn);

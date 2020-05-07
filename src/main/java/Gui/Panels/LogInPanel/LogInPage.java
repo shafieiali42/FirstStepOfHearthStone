@@ -1,10 +1,8 @@
 package Gui.Panels.LogInPanel;
 
-
-import CommandLineInterface.PlayerManagement;
+import Controller.Administer;
 import Gui.MyMainFrame;
 import Utility.ImageBackGround;
-import Utility.Sounds;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -105,8 +103,9 @@ public class LogInPage extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Sounds.playMainSound("src/main/resources/Sounds/FirstAudio.wav");
-                    PlayerManagement.signUp();
+//                    Sounds.playMainSound("src/main/resources/Sounds/FirstAudio.wav");
+//                    PlayerManagement.signUp(getUserNameTextField().getText(), new String(getPasswordField().getPassword()));
+                    Administer.signUp(getUserNameTextField().getText(), new String(getPasswordField().getPassword()));
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -117,8 +116,9 @@ public class LogInPage extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Sounds.playMainSound("src/main/resources/Sounds/FirstAudio.wav");
-                    PlayerManagement.signIn();
+//                    Sounds.playMainSound("src/main/resources/Sounds/FirstAudio.wav");
+//                    PlayerManagement.signIn(getUserNameTextField().getText(), new String(getPasswordField().getPassword()));
+                    Administer.signIn(getUserNameTextField().getText(), new String(getPasswordField().getPassword()));
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }

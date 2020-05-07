@@ -1,7 +1,9 @@
 package Gui.Panels.GamePage;
 
+import Controller.Administer;
 import Gui.MyMainFrame;
-import Logic.GameState;
+
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -33,8 +35,6 @@ public class InfoPassivePage extends JPanel {
         setLayout(null);
         setBackground(Color.gray);
         initButtons();
-
-
     }
 
     private void initButtons() {
@@ -51,13 +51,14 @@ public class InfoPassivePage extends JPanel {
     }
 
     private void initThirdBtn() {
-        thirdPassiveBtn = new JButton(GameState.getInstance().getPassivesToChoose().get(2).getName());
+        thirdPassiveBtn = new JButton(Administer.getNameOfPassive(2));
         thirdPassiveBtn.setBounds(3 * X_COORDINATE_OF_FIRST_BTN + 2 * WIDTH_OF_BTN, Y_COORDINATE_OF_FIRST_BTN, WIDTH_OF_BTN, HEIGHT_OF_BTN);//////////
         designBtn(thirdPassiveBtn);
         thirdPassiveBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(2));
+                Administer.setInfoPassiveOfGameState(2);
+//                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(2));
                 MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
             }
         });
@@ -65,13 +66,14 @@ public class InfoPassivePage extends JPanel {
     }
 
     private void initSecondBtn() {
-        secondPassiveBtn = new JButton(GameState.getInstance().getPassivesToChoose().get(1).getName());
+        secondPassiveBtn = new JButton(Administer.getNameOfPassive(1));
         secondPassiveBtn.setBounds(2 * X_COORDINATE_OF_FIRST_BTN + WIDTH_OF_BTN, Y_COORDINATE_OF_FIRST_BTN, WIDTH_OF_BTN, HEIGHT_OF_BTN);
         designBtn(secondPassiveBtn);
         secondPassiveBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(1));
+                Administer.setInfoPassiveOfGameState(1);
+//                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(1));
                 MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
             }
         });
@@ -80,13 +82,14 @@ public class InfoPassivePage extends JPanel {
     }
 
     private void initFirstBtn() {
-        firstPassiveBtn = new JButton(GameState.getInstance().getPassivesToChoose().get(0).getName());
+        firstPassiveBtn = new JButton(Administer.getNameOfPassive(0));
         firstPassiveBtn.setBounds(X_COORDINATE_OF_FIRST_BTN, Y_COORDINATE_OF_FIRST_BTN, WIDTH_OF_BTN, HEIGHT_OF_BTN);
         designBtn(firstPassiveBtn);
         firstPassiveBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(0));
+                Administer.setInfoPassiveOfGameState(0);
+//                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(0));
                 MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
             }
         });
@@ -94,11 +97,13 @@ public class InfoPassivePage extends JPanel {
     }
 
     @Override
-    protected void paintComponent(Graphics g) {
+    protected void paintComponent(Graphics g) {//todo maybe its better to do it by Administer
         super.paintComponent(g);
-        firstPassiveBtn.setText(GameState.getInstance().getPassivesToChoose().get(0).getName());
-        secondPassiveBtn.setText(GameState.getInstance().getPassivesToChoose().get(1).getName());
-        thirdPassiveBtn.setText(GameState.getInstance().getPassivesToChoose().get(2).getName());
+        firstPassiveBtn.setText(Administer.getNameOfPassive(0));
+        secondPassiveBtn.setText(Administer.getNameOfPassive(1));
+        thirdPassiveBtn.setText(Administer.getNameOfPassive(2));
 
     }
+
+
 }

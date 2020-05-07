@@ -1,10 +1,10 @@
 package Gui.Panels.GamePage;
 
-import View.CardView.CardImagePanel;
-import Logic.Alliance;
-import Logic.GameState;
+import Controller.Administer;
+
+
 import Utility.Constant;
-import Utility.MethodsOfShowCardsOnPanel;
+
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -78,11 +78,14 @@ public class PlayPanel extends JPanel {
 
 
     public void defineImagesOfHeroAndHeroPower() throws IOException {
+//        heroImage = ImageIO.read(new File(
+//                Constant.getInstance().getHeroImages().get(GameState.getInstance().getPlayer().getCurrentHero().getName())));
+
         heroImage = ImageIO.read(new File(
-                Constant.getInstance().getHeroImages().get(GameState.getInstance().getPlayer().getCurrentHero().getName())));
+                Constant.getInstance().getHeroImages().get(Administer.getNameOfCurrentHeroOfGameState())));
 
         heroPowerImage = ImageIO.read(
-                new File(Constant.getInstance().getHeroPowerImages().get(GameState.getInstance().getPlayer().getCurrentHero().getName())));
+                new File(Constant.getInstance().getHeroPowerImages().get(Administer.getNameOfCurrentHeroOfGameState())));
 
     }
 
@@ -100,8 +103,10 @@ public class PlayPanel extends JPanel {
         try {
             if (needsToRepaint) {
                 this.removeAll();
-                MethodsOfShowCardsOnPanel.showHandsCards(GameState.getInstance().getHandsCards(), this, NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS, Alliance.ME);
-                MethodsOfShowCardsOnPanel.showBattleGroundCards(GameState.getInstance().getBattleGroundCards(), this, NUMBER_OF_CARDS_PER_ROW_GAME_PANEL, Alliance.ME);
+                Administer.showHandsCardOfMeAllianceInPlay(this,NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS);
+                Administer.showBattleGroundCardsOfMeAllianceInPlay(this,NUMBER_OF_CARDS_PER_ROW_GAME_PANEL);
+//                MethodsOfShowCardsOnPanel.showHandsCards(GameState.getInstance().getHandsCards(), this, NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS, Alliance.ME);
+//                MethodsOfShowCardsOnPanel.showBattleGroundCards(GameState.getInstance().getBattleGroundCards(), this, NUMBER_OF_CARDS_PER_ROW_GAME_PANEL, Alliance.ME);
                 this.revalidate();
                 needsToRepaint = false;
             }
@@ -122,17 +127,22 @@ public class PlayPanel extends JPanel {
 
 //        graphics2D.drawImage(heroImage, X_COORDINATE_OF_WEAPON, Y_COORDINATE_OF_WEAPON,
 //                WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE, null);
-        if (GameState.getInstance().getCurrentWeapon()!=null){
-            try {
-                CardImagePanel cardImagePanel=new CardImagePanel(GameState.getInstance().getCurrentWeapon(),
-                        WIDTH_OF_WEAPON_IMAGE,HEIGHT_OF_WEAPON_IMAGE);
 
-            MethodsOfShowCardsOnPanel.addPanel(cardImagePanel,this,
-                    X_COORDINATE_OF_WEAPON,Y_COORDINATE_OF_WEAPON,WIDTH_OF_WEAPON_IMAGE,HEIGHT_OF_WEAPON_IMAGE);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+
+        Administer.showWeaponOfGameState(this,WIDTH_OF_WEAPON_IMAGE,HEIGHT_OF_WEAPON_IMAGE,X_COORDINATE_OF_WEAPON,Y_COORDINATE_OF_WEAPON);
+//        if (GameState.getInstance().getCurrentWeapon()!=null){
+//            try {
+//                CardImagePanel cardImagePanel=new CardImagePanel(GameState.getInstance().getCurrentWeapon().getName(),
+//                        WIDTH_OF_WEAPON_IMAGE,HEIGHT_OF_WEAPON_IMAGE);
+//
+//            MethodsOfShowCardsOnPanel.addPanel(cardImagePanel,this,
+//                    X_COORDINATE_OF_WEAPON,Y_COORDINATE_OF_WEAPON,WIDTH_OF_WEAPON_IMAGE,HEIGHT_OF_WEAPON_IMAGE);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+
+
 //        graphics2D.drawOval(X_COORDINATE_OF_WEAPON, Y_COORDINATE_OF_WEAPON,
 //                WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE);
 

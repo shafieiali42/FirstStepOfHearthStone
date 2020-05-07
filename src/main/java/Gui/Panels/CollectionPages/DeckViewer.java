@@ -80,9 +80,11 @@ public class DeckViewer extends JPanel {
                 CLI.currentPlayer.getLoggerOfMyPlayer().info("Changed deck " + DeckPage.getInstance().getNameOfDeckToChange());
                 Administer.defineUsesHashMap();
                 Administer.makeCollectionStatesDeckToNull();
+                DeckPage.getInstance().setListOfLittleCardsPanelOfDeckToChange(LittleCardPanel.getAllLittleCardPanels());
 //                DeckPage.getInstance().getDeckTOChange().defineUsesHashMap();
 //                DeckPage.getInstance().setDeckTOChange(new Deck());
 //                CLI.setStatus(Status.COLLECTIONS_PAGE);
+                CLI.setStatus(Status.COLLECTIONS_PAGE);
                 MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
                 DeckPanel.getInstance().showDeckButtons();
             } else if (CLI.getStatus().equals(Status.MAKE_DECK)) {
@@ -91,6 +93,7 @@ public class DeckViewer extends JPanel {
                 Administer.addCollectionStatesDeckToPlayersDecksList();
 //                CLI.currentPlayer.getAllDecksOfPlayer().add(DeckPage.getInstance().getDeckTOChange());
                 Administer.makeCollectionStatesDeckToNull();
+                DeckPage.getInstance().setListOfLittleCardsPanelOfDeckToChange(LittleCardPanel.getAllLittleCardPanels());
 //                DeckPage.getInstance().setDeckTOChange(new Deck());
                 CLI.setStatus(Status.COLLECTIONS_PAGE);
                 MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
@@ -106,9 +109,10 @@ public class DeckViewer extends JPanel {
         DeckViewer.getInstance().repaint();
         DeckViewer.getInstance().revalidate();
         int yCoordinate = 0;
-        for ( LittleCardPanel littleCardPanel : Administer.getLittleCardPanelOfCollectionStatesDeck()) {
+        for ( LittleCardPanel littleCardPanel : Administer.getLittleCardPanelOfDeckToChangeFromDeckPage()) {
             for (Cards card : Administer.getListOfCardsOfCollectionStatesDeck()) {
                 if (littleCardPanel.getNameLabel().getText().equalsIgnoreCase(card.getName())) {
+
                     Administer.showLittleCardPanelOnDeckViewer(littleCardPanel, this,
                             (DeckViewer.WIDTH_OF_DECK_VIEWER - littleCardPanel.getWidth()) / 2, yCoordinate);
 //                    MethodsOfShowCardsOnPanel.addPanel(littleCardPanel, this,

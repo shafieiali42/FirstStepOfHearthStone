@@ -1,6 +1,7 @@
 package CommandLineInterface;
 
 
+import Controller.Administer;
 import Gui.Panels.LogInPanel.LogInPage;
 import Gui.Panels.MenuPanel.MainMenuPage;
 import Player.Player;
@@ -16,24 +17,21 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Scanner;
-import java.util.logging.Logger;
 
 public class PlayerManagement {
-    static Scanner myscanner = new Scanner(System.in);
+//    static Scanner myscanner = new Scanner(System.in);
 
-    public static void signIn() throws IOException {
+    public static void signIn(String userName,String passWord) throws IOException {
 //        System.out.println("Username:");
 //        String userName = myscanner.nextLine();
 //        System.out.println("Password:");
 //        String passWord = myscanner.nextLine();
-        String userName = LogInPage.getInstance().getUserNameTextField().getText();
-        String passWord= new String(LogInPage.getInstance().getPasswordField().getPassword()); //TODO check if getpassword?
+//        String userName = LogInPage.getInstance().getUserNameTextField().getText();
+//        String passWord= new String(LogInPage.getInstance().getPasswordField().getPassword()); //TODO check if getpassword?
         Type type = new TypeToken<List<Player>>() { }.getType();
         List<Player> playerList = new Gson().fromJson(new FileReader("MinionSpellsWeapons/AllPlayers.json"), type);
         boolean valiUserNameAndPassword = false;
         for (Player player : playerList) {
-            System.out.println(player.getUserName());
             if (userName.equals(player.getUserName()) && passWord.equals(player.getPassWord())) {
                 valiUserNameAndPassword = true;
                 CLI.currentPlayer = player;
@@ -45,20 +43,20 @@ public class PlayerManagement {
                 CLI.secondPage();
             }
         }
-        if (!valiUserNameAndPassword) {//TODO mybe it should be frame instead of panel:((
-            System.out.println("invalid username or password!");
-            JOptionPane.showMessageDialog(LogInPage.getInstance(),
-                    "Please Enter a Valid UserName or Password!","LogIn Error",JOptionPane.ERROR_MESSAGE);
+        if (!valiUserNameAndPassword) {//TODO should change Joption pane
+            Administer.showJOptionPaneOfLogInError();
+//            JOptionPane.showMessageDialog(LogInPage.getInstance(),
+//                    "Please Enter a Valid UserName or Password!","LogIn Error",JOptionPane.ERROR_MESSAGE);
         }
     }
 
-    public static void signUp() throws IOException {
+    public static void signUp(String userName,String passWord) throws IOException {
 //        System.out.println("Username:");
 //        String userName = myscanner.nextLine();
 //        System.out.println("Password:");
 //        String passWord = myscanner.nextLine();
-        String userName = LogInPage.getInstance().getUserNameTextField().getText();
-        String passWord= new String(LogInPage.getInstance().getPasswordField().getPassword()); //TODO check if getpassword?
+//        String userName = LogInPage.getInstance().getUserNameTextField().getText();
+//        String passWord= new String(LogInPage.getInstance().getPasswordField().getPassword()); //TODO check if getpassword?
         Type type = new TypeToken<List<Player>>() {}.getType();
         List<Player> playerList = new Gson().fromJson(new FileReader("MinionSpellsWeapons/AllPlayers.json"), type);
         boolean canSignUp = true;
@@ -80,9 +78,9 @@ public class PlayerManagement {
             CLI.currentPlayer.getLoggerOfMyPlayer().info("sign_up " + CLI.currentPlayer.getUserName());
             CLI.secondPage();
         } else {
-            System.out.println("There is an account with this username!");
-            JOptionPane.showMessageDialog(LogInPage.getInstance(),
-                    "There is an account with this username!","SignUp Error",JOptionPane.ERROR_MESSAGE);
+            Administer.signUpErrorJOptionPane();
+//            JOptionPane.showMessageDialog(LogInPage.getInstance(),
+//                    "There is an account with this username!","SignUp Error",JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -94,10 +92,10 @@ public class PlayerManagement {
         CLI.FirstPage();
     }
 
-    public static void DeletePlayer() throws IOException {
+    public static void DeletePlayer(String password) throws IOException {
 //        System.out.println("Password:");
 //        String password = myscanner.nextLine();
-        String password =JOptionPane.showInputDialog("Please Enter your Password:");
+//        String password =JOptionPane.showInputDialog("Please Enter your Password:");
         if (password.equals(CLI.currentPlayer.getPassWord())) {
             File temp = new File("logs\\"+"temp.txt");
             FileReader fileReader = new FileReader("logs\\"+CLI.currentPlayer.getUserName() + ".log");
@@ -135,7 +133,8 @@ public class PlayerManagement {
             System.exit(0);
         } else {
 //            System.out.println("your password is incorrect!");
-            JOptionPane.showMessageDialog(MainMenuPage.getInstance(),"Wrong Password!","Error",JOptionPane.ERROR_MESSAGE);
+//            JOptionPane.showMessageDialog(MainMenuPage.getInstance(),"Wrong Password!","Error",JOptionPane.ERROR_MESSAGE);
+            Administer.showJOptionPaneWrongPassWordErrorForDeletePlayer();
         }
     }
 }

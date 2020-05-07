@@ -17,7 +17,7 @@ public class ShopState {
         }
     }
 
-    private Cards cardsToBuyOrSell=new Cards();
+    private Cards cardsToBuyOrSell;
     public ShopState() throws IOException {
 
     }

@@ -3,16 +3,17 @@ package Gui.Panels.StatusPanel;
 
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
-import Models.Deck.Deck;
+import Controller.Administer;
+
 import Gui.MyMainFrame;
 import Gui.Panels.MenuPanel.MainMenuPage;
-import Utility.LengthOfMessage;
+
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Collections;
+
 
 public class RankedPanel extends JPanel {
 
@@ -74,7 +75,8 @@ public class RankedPanel extends JPanel {
         backBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CLI.currentPlayer.getLoggerOfMyPlayer().info("Go back from status page");
+                Administer.writeLog("Go back from status page");
+//                CLI.currentPlayer.getLoggerOfMyPlayer().info("Go back from status page");
                 goBack();
             }
         });
@@ -90,8 +92,12 @@ public class RankedPanel extends JPanel {
         MyMainFrame.getInstance().setContentPane(MainMenuPage.getInstance());
     }
 
+
+
+
+
     private void initTenthBtn() {
-        tenthBtn=new JButton("Tenth Models.Deck");
+        tenthBtn=new JButton("Tenth Deck");
         designBtn(tenthBtn);
         tenthBtn.setBounds(0,firstBtn.getHeight()*9,secondBtn.getWidth(),secondBtn.getHeight());
         tenthBtn.addActionListener(new ActionListener() {
@@ -104,7 +110,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initNinthBtn() {
-        ninthBtn=new JButton("Ninth Models.Deck");
+        ninthBtn=new JButton("Ninth Deck");
         designBtn(ninthBtn);
         ninthBtn.setBounds(0,firstBtn.getHeight()*8,secondBtn.getWidth(),secondBtn.getHeight());
         ninthBtn.addActionListener(new ActionListener() {
@@ -117,7 +123,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initEighthBtn() {
-        eighthBtn=new JButton("Eighth Models.Deck");
+        eighthBtn=new JButton("Eighth Deck");
         designBtn(eighthBtn);
         eighthBtn.setBounds(0,firstBtn.getHeight()*7,secondBtn.getWidth(),secondBtn.getHeight());
         eighthBtn.addActionListener(new ActionListener() {
@@ -130,7 +136,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initSeventhBtn() {
-        seventhBtn=new JButton("Seventh Models.Deck");
+        seventhBtn=new JButton("Seventh Deck");
         designBtn(seventhBtn);
         seventhBtn.setBounds(0,firstBtn.getHeight()*6,secondBtn.getWidth(),secondBtn.getHeight());
         seventhBtn.addActionListener(new ActionListener() {
@@ -143,7 +149,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initSixthBtn() {
-        sixthBtn=new JButton("Sixth Models.Deck");
+        sixthBtn=new JButton("Sixth Deck");
         designBtn(sixthBtn);
         sixthBtn.setBounds(0,firstBtn.getHeight()*5,secondBtn.getWidth(),secondBtn.getHeight());
         sixthBtn.addActionListener(new ActionListener() {
@@ -156,7 +162,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initFifthBtn() {
-        fifthBtn=new JButton("Fifth Models.Deck");
+        fifthBtn=new JButton("Fifth Deck");
         designBtn(fifthBtn);
         fifthBtn.setBounds(0,firstBtn.getHeight()*4,secondBtn.getWidth(),secondBtn.getHeight());
         fifthBtn.addActionListener(new ActionListener() {
@@ -169,7 +175,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initFourthBtn() {
-        fourthBtn=new JButton("Fourth Models.Deck");
+        fourthBtn=new JButton("Fourth Deck");
         designBtn(fourthBtn);
         fourthBtn.setBounds(0,firstBtn.getHeight()*3,secondBtn.getWidth(),secondBtn.getHeight());
         fourthBtn.addActionListener(new ActionListener() {
@@ -182,7 +188,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initThirdBtn() {
-        thirdBtn=new JButton("Third Models.Deck");
+        thirdBtn=new JButton("Third Deck");
         designBtn(thirdBtn);
         thirdBtn.setBounds(0,firstBtn.getHeight()*2,secondBtn.getWidth(),secondBtn.getHeight());
         thirdBtn.addActionListener(new ActionListener() {
@@ -195,7 +201,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initSecondBtn() {
-        secondBtn=new JButton("Second Models.Deck");
+        secondBtn=new JButton("Second Deck");
         designBtn(secondBtn);
         secondBtn.setBounds(0,firstBtn.getHeight(),secondBtn.getWidth(),secondBtn.getHeight());
         secondBtn.addActionListener(new ActionListener() {
@@ -208,7 +214,7 @@ public class RankedPanel extends JPanel {
     }
 
     private void initFirstBtn() {
-        firstBtn=new JButton("First Models.Deck");
+        firstBtn=new JButton("First Deck");
         designBtn(firstBtn);
         firstBtn.setBounds(0,0,firstBtn.getWidth(),firstBtn.getHeight());
         firstBtn.addActionListener(new ActionListener() {
@@ -221,19 +227,24 @@ public class RankedPanel extends JPanel {
     }
 
 
+
+
+
     public void sortDecks(){
-        Collections.sort(CLI.currentPlayer.getAllDecksOfPlayer());
+        Administer.sortDecksOfCurrentPlayer();
+//        Collections.sort(CLI.currentPlayer.getAllDecksOfPlayer());
     }
 
 
     private void showDeckNumber(int deckNumber) {
         sortDecks();
-        ShowDeckInfoPanel.getInstance().setDeckToShow(CLI.currentPlayer.getAllDecksOfPlayer().get(deckNumber-1));
+        Administer.setDeckToShowOFStatusState(deckNumber-1);
+//        ShowDeckInfoPanel.getInstance().setDeckToShow(CLI.currentPlayer.getAllDecksOfPlayer().get(deckNumber-1));
         ShowDeckInfoPanel.getInstance().setReadyToShow(true);
         ShowDeckInfoPanel.getInstance().repaint();
         ShowDeckInfoPanel.getInstance().revalidate();
-
-        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show best deck, deck number: "+ deckNumber);
+        Administer.writeLog("Show best deck, deck number: "+ deckNumber);
+//        CLI.currentPlayer.getLoggerOfMyPlayer().info("Show best deck, deck number: "+ deckNumber);
     }
 
 
@@ -248,16 +259,24 @@ public class RankedPanel extends JPanel {
 
     private static ShowDeckInfoPanel showDeckInfoPanel=new ShowDeckInfoPanel();
     public static ShowDeckInfoPanel getInstance(){return showDeckInfoPanel;}
-    private Deck deckToShow;
     private boolean readyToShow=false;
+     private String nameOfDeckToShow;
 
-     public Deck getDeckToShow() {
-         return deckToShow;
+     public String getNameOfDeckToShow() {
+         return nameOfDeckToShow;
      }
 
-     public void setDeckToShow(Deck deckToShow) {
-         this.deckToShow = deckToShow;
+     public void setNameOfDeckToShow(String nameOfDeckToShow) {
+         this.nameOfDeckToShow = nameOfDeckToShow;
      }
+//    private Deck deckToShow;
+
+//     public Deck getDeckToShow() {
+//         return deckToShow;
+//     }
+//     public void setDeckToShow(Deck deckToShow) {
+//         this.deckToShow = deckToShow;
+//     }
 
      public boolean isReadyToShow() {
          return readyToShow;
@@ -282,31 +301,10 @@ public class RankedPanel extends JPanel {
         Graphics2D graphics2D=(Graphics2D)g;
         graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 20));
         if(readyToShow){
-            deckToShow.defineMostUsedCard();
-        String name = "Name: "+deckToShow.getName();int lengthOfName= LengthOfMessage.lengthOfMessage(name,graphics2D);
-        String heroName="Hero: "+deckToShow.getHeroName();int lengthOfHeroName= LengthOfMessage.lengthOfMessage(heroName,graphics2D);
-        String wins = "Wins:"+deckToShow.getNumberOfWins();int lengthOfWins= LengthOfMessage.lengthOfMessage(wins,graphics2D);
-        String use= "Uses: "+deckToShow.getNumberOfUses();int lengthOfUse= LengthOfMessage.lengthOfMessage(use,graphics2D);
-        String mostUsedCard ="Most Used Card: "+deckToShow.getMostUsedCard().getName();
-        int lengthOfCard= LengthOfMessage.lengthOfMessage(mostUsedCard,graphics2D);
-        String manaAvg="Average of Mana: "+deckToShow.getManaAvg();
-        int lengthOfMana= LengthOfMessage.lengthOfMessage(manaAvg,graphics2D);
-        if (deckToShow.getNumberOfUses()==0){
-            deckToShow.setNumberOfUses(1);
+//            deckToShow.defineMostUsedCard();
+            Administer.defineMostUsedCardInDeck(nameOfDeckToShow);
+            Administer.showDeckOfStatusState(this,graphics2D);
         }
-        String winsPerPlay = "Wins per Play: "+(deckToShow.getNumberOfWins()/deckToShow.getNumberOfUses())*100+" %";
-        int lengthOfWinsPerPlay= LengthOfMessage.lengthOfMessage(winsPerPlay,graphics2D);
-        graphics2D.drawString(name,(this.getWidth()-lengthOfName)/2,50);
-        graphics2D.drawString(heroName,(this.getWidth()-lengthOfHeroName)/2,100);
-        graphics2D.drawString(wins,(this.getWidth()-lengthOfWins)/2,150);
-        graphics2D.drawString(use,(this.getWidth()-lengthOfUse)/2,200);
-        graphics2D.drawString(mostUsedCard,(this.getWidth()-lengthOfCard)/2,250);
-        graphics2D.drawString(manaAvg,(this.getWidth()-lengthOfMana)/2,300);
-        graphics2D.drawString(winsPerPlay,(this.getWidth()-lengthOfWinsPerPlay)/2,350);
-        }
-
-
-
     }
 
 }

@@ -3,6 +3,7 @@ package Gui.Panels.CollectionPages;
 import CommandLineInterface.CLI;
 import CommandLineInterface.Status;
 import Controller.Administer;
+import Logic.CollectionState;
 import Models.Deck.Deck;
 import Gui.MyMainFrame;
 
@@ -61,12 +62,13 @@ public class DeckPanel extends JPanel {
     public void designDeckBtn(JButton btn) {
         btn.setFont(new Font("TimesRoman", Font.ITALIC, 20));
 //        btn.setSize(WIDTH_OF_BTN, HEIGHT_OF_BTN);
-        btn.setPreferredSize(new Dimension(WIDTH_OF_BTN,HEIGHT_OF_BTN));
-        btn.setMaximumSize(new Dimension(WIDTH_OF_BTN,HEIGHT_OF_BTN));
-        btn.setMinimumSize(new Dimension(WIDTH_OF_BTN,HEIGHT_OF_BTN));
+        btn.setPreferredSize(new Dimension(WIDTH_OF_BTN, HEIGHT_OF_BTN));
+        btn.setMaximumSize(new Dimension(WIDTH_OF_BTN, HEIGHT_OF_BTN));
+        btn.setMinimumSize(new Dimension(WIDTH_OF_BTN, HEIGHT_OF_BTN));
         btn.setForeground(colorOfTextOfNewDeckBtn);
         btn.setBackground(colorOfNewDeckBtn);
     }
+
     public void initButtonForDeck(String deckName) {
         JButton button = new JButton(deckName);
         designDeckBtn(button);
@@ -78,11 +80,13 @@ public class DeckPanel extends JPanel {
                 Administer.setCollectionDeck(deckName);
 //                DeckPage.getInstance().setDeckTOChange(deck);
 //                DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
+
                 showDeck();
             }
         });
         this.add(button);
     }
+
     private void initNewDeckBtn() {
         newDeckBtn = new JButton("New Deck");
         newDeckBtn.setFont(new Font("TimesRoman", Font.ITALIC, 30));
@@ -94,6 +98,7 @@ public class DeckPanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 CLI.setStatus(Status.MAKE_DECK);
                 makeNewDeck();
+
             }
         });
         this.add(newDeckBtn);
@@ -108,7 +113,7 @@ public class DeckPanel extends JPanel {
         DeckPage.getInstance().setNameOfDeckToChange("");
 //        DeckPage.getInstance().getDeckTOChange().setLittleCardsListFromHashMap();
 
-        String name=JOptionPane.showInputDialog("Enter your favorite name!");
+        String name = JOptionPane.showInputDialog("Enter your favorite name!");
         Object[] possibilities = {"Mage", "Rogue", "Warlock", "Hunter", "Priest"};
         Icon questionError = UIManager.getIcon("OptionPane.questionIcon");
         String heroName = (String) JOptionPane.showInputDialog(
@@ -120,7 +125,8 @@ public class DeckPanel extends JPanel {
                 possibilities,
                 "Mage");
 
-        Administer.makeNewDeck(name,heroName);
+        Administer.makeNewDeck(name, heroName);
+        DeckPage.getInstance().setNameOfDeckToChange(name);
 
 //        switch (heroName) { // TODO needs changesssssssssssssssssssssssssss:(((((((((((
 //            case ("Mage"):
@@ -151,13 +157,12 @@ public class DeckPanel extends JPanel {
         DeckPanel.getInstance().repaint();
         DeckPanel.getInstance().revalidate();
         this.add(newDeckBtn);
-        if (CLI.currentPlayer.getAllDecksOfPlayer() != null) {
+        if (Administer.getListOfPlayersDeckNames().size()!=0) {
             for (String deckName : Administer.getListOfPlayersDeckNames()) {
                 initButtonForDeck(deckName);
             }
         }
     }
-
 
 
     private void showDeck() {

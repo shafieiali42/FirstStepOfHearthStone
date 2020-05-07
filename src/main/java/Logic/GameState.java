@@ -145,7 +145,7 @@ public class GameState {
         passivesToChoose.add(Passive.getPassives().get(randomNumber.get(0)));
         passivesToChoose.add(Passive.getPassives().get(randomNumber.get(1)));
         passivesToChoose.add(Passive.getPassives().get(randomNumber.get(2)));
-        System.out.println(randomNumber);
+
 
 
     }

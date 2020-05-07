@@ -2,13 +2,12 @@ package Gui.Panels.MenuPanel;
 
 
 import CommandLineInterface.CLI;
-import CommandLineInterface.PlayerManagement;
 import CommandLineInterface.Status;
+import Controller.Administer;
+
 import Gui.MyMainFrame;
 import Gui.Panels.CollectionPages.CollectionPage;
 import Gui.Panels.CollectionPages.DeckPanel;
-import Gui.Panels.GamePage.GamePage;
-//import Gui.Panels.GamePage.GraphicLoop;
 import Gui.Panels.GamePage.GraphicLoop;
 import Gui.Panels.GamePage.InfoPassivePage;
 import Gui.Panels.SettingPanel.SettingPage;
@@ -22,7 +21,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.util.Collections;
+
 
 public class MainMenuPage extends JPanel {
 
@@ -88,7 +87,9 @@ public class MainMenuPage extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    PlayerManagement.DeletePlayer();
+                    String password =JOptionPane.showInputDialog("Please Enter your Password:");
+                    Administer.deletePlayer(password);
+//                    PlayerManagement.DeletePlayer(password);
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -108,7 +109,8 @@ public class MainMenuPage extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    PlayerManagement.logOut();
+                    Administer.logOut();
+//                    PlayerManagement.logOut();
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -129,7 +131,8 @@ public class MainMenuPage extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    PlayerManagement.logOut();
+                    Administer.logOut();
+//                    PlayerManagement.logOut();
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -150,7 +153,8 @@ public class MainMenuPage extends JPanel {
         statusBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into status page");
+                Administer.writeLog("Navigate into status page");
+//                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into status page");
                 MyMainFrame.getInstance().setContentPane(StatusPage.getInstance());
             }
         });
@@ -168,7 +172,8 @@ public class MainMenuPage extends JPanel {
         settingBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into setting page");
+                Administer.writeLog("Navigate into setting page");
+//                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into setting page");
                 MyMainFrame.getInstance().setContentPane(SettingPage.getInstance());
             }
         });
@@ -187,7 +192,8 @@ public class MainMenuPage extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CLI.setStatus(Status.SHOP_PAGE);
-                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into shop page");
+                Administer.writeLog("Navigate into shop page");
+//                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into shop page");
                 MyMainFrame.getInstance().setContentPane(ShopPage.getInstance());
             }
         });
@@ -207,7 +213,8 @@ public class MainMenuPage extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CLI.setStatus(Status.COLLECTIONS_PAGE);
-                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into collection page");
+                Administer.writeLog("Navigate into collection page");
+//                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into collection page");
                 DeckPanel.getInstance().showDeckButtons();
                 MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
             }
@@ -225,7 +232,7 @@ public class MainMenuPage extends JPanel {
         playBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (CLI.currentPlayer.getCurrentDeck().getHero() == null) {
+                if (Administer.isCurrentPlayersCurrentDeckNull()) {
                     JOptionPane.showMessageDialog(null, "First you should select your deck",
                             "Eroor", JOptionPane.ERROR_MESSAGE);
                     CLI.setStatus(Status.COLLECTION_PAGE_FROM_PLAY);
@@ -233,7 +240,8 @@ public class MainMenuPage extends JPanel {
 
                 } else {
                     CLI.setStatus(Status.PLAY_PAGE);
-                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into play page");
+                    Administer.writeLog("Navigate into play page");
+//                    CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into play page");
 //                GraphicLoop.getInstance().start();
                     InfoPassivePage.getInstance().repaint();
                     InfoPassivePage.getInstance().revalidate();
@@ -265,7 +273,6 @@ public class MainMenuPage extends JPanel {
 
         rightMarginPanel = MarginPanels.getInstanceOfRightPanel();
         rightMarginPanel.setBounds(this.getWidth() * 3 / 4, 0, rightMarginPanel.getWidth(), rightMarginPanel.getHeight());
-
 
     }
 

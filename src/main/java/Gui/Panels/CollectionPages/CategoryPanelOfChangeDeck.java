@@ -62,7 +62,7 @@ public class CategoryPanelOfChangeDeck extends JPanel {
 
 
     private void initSelectDeckBtn() {
-        selectDeckBtn = new JButton("Select Models.Deck");
+        selectDeckBtn = new JButton("Select Deck");
         designBtn(selectDeckBtn);
         selectDeckBtn.addActionListener(new ActionListener() {
             @Override
@@ -157,7 +157,7 @@ public class CategoryPanelOfChangeDeck extends JPanel {
     }
 
     private void initRemoveDeckBtn() {
-        removeDeckBtn = new JButton("Remove Models.Deck");
+        removeDeckBtn = new JButton("Remove Deck");
         designBtn(removeDeckBtn);
         removeDeckBtn.addActionListener(new ActionListener() {
             @Override
@@ -197,7 +197,7 @@ public class CategoryPanelOfChangeDeck extends JPanel {
     }
 
     private void initHeroCardsBtn() {
-        HeroCardsBtn = new JButton("Hero Models.Cards");
+        HeroCardsBtn = new JButton("Hero Cards");
         designBtn(HeroCardsBtn);
         HeroCardsBtn.addActionListener(new ActionListener() {
             @Override
