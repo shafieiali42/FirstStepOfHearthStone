@@ -28,9 +28,9 @@ public class Sounds {
 
             clipOfActionSounds.stop();
         }
-        if (clipOfMainSound!=null){
-            clipOfMainSound.stop();
-        }
+//        if (clipOfMainSound!=null){
+//            clipOfMainSound.stop();
+//        }
 
         try {
             audioInputStream = AudioSystem.getAudioInputStream(new File(path));

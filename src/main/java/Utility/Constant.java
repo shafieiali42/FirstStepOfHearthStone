@@ -1,6 +1,6 @@
 package Utility;
 
-import Gui.MyMainFrame;
+import View.Gui.Panels.MyMainFrame.MyMainFrame;
 
 import java.util.HashMap;
 
@@ -43,40 +43,42 @@ public class Constant {
     public static final int HEIGHT_OF_CARD_PANEL=620;
 
 
-    public static final int WIDTH_OF_CATEGORY_PANEL=1155;
-    public static final int HEIGHT_OF_CATEGORY_PANEL=80;
-
-    public static final int WIDTH_OF_CATEGORY_PANEL_DECK_PAGE = 1155;
-    public static final int HEIGHT_OF_CATEGORY_PANEL_DECK_PAGE = 80;
-
-    public static final int WIDTH_OF_DECK_PANEL = 250;
-    public static final int HEIGHT_OF_DECK_PANEL = 1600;
-
-    public static final int WIDTH_OF_DECK_VIEWER = 250;
-    public static final int HEIGHT_OF_DECK_VIEWER = 800;
-
-    public static final int WIDTH_OF_LITTLE_CARD = 225;
-    public static final int HEIGHT_OF_LITTLE_CARD = 20;
-
-
-    public static final int WIDTH_OF_MANA_PANEL = 1155;
-    public static final int HEIGHT_OF_MANA_PANEL = 100;
-    public static final int WIDTH_OF_MANA_BTN = 20;
-    public static final int HEIGHT_OF_MANA_BTN = 8;
-    public static final int WIDTH_OF_BACK_BTN_IN_MANA_PANEL = 20;
-    public static final int HEIGHT_OF_BACK_BTN_IN_MANA_PANEL = 20;
-
-    public static final int WIDTH_OF_END_TURN_PANEL = 200;
-    public static final int HEIGHT_OF_END_TURN_PANEL = 810;
-    public static final int WIDTH_OF_QIT_BTN = 100;
-    public static final int HEIGHT_OF_QUIT_BTN = 50;
-
-    public static final int X_COORDINATE_OF_FIRST_BTN = (MyMainFrame.getInstance().getWidth() - 3 * 200) / 4;
-    public static final int Y_COORDINATE_OF_FIRST_BTN = (MyMainFrame.getInstance().getHeight() - 40 - 200) / 2;
+//    public static final int WIDTH_OF_CATEGORY_PANEL=1155;
+//    public static final int HEIGHT_OF_CATEGORY_PANEL=80;
+//
+//    public static final int WIDTH_OF_CATEGORY_PANEL_DECK_PAGE = 1155;
+//    public static final int HEIGHT_OF_CATEGORY_PANEL_DECK_PAGE = 80;
+//
+//    public static final int WIDTH_OF_DECK_PANEL = 250;
+//    public static final int HEIGHT_OF_DECK_PANEL = 1600;
+//
+//
+//    public static final int WIDTH_OF_DECK_VIEWER = 250;
+//    public static final int HEIGHT_OF_DECK_VIEWER = 800;
+//
+//    public static final int WIDTH_OF_LITTLE_CARD = 225;
+//    public static final int HEIGHT_OF_LITTLE_CARD = 20;
 
 
-    public static final int WIDTH_OF_LOG_PANEL=85;
-    public static final int HEIGHT_OF_LOG_PANEL=810;
+//    public static final int WIDTH_OF_MANA_PANEL = 1155;
+//    public static final int HEIGHT_OF_MANA_PANEL = 100;
+
+//    public static final int WIDTH_OF_MANA_BTN = 20;
+//    public static final int HEIGHT_OF_MANA_BTN = 8;
+//    public static final int WIDTH_OF_BACK_BTN_IN_MANA_PANEL = 20;
+//    public static final int HEIGHT_OF_BACK_BTN_IN_MANA_PANEL = 20;
+
+//    public static final int WIDTH_OF_END_TURN_PANEL = 200;
+//    public static final int HEIGHT_OF_END_TURN_PANEL = 810;
+//    public static final int WIDTH_OF_QIT_BTN = 100;
+//    public static final int HEIGHT_OF_QUIT_BTN = 50;
+
+//    public static final int X_COORDINATE_OF_FIRST_BTN = (MyMainFrame.getInstance().getWidth() - 3 * 200) / 4;
+//    public static final int Y_COORDINATE_OF_FIRST_BTN = (MyMainFrame.getInstance().getHeight() - 40 - 200) / 2;
+
+
+//    public static final int WIDTH_OF_LOG_PANEL=85;
+//    public static final int HEIGHT_OF_LOG_PANEL=810;
 
     public static final int WIDTH_OF_GAME_PANEL = 1115;
     public static final int HEIGHT_OF_GAME_PANEL = 600;
@@ -109,34 +111,34 @@ public class Constant {
 
     public static final int X_COORDINATE_OF_HEAL_FIELD=X_COORDINATE_OF_HERO_IMAGE+WIDTH_OF_HERO_IMAGE-35;
     public static final int Y_COORDINATE_OF_HEAL_FIELD=Y_COORDINATE_OF_HERO_IMAGE+HEIGHT_OF_HERO_IMAGE;
-
-    public static final int WIDTH_OF_WEAPON_IMAGE = 80;
-    public static final int HEIGHT_OF_WEAPON_IMAGE = 100;
-    public static final int X_COORDINATE_OF_WEAPON = X_COORDINATE_OF_HERO_IMAGE - WIDTH_OF_WEAPON_IMAGE;
-    public static final int Y_COORDINATE_OF_WEAPON = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_WEAPON_IMAGE;
-
-
-    public static final int WIDTH_OF_BTN_IN_SETTING = 220;
-    public static final int HEIGHT_OF_BTN_IN_SETTING = 90;
-    public static final int X_COORDINATE_OF_BUTTONS_IN_SETTING = (MyMainFrame.getInstance().getWidth()- WIDTH_OF_BTN_IN_SETTING)/2;
-    public static final int Y_COORDINATE_OF_CHANGE_BACK_OF_CARDS_BTN = 100;
-    public static final int Y_COORDINATE_OF_INCREASE_BTN = 200;
-    public static final int Y_COORDINATE_OF_DECREASE_BTN = 300;
-    public static final int Y_COORDINATE_OF_MUTE_BTN = 400;
-    public static final int Y_COORDINATE_OF_BACK_BTN = 500;
+//
+//    public static final int WIDTH_OF_WEAPON_IMAGE = 80;
+//    public static final int HEIGHT_OF_WEAPON_IMAGE = 100;
+//    public static final int X_COORDINATE_OF_WEAPON = X_COORDINATE_OF_HERO_IMAGE - WIDTH_OF_WEAPON_IMAGE;
+//    public static final int Y_COORDINATE_OF_WEAPON = HEIGHT_OF_HANDS_PANEL + HEIGHT_OF_GAME_PANEL - HEIGHT_OF_WEAPON_IMAGE;
 
 
-    public static final int WIDTH_OF_BUTTON_PANEL_IN_SHOP = 1400;
-    public static final int HEIGHT_OF_BUTTON_PANEL_IN_SHOP = 80;
+//    public static final int WIDTH_OF_BTN_IN_SETTING = 220;
+//    public static final int HEIGHT_OF_BTN_IN_SETTING = 90;
+//    public static final int X_COORDINATE_OF_BUTTONS_IN_SETTING = (MyMainFrame.getInstance().getWidth()- WIDTH_OF_BTN_IN_SETTING)/2;
+//    public static final int Y_COORDINATE_OF_CHANGE_BACK_OF_CARDS_BTN = 100;
+//    public static final int Y_COORDINATE_OF_INCREASE_BTN = 200;
+//    public static final int Y_COORDINATE_OF_DECREASE_BTN = 300;
+//    public static final int Y_COORDINATE_OF_MUTE_BTN = 400;
+//    public static final int Y_COORDINATE_OF_BACK_BTN = 500;
 
-    public static final int WIDTH_OF_BUY_SELL_PANEL = 400;
-    public static final int HEIGHT_OF_BUY_SELL_PANEL = 730;
+
+//    public static final int WIDTH_OF_BUTTON_PANEL_IN_SHOP = 1400;
+//    public static final int HEIGHT_OF_BUTTON_PANEL_IN_SHOP = 80;
+
+//    public static final int WIDTH_OF_BUY_SELL_PANEL = 400;
+//    public static final int HEIGHT_OF_BUY_SELL_PANEL = 730;
 
     public static final int WIDTH_OF_SHOP_CARD_PANEL=100;
     public static final int HEIGHT_OF_SHOP_CARD_PANEL=720;
-
-    public static final int WIDE_OF_RANKED_PANEL =700;
-    public static final int HEIGHT_OF_RANKED_PANEL=800;
+//
+//    public static final int WIDE_OF_RANKED_PANEL =700;
+//    public static final int HEIGHT_OF_RANKED_PANEL=800;
 
 
 }

@@ -1,14 +1,12 @@
 import Models.Cards.*;
-
 import Utility.JsonReaders.*;
-import CommandLineInterface.CLI;
-import Gui.Panels.CollectionPages.LittleCardPanel;
-import Gui.Panels.GamePage.GraphicLoop;
+import Controller.ControllerOfMainComponents;
+import View.Gui.Loop.GraphicLoop;
+import View.Gui.Panels.CollectionPages.LittleCardPanel;
 import Models.Heroes.Mage;
 import Models.Heroes.Rogue;
 import Models.Heroes.Warlock;
 import Utility.Constant;
-
 import java.io.IOException;
 
 public class main {
@@ -25,9 +23,9 @@ public class main {
         LittleCardPanel.setAllLittleCardPanels();
         Constant.getInstance().defineHeroImagesHashMap();
         Constant.getInstance().defineHeroPowerImagesHashMap();
-        CLI cli = new CLI();
+        ControllerOfMainComponents controllerOfMainComponents = new ControllerOfMainComponents();
         GraphicLoop.getInstance().start();
-        cli.FirstPage();
+        controllerOfMainComponents.FirstPage();
 
     }
 }

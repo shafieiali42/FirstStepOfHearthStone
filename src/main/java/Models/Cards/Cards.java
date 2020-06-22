@@ -26,8 +26,6 @@ public class Cards implements Comparable<Cards> {
     @Expose(serialize = false, deserialize = false)
     private  transient int rarityInt;
 
-//    @Expose(serialize = false, deserialize = false)
-//    private transient CardImagePanel thisCardImagePanel;
     @Expose(serialize = false, deserialize = false)
     private static ArrayList<Cards> allCards = new ArrayList<Cards>();
 
@@ -35,12 +33,8 @@ public class Cards implements Comparable<Cards> {
         return allCards;
     }
 
-    private transient static int count=0;
+
     public Cards() throws IOException {
-//        count++;
-//        if (count==Minion.NUMBER_OF_MINIONS+Spell.NUMBER_OF_SPELLS+Weapon.NUMBER_OF_Weapons+20000){
-//            thisCardImagePanel=new CardImagePanel(this);
-//        }
 
     }
 
@@ -49,9 +43,6 @@ public class Cards implements Comparable<Cards> {
         allCards.addAll(Minion.getMinions());
         allCards.addAll(Spell.getSpells());
         allCards.addAll(Weapon.getWeapons());
-//        ImageOfAllCards.setImageOfAllCardsList();
-
-
     }
 
     public String getName() {
