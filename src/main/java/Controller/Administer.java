@@ -4,12 +4,13 @@ import Logic.NonePlayLogics.CollectionState;
 import Logic.NonePlayLogics.ShopState;
 import Logic.NonePlayLogics.StatusState;
 import Logic.PlayLogic.Alliance;
-import Logic.PlayLogic.GameState;
+import Logic.PlayLogic.Game;
 import Logic.Status;
 
 import View.Gui.Panels.CollectionPages.DeckPage;
 import View.Gui.Panels.CollectionPages.DeckViewer;
 import View.Gui.Panels.CollectionPages.LittleCardPanel;
+import View.Gui.Panels.GamePage.FirstThreeCardsPage;
 import View.Gui.Panels.GamePage.PlayPanel;
 
 
@@ -23,8 +24,8 @@ import Utility.MethodsOfShowCardsOnPanel;
 import Utility.Sounds;
 import View.CardView.CardImagePanel;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
-import View.Gui.Panels.StatusPanel.RankedPanel;
 import View.Gui.Panels.StatusPanel.ShowDeckInfoPanel;
+import jdk.nashorn.internal.scripts.JO;
 
 import javax.swing.*;
 import java.awt.*;
@@ -43,18 +44,109 @@ public class Administer {
     }
 
     //gameState
+
+    public static void reStartFirstThreeCardsSetting(){
+        FirstThreeCardsPage.getInstance().reStartSetting();
+    }
+
+
+    public static void ChangeThisCardFromHands(String cardName) {
+
+        System.out.println(Game.getInstance().getFriendlyPlayer().getDeckCards());
+        System.out.println("CardName: "+cardName+" First: "+FirstThreeCardsPage.getInstance().getFirstCard());
+        System.out.println("CardName: "+cardName+" First: "+FirstThreeCardsPage.getInstance().getSecondCard());
+        System.out.println("CardName: "+cardName+" First: "+FirstThreeCardsPage.getInstance().getThirdCard());
+        boolean changed = false;
+        if (cardName.equals(FirstThreeCardsPage.getInstance().getFirstCard()) && FirstThreeCardsPage.getInstance().getCanChangeFirstCard()) {
+            changed = true;
+            FirstThreeCardsPage.getInstance().setCanChangeFirstCard(false);
+            Game.getInstance().getFriendlyPlayer().getDeckCards().add(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(0));
+            Game.getInstance().getFriendlyPlayer().getFirstThreeCards().remove(0);
+            Game.getInstance().getFriendlyPlayer().getFirstThreeCards().add(0,Game.getInstance().getFriendlyPlayer().getDeckCards().get(3));
+            Game.getInstance().getFriendlyPlayer().getDeckCards().remove(3);
+            Game.getInstance().getFriendlyPlayer().setHandsCards(Game.getInstance().getFriendlyPlayer().getFirstThreeCards());
+
+        } else if (cardName.equals(FirstThreeCardsPage.getInstance().getSecondCard()) && FirstThreeCardsPage.getInstance().getCanChangeSecondCard()) {
+            changed = true;
+            FirstThreeCardsPage.getInstance().setCanChangeSecondCard(false);
+            Game.getInstance().getFriendlyPlayer().getDeckCards().add(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(1));
+            Game.getInstance().getFriendlyPlayer().getFirstThreeCards().remove(1);
+            Game.getInstance().getFriendlyPlayer().getFirstThreeCards().add(1,Game.getInstance().getFriendlyPlayer().getDeckCards().get(3));
+            Game.getInstance().getFriendlyPlayer().getDeckCards().remove(3);
+            Game.getInstance().getFriendlyPlayer().setHandsCards(Game.getInstance().getFriendlyPlayer().getFirstThreeCards());
+        } else if (cardName.equals(FirstThreeCardsPage.getInstance().getThirdCard()) && FirstThreeCardsPage.getInstance().getCanChangeThirdCard()) {
+            changed = true;
+            FirstThreeCardsPage.getInstance().setCanChangeThirdCard(false);
+            Game.getInstance().getFriendlyPlayer().getDeckCards().add(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(2));
+            Game.getInstance().getFriendlyPlayer().getFirstThreeCards().remove(2);
+            Game.getInstance().getFriendlyPlayer().getFirstThreeCards().add(2,Game.getInstance().getFriendlyPlayer().getDeckCards().get(3));
+            Game.getInstance().getFriendlyPlayer().getDeckCards().remove(3);
+            Game.getInstance().getFriendlyPlayer().setHandsCards(Game.getInstance().getFriendlyPlayer().getFirstThreeCards());
+        }
+
+        if (!changed){
+            JOptionPane.showMessageDialog(MyMainFrame.getInstance(),"You cant change this card","Error",JOptionPane.ERROR_MESSAGE);
+        }
+
+        FirstThreeCardsPage.getInstance().repaint();
+        FirstThreeCardsPage.getInstance().revalidate();
+
+    }
+
+    public static void setNameOfFirstFriendlyThreeCards() {
+       FirstThreeCardsPage.getInstance().setFirstCard(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(0).getName());
+        FirstThreeCardsPage.getInstance().setSecondCard(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(1).getName());
+        FirstThreeCardsPage.getInstance().setThirdCard(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(2).getName());
+    }
+
+    public static ArrayList<Cards> getFirstFriendlyThreeCards() {
+        return Game.getInstance().getFriendlyPlayer().getFirstThreeCards();
+    }
+
+
+    public static boolean checkThatCanDragCard(int x, int y) {
+        if (Game.getInstance().getCurrentAlliance().equals(Alliance.ME)) {
+            if (x > 0 && x < 1200 && y > 385 && y < 770) {
+                return true;
+            } else {
+                return false;
+            }
+
+        } else {
+            if (x > 0 && x < 1200 && y > 0 && y < 385) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+
+    public static void setGameMode(int mode) {
+        Game.getInstance().setGameMode(mode);
+        try {
+            Game.getInstance().initGameState();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static int getGameMode() {
+        return Game.getInstance().getGameMode();
+    }
+
     public static int getHpOfCurrentFriendlyHeroInGameState() {
-        return GameState.getInstance().getFriendlyPlayer().getHero().getHealthPower();
+        return Game.getInstance().getFriendlyPlayer().getHero().getHealthPower();
     }
 
     public static int getHpOfCurrentEnemyHeroInGameState() {
-        return GameState.getInstance().getEnemyPlayer().getHero().getHealthPower();
+        return Game.getInstance().getEnemyPlayer().getHero().getHealthPower();
     }
 
     public static void showFriendlyWeaponOfGameState(JPanel panel, int widthOfWeaponImage, int heightOfWeaponImage, int xCoordinateOfWeapon, int yCoordinateOfWeapon) {
-        if (GameState.getInstance().getFriendlyPlayer().getCurrentWeapon() != null) {
+        if (Game.getInstance().getFriendlyPlayer().getCurrentWeapon() != null) {
             try {
-                CardImagePanel cardImagePanel = new CardImagePanel(GameState.getInstance().getFriendlyPlayer().getCurrentWeapon().getName(),
+                CardImagePanel cardImagePanel = new CardImagePanel(Game.getInstance().getFriendlyPlayer().getCurrentWeapon().getName(),
                         widthOfWeaponImage, heightOfWeaponImage);
 
                 MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, panel,
@@ -66,9 +158,9 @@ public class Administer {
     }
 
     public static void showEnemyWeaponOfGameState(JPanel panel, int widthOfWeaponImage, int heightOfWeaponImage, int xCoordinateOfWeapon, int yCoordinateOfWeapon) {
-        if (GameState.getInstance().getEnemyPlayer().getCurrentWeapon() != null) {
+        if (Game.getInstance().getEnemyPlayer().getCurrentWeapon() != null) {
             try {
-                CardImagePanel cardImagePanel = new CardImagePanel(GameState.getInstance().getEnemyPlayer().getCurrentWeapon().getName(),
+                CardImagePanel cardImagePanel = new CardImagePanel(Game.getInstance().getEnemyPlayer().getCurrentWeapon().getName(),
                         widthOfWeaponImage, heightOfWeaponImage);
 
                 MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, panel,
@@ -79,76 +171,83 @@ public class Administer {
         }
     }
 
-    public static void showEnemyHandsCardInPlay(JPanel panel, int numberOfCardsPerRowHandsCards, int typeOfBackOfCards) throws IOException {
-//        MethodsOfShowCardsOnPanel.showBackOfEnemyHandsCards(GameState.getInstance().getEnemyPlayer().getHandsCards(),
-//                panel, numberOfCardsPerRowHandsCards, typeOfBackOfCards);
-        MethodsOfShowCardsOnPanel.showEnemyHandsCards(GameState.getInstance().getEnemyPlayer().getHandsCards(),
-                panel, numberOfCardsPerRowHandsCards);
+    public static void showEnemyHandsCardInPlay(JPanel panel, int numberOfCardsPerRowHandsCards, int typeOfBackOfCards, int gameMode) throws IOException {
+        if (gameMode == 1) {
+            MethodsOfShowCardsOnPanel.showBackOfEnemyHandsCards(Game.getInstance().getEnemyPlayer().getHandsCards(),
+                    panel, numberOfCardsPerRowHandsCards, typeOfBackOfCards);
+        } else {
+            MethodsOfShowCardsOnPanel.showEnemyHandsCards(Game.getInstance().getEnemyPlayer().getHandsCards(),
+                    panel, numberOfCardsPerRowHandsCards);
+        }
     }
 
     public static void showFriendlyHandsCardInPlay(JPanel panel, int numberOfCardsPerRowHandsCards) throws IOException {
-        MethodsOfShowCardsOnPanel.showFriendlyHandsCards(GameState.getInstance().getFriendlyPlayer().getHandsCards(),
+        MethodsOfShowCardsOnPanel.showFriendlyHandsCards(Game.getInstance().getFriendlyPlayer().getHandsCards(),
                 panel, numberOfCardsPerRowHandsCards);
     }
 
     public static void showFriendlyBattleGroundCardsInPlay(JPanel panel, int numberOfCardsPerRowGamePanel) throws IOException {
-        MethodsOfShowCardsOnPanel.showBattleGroundCards(GameState.getInstance().getFriendlyPlayer().getBattleGroundCards(), panel, numberOfCardsPerRowGamePanel, Alliance.ME);
+        MethodsOfShowCardsOnPanel.showFriendlyBattleGroundCards(Game.getInstance().getFriendlyPlayer().getBattleGroundCards(), panel, numberOfCardsPerRowGamePanel, Alliance.ME);
+    }
+
+    public static void showEnemyBattleGroundCardsInPlay(JPanel panel, int numberOfCardsPerRowGamePanel) throws IOException {
+        MethodsOfShowCardsOnPanel.showEnemyBattleGroundCards(Game.getInstance().getEnemyPlayer().getBattleGroundCards(), panel, numberOfCardsPerRowGamePanel, Game.getInstance().getCurrentAlliance());
     }
 
     public static String getNameOfFriendlyHeroOfGameState() {
-        return GameState.getInstance().getFriendlyPlayer().getHero().getName();
+        return Game.getInstance().getFriendlyPlayer().getHero().getName();
     }
 
     public static String getNameOfEnemyHeroOfGameState() {
-        return GameState.getInstance().getEnemyPlayer().getHero().getName();
+        return Game.getInstance().getEnemyPlayer().getHero().getName();
     }
 
     public static String getNameOfFriendlyPassive(int numberOfPassive) {
-        return GameState.getInstance().getFriendlyPlayer().getPassivesToChoose().get(numberOfPassive).getName();
+        return Game.getInstance().getFriendlyPlayer().getPassivesToChoose().get(numberOfPassive).getName();
     }
 
     public static String getNameOfEnemyPassive(int numberOfPassive) {
-        return GameState.getInstance().getEnemyPlayer().getPassivesToChoose().get(numberOfPassive).getName();
+        return Game.getInstance().getEnemyPlayer().getPassivesToChoose().get(numberOfPassive).getName();
     }
 
     public static void setFriendlyInfoPassiveOfGameState(int numberOfPassive) {
-        GameState.getInstance().getFriendlyPlayer().setInfoPassive(GameState.getInstance().getFriendlyPlayer().getPassivesToChoose().get(numberOfPassive));
+        Game.getInstance().getFriendlyPlayer().setInfoPassive(Game.getInstance().getFriendlyPlayer().getPassivesToChoose().get(numberOfPassive));
     }
 
     public static void setEnemyInfoPassiveOfGameState(int numberOfPassive) {
-        GameState.getInstance().getEnemyPlayer().setInfoPassive(GameState.getInstance().getEnemyPlayer().getPassivesToChoose().get(numberOfPassive));
+        Game.getInstance().getEnemyPlayer().setInfoPassive(Game.getInstance().getEnemyPlayer().getPassivesToChoose().get(numberOfPassive));
     }
 
-    public static int getFriendlyManaOfGameState() {
-        return GameState.getInstance().getFriendlyPlayer().getMana();
+    public static int getManaOfCurrentPlayer() {
+        return Game.getInstance().getCurrentPlayer().getMana();
     }
 
     public static int getEnemyManaOfGameState() {
-        return GameState.getInstance().getEnemyPlayer().getMana();
+        return Game.getInstance().getEnemyPlayer().getMana();
     }
 
     public static void initializeGameState() throws IOException {
-        GameState.getInstance().initGameState();
+        Game.getInstance().initGameState();
     }
 
     public static boolean canAddFriendlyMinionToBattleGround() {
-        return GameState.getInstance().getFriendlyPlayer().getBattleGroundCards().size() <= 7 - 1;
+        return Game.getInstance().getFriendlyPlayer().getBattleGroundCards().size() <= 7 - 1;
     }
 
     public static boolean canAddEnemyMinionToBattleGround() {
-        return GameState.getInstance().getEnemyPlayer().getBattleGroundCards().size() <= 7 - 1;
+        return Game.getInstance().getEnemyPlayer().getBattleGroundCards().size() <= 7 - 1;
     }
 
     public static void setPlayingCardOfGameState(String cardName) {
         for (Cards cards : Cards.getAllCards()) {
             if (cards.getName().equals(cardName)) {
-                GameState.getInstance().setPlayingCard(cards);
+                Game.getInstance().setPlayingCard(cards);
             }
         }
     }
 
     public static String getPlayingCardName() {
-        return GameState.getInstance().getPlayingCard().getName();
+        return Game.getInstance().getPlayingCard().getName();
     }
 
     public static boolean isCurrentPlayersCurrentDeckNull() {
@@ -156,11 +255,11 @@ public class Administer {
     }
 
     public static int getNumberOfFriendlyCardsOfDeckInGameState() {
-        return GameState.getInstance().getFriendlyPlayer().getDeckCards().size();
+        return Game.getInstance().getFriendlyPlayer().getDeckCards().size();
     }
 
     public static int getNumberOfEnemyCardsOfDeckInGameState() {
-        return GameState.getInstance().getEnemyPlayer().getDeckCards().size();
+        return Game.getInstance().getEnemyPlayer().getDeckCards().size();
     }
 
 

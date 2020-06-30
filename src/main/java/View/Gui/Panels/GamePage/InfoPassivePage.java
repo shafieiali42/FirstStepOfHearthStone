@@ -1,6 +1,8 @@
 package View.Gui.Panels.GamePage;
 
 import Controller.Administer;
+import Controller.ControllerOfMainComponents;
+import Logic.Status;
 import Utility.Config2.ConfigLoader;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
 
@@ -74,7 +76,9 @@ public class InfoPassivePage extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 Administer.setFriendlyInfoPassiveOfGameState(2);
 //                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(2));
-                MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
+                ControllerOfMainComponents.setStatus(Status.FIRST_THREE_CARDS_PAGE);
+                MyMainFrame.getInstance().setContentPane(FirstThreeCardsPage.getInstance());
+                Administer.setNameOfFirstFriendlyThreeCards();
             }
         });
         add(thirdPassiveBtn);
@@ -89,7 +93,9 @@ public class InfoPassivePage extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 Administer.setFriendlyInfoPassiveOfGameState(1);
 //                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(1));
-                MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
+                ControllerOfMainComponents.setStatus(Status.FIRST_THREE_CARDS_PAGE);
+                MyMainFrame.getInstance().setContentPane(FirstThreeCardsPage.getInstance());
+                Administer.setNameOfFirstFriendlyThreeCards();
             }
         });
         add(secondPassiveBtn);
@@ -105,7 +111,9 @@ public class InfoPassivePage extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 Administer.setFriendlyInfoPassiveOfGameState(0);
 //                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(0));
-                MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
+                ControllerOfMainComponents.setStatus(Status.FIRST_THREE_CARDS_PAGE);
+                MyMainFrame.getInstance().setContentPane(FirstThreeCardsPage.getInstance());
+                Administer.setNameOfFirstFriendlyThreeCards();
             }
         });
         add(firstPassiveBtn);

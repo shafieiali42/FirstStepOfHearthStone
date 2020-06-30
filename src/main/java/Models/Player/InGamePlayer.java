@@ -14,6 +14,7 @@ import java.util.Collections;
 
 public class InGamePlayer {
 
+
     private Player player;
     private Heroes hero;
     private ArrayList<Cards> deckCards;
@@ -24,13 +25,18 @@ public class InGamePlayer {
     private int turn;
     private Passive infoPassive;
     private ArrayList<Passive> passivesToChoose;
+    private ArrayList<Cards> firstThreeCards;
 
     public InGamePlayer(){
         this.handsCards = new ArrayList<>();
         this.battleGroundCards = new ArrayList<>();
         passivesToChoose=new ArrayList<>();
-        deckCards= (ArrayList<Cards>) ControllerOfMainComponents.currentPlayer.getCurrentDeck().getListOfCards().clone();
-        initHandsCards();
+        deckCards=new ArrayList<>();
+        firstThreeCards=new ArrayList<>();
+        turn=1;
+        mana=1;
+//        deckCards= (ArrayList<Cards>) ControllerOfMainComponents.currentPlayer.getCurrentDeck().getListOfCards().clone();
+//        initHandsCards();
     }
 
     public InGamePlayer(Player player) {
@@ -41,6 +47,7 @@ public class InGamePlayer {
         this.handsCards = new ArrayList<>();
         this.battleGroundCards = new ArrayList<>();
         passivesToChoose=new ArrayList<>();
+        firstThreeCards=new ArrayList<>();
         turn=1;
         mana=1;
         initHandsCards();
@@ -49,7 +56,7 @@ public class InGamePlayer {
 
     }
 
-    private void initPassiveToChoose() {
+    public void initPassiveToChoose() {
         ArrayList<Integer> randomNumber = new ArrayList<Integer>();
         for (int i = 0; i < Passive.NUMBER_OF_PASSIVES; i++) {
             randomNumber.add(i);
@@ -60,7 +67,17 @@ public class InGamePlayer {
         passivesToChoose.add(Passive.getPassives().get(randomNumber.get(2)));
     }
 
-    private void initHandsCards() {
+    public void reInitHandsCards(){
+        this.handsCards.clear();
+    }
+
+
+
+
+
+
+
+    public void initHandsCards() {
         boolean hasQuestCard = false;
         a:
         for (Cards quest : Spell.getQuestAndRewardCards()) {
@@ -68,6 +85,7 @@ public class InGamePlayer {
                 if (quest.equals(card)) {
                     hasQuestCard = true;
                     handsCards.add(quest);
+                    firstThreeCards.add(deckCards.get(0));
                     deckCards.remove(card);
                     break a;
                 }
@@ -75,17 +93,17 @@ public class InGamePlayer {
         }
 
         handsCards.add(deckCards.get(0));
+        firstThreeCards.add(deckCards.get(0));
         deckCards.remove(0);
         handsCards.add(deckCards.get(0));
+        firstThreeCards.add(deckCards.get(0));
         deckCards.remove(0);
         if (!hasQuestCard) {
             handsCards.add(deckCards.get(0));
+            firstThreeCards.add(deckCards.get(0));
             deckCards.remove(0);
         }
     }
-
-
-
 
 
 
@@ -159,6 +177,13 @@ public class InGamePlayer {
     }
     public void setPassivesToChoose(ArrayList<Passive> passivesToChoose) {
         this.passivesToChoose = passivesToChoose;
+    }
+
+    public ArrayList<Cards> getFirstThreeCards() {
+        return firstThreeCards;
+    }
+    public void setFirstThreeCards(ArrayList<Cards> firstThreeCards) {
+        this.firstThreeCards = firstThreeCards;
     }
 
 }

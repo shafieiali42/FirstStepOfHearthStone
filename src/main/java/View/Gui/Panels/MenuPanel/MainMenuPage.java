@@ -85,7 +85,7 @@ public class MainMenuPage extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    String password =JOptionPane.showInputDialog("Please Enter your Password:");
+                    String password = JOptionPane.showInputDialog("Please Enter your Password:");
                     PlayerController.deletePlayer(password);
 //                    PlayerManagement.DeletePlayer(password);
                 } catch (IOException ex) {
@@ -230,9 +230,37 @@ public class MainMenuPage extends JPanel {
         playBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                Object[] possibilities = {"Normal Game", "Two Player", "Training Game", "Deck Reader"};
+                Icon questionError = UIManager.getIcon("OptionPane.questionIcon");
+                String gameMode = (String) JOptionPane.showInputDialog(
+                        null,
+                        "Select Your favorite Game Mode:",
+                        "Select GameMode",
+                        JOptionPane.PLAIN_MESSAGE,
+                        questionError,
+                        possibilities,
+                        "Two Player");
+                int mode = 0;
+                switch (gameMode) {
+                    case "Normal Game":
+                        mode = 1;
+                        break;
+                    case "Training Game":
+                        mode = 2;
+                        break;
+                    case "Deck Reader":
+                        mode = 3;
+                        break;
+                    case "Two Player":
+                        mode = 4;
+                        break;
+
+                }
+                Administer.setGameMode(mode);
+
                 if (Administer.isCurrentPlayersCurrentDeckNull()) {
                     JOptionPane.showMessageDialog(null, "First you should select your deck",
-                            "Eroor", JOptionPane.ERROR_MESSAGE);
+                            "Error", JOptionPane.ERROR_MESSAGE);
                     ControllerOfMainComponents.setStatus(Status.COLLECTION_PAGE_FROM_PLAY);
                     MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
 
@@ -245,6 +273,7 @@ public class MainMenuPage extends JPanel {
 //                GraphicLoop.getInstance().start();
                     InfoPassivePage.getInstance().repaint();
                     InfoPassivePage.getInstance().revalidate();
+                    Administer.reStartFirstThreeCardsSetting();
                     MyMainFrame.getInstance().setContentPane(InfoPassivePage.getInstance());
                 }
             }

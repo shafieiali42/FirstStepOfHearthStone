@@ -15,8 +15,6 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.Properties;
 
-import static Utility.Constant.*;
-
 public class DeckAndEndTurnBtnPanel extends JPanel {
 
     private Properties properties;
@@ -137,12 +135,13 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setFont(new Font("TimesRoman", Font.ITALIC, 30));
-        g.drawString(Administer.getFriendlyManaOfGameState() + "/" + "10", 60, 700);//todo maybe its better to do it in Administer
+        g.drawString(Administer.getManaOfCurrentPlayer() + "/" + "10", 60, 700);
 
         DeckViewerInPlay.getInstanceOfFirstDeck().setToolTipText("You have "+
                 Administer.getNumberOfFriendlyCardsOfDeckInGameState()+ "cards in your deck");
 
-        DeckViewerInPlay.getInstanceOfSecondDeck().setToolTipText("There are 0 cards in this Models.Deck");//TODO needs to change in next phase:))
+        DeckViewerInPlay.getInstanceOfSecondDeck().setToolTipText("You have "+
+                Administer.getNumberOfEnemyCardsOfDeckInGameState()+ "cards in your deck");
     }
 
 }

@@ -1,0 +1,24 @@
+Jun 23, 2020 4:16:44 PM Controller.PlayerController signIn
+INFO: sign_in sss
+Jun 23, 2020 4:16:48 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jun 23, 2020 4:17:26 PM Controller.PlayerController signIn
+INFO: sign_in sss
+Jun 23, 2020 4:17:30 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jun 23, 2020 4:24:23 PM Controller.PlayerController signIn
+INFO: sign_in sss
+Jun 23, 2020 4:24:26 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jun 23, 2020 4:41:07 PM Controller.PlayerController signIn
+INFO: sign_in sss
+Jun 23, 2020 4:41:13 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jun 23, 2020 4:41:18 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jun 23, 2020 4:41:37 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jun 23, 2020 9:18:41 PM Controller.PlayerController signIn
+INFO: sign_in sss
+Jun 23, 2020 9:18:44 PM Controller.Administer writeLog
+INFO: Navigate into play page

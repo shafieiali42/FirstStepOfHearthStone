@@ -31,7 +31,6 @@ public class GamePage extends JPanel {
     private GamePage(){
         setSize(MyMainFrame.getInstance().getMyFrameWidth(),MyMainFrame.getInstance().getMyFrameHeight());
         setLayout(null);
-
         LogPanel.getInstance().setPreferredSize(new Dimension(LogPanel.getInstance().getWidthOfLogPanel(),1600));
         LogPanel.getInstance().setFocusable(true);
         LogPanel.getInstance().requestFocus();

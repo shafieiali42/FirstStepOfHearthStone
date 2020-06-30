@@ -6,6 +6,7 @@ import Logic.PlayLogic.Alliance;
 import Controller.ControllerOfMainComponents;
 import Logic.Status;
 import View.Gui.Mapper;
+import View.Gui.Panels.GamePage.PlayPanel;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
 
 //import View.Gui.Loop.Loop.GraphicLoop;
@@ -56,6 +57,20 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     }
 
+    public CardImagePanel(String cardName, int width, int height, boolean showLockCards) throws IOException {
+        if (showLockCards) {
+            setLayout(null);
+            setSize(width, height);
+            this.addMouseListener(this);
+            this.addMouseMotionListener(this);
+//        this.card = card;
+            this.cardName = cardName;
+            setIsLock(this.cardName);
+            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
+        }
+
+    }
+
     public CardImagePanel(String cardName, int width, int height) throws IOException {
 
         setLayout(null);
@@ -96,8 +111,8 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
         if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
             graphics2D.setColor(Color.black);
             graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 20));
-            graphics2D.drawString( GamePartController.giveMinionHpWithName(cardName)+"", 73, 105);
-            graphics2D.drawString(GamePartController.giveMinionAttackWithName(cardName)+"", 10, 105);
+            graphics2D.drawString(GamePartController.giveMinionHpWithName(cardName) + "", 73, 105);
+            graphics2D.drawString(GamePartController.giveMinionAttackWithName(cardName) + "", 10, 105);
         }
 //        makeItGrey(this.isLock,graphics2D);
     }
@@ -116,6 +131,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
             UIManager.put("OptionPane.minimumSize", new Dimension(200, 80));
             UIManager.put("OptionPane.minimumSize", UIManager.getDefaults().getDimension("OptionPane.minimumSize"));
         } else if (SwingUtilities.isLeftMouseButton(e)) {
+
             if (ControllerOfMainComponents.getStatus().equals(Status.BUY_PAGE)) {
                 PanelToShowCardInBuySellPanel.getInstance().removeAll();
                 PanelToShowCardInBuySellPanel.getInstance().repaint();
@@ -165,10 +181,15 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     @Override
     public void mousePressed(MouseEvent e) {
+        if (ControllerOfMainComponents.getStatus().equals(Status.FIRST_THREE_CARDS_PAGE)) {
+            System.out.println("Change Deck:))");
+            Administer.ChangeThisCardFromHands(cardName);
+        }
         if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
 //            GraphicLoop.getInstance().stop();
             x = e.getX();
             y = e.getY();
+
         }
 
     }
@@ -182,7 +203,11 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 //                    e.getComponent().getX() <= PlayPanel.getMaxXForPutCards() &&
 //                    e.getComponent().getY() >= PlayPanel.getMinYForPutCards() &&
 //                    e.getComponent().getY() <= PlayPanel.getMaxYForPutCards()) {
-
+            if (!Administer.checkThatCanDragCard(e.getComponent().getX(), e.getComponent().getY())) {
+                JOptionPane.showMessageDialog(MyMainFrame.getInstance(), "Its Not Your Turn:))", "Error", JOptionPane.ERROR_MESSAGE);
+                PlayPanel.getInstance().setNeedsToRepaint(true);
+                return;
+            }
             Mapper.getInstance().setAddedBeforeForBeingBetween(false);
 
             if (!Administer.getTypeOfGivenCard(this.cardName).equalsIgnoreCase("minion")) {
