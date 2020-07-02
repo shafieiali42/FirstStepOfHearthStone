@@ -1,6 +1,6 @@
 package Logic.NonePlayLogics;
 
-import Models.Cards.Cards;
+import Models.Cards.CardClasses.Cards;
 
 import java.io.IOException;
 

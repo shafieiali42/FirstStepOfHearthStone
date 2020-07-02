@@ -1,7 +1,7 @@
 package Models.Heroes;
 
 
-import Models.Cards.Cards;
+import Models.Cards.CardClasses.Cards;
 import java.util.ArrayList;
 
 public class Priest extends Heroes {

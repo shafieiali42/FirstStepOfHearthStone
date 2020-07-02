@@ -1,6 +1,6 @@
 package Utility.JsonReaders;
 
-import Models.Cards.Passive;
+import Models.Cards.CardClasses.Passive;
 import com.google.gson.Gson;
 
 import java.io.FileReader;

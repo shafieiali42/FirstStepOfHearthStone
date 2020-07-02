@@ -30,6 +30,8 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     private boolean isLock;
     private String cardName;
     boolean dragging = false;
+    boolean Released = false;
+    boolean clicked = false;
     int x, y;
 
     public boolean getIsLock() {
@@ -120,6 +122,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     @Override
     public void mouseClicked(MouseEvent e) {
+
         if (SwingUtilities.isRightMouseButton(e)) {
             UIManager UI = new UIManager();
             UI.put("OptionPane.background", Color.cyan);
@@ -131,7 +134,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
             UIManager.put("OptionPane.minimumSize", new Dimension(200, 80));
             UIManager.put("OptionPane.minimumSize", UIManager.getDefaults().getDimension("OptionPane.minimumSize"));
         } else if (SwingUtilities.isLeftMouseButton(e)) {
-
+            System.out.println("Moused Clicked");
             if (ControllerOfMainComponents.getStatus().equals(Status.BUY_PAGE)) {
                 PanelToShowCardInBuySellPanel.getInstance().removeAll();
                 PanelToShowCardInBuySellPanel.getInstance().repaint();
@@ -178,17 +181,25 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     }
 
+    boolean canReleased = true;
 
     @Override
     public void mousePressed(MouseEvent e) {
+        System.out.println("Mouse Pressed");
         if (ControllerOfMainComponents.getStatus().equals(Status.FIRST_THREE_CARDS_PAGE)) {
             System.out.println("Change Deck:))");
             Administer.ChangeThisCardFromHands(cardName);
         }
         if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
-//            GraphicLoop.getInstance().stop();
-            x = e.getX();
-            y = e.getY();
+            if (Administer.canDragCard(e.getComponent().getY())) {
+                x = e.getX();
+                y = e.getY();
+            } else {
+                int xCoordinate = e.getComponent().getX();
+                int yCoordinate = e.getComponent().getY();
+                e.getComponent().setLocation(xCoordinate, yCoordinate);
+                canReleased = false;
+            }
 
         }
 
@@ -198,12 +209,21 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     @Override
 
     public void mouseReleased(MouseEvent e) {//TODO can change better inorder to separate logic and GUI
+        if (!canReleased) {
+            System.out.println("cant released");
+            PlayPanel.getInstance().setNeedsToRepaint(true);
+            PlayPanel.getInstance().repaint();
+            PlayPanel.getInstance().revalidate();
+            return;
+        }
         if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
+
 //            if (e.getComponent().getX() >= PlayPanel.getMinXForPutCards() &&
 //                    e.getComponent().getX() <= PlayPanel.getMaxXForPutCards() &&
 //                    e.getComponent().getY() >= PlayPanel.getMinYForPutCards() &&
 //                    e.getComponent().getY() <= PlayPanel.getMaxYForPutCards()) {
-            if (!Administer.checkThatCanDragCard(e.getComponent().getX(), e.getComponent().getY())) {
+
+            if (!Administer.checkThatCanReleaseCard(e.getComponent().getX(), e.getComponent().getY())) {
                 JOptionPane.showMessageDialog(MyMainFrame.getInstance(), "Its Not Your Turn:))", "Error", JOptionPane.ERROR_MESSAGE);
                 PlayPanel.getInstance().setNeedsToRepaint(true);
                 return;
@@ -218,6 +238,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 Mapper.getInstance().executeRequests();
                 dragging = false;
             } else if (Administer.canAddFriendlyMinionToBattleGround()) {
+//                if (!Administer.isPlayedBefore(this.cardName)) {
 //                System.out.println("X: " + e.getComponent().getX() + " Y: " + e.getComponent().getY());
                 if (e.getComponent().getX() < 50) {
 //                    GamePartController.setFirstCard(cardName);
@@ -263,6 +284,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                     Mapper.getInstance().executeRequests();
                 }
                 dragging = false;
+//                }
             } else {
                 JOptionPane.showMessageDialog(null,
                         "It's illegal to have more than 7 cards in the battleGround.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -276,11 +298,13 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     @Override
     public void mouseDragged(MouseEvent e) {
         if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
+
             dragging = true;
             e.getComponent().setLocation(e.getX() + e.getComponent().getX() - x, e.getY() + e.getComponent().getY() - y);
 //            repaint();
 //            revalidate();
         }
+
     }
 
     @Override

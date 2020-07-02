@@ -1,18 +1,18 @@
 package View.Gui;
 
 import Logic.PlayLogic.Alliance;
-import Models.Cards.Cards;
+import Models.Cards.CardClasses.Cards;
 import Controller.ControllerOfMainComponents;
 
 import View.Gui.Panels.GamePage.LogPanel;
 import View.Gui.Panels.GamePage.PlayPanel;
 import Interfaces.Request;
 import Logic.PlayLogic.Game;
-import Models.Cards.Weapon;
+import Models.Cards.CardClasses.Weapon;
 import Utility.Sounds;
+
 import javax.swing.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 
 public class Mapper {
@@ -117,9 +117,10 @@ public class Mapper {
 
 
     public void playCard(Cards playingCard, int k) {
-        boolean played = false;
-        if (playingCard.getManaCost() > Game.getInstance().getCurrentPlayer().getMana()) {
+        boolean minionPlayed = false;
+        if (playingCard.getManaCost() > Game.getInstance().getCurrentPlayer().getMana()) {//TODO check mana:))
             JOptionPane.showMessageDialog(null, "You don't have enough mana");
+
         } else if (playingCard.getManaCost() <= Game.getInstance().getCurrentPlayer().getMana()) {
 
 
@@ -139,12 +140,12 @@ public class Mapper {
                             }
                         }
                         Mapper.getInstance().setAddedBeforeForBeingBetween(true);
-                        played = true;
+                        minionPlayed = true;
                     }
                 } else {
                     Game.getInstance().getCurrentPlayer().getBattleGroundCards().add(playingCard);
                     Mapper.getInstance().setAddedBeforeForBeingBetween(false);
-                    played = true;
+                    minionPlayed = true;
                 }
 //                if (!this.AddedBeforeForBeingBetween) {
 //                    GameState.getInstance().getBattleGroundCards().add(playingCard);
@@ -158,9 +159,9 @@ public class Mapper {
             } else if (playingCard.getType().contains("Spell")) {
                 //TODO PLAY SPELL
             }
-            if (played) {
+            if (minionPlayed) {
                 Game.getInstance().getCurrentPlayer().setMana(Game.getInstance().getCurrentPlayer().getMana() - playingCard.getManaCost());
-                System.out.println("Alliance: "+Game.getInstance().getCurrentAlliance()+" mana: "+Game.getInstance().getCurrentPlayer().getMana());
+//                System.out.println("Alliance: " + Game.getInstance().getCurrentAlliance() + " mana: " + Game.getInstance().getCurrentPlayer().getMana());
                 PlayPanel.getInstance().setNeedAnimation(true);
                 PlayPanel.getInstance().repaint();
                 PlayPanel.getInstance().revalidate();
@@ -180,20 +181,25 @@ public class Mapper {
                 LogPanel.getInstance().revalidate();
                 Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/PlayCards.wav");
                 ControllerOfMainComponents.currentPlayer.getLoggerOfMyPlayer().info("Play minion");
+                playMinion(playingCard);
+
+
+
             }
         }
 
     }
 
 
+
     public static void endTurn() {
         Game.getInstance().getMyTimer().reStart();
         Game.getInstance().getCurrentPlayer().setTurn(Game.getInstance().getCurrentPlayer().getTurn() + 1);
         Game.getInstance().getCurrentPlayer().setMana((int) Math.min(Game.getInstance().getCurrentPlayer().getTurn(), 10));
-        if(Game.getInstance().getCurrentAlliance().equals(Alliance.ME)){
+        if (Game.getInstance().getCurrentAlliance().equals(Alliance.ME)) {
             Game.getInstance().setCurrentPlayer(Game.getInstance().getEnemyPlayer());
             Game.getInstance().setCurrentAlliance(Alliance.OPPONENT);
-        }else if (Game.getInstance().getCurrentAlliance().equals(Alliance.OPPONENT)){
+        } else if (Game.getInstance().getCurrentAlliance().equals(Alliance.OPPONENT)) {
             Game.getInstance().setCurrentPlayer(Game.getInstance().getFriendlyPlayer());
             Game.getInstance().setCurrentAlliance(Alliance.ME);
         }
@@ -216,6 +222,20 @@ public class Mapper {
         Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/EndTurn.wav");
         ControllerOfMainComponents.currentPlayer.getLoggerOfMyPlayer().info("End turn");
     }
+
+
+    public static void playMinion(Cards card) {
+
+    }
+
+    public static void playSpell(Cards card){
+
+    }
+
+    public static void playWeapon(Cards card){
+
+    }
+
 
 
 }

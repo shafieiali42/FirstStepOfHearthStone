@@ -1,6 +1,6 @@
 package Models.Heroes;
 
-import Models.Cards.Cards;
+import Models.Cards.CardClasses.Cards;
 import java.util.ArrayList;
 
 public class Rogue extends Heroes {

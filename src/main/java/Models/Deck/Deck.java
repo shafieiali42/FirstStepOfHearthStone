@@ -2,7 +2,7 @@ package Models.Deck;
 
 
 
-import Models.Cards.Cards;
+import Models.Cards.CardClasses.Cards;
 import Models.Heroes.Heroes;
 
 import java.util.ArrayList;

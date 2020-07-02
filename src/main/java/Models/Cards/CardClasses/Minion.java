@@ -1,4 +1,4 @@
-package Models.Cards;
+package Models.Cards.CardClasses;
 
 //import Models.Cards;
 
@@ -12,7 +12,7 @@ public class Minion extends Cards {
     private int healthPower;
     private static ArrayList<Minion> minions=new ArrayList<Minion>();
 
-    public Minion() throws IOException {
+    public Minion() {
         super();
     }
 

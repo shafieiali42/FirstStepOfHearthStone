@@ -1,6 +1,6 @@
 package Logic.PlayLogic;
 
-import Models.Cards.Cards;
+import Models.Cards.CardClasses.Cards;
 
 import Utility.Config2.ConfigLoader;
 

@@ -1,7 +1,7 @@
 package Controller;
 
-import Models.Cards.Cards;
-import Models.Cards.Minion;
+import Models.Cards.CardClasses.Cards;
+import Models.Cards.CardClasses.Minion;
 
 public class GamePartController {
 

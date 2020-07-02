@@ -1,11 +1,10 @@
 package Utility;
 
-import Models.Cards.Cards;
+import Models.Cards.CardClasses.Cards;
 import View.CardView.CardImagePanel;
 import View.Gui.Panels.CollectionPages.LittleCardPanel;
 import View.Gui.Panels.GamePage.PlayPanel;
 import Logic.PlayLogic.Alliance;
-import View.Gui.Panels.MyMainFrame.MyMainFrame;
 
 import javax.swing.*;
 import java.io.IOException;

@@ -1,14 +1,11 @@
 package Models.Player;
 
-import Controller.ControllerOfMainComponents;
-import Models.Cards.Cards;
-import Models.Cards.Passive;
-import Models.Cards.Spell;
-import Models.Cards.Weapon;
-import Models.Deck.Deck;
+import Models.Cards.CardClasses.Cards;
+import Models.Cards.CardClasses.Passive;
+import Models.Cards.CardClasses.Spell;
+import Models.Cards.CardClasses.Weapon;
 import Models.Heroes.Heroes;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 

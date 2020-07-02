@@ -2,8 +2,7 @@ package Logic.PlayLogic;
 
 import Controller.ControllerOfMainComponents;
 import Logic.MyTimer;
-import Models.Cards.Cards;
-import Models.Heroes.Heroes;
+import Models.Cards.CardClasses.Cards;
 import Models.Heroes.Mage;
 import Models.Player.InGamePlayer;
 

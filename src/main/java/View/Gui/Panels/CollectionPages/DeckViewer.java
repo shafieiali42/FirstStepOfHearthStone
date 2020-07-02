@@ -1,12 +1,11 @@
 package View.Gui.Panels.CollectionPages;
 
 import Controller.Administer;
-import Models.Cards.Cards;
+import Models.Cards.CardClasses.Cards;
 import Controller.ControllerOfMainComponents;
 import Logic.Status;
 import Utility.Config2.ConfigLoader;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
-import Utility.Constant;
 
 import javax.swing.*;
 import java.awt.*;

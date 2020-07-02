@@ -1,4 +1,4 @@
-package Models.Cards;
+package Models.Cards.CardClasses;
 
 import java.io.IOException;
 import java.util.ArrayList;

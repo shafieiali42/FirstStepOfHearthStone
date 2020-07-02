@@ -14,7 +14,7 @@ import View.Gui.Panels.GamePage.FirstThreeCardsPage;
 import View.Gui.Panels.GamePage.PlayPanel;
 
 
-import Models.Cards.Cards;
+import Models.Cards.CardClasses.Cards;
 import Models.Deck.Deck;
 import Models.Heroes.*;
 
@@ -25,7 +25,6 @@ import Utility.Sounds;
 import View.CardView.CardImagePanel;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
 import View.Gui.Panels.StatusPanel.ShowDeckInfoPanel;
-import jdk.nashorn.internal.scripts.JO;
 
 import javax.swing.*;
 import java.awt.*;
@@ -45,24 +44,24 @@ public class Administer {
 
     //gameState
 
-    public static void reStartFirstThreeCardsSetting(){
+    public static void reStartFirstThreeCardsSetting() {
         FirstThreeCardsPage.getInstance().reStartSetting();
     }
 
 
     public static void ChangeThisCardFromHands(String cardName) {
 
-        System.out.println(Game.getInstance().getFriendlyPlayer().getDeckCards());
-        System.out.println("CardName: "+cardName+" First: "+FirstThreeCardsPage.getInstance().getFirstCard());
-        System.out.println("CardName: "+cardName+" First: "+FirstThreeCardsPage.getInstance().getSecondCard());
-        System.out.println("CardName: "+cardName+" First: "+FirstThreeCardsPage.getInstance().getThirdCard());
+//        System.out.println(Game.getInstance().getFriendlyPlayer().getDeckCards());
+//        System.out.println("CardName: " + cardName + " First: " + FirstThreeCardsPage.getInstance().getFirstCard());
+//        System.out.println("CardName: " + cardName + " First: " + FirstThreeCardsPage.getInstance().getSecondCard());
+//        System.out.println("CardName: " + cardName + " First: " + FirstThreeCardsPage.getInstance().getThirdCard());
         boolean changed = false;
         if (cardName.equals(FirstThreeCardsPage.getInstance().getFirstCard()) && FirstThreeCardsPage.getInstance().getCanChangeFirstCard()) {
             changed = true;
             FirstThreeCardsPage.getInstance().setCanChangeFirstCard(false);
             Game.getInstance().getFriendlyPlayer().getDeckCards().add(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(0));
             Game.getInstance().getFriendlyPlayer().getFirstThreeCards().remove(0);
-            Game.getInstance().getFriendlyPlayer().getFirstThreeCards().add(0,Game.getInstance().getFriendlyPlayer().getDeckCards().get(3));
+            Game.getInstance().getFriendlyPlayer().getFirstThreeCards().add(0, Game.getInstance().getFriendlyPlayer().getDeckCards().get(3));
             Game.getInstance().getFriendlyPlayer().getDeckCards().remove(3);
             Game.getInstance().getFriendlyPlayer().setHandsCards(Game.getInstance().getFriendlyPlayer().getFirstThreeCards());
 
@@ -71,7 +70,7 @@ public class Administer {
             FirstThreeCardsPage.getInstance().setCanChangeSecondCard(false);
             Game.getInstance().getFriendlyPlayer().getDeckCards().add(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(1));
             Game.getInstance().getFriendlyPlayer().getFirstThreeCards().remove(1);
-            Game.getInstance().getFriendlyPlayer().getFirstThreeCards().add(1,Game.getInstance().getFriendlyPlayer().getDeckCards().get(3));
+            Game.getInstance().getFriendlyPlayer().getFirstThreeCards().add(1, Game.getInstance().getFriendlyPlayer().getDeckCards().get(3));
             Game.getInstance().getFriendlyPlayer().getDeckCards().remove(3);
             Game.getInstance().getFriendlyPlayer().setHandsCards(Game.getInstance().getFriendlyPlayer().getFirstThreeCards());
         } else if (cardName.equals(FirstThreeCardsPage.getInstance().getThirdCard()) && FirstThreeCardsPage.getInstance().getCanChangeThirdCard()) {
@@ -79,13 +78,13 @@ public class Administer {
             FirstThreeCardsPage.getInstance().setCanChangeThirdCard(false);
             Game.getInstance().getFriendlyPlayer().getDeckCards().add(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(2));
             Game.getInstance().getFriendlyPlayer().getFirstThreeCards().remove(2);
-            Game.getInstance().getFriendlyPlayer().getFirstThreeCards().add(2,Game.getInstance().getFriendlyPlayer().getDeckCards().get(3));
+            Game.getInstance().getFriendlyPlayer().getFirstThreeCards().add(2, Game.getInstance().getFriendlyPlayer().getDeckCards().get(3));
             Game.getInstance().getFriendlyPlayer().getDeckCards().remove(3);
             Game.getInstance().getFriendlyPlayer().setHandsCards(Game.getInstance().getFriendlyPlayer().getFirstThreeCards());
         }
 
-        if (!changed){
-            JOptionPane.showMessageDialog(MyMainFrame.getInstance(),"You cant change this card","Error",JOptionPane.ERROR_MESSAGE);
+        if (!changed) {
+            JOptionPane.showMessageDialog(MyMainFrame.getInstance(), "You cant change this card", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
         FirstThreeCardsPage.getInstance().repaint();
@@ -94,7 +93,7 @@ public class Administer {
     }
 
     public static void setNameOfFirstFriendlyThreeCards() {
-       FirstThreeCardsPage.getInstance().setFirstCard(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(0).getName());
+        FirstThreeCardsPage.getInstance().setFirstCard(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(0).getName());
         FirstThreeCardsPage.getInstance().setSecondCard(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(1).getName());
         FirstThreeCardsPage.getInstance().setThirdCard(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(2).getName());
     }
@@ -104,20 +103,29 @@ public class Administer {
     }
 
 
-    public static boolean checkThatCanDragCard(int x, int y) {
+    public static boolean canDragCard(int y) {
         if (Game.getInstance().getCurrentAlliance().equals(Alliance.ME)) {
-            if (x > 0 && x < 1200 && y > 385 && y < 770) {
-                return true;
-            } else {
-                return false;
+            return y >= 670;
+        } else {
+            return y <= 100;
+        }
+    }
+
+    public static boolean isPlayedBefore(String cardName){
+        for (Cards card :Cards.getAllCards()){
+            if (card.getName().equalsIgnoreCase(cardName)){
+                return card.isPlayed();
             }
+        }
+        return true;
+    }
+
+    public static boolean checkThatCanReleaseCard(int x, int y) {
+        if (Game.getInstance().getCurrentAlliance().equals(Alliance.ME)) {
+            return x > 0 && x < 1200 && y > 385 && y < 770;
 
         } else {
-            if (x > 0 && x < 1200 && y > 0 && y < 385) {
-                return true;
-            } else {
-                return false;
-            }
+            return x > 0 && x < 1200 && y > 0 && y < 385;
         }
     }
 

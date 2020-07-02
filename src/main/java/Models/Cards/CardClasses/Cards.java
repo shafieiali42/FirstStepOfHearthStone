@@ -1,13 +1,15 @@
-package Models.Cards;
+package Models.Cards.CardClasses;
 
 
 //import Utility.ImageOfAllCards;
+
+import Interfaces.Visitable;
+import Interfaces.Visitor;
 import com.google.gson.annotations.Expose;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
-public class Cards implements Comparable<Cards> {
+public  class Cards implements Comparable<Cards> , Visitable {
 
     @Expose(serialize = false, deserialize = true)
     private String name;
@@ -25,6 +27,15 @@ public class Cards implements Comparable<Cards> {
     private String type;
     @Expose(serialize = false, deserialize = false)
     private  transient int rarityInt;
+    @Expose(serialize = false,deserialize =false)
+    private transient boolean isPlayed =false;
+
+    public boolean isPlayed() {
+        return isPlayed;
+    }
+    public void setIsPlayed(boolean played) {
+        isPlayed = played;
+    }
 
     @Expose(serialize = false, deserialize = false)
     private static ArrayList<Cards> allCards = new ArrayList<Cards>();
@@ -34,73 +45,18 @@ public class Cards implements Comparable<Cards> {
     }
 
 
-    public Cards() throws IOException {
+    public Cards()  {
 
     }
 
 
-    public static void setAllCards() throws IOException {
+    public static void setAllCards() {
         allCards.addAll(Minion.getMinions());
         allCards.addAll(Spell.getSpells());
         allCards.addAll(Weapon.getWeapons());
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getManaCost() {
-        return manaCost;
-    }
-
-    public void setManaCost(int manaCost) {
-        this.manaCost = manaCost;
-    }
-
-    public String getRarity() {
-        return rarity;
-    }
-
-    public void setRarity(String rarity) {
-        this.rarity = rarity;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-
-    public String getClassOfCard() {
-        return classOfCard;
-    }
-
-    public void setClassOfCard(String classOfCard) {
-        this.classOfCard = classOfCard;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public int getMoneyCost() {
-        return MoneyCost;
-    }
-
-    public void setMoneyCost(int moneyCost) {
-        MoneyCost = moneyCost;
-    }
 
 
     public void defineRarityInt(){
@@ -123,11 +79,7 @@ public class Cards implements Comparable<Cards> {
     @Override
     public boolean equals(Object obj) {
         Cards card = (Cards) obj;
-        if (this.getName().equals(card.getName())) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.getName().equals(card.getName());
     }
 
 
@@ -150,4 +102,55 @@ public class Cards implements Comparable<Cards> {
             return 1;// todo every thing is equal:))
         }
     }
+
+    //getter,setter
+    //*************
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getManaCost() {
+        return manaCost;
+    }
+    public void setManaCost(int manaCost) {
+        this.manaCost = manaCost;
+    }
+    public String getRarity() {
+        return rarity;
+    }
+    public void setRarity(String rarity) {
+        this.rarity = rarity;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    public String getClassOfCard() {
+        return classOfCard;
+    }
+    public void setClassOfCard(String classOfCard) {
+        this.classOfCard = classOfCard;
+    }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
+    public int getMoneyCost() {
+        return MoneyCost;
+    }
+    public void setMoneyCost(int moneyCost) {
+        MoneyCost = moneyCost;
+    }
+
+
+
+    public void accept(Visitor visitor){}
+
+
 }

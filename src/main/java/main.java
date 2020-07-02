@@ -1,4 +1,6 @@
-import Models.Cards.*;
+import Interfaces.ActionVisitor;
+import Models.Cards.CardClasses.Cards;
+import Models.Cards.CardClasses.Spell;
 import Utility.JsonReaders.*;
 import Controller.ControllerOfMainComponents;
 import View.Gui.Loop.GraphicLoop;

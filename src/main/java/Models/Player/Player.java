@@ -1,7 +1,7 @@
 package Models.Player;
 
 import Controller.ControllerOfMainComponents;
-import Models.Cards.Cards;
+import Models.Cards.CardClasses.Cards;
 import Models.Deck.Deck;
 import Models.Heroes.*;
 import Utility.Log.*;

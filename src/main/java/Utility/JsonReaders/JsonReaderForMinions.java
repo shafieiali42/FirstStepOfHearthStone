@@ -1,34 +1,62 @@
 package Utility.JsonReaders;
 
 
-import Models.Cards.Minion;
+import Models.Cards.CardClasses.Minion;
+import Models.Cards.CardClasses.Spell;
+import Models.Cards.GameCards.MinionCards.*;
+import Models.Cards.GameCards.SpellCards.*;
 import com.google.gson.Gson;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
 
 public class JsonReaderForMinions {
+
+
+    private static HashMap<String,Class> map=new HashMap<>();
+
+    private static void setMap(){
+        map.put("CurioCollector", CurioCollector.class);
+        map.put("Sathrovarr", Sathrovarr.class);
+        map.put("SecurityRover", SecurityRover.class);
+        map.put("TombWarden", TombWarden.class);
+    }
+
     public static void main(String args[]) {
+        setMap();
         JsonReaderForMinions tester = new JsonReaderForMinions();
 
+//        try {
+//            setMinionCards();
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
 
         try {
-            Minion minion1 = tester.readJSON();
+            Minion minion1 = tester.readJson();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-//    private Minion readJSON() throws JsonParseException, JsonMappingException, IOException{
-//        ObjectMapper mapper = new ObjectMapper();
-//        Minion minion1=null;
-//        for (int i=1;i<=Minion.NUMBER_OF_MINIONS;i++){
-//            minion1 = mapper.readValue(new File("MinionSpells\\minion"+i+".json"), Minion.class);
-//            Minion.minions.add(minion1);
-//        }
-//        return minion1;
 
 
-    private Minion readJSON() throws IOException {
+    private static void setMinionCards() throws FileNotFoundException {
+        Gson gson=new Gson();
+        for (MinionNames minionNames:MinionNames.values()){
+            Class classOfCard = map.get(minionNames.name());
+            System.out.println(minionNames.name());
+            Minion minion =(Minion) gson.fromJson(new FileReader("MinionSpellsWeapons/MinionCards/"+minionNames.name()+".json"),classOfCard);
+            Minion.getMinions().add(minion);
+        }
+
+
+
+    }
+
+
+    private Minion readJson() throws IOException {
         Gson gson = new Gson();
         Minion minion1 = null;
         // 1. JSON file to Java object
@@ -39,4 +67,5 @@ public class JsonReaderForMinions {
         }
         return minion1;
     }
+
 }

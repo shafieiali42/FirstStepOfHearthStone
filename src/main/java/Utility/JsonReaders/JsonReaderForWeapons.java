@@ -1,6 +1,6 @@
 package Utility.JsonReaders;
 
-import Models.Cards.Weapon;
+import Models.Cards.CardClasses.Weapon;
 import com.google.gson.Gson;
 
 import java.io.FileNotFoundException;
