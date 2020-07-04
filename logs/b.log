@@ -1,0 +1,70 @@
+Jul 03, 2020 5:08:51 AM Controller.PlayerController signUp
+INFO: USER: b
+Jul 03, 2020 5:08:51 AM Controller.PlayerController signUp
+INFO: CREATED_AT:2020/07/03 05:08:51
+Jul 03, 2020 5:08:51 AM Controller.PlayerController signUp
+INFO: PASSWORD: b
+Jul 03, 2020 5:08:51 AM Controller.PlayerController signUp
+INFO: sign_up b
+Jul 03, 2020 5:09:01 AM Controller.Administer writeLog
+INFO: Navigate into shop page
+Jul 03, 2020 5:09:03 AM Controller.Administer writeLog
+INFO: Show buyable cards
+Jul 03, 2020 5:09:08 AM Models.Player.Player buy
+INFO: Buy: BattleAxe
+Jul 03, 2020 5:09:09 AM Models.Player.Player buy
+INFO: Buy BattleAxe
+Jul 03, 2020 5:09:14 AM Models.Player.Player buy
+INFO: Buy: Ashbringer
+Jul 03, 2020 5:09:15 AM Models.Player.Player buy
+INFO: Buy Ashbringer
+Jul 03, 2020 5:09:18 AM Controller.Administer writeLog
+INFO: Back from shop page
+Jul 03, 2020 5:09:20 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 03, 2020 5:09:25 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 03, 2020 5:09:38 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 03, 2020 5:09:42 AM Controller.Administer selectMainDeck
+INFO: select b for main deck
+Jul 03, 2020 5:09:44 AM View.Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck b
+Jul 03, 2020 5:09:46 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 03, 2020 5:09:48 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 03, 2020 5:09:55 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:09:59 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:10:05 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:10:08 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:10:13 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:10:15 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:10:20 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:10:21 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:10:32 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:10:33 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:10:41 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:10:43 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:10:46 AM View.Gui.Mapper playCard
+INFO: Play Weapon
+Jul 03, 2020 5:11:00 AM View.Gui.Mapper playCard
+INFO: Play Weapon
+Jul 03, 2020 5:11:10 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:11:12 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 03, 2020 5:11:16 AM View.Gui.Mapper playCard
+INFO: Play minion

@@ -76,7 +76,7 @@ public class AnimationOfRotation extends JPanel  {
         }
         CardImagePanel back = null;
         try {
-            back = new CardImagePanel(Administer.getPlayingCardName(),100,100,true);
+            back = new CardImagePanel(Administer.getPlayingCardName(),100,100,true,1);
         } catch (IOException e) {
             e.printStackTrace();
         }

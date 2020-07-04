@@ -59,6 +59,7 @@ public  class Cards implements Comparable<Cards> , Visitable {
 
 
 
+
     public void defineRarityInt(){
         if (rarity.equalsIgnoreCase("common")){
             rarityInt=0;
@@ -151,6 +152,9 @@ public  class Cards implements Comparable<Cards> , Visitable {
 
 
     public void accept(Visitor visitor){}
+
+
+
 
 
 }

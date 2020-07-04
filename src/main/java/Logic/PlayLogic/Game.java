@@ -3,6 +3,7 @@ package Logic.PlayLogic;
 import Controller.ControllerOfMainComponents;
 import Logic.MyTimer;
 import Models.Cards.CardClasses.Cards;
+import Models.Cards.CardClasses.Minion;
 import Models.Heroes.Mage;
 import Models.Player.InGamePlayer;
 
@@ -17,8 +18,24 @@ public class Game {
     private Cards playingCard;
     private int gameMode;
     private MyTimer myTimer;
+    private int attacker;
+    private int target;
 
+    public int getAttacker() {
+        return attacker;
+    }
 
+    public void setAttacker(int attacker) {
+        this.attacker = attacker;
+    }
+
+    public int getTarget() {
+        return target;
+    }
+
+    public void setTarget(int target) {
+        this.target = target;
+    }
 
     private static Game game;
 

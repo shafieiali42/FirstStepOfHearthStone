@@ -28,17 +28,19 @@ public class JsonReaderForMinions {
         setMap();
         JsonReaderForMinions tester = new JsonReaderForMinions();
 
+        try {
+            setMinionCards();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
 //        try {
-//            setMinionCards();
-//        } catch (FileNotFoundException e) {
+//            Minion minion1 = tester.readJson();
+//        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
 
-        try {
-            Minion minion1 = tester.readJson();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 
 
@@ -50,8 +52,6 @@ public class JsonReaderForMinions {
             Minion minion =(Minion) gson.fromJson(new FileReader("MinionSpellsWeapons/MinionCards/"+minionNames.name()+".json"),classOfCard);
             Minion.getMinions().add(minion);
         }
-
-
 
     }
 

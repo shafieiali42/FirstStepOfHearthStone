@@ -10,7 +10,7 @@ public class Hunter extends Heroes {
     private Hunter(){
         this.name="Hunter";
         this.healthPower=30;
-        this.descrtiption="";//TODO needs to be initialize
+        this.description ="";//TODO needs to be initialize
         this.isLock = true;
         setSpecialCardsOfHunter();
     }

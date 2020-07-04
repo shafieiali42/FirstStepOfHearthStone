@@ -9,7 +9,7 @@ public class Rogue extends Heroes {
     private Rogue(){
         this.name="Rogue";
         this.healthPower=30;
-        this.descrtiption="He is a thief and most of his abilities are in stealing from the enemy!";
+        this.description ="He is a thief and most of his abilities are in stealing from the enemy!";
         this.isLock=false;
         setSpecialCardsOfRogue();
     }

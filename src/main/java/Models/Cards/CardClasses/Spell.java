@@ -1,9 +1,8 @@
 package Models.Cards.CardClasses;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
-public class Spell extends Cards {
+public class Spell extends Cards  {
 
     public static final int NUMBER_OF_SPELLS = 18;
 
@@ -42,4 +41,6 @@ public class Spell extends Cards {
     public String toString() {
         return "[" + "Name: " + this.getName() + " ,  classOfCard: " + this.getClassOfCard() + " , Money" + this.getMoneyCost() + " ]";
     }
+
+
 }

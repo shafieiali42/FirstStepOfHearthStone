@@ -1,9 +1,6 @@
 package Models.Player;
 
-import Models.Cards.CardClasses.Cards;
-import Models.Cards.CardClasses.Passive;
-import Models.Cards.CardClasses.Spell;
-import Models.Cards.CardClasses.Weapon;
+import Models.Cards.CardClasses.*;
 import Models.Heroes.Heroes;
 
 import java.util.ArrayList;
@@ -16,7 +13,7 @@ public class InGamePlayer {
     private Heroes hero;
     private ArrayList<Cards> deckCards;
     private ArrayList<Cards> handsCards;
-    private ArrayList<Cards> battleGroundCards;
+    private ArrayList<Minion> battleGroundCards;
     private Weapon currentWeapon;
     private int mana;
     private int turn;
@@ -75,6 +72,7 @@ public class InGamePlayer {
 
 
     public void initHandsCards() {
+
         boolean hasQuestCard = false;
         a:
         for (Cards quest : Spell.getQuestAndRewardCards()) {
@@ -134,10 +132,10 @@ public class InGamePlayer {
         this.handsCards = handsCards;
     }
 
-    public ArrayList<Cards> getBattleGroundCards() {
+    public ArrayList<Minion> getBattleGroundCards() {
         return battleGroundCards;
     }
-    public void setBattleGroundCards(ArrayList<Cards> battleGroundCards) {
+    public void setBattleGroundCards(ArrayList<Minion> battleGroundCards) {
         this.battleGroundCards = battleGroundCards;
     }
 

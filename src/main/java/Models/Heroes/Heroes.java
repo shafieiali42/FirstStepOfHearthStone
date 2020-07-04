@@ -9,10 +9,36 @@ public class Heroes {
      }
      String name;
      int healthPower;
-     String descrtiption;
+     String description;
      ArrayList<Cards> DeckOfHero = new ArrayList<Cards>();
      boolean isLock;
+     int attackPower;
+     int shield;
+     boolean canBeAttacked=true;
 
+
+
+
+
+
+     public boolean getCanBeAttacked() {
+          return canBeAttacked;
+     }
+     public void setCanBeAttacked(boolean canBeAttacked) {
+          this.canBeAttacked = canBeAttacked;
+     }
+     public int getAttackPower() {
+          return attackPower;
+     }
+     public void setAttackPower(int attackPower) {
+          this.attackPower = attackPower;
+     }
+     public int getShield() {
+          return shield;
+     }
+     public void setShield(int shield) {
+          this.shield = shield;
+     }
      public boolean getIsLock() {
           return isLock;
      }
@@ -41,4 +67,6 @@ public class Heroes {
      public void setHealthPower(int healthPower) {
           this.healthPower = healthPower;
      }
+
+
 }

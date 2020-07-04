@@ -9,7 +9,7 @@ public class Warlock extends  Heroes {
     private Warlock(){
         this.name="Warlock";
         this.healthPower=35;
-        this.descrtiption="You will never see anyone beyond him. He passes on his life and property and sacrifices something to win the war.";
+        this.description ="You will never see anyone beyond him. He passes on his life and property and sacrifices something to win the war.";
         this.isLock=false;
         setSpecialCardsOfWarlock();
     }

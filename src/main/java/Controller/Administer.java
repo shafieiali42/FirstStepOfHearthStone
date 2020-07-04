@@ -7,6 +7,8 @@ import Logic.PlayLogic.Alliance;
 import Logic.PlayLogic.Game;
 import Logic.Status;
 
+import Models.Cards.CardClasses.Minion;
+import Models.Cards.CardClasses.Weapon;
 import View.Gui.Panels.CollectionPages.DeckPage;
 import View.Gui.Panels.CollectionPages.DeckViewer;
 import View.Gui.Panels.CollectionPages.LittleCardPanel;
@@ -43,6 +45,97 @@ public class Administer {
     }
 
     //gameState
+
+    public static void setAttacker(int attacker) {
+        Game.getInstance().setAttacker(attacker);
+    }
+
+    public static void setTarget(int target) {
+        Game.getInstance().setTarget(target);
+    }
+
+    public static void removeDeadCharacters() {
+        if (Game.getInstance().getFriendlyPlayer().getHero().getHealthPower() <= 0) {
+            //TODO Friendly player wins
+        } else if (Game.getInstance().getEnemyPlayer().getHero().getHealthPower() <= 0) {
+            //TODO ENEMY player wins
+        }
+
+        for (Cards card : Game.getInstance().getFriendlyPlayer().getBattleGroundCards()) {
+            Minion minion = (Minion) card;
+            if (minion.getHealthPower() <= 0) {
+                Game.getInstance().getFriendlyPlayer().getBattleGroundCards().remove(card);
+            }
+        }
+
+        for (Cards card : Game.getInstance().getEnemyPlayer().getBattleGroundCards()) {
+            Minion minion = (Minion) card;
+            if (minion.getHealthPower() <= 0) {
+                Game.getInstance().getEnemyPlayer().getBattleGroundCards().remove(card);
+            }
+        }
+    }
+
+    public static void attack(int attacker, int target) {
+        attack(Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(attacker),
+                Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(target));
+
+    }
+
+    public static int getAttacker() {
+        return Game.getInstance().getAttacker();
+    }
+
+    public static int getTarget() {
+        return Game.getInstance().getTarget();
+    }
+
+
+    public static void attack(Minion minion, Minion minion2) {
+        System.out.println("in attack method");
+        System.out.println(minion.getIsActive()+" , "+!minion.getHasAttackInThisTurn());
+        if (minion.getIsActive() && !minion.getHasAttackInThisTurn()) {
+            if (minion2.getCanBeAttacked()) {
+                minion.setHealthPower(minion.getHealthPower() - minion2.getAttackPower());
+                minion2.setHealthPower(minion2.getHealthPower() - minion.getAttackPower());
+                removeDeadCharacters();
+                System.out.println(minion.getName() + " Hp: " + minion.getHealthPower() + " attack power: "+minion.getAttackPower() + "\n" +
+                        "Attacked to: " + minion2.getName() + " Hp: " + minion2.getHealthPower() + " attack Power: "+minion2.getAttackPower());
+            } else {
+                //TODO you first need to destroy Taunt OR you cant attack to this minion
+            }
+        } else {
+            //TODO you cant attack with this minion in this turn
+        }
+    }
+
+    public static void attack(Minion minion, Heroes hero) {
+        if (minion.getIsActive() && !minion.getHasAttackInThisTurn()) {
+            if (hero.getCanBeAttacked()) {
+                if (hero.getShield() - minion.getAttackPower() >= 0) {
+                    hero.setShield(hero.getShield() - minion.getAttackPower());
+                    removeDeadCharacters();
+                } else {
+                    hero.setShield(0);
+                    hero.setHealthPower(hero.getHealthPower() - (minion.getAttackPower() - hero.getShield()));
+                    removeDeadCharacters();
+                }
+            } else {
+                //TODO you first need to destroy Taunt OR you cant attack to this hero
+            }
+        } else {
+            //TODO you cant attack with this minion in this turn
+        }
+    }
+
+    public static void attack(Weapon weapon, Heroes hero) {
+
+    }
+
+    public static void attack(Weapon weapon, Minion minion) {
+
+    }
+
 
     public static void reStartFirstThreeCardsSetting() {
         FirstThreeCardsPage.getInstance().reStartSetting();
@@ -111,9 +204,9 @@ public class Administer {
         }
     }
 
-    public static boolean isPlayedBefore(String cardName){
-        for (Cards card :Cards.getAllCards()){
-            if (card.getName().equalsIgnoreCase(cardName)){
+    public static boolean isPlayedBefore(String cardName) {
+        for (Cards card : Cards.getAllCards()) {
+            if (card.getName().equalsIgnoreCase(cardName)) {
                 return card.isPlayed();
             }
         }

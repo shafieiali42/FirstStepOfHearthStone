@@ -4346,3 +4346,63 @@ Jul 02, 2020 9:02:54 PM View.Gui.Mapper endTurn
 INFO: End turn
 Jul 02, 2020 9:02:59 PM View.Gui.Mapper endTurn
 INFO: End turn
+Jul 02, 2020 9:53:23 PM Controller.PlayerController signIn
+INFO: sign_in aaa
+Jul 02, 2020 9:53:25 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 02, 2020 9:53:43 PM View.Gui.Mapper playCard
+INFO: Play minion
+Jul 02, 2020 9:53:51 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 02, 2020 9:53:53 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 02, 2020 9:53:59 PM View.Gui.Mapper playCard
+INFO: Play minion
+Jul 02, 2020 9:54:06 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 02, 2020 9:54:10 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 02, 2020 9:54:15 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 02, 2020 9:54:17 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 02, 2020 9:54:24 PM View.Gui.Mapper playCard
+INFO: Play minion
+Jul 02, 2020 9:54:40 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 02, 2020 9:55:18 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 02, 2020 9:55:24 PM View.Gui.Mapper playCard
+INFO: Play minion
+Jul 02, 2020 9:55:42 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 02, 2020 9:55:44 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 02, 2020 9:55:51 PM View.Gui.Mapper playCard
+INFO: Play minion
+Jul 02, 2020 9:56:05 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 02, 2020 9:56:09 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 02, 2020 9:56:16 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 02, 2020 10:28:55 PM Controller.PlayerController signIn
+INFO: sign_in aaa
+Jul 03, 2020 6:40:23 PM Controller.PlayerController signIn
+INFO: sign_in aaa
+Jul 03, 2020 6:40:27 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 03, 2020 7:00:11 PM Controller.PlayerController signIn
+INFO: sign_in aaa
+Jul 03, 2020 7:00:15 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 03, 2020 7:00:42 PM Controller.PlayerController logOut
+INFO: Log_out aaa
+Jul 03, 2020 8:32:18 PM Controller.PlayerController signIn
+INFO: sign_in aaa
+Jul 03, 2020 8:32:21 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 03, 2020 9:20:15 PM Controller.PlayerController signIn
+INFO: sign_in aaa
+Jul 03, 2020 9:20:17 PM Controller.Administer writeLog
+INFO: Navigate into play page

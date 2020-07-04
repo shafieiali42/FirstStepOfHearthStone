@@ -25,16 +25,16 @@ public class JsonReaderForSpells {
         setMap();
         JsonReaderForSpells tester = new JsonReaderForSpells();
 
-//        try {
-//            setSpellCards();
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
         try {
-            Spell spell = tester.readJSON();
-        } catch (IOException e) {
+            setSpellCards();
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+//        try {
+//            Spell spell = tester.readJSON();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     private static void setSpellCards() throws FileNotFoundException {

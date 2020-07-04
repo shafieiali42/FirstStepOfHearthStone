@@ -30,8 +30,6 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     private boolean isLock;
     private String cardName;
     boolean dragging = false;
-    boolean Released = false;
-    boolean clicked = false;
     int x, y;
 
     public boolean getIsLock() {
@@ -59,7 +57,8 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     }
 
-    public CardImagePanel(String cardName, int width, int height, boolean showLockCards) throws IOException {
+
+    public CardImagePanel(String cardName, int width, int height, boolean showLockCards, int type) throws IOException {
         if (showLockCards) {
             setLayout(null);
             setSize(width, height);
@@ -68,7 +67,11 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 //        this.card = card;
             this.cardName = cardName;
             setIsLock(this.cardName);
-            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
+            if (type == 1) {
+                imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
+            } else if (type == 2) {
+                imageOfCard = ImageIO.read(new File("src/main/resources/Assets/BattleGroundCardImage/" + cardName + ".png"));
+            }
         }
 
     }
@@ -107,76 +110,98 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     }
 
     @Override
-    protected void paintComponent(Graphics g) {
-        g.drawImage(imageOfCard, 0, 0, this.getWidth(), this.getHeight(), null);
-        Graphics2D graphics2D = (Graphics2D) g;
-        if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
-            graphics2D.setColor(Color.black);
-            graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 20));
-            graphics2D.drawString(GamePartController.giveMinionHpWithName(cardName) + "", 73, 105);
-            graphics2D.drawString(GamePartController.giveMinionAttackWithName(cardName) + "", 10, 105);
-        }
-//        makeItGrey(this.isLock,graphics2D);
-    }
-
-
-    @Override
     public void mouseClicked(MouseEvent e) {
+        if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
+            if (SwingUtilities.isLeftMouseButton(e)) {
+                int xCoordinateOfCard = e.getComponent().getX();
+                int yCoordinateOfCard = e.getComponent().getY();
 
-        if (SwingUtilities.isRightMouseButton(e)) {
-            UIManager UI = new UIManager();
-            UI.put("OptionPane.background", Color.cyan);
-            UI.put("Panel.background", Color.cyan);
-            UIManager.put("OptionPane.minimumSize", new Dimension(this.getWidth() * 3, this.getHeight() * 3));
-            JOptionPane.showMessageDialog(null, this, "Information", JOptionPane.INFORMATION_MESSAGE);
-            UI.put("OptionPane.background", Color.white);
-            UI.put("Panel.background", Color.white);
-            UIManager.put("OptionPane.minimumSize", new Dimension(200, 80));
-            UIManager.put("OptionPane.minimumSize", UIManager.getDefaults().getDimension("OptionPane.minimumSize"));
-        } else if (SwingUtilities.isLeftMouseButton(e)) {
-            System.out.println("Moused Clicked");
-            if (ControllerOfMainComponents.getStatus().equals(Status.BUY_PAGE)) {
-                PanelToShowCardInBuySellPanel.getInstance().removeAll();
-                PanelToShowCardInBuySellPanel.getInstance().repaint();
-                PanelToShowCardInBuySellPanel.getInstance().revalidate();
-                BuySellPanel.getInstance().getPriceLabel().setText("");
-//                BuySellPanel.getInstance().setCard(this.card);
-                Administer.defineShopStateCard(cardName);
-//                BuySellPanel.getInstance().getPriceLabel().setText("Price " + this.card.getMoneyCost() + " $");
-                BuySellPanel.getInstance().getPriceLabel().setText("Price " + Administer.getMoneyOfShopStatesCard() + " $");
-                PanelToShowCardInBuySellPanel.getInstance().repaint();
-                PanelToShowCardInBuySellPanel.getInstance().revalidate();
-
-            } else if (ControllerOfMainComponents.getStatus().equals(Status.SELL_PAGE)) {
-                PanelToShowCardInBuySellPanel.getInstance().removeAll();
-                PanelToShowCardInBuySellPanel.getInstance().repaint();
-                PanelToShowCardInBuySellPanel.getInstance().revalidate();
-                BuySellPanel.getInstance().getPriceLabel().setText("");
-//                BuySellPanel.getInstance().setCard(this.card);
-                Administer.defineShopStateCard(cardName);
-//                BuySellPanel.getInstance().getPriceLabel().setText("Price " + this.card.getMoneyCost() + " $");
-                BuySellPanel.getInstance().getPriceLabel().setText("Price " + Administer.getMoneyOfShopStatesCard() + " $");
-                PanelToShowCardInBuySellPanel.getInstance().repaint();
-                PanelToShowCardInBuySellPanel.getInstance().revalidate();
-
-
-            } else if (ControllerOfMainComponents.getStatus().equals(Status.COLLECTIONS_PAGE)) {
-                if (this.isLock) {
-                    ControllerOfMainComponents.setStatus(Status.BUY_PAGE_FROM_COLLECTION);
-                    MyMainFrame.getInstance().setContentPane(ShopPage.getInstance());
-                } else {
-                    JOptionPane.showMessageDialog(null, "You can't Buy this card:((");
+                int number = 0;
+                if (xCoordinateOfCard > 45 && xCoordinateOfCard < 150) {
+                    number = 1;
+                } else if (xCoordinateOfCard > 190 && xCoordinateOfCard < 295) {
+                    number = 2;
+                } else if (xCoordinateOfCard > 335 && xCoordinateOfCard < 440) {
+                    number = 3;
+                } else if (xCoordinateOfCard > 480 && xCoordinateOfCard < 585) {
+                    number = 4;
+                } else if (xCoordinateOfCard > 625 && xCoordinateOfCard < 730) {
+                    number = 5;
+                } else if (xCoordinateOfCard > 770 && xCoordinateOfCard < 830) {
+                    number = 6;
+                } else if (xCoordinateOfCard > 915 && xCoordinateOfCard < 1010) {
+                    number = 7;
                 }
-            } else if (ControllerOfMainComponents.getStatus().equals(Status.MAKE_DECK) || ControllerOfMainComponents.getStatus().equals(Status.CHANGE_DECK)) {
 
-                try {
-                    Administer.addGivenCardToCollectionDeck(cardName, isLock);
-                } catch (IOException ex) {
-                    ex.printStackTrace();
+                if (clicked) {
+                    doubleClick = true;
+                    Administer.setTarget(number-1);
+                    Administer.attack(Administer.getAttacker(),Administer.getTarget());
+                } else {
+                    clicked = true;
+                    Administer.setAttacker(number-1);
+                }
+            } else if (SwingUtilities.isRightMouseButton(e)) {
+                clicked = false;
+                doubleClick = false;
+            }
+        } else {
+
+            if (SwingUtilities.isRightMouseButton(e)) {
+                UIManager UI = new UIManager();
+                UI.put("OptionPane.background", Color.cyan);
+                UI.put("Panel.background", Color.cyan);
+                UIManager.put("OptionPane.minimumSize", new Dimension(this.getWidth() * 3, this.getHeight() * 3));
+                JOptionPane.showMessageDialog(null, this, "Information", JOptionPane.INFORMATION_MESSAGE);
+                UI.put("OptionPane.background", Color.white);
+                UI.put("Panel.background", Color.white);
+                UIManager.put("OptionPane.minimumSize", new Dimension(200, 80));
+                UIManager.put("OptionPane.minimumSize", UIManager.getDefaults().getDimension("OptionPane.minimumSize"));
+            } else if (SwingUtilities.isLeftMouseButton(e)) {
+                System.out.println("Moused Clicked");
+                if (ControllerOfMainComponents.getStatus().equals(Status.BUY_PAGE)) {
+                    PanelToShowCardInBuySellPanel.getInstance().removeAll();
+                    PanelToShowCardInBuySellPanel.getInstance().repaint();
+                    PanelToShowCardInBuySellPanel.getInstance().revalidate();
+                    BuySellPanel.getInstance().getPriceLabel().setText("");
+//                BuySellPanel.getInstance().setCard(this.card);
+                    Administer.defineShopStateCard(cardName);
+//                BuySellPanel.getInstance().getPriceLabel().setText("Price " + this.card.getMoneyCost() + " $");
+                    BuySellPanel.getInstance().getPriceLabel().setText("Price " + Administer.getMoneyOfShopStatesCard() + " $");
+                    PanelToShowCardInBuySellPanel.getInstance().repaint();
+                    PanelToShowCardInBuySellPanel.getInstance().revalidate();
+
+                } else if (ControllerOfMainComponents.getStatus().equals(Status.SELL_PAGE)) {
+                    PanelToShowCardInBuySellPanel.getInstance().removeAll();
+                    PanelToShowCardInBuySellPanel.getInstance().repaint();
+                    PanelToShowCardInBuySellPanel.getInstance().revalidate();
+                    BuySellPanel.getInstance().getPriceLabel().setText("");
+//                BuySellPanel.getInstance().setCard(this.card);
+                    Administer.defineShopStateCard(cardName);
+//                BuySellPanel.getInstance().getPriceLabel().setText("Price " + this.card.getMoneyCost() + " $");
+                    BuySellPanel.getInstance().getPriceLabel().setText("Price " + Administer.getMoneyOfShopStatesCard() + " $");
+                    PanelToShowCardInBuySellPanel.getInstance().repaint();
+                    PanelToShowCardInBuySellPanel.getInstance().revalidate();
+
+
+                } else if (ControllerOfMainComponents.getStatus().equals(Status.COLLECTIONS_PAGE)) {
+                    if (this.isLock) {
+                        ControllerOfMainComponents.setStatus(Status.BUY_PAGE_FROM_COLLECTION);
+                        MyMainFrame.getInstance().setContentPane(ShopPage.getInstance());
+                    } else {
+                        JOptionPane.showMessageDialog(null, "You can't Buy this card:((");
+                    }
+                } else if (ControllerOfMainComponents.getStatus().equals(Status.MAKE_DECK) || ControllerOfMainComponents.getStatus().equals(Status.CHANGE_DECK)) {
+
+                    try {
+                        Administer.addGivenCardToCollectionDeck(cardName, isLock);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+
                 }
 
             }
-
         }
 
     }
@@ -278,7 +303,6 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                     Mapper.getInstance().executeRequests();
                 }
                 if (!Mapper.getInstance().isAddedBeforeForBeingBetween()) {
-
                     Administer.setPlayingCardOfGameState(this.cardName);
                     Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS);
                     Mapper.getInstance().executeRequests();
@@ -307,20 +331,62 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     }
 
+
+    boolean entered = false;
+    static boolean clicked = false;
+    static boolean doubleClick = false;
+
     @Override
     public void mouseEntered(MouseEvent e) {
-
+        if (clicked) {
+            System.out.println("Entered");
+            entered = true;
+            repaint();
+            revalidate();
+        }
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-
+        System.out.println("Exited");
+        entered = false;
+        repaint();
+        revalidate();
     }
 
 
     @Override
     public void mouseMoved(MouseEvent e) {
+        System.out.println("Moved");
+    }
 
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        g.drawImage(imageOfCard, 0, 0, this.getWidth(), this.getHeight(), null);
+        Graphics2D graphics2D = (Graphics2D) g;
+        if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
+            graphics2D.setColor(Color.red);
+            graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 20));
+            graphics2D.drawString(GamePartController.giveMinionHpWithName(cardName) + "", 73, 98);
+            graphics2D.drawString(GamePartController.giveMinionAttackWithName(cardName) + "", 10, 98);
+
+            if (entered) {
+                int r = this.getWidth() / 4;
+                graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 50));
+                graphics2D.setColor(Color.black);
+                graphics2D.drawOval(this.getWidth() / 2 - r, this.getHeight() / 2 - r, 2 * r, 2 * r);
+
+                graphics2D.drawLine(this.getWidth() / 2, this.getHeight() / 2 - 2 * r
+                        , this.getWidth() / 2, this.getHeight() / 2 + 2 * r);
+
+                graphics2D.drawLine(this.getWidth() / 2 - 2 * r, this.getHeight() / 2
+                        , this.getWidth() / 2 + 3 * r, this.getHeight() / 2);
+            }
+
+
+        }
+//        makeItGrey(this.isLock,graphics2D);
     }
 
 

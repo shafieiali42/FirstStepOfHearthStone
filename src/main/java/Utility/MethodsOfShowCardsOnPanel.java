@@ -1,6 +1,7 @@
 package Utility;
 
 import Models.Cards.CardClasses.Cards;
+import Models.Cards.CardClasses.Minion;
 import View.CardView.CardImagePanel;
 import View.Gui.Panels.CollectionPages.LittleCardPanel;
 import View.Gui.Panels.GamePage.PlayPanel;
@@ -104,7 +105,7 @@ public class MethodsOfShowCardsOnPanel {
         for (Cards card : cards) {
             counter++;
             CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getInstance().getWidthOfEachCardHandsCards(),
-                    PlayPanel.getInstance().getHeightOfEachCardHandsCards(), true);
+                    PlayPanel.getInstance().getHeightOfEachCardHandsCards(), true,1);
 
 //            CardPanel.getInstance().setBackground(Color.white);
             addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),
@@ -130,7 +131,7 @@ public class MethodsOfShowCardsOnPanel {
         for (Cards card : cards) {
             counter++;
             CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getInstance().getWidthOfEachCardHandsCards(),
-                    PlayPanel.getInstance().getHeightOfEachCardHandsCards(), true);
+                    PlayPanel.getInstance().getHeightOfEachCardHandsCards(), true,1);
 
 //            CardPanel.getInstance().setBackground(Color.white);
             addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),
@@ -147,7 +148,7 @@ public class MethodsOfShowCardsOnPanel {
     }
 
 
-    public static void showEnemyBattleGroundCards(ArrayList<Cards> cards, JPanel panel, int numOfCardInEveryRow, Alliance alliance) throws IOException { //TODO init X and Y coordinate:((
+    public static void showEnemyBattleGroundCards(ArrayList<Minion> cards, JPanel panel, int numOfCardInEveryRow, Alliance alliance) throws IOException { //TODO init X and Y coordinate:((
 
         int counter = 0;
         int xCoordinate = 50;
@@ -160,7 +161,7 @@ public class MethodsOfShowCardsOnPanel {
         for (Cards card : cards) {
             counter++;
             CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getInstance().getWidthOfEachCardGamePanel(),
-                    PlayPanel.getInstance().getHeightOfEachCardGamePanel(), true);
+                    PlayPanel.getInstance().getHeightOfEachCardGamePanel(), true,2);
             cardImagePanel.repaint();
             cardImagePanel.revalidate();
 
@@ -179,7 +180,7 @@ public class MethodsOfShowCardsOnPanel {
         }
     }
 
-    public static void showFriendlyBattleGroundCards(ArrayList<Cards> cards, JPanel panel, int numOfCardInEveryRow, Alliance alliance) throws IOException { //TODO init X and Y coordinate:((
+    public static void showFriendlyBattleGroundCards(ArrayList<Minion> cards, JPanel panel, int numOfCardInEveryRow, Alliance alliance) throws IOException { //TODO init X and Y coordinate:((
 
         int counter = 0;
         int xCoordinate = 50;
@@ -195,7 +196,7 @@ public class MethodsOfShowCardsOnPanel {
         for (Cards card : cards) {
             counter++;
             CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getInstance().getWidthOfEachCardGamePanel(),
-                    PlayPanel.getInstance().getHeightOfEachCardGamePanel(), true);
+                    PlayPanel.getInstance().getHeightOfEachCardGamePanel(), true,2);
             cardImagePanel.repaint();
             cardImagePanel.revalidate();
 

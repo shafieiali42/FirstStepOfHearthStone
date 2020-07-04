@@ -6,6 +6,13 @@ import Models.Cards.CardClasses.Minion;
 public class GamePartController {
 
 
+
+
+
+
+
+
+
     private static Cards giveCardWithName(String cardName) {
         for (Cards cards : Cards.getAllCards()) {
             if (cards.getName().equals(cardName)) {

@@ -10,7 +10,7 @@ public class Weapon extends Cards {
     private int useAmount;
     static ArrayList<Weapon> weapons=new ArrayList<Weapon>();
 
-    public Weapon() throws IOException {
+    public Weapon()  {
         super();
     }
 

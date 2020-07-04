@@ -1,1 +1,1 @@
-{"name":"CurioCollector" , "type":"Minion" , "classOfCard":"Neutral" , "MoneyCost":10 , "manaCost":5 ,"rarity":"Rare" , "attackPower":4 ,"healthPower":4 , "description":"Whenever you draw a card, gain +1/+1." }
+{"name":"CurioCollector" , "type":"Minion" , "classOfCard":"Neutral" , "MoneyCost":10 , "manaCost":1 ,"rarity":"Rare" , "attackPower":4 ,"healthPower":4 , "description":"Whenever you draw a card, gain +1/+1." }

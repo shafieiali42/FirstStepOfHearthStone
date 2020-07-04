@@ -51,7 +51,7 @@ public class Player {
     private ArrayList<Cards> availableCardsThatWeCanAddIntoOurDeck = new ArrayList<Cards>();
     @Expose(serialize = true, deserialize = true)
     private ArrayList<Cards> lockCards = new ArrayList<Cards>();//TODO needs to be init:))
-//    @Expose(serialize = true, deserialize = true)
+    //    @Expose(serialize = true, deserialize = true)
 //    private ArrayList<Cards> unLockCards = new ArrayList<Cards>();//TODO needs to be init:))
     @Expose(serialize = true, deserialize = true)
     private ArrayList<Deck> allDecksOfPlayer = new ArrayList<Deck>();
@@ -343,7 +343,9 @@ public class Player {
             }
         }
 
-        allCardsOfPlayer.add(Mage.getSpecialCardsOfMage().get(0));
+        if (Mage.getSpecialCardsOfMage().size() != 0) {
+            allCardsOfPlayer.add(Mage.getSpecialCardsOfMage().get(0));
+        }
     }
 
     public void setMoney(int money) {
@@ -364,7 +366,10 @@ public class Player {
             for (Cards cards : NeutralCardsOfPlayer) {
                 mergedList.add(cards);
             }
-            mergedList.add(Mage.getSpecialCardsOfMage().get(0));//there was a bad bug:(
+
+            if (Mage.getSpecialCardsOfMage().size() != 0) {
+                mergedList.add(Mage.getSpecialCardsOfMage().get(0));//there was a bad bug:(
+            }
             availableCardsWithThisSituation = mergedList;
 
         }
