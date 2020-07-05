@@ -1,0 +1,58 @@
+Jul 04, 2020 9:06:54 PM Controller.PlayerController signUp
+INFO: USER: o
+Jul 04, 2020 9:06:54 PM Controller.PlayerController signUp
+INFO: CREATED_AT:2020/07/04 21:06:54
+Jul 04, 2020 9:06:54 PM Controller.PlayerController signUp
+INFO: PASSWORD: o
+Jul 04, 2020 9:06:54 PM Controller.PlayerController signUp
+INFO: sign_up o
+Jul 04, 2020 9:06:57 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 04, 2020 9:07:04 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 04, 2020 9:07:51 PM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 04, 2020 9:07:55 PM Controller.Administer selectMainDeck
+INFO: select o for main deck
+Jul 04, 2020 9:07:57 PM View.Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck o
+Jul 04, 2020 9:08:02 PM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 04, 2020 9:08:04 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 04, 2020 9:08:14 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 9:08:17 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 9:08:27 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 9:08:32 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 9:08:36 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 9:08:40 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 9:08:45 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 04, 2020 9:08:54 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 04, 2020 9:09:03 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 04, 2020 9:09:40 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 04, 2020 9:09:52 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 04, 2020 9:10:05 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 9:10:08 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 9:10:13 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 9:10:19 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 9:10:21 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 04, 2020 9:10:35 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 04, 2020 9:10:43 PM View.Gui.Mapper playCard
+INFO: PlayMinion

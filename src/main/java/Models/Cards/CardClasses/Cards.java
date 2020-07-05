@@ -9,7 +9,7 @@ import com.google.gson.annotations.Expose;
 
 import java.util.ArrayList;
 
-public  class Cards implements Comparable<Cards> , Visitable {
+public  class Cards implements Comparable<Cards> , Visitable , Cloneable {
 
     @Expose(serialize = false, deserialize = true)
     private String name;
@@ -22,7 +22,7 @@ public  class Cards implements Comparable<Cards> , Visitable {
     @Expose(serialize = false, deserialize = true)
     private String classOfCard;
     @Expose(serialize = false, deserialize = true)
-    public int MoneyCost;
+    public int moneyCost;
     @Expose(serialize = false, deserialize = true)
     private String type;
     @Expose(serialize = false, deserialize = false)
@@ -84,6 +84,27 @@ public  class Cards implements Comparable<Cards> , Visitable {
     }
 
 
+
+    public Cards copy(){
+        System.out.println("Copy in Cards:))");
+        Cards copy =new Cards();
+        copy.name=this.name;
+        copy.manaCost=this.manaCost;
+        copy.rarity=this.rarity;
+        copy.description=this.description;
+        copy.classOfCard=this.classOfCard;
+        copy.type=this.type;
+        copy.rarityInt=this.rarityInt;
+        copy.isPlayed=this.isPlayed;
+        return copy;
+    }
+
+
+//    @Override
+//    public Cards clone() throws CloneNotSupportedException {
+//        return (Cards) super.clone();
+//    }
+
     @Override
     public int compareTo(Cards card) {
         defineRarityInt();
@@ -143,10 +164,10 @@ public  class Cards implements Comparable<Cards> , Visitable {
         this.type = type;
     }
     public int getMoneyCost() {
-        return MoneyCost;
+        return moneyCost;
     }
     public void setMoneyCost(int moneyCost) {
-        MoneyCost = moneyCost;
+        this.moneyCost = moneyCost;
     }
 
 

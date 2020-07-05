@@ -180,12 +180,12 @@ public class Mapper {
         Game.getInstance().getMyTimer().reStart();
         Game.getInstance().getCurrentPlayer().setTurn(Game.getInstance().getCurrentPlayer().getTurn() + 1);
         Game.getInstance().getCurrentPlayer().setMana((int) Math.min(Game.getInstance().getCurrentPlayer().getTurn(), 10));
-        if (Game.getInstance().getCurrentAlliance().equals(Alliance.ME)) {
+        if (Game.getInstance().getCurrentAlliance().equals(Alliance.FRIENDLY)) {
             Game.getInstance().setCurrentPlayer(Game.getInstance().getEnemyPlayer());
-            Game.getInstance().setCurrentAlliance(Alliance.OPPONENT);
-        } else if (Game.getInstance().getCurrentAlliance().equals(Alliance.OPPONENT)) {
+            Game.getInstance().setCurrentAlliance(Alliance.ENEMY);
+        } else if (Game.getInstance().getCurrentAlliance().equals(Alliance.ENEMY)) {
             Game.getInstance().setCurrentPlayer(Game.getInstance().getFriendlyPlayer());
-            Game.getInstance().setCurrentAlliance(Alliance.ME);
+            Game.getInstance().setCurrentAlliance(Alliance.FRIENDLY);
         }
     }
 
@@ -201,23 +201,24 @@ public class Mapper {
         boolean minionPlayed = false;
         if (k != 7) {
             if (Game.getInstance().getCurrentPlayer().getBattleGroundCards().size() >= k) {
-                ArrayList<Minion> copy = new ArrayList<>(Game.getInstance().getCurrentPlayer().getBattleGroundCards());
+//                ArrayList<Minion> copy = new ArrayList<>(Game.getInstance().getCurrentPlayer().getBattleGroundCards());
+                ArrayList<Minion> copy=(ArrayList<Minion>)Game.getInstance().getCurrentPlayer().getBattleGroundCards().clone();
                 Game.getInstance().getCurrentPlayer().getBattleGroundCards().clear();
                 boolean isAdded = false;
                 for (int j = 0; j < copy.size(); j++) {
                     if (j == (k - 1) && !isAdded) {
-                        Game.getInstance().getCurrentPlayer().getBattleGroundCards().add(playingCard);
+                        Game.getInstance().getCurrentPlayer().getBattleGroundCards().add(playingCard.copy());
                         isAdded = true;
                         j--;
                     } else {
-                        Game.getInstance().getCurrentPlayer().getBattleGroundCards().add(copy.get(j));
+                        Game.getInstance().getCurrentPlayer().getBattleGroundCards().add(copy.get(j).copy());
                     }
                 }
                 Mapper.getInstance().setAddedBeforeForBeingBetween(true);
                 minionPlayed = true;
             }
         } else {
-            Game.getInstance().getCurrentPlayer().getBattleGroundCards().add(playingCard);
+            Game.getInstance().getCurrentPlayer().getBattleGroundCards().add(playingCard.copy());
             Mapper.getInstance().setAddedBeforeForBeingBetween(false);
             minionPlayed = true;
         }

@@ -1,0 +1,68 @@
+Jul 04, 2020 6:01:24 PM Controller.PlayerController signUp
+INFO: USER: w
+Jul 04, 2020 6:01:24 PM Controller.PlayerController signUp
+INFO: CREATED_AT:2020/07/04 18:01:24
+Jul 04, 2020 6:01:24 PM Controller.PlayerController signUp
+INFO: PASSWORD: w
+Jul 04, 2020 6:01:24 PM Controller.PlayerController signUp
+INFO: sign_up w
+Jul 04, 2020 6:01:27 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 04, 2020 6:01:48 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 04, 2020 6:02:42 PM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 04, 2020 6:02:46 PM Controller.Administer selectMainDeck
+INFO: select w for main deck
+Jul 04, 2020 6:02:49 PM View.Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck w
+Jul 04, 2020 6:02:51 PM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 04, 2020 6:02:53 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 04, 2020 6:03:01 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 04, 2020 6:03:09 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:03:10 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:03:21 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:03:24 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:03:28 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:03:31 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:03:35 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:03:40 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:03:46 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:03:47 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:03:51 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:03:55 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:04:00 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:04:16 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:04:53 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 04, 2020 6:05:10 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 04, 2020 6:05:24 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:05:31 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:05:38 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 04, 2020 6:06:09 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:06:16 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 04, 2020 6:06:23 PM View.Gui.Mapper playCard
+INFO: PlayMinion

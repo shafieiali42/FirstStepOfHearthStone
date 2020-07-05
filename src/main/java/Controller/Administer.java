@@ -9,6 +9,7 @@ import Logic.Status;
 
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.CardClasses.Weapon;
+import Models.Player.Player;
 import View.Gui.Panels.CollectionPages.DeckPage;
 import View.Gui.Panels.CollectionPages.DeckViewer;
 import View.Gui.Panels.CollectionPages.LittleCardPanel;
@@ -27,14 +28,17 @@ import Utility.Sounds;
 import View.CardView.CardImagePanel;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
 import View.Gui.Panels.StatusPanel.ShowDeckInfoPanel;
+import com.google.gson.Gson;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 
 public class Administer {
 
@@ -54,33 +58,48 @@ public class Administer {
         Game.getInstance().setTarget(target);
     }
 
-    public static void removeDeadCharacters() {
+    public static void removeDeadCharacters(int attacker,int target) {
+
+//        for (int i = 0; i < Game.getInstance().getFriendlyPlayer().getBattleGroundCards().size(); i++) {
+//            if (Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(i).getHealthPower()<=0){
+//                Game.getInstance().getFriendlyPlayer().getBattleGroundCards().remove(i);
+//            }
+//        }
+//        for (int i = 0; i < Game.getInstance().getEnemyPlayer().getBattleGroundCards().size(); i++) {
+//            if (Game.getInstance().getEnemyPlayer().getBattleGroundCards().get(i).getHealthPower()<=0){
+//                Game.getInstance().getEnemyPlayer().getBattleGroundCards().remove(i);
+//            }
+//        }
         if (Game.getInstance().getFriendlyPlayer().getHero().getHealthPower() <= 0) {
             //TODO Friendly player wins
         } else if (Game.getInstance().getEnemyPlayer().getHero().getHealthPower() <= 0) {
             //TODO ENEMY player wins
         }
 
-        for (Cards card : Game.getInstance().getFriendlyPlayer().getBattleGroundCards()) {
-            Minion minion = (Minion) card;
-            if (minion.getHealthPower() <= 0) {
-                Game.getInstance().getFriendlyPlayer().getBattleGroundCards().remove(card);
+        Iterator<Minion> itr = Game.getInstance().getFriendlyPlayer().getBattleGroundCards().iterator();
+
+        while (itr.hasNext()){
+            Minion minion = itr.next();
+            if (minion.getHealthPower()<=0){
+                itr.remove();
             }
         }
 
-        for (Cards card : Game.getInstance().getEnemyPlayer().getBattleGroundCards()) {
-            Minion minion = (Minion) card;
-            if (minion.getHealthPower() <= 0) {
-                Game.getInstance().getEnemyPlayer().getBattleGroundCards().remove(card);
+        Iterator<Minion> itr2 = Game.getInstance().getEnemyPlayer().getBattleGroundCards().iterator();
+
+        while (itr2.hasNext()){
+            Minion minion = itr2.next();
+            if (minion.getHealthPower()<=0){
+                itr2.remove();
             }
         }
-    }
-
-    public static void attack(int attacker, int target) {
-        attack(Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(attacker),
-                Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(target));
 
     }
+
+//    public static void attack1(int attacker, int target) {
+//        attack(attacker, target);
+//
+//    }
 
     public static int getAttacker() {
         return Game.getInstance().getAttacker();
@@ -91,16 +110,30 @@ public class Administer {
     }
 
 
-    public static void attack(Minion minion, Minion minion2) {
-        System.out.println("in attack method");
-        System.out.println(minion.getIsActive()+" , "+!minion.getHasAttackInThisTurn());
+    public static void attack(int attacker, int target) {
+
+        if (attacker==-5){
+            //TODO choose attacker
+            return;
+        }else if (target==-5){
+            //TODO choose attacker
+            return;
+        }
+//        System.out.println(Game.getInstance().getFriendlyPlayer().getDeckCards());
+        Minion minion=Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(attacker);
+        Minion minion2=Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(target);
+
         if (minion.getIsActive() && !minion.getHasAttackInThisTurn()) {
             if (minion2.getCanBeAttacked()) {
+                System.out.println("Before attack:");
+                System.out.println(minion.getName()+" Attack: "+minion.getAttackPower()+" Hp: "+minion.getHealthPower());
+                System.out.println(minion2.getName()+" Attack: "+minion2.getAttackPower()+" Hp: "+minion2.getHealthPower());
                 minion.setHealthPower(minion.getHealthPower() - minion2.getAttackPower());
                 minion2.setHealthPower(minion2.getHealthPower() - minion.getAttackPower());
-                removeDeadCharacters();
-                System.out.println(minion.getName() + " Hp: " + minion.getHealthPower() + " attack power: "+minion.getAttackPower() + "\n" +
-                        "Attacked to: " + minion2.getName() + " Hp: " + minion2.getHealthPower() + " attack Power: "+minion2.getAttackPower());
+                removeDeadCharacters(attacker,target);
+                System.out.println("After attack:");
+                System.out.println(minion.getName()+" Attack: "+minion.getAttackPower()+" Hp: "+minion.getHealthPower());
+                System.out.println(minion2.getName()+" Attack: "+minion2.getAttackPower()+" Hp: "+minion2.getHealthPower());
             } else {
                 //TODO you first need to destroy Taunt OR you cant attack to this minion
             }
@@ -114,11 +147,11 @@ public class Administer {
             if (hero.getCanBeAttacked()) {
                 if (hero.getShield() - minion.getAttackPower() >= 0) {
                     hero.setShield(hero.getShield() - minion.getAttackPower());
-                    removeDeadCharacters();
+//                    removeDeadCharacters();//TODO SHOULD UNCOMMENT
                 } else {
                     hero.setShield(0);
                     hero.setHealthPower(hero.getHealthPower() - (minion.getAttackPower() - hero.getShield()));
-                    removeDeadCharacters();
+//                    removeDeadCharacters();//TODO SHOULD UNCOMMENT
                 }
             } else {
                 //TODO you first need to destroy Taunt OR you cant attack to this hero
@@ -197,7 +230,7 @@ public class Administer {
 
 
     public static boolean canDragCard(int y) {
-        if (Game.getInstance().getCurrentAlliance().equals(Alliance.ME)) {
+        if (Game.getInstance().getCurrentAlliance().equals(Alliance.FRIENDLY)) {
             return y >= 670;
         } else {
             return y <= 100;
@@ -214,7 +247,7 @@ public class Administer {
     }
 
     public static boolean checkThatCanReleaseCard(int x, int y) {
-        if (Game.getInstance().getCurrentAlliance().equals(Alliance.ME)) {
+        if (Game.getInstance().getCurrentAlliance().equals(Alliance.FRIENDLY)) {
             return x > 0 && x < 1200 && y > 385 && y < 770;
 
         } else {
@@ -288,7 +321,7 @@ public class Administer {
     }
 
     public static void showFriendlyBattleGroundCardsInPlay(JPanel panel, int numberOfCardsPerRowGamePanel) throws IOException {
-        MethodsOfShowCardsOnPanel.showFriendlyBattleGroundCards(Game.getInstance().getFriendlyPlayer().getBattleGroundCards(), panel, numberOfCardsPerRowGamePanel, Alliance.ME);
+        MethodsOfShowCardsOnPanel.showFriendlyBattleGroundCards(Game.getInstance().getFriendlyPlayer().getBattleGroundCards(), panel, numberOfCardsPerRowGamePanel, Alliance.FRIENDLY);
     }
 
     public static void showEnemyBattleGroundCardsInPlay(JPanel panel, int numberOfCardsPerRowGamePanel) throws IOException {
@@ -774,7 +807,8 @@ public class Administer {
         Cards cards = null;
         for (Cards cards1 : Cards.getAllCards()) {
             if (cards1.getName().equals(cardName)) {
-                cards = cards1;
+                cards = cards1.copy();
+
             }
         }
 

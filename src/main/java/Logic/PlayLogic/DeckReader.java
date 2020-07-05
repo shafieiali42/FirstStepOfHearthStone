@@ -30,7 +30,7 @@ public class DeckReader {
         for (String cardName : cardNames) {
             for (Cards cards : Cards.getAllCards()) {
                 if (cards.getName().equalsIgnoreCase(cardName)) {
-                    deckCards.add(cards);
+                    deckCards.add(cards.copy());
                 }
             }
         }

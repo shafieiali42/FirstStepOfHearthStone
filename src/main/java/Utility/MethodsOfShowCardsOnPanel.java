@@ -79,7 +79,7 @@ public class MethodsOfShowCardsOnPanel {
         yCoordinate = 10;
         for (Cards card : cards) {
             counter++;
-            CardImagePanel cardImagePanel = new CardImagePanel(Alliance.OPPONENT, PlayPanel.getInstance().getWidthOfEachCardHandsCards(),
+            CardImagePanel cardImagePanel = new CardImagePanel(Alliance.ENEMY, PlayPanel.getInstance().getWidthOfEachCardHandsCards(),
                     PlayPanel.getInstance().getHeightOfEachCardHandsCards(), typeOfBackOfCard);
 
             addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),
@@ -105,7 +105,7 @@ public class MethodsOfShowCardsOnPanel {
         for (Cards card : cards) {
             counter++;
             CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getInstance().getWidthOfEachCardHandsCards(),
-                    PlayPanel.getInstance().getHeightOfEachCardHandsCards(), true,1);
+                    PlayPanel.getInstance().getHeightOfEachCardHandsCards(), true,1,"ENEMY");
 
 //            CardPanel.getInstance().setBackground(Color.white);
             addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),
@@ -131,7 +131,7 @@ public class MethodsOfShowCardsOnPanel {
         for (Cards card : cards) {
             counter++;
             CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getInstance().getWidthOfEachCardHandsCards(),
-                    PlayPanel.getInstance().getHeightOfEachCardHandsCards(), true,1);
+                    PlayPanel.getInstance().getHeightOfEachCardHandsCards(), true,1,"FRIENDLY");
 
 //            CardPanel.getInstance().setBackground(Color.white);
             addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),
@@ -158,10 +158,11 @@ public class MethodsOfShowCardsOnPanel {
         int xSapce = 50;
         int ySpace = 10;
 
-        for (Cards card : cards) {
+        for (int i=0;i<cards.size();i++) {
+            Cards card = cards.get(i);
             counter++;
             CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getInstance().getWidthOfEachCardGamePanel(),
-                    PlayPanel.getInstance().getHeightOfEachCardGamePanel(), true,2);
+                    PlayPanel.getInstance().getHeightOfEachCardGamePanel(), true,2,"ENEMY",i+1);
             cardImagePanel.repaint();
             cardImagePanel.revalidate();
 
@@ -185,18 +186,19 @@ public class MethodsOfShowCardsOnPanel {
         int counter = 0;
         int xCoordinate = 50;
         int yCoordinate = 0;
-        if (alliance.equals(Alliance.ME)) {
+        if (alliance.equals(Alliance.FRIENDLY)) {
             yCoordinate = 395;
-        } else if (alliance.equals(Alliance.OPPONENT)) {
+        } else if (alliance.equals(Alliance.ENEMY)) {
             yCoordinate = 385 - 10 - PlayPanel.getInstance().getHeightOfEachCardGamePanel();
         }
         int xSapce = 50;
         int ySpace = 10;
 
-        for (Cards card : cards) {
+        for (int i=0;i<cards.size();i++) {
+            Cards card =cards.get(i);
             counter++;
             CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getInstance().getWidthOfEachCardGamePanel(),
-                    PlayPanel.getInstance().getHeightOfEachCardGamePanel(), true,2);
+                    PlayPanel.getInstance().getHeightOfEachCardGamePanel(), true,2,"FRIENDLY",i+1);
             cardImagePanel.repaint();
             cardImagePanel.revalidate();
 

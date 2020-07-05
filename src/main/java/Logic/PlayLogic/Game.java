@@ -3,7 +3,6 @@ package Logic.PlayLogic;
 import Controller.ControllerOfMainComponents;
 import Logic.MyTimer;
 import Models.Cards.CardClasses.Cards;
-import Models.Cards.CardClasses.Minion;
 import Models.Heroes.Mage;
 import Models.Player.InGamePlayer;
 
@@ -72,7 +71,7 @@ public class Game {
             enemyPlayer.initHandsCards();
             playingCard = new Cards();
             currentPlayer=friendlyPlayer;
-            currentAlliance=Alliance.ME;
+            currentAlliance=Alliance.FRIENDLY;
 
         }else if (gameMode==2){//Training Game //TODO has positive point
             DeckReader deckReader =new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
@@ -82,7 +81,7 @@ public class Game {
             enemyPlayer.setDeckCards(deckReader.getDeck("ENEMY"));
             playingCard = new Cards();
             currentPlayer=friendlyPlayer;
-            currentAlliance=Alliance.ME;
+            currentAlliance=Alliance.FRIENDLY;
 
         } else if (gameMode == 3) {//DeckReader
             DeckReader deckReader =new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
@@ -97,7 +96,7 @@ public class Game {
             enemyPlayer.initHandsCards();
             playingCard = new Cards();
             currentPlayer=friendlyPlayer;
-            currentAlliance=Alliance.ME;
+            currentAlliance=Alliance.FRIENDLY;
 
         }else if (gameMode==4){//Two Player Game
             friendlyPlayer = new InGamePlayer(ControllerOfMainComponents.currentPlayer);
@@ -108,16 +107,16 @@ public class Game {
             enemyPlayer.initHandsCards();
             playingCard = new Cards();
             currentPlayer=friendlyPlayer;
-            currentAlliance=Alliance.ME;
+            currentAlliance=Alliance.FRIENDLY;
         }
 
     }
 
     public void changeAlliance(){
-        if (currentAlliance.equals(Alliance.ME)) {
-            currentAlliance=Alliance.OPPONENT;
+        if (currentAlliance.equals(Alliance.FRIENDLY)) {
+            currentAlliance=Alliance.ENEMY;
         }else{
-            currentAlliance=Alliance.ME;
+            currentAlliance=Alliance.FRIENDLY;
         }
     }
 

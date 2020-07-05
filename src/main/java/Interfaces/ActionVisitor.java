@@ -10,7 +10,7 @@ public class ActionVisitor implements Visitor {
 
     @Override
     public void Visit(CurioCollector curioCollector) {
-        System.out.println("Action of CurioCollector");
+//        System.out.println("Action of CurioCollector");
 
 
 

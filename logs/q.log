@@ -1,0 +1,12 @@
+Jul 04, 2020 4:44:57 PM Controller.PlayerController signUp
+INFO: USER: q
+Jul 04, 2020 4:44:57 PM Controller.PlayerController signUp
+INFO: CREATED_AT:2020/07/04 16:44:57
+Jul 04, 2020 4:44:57 PM Controller.PlayerController signUp
+INFO: PASSWORD: q
+Jul 04, 2020 4:44:57 PM Controller.PlayerController signUp
+INFO: sign_up q
+Jul 04, 2020 4:45:00 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 04, 2020 4:45:08 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards

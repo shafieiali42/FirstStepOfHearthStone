@@ -15,7 +15,7 @@ public class GraphicConstants {
     private GraphicConstants(String name) {
         this.name = name;
         properties = LoadConfigFiles.getInstance().getGraphicConstantsProperties(name);
-        System.out.println(name);
+//        System.out.println(name);
     }
     public static GraphicConstants getInstance(String name){
         if(constants == null){

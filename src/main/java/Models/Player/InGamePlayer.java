@@ -35,7 +35,11 @@ public class InGamePlayer {
 
     public InGamePlayer(Player player) {
         this.player = player;
-        this.deckCards = (ArrayList<Cards>) player.getCurrentDeck().getListOfCards().clone();
+        deckCards=new ArrayList<>();
+        for (Cards card:player.getCurrentDeck().getListOfCards()){
+            deckCards.add(card.copy());
+        }
+//        this.deckCards = (ArrayList<Cards>) player.getCurrentDeck().getListOfCards().clone();
         hero=player.getCurrentHero();
         Collections.shuffle(deckCards);
         this.handsCards = new ArrayList<>();
