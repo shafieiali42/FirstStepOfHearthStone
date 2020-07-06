@@ -50,8 +50,32 @@ public class Administer {
 
     //gameState
 
+    public static Cards getPlyingCardOfGameState() {
+        return Game.getInstance().getPlayingCard();
+    }
 
-    public static void refreshPlayPanel(){
+    public static Minion getTargetOfSpell() {
+        if (Game.getInstance().getAllianceOfSpellsTarget() == null) {
+            return new Minion();
+        } else if (Game.getInstance().getTargetOfSpell() == 0) {
+            return new Minion();
+        }
+        if (Game.getInstance().getAllianceOfSpellsTarget().equalsIgnoreCase("FRIENDLY")) {
+            return Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(Game.getInstance().getTargetOfSpell() - 1);
+        } else if (Game.getInstance().getAllianceOfSpellsTarget().equalsIgnoreCase("ENEMY")) {
+            return Game.getInstance().getEnemyPlayer().getBattleGroundCards().get(Game.getInstance().getTargetOfSpell() - 1);
+        }
+        return null;
+    }
+
+
+    public static void setTargetOfSpell(int number, String alliance) {
+        Game.getInstance().setTargetOfSpell(number);
+        Game.getInstance().setAllianceOfSpellsTarget(alliance);
+    }
+
+
+    public static void refreshPlayPanel() {
         PlayPanel.getInstance().setNeedsToRepaint(true);
         PlayPanel.getInstance().repaint();
         PlayPanel.getInstance().revalidate();
@@ -66,7 +90,7 @@ public class Administer {
         Game.getInstance().setTarget(target);
     }
 
-    public static void removeDeadCharacters(int attacker,int target) {
+    public static void removeDeadCharacters() {
 
 //        for (int i = 0; i < Game.getInstance().getFriendlyPlayer().getBattleGroundCards().size(); i++) {
 //            if (Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(i).getHealthPower()<=0){
@@ -86,18 +110,18 @@ public class Administer {
 
         Iterator<Minion> itr = Game.getInstance().getFriendlyPlayer().getBattleGroundCards().iterator();
 
-        while (itr.hasNext()){
+        while (itr.hasNext()) {
             Minion minion = itr.next();
-            if (minion.getHealthPower()<=0){
+            if (minion.getHealthPower() <= 0) {
                 itr.remove();
             }
         }
 
         Iterator<Minion> itr2 = Game.getInstance().getEnemyPlayer().getBattleGroundCards().iterator();
 
-        while (itr2.hasNext()){
+        while (itr2.hasNext()) {
             Minion minion = itr2.next();
-            if (minion.getHealthPower()<=0){
+            if (minion.getHealthPower() <= 0) {
                 itr2.remove();
             }
         }
@@ -120,28 +144,28 @@ public class Administer {
 
     public static void attack(int attacker, int target) {
 
-        if (attacker==-5){
+        if (attacker == -5) {
             //TODO choose attacker
             return;
-        }else if (target==-5){
+        } else if (target == -5) {
             //TODO choose attacker
             return;
         }
 //        System.out.println(Game.getInstance().getFriendlyPlayer().getDeckCards());
-        Minion minion=Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(attacker);
-        Minion minion2=Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(target);
+        Minion minion = Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(attacker);
+        Minion minion2 = Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(target);
 
         if (minion.getIsActive() && !minion.getHasAttackInThisTurn()) {
             if (minion2.getCanBeAttacked()) {
                 System.out.println("Before attack:");
-                System.out.println(minion.getName()+" Attack: "+minion.getAttackPower()+" Hp: "+minion.getHealthPower());
-                System.out.println(minion2.getName()+" Attack: "+minion2.getAttackPower()+" Hp: "+minion2.getHealthPower());
+                System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
+                System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
                 minion.setHealthPower(minion.getHealthPower() - minion2.getAttackPower());
                 minion2.setHealthPower(minion2.getHealthPower() - minion.getAttackPower());
-                removeDeadCharacters(attacker,target);
+                removeDeadCharacters();
                 System.out.println("After attack:");
-                System.out.println(minion.getName()+" Attack: "+minion.getAttackPower()+" Hp: "+minion.getHealthPower());
-                System.out.println(minion2.getName()+" Attack: "+minion2.getAttackPower()+" Hp: "+minion2.getHealthPower());
+                System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
+                System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
             } else {
                 //TODO you first need to destroy Taunt OR you cant attack to this minion
             }
@@ -739,6 +763,13 @@ public class Administer {
 
 
     //shopState
+
+
+    public static void setBuyableCard() {
+        ControllerOfMainComponents.currentPlayer.setBuyableCards();
+        System.out.println(ControllerOfMainComponents.currentPlayer.getBuyableCards());
+    }
+
     public static int getMoneyOfShopStatesCard() {
         return ShopState.getInstance().getCardsToBuyOrSell().getMoneyCost();
     }

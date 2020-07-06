@@ -191,6 +191,7 @@ public class MainMenuPage extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 ControllerOfMainComponents.setStatus(Status.SHOP_PAGE);
                 Administer.writeLog("Navigate into shop page");
+                Administer.setBuyableCard();
 //                CLI.currentPlayer.getLoggerOfMyPlayer().info("Navigate into shop page");
                 MyMainFrame.getInstance().setContentPane(ShopPage.getInstance());
             }

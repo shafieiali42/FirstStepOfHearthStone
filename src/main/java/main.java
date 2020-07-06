@@ -20,8 +20,10 @@ public class main {
         Cards.setAllCards();
         Spell.defineQuestAndRewardCardList();
         Mage.setSpecialCardsOfMage();
+        System.out.println(Mage.getSpecialCardsOfMage());
         Warlock.setSpecialCardsOfWarlock();
         Rogue.setSpecialCardsOfRogue();
+        System.out.println(Cards.getAllCards());
         LittleCardPanel.setAllLittleCardPanels();
         Constant.getInstance().defineHeroImagesHashMap();
         Constant.getInstance().defineHeroPowerImagesHashMap();

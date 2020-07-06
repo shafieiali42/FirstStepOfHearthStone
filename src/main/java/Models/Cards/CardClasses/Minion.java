@@ -19,6 +19,39 @@ public class Minion extends Cards {
     private boolean canBeAttacked = true; // if we have taunt and it is not taunt then this field would be false:))
     private boolean taunt = false;
     private boolean hasAttackInThisTurn = false;
+    private boolean divineShield=false;
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public boolean isCanBeAttacked() {
+        return canBeAttacked;
+    }
+
+    public boolean isTaunt() {
+        return taunt;
+    }
+
+    public void setTaunt(boolean taunt) {
+        this.taunt = taunt;
+    }
+
+    public boolean isHasAttackInThisTurn() {
+        return hasAttackInThisTurn;
+    }
+
+    public boolean isDivineShield() {
+        return divineShield;
+    }
+
+    public void setDivineShield(boolean divineShield) {
+        this.divineShield = divineShield;
+    }
 
     public Minion() {
         super();

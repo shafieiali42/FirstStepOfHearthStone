@@ -1,5 +1,6 @@
 package Interfaces;
 
+import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.GameCards.MinionCards.*;
 import Models.Cards.GameCards.SpellCards.*;
@@ -18,17 +19,18 @@ public interface Visitor {
     void visit(Sathrovarr sathrovarr);
     void visit(SecurityRover securityRover);
     void visit(TombWarden tombWarden, ArrayList<Minion> battleGround);
-    void visit(BookOfSpecters bookOfSpecters);
+    void visit(BookOfSpecters bookOfSpecters,ArrayList<Minion>battleGround,ArrayList<Cards> handsCards);
     void visit(PharaohsBlessing pharaohsBlessing);
     void visit(Sprint sprint);
-    void visit(SwarmOfLocusts swarmOfLocusts);
     void visit(Ashbringer ashbringer);
     void visit(BattleAxe battleAxe);
     void visit(Gearblade gearblade);
+    void visit(SwarmOfLocusts swarmOfLocusts,ArrayList<Minion>battleGround);
+    void visit(Locusts locusts,ArrayList<Minion>battleGround);
 
     //Special
     //*********
-    void visit(Polymorph polymorph);
+    void visit(Polymorph polymorph,ArrayList<Minion> battleGround,Minion target);
     void visit(FriendlySmith friendlySmith);
     void visit(Dreadscale dreadscale);
     void visit(SwampKingDred swampKingDred);

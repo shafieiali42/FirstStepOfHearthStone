@@ -1,6 +1,7 @@
 package Models.Cards.GameCards.MinionCards;
 
 import Interfaces.Visitor;
+import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ public class SecurityRover extends Minion {
 
 
     @Override
-    public void accept(Visitor visitor, ArrayList<Minion> battleGround){
+    public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,Minion target){
         visitor.visit(this);
     }
 

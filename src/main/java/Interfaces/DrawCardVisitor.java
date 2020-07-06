@@ -1,6 +1,7 @@
 package Interfaces;
 
 import Controller.Administer;
+import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.GameCards.MinionCards.*;
 import Models.Cards.GameCards.SpellCards.*;
@@ -15,7 +16,6 @@ public class DrawCardVisitor implements Visitor {
 
     @Override
     public void visit(CurioCollector curioCollector) {
-        System.out.println("Visitorrrrrrrr");
         curioCollector.setHealthPower(curioCollector.getHealthPower()+1);
         curioCollector.setAttackPower(curioCollector.getAttackPower()+1);
     }
@@ -37,9 +37,13 @@ public class DrawCardVisitor implements Visitor {
     }
 
     @Override
-    public void visit(BookOfSpecters bookOfSpecters) {
+    public void visit(BookOfSpecters bookOfSpecters, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards) {
 
     }
+
+
+
+
 
     @Override
     public void visit(PharaohsBlessing pharaohsBlessing) {
@@ -51,10 +55,7 @@ public class DrawCardVisitor implements Visitor {
 
     }
 
-    @Override
-    public void visit(SwarmOfLocusts swarmOfLocusts) {
 
-    }
 
     @Override
     public void visit(Ashbringer ashbringer) {
@@ -72,7 +73,19 @@ public class DrawCardVisitor implements Visitor {
     }
 
     @Override
-    public void visit(Polymorph polymorph) {
+    public void visit(SwarmOfLocusts swarmOfLocusts, ArrayList<Minion> battleGround) {
+
+    }
+
+    @Override
+    public void visit(Locusts locusts, ArrayList<Minion> battleGround) {
+
+    }
+
+
+
+    @Override
+    public void visit(Polymorph polymorph,ArrayList<Minion> battleGround,Minion target) {
 
     }
 

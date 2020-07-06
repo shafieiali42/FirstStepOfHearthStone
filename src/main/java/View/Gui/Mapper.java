@@ -1,7 +1,7 @@
 package View.Gui;
 
-import Interfaces.BattleCryVisitor;
-import Interfaces.DrawCardVisitor;
+import Controller.Administer;
+import Interfaces.*;
 import Logic.PlayLogic.Alliance;
 import Models.Cards.CardClasses.Cards;
 import Controller.ControllerOfMainComponents;
@@ -9,7 +9,6 @@ import Controller.ControllerOfMainComponents;
 import Models.Cards.CardClasses.Minion;
 import View.Gui.Panels.GamePage.LogPanel;
 import View.Gui.Panels.GamePage.PlayPanel;
-import Interfaces.Request;
 import Logic.PlayLogic.Game;
 import Models.Cards.CardClasses.Weapon;
 import Utility.Sounds;
@@ -161,6 +160,29 @@ public class Mapper {
     }
 
 
+    public static Cards drawOneCard() {
+        if (Game.getInstance().getCurrentPlayer().getHandsCards().size() < 12) {
+            if (Game.getInstance().getCurrentPlayer().getDeckCards().size() == 0) {
+                JOptionPane.showMessageDialog(null,
+                        "Your deck is empty.\nContinue game with your hand's cards", "Error", JOptionPane.ERROR_MESSAGE);
+
+                return null;
+
+            } else {
+                Cards card = Game.getInstance().getCurrentPlayer().getDeckCards().get(0);
+                Game.getInstance().getCurrentPlayer().getDeckCards().remove(0);
+                return card;
+
+            }
+        } else {
+            Game.getInstance().getCurrentPlayer().getDeckCards().remove(0);
+            JOptionPane.showMessageDialog(null,
+                    "You can't have more than 12 cards in your hand", "Error", JOptionPane.ERROR_MESSAGE);
+            return null;
+        }
+    }
+
+
     public static void drawCard() {
         if (Game.getInstance().getCurrentPlayer().getHandsCards().size() < 12) {
             if (Game.getInstance().getCurrentPlayer().getDeckCards().size() == 0) {
@@ -177,8 +199,10 @@ public class Mapper {
             JOptionPane.showMessageDialog(null,
                     "You can't have more than 12 cards in your hand", "Error", JOptionPane.ERROR_MESSAGE);
         }
-        for (Minion minion:Game.getInstance().getCurrentPlayer().getBattleGroundCards()){
-            minion.accept(new DrawCardVisitor(),Game.getInstance().getCurrentPlayer().getBattleGroundCards());
+
+        for (Minion minion : Game.getInstance().getCurrentPlayer().getBattleGroundCards()) {
+            minion.accept(new DrawCardVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                    Game.getInstance().getCurrentPlayer().getHandsCards(),minion);
         }
 
 
@@ -199,6 +223,15 @@ public class Mapper {
     }
 
     public static void endTurn() {
+        Iterator<Minion> itr = Game.getInstance().getCurrentPlayer().getBattleGroundCards().iterator();
+
+        while (itr.hasNext()) {
+            Minion minion = itr.next();
+            minion.accept(new EndTurnVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                    Game.getInstance().getCurrentPlayer().getHandsCards(),minion);
+
+        }
+
         nextTurn();
         drawCard();
         Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/EndTurn.wav");
@@ -235,20 +268,31 @@ public class Mapper {
         }
         if (minionPlayed) {
             playCard(playingCard);
-            playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards());;
+            playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                               Game.getInstance().getCurrentPlayer().getHandsCards(),playingCard);
+            ;
         }
     }
 
     public static void playSpell(Cards playingCard) {
         playCard(playingCard);
-        playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards());
+
+        playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                Game.getInstance().getCurrentPlayer().getHandsCards(),new Minion());
+        playingCard.accept(new DrawCardVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                Game.getInstance().getCurrentPlayer().getHandsCards(), new Minion());
+        playingCard.accept(new ActionVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                Game.getInstance().getCurrentPlayer().getHandsCards(),new Minion());
+
     }
 
     public static void playWeapon(Cards playingCard) {
         Game.getInstance().getCurrentPlayer().setCurrentWeapon((Weapon) playingCard);
         playCard(playingCard);
-        playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards());
-        playingCard.accept(new DrawCardVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards());
+        playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                           Game.getInstance().getCurrentPlayer().getHandsCards(),new Minion());
+
+
     }
 
 

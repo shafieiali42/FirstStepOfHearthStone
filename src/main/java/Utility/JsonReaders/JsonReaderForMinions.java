@@ -19,9 +19,13 @@ public class JsonReaderForMinions {
 
     private static void setMap(){
         map.put("CurioCollector", CurioCollector.class);
+        map.put("Dreadscale",Dreadscale.class);
+        map.put("HighPriestAmet",HighPriestAmet.class);
         map.put("Sathrovarr", Sathrovarr.class);
         map.put("SecurityRover", SecurityRover.class);
+        map.put("SwampKingDred", SwampKingDred.class);
         map.put("TombWarden", TombWarden.class);
+        map.put("Locusts",Locusts.class);
     }
 
     public static void main(String args[]) {

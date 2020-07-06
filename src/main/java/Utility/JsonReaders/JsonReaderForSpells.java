@@ -16,7 +16,9 @@ public class JsonReaderForSpells {
 
     private static void setMap(){
         map.put("BookOfSpecters", BookOfSpecters.class);
+        map.put("FriendlySmith",FriendlySmith.class);
         map.put("PharaohsBlessing", PharaohsBlessing.class);
+        map.put("Polymorph",Polymorph.class);
         map.put("Sprint", Sprint.class);
         map.put("SwarmOfLocusts", SwarmOfLocusts.class);
     }
@@ -41,7 +43,7 @@ public class JsonReaderForSpells {
         Gson gson=new Gson();
         for (SpellNames spellNames:SpellNames.values()){
             Class classOfCard = map.get(spellNames.name());
-            System.out.println(spellNames.name());
+            System.out.println(spellNames.name()+"nnnnnnnnnnnnn");
             Spell spell =(Spell)gson.fromJson(new FileReader("MinionSpellsWeapons/SpellCards/"+spellNames.name()+".json"),classOfCard);
             Spell.getSpells().add(spell);
         }

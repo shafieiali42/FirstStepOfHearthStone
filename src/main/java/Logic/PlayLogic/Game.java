@@ -19,6 +19,26 @@ public class Game {
     private MyTimer myTimer;
     private int attacker;
     private int target;
+    private int targetOfSpell;
+    private String allianceOfSpellsTarget;
+
+
+    public String getAllianceOfSpellsTarget() {
+        return allianceOfSpellsTarget;
+    }
+
+    public void setAllianceOfSpellsTarget(String allianceOfSpellsTarget) {
+        this.allianceOfSpellsTarget = allianceOfSpellsTarget;
+    }
+
+
+    public int getTargetOfSpell() {
+        return targetOfSpell;
+    }
+
+    public void setTargetOfSpell(int targetOfSpell) {
+        this.targetOfSpell = targetOfSpell;
+    }
 
     public int getAttacker() {
         return attacker;

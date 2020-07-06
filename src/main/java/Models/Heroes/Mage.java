@@ -27,7 +27,7 @@ public class Mage extends Heroes {
                 }
             }
             if (!isDuplicated){
-                if (card.getClassOfCard().toLowerCase().trim().equals("mage")){
+                if (card.getClassOfCard().equalsIgnoreCase("Mage")){
                     specialCardsOfMage.add(card);
                 }
             }

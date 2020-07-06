@@ -1,6 +1,8 @@
 package Interfaces;
 
 import Controller.Administer;
+import Logic.PlayLogic.Game;
+import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.GameCards.MinionCards.*;
 import Models.Cards.GameCards.SpellCards.*;
@@ -30,6 +32,12 @@ public class BattleCryVisitor implements Visitor {
 
     }
 
+    @Override
+    public void visit(BookOfSpecters bookOfSpecters, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards) {
+
+    }
+
+
 
     @Override
     public void visit(CurioCollector curioCollector){}
@@ -42,10 +50,7 @@ public class BattleCryVisitor implements Visitor {
     public void visit(SecurityRover securityRover) {
     }
 
-    @Override
-    public void visit(BookOfSpecters bookOfSpecters) {
 
-    }
 
     @Override
     public void visit(PharaohsBlessing pharaohsBlessing) {
@@ -57,10 +62,6 @@ public class BattleCryVisitor implements Visitor {
 
     }
 
-    @Override
-    public void visit(SwarmOfLocusts swarmOfLocusts) {
-
-    }
 
     @Override
     public void visit(Ashbringer ashbringer) {
@@ -77,12 +78,24 @@ public class BattleCryVisitor implements Visitor {
 
     }
 
+    @Override
+    public void visit(SwarmOfLocusts swarmOfLocusts, ArrayList<Minion> battleGround) {
+
+    }
+
+    @Override
+    public void visit(Locusts locusts, ArrayList<Minion> battleGround) {
+
+    }
+
+
+
 
     //Specials
     //**********
 
     @Override
-    public void visit(Polymorph polymorph) {
+    public void visit(Polymorph polymorph,ArrayList<Minion>battleGround,Minion target) {
 
     }
 

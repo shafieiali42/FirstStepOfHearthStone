@@ -159,6 +159,48 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     @Override
     public void mouseClicked(MouseEvent e) {
+
+//        if (ControllerOfMainComponents.getStatus().equals(Status.CHOOSE_TARGET_FOR_SPELL)){
+//            int xCoordinateOfCard = e.getComponent().getX();
+//            int yCoordinateOfCard = e.getComponent().getY();
+//            String allianceOfSpellTarget;
+//            if (yCoordinateOfCard <= 385) {
+//                allianceOfSpellTarget = "ENEMY";
+//            } else {
+//                allianceOfSpellTarget = "FRIENDLY";
+//            }
+//            int number = 0;
+//            if (xCoordinateOfCard > 45 && xCoordinateOfCard < 150) {
+//                number = 1;
+//
+//            } else if (xCoordinateOfCard > 190 && xCoordinateOfCard < 295) {
+//                number = 2;
+//
+//            } else if (xCoordinateOfCard > 335 && xCoordinateOfCard < 440) {
+//                number = 3;
+//
+//            } else if (xCoordinateOfCard > 480 && xCoordinateOfCard < 585) {
+//                number = 4;
+//
+//            } else if (xCoordinateOfCard > 625 && xCoordinateOfCard < 730) {
+//                number = 5;
+//
+//            } else if (xCoordinateOfCard > 770 && xCoordinateOfCard < 830) {
+//                number = 6;
+//
+//            } else if (xCoordinateOfCard > 915 && xCoordinateOfCard < 1010) {
+//                number = 7;
+//
+//            }
+//
+//            Administer.setTargetOfSpell(number,allianceOfSpellTarget);
+//            Administer.getPlyingCardOfGameState().accept(new TargetVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+//                    Administer.getTargetOfSpell());
+//
+//            Administer.setTargetOfSpell(0, null);
+//        }
+
+
         if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
             if (SwingUtilities.isLeftMouseButton(e)) {
                 int xCoordinateOfCard = e.getComponent().getX();

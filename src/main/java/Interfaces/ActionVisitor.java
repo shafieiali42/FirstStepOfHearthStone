@@ -1,16 +1,20 @@
 package Interfaces;
 
+import Controller.Administer;
+import Controller.ControllerOfMainComponents;
+import Logic.Status;
+import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.GameCards.MinionCards.*;
 import Models.Cards.GameCards.SpellCards.*;
 import Models.Cards.GameCards.WeaponCards.Ashbringer;
 import Models.Cards.GameCards.WeaponCards.BattleAxe;
 import Models.Cards.GameCards.WeaponCards.Gearblade;
+import View.Gui.Mapper;
 
 import java.util.ArrayList;
 
 public class ActionVisitor implements Visitor {
-
 
 
     //Neutrals
@@ -19,8 +23,6 @@ public class ActionVisitor implements Visitor {
     @Override
     public void visit(CurioCollector curioCollector) {
 //        System.out.println("Action of CurioCollector");
-
-
 
 
     }
@@ -40,12 +42,20 @@ public class ActionVisitor implements Visitor {
 
     }
 
-
-
     @Override
-    public void visit(BookOfSpecters bookOfSpecters) {
+    public void visit(BookOfSpecters bookOfSpecters, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards) {
+
+        for (int i = 0; i < 3; i++) {
+            Cards card = Mapper.drawOneCard();
+            assert card != null;
+            if (!card.getType().equalsIgnoreCase("Spell")) {
+                handsCards.add(card);
+            }
+        }
+
 
     }
+
 
     @Override
     public void visit(PharaohsBlessing pharaohsBlessing) {
@@ -54,11 +64,36 @@ public class ActionVisitor implements Visitor {
 
     @Override
     public void visit(Sprint sprint) {
+        System.out.println("Sprint visit");
+        for (int i = 0; i < 4; i++) {
+            Mapper.drawCard();
+            Administer.refreshPlayPanel();
+        }
+    }
+
+
+    @Override
+    public void visit(SwarmOfLocusts swarmOfLocusts, ArrayList<Minion> battleGround) {
+
+        System.out.println("Fuck you bitch");
+        int battleGroundSize = battleGround.size();
+        Locusts locusts = null;
+        for (Cards card : Cards.getAllCards()) {
+            if (card.getName().equalsIgnoreCase("Locusts")) {
+                locusts = (Locusts) card;
+            }
+        }
+
+        for (int i = 0; i < 7 - battleGroundSize; i++) {
+
+            battleGround.add(locusts.copy());
+        }
+
 
     }
 
     @Override
-    public void visit(SwarmOfLocusts swarmOfLocusts) {
+    public void visit(Locusts locusts, ArrayList<Minion> battleGround) {
 
     }
 
@@ -83,7 +118,8 @@ public class ActionVisitor implements Visitor {
     //**********
 
     @Override
-    public void visit(Polymorph polymorph) {
+    public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target) {
+
 
     }
 

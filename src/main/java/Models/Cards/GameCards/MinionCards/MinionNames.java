@@ -2,7 +2,11 @@ package Models.Cards.GameCards.MinionCards;
 
 public enum MinionNames {
     CurioCollector,
+    Dreadscale,
+    HighPriestAmet,
     Sathrovarr,
     SecurityRover,
-    TombWarden;
+    SwampKingDred,
+    TombWarden,
+    Locusts;
 }
