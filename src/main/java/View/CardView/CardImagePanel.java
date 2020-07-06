@@ -30,7 +30,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     private boolean isLock;
     private String cardName;
     boolean dragging = false;
-    private int numberOfCardInBattleGround = -5;
+    private int numberOfCardInBattleGround ;
     private String alliance = "";
     private boolean firstTime = true;
     boolean entered = false;
@@ -38,6 +38,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     static boolean doubleClick = false;
     private int hp;
     private int attackPower;
+    private boolean isInited=false;
     int x, y;
 
     public boolean getIsLock() {
@@ -145,6 +146,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
             this.numberOfCardInBattleGround=numberOfCardInBattleGround;
             this.hp = GamePartController.giveMinionHpWithName(numberOfCardInBattleGround,alliance);
             this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround,alliance);
+            isInited=true;
             setIsLock(this.cardName);
             if (type == 1) {
                 imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
@@ -430,10 +432,11 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
         if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
             graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 20));
             graphics2D.setColor(Color.red);
-            if (!firstTime) {
+            if (isInited){
                 this.hp = GamePartController.giveMinionHpWithName(numberOfCardInBattleGround, alliance);
                 this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround, alliance);
             }
+
             graphics2D.drawString(this.hp + "", 73, 98);
             graphics2D.drawString(this.attackPower + "", 10, 98);
 

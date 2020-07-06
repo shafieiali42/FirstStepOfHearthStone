@@ -50,6 +50,14 @@ public class Administer {
 
     //gameState
 
+
+    public static void refreshPlayPanel(){
+        PlayPanel.getInstance().setNeedsToRepaint(true);
+        PlayPanel.getInstance().repaint();
+        PlayPanel.getInstance().revalidate();
+    }
+
+
     public static void setAttacker(int attacker) {
         Game.getInstance().setAttacker(attacker);
     }

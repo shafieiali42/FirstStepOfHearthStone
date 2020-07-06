@@ -1,5 +1,6 @@
 package Interfaces;
 
+import Controller.Administer;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.GameCards.MinionCards.*;
 import Models.Cards.GameCards.SpellCards.*;
@@ -9,21 +10,16 @@ import Models.Cards.GameCards.WeaponCards.Gearblade;
 
 import java.util.ArrayList;
 
-public class ActionVisitor implements Visitor {
+public class DrawCardVisitor implements Visitor {
 
-
-
-    //Neutrals
-    //**********
 
     @Override
     public void visit(CurioCollector curioCollector) {
-//        System.out.println("Action of CurioCollector");
-
-
-
-
+        System.out.println("Visitorrrrrrrr");
+        curioCollector.setHealthPower(curioCollector.getHealthPower()+1);
+        curioCollector.setAttackPower(curioCollector.getAttackPower()+1);
     }
+
 
     @Override
     public void visit(Sathrovarr sathrovarr) {
@@ -39,8 +35,6 @@ public class ActionVisitor implements Visitor {
     public void visit(TombWarden tombWarden, ArrayList<Minion> battleGround) {
 
     }
-
-
 
     @Override
     public void visit(BookOfSpecters bookOfSpecters) {
@@ -72,15 +66,10 @@ public class ActionVisitor implements Visitor {
 
     }
 
-
     @Override
     public void visit(Gearblade gearblade) {
 
     }
-
-
-    //Specials
-    //**********
 
     @Override
     public void visit(Polymorph polymorph) {
@@ -106,6 +95,4 @@ public class ActionVisitor implements Visitor {
     public void visit(HighPriestAmet highPriestAmet) {
 
     }
-
-
 }

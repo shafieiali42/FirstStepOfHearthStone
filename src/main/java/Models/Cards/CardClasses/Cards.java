@@ -172,7 +172,9 @@ public  class Cards implements Comparable<Cards> , Visitable , Cloneable {
 
 
 
-    public void accept(Visitor visitor){}
+    public void accept(Visitor visitor,ArrayList<Minion>battleGround){
+
+    }
 
 
 

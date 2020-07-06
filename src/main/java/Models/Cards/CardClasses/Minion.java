@@ -2,6 +2,9 @@ package Models.Cards.CardClasses;
 
 //import Models.Cards;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 public class Minion extends Cards {
@@ -12,10 +15,10 @@ public class Minion extends Cards {
 
     private int attackPower;
     private int healthPower;
-    private boolean active=true;
-    private boolean canBeAttacked=true; // if we have taunt and it is not taunt then this field would be false:))
-    private boolean taunt =false;
-    private boolean hasAttackInThisTurn=false;
+    private boolean active = true;
+    private boolean canBeAttacked = true; // if we have taunt and it is not taunt then this field would be false:))
+    private boolean taunt = false;
+    private boolean hasAttackInThisTurn = false;
 
     public Minion() {
         super();
@@ -23,9 +26,9 @@ public class Minion extends Cards {
 
 
     @Override
-    public Minion copy(){
+    public Minion  copy() {
         System.out.println("Copy of Minion:))");
-        Minion copy =new Minion();
+        Minion copy = new Minion();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());
         copy.setRarity(this.getRarity());
@@ -34,14 +37,50 @@ public class Minion extends Cards {
         copy.setType(this.getType());
         copy.setRarity(this.getRarity());
         copy.setIsPlayed(this.isPlayed());
-        copy.attackPower=this.attackPower;
-        copy.healthPower=this.healthPower;
-        copy.active=this.active;
-        copy.canBeAttacked=this.canBeAttacked;
-        copy.taunt=this.taunt;
-        copy.hasAttackInThisTurn=this.hasAttackInThisTurn;
+        copy.attackPower = this.attackPower;
+        copy.healthPower = this.healthPower;
+        copy.active = this.active;
+        copy.canBeAttacked = this.canBeAttacked;
+        copy.taunt = this.taunt;
+        copy.hasAttackInThisTurn = this.hasAttackInThisTurn;
         return copy;
     }
+
+//
+//    @Override
+//    public  <T extends Cards> T  copy(T t) {
+//        Class cls = t.getClass();
+//        T t1 = null;
+//        try {
+//            Constructor cons = cls.getConstructor();
+//            t1 = (T) cons.newInstance();
+//            Field[] fields = cls.getDeclaredFields();
+//            for (Field field : fields) {
+//                field.setAccessible(true);
+//                field.set(t1, field.get(t));
+//            }
+//        } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
+//            e.printStackTrace();
+//        }
+//        return t1;
+//    }
+
+//    public <T> T copy(T t) {
+//        Class cls = t.getClass();
+//        T t1 = null;
+//        try {
+//            Constructor cons = cls.getConstructor();
+//            t1 = (T) cons.newInstance();
+//            Field[] fields = cls.getDeclaredFields();
+//            for (Field field : fields) {
+//                field.setAccessible(true);
+//                field.set(t1, field.get(t));
+//            }
+//        } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
+//            e.printStackTrace();
+//        }
+//        return t1;
+//    }
 
 
     //Getter and Setter
@@ -49,39 +88,51 @@ public class Minion extends Cards {
     public int getAttackPower() {
         return attackPower;
     }
+
     public void setAttackPower(int attackPower) {
         this.attackPower = attackPower;
     }
+
     public int getHealthPower() {
         return healthPower;
     }
+
     public void setHealthPower(int healthPower) {
         this.healthPower = healthPower;
     }
+
     public static ArrayList<Minion> getMinions() {
         return minions;
     }
+
     public boolean getIsActive() {
         return active;
     }
+
     public void setIsActive(boolean active) {
         this.active = active;
     }
+
     public boolean getCanBeAttacked() {
         return canBeAttacked;
     }
+
     public void setCanBeAttacked(boolean canBeAttacked) {
         this.canBeAttacked = canBeAttacked;
     }
+
     public boolean getIsTaunt() {
         return taunt;
     }
+
     public void setIsTaunt(boolean taunt) {
         this.taunt = taunt;
     }
+
     public boolean getHasAttackInThisTurn() {
         return hasAttackInThisTurn;
     }
+
     public void setHasAttackInThisTurn(boolean hasAttackInThisTurn) {
         this.hasAttackInThisTurn = hasAttackInThisTurn;
     }
@@ -91,7 +142,7 @@ public class Minion extends Cards {
         return "[" + "Name: " + this.getName() + " ,  classOfCard: " + this.getClassOfCard() + " , Money" + this.getMoneyCost() + " ]";
     }
 
-//    @Override
+    //    @Override
 //    public int getHp() {
 //        return healthPower;
 //    }
@@ -110,4 +161,5 @@ public class Minion extends Cards {
 //    public void setAttack(int attack) {
 //        this.attackPower = attack;
 //    }
+
 }

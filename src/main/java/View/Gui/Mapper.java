@@ -1,5 +1,7 @@
 package View.Gui;
 
+import Interfaces.BattleCryVisitor;
+import Interfaces.DrawCardVisitor;
 import Logic.PlayLogic.Alliance;
 import Models.Cards.CardClasses.Cards;
 import Controller.ControllerOfMainComponents;
@@ -168,12 +170,18 @@ public class Mapper {
                 Game.getInstance().getCurrentPlayer().getHandsCards().add(Game.getInstance().getCurrentPlayer().getDeckCards().get(0));
 
                 Game.getInstance().getCurrentPlayer().getDeckCards().remove(0);
+
             }
         } else {
             Game.getInstance().getCurrentPlayer().getDeckCards().remove(0);
             JOptionPane.showMessageDialog(null,
                     "You can't have more than 12 cards in your hand", "Error", JOptionPane.ERROR_MESSAGE);
         }
+        for (Minion minion:Game.getInstance().getCurrentPlayer().getBattleGroundCards()){
+            minion.accept(new DrawCardVisitor(),Game.getInstance().getCurrentPlayer().getBattleGroundCards());
+        }
+
+
     }
 
     public static void nextTurn() {
@@ -187,6 +195,7 @@ public class Mapper {
             Game.getInstance().setCurrentPlayer(Game.getInstance().getFriendlyPlayer());
             Game.getInstance().setCurrentAlliance(Alliance.FRIENDLY);
         }
+
     }
 
     public static void endTurn() {
@@ -202,11 +211,13 @@ public class Mapper {
         if (k != 7) {
             if (Game.getInstance().getCurrentPlayer().getBattleGroundCards().size() >= k) {
 //                ArrayList<Minion> copy = new ArrayList<>(Game.getInstance().getCurrentPlayer().getBattleGroundCards());
-                ArrayList<Minion> copy=(ArrayList<Minion>)Game.getInstance().getCurrentPlayer().getBattleGroundCards().clone();
+                ArrayList<Minion> copy = (ArrayList<Minion>) Game.getInstance().getCurrentPlayer().getBattleGroundCards().clone();
                 Game.getInstance().getCurrentPlayer().getBattleGroundCards().clear();
                 boolean isAdded = false;
                 for (int j = 0; j < copy.size(); j++) {
                     if (j == (k - 1) && !isAdded) {
+                        System.out.println(playingCard);
+                        System.out.println(playingCard.copy());
                         Game.getInstance().getCurrentPlayer().getBattleGroundCards().add(playingCard.copy());
                         isAdded = true;
                         j--;
@@ -224,16 +235,20 @@ public class Mapper {
         }
         if (minionPlayed) {
             playCard(playingCard);
+            playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards());;
         }
     }
 
     public static void playSpell(Cards playingCard) {
         playCard(playingCard);
+        playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards());
     }
 
     public static void playWeapon(Cards playingCard) {
         Game.getInstance().getCurrentPlayer().setCurrentWeapon((Weapon) playingCard);
         playCard(playingCard);
+        playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards());
+        playingCard.accept(new DrawCardVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards());
     }
 
 
