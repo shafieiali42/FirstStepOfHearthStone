@@ -22,6 +22,18 @@ public class Game {
     private int targetOfSpell;
     private String allianceOfSpellsTarget;
 
+    private int targetNumber;
+
+
+
+
+    public int getTargetNumber() {
+        return targetNumber;
+    }
+
+    public void setTargetNumber(int targetNumber) {
+        this.targetNumber = targetNumber;
+    }
 
     public String getAllianceOfSpellsTarget() {
         return allianceOfSpellsTarget;

@@ -1,13 +1,12 @@
 package Models.Cards.CardClasses;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Weapon extends Cards {
 
     public static final int NUMBER_OF_Weapons =3;
     private int attackPower;
-    private int useAmount;
+    private int durability;
     static ArrayList<Weapon> weapons=new ArrayList<Weapon>();
 
     public Weapon()  {
@@ -21,11 +20,11 @@ public class Weapon extends Cards {
     public void setAttackPower(int attackPower) {
         this.attackPower = attackPower;
     }
-    public int getUseAmount() {
-        return useAmount;
+    public int getDurability() {
+        return durability;
     }
-    public void setUseAmount(int useAmount) {
-        this.useAmount = useAmount;
+    public void setDurability(int durability) {
+        this.durability = durability;
     }
     public static ArrayList<Weapon> getWeapons() {
         return weapons;
@@ -40,7 +39,7 @@ public class Weapon extends Cards {
 
     @Override
     public String toString(){
-        return "";
+        return "Name: "+getName()+"Durability: "+durability+" attack: "+attackPower;
     }
 
 }

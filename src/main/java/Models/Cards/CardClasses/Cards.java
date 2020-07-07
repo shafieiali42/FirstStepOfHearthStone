@@ -172,7 +172,7 @@ public  class Cards implements Comparable<Cards> , Visitable , Cloneable {
 
 
 
-    public void accept(Visitor visitor,ArrayList<Minion>battleGround,ArrayList<Cards> handsCards,Minion target,Minion summonedMinion){
+    public void accept(Visitor visitor,ArrayList<Minion>battleGround,ArrayList<Cards> handsCards,ArrayList<Cards>deckCards,Minion target,Minion summonedMinion){
 
     }
 

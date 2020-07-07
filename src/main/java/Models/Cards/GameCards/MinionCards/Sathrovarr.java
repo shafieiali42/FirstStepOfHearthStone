@@ -1,7 +1,10 @@
 package Models.Cards.GameCards.MinionCards;
 
 import Interfaces.Visitor;
+import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
+
+import java.util.ArrayList;
 
 public class Sathrovarr extends Minion {
 
@@ -19,6 +22,8 @@ public class Sathrovarr extends Minion {
         copy.setType(this.getType());
         copy.setRarity(this.getRarity());
         copy.setIsPlayed(this.isPlayed());
+        copy.setFirstAttackPower(this.getFirstAttackPower());
+        copy.setFirstHealthPower(this.getFirstHealthPower());
         copy.setAttackPower(this.getAttackPower());
         copy.setHealthPower(this.getHealthPower());
         copy.setIsActive(this.getIsActive());
@@ -28,9 +33,10 @@ public class Sathrovarr extends Minion {
         return copy;
     }
 
-
-//    @Override
-//    public void accept(Visitor visitor){ visitor.visit(this);}
+    @Override
+    public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,ArrayList<Cards>deckCards,Minion target,Minion summonedMinion){
+        visitor.visit(this,battleGround,handsCards,deckCards,target);
+    }
 
 }
 

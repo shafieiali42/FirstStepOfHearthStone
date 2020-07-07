@@ -136,7 +136,9 @@ public class Mapper {
 
     public static void playCard(Cards playingCard) {
         Game.getInstance().getCurrentPlayer().setMana(Game.getInstance().getCurrentPlayer().getMana() - playingCard.getManaCost());
-        PlayPanel.getInstance().setNeedAnimation(true);
+        if (!playingCard.getType().equalsIgnoreCase("Spell")){
+            PlayPanel.getInstance().setNeedAnimation(true);
+        }
         PlayPanel.getInstance().repaint();
         PlayPanel.getInstance().revalidate();
         Game.getInstance().getCurrentPlayer().getHandsCards().remove(playingCard);
@@ -202,7 +204,7 @@ public class Mapper {
 
         for (Minion minion : Game.getInstance().getCurrentPlayer().getBattleGroundCards()) {
             minion.accept(new DrawCardVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                    Game.getInstance().getCurrentPlayer().getHandsCards(), minion, new Minion());
+                    Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),minion, new Minion());
         }
 
 
@@ -228,7 +230,7 @@ public class Mapper {
         while (itr.hasNext()) {
             Minion minion = itr.next();
             minion.accept(new EndTurnVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                    Game.getInstance().getCurrentPlayer().getHandsCards(), minion, new Minion());
+                    Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), minion, new Minion());
 
         }
 
@@ -269,13 +271,19 @@ public class Mapper {
         if (minionPlayed) {
             playCard(playingCard);
             playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                    Game.getInstance().getCurrentPlayer().getHandsCards(), playingCard, new Minion());
+                    Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), playingCard, new Minion());
 
-            for (Minion minion : Game.getInstance().getCurrentPlayer().getBattleGroundCards()) {
-                minion.accept(new SummonVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                        Game.getInstance().getCurrentPlayer().getHandsCards(), new Minion(),
-                        Game.getInstance().getCurrentPlayer().getBattleGroundCards().get(k-1));
+            if (Game.getInstance().getCurrentPlayer().getBattleGroundCards().size()>(k-1)){
+                for (Minion minion : Game.getInstance().getCurrentPlayer().getBattleGroundCards()) {
+                    minion.accept(new SummonVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                            Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), new Minion(),
+                            Game.getInstance().getCurrentPlayer().getBattleGroundCards().get(k-1));
+                }
             }
+
+//            playingCard.accept(new TargetVisitor(),Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+//                    Game.getInstance().getCurrentPlayer().getHandsCards(),Game.getInstance().getCurrentPlayer().getDeckCards(),
+//                    new Minion(),new Minion());
 
 
         }
@@ -285,19 +293,22 @@ public class Mapper {
         playCard(playingCard);
 
         playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                Game.getInstance().getCurrentPlayer().getHandsCards(), new Minion(), new Minion());
+                Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), new Minion(), new Minion());
         playingCard.accept(new DrawCardVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                Game.getInstance().getCurrentPlayer().getHandsCards(), new Minion(), new Minion());
+                Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),new Minion(), new Minion());
         playingCard.accept(new ActionVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                Game.getInstance().getCurrentPlayer().getHandsCards(), new Minion(), new Minion());
+                Game.getInstance().getCurrentPlayer().getHandsCards(),Game.getInstance().getCurrentPlayer().getDeckCards(), new Minion(), new Minion());
 
+        playingCard.accept(new TargetVisitor(),Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                Game.getInstance().getCurrentPlayer().getHandsCards(),Game.getInstance().getCurrentPlayer().getDeckCards(),
+                new Minion(),new Minion());//todo ...............
     }
 
     public static void playWeapon(Cards playingCard) {
         Game.getInstance().getCurrentPlayer().setCurrentWeapon((Weapon) playingCard);
         playCard(playingCard);
         playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                Game.getInstance().getCurrentPlayer().getHandsCards(), new Minion(), new Minion());
+                Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),new Minion(), new Minion());
 
 
     }

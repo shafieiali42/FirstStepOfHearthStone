@@ -9,11 +9,12 @@ import Logic.Status;
 
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.CardClasses.Weapon;
-import Models.Player.Player;
 import View.Gui.Panels.CollectionPages.DeckPage;
 import View.Gui.Panels.CollectionPages.DeckViewer;
 import View.Gui.Panels.CollectionPages.LittleCardPanel;
+import View.Gui.Panels.GamePage.DiscoverCardsPage;
 import View.Gui.Panels.GamePage.FirstThreeCardsPage;
+import View.Gui.Panels.GamePage.GamePage;
 import View.Gui.Panels.GamePage.PlayPanel;
 
 
@@ -28,17 +29,11 @@ import Utility.Sounds;
 import View.CardView.CardImagePanel;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
 import View.Gui.Panels.StatusPanel.ShowDeckInfoPanel;
-import com.google.gson.Gson;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class Administer {
 
@@ -50,11 +45,13 @@ public class Administer {
 
     //gameState
 
-    public static Cards getPlyingCardOfGameState() {
-        return Game.getInstance().getPlayingCard();
+
+    public static void setTargetOfSpell(int number, String alliance) {
+        Game.getInstance().setTargetOfSpell(number);
+        Game.getInstance().setAllianceOfSpellsTarget(alliance);
     }
 
-    public static Minion getTargetOfSpell() {
+    public static Minion getTargetOfSpell(){
         if (Game.getInstance().getAllianceOfSpellsTarget() == null) {
             return new Minion();
         } else if (Game.getInstance().getTargetOfSpell() == 0) {
@@ -68,10 +65,74 @@ public class Administer {
         return null;
     }
 
+    public static ArrayList<Cards> getDeckCards(){
+        return Game.getInstance().getCurrentPlayer().getDeckCards();
+    }
 
-    public static void setTargetOfSpell(int number, String alliance) {
-        Game.getInstance().setTargetOfSpell(number);
-        Game.getInstance().setAllianceOfSpellsTarget(alliance);
+    public static ArrayList<Cards> getHandCards(){
+        return Game.getInstance().getCurrentPlayer().getHandsCards();
+    }
+
+    public static ArrayList<Minion> getBattleGround(){
+        return Game.getInstance().getCurrentPlayer().getBattleGroundCards();
+    }
+
+    public static void reStartDiscoverPageSetting(){
+        DiscoverCardsPage.getInstance().reStartSetting();
+    }
+
+    public static Weapon getSelectedWeapon(){
+        for (Weapon weapon:Weapon.getWeapons()){
+            if (weapon.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getSelectedWeapon())){
+                return weapon;
+            }
+        }
+        return null;
+    }
+
+    public static boolean getWaitingOfDiscoverPage(){
+        return DiscoverCardsPage.getInstance().getWaiting();
+    }
+
+    public static void setGamePageContentPane() {
+        ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
+
+    }
+
+    public static void setDiscoverPageContentPane() {
+        MyMainFrame.getInstance().setContentPane(DiscoverCardsPage.getInstance());
+    }
+
+    public static ArrayList<Cards> getListOfWeapons() {
+        ArrayList<Cards> cards = new ArrayList<>();
+        for (Cards card : Weapon.getWeapons()) {
+            if (card.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getFirstCard())) {
+                cards.add(card);
+            }
+            if (card.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getSecondCard())) {
+                cards.add(card);
+            }
+            if (card.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getThirdCard())) {
+                cards.add(card);
+            }
+        }
+        return cards;
+    }
+
+    public static void setThreeWeapon() {
+
+        Random random = new Random();
+        int firstNum = random.nextInt(Weapon.getWeapons().size());
+        int secondNum = random.nextInt(Weapon.getWeapons().size());
+        int thirdNum = random.nextInt(Weapon.getWeapons().size());
+        DiscoverCardsPage.getInstance().setFirstCard(Weapon.getWeapons().get(firstNum).getName());
+        DiscoverCardsPage.getInstance().setSecondCard(Weapon.getWeapons().get(secondNum).getName());
+        DiscoverCardsPage.getInstance().setThirdCard(Weapon.getWeapons().get(thirdNum).getName());
+    }
+
+
+    public static Cards getPlyingCardOfGameState() {
+        return Game.getInstance().getPlayingCard();
     }
 
 

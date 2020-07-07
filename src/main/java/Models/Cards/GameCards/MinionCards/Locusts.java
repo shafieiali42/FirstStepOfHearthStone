@@ -23,6 +23,8 @@ public class Locusts extends Minion {
         copy.setType(this.getType());
         copy.setRarity(this.getRarity());
         copy.setIsPlayed(this.isPlayed());
+        copy.setFirstAttackPower(this.getFirstAttackPower());
+        copy.setFirstHealthPower(this.getFirstHealthPower());
         copy.setAttackPower(this.getAttackPower());
         copy.setHealthPower(this.getHealthPower());
         copy.setIsActive(this.getIsActive());
@@ -33,7 +35,7 @@ public class Locusts extends Minion {
     }
 
     @Override
-    public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards, Minion target,Minion summonedMinion){
+    public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,ArrayList<Cards>deckCards, Minion target,Minion summonedMinion){
         visitor.visit(this,battleGround);
     }
 

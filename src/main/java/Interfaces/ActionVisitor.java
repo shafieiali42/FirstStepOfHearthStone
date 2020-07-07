@@ -5,6 +5,7 @@ import Controller.ControllerOfMainComponents;
 import Logic.Status;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
+import Models.Cards.CardClasses.Weapon;
 import Models.Cards.GameCards.MinionCards.*;
 import Models.Cards.GameCards.SpellCards.*;
 import Models.Cards.GameCards.WeaponCards.Ashbringer;
@@ -28,9 +29,11 @@ public class ActionVisitor implements Visitor {
     }
 
     @Override
-    public void visit(Sathrovarr sathrovarr) {
+    public void visit(Sathrovarr sathrovarr, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards, ArrayList<Cards> deckCards, Minion target) {
 
     }
+
+
 
     @Override
     public void visit(SecurityRover securityRover) {
@@ -56,11 +59,12 @@ public class ActionVisitor implements Visitor {
 
     }
 
-
     @Override
-    public void visit(PharaohsBlessing pharaohsBlessing) {
+    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target) {
 
     }
+
+
 
     @Override
     public void visit(Sprint sprint) {
@@ -75,7 +79,6 @@ public class ActionVisitor implements Visitor {
     @Override
     public void visit(SwarmOfLocusts swarmOfLocusts, ArrayList<Minion> battleGround) {
 
-        System.out.println("Fuck you bitch");
         int battleGroundSize = battleGround.size();
         Locusts locusts = null;
         for (Cards card : Cards.getAllCards()) {
@@ -124,9 +127,12 @@ public class ActionVisitor implements Visitor {
     }
 
     @Override
-    public void visit(FriendlySmith friendlySmith) {
-
+    public void visit(FriendlySmith friendlySmith, ArrayList<Cards> deckCards) {
+        ControllerOfMainComponents.setStatus(Status.DISCOVER_THREE_WEAPONS);
+        Administer.setThreeWeapon();
+        Administer.setDiscoverPageContentPane();
     }
+
 
     @Override
     public void visit(Dreadscale dreadscale) {
@@ -142,8 +148,6 @@ public class ActionVisitor implements Visitor {
     public void visit(HighPriestAmet highPriestAmet, Minion summonedMinion) {
 
     }
-
-
 
 
 }

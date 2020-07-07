@@ -19,9 +19,10 @@ public class SummonVisitor implements Visitor {
     }
 
     @Override
-    public void visit(Sathrovarr sathrovarr) {
+    public void visit(Sathrovarr sathrovarr, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards, ArrayList<Cards> deckCards, Minion target) {
 
     }
+
 
     @Override
     public void visit(SecurityRover securityRover) {
@@ -39,9 +40,11 @@ public class SummonVisitor implements Visitor {
     }
 
     @Override
-    public void visit(PharaohsBlessing pharaohsBlessing) {
+    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target) {
 
     }
+
+
 
     @Override
     public void visit(Sprint sprint) {
@@ -79,9 +82,11 @@ public class SummonVisitor implements Visitor {
     }
 
     @Override
-    public void visit(FriendlySmith friendlySmith) {
+    public void visit(FriendlySmith friendlySmith, ArrayList<Cards> deckCards) {
 
     }
+
+
 
     @Override
     public void visit(Dreadscale dreadscale) {

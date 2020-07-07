@@ -57,7 +57,7 @@ public class MethodsOfShowCardsOnPanel {
         for (Cards card : cards) {
 
             counter++;
-            CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), width, height);
+            CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), width, height,true);
 
 //            CardPanel.getInstance().setBackground(Color.white);
             addPanel(cardImagePanel, panel, xCoordinate, yCoordinate,width,

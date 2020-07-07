@@ -6,5 +6,5 @@ import Models.Cards.CardClasses.Minion;
 import java.util.ArrayList;
 
 public interface Visitable {
-    void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,Minion target,Minion summonedMinion);
+    void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,ArrayList<Cards>deckCards,Minion target,Minion summonedMinion);
 }

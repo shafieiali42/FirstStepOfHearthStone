@@ -1,7 +1,9 @@
 package Interfaces;
 
 import Controller.Administer;
+import Controller.ControllerOfMainComponents;
 import Logic.PlayLogic.Game;
+import Logic.Status;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.GameCards.MinionCards.*;
@@ -37,14 +39,22 @@ public class BattleCryVisitor implements Visitor {
 
     }
 
+    @Override
+    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target) {
+
+    }
 
 
     @Override
     public void visit(CurioCollector curioCollector){}
 
     @Override
-    public void visit(Sathrovarr sathrovarr) {
+    public void visit(Sathrovarr sathrovarr, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards, ArrayList<Cards> deckCards, Minion target) {
+        System.out.println("Sathrovarr BattleCryVisitor");
+        ControllerOfMainComponents.setStatus(Status.CHOOSE_TARGET_FOR_SPELL);
     }
+
+
 
     @Override
     public void visit(SecurityRover securityRover) {
@@ -52,10 +62,7 @@ public class BattleCryVisitor implements Visitor {
 
 
 
-    @Override
-    public void visit(PharaohsBlessing pharaohsBlessing) {
 
-    }
 
     @Override
     public void visit(Sprint sprint) {
@@ -100,9 +107,10 @@ public class BattleCryVisitor implements Visitor {
     }
 
     @Override
-    public void visit(FriendlySmith friendlySmith) {
+    public void visit(FriendlySmith friendlySmith, ArrayList<Cards> deckCards) {
 
     }
+
 
     @Override
     public void visit(Dreadscale dreadscale) {

@@ -2,9 +2,6 @@ package Models.Cards.CardClasses;
 
 //import Models.Cards;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 public class Minion extends Cards {
@@ -13,6 +10,8 @@ public class Minion extends Cards {
     private static ArrayList<Minion> minions = new ArrayList<Minion>();
 
 
+    private int firstAttackPower;
+    private int firstHealthPower;
     private int attackPower;
     private int healthPower;
     private boolean active = true;
@@ -20,6 +19,29 @@ public class Minion extends Cards {
     private boolean taunt = false;
     private boolean hasAttackInThisTurn = false;
     private boolean divineShield=false;
+
+    public static void initFirstAttackAndHp(){
+        for (Minion minion:getMinions()){
+            minion.firstAttackPower=minion.attackPower;
+            minion.firstHealthPower =minion.healthPower;
+        }
+    }
+
+    public int getFirstAttackPower() {
+        return firstAttackPower;
+    }
+
+    public void setFirstAttackPower(int firstAttackPower) {
+        this.firstAttackPower = firstAttackPower;
+    }
+
+    public int getFirstHealthPower() {
+        return firstHealthPower;
+    }
+
+    public void setFirstHealthPower(int firstHealthPower) {
+        this.firstHealthPower = firstHealthPower;
+    }
 
     public boolean isActive() {
         return active;
@@ -33,9 +55,7 @@ public class Minion extends Cards {
         return canBeAttacked;
     }
 
-    public boolean isTaunt() {
-        return taunt;
-    }
+
 
     public void setTaunt(boolean taunt) {
         this.taunt = taunt;
@@ -70,6 +90,8 @@ public class Minion extends Cards {
         copy.setType(this.getType());
         copy.setRarity(this.getRarity());
         copy.setIsPlayed(this.isPlayed());
+        copy.setFirstAttackPower(this.firstAttackPower);
+        copy.setFirstHealthPower(this.healthPower);
         copy.attackPower = this.attackPower;
         copy.healthPower = this.healthPower;
         copy.active = this.active;

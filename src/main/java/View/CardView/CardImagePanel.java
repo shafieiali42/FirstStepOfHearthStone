@@ -2,10 +2,14 @@ package View.CardView;
 
 import Controller.Administer;
 import Controller.GamePartController;
+import Interfaces.AfterSelectVisitor;
 import Logic.PlayLogic.Alliance;
 import Controller.ControllerOfMainComponents;
+import Logic.PlayLogic.Game;
 import Logic.Status;
+import Models.Cards.CardClasses.Minion;
 import View.Gui.Mapper;
+import View.Gui.Panels.GamePage.DiscoverCardsPage;
 import View.Gui.Panels.GamePage.PlayPanel;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
 
@@ -30,7 +34,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     private boolean isLock;
     private String cardName;
     boolean dragging = false;
-    private int numberOfCardInBattleGround ;
+    private int numberOfCardInBattleGround;
     private String alliance = "";
     private boolean firstTime = true;
     boolean entered = false;
@@ -38,7 +42,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     static boolean doubleClick = false;
     private int hp;
     private int attackPower;
-    private boolean isInited=false;
+    private boolean isInited = false;
     int x, y;
 
     public boolean getIsLock() {
@@ -101,6 +105,18 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     }
 
+
+    public CardImagePanel(String cardName, int width, int height, boolean showLockCards) throws IOException {
+
+        setLayout(null);
+        setSize(width, height);
+        this.addMouseListener(this);
+        this.addMouseMotionListener(this);
+//        this.card = card;
+        this.cardName = cardName;
+        imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
+    }
+
     public CardImagePanel(String cardName, int width, int height) throws IOException {
 
         setLayout(null);
@@ -134,7 +150,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     }
 
-    public CardImagePanel(String cardName, int width, int height, boolean showLockCards, int type, String alliance,int numberOfCardInBattleGround) throws IOException {
+    public CardImagePanel(String cardName, int width, int height, boolean showLockCards, int type, String alliance, int numberOfCardInBattleGround) throws IOException {
         if (showLockCards) {
             setLayout(null);
             setSize(width, height);
@@ -143,10 +159,10 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 //        this.card = card;
             this.alliance = alliance;
             this.cardName = cardName;
-            this.numberOfCardInBattleGround=numberOfCardInBattleGround;
-            this.hp = GamePartController.giveMinionHpWithName(numberOfCardInBattleGround,alliance);
-            this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround,alliance);
-            isInited=true;
+            this.numberOfCardInBattleGround = numberOfCardInBattleGround;
+            this.hp = GamePartController.giveMinionHpWithName(numberOfCardInBattleGround, alliance);
+            this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround, alliance);
+            isInited = true;
             setIsLock(this.cardName);
             if (type == 1) {
                 imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
@@ -159,6 +175,52 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        if (ControllerOfMainComponents.getStatus().equals(Status.CHOOSE_TARGET_FOR_SPELL)) {
+            if (SwingUtilities.isLeftMouseButton(e)) {
+                int xCoordinateOfCard = e.getComponent().getX();
+                int yCoordinateOfCard = e.getComponent().getY();
+                String allianceOfSpellTarget;
+                if (yCoordinateOfCard <= 385) {
+                    allianceOfSpellTarget = "ENEMY";
+                } else {
+                    allianceOfSpellTarget = "FRIENDLY";
+                }
+                int number = 0;
+                if (xCoordinateOfCard > 45 && xCoordinateOfCard < 150) {
+                    number = 1;
+
+                } else if (xCoordinateOfCard > 190 && xCoordinateOfCard < 295) {
+                    number = 2;
+
+                } else if (xCoordinateOfCard > 335 && xCoordinateOfCard < 440) {
+                    number = 3;
+
+                } else if (xCoordinateOfCard > 480 && xCoordinateOfCard < 585) {
+                    number = 4;
+
+                } else if (xCoordinateOfCard > 625 && xCoordinateOfCard < 730) {
+                    number = 5;
+
+                } else if (xCoordinateOfCard > 770 && xCoordinateOfCard < 830) {
+                    number = 6;
+
+                } else if (xCoordinateOfCard > 915 && xCoordinateOfCard < 1010) {
+                    number = 7;
+
+                }
+
+                Administer.setTargetOfSpell(number,alliance);
+                Administer.getPlyingCardOfGameState().accept(new AfterSelectVisitor(),Administer.getBattleGround(),
+                        Administer.getHandCards(),Administer.getDeckCards(),Administer.getTargetOfSpell(),new Minion());
+
+
+
+
+                ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
+
+            }
+        }
+
 
 //        if (ControllerOfMainComponents.getStatus().equals(Status.CHOOSE_TARGET_FOR_SPELL)){
 //            int xCoordinateOfCard = e.getComponent().getX();
@@ -325,7 +387,18 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     @Override
     public void mousePressed(MouseEvent e) {
-//        System.out.println("Mouse Pressed");
+
+        if (ControllerOfMainComponents.getStatus().equals(Status.DISCOVER_THREE_WEAPONS)) {
+            if (SwingUtilities.isLeftMouseButton(e)) {
+                DiscoverCardsPage.getInstance().setSelectedWeapon(this.cardName);
+                DiscoverCardsPage.getInstance().setWaiting(false);
+
+                Administer.getPlyingCardOfGameState().accept(new AfterSelectVisitor(),
+                        Administer.getBattleGround(),
+                        Administer.getHandCards(), Administer.getDeckCards(),
+                        new Minion(), new Minion());
+            }
+        }
         if (ControllerOfMainComponents.getStatus().equals(Status.FIRST_THREE_CARDS_PAGE)) {
 //            System.out.println("Change Deck:))");
             Administer.ChangeThisCardFromHands(cardName);
@@ -471,10 +544,11 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     protected void paintComponent(Graphics g) {
         g.drawImage(imageOfCard, 0, 0, this.getWidth(), this.getHeight(), null);
         Graphics2D graphics2D = (Graphics2D) g;
-        if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
+        if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)
+                || ControllerOfMainComponents.getStatus().equals(Status.CHOOSE_TARGET_FOR_SPELL)) {
             graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 20));
             graphics2D.setColor(Color.red);
-            if (isInited){
+            if (isInited) {
                 this.hp = GamePartController.giveMinionHpWithName(numberOfCardInBattleGround, alliance);
                 this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround, alliance);
             }
