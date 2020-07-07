@@ -136,7 +136,9 @@ public class EndTurnVisitor implements Visitor {
     }
 
     @Override
-    public void visit(HighPriestAmet highPriestAmet) {
+    public void visit(HighPriestAmet highPriestAmet, Minion summonedMinion) {
 
     }
+
+
 }

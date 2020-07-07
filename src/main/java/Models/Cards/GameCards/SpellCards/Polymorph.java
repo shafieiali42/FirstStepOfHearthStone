@@ -16,7 +16,7 @@ public class Polymorph extends Spell {
 
 
     @Override
-    public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,Minion target){
+    public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,Minion target,Minion summonedMinion){
         visitor.visit(this,battleGround,target);
     }
 

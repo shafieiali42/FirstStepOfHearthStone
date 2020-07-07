@@ -34,7 +34,7 @@ public interface Visitor {
     void visit(FriendlySmith friendlySmith);
     void visit(Dreadscale dreadscale);
     void visit(SwampKingDred swampKingDred);
-    void visit(HighPriestAmet highPriestAmet);
+    void visit(HighPriestAmet highPriestAmet,Minion summonedMinion);
 
 
 
