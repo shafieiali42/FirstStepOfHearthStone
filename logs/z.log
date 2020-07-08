@@ -4946,3 +4946,83 @@ Jul 08, 2020 3:43:34 AM View.Gui.Mapper endTurn
 INFO: End turn
 Jul 08, 2020 3:43:35 AM View.Gui.Mapper endTurn
 INFO: End turn
+Jul 08, 2020 4:26:22 AM Controller.PlayerController signIn
+INFO: sign_in z
+Jul 08, 2020 4:26:25 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 08, 2020 4:28:18 AM Controller.PlayerController signIn
+INFO: sign_in z
+Jul 08, 2020 4:28:20 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 08, 2020 4:31:42 AM Controller.PlayerController signIn
+INFO: sign_in z
+Jul 08, 2020 4:31:43 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 08, 2020 4:31:54 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 4:32:09 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 4:32:13 AM View.Gui.Mapper playCard
+INFO: PlayWeapon
+Jul 08, 2020 4:32:35 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 4:32:37 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 4:32:42 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 08, 2020 5:25:02 AM Controller.PlayerController signIn
+INFO: sign_in z
+Jul 08, 2020 5:25:04 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 08, 2020 5:25:15 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 08, 2020 5:25:27 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 08, 2020 5:25:34 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 08, 2020 5:25:41 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 5:25:45 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 5:25:49 AM View.Gui.Mapper playCard
+INFO: PlayWeapon
+Jul 08, 2020 5:37:18 AM Controller.PlayerController signIn
+INFO: sign_in z
+Jul 08, 2020 5:37:21 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 08, 2020 5:37:34 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 5:37:37 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 5:37:40 AM View.Gui.Mapper playCard
+INFO: PlayWeapon
+Jul 08, 2020 5:38:50 AM Controller.PlayerController signIn
+INFO: sign_in z
+Jul 08, 2020 5:38:51 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 08, 2020 5:38:59 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 5:39:03 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 5:39:06 AM View.Gui.Mapper playCard
+INFO: PlayWeapon
+Jul 08, 2020 5:46:22 AM Controller.PlayerController signIn
+INFO: sign_in z
+Jul 08, 2020 5:46:24 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 08, 2020 5:46:38 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 5:46:41 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 5:46:44 AM View.Gui.Mapper playCard
+INFO: PlayWeapon
+Jul 08, 2020 5:48:49 AM Controller.PlayerController signIn
+INFO: sign_in z
+Jul 08, 2020 5:48:51 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 08, 2020 5:49:01 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 5:49:04 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 08, 2020 5:49:07 AM View.Gui.Mapper playCard
+INFO: PlayWeapon

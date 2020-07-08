@@ -51,7 +51,7 @@ public class Administer {
         Game.getInstance().setAllianceOfSpellsTarget(alliance);
     }
 
-    public static Minion getTargetOfSpell(){
+    public static Minion getTargetOfSpell() {
         if (Game.getInstance().getAllianceOfSpellsTarget() == null) {
             return new Minion();
         } else if (Game.getInstance().getTargetOfSpell() == 0) {
@@ -65,32 +65,32 @@ public class Administer {
         return null;
     }
 
-    public static ArrayList<Cards> getDeckCards(){
+    public static ArrayList<Cards> getDeckCards() {
         return Game.getInstance().getCurrentPlayer().getDeckCards();
     }
 
-    public static ArrayList<Cards> getHandCards(){
+    public static ArrayList<Cards> getHandCards() {
         return Game.getInstance().getCurrentPlayer().getHandsCards();
     }
 
-    public static ArrayList<Minion> getBattleGround(){
+    public static ArrayList<Minion> getBattleGround() {
         return Game.getInstance().getCurrentPlayer().getBattleGroundCards();
     }
 
-    public static void reStartDiscoverPageSetting(){
+    public static void reStartDiscoverPageSetting() {
         DiscoverCardsPage.getInstance().reStartSetting();
     }
 
-    public static Weapon getSelectedWeapon(){
-        for (Weapon weapon:Weapon.getWeapons()){
-            if (weapon.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getSelectedWeapon())){
+    public static Weapon getSelectedWeapon() {
+        for (Weapon weapon : Weapon.getWeapons()) {
+            if (weapon.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getSelectedWeapon())) {
                 return weapon;
             }
         }
         return null;
     }
 
-    public static boolean getWaitingOfDiscoverPage(){
+    public static boolean getWaitingOfDiscoverPage() {
         return DiscoverCardsPage.getInstance().getWaiting();
     }
 
@@ -163,6 +163,18 @@ public class Administer {
 //                Game.getInstance().getEnemyPlayer().getBattleGroundCards().remove(i);
 //            }
 //        }
+        if (Game.getInstance().getFriendlyPlayer().getCurrentWeapon() != null) {
+            if (Game.getInstance().getFriendlyPlayer().getCurrentWeapon().getDurability() == 0) {
+                Game.getInstance().getFriendlyPlayer().setCurrentWeapon(null);
+            }
+        }
+
+        if (Game.getInstance().getEnemyPlayer().getCurrentWeapon() != null) {
+            if (Game.getInstance().getEnemyPlayer().getCurrentWeapon().getDurability() == 0) {
+                Game.getInstance().getEnemyPlayer().setCurrentWeapon(null);
+            }
+        }
+
         if (Game.getInstance().getFriendlyPlayer().getHero().getHealthPower() <= 0) {
             //TODO Friendly player wins
         } else if (Game.getInstance().getEnemyPlayer().getHero().getHealthPower() <= 0) {
@@ -205,34 +217,44 @@ public class Administer {
 
     public static void attack(int attacker, int target) {
 
-        if (attacker == -5) {
-            //TODO choose attacker
-            return;
-        } else if (target == -5) {
-            //TODO choose attacker
-            return;
-        }
-//        System.out.println(Game.getInstance().getFriendlyPlayer().getDeckCards());
-        Minion minion = Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(attacker);
-        Minion minion2 = Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(target);
-
-        if (minion.getIsActive() && !minion.getHasAttackInThisTurn()) {
-            if (minion2.getCanBeAttacked()) {
-                System.out.println("Before attack:");
-                System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
-                System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
-                minion.setHealthPower(minion.getHealthPower() - minion2.getAttackPower());
-                minion2.setHealthPower(minion2.getHealthPower() - minion.getAttackPower());
-                removeDeadCharacters();
-                System.out.println("After attack:");
-                System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
-                System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
-            } else {
-                //TODO you first need to destroy Taunt OR you cant attack to this minion
-            }
+        if (attacker == -2) {
+            Weapon weapon = Game.getInstance().getCurrentPlayer().getCurrentWeapon();
+            Minion minion = Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(target);
+            minion.setHealthPower(minion.getHealthPower() - weapon.getAttackPower());
+            removeDeadCharacters();
         } else {
-            //TODO you cant attack with this minion in this turn
+
+            if (attacker == -5) {
+                //TODO choose attacker
+                return;
+            } else if (target == -5) {
+                //TODO choose attacker
+                return;
+            }
+
+            Minion minion = Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(attacker);
+            Minion minion2 = Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(target);
+
+            if (minion.getIsActive() && !minion.getHasAttackInThisTurn()) {
+                if (minion2.getCanBeAttacked()) {
+                    System.out.println("Before attack:");
+                    System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
+                    System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
+                    minion.setHealthPower(minion.getHealthPower() - minion2.getAttackPower());
+                    minion2.setHealthPower(minion2.getHealthPower() - minion.getAttackPower());
+                    removeDeadCharacters();
+                    System.out.println("After attack:");
+                    System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
+                    System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
+                } else {
+                    //TODO you first need to destroy Taunt OR you cant attack to this minion
+                }
+            } else {
+                //TODO you cant attack with this minion in this turn
+            }
+
         }
+
     }
 
     public static void attack(Minion minion, Heroes hero) {
@@ -253,15 +275,6 @@ public class Administer {
             //TODO you cant attack with this minion in this turn
         }
     }
-
-    public static void attack(Weapon weapon, Heroes hero) {
-
-    }
-
-    public static void attack(Weapon weapon, Minion minion) {
-
-    }
-
 
     public static void reStartFirstThreeCardsSetting() {
         FirstThreeCardsPage.getInstance().reStartSetting();
@@ -374,7 +387,7 @@ public class Administer {
         if (Game.getInstance().getFriendlyPlayer().getCurrentWeapon() != null) {
             try {
                 CardImagePanel cardImagePanel = new CardImagePanel(Game.getInstance().getFriendlyPlayer().getCurrentWeapon().getName(),
-                        widthOfWeaponImage, heightOfWeaponImage);
+                        widthOfWeaponImage, heightOfWeaponImage, "weapon","FRIENDLY");
 
                 MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, panel,
                         xCoordinateOfWeapon, yCoordinateOfWeapon, widthOfWeaponImage, heightOfWeaponImage);
@@ -388,7 +401,7 @@ public class Administer {
         if (Game.getInstance().getEnemyPlayer().getCurrentWeapon() != null) {
             try {
                 CardImagePanel cardImagePanel = new CardImagePanel(Game.getInstance().getEnemyPlayer().getCurrentWeapon().getName(),
-                        widthOfWeaponImage, heightOfWeaponImage);
+                        widthOfWeaponImage, heightOfWeaponImage, "weapon","ENEMY");
 
                 MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, panel,
                         xCoordinateOfWeapon, yCoordinateOfWeapon, widthOfWeaponImage, heightOfWeaponImage);

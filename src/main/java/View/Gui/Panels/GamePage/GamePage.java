@@ -43,10 +43,11 @@ public class GamePage extends JPanel {
         LogPanel.getInstance().getJScrollPane().setFocusable(false);
         this.add(LogPanel.getInstance().getJScrollPane());
 
-        this.addPanel(PlayPanel.getInstance(),LogPanel.getInstance().getWidthOfLogPanel(),0,PlayPanel.getWidthOfPlayPanel(),PlayPanel.getHeightOfPlayPanel());
+        this.addPanel(PlayPanel.getInstance(),LogPanel.getInstance().getWidthOfLogPanel(),0,
+                PlayPanel.getWidthOfPlayPanel(),PlayPanel.getHeightOfPlayPanel());
 
 
-        this.addPanel(DeckAndEndTurnBtnPanel.getInstance(),LogPanel.getInstance().getWidthOfLogPanel()+PlayPanel.getWidthOfPlayPanel(),0,
+        this.addPanel(DeckAndEndTurnBtnPanel.getInstance(),LogPanel.getInstance().getWidthOfLogPanel()+PlayPanel.getInstance().getWidthOfPlayPanel(),0,
                       WIDTH_OF_END_TURN_PANEL, HEIGHT_OF_END_TURN_PANEL);
 
     }

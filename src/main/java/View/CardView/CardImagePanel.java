@@ -43,6 +43,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     private int hp;
     private int attackPower;
     private boolean isInited = false;
+    private String typeOfCard = "minionOrSpell";
     int x, y;
 
     public boolean getIsLock() {
@@ -115,6 +116,27 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 //        this.card = card;
         this.cardName = cardName;
         imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
+    }
+
+
+    public CardImagePanel(String cardName, int width, int height, String typeOfCard,String alliance) throws IOException {
+
+        setLayout(null);
+        setSize(width, height);
+        this.addMouseListener(this);
+        this.addMouseMotionListener(this);
+//        this.card = card;
+        this.typeOfCard = typeOfCard;
+        this.cardName = cardName;
+        this.alliance=alliance;
+        this.hp = GamePartController.giveWeaponDurability(alliance);
+        this.attackPower = GamePartController.giveWeaponAttackPower(alliance);
+        setIsLock(this.cardName);
+        if (this.isLock) {
+            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/GreyCardImage/" + cardName + ".png"));
+        } else {
+            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
+        }
     }
 
     public CardImagePanel(String cardName, int width, int height) throws IOException {
@@ -209,11 +231,9 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
                 }
 
-                Administer.setTargetOfSpell(number,alliance);
-                Administer.getPlyingCardOfGameState().accept(new AfterSelectVisitor(),Administer.getBattleGround(),
-                        Administer.getHandCards(),Administer.getDeckCards(),Administer.getTargetOfSpell(),new Minion());
-
-
+                Administer.setTargetOfSpell(number, alliance);
+                Administer.getPlyingCardOfGameState().accept(new AfterSelectVisitor(), Administer.getBattleGround(),
+                        Administer.getHandCards(), Administer.getDeckCards(), Administer.getTargetOfSpell(), new Minion());
 
 
                 ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
@@ -273,44 +293,53 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 } else {
                     alliance = "FRIENDLY";
                 }
+
                 int number = 0;
                 numberOfCardInBattleGround = 0;
-                if (xCoordinateOfCard > 45 && xCoordinateOfCard < 150) {
-                    number = 1;
-                    numberOfCardInBattleGround = 1;
-                } else if (xCoordinateOfCard > 190 && xCoordinateOfCard < 295) {
-                    number = 2;
-                    numberOfCardInBattleGround = 2;
-                } else if (xCoordinateOfCard > 335 && xCoordinateOfCard < 440) {
-                    number = 3;
-                    numberOfCardInBattleGround = 3;
-                } else if (xCoordinateOfCard > 480 && xCoordinateOfCard < 585) {
-                    number = 4;
-                    numberOfCardInBattleGround = 4;
-                } else if (xCoordinateOfCard > 625 && xCoordinateOfCard < 730) {
-                    number = 5;
-                    numberOfCardInBattleGround = 5;
-                } else if (xCoordinateOfCard > 770 && xCoordinateOfCard < 830) {
-                    number = 6;
-                    numberOfCardInBattleGround = 6;
-                } else if (xCoordinateOfCard > 915 && xCoordinateOfCard < 1010) {
-                    number = 7;
-                    numberOfCardInBattleGround = 7;
+
+                if (this.typeOfCard.equalsIgnoreCase("weapon")) {
+                    number = -1;
+                    numberOfCardInBattleGround = -1;
+                } else {
+
+                    if (xCoordinateOfCard > 45 && xCoordinateOfCard < 150) {
+                        number = 1;
+                        numberOfCardInBattleGround = 1;
+                    } else if (xCoordinateOfCard > 190 && xCoordinateOfCard < 295) {
+                        number = 2;
+                        numberOfCardInBattleGround = 2;
+                    } else if (xCoordinateOfCard > 335 && xCoordinateOfCard < 440) {
+                        number = 3;
+                        numberOfCardInBattleGround = 3;
+                    } else if (xCoordinateOfCard > 480 && xCoordinateOfCard < 585) {
+                        number = 4;
+                        numberOfCardInBattleGround = 4;
+                    } else if (xCoordinateOfCard > 625 && xCoordinateOfCard < 730) {
+                        number = 5;
+                        numberOfCardInBattleGround = 5;
+                    } else if (xCoordinateOfCard > 770 && xCoordinateOfCard < 830) {
+                        number = 6;
+                        numberOfCardInBattleGround = 6;
+                    } else if (xCoordinateOfCard > 915 && xCoordinateOfCard < 1010) {
+                        number = 7;
+                        numberOfCardInBattleGround = 7;
+                    }
+                    if (clicked) {
+                        doubleClick = true;
+                        Administer.setTarget(number - 1);
+                        Administer.attack(Administer.getAttacker(), Administer.getTarget());
+                        this.hp = GamePartController.giveMinionHpWithName(numberOfCardInBattleGround, alliance);
+                        this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround, alliance);
+                        clicked = false;
+                        doubleClick = false;
+                        System.out.println("*********************" + hp);
+                        Administer.setAttacker(-5);
+                        Administer.setTarget(-5);
+                    }
                 }
 
 
-                if (clicked) {
-                    doubleClick = true;
-                    Administer.setTarget(number - 1);
-                    Administer.attack(Administer.getAttacker(), Administer.getTarget());
-                    this.hp = GamePartController.giveMinionHpWithName(numberOfCardInBattleGround, alliance);
-                    this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround, alliance);
-                    clicked = false;
-                    doubleClick = false;
-                    System.out.println("*********************" + hp);
-                    Administer.setAttacker(-5);
-                    Administer.setTarget(-5);
-                } else {
+                if (!clicked) {
                     clicked = true;
                     Administer.setAttacker(number - 1);
                 }
@@ -549,12 +578,24 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
             graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 20));
             graphics2D.setColor(Color.red);
             if (isInited) {
-                this.hp = GamePartController.giveMinionHpWithName(numberOfCardInBattleGround, alliance);
-                this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround, alliance);
+                if (this.typeOfCard.equalsIgnoreCase("weapon")) {
+                    this.hp = GamePartController.giveWeaponDurability(alliance);
+                    this.attackPower = GamePartController.giveWeaponAttackPower(alliance);
+                } else {
+                    this.hp = GamePartController.giveMinionHpWithName(numberOfCardInBattleGround, alliance);
+                    this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround, alliance);
+                }
             }
 
-            graphics2D.drawString(this.hp + "", 73, 98);
-            graphics2D.drawString(this.attackPower + "", 10, 98);
+            if (this.typeOfCard.equalsIgnoreCase("weapon")) {
+                graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 15));
+                graphics2D.drawString(this.hp + "", 68, 93);
+                graphics2D.drawString(this.attackPower + "", 7, 93);
+            } else {
+                graphics2D.drawString(this.hp + "", 73, 98);
+                graphics2D.drawString(this.attackPower + "", 10, 98);
+            }
+
 
             if (entered) {
                 int r = this.getWidth() / 4;
