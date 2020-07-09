@@ -2,6 +2,7 @@ package Models.Player;
 
 import Models.Cards.CardClasses.*;
 import Models.Heroes.Heroes;
+import Models.Heroes.Mage;
 
 import java.util.ArrayList;
 import java.util.Collections;

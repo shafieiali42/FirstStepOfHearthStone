@@ -6,7 +6,7 @@ public class BattleAxe extends Weapon {
 
     @Override
     public BattleAxe copy() {
-        System.out.println("Copy of BattleAxe:))");
+//        System.out.println("Copy of BattleAxe:))");
         BattleAxe copy = new BattleAxe();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

@@ -1,0 +1,32 @@
+Jul 10, 2020 1:15:41 AM Controller.PlayerController signUp
+INFO: USER: x
+Jul 10, 2020 1:15:42 AM Controller.PlayerController signUp
+INFO: CREATED_AT:2020/07/10 01:15:41
+Jul 10, 2020 1:15:42 AM Controller.PlayerController signUp
+INFO: PASSWORD: x
+Jul 10, 2020 1:15:42 AM Controller.PlayerController signUp
+INFO: sign_up x
+Jul 10, 2020 1:15:43 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 1:15:50 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 10, 2020 1:15:58 AM Controller.Administer selectMainDeck
+INFO: select x for main deck
+Jul 10, 2020 1:16:02 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 10, 2020 1:16:05 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 1:16:06 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 1:16:46 AM Controller.PlayerController signUp
+INFO: USER: x
+Jul 10, 2020 1:16:46 AM Controller.PlayerController signUp
+INFO: CREATED_AT:2020/07/10 01:16:46
+Jul 10, 2020 1:16:46 AM Controller.PlayerController signUp
+INFO: PASSWORD: x
+Jul 10, 2020 1:16:46 AM Controller.PlayerController signUp
+INFO: sign_up x
+Jul 10, 2020 1:16:48 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 1:16:55 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards

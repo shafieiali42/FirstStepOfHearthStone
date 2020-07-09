@@ -11,20 +11,31 @@ public  class Heroes {
 
     }
 
+    public void print(){
+        System.out.println("Heroes");
+    }
+
     private String name;
     private int healthPower;
+    private int attackPower;
+    private int firstHealthPower;
     private String description;
     private ArrayList<Cards> DeckOfHero = new ArrayList<Cards>();
     private boolean isLock;
-    private int attackPower;
     private int shield;
     private boolean canBeAttacked = true;
     private HeroPower heroPower;
 
 
+    public int getFirstHealthPower() {
+        return firstHealthPower;
+    }
 
+    public void setFirstHealthPower(int firstHealthPower) {
+        this.firstHealthPower = firstHealthPower;
+    }
 
-     public HeroPower getHeroPower() {
+    public HeroPower getHeroPower() {
           return heroPower;
      }
 

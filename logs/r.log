@@ -76,3 +76,217 @@ Jul 04, 2020 8:58:07 PM View.Gui.Mapper endTurn
 INFO: End turn
 Jul 04, 2020 8:58:25 PM View.Gui.Mapper playCard
 INFO: PlayMinion
+Jul 10, 2020 1:28:47 AM Controller.PlayerController signUp
+INFO: USER: r
+Jul 10, 2020 1:28:47 AM Controller.PlayerController signUp
+INFO: CREATED_AT:2020/07/10 01:28:47
+Jul 10, 2020 1:28:47 AM Controller.PlayerController signUp
+INFO: PASSWORD: r
+Jul 10, 2020 1:28:47 AM Controller.PlayerController signUp
+INFO: sign_up r
+Jul 10, 2020 1:28:48 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 1:28:56 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 10, 2020 1:29:07 AM Controller.Administer selectMainDeck
+INFO: select r for main deck
+Jul 10, 2020 1:29:10 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 10, 2020 1:29:13 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 1:29:14 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 1:29:27 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 1:29:41 AM Controller.Administer selectMainDeck
+INFO: select p for main deck
+Jul 10, 2020 1:29:43 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 10, 2020 1:29:44 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 1:29:46 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 1:29:56 AM Controller.PlayerController logOut
+INFO: Log_out r
+Jul 10, 2020 1:30:09 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 10, 2020 1:30:12 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 1:30:24 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 1:30:27 AM Controller.Administer selectMainDeck
+INFO: select r for main deck
+Jul 10, 2020 1:30:29 AM View.Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck 
+Jul 10, 2020 1:30:31 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 1:30:32 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 1:32:36 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 10, 2020 1:32:41 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 1:32:44 AM Controller.Administer selectMainDeck
+INFO: select r for main deck
+Jul 10, 2020 1:32:46 AM View.Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck 
+Jul 10, 2020 1:32:48 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 1:32:50 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 1:37:32 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 10, 2020 1:37:33 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 1:37:36 AM Controller.Administer selectMainDeck
+INFO: select r for main deck
+Jul 10, 2020 1:42:56 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 10, 2020 1:42:58 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 1:43:01 AM Controller.Administer selectMainDeck
+INFO: select r for main deck
+Jul 10, 2020 1:48:12 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 10, 2020 1:48:16 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 1:48:19 AM Controller.Administer selectMainDeck
+INFO: select r for main deck
+Jul 10, 2020 1:48:21 AM View.Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck 
+Jul 10, 2020 1:48:23 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 1:48:25 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 1:50:16 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 10, 2020 1:50:18 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 1:50:30 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Mage cards
+Jul 10, 2020 1:50:32 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 10, 2020 1:50:41 AM Controller.Administer selectMainDeck
+INFO: select x for main deck
+Jul 10, 2020 1:50:43 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 10, 2020 1:50:45 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 1:50:46 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 1:53:39 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 10, 2020 1:53:40 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 1:53:45 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 1:53:48 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 1:53:54 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 1:53:57 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 10, 2020 1:54:07 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 1:54:16 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 10, 2020 1:54:39 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 1:54:40 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 1:54:48 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 1:54:49 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 1:54:52 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 10, 2020 1:55:22 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 1:55:23 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 10, 2020 1:55:38 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 1:58:57 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 10, 2020 1:58:59 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 1:59:05 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 10, 2020 1:59:15 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 10, 2020 1:59:20 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 1:59:23 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 1:59:29 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 1:59:32 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 10, 2020 1:59:42 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 1:59:55 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 1:59:57 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 2:00:02 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 2:00:34 AM Controller.Administer selectMainDeck
+INFO: select rr for main deck
+Jul 10, 2020 2:00:37 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 10, 2020 2:00:38 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 2:00:41 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 2:00:52 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 2:00:56 AM Controller.PlayerController logOut
+INFO: Log_out r
+Jul 10, 2020 2:01:17 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 10, 2020 2:01:18 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 2:01:40 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 2:01:48 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 10, 2020 2:01:52 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Warlock cards
+Jul 10, 2020 2:01:54 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 10, 2020 2:02:09 AM Controller.Administer selectMainDeck
+INFO: select w for main deck
+Jul 10, 2020 2:02:11 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 10, 2020 2:02:13 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 2:02:15 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 2:02:33 AM Controller.PlayerController logOut
+INFO: Log_out r
+Jul 10, 2020 2:04:03 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 10, 2020 2:04:07 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 2:04:12 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 10, 2020 2:04:23 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 2:04:26 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 2:04:35 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 10, 2020 2:05:15 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 2:05:29 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 2:05:33 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 10, 2020 2:06:09 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 2:06:16 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 2:06:27 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 2:06:34 AM View.Gui.Mapper endTurn
+INFO: End turn

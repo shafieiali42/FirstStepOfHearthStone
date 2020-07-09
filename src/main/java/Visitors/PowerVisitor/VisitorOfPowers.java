@@ -10,16 +10,37 @@ import java.util.ArrayList;
 
 public interface VisitorOfPowers {
 
-    void visit(MageHeroPower mageHeroPower);
-    void visit(RogueHeroPower rogueHeroPower,
-               InGamePlayer player,
-               ArrayList<Minion>friendlyBattleGround,
+    void visit(MageHeroPower mageHeroPower, InGamePlayer player,
+               ArrayList<Minion> friendlyBattleGround,
                ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards,
                ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards,
                ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero);
-    void visit(WarlockHeroPower warlockHeroPower);
-    void visit(HunterHeroPower hunterHeroPower);
-    void visit(PriestHeroPower priestHeroPower);
+
+    void visit(RogueHeroPower rogueHeroPower,
+               InGamePlayer player,
+               ArrayList<Minion> friendlyBattleGround,
+               ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards,
+               ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards,
+               ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero);
+
+
+    void visit(WarlockHeroPower warlockHeroPower, InGamePlayer player,
+               ArrayList<Minion> friendlyBattleGround,
+               ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards,
+               ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards,
+               ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero);
+
+    void visit(HunterHeroPower hunterHeroPower, InGamePlayer player,
+               ArrayList<Minion> friendlyBattleGround,
+               ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards,
+               ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards,
+               ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero);
+
+    void visit(PriestHeroPower priestHeroPower, InGamePlayer player,
+               ArrayList<Minion> friendlyBattleGround,
+               ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards,
+               ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards,
+               ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero);
 
 
 }

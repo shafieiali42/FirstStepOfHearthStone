@@ -10,3 +10,23 @@ Jul 04, 2020 9:59:10 PM Controller.Administer writeLog
 INFO: Navigate into collection page
 Jul 04, 2020 9:59:27 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
 INFO: Show Neutral cards
+Jul 10, 2020 12:35:44 AM Controller.PlayerController signUp
+INFO: USER: p
+Jul 10, 2020 12:35:44 AM Controller.PlayerController signUp
+INFO: CREATED_AT:2020/07/10 00:35:44
+Jul 10, 2020 12:35:44 AM Controller.PlayerController signUp
+INFO: PASSWORD: p
+Jul 10, 2020 12:35:44 AM Controller.PlayerController signUp
+INFO: sign_up p
+Jul 10, 2020 12:35:46 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 12:35:55 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 10, 2020 12:36:04 AM Controller.Administer selectMainDeck
+INFO: select pp for main deck
+Jul 10, 2020 12:36:06 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 10, 2020 12:36:09 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 12:36:11 AM Controller.Administer writeLog
+INFO: Navigate into play page

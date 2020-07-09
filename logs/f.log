@@ -1,0 +1,78 @@
+Jul 10, 2020 12:51:34 AM Controller.PlayerController signUp
+INFO: USER: f
+Jul 10, 2020 12:51:34 AM Controller.PlayerController signUp
+INFO: CREATED_AT:2020/07/10 00:51:34
+Jul 10, 2020 12:51:34 AM Controller.PlayerController signUp
+INFO: PASSWORD: f
+Jul 10, 2020 12:51:34 AM Controller.PlayerController signUp
+INFO: sign_up f
+Jul 10, 2020 12:51:35 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 12:51:45 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 10, 2020 12:51:55 AM Controller.Administer selectMainDeck
+INFO: select h for main deck
+Jul 10, 2020 12:51:58 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 10, 2020 12:52:01 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 12:52:03 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 12:52:13 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 12:52:27 AM Controller.Administer selectMainDeck
+INFO: select p for main deck
+Jul 10, 2020 12:52:29 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 10, 2020 12:52:31 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 12:52:32 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 12:52:45 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 12:52:47 AM Controller.Administer selectMainDeck
+INFO: select h for main deck
+Jul 10, 2020 12:52:49 AM View.Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck p
+Jul 10, 2020 12:52:51 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 12:52:53 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 12:53:17 AM Controller.PlayerController logOut
+INFO: Log_out f
+Jul 10, 2020 12:53:28 AM Controller.PlayerController signIn
+INFO: sign_in f
+Jul 10, 2020 12:53:29 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 12:53:40 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 12:53:42 AM Controller.Administer selectMainDeck
+INFO: select p for main deck
+Jul 10, 2020 12:53:44 AM View.Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck 
+Jul 10, 2020 12:53:45 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 12:53:47 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 12:55:41 AM Controller.PlayerController signIn
+INFO: sign_in f
+Jul 10, 2020 12:55:44 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 12:58:53 AM Controller.PlayerController signIn
+INFO: sign_in f
+Jul 10, 2020 1:00:56 AM Controller.PlayerController signIn
+INFO: sign_in f
+Jul 10, 2020 1:01:05 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 1:03:16 AM Controller.PlayerController signIn
+INFO: sign_in f
+Jul 10, 2020 1:03:18 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 1:05:53 AM Controller.PlayerController signIn
+INFO: sign_in f
+Jul 10, 2020 1:06:02 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 1:11:01 AM Controller.PlayerController signIn
+INFO: sign_in f
+Jul 10, 2020 1:11:06 AM Controller.Administer writeLog
+INFO: Navigate into play page

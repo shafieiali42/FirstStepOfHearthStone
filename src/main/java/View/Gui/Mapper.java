@@ -14,6 +14,8 @@ import Logic.PlayLogic.Game;
 import Models.Cards.CardClasses.Weapon;
 import Utility.Sounds;
 import Visitors.CardVisitors.*;
+import Visitors.PowerVisitor.HeroPowerVisitor;
+import Visitors.PowerVisitor.TargetVisitorOfPowers;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -109,6 +111,12 @@ public class Mapper {
                 Mapper.getInstance().playCard(Game.getInstance().getPlayingCard(), 6);
             }
         },
+        PLAY_HERO_POWER{
+            @Override
+            public void execute() {
+                Mapper.getInstance().playHeroPower();
+            }
+        },
         END_TURN {
             @Override
             public void execute() {
@@ -135,6 +143,43 @@ public class Mapper {
         LogPanel.getInstance().repaint();
         LogPanel.getInstance().revalidate();
     }
+
+
+
+    public void playHeroPower(){
+        Game.getInstance().getCurrentPlayer().setMana(Game.getInstance().getCurrentPlayer().getMana()-
+                Game.getInstance().getCurrentPlayer().getHero().getHeroPower().getMana());
+
+        //for heroPowers witch doesnt need target
+
+        Game.getInstance().getCurrentPlayer().getHero().getHeroPower().accept(new HeroPowerVisitor(),
+                Game.getInstance().getCurrentPlayer(),
+                Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                Game.getInstance().getFormerPlayer().getBattleGroundCards(),
+                Game.getInstance().getCurrentPlayer().getHandsCards(),
+                Game.getInstance().getFormerPlayer().getHandsCards(),
+                Game.getInstance().getCurrentPlayer().getDeckCards(),
+                Game.getInstance().getFormerPlayer().getDeckCards(),
+                new Minion(), new Heroes());
+
+        //for heroPowers witch need target
+        Game.getInstance().getCurrentPlayer().getHero().getHeroPower().accept(new TargetVisitorOfPowers(),
+                Game.getInstance().getCurrentPlayer(),
+                Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                Game.getInstance().getFormerPlayer().getBattleGroundCards(),
+                Game.getInstance().getCurrentPlayer().getHandsCards(),
+                Game.getInstance().getFormerPlayer().getHandsCards(),
+                Game.getInstance().getCurrentPlayer().getDeckCards(),
+                Game.getInstance().getFormerPlayer().getDeckCards(),
+                new Minion(), new Heroes());
+
+
+
+
+    }
+
+
+
 
     public static void playCard(Cards playingCard) {
         Game.getInstance().getCurrentPlayer().setMana(Game.getInstance().getCurrentPlayer().getMana() - playingCard.getManaCost());
@@ -188,6 +233,9 @@ public class Mapper {
 
 
     public static void drawCard() {
+        System.out.println("HEROES:");
+        System.out.println(Game.getInstance().getCurrentPlayer().getHero().getName());
+        System.out.println(Game.getInstance().getFormerPlayer().getHero().getName());
         if (Game.getInstance().getCurrentPlayer().getHandsCards().size() < 12) {
             if (Game.getInstance().getCurrentPlayer().getDeckCards().size() == 0) {
                 JOptionPane.showMessageDialog(null,
@@ -206,7 +254,7 @@ public class Mapper {
 
         for (Minion minion : Game.getInstance().getCurrentPlayer().getBattleGroundCards()) {
             minion.accept(new DrawCardVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                    Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),minion,new Heroes(), new Minion(),
+                    Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),minion,null, new Minion(),
                     "");
         }
 
@@ -245,7 +293,6 @@ public class Mapper {
         Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/EndTurn.wav");
         ControllerOfMainComponents.currentPlayer.getLoggerOfMyPlayer().info("End turn");
     }
-
 
     public static void playMinion(Minion playingCard, int k) {
         boolean minionPlayed = false;
@@ -299,14 +346,14 @@ public class Mapper {
         playCard(playingCard);
 
         playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), new Minion(),new Heroes(), new Minion(),"");
+                Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), new Minion(),null, new Minion(),"");
 
         playingCard.accept(new DrawCardVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),new Minion(),new Heroes(), new Minion(),"");
+                Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),new Minion(),null, new Minion(),"");
 
         playingCard.accept(new ActionVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                 Game.getInstance().getCurrentPlayer().getHandsCards(),
-                Game.getInstance().getCurrentPlayer().getDeckCards(), new Minion(),new Heroes(), new Minion(),"");
+                Game.getInstance().getCurrentPlayer().getDeckCards(), new Minion(),null, new Minion(),"");
 
         playingCard.accept(new TargetVisitor(),Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                 Game.getInstance().getCurrentPlayer().getHandsCards(),Game.getInstance().getCurrentPlayer().getDeckCards(),
@@ -317,7 +364,7 @@ public class Mapper {
         Game.getInstance().getCurrentPlayer().setCurrentWeapon((Weapon) playingCard);
         playCard(playingCard);
         playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),new Minion(),new Heroes(), new Minion(),"");
+                Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),new Minion(),null, new Minion(),"");
 
 
     }

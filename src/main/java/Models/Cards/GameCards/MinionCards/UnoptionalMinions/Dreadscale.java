@@ -18,7 +18,7 @@ public class Dreadscale extends Minion {
 
     @Override
     public Dreadscale  copy() {
-        System.out.println("Copy of Dreadscale:))");
+//        System.out.println("Copy of Dreadscale:))");
         Dreadscale copy = new Dreadscale();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

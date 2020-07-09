@@ -14,7 +14,7 @@ public class Sathrovarr extends Minion {
 
     @Override
     public Sathrovarr  copy() {
-        System.out.println("Copy of Sathrovarr:))");
+//        System.out.println("Copy of Sathrovarr:))");
         Sathrovarr copy = new Sathrovarr();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

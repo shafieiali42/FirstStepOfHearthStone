@@ -8,11 +8,13 @@ import Models.HeroPower.PriestHeroPower;
 import java.util.ArrayList;
 
 public class Priest extends Heroes {
+
     private static ArrayList<Cards> specialCardsOfPriest = new ArrayList<Cards>();
-    private static Priest instance = new Priest();
-    public static Priest getInstance(){
-        return instance;
-    }
+
+//    private static Priest instance = new Priest();
+//    public static Priest getInstance(){
+//        return instance;
+//    }
 
 
     public Priest(){

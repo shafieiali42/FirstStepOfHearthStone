@@ -68,3 +68,13 @@ Jul 03, 2020 5:11:12 AM View.Gui.Mapper endTurn
 INFO: End turn
 Jul 03, 2020 5:11:16 AM View.Gui.Mapper playCard
 INFO: Play minion
+Jul 10, 2020 1:28:23 AM Controller.PlayerController signUp
+INFO: USER: b
+Jul 10, 2020 1:28:23 AM Controller.PlayerController signUp
+INFO: CREATED_AT:2020/07/10 01:28:23
+Jul 10, 2020 1:28:23 AM Controller.PlayerController signUp
+INFO: PASSWORD: b
+Jul 10, 2020 1:28:23 AM Controller.PlayerController signUp
+INFO: sign_up b
+Jul 10, 2020 1:28:25 AM Controller.Administer writeLog
+INFO: Navigate into collection page

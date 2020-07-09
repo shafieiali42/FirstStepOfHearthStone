@@ -25,7 +25,17 @@ public class Player {
     @Expose(serialize = true, deserialize = true)
     private int money;
     @Expose(serialize = true, deserialize = true)
-    private Heroes currentHero = Mage.getInstance();
+    private  Mage mage;
+    @Expose(serialize = true, deserialize = true)
+    private  Rogue rogue;
+    @Expose(serialize = true, deserialize = true)
+    private   Warlock warlock;
+    @Expose(serialize = true, deserialize = true)
+    private  Hunter hunter;
+    @Expose(serialize = true, deserialize = true)
+    private  Priest priest;
+    @Expose(serialize = true, deserialize = true)
+    private Heroes currentHero;
     @Expose(serialize = true, deserialize = true)
     private ArrayList<Cards> availableCardsWithThisSituation = new ArrayList<Cards>();
     @Expose(serialize = true, deserialize = true)
@@ -40,7 +50,6 @@ public class Player {
     private transient Logger loggerOfMyPlayer;
     @Expose(serialize = true, deserialize = true)
     private ArrayList<Cards> allCardsOfPlayer = new ArrayList<Cards>();
-
     @Expose(serialize = true, deserialize = true)
     private ArrayList<Cards> SalableCards = new ArrayList<Cards>();
     @Expose(serialize = true, deserialize = true)
@@ -51,8 +60,6 @@ public class Player {
     private ArrayList<Cards> availableCardsThatWeCanAddIntoOurDeck = new ArrayList<Cards>();
     @Expose(serialize = true, deserialize = true)
     private ArrayList<Cards> lockCards = new ArrayList<Cards>();//TODO needs to be init:))
-    //    @Expose(serialize = true, deserialize = true)
-//    private ArrayList<Cards> unLockCards = new ArrayList<Cards>();//TODO needs to be init:))
     @Expose(serialize = true, deserialize = true)
     private ArrayList<Deck> allDecksOfPlayer = new ArrayList<Deck>();
     @Expose(serialize = true, deserialize = true)
@@ -62,11 +69,19 @@ public class Player {
     public Player(String userName, String passWord) throws IOException {
         this.userName = userName;
         this.passWord = passWord;
-        this.availableHeroes.add(Mage.getInstance());
+        this.mage=new Mage();
+        this.rogue=new Rogue();
+        this.warlock=new Warlock();
+        this.hunter=new Hunter();
+        this.priest=new Priest();
+        this.currentHero=this.mage;
+        this.availableHeroes.add(mage);
+        this.availableHeroes.add(rogue);
+        this.availableHeroes.add(warlock);
+        this.availableHeroes.add(hunter);
+        this.availableHeroes.add(priest);
         this.setAllCardsOfPlayer();
         this.setNeutralCardsOfPlayer();
-//        this.availableHeroes.add(Rogue.getInstance());//TODO this hero is lock!
-//        this.availableHeroes.add(Warlock.getInstance());//TODO this hero is lock!
         this.setAvailableCardsWithThisSituation();
         this.setAvailableCardsThatWeCanAddIntoOurDeck();
         setBuyableCards();
@@ -74,8 +89,6 @@ public class Player {
         setLoggerOfMyPlayer();
         this.money = 500;
         currentDeck = new Deck();
-
-
     }
 
 
@@ -86,10 +99,6 @@ public class Player {
     public ArrayList<Cards> getLockCards() {
         return lockCards;
     }
-
-//    public ArrayList<Cards> getUnLockCards() {
-//        return unLockCards;
-//    }
 
     public ArrayList<Cards> getAllCardsOfPlayer() {
         return allCardsOfPlayer;
@@ -483,9 +492,47 @@ public class Player {
         this.currentDeck = currentDeck;
     }
 
-//    @Override
-//    public Object clone() throws CloneNotSupportedException {
-//        return super.clone();
-//    }
+    public Mage getMage() {
+        return mage;
+    }
 
+    public void setMage(Mage mage) {
+        this.mage = mage;
+    }
+
+    public Rogue getRogue() {
+        return rogue;
+    }
+
+    public void setRogue(Rogue rogue) {
+        this.rogue = rogue;
+    }
+
+    public Warlock getWarlock() {
+        return warlock;
+    }
+
+    public void setWarlock(Warlock warlock) {
+        this.warlock = warlock;
+    }
+
+    public Hunter getHunter() {
+        return hunter;
+    }
+
+    public void setHunter(Hunter hunter) {
+        this.hunter = hunter;
+    }
+
+    public Priest getPriest() {
+        return priest;
+    }
+
+    public void setPriest(Priest priest) {
+        this.priest = priest;
+    }
+
+    public void setCurrentHero(Heroes currentHero) {
+        this.currentHero = currentHero;
+    }
 }

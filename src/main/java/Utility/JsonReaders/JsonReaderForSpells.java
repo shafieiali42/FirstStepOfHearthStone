@@ -43,7 +43,7 @@ public class JsonReaderForSpells {
         Gson gson=new Gson();
         for (SpellNames spellNames:SpellNames.values()){
             Class classOfCard = map.get(spellNames.name());
-            System.out.println(spellNames.name()+"nnnnnnnnnnnnn");
+//            System.out.println(spellNames.name()+"nnnnnnnnnnnnn");
             Spell spell =(Spell)gson.fromJson(new FileReader("MinionSpellsWeapons/SpellCards/"+spellNames.name()+".json"),classOfCard);
             Spell.getSpells().add(spell);
         }

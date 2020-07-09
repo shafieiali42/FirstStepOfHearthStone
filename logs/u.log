@@ -1,0 +1,50 @@
+Jul 10, 2020 12:47:24 AM Controller.PlayerController signUp
+INFO: USER: u
+Jul 10, 2020 12:47:24 AM Controller.PlayerController signUp
+INFO: CREATED_AT:2020/07/10 00:47:24
+Jul 10, 2020 12:47:24 AM Controller.PlayerController signUp
+INFO: PASSWORD: u
+Jul 10, 2020 12:47:24 AM Controller.PlayerController signUp
+INFO: sign_up u
+Jul 10, 2020 12:47:25 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 12:47:36 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 10, 2020 12:47:48 AM Controller.Administer selectMainDeck
+INFO: select wa for main deck
+Jul 10, 2020 12:47:51 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 10, 2020 12:47:53 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 12:47:55 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 12:48:54 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 12:49:16 AM Controller.Administer selectMainDeck
+INFO: select hu for main deck
+Jul 10, 2020 12:49:19 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 10, 2020 12:49:22 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 12:49:24 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 12:49:40 AM Controller.PlayerController logOut
+INFO: Log_out u
+Jul 10, 2020 12:49:58 AM Controller.PlayerController signIn
+INFO: sign_in u
+Jul 10, 2020 12:49:59 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 12:50:02 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 12:50:05 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 12:50:40 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 12:50:43 AM Controller.Administer selectMainDeck
+INFO: select wa for main deck
+Jul 10, 2020 12:50:45 AM View.Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck 
+Jul 10, 2020 12:50:46 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 12:50:48 AM Controller.Administer writeLog
+INFO: Navigate into play page

@@ -28,6 +28,25 @@ public class Game {
     private int targetOfSpell;
     private String allianceOfSpellsTarget;
 
+    private int targetOfHeroPower;
+    private String targetAllianceOfHeroPower;
+
+    public int getTargetOfHeroPower() {
+        return targetOfHeroPower;
+    }
+
+    public void setTargetOfHeroPower(int targetOfHeroPower) {
+        this.targetOfHeroPower = targetOfHeroPower;
+    }
+
+    public String getTargetAllianceOfHeroPower() {
+        return targetAllianceOfHeroPower;
+    }
+
+    public void setTargetAllianceOfHeroPower(String targetAllianceOfHeroPower) {
+        this.targetAllianceOfHeroPower = targetAllianceOfHeroPower;
+    }
+
     public String getAttackerAlliance() {
         return attackerAlliance;
     }
@@ -111,7 +130,7 @@ public class Game {
             DeckReader deckReader =new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
             friendlyPlayer = new InGamePlayer(ControllerOfMainComponents.currentPlayer);
             enemyPlayer = new InGamePlayer();
-            enemyPlayer.setHero(Mage.getInstance());
+            enemyPlayer.setHero(new Mage());
             enemyPlayer.setDeckCards(deckReader.getDeck("ENEMY"));
             enemyPlayer.initHandsCards();
             playingCard = new Cards();
@@ -123,7 +142,7 @@ public class Game {
             DeckReader deckReader =new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
             friendlyPlayer = new InGamePlayer(ControllerOfMainComponents.currentPlayer);
             enemyPlayer = new InGamePlayer();
-            enemyPlayer.setHero(Mage.getInstance());
+            enemyPlayer.setHero(new Mage());
             enemyPlayer.setDeckCards(deckReader.getDeck("ENEMY"));
             playingCard = new Cards();
             currentPlayer=friendlyPlayer;
@@ -134,12 +153,12 @@ public class Game {
             DeckReader deckReader =new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
             friendlyPlayer =new InGamePlayer();
             friendlyPlayer.setDeckCards(deckReader.getDeck("FRIEND"));
-            friendlyPlayer.setHero(Mage.getInstance());
+            friendlyPlayer.setHero(new Mage());
             friendlyPlayer.initPassiveToChoose();
             friendlyPlayer.initHandsCards();
             enemyPlayer = new InGamePlayer();
             enemyPlayer.setDeckCards(deckReader.getDeck("ENEMY"));
-            enemyPlayer.setHero(Mage.getInstance());
+            enemyPlayer.setHero(new Mage());
             enemyPlayer.initHandsCards();
             playingCard = new Cards();
             currentPlayer=friendlyPlayer;
@@ -149,7 +168,7 @@ public class Game {
         }else if (gameMode==4){//Two Player Game
             friendlyPlayer = new InGamePlayer(ControllerOfMainComponents.currentPlayer);
             enemyPlayer = new InGamePlayer();
-            enemyPlayer.setHero(Mage.getInstance());
+            enemyPlayer.setHero(new Mage());
             DeckReader deckReader =new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
             enemyPlayer.setDeckCards(deckReader.getDeck("ENEMY"));
             enemyPlayer.initHandsCards();

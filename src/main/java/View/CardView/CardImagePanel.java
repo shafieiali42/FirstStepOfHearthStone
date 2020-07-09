@@ -18,6 +18,7 @@ import View.Gui.Panels.ShopPanel.BuySellPanel;
 import View.Gui.Panels.ShopPanel.PanelToShowCardInBuySellPanel;
 import View.Gui.Panels.ShopPanel.ShopPage;
 import Visitors.CardVisitors.AfterSelectVisitor;
+import Visitors.PowerVisitor.AfterSelectPowerVisitor;
 import Visitors.PowerVisitor.HeroPowerVisitor;
 
 import javax.imageio.ImageIO;
@@ -262,6 +263,69 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
         }
 
 
+
+
+
+
+        if (ControllerOfMainComponents.getStatus().equals(Status.CHOOSE_TARGET_FOR_HERO_POWERS)){
+            if (SwingUtilities.isLeftMouseButton(e)){
+                int xCoordinateOfCard = e.getComponent().getX();
+                int yCoordinateOfCard = e.getComponent().getY();
+                String allianceOfSpellTarget;
+                if (yCoordinateOfCard <= 385) {
+                    allianceOfSpellTarget = "ENEMY";
+                } else {
+                    allianceOfSpellTarget = "FRIENDLY";
+                }
+                int number = 0;
+
+
+                if (this.typeOfCard.equalsIgnoreCase("hero")) {
+                    number = -2;
+                    numberOfCardInBattleGround = -2;
+
+                }else{
+                    if (xCoordinateOfCard > 45 && xCoordinateOfCard < 150) {
+                        number = 1;
+
+                    } else if (xCoordinateOfCard > 190 && xCoordinateOfCard < 295) {
+                        number = 2;
+
+                    } else if (xCoordinateOfCard > 335 && xCoordinateOfCard < 440) {
+                        number = 3;
+
+                    } else if (xCoordinateOfCard > 480 && xCoordinateOfCard < 585) {
+                        number = 4;
+
+                    } else if (xCoordinateOfCard > 625 && xCoordinateOfCard < 730) {
+                        number = 5;
+
+                    } else if (xCoordinateOfCard > 770 && xCoordinateOfCard < 830) {
+                        number = 6;
+
+                    } else if (xCoordinateOfCard > 915 && xCoordinateOfCard < 1010) {
+                        number = 7;
+
+                    }
+                }
+
+                Administer.setTargetForHeroPower(number, alliance);
+
+                Administer.getHeroPower().accept(new AfterSelectPowerVisitor(),Game.getInstance().getCurrentPlayer(),
+                        Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                        Game.getInstance().getFormerPlayer().getBattleGroundCards(),
+                       Game.getInstance().getCurrentPlayer().getHandsCards(),
+                        Game.getInstance().getFormerPlayer().getHandsCards(),
+                        Game.getInstance().getCurrentPlayer().getDeckCards(),
+                        Game.getInstance().getFormerPlayer().getDeckCards(),
+                        Administer.getTargetOfHeroPower(),
+                        Administer.getTargetOfHeroPowerWitchIsHero());
+
+
+                ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
+            }
+        }
+
         if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
             if (SwingUtilities.isLeftMouseButton(e)) {
                 int xCoordinateOfCard = e.getComponent().getX();
@@ -278,22 +342,10 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
 
                 if (this.typeOfCard.equalsIgnoreCase("heroPower")) {
-
-                    //for heroPowers witch doesnt need target
-                    Game.getInstance().getCurrentPlayer().getHero().getHeroPower().accept(new HeroPowerVisitor(),
-                            Game.getInstance().getCurrentPlayer(),
-                            Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                            Game.getInstance().getFormerPlayer().getBattleGroundCards(),
-                            Game.getInstance().getCurrentPlayer().getHandsCards(),
-                            Game.getInstance().getFormerPlayer().getHandsCards(),
-                            Game.getInstance().getCurrentPlayer().getDeckCards(),
-                            Game.getInstance().getFormerPlayer().getDeckCards(),
-                            new Minion(), new Heroes());
-
-
+                    Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_HERO_POWER);
+                    Mapper.getInstance().executeRequests();
                     number = -3;
                     numberOfCardInBattleGround = -3;
-
                 } else {
 
 
@@ -451,7 +503,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 Administer.getPlyingCardOfGameState().accept(new AfterSelectVisitor(),
                         Administer.getBattleGround(),
                         Administer.getHandCards(), Administer.getDeckCards(),
-                        new Minion(), new Heroes(), new Minion(), alliance);
+                        new Minion(), null, new Minion(), alliance);
             }
         }
         if (ControllerOfMainComponents.getStatus().equals(Status.FIRST_THREE_CARDS_PAGE)) {

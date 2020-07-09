@@ -8,7 +8,11 @@ import java.util.ArrayList;
 
 public class Warlock extends  Heroes {
     private static ArrayList<Cards> specialCardsOfWarlock = new ArrayList<Cards>();
-    private static Warlock instance = new Warlock();
+
+//    private static Warlock instance = new Warlock();
+//    public static Warlock getInstance(){
+//        return instance;
+//    }
 
     public Warlock(){
         this.setName("Warlock");
@@ -18,9 +22,6 @@ public class Warlock extends  Heroes {
         this.setIsLock(false);
         this.setHeroPower(new WarlockHeroPower());
         setSpecialCardsOfWarlock();
-    }
-    public static Warlock getInstance(){
-        return instance;
     }
 
     public static void setSpecialCardsOfWarlock() {

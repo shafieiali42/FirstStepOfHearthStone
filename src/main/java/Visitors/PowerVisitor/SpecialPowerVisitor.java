@@ -13,7 +13,7 @@ public class SpecialPowerVisitor implements VisitorOfPowers {
 
 
     @Override
-    public void visit(MageHeroPower mageHeroPower) {
+    public void visit(MageHeroPower mageHeroPower, InGamePlayer player, ArrayList<Minion> friendlyBattleGround, ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards, ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards, ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero) {
 
     }
 
@@ -29,20 +29,20 @@ public class SpecialPowerVisitor implements VisitorOfPowers {
 
     }
 
-
-
     @Override
-    public void visit(WarlockHeroPower warlockHeroPower) {
+    public void visit(WarlockHeroPower warlockHeroPower, InGamePlayer player, ArrayList<Minion> friendlyBattleGround, ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards, ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards, ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero) {
 
     }
 
     @Override
-    public void visit(HunterHeroPower hunterHeroPower) {
+    public void visit(HunterHeroPower hunterHeroPower, InGamePlayer player, ArrayList<Minion> friendlyBattleGround, ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards, ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards, ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero) {
 
     }
 
     @Override
-    public void visit(PriestHeroPower priestHeroPower) {
+    public void visit(PriestHeroPower priestHeroPower, InGamePlayer player, ArrayList<Minion> friendlyBattleGround, ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards, ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards, ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero) {
 
     }
+
+
 }

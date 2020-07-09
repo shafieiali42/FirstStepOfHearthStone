@@ -6,7 +6,7 @@ public class Gearblade extends Weapon {
 
     @Override
     public Gearblade copy() {
-        System.out.println("Copy of Gearblade:))");
+//        System.out.println("Copy of Gearblade:))");
         Gearblade copy = new Gearblade();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

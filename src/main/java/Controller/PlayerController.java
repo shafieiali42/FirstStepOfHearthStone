@@ -1,6 +1,7 @@
 package Controller;
 
 
+import Models.Heroes.*;
 import Models.Player.Player;
 import Models.Player.*;
 
@@ -27,6 +28,39 @@ public class PlayerController {
             if (userName.equals(player.getUserName()) && passWord.equals(player.getPassWord())) {
                 valiUserNameAndPassword = true;
                 ControllerOfMainComponents.currentPlayer = player;
+                switch (ControllerOfMainComponents.currentPlayer.getCurrentHero().getName()){
+                    case "Mage":
+                        Mage mage=new Mage();
+                        ControllerOfMainComponents.currentPlayer.setMage(mage);
+                        ControllerOfMainComponents.currentPlayer.getAvailableHeroes().add(mage);
+                        ControllerOfMainComponents.currentPlayer.setCurrentHero(mage);
+                        break;
+                    case "Rogue":
+                        Rogue rogue=new Rogue();
+                        ControllerOfMainComponents.currentPlayer.setRogue(rogue);
+                        ControllerOfMainComponents.currentPlayer.getAvailableHeroes().add(rogue);
+                        ControllerOfMainComponents.currentPlayer.setCurrentHero(rogue);
+                        break;
+                    case "Warlock":
+                        Warlock warlock=new Warlock();
+                        ControllerOfMainComponents.currentPlayer.setWarlock(warlock);
+                        ControllerOfMainComponents.currentPlayer.getAvailableHeroes().add(warlock);
+                        ControllerOfMainComponents.currentPlayer.setCurrentHero(warlock);
+                        break;
+                    case "Hunter":
+                        Hunter hunter=new Hunter();
+                        ControllerOfMainComponents.currentPlayer.setHunter(hunter);
+                        ControllerOfMainComponents.currentPlayer.getAvailableHeroes().add(hunter);
+                        ControllerOfMainComponents.currentPlayer.setCurrentHero(hunter);
+                        break;
+                    case "Priest":
+                        Priest priest=new Priest();
+                        ControllerOfMainComponents.currentPlayer.setPriest(priest);
+                        ControllerOfMainComponents.currentPlayer.getAvailableHeroes().add(priest);
+                        ControllerOfMainComponents.currentPlayer.setCurrentHero(priest);
+                        break;
+                }
+
                 ControllerOfMainComponents.currentPlayer.setSigninOrSignup("Signin");
                 player.setSigninOrSignup("Signin");
                 ControllerOfMainComponents.currentPlayer.setLoggerOfMyPlayer();

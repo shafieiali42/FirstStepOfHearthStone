@@ -8,10 +8,10 @@ import java.util.ArrayList;
 
 public class Hunter extends Heroes {
     private static ArrayList<Cards> specialCardsOfHunter = new ArrayList<Cards>();
-    private static Hunter instance = new Hunter();
-    public static Hunter getInstance(){
-        return instance;
-    }
+//    private static Hunter instance = new Hunter();
+//    public static Hunter getInstance(){
+//        return instance;
+//    }
 
 
     public Hunter(){

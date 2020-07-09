@@ -8,11 +8,12 @@ import java.util.ArrayList;
 
 public class Mage extends Heroes {
     private static ArrayList<Cards> specialCardsOfMage = new ArrayList<Cards>();
-    private static Mage instance = new Mage();
-    public static Mage getInstance(){
-        return instance;
-    }
 
+
+    @Override
+    public void print() {
+//        System.out.println("Mage");
+    }
 
     public Mage(){
         this.setName("Mage");
@@ -44,5 +45,9 @@ public class Mage extends Heroes {
     public static ArrayList<Cards> getSpecialCardsOfMage() {
         return specialCardsOfMage;
     }
+
+
+
+
 
 }

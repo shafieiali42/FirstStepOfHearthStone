@@ -67,6 +67,7 @@ public class CategoryPanelOfChangeDeck extends JPanel {
 
     private void selectDeck() {
 //        CLI.currentPlayer.setCurrentDeck(DeckPage.getInstance().getDeckTOChange());
+        System.out.println("select deck");
         Administer.selectMainDeck();
         JOptionPane.showMessageDialog(null, "Your Deck is:" + DeckPage.getInstance().getNameOfDeckToChange());
 //        CLI.currentPlayer.getLoggerOfMyPlayer().info("select " + DeckPage.getInstance().getDeckTOChange().getName() + " for main deck");

@@ -14,7 +14,7 @@ public class Locusts extends Minion {
 
     @Override
     public Locusts  copy() {
-        System.out.println("Copy of Locusts:))");
+//        System.out.println("Copy of Locusts:))");
         Locusts copy = new Locusts();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());
