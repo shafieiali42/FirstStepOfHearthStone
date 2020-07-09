@@ -2,20 +2,26 @@ package Models.Heroes;
 
 
 import Models.Cards.CardClasses.Cards;
+import Models.HeroPower.HunterHeroPower;
+import Models.HeroPower.PriestHeroPower;
+
 import java.util.ArrayList;
 
 public class Priest extends Heroes {
     private static ArrayList<Cards> specialCardsOfPriest = new ArrayList<Cards>();
     private static Priest instance = new Priest();
-    private Priest(){
-        this.name="Priest";
-        this.healthPower=30;
-        this.description ="";//TODO needs to be initialize
-        this.isLock = true;
-        setSpecialCardsOfPriest();
-    }
     public static Priest getInstance(){
         return instance;
+    }
+
+
+    public Priest(){
+        this.setName("Priest");
+        this.setHealthPower(30);
+        this.setDescription("");//TODO needs to be initialize
+        this.setIsLock( true);
+        this.setHeroPower(new PriestHeroPower());
+        setSpecialCardsOfPriest();
     }
 
 

@@ -9,6 +9,7 @@ import Logic.Status;
 
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.CardClasses.Weapon;
+import Models.HeroPower.HeroPower;
 import View.Gui.Panels.CollectionPages.DeckPage;
 import View.Gui.Panels.CollectionPages.DeckViewer;
 import View.Gui.Panels.CollectionPages.LittleCardPanel;
@@ -29,6 +30,7 @@ import Utility.Sounds;
 import View.CardView.CardImagePanel;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
 import View.Gui.Panels.StatusPanel.ShowDeckInfoPanel;
+import Visitors.PowerVisitor.HeroPowerVisitor;
 
 import javax.swing.*;
 import java.awt.*;
@@ -46,123 +48,124 @@ public class Administer {
     //gameState
 
 
-    public static void setTargetOfSpell(int number, String alliance) {
-        Game.getInstance().setTargetOfSpell(number);
-        Game.getInstance().setAllianceOfSpellsTarget(alliance);
-    }
+    public static void attack(int attacker, int target, String attackerAlliance, String targetAlliance) {
 
-    public static Minion getTargetOfSpell() {
-        if (Game.getInstance().getAllianceOfSpellsTarget() == null) {
-            return new Minion();
-        } else if (Game.getInstance().getTargetOfSpell() == 0) {
-            return new Minion();
+
+        if (attacker == -5) {
+            return;
+        } else if (target == -5) {
+            return;
         }
-        if (Game.getInstance().getAllianceOfSpellsTarget().equalsIgnoreCase("FRIENDLY")) {
-            return Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(Game.getInstance().getTargetOfSpell() - 1);
-        } else if (Game.getInstance().getAllianceOfSpellsTarget().equalsIgnoreCase("ENEMY")) {
-            return Game.getInstance().getEnemyPlayer().getBattleGroundCards().get(Game.getInstance().getTargetOfSpell() - 1);
+
+
+        if (attacker == -4) {//heroPower
+            if (target == -3) { //heroPower vs hero
+                Heroes hero = Game.getInstance().getCurrentPlayer().getHero();
+                HeroPower heroPower = Game.getInstance().getCurrentPlayer().getHero().getHeroPower();
+                //todo execute heroPower
+                removeDeadCharacters();
+            } else { //heroPower vs minion
+
+                if (targetAlliance.equalsIgnoreCase("FRIENDLY")) {
+                    Minion minion = Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(target);
+                    HeroPower heroPower = Game.getInstance().getCurrentPlayer().getHero().getHeroPower();
+                    heroPower.accept(new HeroPowerVisitor(), Game.getInstance().getCurrentPlayer(),
+                            Game.getInstance().getFriendlyPlayer().getBattleGroundCards(),
+                            Game.getInstance().getEnemyPlayer().getBattleGroundCards(),
+                            Game.getInstance().getFriendlyPlayer().getHandsCards(),
+                            Game.getInstance().getEnemyPlayer().getHandsCards(),
+                            Game.getInstance().getFriendlyPlayer().getDeckCards(),
+                            Game.getInstance().getEnemyPlayer().getDeckCards(),
+                            minion, new Heroes());
+                    removeDeadCharacters();
+
+
+                } else {
+                    Minion minion = Game.getInstance().getEnemyPlayer().getBattleGroundCards().get(target);
+                    HeroPower heroPower = Game.getInstance().getCurrentPlayer().getHero().getHeroPower();
+                    heroPower.accept(new HeroPowerVisitor(),
+                            Game.getInstance().getCurrentPlayer(),
+                            Game.getInstance().getFriendlyPlayer().getBattleGroundCards(),
+                            Game.getInstance().getEnemyPlayer().getBattleGroundCards(),
+                            Game.getInstance().getFriendlyPlayer().getHandsCards(),
+                            Game.getInstance().getEnemyPlayer().getHandsCards(),
+                            Game.getInstance().getFriendlyPlayer().getDeckCards(),
+                            Game.getInstance().getEnemyPlayer().getDeckCards(),
+                            minion, new Heroes());
+                    removeDeadCharacters();
+                }
+                //todo execute heroPower
+            }
+
+
+        } else if (attacker == -2) {//Weapon
+
+            if (attackerAlliance.equalsIgnoreCase(targetAlliance)) {
+                return;
+            }
+
+            if (target == -3) {
+                Heroes hero = Game.getInstance().getFormerPlayer().getHero();
+                Weapon weapon = Game.getInstance().getCurrentPlayer().getCurrentWeapon();
+                hero.setHealthPower(hero.getHealthPower() - weapon.getAttackPower());
+                weapon.setDurability(weapon.getDurability() - 1);
+                removeDeadCharacters();
+            } else {// weapon vs minion
+                Weapon weapon = Game.getInstance().getCurrentPlayer().getCurrentWeapon();
+                Minion minion = Game.getInstance().getFormerPlayer().getBattleGroundCards().get(target);
+                minion.setHealthPower(minion.getHealthPower() - weapon.getAttackPower());
+                Game.getInstance().getCurrentPlayer().getHero().setHealthPower
+                        (Game.getInstance().getCurrentPlayer().getHero().getHealthPower() - minion.getAttackPower());
+
+                weapon.setDurability(weapon.getDurability() - 1);
+                removeDeadCharacters();
+            }
+        } else {
+
+            if (target == -3) {//target is hero    minion vs hero
+                Minion minion = Game.getInstance().getCurrentPlayer().getBattleGroundCards().get(attacker);
+                Heroes hero = Game.getInstance().getFormerPlayer().getHero();
+                hero.setHealthPower(hero.getHealthPower() - minion.getAttackPower());
+            } else {//minion vs minion
+
+                System.out.println(attackerAlliance);
+                System.out.println(targetAlliance);
+                if (attackerAlliance.equalsIgnoreCase(targetAlliance)) {
+                    System.out.println("ffffffffffffffffffffff");
+                    return;
+                }
+
+                System.out.println("Fuck You Bitch");
+                Minion minion = Game.getInstance().getCurrentPlayer().getBattleGroundCards().get(attacker);
+                Minion minion2 = Game.getInstance().getFormerPlayer().getBattleGroundCards().get(target);
+
+                if (minion.getIsActive() && !minion.getHasAttackInThisTurn()) {
+                    if (minion2.getCanBeAttacked()) {
+                        System.out.println("Before attack:");
+                        System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
+                        System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
+                        minion.setHealthPower(minion.getHealthPower() - minion2.getAttackPower());
+                        minion2.setHealthPower(minion2.getHealthPower() - minion.getAttackPower());
+                        removeDeadCharacters();
+                        System.out.println("After attack:");
+                        System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
+                        System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
+                    } else {
+                        //TODO you first need to destroy Taunt OR you cant attack to this minion
+                    }
+                } else {
+                    //TODO you cant attack with this minion in this turn
+                }
+            }
+
+
         }
-        return null;
-    }
-
-    public static ArrayList<Cards> getDeckCards() {
-        return Game.getInstance().getCurrentPlayer().getDeckCards();
-    }
-
-    public static ArrayList<Cards> getHandCards() {
-        return Game.getInstance().getCurrentPlayer().getHandsCards();
-    }
-
-    public static ArrayList<Minion> getBattleGround() {
-        return Game.getInstance().getCurrentPlayer().getBattleGroundCards();
-    }
-
-    public static void reStartDiscoverPageSetting() {
-        DiscoverCardsPage.getInstance().reStartSetting();
-    }
-
-    public static Weapon getSelectedWeapon() {
-        for (Weapon weapon : Weapon.getWeapons()) {
-            if (weapon.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getSelectedWeapon())) {
-                return weapon;
-            }
-        }
-        return null;
-    }
-
-    public static boolean getWaitingOfDiscoverPage() {
-        return DiscoverCardsPage.getInstance().getWaiting();
-    }
-
-    public static void setGamePageContentPane() {
-        ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
 
     }
 
-    public static void setDiscoverPageContentPane() {
-        MyMainFrame.getInstance().setContentPane(DiscoverCardsPage.getInstance());
-    }
-
-    public static ArrayList<Cards> getListOfWeapons() {
-        ArrayList<Cards> cards = new ArrayList<>();
-        for (Cards card : Weapon.getWeapons()) {
-            if (card.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getFirstCard())) {
-                cards.add(card);
-            }
-            if (card.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getSecondCard())) {
-                cards.add(card);
-            }
-            if (card.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getThirdCard())) {
-                cards.add(card);
-            }
-        }
-        return cards;
-    }
-
-    public static void setThreeWeapon() {
-
-        Random random = new Random();
-        int firstNum = random.nextInt(Weapon.getWeapons().size());
-        int secondNum = random.nextInt(Weapon.getWeapons().size());
-        int thirdNum = random.nextInt(Weapon.getWeapons().size());
-        DiscoverCardsPage.getInstance().setFirstCard(Weapon.getWeapons().get(firstNum).getName());
-        DiscoverCardsPage.getInstance().setSecondCard(Weapon.getWeapons().get(secondNum).getName());
-        DiscoverCardsPage.getInstance().setThirdCard(Weapon.getWeapons().get(thirdNum).getName());
-    }
-
-
-    public static Cards getPlyingCardOfGameState() {
-        return Game.getInstance().getPlayingCard();
-    }
-
-
-    public static void refreshPlayPanel() {
-        PlayPanel.getInstance().setNeedsToRepaint(true);
-        PlayPanel.getInstance().repaint();
-        PlayPanel.getInstance().revalidate();
-    }
-
-
-    public static void setAttacker(int attacker) {
-        Game.getInstance().setAttacker(attacker);
-    }
-
-    public static void setTarget(int target) {
-        Game.getInstance().setTarget(target);
-    }
 
     public static void removeDeadCharacters() {
 
-//        for (int i = 0; i < Game.getInstance().getFriendlyPlayer().getBattleGroundCards().size(); i++) {
-//            if (Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(i).getHealthPower()<=0){
-//                Game.getInstance().getFriendlyPlayer().getBattleGroundCards().remove(i);
-//            }
-//        }
-//        for (int i = 0; i < Game.getInstance().getEnemyPlayer().getBattleGroundCards().size(); i++) {
-//            if (Game.getInstance().getEnemyPlayer().getBattleGroundCards().get(i).getHealthPower()<=0){
-//                Game.getInstance().getEnemyPlayer().getBattleGroundCards().remove(i);
-//            }
-//        }
         if (Game.getInstance().getFriendlyPlayer().getCurrentWeapon() != null) {
             if (Game.getInstance().getFriendlyPlayer().getCurrentWeapon().getDurability() == 0) {
                 Game.getInstance().getFriendlyPlayer().setCurrentWeapon(null);
@@ -201,10 +204,65 @@ public class Administer {
 
     }
 
-//    public static void attack1(int attacker, int target) {
-//        attack(attacker, target);
-//
-//    }
+    public static Heroes getTargetOfSpellWitchIsHero() {//it actually doesnt use
+        if (Game.getInstance().getAllianceOfSpellsTarget().equalsIgnoreCase("FRIENDLY")) {
+            return Game.getInstance().getFriendlyPlayer().getHero();
+        } else if (Game.getInstance().getAllianceOfSpellsTarget().equalsIgnoreCase("ENEMY")) {
+            return Game.getInstance().getEnemyPlayer().getHero();
+        }
+
+        return null;
+
+    }
+
+
+    public static JFrame getMyMainFrame() {
+        return MyMainFrame.getInstance();
+    }
+
+    public static Minion getTargetOfSpell() {
+
+        if (Game.getInstance().getAllianceOfSpellsTarget() == null) {
+            return new Minion();
+        } else if (Game.getInstance().getTargetOfSpell() == 0) {
+            return new Minion();
+        }
+        if (Game.getInstance().getAllianceOfSpellsTarget().equalsIgnoreCase("FRIENDLY")) {
+            return Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(Game.getInstance().getTargetOfSpell() - 1);
+        } else if (Game.getInstance().getAllianceOfSpellsTarget().equalsIgnoreCase("ENEMY")) {
+            return Game.getInstance().getEnemyPlayer().getBattleGroundCards().get(Game.getInstance().getTargetOfSpell() - 1);
+        }
+        return null;
+    }
+
+    public static void setTargetOfSpell(int number, String alliance) {
+        Game.getInstance().setTargetOfSpell(number);
+        Game.getInstance().setAllianceOfSpellsTarget(alliance);
+    }
+
+    public static void setAttacker(int attacker) {
+        Game.getInstance().setAttacker(attacker);
+    }
+
+    public static void setTarget(int target) {
+        Game.getInstance().setTarget(target);
+    }
+
+    public static void setAllianceOfTarget(String alliance) {
+        Game.getInstance().setTargetAlliance(alliance);
+    }
+
+    public static void setAllianceAttacker(String alliance) {
+        Game.getInstance().setAttackerAlliance(alliance);
+    }
+
+    public static String getAllianceOfTarget() {
+        return Game.getInstance().getTargetAlliance();
+    }
+
+    public static String getAllianceOfAttacker() {
+        return Game.getInstance().getAttackerAlliance();
+    }
 
     public static int getAttacker() {
         return Game.getInstance().getAttacker();
@@ -215,78 +273,86 @@ public class Administer {
     }
 
 
-    public static void attack(int attacker, int target) {
+    public static Cards getPlyingCardOfGameState() {
+        return Game.getInstance().getPlayingCard();
+    }
 
-        if (attacker == -2) {
-            Weapon weapon = Game.getInstance().getCurrentPlayer().getCurrentWeapon();
-            Minion minion = Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(target);
-            minion.setHealthPower(minion.getHealthPower() - weapon.getAttackPower());
-            removeDeadCharacters();
-        } else {
+    public static void refreshPlayPanel() {
+        PlayPanel.getInstance().setNeedsToRepaint(true);
+        PlayPanel.getInstance().repaint();
+        PlayPanel.getInstance().revalidate();
+    }
 
-            if (attacker == -5) {
-                //TODO choose attacker
-                return;
-            } else if (target == -5) {
-                //TODO choose attacker
-                return;
-            }
-
-            Minion minion = Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(attacker);
-            Minion minion2 = Game.getInstance().getFriendlyPlayer().getBattleGroundCards().get(target);
-
-            if (minion.getIsActive() && !minion.getHasAttackInThisTurn()) {
-                if (minion2.getCanBeAttacked()) {
-                    System.out.println("Before attack:");
-                    System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
-                    System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
-                    minion.setHealthPower(minion.getHealthPower() - minion2.getAttackPower());
-                    minion2.setHealthPower(minion2.getHealthPower() - minion.getAttackPower());
-                    removeDeadCharacters();
-                    System.out.println("After attack:");
-                    System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
-                    System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
-                } else {
-                    //TODO you first need to destroy Taunt OR you cant attack to this minion
-                }
-            } else {
-                //TODO you cant attack with this minion in this turn
-            }
-
-        }
+    public static void setGamePageContentPane() {
+        ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
 
     }
 
-    public static void attack(Minion minion, Heroes hero) {
-        if (minion.getIsActive() && !minion.getHasAttackInThisTurn()) {
-            if (hero.getCanBeAttacked()) {
-                if (hero.getShield() - minion.getAttackPower() >= 0) {
-                    hero.setShield(hero.getShield() - minion.getAttackPower());
-//                    removeDeadCharacters();//TODO SHOULD UNCOMMENT
-                } else {
-                    hero.setShield(0);
-                    hero.setHealthPower(hero.getHealthPower() - (minion.getAttackPower() - hero.getShield()));
-//                    removeDeadCharacters();//TODO SHOULD UNCOMMENT
-                }
-            } else {
-                //TODO you first need to destroy Taunt OR you cant attack to this hero
+    public static void setDiscoverPageContentPane() {
+        MyMainFrame.getInstance().setContentPane(DiscoverCardsPage.getInstance());
+    }
+
+    public static ArrayList<Cards> getListOfWeapons() {
+        ArrayList<Cards> cards = new ArrayList<>();
+        for (Cards card : Weapon.getWeapons()) {
+            if (card.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getFirstCard())) {
+                cards.add(card);
             }
-        } else {
-            //TODO you cant attack with this minion in this turn
+            if (card.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getSecondCard())) {
+                cards.add(card);
+            }
+            if (card.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getThirdCard())) {
+                cards.add(card);
+            }
         }
+        return cards;
+    }
+
+    public static void setThreeWeapon() {
+
+        Random random = new Random();
+        int firstNum = random.nextInt(Weapon.getWeapons().size());
+        int secondNum = random.nextInt(Weapon.getWeapons().size());
+        int thirdNum = random.nextInt(Weapon.getWeapons().size());
+        DiscoverCardsPage.getInstance().setFirstCard(Weapon.getWeapons().get(firstNum).getName());
+        DiscoverCardsPage.getInstance().setSecondCard(Weapon.getWeapons().get(secondNum).getName());
+        DiscoverCardsPage.getInstance().setThirdCard(Weapon.getWeapons().get(thirdNum).getName());
+    }
+
+    public static Weapon getSelectedWeapon() {
+        for (Weapon weapon : Weapon.getWeapons()) {
+            if (weapon.getName().equalsIgnoreCase(DiscoverCardsPage.getInstance().getSelectedWeapon())) {
+                return weapon;
+            }
+        }
+        return null;
+    }
+
+    public static boolean getWaitingOfDiscoverPage() {
+        return DiscoverCardsPage.getInstance().getWaiting();
+    }
+
+    public static void reStartDiscoverPageSetting() {
+        DiscoverCardsPage.getInstance().reStartSetting();
+    }
+
+    public static ArrayList<Cards> getDeckCards() {
+        return Game.getInstance().getCurrentPlayer().getDeckCards();
+    }
+
+    public static ArrayList<Cards> getHandCards() {
+        return Game.getInstance().getCurrentPlayer().getHandsCards();
+    }
+
+    public static ArrayList<Minion> getBattleGround() {
+        return Game.getInstance().getCurrentPlayer().getBattleGroundCards();
     }
 
     public static void reStartFirstThreeCardsSetting() {
         FirstThreeCardsPage.getInstance().reStartSetting();
     }
 
-
     public static void ChangeThisCardFromHands(String cardName) {
-
-//        System.out.println(Game.getInstance().getFriendlyPlayer().getDeckCards());
-//        System.out.println("CardName: " + cardName + " First: " + FirstThreeCardsPage.getInstance().getFirstCard());
-//        System.out.println("CardName: " + cardName + " First: " + FirstThreeCardsPage.getInstance().getSecondCard());
-//        System.out.println("CardName: " + cardName + " First: " + FirstThreeCardsPage.getInstance().getThirdCard());
         boolean changed = false;
         if (cardName.equals(FirstThreeCardsPage.getInstance().getFirstCard()) && FirstThreeCardsPage.getInstance().getCanChangeFirstCard()) {
             changed = true;
@@ -334,7 +400,6 @@ public class Administer {
         return Game.getInstance().getFriendlyPlayer().getFirstThreeCards();
     }
 
-
     public static boolean canDragCard(int y) {
         if (Game.getInstance().getCurrentAlliance().equals(Alliance.FRIENDLY)) {
             return y >= 670;
@@ -361,7 +426,6 @@ public class Administer {
         }
     }
 
-
     public static void setGameMode(int mode) {
         Game.getInstance().setGameMode(mode);
         try {
@@ -383,11 +447,41 @@ public class Administer {
         return Game.getInstance().getEnemyPlayer().getHero().getHealthPower();
     }
 
+    public static void showEnemyHeroPower(JPanel panel, int widthOfHeroPowerImage, int heightOfHeroPowerImage, int xCoordinateOfHeroPower, int yCoordinateOfHeroPower) {
+
+
+        CardImagePanel cardImagePanel = null;
+        try {
+            cardImagePanel = new CardImagePanel(Game.getInstance().getEnemyPlayer().getHero().getName() + "HeroPower",
+                    widthOfHeroPowerImage, heightOfHeroPowerImage, "heroPower", "FRIENDLY");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, panel,
+                xCoordinateOfHeroPower, yCoordinateOfHeroPower, widthOfHeroPowerImage, heightOfHeroPowerImage);
+    }
+
+    public static void showFriendlyHeroPower(JPanel panel, int widthOfHeroPowerImage, int heightOfHeroPowerImage, int xCoordinateOfHeroPower, int yCoordinateOfHeroPower) {
+
+
+        CardImagePanel cardImagePanel = null;
+        try {
+            cardImagePanel = new CardImagePanel(Game.getInstance().getFriendlyPlayer().getHero().getName() + "HeroPower",
+                    widthOfHeroPowerImage, heightOfHeroPowerImage, "heroPower", "FRIENDLY");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, panel,
+                xCoordinateOfHeroPower, yCoordinateOfHeroPower, widthOfHeroPowerImage, heightOfHeroPowerImage);
+    }
+
     public static void showFriendlyWeaponOfGameState(JPanel panel, int widthOfWeaponImage, int heightOfWeaponImage, int xCoordinateOfWeapon, int yCoordinateOfWeapon) {
         if (Game.getInstance().getFriendlyPlayer().getCurrentWeapon() != null) {
             try {
                 CardImagePanel cardImagePanel = new CardImagePanel(Game.getInstance().getFriendlyPlayer().getCurrentWeapon().getName(),
-                        widthOfWeaponImage, heightOfWeaponImage, "weapon","FRIENDLY");
+                        widthOfWeaponImage, heightOfWeaponImage, "weapon", "FRIENDLY");
 
                 MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, panel,
                         xCoordinateOfWeapon, yCoordinateOfWeapon, widthOfWeaponImage, heightOfWeaponImage);
@@ -401,7 +495,7 @@ public class Administer {
         if (Game.getInstance().getEnemyPlayer().getCurrentWeapon() != null) {
             try {
                 CardImagePanel cardImagePanel = new CardImagePanel(Game.getInstance().getEnemyPlayer().getCurrentWeapon().getName(),
-                        widthOfWeaponImage, heightOfWeaponImage, "weapon","ENEMY");
+                        widthOfWeaponImage, heightOfWeaponImage, "weapon", "ENEMY");
 
                 MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, panel,
                         xCoordinateOfWeapon, yCoordinateOfWeapon, widthOfWeaponImage, heightOfWeaponImage);
@@ -410,6 +504,7 @@ public class Administer {
             }
         }
     }
+
 
     public static void showEnemyHandsCardInPlay(JPanel panel, int numberOfCardsPerRowHandsCards, int typeOfBackOfCards, int gameMode) throws IOException {
         if (gameMode == 1) {

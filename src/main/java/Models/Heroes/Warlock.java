@@ -1,16 +1,22 @@
 package Models.Heroes;
 
 import Models.Cards.CardClasses.Cards;
+import Models.HeroPower.HunterHeroPower;
+import Models.HeroPower.WarlockHeroPower;
+
 import java.util.ArrayList;
 
 public class Warlock extends  Heroes {
     private static ArrayList<Cards> specialCardsOfWarlock = new ArrayList<Cards>();
     private static Warlock instance = new Warlock();
-    private Warlock(){
-        this.name="Warlock";
-        this.healthPower=35;
-        this.description ="You will never see anyone beyond him. He passes on his life and property and sacrifices something to win the war.";
-        this.isLock=false;
+
+    public Warlock(){
+        this.setName("Warlock");
+        this.setHealthPower(35);
+        this.setDescription("You will never see anyone beyond him. " +
+                "He passes on his life and property and sacrifices something to win the war.");
+        this.setIsLock(false);
+        this.setHeroPower(new WarlockHeroPower());
         setSpecialCardsOfWarlock();
     }
     public static Warlock getInstance(){

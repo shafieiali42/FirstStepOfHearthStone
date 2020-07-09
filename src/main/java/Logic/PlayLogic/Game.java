@@ -13,27 +13,40 @@ public class Game {
     private InGamePlayer friendlyPlayer;
     private InGamePlayer enemyPlayer;
     private InGamePlayer currentPlayer;
+    private InGamePlayer formerPlayer;
     private Alliance currentAlliance;
     private Cards playingCard;
     private int gameMode;
     private MyTimer myTimer;
+
     private int attacker;
     private int target;
+
+    private String attackerAlliance;
+    private String targetAlliance;
+
     private int targetOfSpell;
     private String allianceOfSpellsTarget;
 
-    private int targetNumber;
-
-
-
-
-    public int getTargetNumber() {
-        return targetNumber;
+    public String getAttackerAlliance() {
+        return attackerAlliance;
     }
 
-    public void setTargetNumber(int targetNumber) {
-        this.targetNumber = targetNumber;
+    public void setAttackerAlliance(String attackerAlliance) {
+        this.attackerAlliance = attackerAlliance;
     }
+
+    public String getTargetAlliance() {
+        return targetAlliance;
+    }
+
+    public void setTargetAlliance(String targetAlliance) {
+        this.targetAlliance = targetAlliance;
+    }
+
+
+
+
 
     public String getAllianceOfSpellsTarget() {
         return allianceOfSpellsTarget;
@@ -103,6 +116,7 @@ public class Game {
             enemyPlayer.initHandsCards();
             playingCard = new Cards();
             currentPlayer=friendlyPlayer;
+            formerPlayer=enemyPlayer;
             currentAlliance=Alliance.FRIENDLY;
 
         }else if (gameMode==2){//Training Game //TODO has positive point
@@ -113,6 +127,7 @@ public class Game {
             enemyPlayer.setDeckCards(deckReader.getDeck("ENEMY"));
             playingCard = new Cards();
             currentPlayer=friendlyPlayer;
+            formerPlayer=enemyPlayer;
             currentAlliance=Alliance.FRIENDLY;
 
         } else if (gameMode == 3) {//DeckReader
@@ -128,6 +143,7 @@ public class Game {
             enemyPlayer.initHandsCards();
             playingCard = new Cards();
             currentPlayer=friendlyPlayer;
+            formerPlayer=enemyPlayer;
             currentAlliance=Alliance.FRIENDLY;
 
         }else if (gameMode==4){//Two Player Game
@@ -139,6 +155,7 @@ public class Game {
             enemyPlayer.initHandsCards();
             playingCard = new Cards();
             currentPlayer=friendlyPlayer;
+            formerPlayer=enemyPlayer;
             currentAlliance=Alliance.FRIENDLY;
         }
 
@@ -192,6 +209,14 @@ public class Game {
 
     public Alliance getCurrentAlliance() {
         return currentAlliance;
+    }
+
+    public InGamePlayer getFormerPlayer() {
+        return formerPlayer;
+    }
+
+    public void setFormerPlayer(InGamePlayer formerPlayer) {
+        this.formerPlayer = formerPlayer;
     }
 
     public void setCurrentAlliance(Alliance currentAlliance) {

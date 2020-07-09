@@ -1,16 +1,21 @@
 package Models.Heroes;
 
 import Models.Cards.CardClasses.Cards;
+import Models.HeroPower.HunterHeroPower;
+import Models.HeroPower.RogueHeroPower;
+
 import java.util.ArrayList;
 
 public class Rogue extends Heroes {
     private static ArrayList<Cards> specialCardsOfRogue = new ArrayList<Cards>();
     private static Rogue instance = new Rogue();
-    private Rogue(){
-        this.name="Rogue";
-        this.healthPower=30;
-        this.description ="He is a thief and most of his abilities are in stealing from the enemy!";
-        this.isLock=false;
+
+    public Rogue(){
+        this.setName("Rogue");
+        this.setHealthPower(30);
+        this.setDescription("He is a thief and most of his abilities are in stealing from the enemy!");
+        this.setIsLock(false);
+        this.setHeroPower(new RogueHeroPower());
         setSpecialCardsOfRogue();
     }
     public static Rogue getInstance(){

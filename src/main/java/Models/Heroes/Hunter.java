@@ -2,20 +2,25 @@ package Models.Heroes;
 
 
 import Models.Cards.CardClasses.Cards;
+import Models.HeroPower.HunterHeroPower;
+
 import java.util.ArrayList;
 
 public class Hunter extends Heroes {
     private static ArrayList<Cards> specialCardsOfHunter = new ArrayList<Cards>();
     private static Hunter instance = new Hunter();
-    private Hunter(){
-        this.name="Hunter";
-        this.healthPower=30;
-        this.description ="";//TODO needs to be initialize
-        this.isLock = true;
-        setSpecialCardsOfHunter();
-    }
     public static Hunter getInstance(){
         return instance;
+    }
+
+
+    public Hunter(){
+        this.setName("Hunter");
+        this.setHealthPower(30);
+        this.setDescription("");//TODO needs to be initialize
+        this.setIsLock(true);
+        this.setHeroPower(new HunterHeroPower());
+        setSpecialCardsOfHunter();
     }
 
 

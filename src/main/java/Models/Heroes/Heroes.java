@@ -1,72 +1,117 @@
 package Models.Heroes;
 
 import Models.Cards.CardClasses.Cards;
+import Models.HeroPower.HeroPower;
+
 import java.util.ArrayList;
 
-public class Heroes {
-     public Heroes(){
+public  class Heroes {
 
-     }
-     String name;
-     int healthPower;
-     String description;
-     ArrayList<Cards> DeckOfHero = new ArrayList<Cards>();
-     boolean isLock;
-     int attackPower;
-     int shield;
-     boolean canBeAttacked=true;
+    public Heroes() {
+
+    }
+
+    private String name;
+    private int healthPower;
+    private String description;
+    private ArrayList<Cards> DeckOfHero = new ArrayList<Cards>();
+    private boolean isLock;
+    private int attackPower;
+    private int shield;
+    private boolean canBeAttacked = true;
+    private HeroPower heroPower;
 
 
 
 
+     public HeroPower getHeroPower() {
+          return heroPower;
+     }
 
+     public void setHeroPower(HeroPower heroPower) {
+          this.heroPower = heroPower;
+     }
 
-     public boolean getCanBeAttacked() {
-          return canBeAttacked;
+     public void setName(String name) {
+          this.name = name;
      }
-     public void setCanBeAttacked(boolean canBeAttacked) {
-          this.canBeAttacked = canBeAttacked;
+
+     public String getDescription() {
+          return description;
      }
-     public int getAttackPower() {
-          return attackPower;
+
+     public void setDescription(String description) {
+          this.description = description;
      }
-     public void setAttackPower(int attackPower) {
-          this.attackPower = attackPower;
-     }
-     public int getShield() {
-          return shield;
-     }
-     public void setShield(int shield) {
-          this.shield = shield;
-     }
-     public boolean getIsLock() {
+
+     public boolean isLock() {
           return isLock;
      }
-     public void setIsLock(boolean lock) {
+
+     public void setLock(boolean lock) {
           isLock = lock;
      }
-     public ArrayList<Cards> getDeckOfHero() {
-          return DeckOfHero;
-     }
-     public void setDeckOfHero(ArrayList<Cards> deckOfHero) {
-          DeckOfHero = deckOfHero;
-     }
-     public String getName(){
-         return name;
+
+     public boolean isCanBeAttacked() {
+          return canBeAttacked;
      }
 
-     @Override
-     public String toString(){
-          return "[ Name: "+this.getName()+", healthPower: "+this.healthPower+"]";
-     }
+     public boolean getCanBeAttacked() {
+        return canBeAttacked;
+    }
 
-     public int getHealthPower() {
-          return healthPower;
-     }
+    public void setCanBeAttacked(boolean canBeAttacked) {
+        this.canBeAttacked = canBeAttacked;
+    }
 
-     public void setHealthPower(int healthPower) {
-          this.healthPower = healthPower;
-     }
+    public int getAttackPower() {
+        return attackPower;
+    }
+
+    public void setAttackPower(int attackPower) {
+        this.attackPower = attackPower;
+    }
+
+    public int getShield() {
+        return shield;
+    }
+
+    public void setShield(int shield) {
+        this.shield = shield;
+    }
+
+    public boolean getIsLock() {
+        return isLock;
+    }
+
+    public void setIsLock(boolean lock) {
+        isLock = lock;
+    }
+
+    public ArrayList<Cards> getDeckOfHero() {
+        return DeckOfHero;
+    }
+
+    public void setDeckOfHero(ArrayList<Cards> deckOfHero) {
+        DeckOfHero = deckOfHero;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "[ Name: " + this.getName() + ", healthPower: " + this.healthPower + "]";
+    }
+
+    public int getHealthPower() {
+        return healthPower;
+    }
+
+    public void setHealthPower(int healthPower) {
+        this.healthPower = healthPower;
+    }
 
 
 }

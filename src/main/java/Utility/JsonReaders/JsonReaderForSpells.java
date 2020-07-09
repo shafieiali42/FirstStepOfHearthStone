@@ -1,8 +1,8 @@
 package Utility.JsonReaders;
 
 import Models.Cards.CardClasses.Spell;
-import Models.Cards.GameCards.MinionCards.MinionNames;
 import Models.Cards.GameCards.SpellCards.*;
+import Models.Cards.GameCards.SpellCards.UnoptionalSpells.*;
 import com.google.gson.Gson;
 
 import java.io.FileNotFoundException;
@@ -16,9 +16,9 @@ public class JsonReaderForSpells {
 
     private static void setMap(){
         map.put("BookOfSpecters", BookOfSpecters.class);
-        map.put("FriendlySmith",FriendlySmith.class);
+        map.put("FriendlySmith", FriendlySmith.class);
         map.put("PharaohsBlessing", PharaohsBlessing.class);
-        map.put("Polymorph",Polymorph.class);
+        map.put("Polymorph", Polymorph.class);
         map.put("Sprint", Sprint.class);
         map.put("SwarmOfLocusts", SwarmOfLocusts.class);
     }

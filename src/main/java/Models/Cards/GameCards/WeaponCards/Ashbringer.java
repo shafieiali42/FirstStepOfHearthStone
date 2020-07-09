@@ -1,7 +1,6 @@
 package Models.Cards.GameCards.WeaponCards;
 
 import Models.Cards.CardClasses.Weapon;
-import Models.Cards.GameCards.MinionCards.HighPriestAmet;
 
 public class Ashbringer extends Weapon {
 

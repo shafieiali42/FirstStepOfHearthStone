@@ -1,8 +1,11 @@
 package View.Gui.Panels.GamePage;
 
 import Controller.Administer;
+import Logic.PlayLogic.Game;
 import Utility.Config2.ConfigLoader;
 import Utility.Constant;
+import Utility.MethodsOfShowCardsOnPanel;
+import View.CardView.CardImagePanel;
 import View.Gui.Animation.AnimationOfRotation;
 
 import javax.imageio.ImageIO;
@@ -91,44 +94,75 @@ public class PlayPanel extends JPanel {
     }
 
 
-    public void defineImagesOfHeroAndHeroPower() throws IOException {
+//    public void defineImagesOfHeroAndHeroPower() throws IOException {
+//
+//        heroImage = ImageIO.read(new File(
+//                Constant.getInstance().getHeroImages().get(Administer.getNameOfFriendlyHeroOfGameState())));
+//
+//        heroPowerImage = ImageIO.read(
+//                new File(Constant.getInstance().getHeroPowerImages().get(Administer.getNameOfFriendlyHeroOfGameState())));
+//
+//    }
 
-        heroImage = ImageIO.read(new File(
-                Constant.getInstance().getHeroImages().get(Administer.getNameOfFriendlyHeroOfGameState())));
 
-        heroPowerImage = ImageIO.read(
-                new File(Constant.getInstance().getHeroPowerImages().get(Administer.getNameOfFriendlyHeroOfGameState())));
+    public void showFriendlyHeroImage(){
 
+        CardImagePanel cardImagePanel = null;
+        try {
+            cardImagePanel = new CardImagePanel(Administer.getNameOfFriendlyHeroOfGameState(),
+                    WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE, "hero","FRIENDLY");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, this,
+                X_COORDINATE_OF_HERO_IMAGE, Y_COORDINATE_OF_HERO_IMAGE, WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE);
     }
 
-    public void defineImagesOfEnemyHeroAndHeroPower() throws IOException {
 
 
-        enemyHeroImage = ImageIO.read(new File(
-                Constant.getInstance().getHeroImages().get(Administer.getNameOfEnemyHeroOfGameState())));
-        int w = enemyHeroImage.getWidth();
-        int h = enemyHeroImage.getHeight();
-        AffineTransform scaleTransform = new AffineTransform();
-// last-in-first-applied: rotate, scale
-        scaleTransform.scale(1, 1);
-        scaleTransform.rotate(Math.PI, w / 2, h / 2);
-        AffineTransformOp scaleOp = new AffineTransformOp(
-                scaleTransform, AffineTransformOp.TYPE_BILINEAR);
-        enemyHeroImage = scaleOp.filter(enemyHeroImage, null);
+    public void showEnemyHeroImage(){
 
-        enemyHeroPowerImage = ImageIO.read(
-                new File(Constant.getInstance().getHeroPowerImages().get(Administer.getNameOfEnemyHeroOfGameState())));
-        int width = enemyHeroPowerImage.getWidth();
-        int height = enemyHeroPowerImage.getHeight();
-        AffineTransform scaleTransform2 = new AffineTransform();
+        CardImagePanel cardImagePanel = null;
+        try {
+            cardImagePanel = new CardImagePanel(Administer.getNameOfEnemyHeroOfGameState(),
+                    WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE, "hero","ENEMY");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        scaleTransform2.scale(1, 1);
-        scaleTransform2.rotate(Math.PI, width / 2, height / 2);
-        AffineTransformOp scaleOp2 = new AffineTransformOp(
-                scaleTransform2, AffineTransformOp.TYPE_BILINEAR);
-        enemyHeroPowerImage = scaleOp2.filter(enemyHeroPowerImage, null);
-
+        MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, this,
+                X_COORDINATE_OF_ENEMY_HERO_IMAGE, Y_COORDINATE_OF_ENEMY_HERO_IMAGE, WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE);
     }
+
+//    public void defineImagesOfEnemyHeroAndHeroPower() throws IOException {
+//
+//
+//        enemyHeroImage = ImageIO.read(new File(
+//                Constant.getInstance().getHeroImages().get(Administer.getNameOfEnemyHeroOfGameState())));
+//        int w = enemyHeroImage.getWidth();
+//        int h = enemyHeroImage.getHeight();
+//        AffineTransform scaleTransform = new AffineTransform();
+//
+//        scaleTransform.scale(1, 1);
+//        scaleTransform.rotate(Math.PI, w / 2, h / 2);
+//        AffineTransformOp scaleOp = new AffineTransformOp(
+//                scaleTransform, AffineTransformOp.TYPE_BILINEAR);
+//        enemyHeroImage = scaleOp.filter(enemyHeroImage, null);
+//
+//        enemyHeroPowerImage = ImageIO.read(
+//                new File(Constant.getInstance().getHeroPowerImages().get(Administer.getNameOfEnemyHeroOfGameState())));
+//        int width = enemyHeroPowerImage.getWidth();
+//        int height = enemyHeroPowerImage.getHeight();
+//        AffineTransform scaleTransform2 = new AffineTransform();
+//
+//        scaleTransform2.scale(1, 1);
+//        scaleTransform2.rotate(Math.PI, width / 2, height / 2);
+//        AffineTransformOp scaleOp2 = new AffineTransformOp(
+//                scaleTransform2, AffineTransformOp.TYPE_BILINEAR);
+//        enemyHeroPowerImage = scaleOp2.filter(enemyHeroPowerImage, null);
+//
+//    }
 
 
     @Override
@@ -172,35 +206,28 @@ public class PlayPanel extends JPanel {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try {
-            defineImagesOfHeroAndHeroPower();
-            defineImagesOfEnemyHeroAndHeroPower();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        graphics2D.drawImage(heroImage, X_COORDINATE_OF_HERO_IMAGE, Y_COORDINATE_OF_HERO_IMAGE,
-                WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE, null);
-
-        graphics2D.drawImage(heroPowerImage, X_COORDINATE_OF_HERO_POWER_IMAGE, Y_COORDINATE_OF_HERO_POWER_IMAGE,
-                WIDTH_OF_HERO_POWER_IMAGE, HEIGHT_OF_HERO_POWER_IMAGE, null);
-
-        graphics2D.drawImage(enemyHeroImage, X_COORDINATE_OF_ENEMY_HERO_IMAGE, Y_COORDINATE_OF_ENEMY_HERO_IMAGE,
-                WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE, null);
-
-        graphics2D.drawImage(enemyHeroPowerImage, X_COORDINATE_OF_ENEMY_HERO_POWER_IMAGE, Y_COORDINATE_OF_ENEMY_HERO_POWER_IMAGE,
-                WIDTH_OF_HERO_POWER_IMAGE, HEIGHT_OF_HERO_POWER_IMAGE, null);
-
-//        graphics2D.drawImage(heroImage, X_COORDINATE_OF_WEAPON, Y_COORDINATE_OF_WEAPON,
-//                WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE, null);
 
 
-        Administer.showFriendlyWeaponOfGameState(this, WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE, X_COORDINATE_OF_WEAPON, Y_COORDINATE_OF_WEAPON);
-        Administer.showEnemyWeaponOfGameState(this, WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE, X_COORDINATE_OF__ENEMY_WEAPON, Y_COORDINATE_OF_ENEMY_WEAPON);
+        showFriendlyHeroImage();
+        showEnemyHeroImage();
+
+        Administer.showFriendlyWeaponOfGameState(this, WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE,
+                X_COORDINATE_OF_WEAPON, Y_COORDINATE_OF_WEAPON);
+
+        Administer.showEnemyWeaponOfGameState(this, WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE,
+                X_COORDINATE_OF__ENEMY_WEAPON, Y_COORDINATE_OF_ENEMY_WEAPON);
+
+        Administer.showFriendlyHeroPower(this,WIDTH_OF_HERO_POWER_IMAGE,HEIGHT_OF_HERO_POWER_IMAGE,
+                X_COORDINATE_OF_HERO_POWER_IMAGE,Y_COORDINATE_OF_HERO_POWER_IMAGE);
+
+        Administer.showEnemyHeroPower(this,WIDTH_OF_HERO_POWER_IMAGE,HEIGHT_OF_HERO_POWER_IMAGE,
+                X_COORDINATE_OF_ENEMY_HERO_POWER_IMAGE,Y_COORDINATE_OF_ENEMY_HERO_POWER_IMAGE);
+
+
 
         graphics2D.setColor(Color.red);
         graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 25));
-        graphics2D.drawString(Administer.getHpOfCurrentFriendlyHeroInGameState() + "", X_COORDINATE_OF_HEAL_FIELD, Y_COORDINATE_OF_HEAL_FIELD);
+//        graphics2D.drawString(Administer.getHpOfCurrentFriendlyHeroInGameState() + "", X_COORDINATE_OF_HEAL_FIELD, Y_COORDINATE_OF_HEAL_FIELD);
 
     }
 

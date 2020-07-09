@@ -2,9 +2,8 @@ package Utility.JsonReaders;
 
 
 import Models.Cards.CardClasses.Minion;
-import Models.Cards.CardClasses.Spell;
 import Models.Cards.GameCards.MinionCards.*;
-import Models.Cards.GameCards.SpellCards.*;
+import Models.Cards.GameCards.MinionCards.UnoptionalMinions.*;
 import com.google.gson.Gson;
 
 import java.io.FileNotFoundException;
@@ -19,8 +18,8 @@ public class JsonReaderForMinions {
 
     private static void setMap(){
         map.put("CurioCollector", CurioCollector.class);
-        map.put("Dreadscale",Dreadscale.class);
-        map.put("HighPriestAmet",HighPriestAmet.class);
+        map.put("Dreadscale", Dreadscale.class);
+        map.put("HighPriestAmet", HighPriestAmet.class);
         map.put("Sathrovarr", Sathrovarr.class);
         map.put("SecurityRover", SecurityRover.class);
         map.put("SwampKingDred", SwampKingDred.class);

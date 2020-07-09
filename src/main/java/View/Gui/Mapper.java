@@ -1,17 +1,19 @@
 package View.Gui;
 
-import Controller.Administer;
 import Interfaces.*;
 import Logic.PlayLogic.Alliance;
+import Logic.Status;
 import Models.Cards.CardClasses.Cards;
 import Controller.ControllerOfMainComponents;
 
 import Models.Cards.CardClasses.Minion;
+import Models.Heroes.Heroes;
 import View.Gui.Panels.GamePage.LogPanel;
 import View.Gui.Panels.GamePage.PlayPanel;
 import Logic.PlayLogic.Game;
 import Models.Cards.CardClasses.Weapon;
 import Utility.Sounds;
+import Visitors.CardVisitors.*;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -204,7 +206,8 @@ public class Mapper {
 
         for (Minion minion : Game.getInstance().getCurrentPlayer().getBattleGroundCards()) {
             minion.accept(new DrawCardVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                    Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),minion, new Minion());
+                    Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),minion,new Heroes(), new Minion(),
+                    "");
         }
 
 
@@ -216,21 +219,24 @@ public class Mapper {
         Game.getInstance().getCurrentPlayer().setMana((int) Math.min(Game.getInstance().getCurrentPlayer().getTurn(), 10));
         if (Game.getInstance().getCurrentAlliance().equals(Alliance.FRIENDLY)) {
             Game.getInstance().setCurrentPlayer(Game.getInstance().getEnemyPlayer());
+            Game.getInstance().setFormerPlayer(Game.getInstance().getFriendlyPlayer());
             Game.getInstance().setCurrentAlliance(Alliance.ENEMY);
         } else if (Game.getInstance().getCurrentAlliance().equals(Alliance.ENEMY)) {
             Game.getInstance().setCurrentPlayer(Game.getInstance().getFriendlyPlayer());
+            Game.getInstance().setFormerPlayer(Game.getInstance().getEnemyPlayer());
             Game.getInstance().setCurrentAlliance(Alliance.FRIENDLY);
         }
 
     }
 
     public static void endTurn() {
+        ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
         Iterator<Minion> itr = Game.getInstance().getCurrentPlayer().getBattleGroundCards().iterator();
 
         while (itr.hasNext()) {
             Minion minion = itr.next();
             minion.accept(new EndTurnVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                    Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), minion, new Minion());
+                    Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), minion, new Heroes(),new Minion(),"");
 
         }
 
@@ -271,13 +277,13 @@ public class Mapper {
         if (minionPlayed) {
             playCard(playingCard);
             playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                    Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), playingCard, new Minion());
+                    Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), playingCard,new Heroes(), new Minion(),"");
 
             if (Game.getInstance().getCurrentPlayer().getBattleGroundCards().size()>(k-1)){
                 for (Minion minion : Game.getInstance().getCurrentPlayer().getBattleGroundCards()) {
                     minion.accept(new SummonVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                            Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), new Minion(),
-                            Game.getInstance().getCurrentPlayer().getBattleGroundCards().get(k-1));
+                            Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), new Minion(),new Heroes(),
+                            Game.getInstance().getCurrentPlayer().getBattleGroundCards().get(k-1),"");
                 }
             }
 
@@ -293,22 +299,25 @@ public class Mapper {
         playCard(playingCard);
 
         playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), new Minion(), new Minion());
+                Game.getInstance().getCurrentPlayer().getHandsCards(),new ArrayList<Cards>(), new Minion(),new Heroes(), new Minion(),"");
+
         playingCard.accept(new DrawCardVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),new Minion(), new Minion());
+                Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),new Minion(),new Heroes(), new Minion(),"");
+
         playingCard.accept(new ActionVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                Game.getInstance().getCurrentPlayer().getHandsCards(),Game.getInstance().getCurrentPlayer().getDeckCards(), new Minion(), new Minion());
+                Game.getInstance().getCurrentPlayer().getHandsCards(),
+                Game.getInstance().getCurrentPlayer().getDeckCards(), new Minion(),new Heroes(), new Minion(),"");
 
         playingCard.accept(new TargetVisitor(),Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                 Game.getInstance().getCurrentPlayer().getHandsCards(),Game.getInstance().getCurrentPlayer().getDeckCards(),
-                new Minion(),new Minion());//todo ...............
+                new Minion(),new Heroes(),new Minion(),"");//todo ...............
     }
 
     public static void playWeapon(Cards playingCard) {
         Game.getInstance().getCurrentPlayer().setCurrentWeapon((Weapon) playingCard);
         playCard(playingCard);
         playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),new Minion(), new Minion());
+                Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(),new Minion(),new Heroes(), new Minion(),"");
 
 
     }

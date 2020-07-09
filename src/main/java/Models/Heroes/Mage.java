@@ -1,20 +1,26 @@
 package Models.Heroes;
 
 import Models.Cards.CardClasses.Cards;
+import Models.HeroPower.HunterHeroPower;
+import Models.HeroPower.MageHeroPower;
+
 import java.util.ArrayList;
 
 public class Mage extends Heroes {
     private static ArrayList<Cards> specialCardsOfMage = new ArrayList<Cards>();
     private static Mage instance = new Mage();
-    private Mage(){
-        this.name="Mage";
-        this.healthPower=30;
-        this.description ="She is a skilled wizard who has special skills in using spells.";
-        this.isLock = false;
-        setSpecialCardsOfMage();
-    }
     public static Mage getInstance(){
         return instance;
+    }
+
+
+    public Mage(){
+        this.setName("Mage");
+        this.setHealthPower(30);
+        this.setDescription("She is a skilled wizard who has special skills in using spells.");
+        this.setIsLock(false);
+        this.setHeroPower(new MageHeroPower());
+        setSpecialCardsOfMage();
     }
 
 

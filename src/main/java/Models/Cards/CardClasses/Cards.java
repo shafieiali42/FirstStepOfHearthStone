@@ -1,15 +1,14 @@
 package Models.Cards.CardClasses;
 
 
-//import Utility.ImageOfAllCards;
-
-import Interfaces.Visitable;
-import Interfaces.Visitor;
+import Models.Heroes.Heroes;
+import Visitors.CardVisitors.Visitable;
+import Visitors.CardVisitors.Visitor;
 import com.google.gson.annotations.Expose;
 
 import java.util.ArrayList;
 
-public  class Cards implements Comparable<Cards> , Visitable , Cloneable {
+public  class Cards implements Comparable<Cards> , Visitable, Cloneable {
 
     @Expose(serialize = false, deserialize = true)
     private String name;
@@ -172,7 +171,8 @@ public  class Cards implements Comparable<Cards> , Visitable , Cloneable {
 
 
 
-    public void accept(Visitor visitor,ArrayList<Minion>battleGround,ArrayList<Cards> handsCards,ArrayList<Cards>deckCards,Minion target,Minion summonedMinion){
+    public void accept(Visitor visitor,ArrayList<Minion>battleGround,ArrayList<Cards> handsCards,
+                       ArrayList<Cards>deckCards,Minion target,Heroes targetHero,Minion summonedMinion,String alliance){
 
     }
 
