@@ -76,7 +76,7 @@ public class Administer {
                             Game.getInstance().getEnemyPlayer().getHandsCards(),
                             Game.getInstance().getFriendlyPlayer().getDeckCards(),
                             Game.getInstance().getEnemyPlayer().getDeckCards(),
-                            minion, new Heroes());
+                            minion, new Heroes(),null);
                     removeDeadCharacters();
 
 
@@ -91,7 +91,7 @@ public class Administer {
                             Game.getInstance().getEnemyPlayer().getHandsCards(),
                             Game.getInstance().getFriendlyPlayer().getDeckCards(),
                             Game.getInstance().getEnemyPlayer().getDeckCards(),
-                            minion, new Heroes());
+                            minion, new Heroes(),null);
                     removeDeadCharacters();
                 }
                 //todo execute heroPower

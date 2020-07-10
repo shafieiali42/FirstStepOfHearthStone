@@ -2,15 +2,22 @@ package Models.Cards.CardClasses;
 
 import java.util.ArrayList;
 
-public class Spell extends Cards  {
+public class Spell extends Cards {
 
     public static final int NUMBER_OF_SPELLS = 18;
+    static ArrayList<Spell> spells = new ArrayList<Spell>();
+    static ArrayList<Spell> questAndRewardCards = new ArrayList<Spell>();
 
 
+    private ArrayList<SpellAbility> abilities=new ArrayList<>();
 
-     static ArrayList<Spell> spells = new ArrayList<Spell>();
-     static ArrayList<Spell> questAndRewardCards = new ArrayList<Spell>();
+    public ArrayList<SpellAbility> getAbilities() {
+        return abilities;
+    }
 
+    public void setAbilities(ArrayList<SpellAbility> abilities) {
+        this.abilities = abilities;
+    }
 
     public static void defineQuestAndRewardCardList() {
         for (Spell spell : spells) {
@@ -32,7 +39,7 @@ public class Spell extends Cards  {
         Spell.spells = spells;
     }
 
-    public Spell()  {
+    public Spell() {
         super();
     }
 

@@ -42,7 +42,17 @@ public class AfterSelectPowerVisitor implements VisitorOfPowers {
     }
 
     @Override
-    public void visit(HunterHeroPower hunterHeroPower, InGamePlayer player, ArrayList<Minion> friendlyBattleGround, ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards, ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards, ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero) {
+    public void visit(HunterHeroPower hunterHeroPower, InGamePlayer player,
+                      ArrayList<Minion> friendlyBattleGround,
+                      ArrayList<Minion> enemyBattleGround,
+                      ArrayList<Cards> friendlyHandCards,
+                      ArrayList<Cards> enemyHandsCards,
+                      ArrayList<Cards> friendlyDeckCards,
+                      ArrayList<Cards> enemyDeckCards,
+                      Minion target, Heroes targetHero,Minion summoned) {
+
+
+
 
     }
 

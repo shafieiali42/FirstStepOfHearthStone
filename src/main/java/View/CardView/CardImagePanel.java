@@ -319,7 +319,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                         Game.getInstance().getCurrentPlayer().getDeckCards(),
                         Game.getInstance().getFormerPlayer().getDeckCards(),
                         Administer.getTargetOfHeroPower(),
-                        Administer.getTargetOfHeroPowerWitchIsHero());
+                        Administer.getTargetOfHeroPowerWitchIsHero(),null);
 
 
                 ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);

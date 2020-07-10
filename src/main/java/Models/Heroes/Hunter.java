@@ -2,7 +2,11 @@ package Models.Heroes;
 
 
 import Models.Cards.CardClasses.Cards;
+import Models.Cards.CardClasses.Minion;
 import Models.HeroPower.HunterHeroPower;
+import Models.Player.InGamePlayer;
+import Visitors.PowerVisitor.SpVisitor;
+import Visitors.PowerVisitor.VisitorOfPowers;
 
 import java.util.ArrayList;
 
@@ -41,8 +45,22 @@ public class Hunter extends Heroes {
         }
     }
 
+
     public static ArrayList<Cards> getSpecialCardsOfHunter() {
         return specialCardsOfHunter;
     }
+
+    @Override
+    public void accept(SpVisitor spVisitor, InGamePlayer player, ArrayList<Minion> friendlyBattleGround,
+                       ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards,
+                       ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards,
+                       ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero, Minion summoned) {
+
+        spVisitor.visit(this,player,friendlyBattleGround,enemyBattleGround,friendlyHandCards,
+                enemyHandsCards,friendlyDeckCards,enemyDeckCards,target,targetHero,summoned);
+
+
+    }
+
 
 }

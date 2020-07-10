@@ -5916,3 +5916,33 @@ Jul 10, 2020 12:38:45 AM Controller.Administer writeLog
 INFO: Go back from collection page
 Jul 10, 2020 12:38:46 AM Controller.PlayerController logOut
 INFO: Log_out z
+Jul 10, 2020 4:32:35 AM Controller.PlayerController signIn
+INFO: sign_in z
+Jul 10, 2020 4:32:37 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 10, 2020 4:32:45 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 10, 2020 4:32:57 AM Controller.Administer selectMainDeck
+INFO: select h for main deck
+Jul 10, 2020 4:33:15 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 10, 2020 4:33:21 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 10, 2020 4:33:24 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 10, 2020 4:33:38 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 4:33:41 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 10, 2020 4:33:51 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 4:33:55 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 4:34:02 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 4:34:05 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 10, 2020 4:34:08 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 10, 2020 4:34:20 AM Controller.PlayerController logOut
+INFO: Log_out z

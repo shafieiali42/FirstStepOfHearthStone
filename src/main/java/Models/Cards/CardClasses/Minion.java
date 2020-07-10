@@ -19,6 +19,20 @@ public class Minion extends Cards {
     private boolean taunt = false;
     private boolean hasAttackInThisTurn = false;
     private boolean divineShield=false;
+    private boolean rush=false;
+
+
+    public boolean isTaunt() {
+        return taunt;
+    }
+
+    public boolean isRush() {
+        return rush;
+    }
+
+    public void setRush(boolean rush) {
+        this.rush = rush;
+    }
 
     public static void initFirstAttackAndHp(){
         for (Minion minion:getMinions()){

@@ -1,19 +1,22 @@
 package Models.Heroes;
 
 import Models.Cards.CardClasses.Cards;
+import Models.Cards.CardClasses.Minion;
 import Models.HeroPower.HeroPower;
+import Models.Player.InGamePlayer;
+import Visitors.PowerVisitor.HeroPowerVisitable;
+import Visitors.PowerVisitor.SpVisitable;
+import Visitors.PowerVisitor.SpVisitor;
+import Visitors.PowerVisitor.VisitorOfPowers;
 
 import java.util.ArrayList;
 
-public  class Heroes {
+public  class Heroes  implements SpVisitable {
 
     public Heroes() {
 
     }
 
-    public void print(){
-        System.out.println("Heroes");
-    }
 
     private String name;
     private int healthPower;
@@ -122,6 +125,12 @@ public  class Heroes {
 
     public void setHealthPower(int healthPower) {
         this.healthPower = healthPower;
+    }
+
+
+    @Override
+    public void accept(SpVisitor spVisitor, InGamePlayer player, ArrayList<Minion> friendlyBattleGround, ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards, ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards, ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero, Minion summoned) {
+
     }
 
 

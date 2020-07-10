@@ -5,6 +5,7 @@ import Logic.MyTimer;
 import Models.Cards.CardClasses.Cards;
 import Models.Heroes.Mage;
 import Models.Player.InGamePlayer;
+import Visitors.PowerVisitor.SpecialPowerVisitor;
 
 import java.io.IOException;
 
@@ -166,12 +167,19 @@ public class Game {
             currentAlliance=Alliance.FRIENDLY;
 
         }else if (gameMode==4){//Two Player Game
+            DeckReader deckReader =new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
             friendlyPlayer = new InGamePlayer(ControllerOfMainComponents.currentPlayer);
             enemyPlayer = new InGamePlayer();
             enemyPlayer.setHero(new Mage());
-            DeckReader deckReader =new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
             enemyPlayer.setDeckCards(deckReader.getDeck("ENEMY"));
             enemyPlayer.initHandsCards();
+            friendlyPlayer.getHero().accept(new SpecialPowerVisitor(),friendlyPlayer,friendlyPlayer.getBattleGroundCards(),
+                    enemyPlayer.getBattleGroundCards(),friendlyPlayer.getHandsCards(),enemyPlayer.getHandsCards(),
+                    friendlyPlayer.getDeckCards(),enemyPlayer.getDeckCards(),null,null,null);
+
+            enemyPlayer.getHero().accept(new SpecialPowerVisitor(),enemyPlayer,enemyPlayer.getBattleGroundCards(),
+                    friendlyPlayer.getBattleGroundCards(),enemyPlayer.getHandsCards(),friendlyPlayer.getHandsCards(),
+                    enemyPlayer.getDeckCards(),friendlyPlayer.getDeckCards(),null,null,null);
             playingCard = new Cards();
             currentPlayer=friendlyPlayer;
             formerPlayer=enemyPlayer;

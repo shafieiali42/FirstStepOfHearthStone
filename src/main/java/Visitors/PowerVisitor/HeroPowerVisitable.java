@@ -14,7 +14,7 @@ public interface HeroPowerVisitable {
     void accept(VisitorOfPowers visitorOfPowers, InGamePlayer player, ArrayList<Minion>friendlyBattleGround,
                 ArrayList<Minion>enemyBattleGround, ArrayList<Cards>friendlyHandCards,
                 ArrayList<Cards>enemyHandsCards, ArrayList<Cards>friendlyDeckCards,
-                ArrayList<Cards>enemyDeckCards, Minion target, Heroes targetHero);
+                ArrayList<Cards>enemyDeckCards, Minion target, Heroes targetHero,Minion summoned);
 
 
 
