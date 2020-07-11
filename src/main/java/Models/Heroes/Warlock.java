@@ -2,10 +2,9 @@ package Models.Heroes;
 
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
-import Models.HeroPower.HunterHeroPower;
 import Models.HeroPower.WarlockHeroPower;
 import Models.Player.InGamePlayer;
-import Visitors.PowerVisitor.SpVisitor;
+import Visitors.PowerVisitor.SpVisitor.SpVisitor;
 
 import java.util.ArrayList;
 

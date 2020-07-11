@@ -6,5 +6,8 @@ public enum SpellNames {
     PharaohsBlessing,
     Polymorph,
     Sprint,
-    SwarmOfLocusts;
+    SwarmOfLocusts,
+    LearnDarconic,
+    StrengthInNumbers;
+
 }

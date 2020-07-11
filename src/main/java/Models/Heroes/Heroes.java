@@ -4,10 +4,9 @@ import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.HeroPower.HeroPower;
 import Models.Player.InGamePlayer;
-import Visitors.PowerVisitor.HeroPowerVisitable;
-import Visitors.PowerVisitor.SpVisitable;
-import Visitors.PowerVisitor.SpVisitor;
-import Visitors.PowerVisitor.VisitorOfPowers;
+import Visitors.PowerVisitor.SpVisitor.SpVisitable;
+import Visitors.PowerVisitor.SpVisitor.SpVisitor;
+
 
 import java.util.ArrayList;
 

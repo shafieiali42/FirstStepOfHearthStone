@@ -25,6 +25,7 @@ public class JsonReaderForMinions {
         map.put("SwampKingDred", SwampKingDred.class);
         map.put("TombWarden", TombWarden.class);
         map.put("Locusts",Locusts.class);
+        map.put("Dragon",Dragon.class);
     }
 
     public static void main(String args[]) {

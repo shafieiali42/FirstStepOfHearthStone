@@ -5,7 +5,7 @@ import Logic.MyTimer;
 import Models.Cards.CardClasses.Cards;
 import Models.Heroes.Mage;
 import Models.Player.InGamePlayer;
-import Visitors.PowerVisitor.SpecialPowerVisitor;
+import Visitors.PowerVisitor.SpVisitor.SpecialPowerVisitor;
 
 import java.io.IOException;
 
@@ -65,9 +65,6 @@ public class Game {
     }
 
 
-
-
-
     public String getAllianceOfSpellsTarget() {
         return allianceOfSpellsTarget;
     }
@@ -117,42 +114,41 @@ public class Game {
 
 
     public Game() throws IOException {
-        myTimer=new MyTimer();
+        myTimer = new MyTimer();
         myTimer.start();
 //        initGameState();
 
     }
 
 
-
     public void initGameState() throws IOException {
 
-        if (gameMode==1){//Normal Game //TODO for next Phase
-            DeckReader deckReader =new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
+        if (gameMode == 1) {//Normal Game //TODO for next Phase
+            DeckReader deckReader = new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
             friendlyPlayer = new InGamePlayer(ControllerOfMainComponents.currentPlayer);
             enemyPlayer = new InGamePlayer();
             enemyPlayer.setHero(new Mage());
             enemyPlayer.setDeckCards(deckReader.getDeck("ENEMY"));
             enemyPlayer.initHandsCards();
             playingCard = new Cards();
-            currentPlayer=friendlyPlayer;
-            formerPlayer=enemyPlayer;
-            currentAlliance=Alliance.FRIENDLY;
+            currentPlayer = friendlyPlayer;
+            formerPlayer = enemyPlayer;
+            currentAlliance = Alliance.FRIENDLY;
 
-        }else if (gameMode==2){//Training Game //TODO has positive point
-            DeckReader deckReader =new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
+        } else if (gameMode == 2) {//Training Game //TODO has positive point
+            DeckReader deckReader = new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
             friendlyPlayer = new InGamePlayer(ControllerOfMainComponents.currentPlayer);
             enemyPlayer = new InGamePlayer();
             enemyPlayer.setHero(new Mage());
             enemyPlayer.setDeckCards(deckReader.getDeck("ENEMY"));
             playingCard = new Cards();
-            currentPlayer=friendlyPlayer;
-            formerPlayer=enemyPlayer;
-            currentAlliance=Alliance.FRIENDLY;
+            currentPlayer = friendlyPlayer;
+            formerPlayer = enemyPlayer;
+            currentAlliance = Alliance.FRIENDLY;
 
         } else if (gameMode == 3) {//DeckReader
-            DeckReader deckReader =new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
-            friendlyPlayer =new InGamePlayer();
+            DeckReader deckReader = new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
+            friendlyPlayer = new InGamePlayer();
             friendlyPlayer.setDeckCards(deckReader.getDeck("FRIEND"));
             friendlyPlayer.setHero(new Mage());
             friendlyPlayer.initPassiveToChoose();
@@ -162,37 +158,45 @@ public class Game {
             enemyPlayer.setHero(new Mage());
             enemyPlayer.initHandsCards();
             playingCard = new Cards();
-            currentPlayer=friendlyPlayer;
-            formerPlayer=enemyPlayer;
-            currentAlliance=Alliance.FRIENDLY;
+            currentPlayer = friendlyPlayer;
+            formerPlayer = enemyPlayer;
+            currentAlliance = Alliance.FRIENDLY;
 
-        }else if (gameMode==4){//Two Player Game
-            DeckReader deckReader =new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
+        } else if (gameMode == 4) {//Two Player Game
+            DeckReader deckReader = new DeckReader("src/main/resources/DeckReader/DeckReader.properties");
             friendlyPlayer = new InGamePlayer(ControllerOfMainComponents.currentPlayer);
             enemyPlayer = new InGamePlayer();
             enemyPlayer.setHero(new Mage());
             enemyPlayer.setDeckCards(deckReader.getDeck("ENEMY"));
             enemyPlayer.initHandsCards();
-            friendlyPlayer.getHero().accept(new SpecialPowerVisitor(),friendlyPlayer,friendlyPlayer.getBattleGroundCards(),
-                    enemyPlayer.getBattleGroundCards(),friendlyPlayer.getHandsCards(),enemyPlayer.getHandsCards(),
-                    friendlyPlayer.getDeckCards(),enemyPlayer.getDeckCards(),null,null,null);
 
-            enemyPlayer.getHero().accept(new SpecialPowerVisitor(),enemyPlayer,enemyPlayer.getBattleGroundCards(),
-                    friendlyPlayer.getBattleGroundCards(),enemyPlayer.getHandsCards(),friendlyPlayer.getHandsCards(),
-                    enemyPlayer.getDeckCards(),friendlyPlayer.getDeckCards(),null,null,null);
+
+
+            //todo choose passive for enemy
+//            enemyPlayer.getInfoPassive().accept(new InfoPassiveVisitor(), enemyPlayer,
+//                    enemyPlayer.getBattleGroundCards(), enemyPlayer.getHandsCards(), enemyPlayer.getDeckCards());
+
+
+            friendlyPlayer.getHero().accept(new SpecialPowerVisitor(), friendlyPlayer, friendlyPlayer.getBattleGroundCards(),
+                    enemyPlayer.getBattleGroundCards(), friendlyPlayer.getHandsCards(), enemyPlayer.getHandsCards(),
+                    friendlyPlayer.getDeckCards(), enemyPlayer.getDeckCards(), null, null, null);
+
+            enemyPlayer.getHero().accept(new SpecialPowerVisitor(), enemyPlayer, enemyPlayer.getBattleGroundCards(),
+                    friendlyPlayer.getBattleGroundCards(), enemyPlayer.getHandsCards(), friendlyPlayer.getHandsCards(),
+                    enemyPlayer.getDeckCards(), friendlyPlayer.getDeckCards(), null, null, null);
             playingCard = new Cards();
-            currentPlayer=friendlyPlayer;
-            formerPlayer=enemyPlayer;
-            currentAlliance=Alliance.FRIENDLY;
+            currentPlayer = friendlyPlayer;
+            formerPlayer = enemyPlayer;
+            currentAlliance = Alliance.FRIENDLY;
         }
 
     }
 
-    public void changeAlliance(){
+    public void changeAlliance() {
         if (currentAlliance.equals(Alliance.FRIENDLY)) {
-            currentAlliance=Alliance.ENEMY;
-        }else{
-            currentAlliance=Alliance.FRIENDLY;
+            currentAlliance = Alliance.ENEMY;
+        } else {
+            currentAlliance = Alliance.FRIENDLY;
         }
     }
 
@@ -200,12 +204,15 @@ public class Game {
     public int getGameMode() {
         return gameMode;
     }
+
     public void setGameMode(int gameMode) {
         this.gameMode = gameMode;
     }
+
     public Cards getPlayingCard() {
         return playingCard;
     }
+
     public void setPlayingCard(Cards playingCard) {
         this.playingCard = playingCard;
     }

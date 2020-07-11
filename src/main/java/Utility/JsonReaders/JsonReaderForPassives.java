@@ -1,23 +1,61 @@
 package Utility.JsonReaders;
 
+import Models.Cards.CardClasses.Minion;
 import Models.Cards.CardClasses.Passive;
+import Models.Cards.GameCards.MinionCards.MinionNames;
+import Models.Cards.GameCards.MinionCards.UnoptionalMinions.*;
+import Models.Cards.GameCards.Passives.*;
 import com.google.gson.Gson;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
 
 public class JsonReaderForPassives {
+    private static HashMap<String,Class> map=new HashMap<>();
+
+    private static void setMap() {
+        map.put("FreePower", FreePower.class);
+        map.put("ManaJump", ManaJump.class);
+        map.put("Nurse", Nurse.class);
+        map.put("OffCards", OffCards.class);
+        map.put("TwiceDraw", TwiceDraw.class);
+    }
 
     public static void main(String args[]) {
+        setMap();
         JsonReaderForPassives tester = new JsonReaderForPassives();
 
 
         try {
-            Passive passive1 = tester.readJSON();
-        } catch (IOException e) {
+            setPassiveCards();
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
+//        try {
+//            Passive passive1 = tester.readJSON();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+
+
     }
+
+
+    private static void setPassiveCards() throws FileNotFoundException {
+        Gson gson=new Gson();
+        for (PassiveNames passiveNames:PassiveNames.values()){
+            Class classOfCard = map.get(passiveNames.name());
+            System.out.println(passiveNames.name());
+            Passive passive =(Passive) gson.fromJson(new FileReader("MinionSpellsWeapons/PassiveCards/"+passiveNames.name()+".json"),classOfCard);
+            Passive.getPassives().add(passive);
+        }
+
+    }
+
 
     private Passive readJSON() throws IOException {
         Gson gson = new Gson();

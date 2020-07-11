@@ -5,17 +5,14 @@ import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.HeroPower.HunterHeroPower;
 import Models.Player.InGamePlayer;
-import Visitors.PowerVisitor.SpVisitor;
-import Visitors.PowerVisitor.VisitorOfPowers;
+import Visitors.PowerVisitor.SpVisitor.SpVisitor;
+
 
 import java.util.ArrayList;
 
 public class Hunter extends Heroes {
     private static ArrayList<Cards> specialCardsOfHunter = new ArrayList<Cards>();
-//    private static Hunter instance = new Hunter();
-//    public static Hunter getInstance(){
-//        return instance;
-//    }
+
 
 
     public Hunter(){

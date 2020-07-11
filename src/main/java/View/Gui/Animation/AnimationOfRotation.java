@@ -20,8 +20,6 @@ public class AnimationOfRotation extends JPanel  {
     }
 
 
-
-
     static void update(JFrame frame) {
         while (running) {
             frame.repaint();
@@ -40,27 +38,6 @@ public class AnimationOfRotation extends JPanel  {
     private long lastUpdate = 0;
     int frame;
 
-//    public void animation(Graphics2D g2d,int originX,int originY,int destinationX,int destinationY){
-////        Graphics2D g2d = (Graphics2D) g;
-////        super.paintComponent(g);
-//        if (lastUpdate==0)
-//            lastUpdate=System.nanoTime();
-//        long temp;
-//        while ((temp = System.nanoTime()-lastUpdate)>(1000000000/fps)){
-//            lastUpdate+=temp;
-//            frame++;
-//        }
-//        CardImagePanel back = null;
-//        try {
-//            back = new CardImagePanel(Administer.getPlayingCardName(),10,10);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        new RotatedPic(originX, originY, destinationX, destinationY,
-//                back).paint(g2d,frame);
-////        new RotatedPic(0, 500, 500, 0,
-////                new SimplePainter(back)).paint(g2d,frame);
-//    }
 
 
     @Override

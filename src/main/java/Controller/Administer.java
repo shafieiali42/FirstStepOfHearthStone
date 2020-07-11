@@ -15,7 +15,6 @@ import View.Gui.Panels.CollectionPages.DeckViewer;
 import View.Gui.Panels.CollectionPages.LittleCardPanel;
 import View.Gui.Panels.GamePage.DiscoverCardsPage;
 import View.Gui.Panels.GamePage.FirstThreeCardsPage;
-import View.Gui.Panels.GamePage.GamePage;
 import View.Gui.Panels.GamePage.PlayPanel;
 
 
@@ -30,7 +29,8 @@ import Utility.Sounds;
 import View.CardView.CardImagePanel;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
 import View.Gui.Panels.StatusPanel.ShowDeckInfoPanel;
-import Visitors.PowerVisitor.HeroPowerVisitor;
+import Visitors.PassiveVisitor.InfoPassiveVisitor;
+import Visitors.PowerVisitor.HeroPowerVisitor.HeroPowerVisitor;
 
 import javax.swing.*;
 import java.awt.*;
@@ -46,6 +46,30 @@ public class Administer {
     }
 
     //gameState
+
+
+    public static String getFriendlyImprovementOfQuest() {
+        if (Game.getInstance().getFriendlyPlayer().getQuestCard() != null) {
+            return Game.getInstance().getFriendlyPlayer().getQuestCard().getManaSpendForQuest() +
+                    "/" + Game.getInstance().getFriendlyPlayer().getQuestCard().getManaSpendForQuest();
+        } else {
+            return "NoActiveQuest";
+        }
+    }
+
+    public static String getEnemyImprovementOfQuest() {
+        if (Game.getInstance().getFriendlyPlayer().getQuestCard() != null) {
+            return Game.getInstance().getEnemyPlayer().getQuestCard().getManaSpendForQuest() +
+                    "/" + Game.getInstance().getEnemyPlayer().getQuestCard().getManaSpendForQuest();
+        }else {
+            return "NoActiveQuest";
+        }
+    }
+
+
+    public static void setNeedTimer(boolean show) {
+        PlayPanel.getInstance().setNeedTimer(show);
+    }
 
 
     public static void attack(int attacker, int target, String attackerAlliance, String targetAlliance) {
@@ -76,7 +100,7 @@ public class Administer {
                             Game.getInstance().getEnemyPlayer().getHandsCards(),
                             Game.getInstance().getFriendlyPlayer().getDeckCards(),
                             Game.getInstance().getEnemyPlayer().getDeckCards(),
-                            minion, new Heroes(),null);
+                            minion, new Heroes(), null);
                     removeDeadCharacters();
 
 
@@ -91,7 +115,7 @@ public class Administer {
                             Game.getInstance().getEnemyPlayer().getHandsCards(),
                             Game.getInstance().getFriendlyPlayer().getDeckCards(),
                             Game.getInstance().getEnemyPlayer().getDeckCards(),
-                            minion, new Heroes(),null);
+                            minion, new Heroes(), null);
                     removeDeadCharacters();
                 }
                 //todo execute heroPower
@@ -586,10 +610,25 @@ public class Administer {
 
     public static void setFriendlyInfoPassiveOfGameState(int numberOfPassive) {
         Game.getInstance().getFriendlyPlayer().setInfoPassive(Game.getInstance().getFriendlyPlayer().getPassivesToChoose().get(numberOfPassive));
+        Game.getInstance().getFriendlyPlayer().getInfoPassive().accept(new InfoPassiveVisitor(), Game.getInstance().getFriendlyPlayer(),
+                Game.getInstance().getFriendlyPlayer().getBattleGroundCards(),
+                Game.getInstance().getFriendlyPlayer().getHandsCards(),
+                Game.getInstance().getFriendlyPlayer().getDeckCards());
+
+        //todo for test
+        Game.getInstance().getEnemyPlayer().setInfoPassive(Game.getInstance().getFriendlyPlayer().getInfoPassive());
+        Game.getInstance().getEnemyPlayer().getInfoPassive().accept(new InfoPassiveVisitor(), Game.getInstance().getEnemyPlayer(),
+                Game.getInstance().getEnemyPlayer().getBattleGroundCards(),
+                Game.getInstance().getEnemyPlayer().getHandsCards(),
+                Game.getInstance().getEnemyPlayer().getDeckCards());
     }
 
     public static void setEnemyInfoPassiveOfGameState(int numberOfPassive) {
         Game.getInstance().getEnemyPlayer().setInfoPassive(Game.getInstance().getEnemyPlayer().getPassivesToChoose().get(numberOfPassive));
+        Game.getInstance().getEnemyPlayer().getInfoPassive().accept(new InfoPassiveVisitor(), Game.getInstance().getEnemyPlayer(),
+                Game.getInstance().getEnemyPlayer().getBattleGroundCards(),
+                Game.getInstance().getEnemyPlayer().getHandsCards(),
+                Game.getInstance().getEnemyPlayer().getDeckCards());
     }
 
     public static int getManaOfCurrentPlayer() {
@@ -792,31 +831,31 @@ public class Administer {
 
         switch (heroName) {
             case ("Mage"):
-                Mage mage=new Mage();
+                Mage mage = new Mage();
                 ControllerOfMainComponents.currentPlayer.setMage(mage);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(mage);
                 CollectionState.getInstance().getDeckToChange().setHero(mage);
                 break;
             case ("Rogue"):
-                Rogue rogue=new Rogue();
+                Rogue rogue = new Rogue();
                 ControllerOfMainComponents.currentPlayer.setRogue(rogue);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(rogue);
                 CollectionState.getInstance().getDeckToChange().setHero(rogue);
                 break;
             case ("Warlock"):
-                Warlock warlock=new Warlock();
+                Warlock warlock = new Warlock();
                 ControllerOfMainComponents.currentPlayer.setWarlock(warlock);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(warlock);
                 CollectionState.getInstance().getDeckToChange().setHero(warlock);
                 break;
             case ("Hunter"):
-                Hunter hunter=new Hunter();
+                Hunter hunter = new Hunter();
                 ControllerOfMainComponents.currentPlayer.setHunter(hunter);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(hunter);
                 CollectionState.getInstance().getDeckToChange().setHero(hunter);
                 break;
             case ("Priest"):
-                Priest priest=new Priest();
+                Priest priest = new Priest();
                 ControllerOfMainComponents.currentPlayer.setPriest(priest);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(priest);
                 CollectionState.getInstance().getDeckToChange().setHero(priest);
@@ -832,7 +871,6 @@ public class Administer {
     public static String getHeroNameOfDeckToChange() {
         return CollectionState.getInstance().getDeckToChange().getHero().getName();
     }
-
 
 
     public static Deck getDeckThatIsInPlayersDeck(String deckName) {
@@ -879,33 +917,33 @@ public class Administer {
     }
 
     public static void selectMainDeck() {
-        switch (CollectionState.getInstance().getDeckToChange().getHero().getName()){
+        switch (CollectionState.getInstance().getDeckToChange().getHero().getName()) {
             case ("Mage"):
-                Mage mage=new Mage();
+                Mage mage = new Mage();
                 ControllerOfMainComponents.currentPlayer.setMage(mage);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(mage);
                 CollectionState.getInstance().getDeckToChange().setHero(mage);
                 break;
             case ("Rogue"):
-                Rogue rogue=new Rogue();
+                Rogue rogue = new Rogue();
                 ControllerOfMainComponents.currentPlayer.setRogue(rogue);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(rogue);
                 CollectionState.getInstance().getDeckToChange().setHero(rogue);
                 break;
             case ("Warlock"):
-                Warlock warlock=new Warlock();
+                Warlock warlock = new Warlock();
                 ControllerOfMainComponents.currentPlayer.setWarlock(warlock);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(warlock);
                 CollectionState.getInstance().getDeckToChange().setHero(warlock);
                 break;
             case ("Hunter"):
-                Hunter hunter=new Hunter();
+                Hunter hunter = new Hunter();
                 ControllerOfMainComponents.currentPlayer.setHunter(hunter);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(hunter);
                 CollectionState.getInstance().getDeckToChange().setHero(hunter);
                 break;
             case ("Priest"):
-                Priest priest=new Priest();
+                Priest priest = new Priest();
                 ControllerOfMainComponents.currentPlayer.setPriest(priest);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(priest);
                 CollectionState.getInstance().getDeckToChange().setHero(priest);
@@ -924,31 +962,31 @@ public class Administer {
     public static void changeHeroOfDeck(String heroName) {
         switch (heroName) {
             case ("Mage"):
-                Mage mage=new Mage();
+                Mage mage = new Mage();
                 ControllerOfMainComponents.currentPlayer.setMage(mage);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(mage);
                 CollectionState.getInstance().getDeckToChange().setHero(mage);
                 break;
             case ("Rogue"):
-                Rogue rogue=new Rogue();
+                Rogue rogue = new Rogue();
                 ControllerOfMainComponents.currentPlayer.setRogue(rogue);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(rogue);
                 CollectionState.getInstance().getDeckToChange().setHero(rogue);
                 break;
             case ("Warlock"):
-                Warlock warlock=new Warlock();
+                Warlock warlock = new Warlock();
                 ControllerOfMainComponents.currentPlayer.setWarlock(warlock);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(warlock);
                 CollectionState.getInstance().getDeckToChange().setHero(warlock);
                 break;
             case ("Hunter"):
-                Hunter hunter=new Hunter();
+                Hunter hunter = new Hunter();
                 ControllerOfMainComponents.currentPlayer.setHunter(hunter);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(hunter);
                 CollectionState.getInstance().getDeckToChange().setHero(hunter);
                 break;
             case ("Priest"):
-                Priest priest=new Priest();
+                Priest priest = new Priest();
                 ControllerOfMainComponents.currentPlayer.setPriest(priest);
                 ControllerOfMainComponents.currentPlayer.setCurrentHero(priest);
                 CollectionState.getInstance().getDeckToChange().setHero(priest);

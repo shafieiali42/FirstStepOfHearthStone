@@ -102,6 +102,11 @@ public class ActionVisitor implements Visitor {
     }
 
     @Override
+    public void visit(Dragon dragon) {
+
+    }
+
+    @Override
     public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target, String alliance) {
 
     }
@@ -149,6 +154,18 @@ public class ActionVisitor implements Visitor {
     public void visit(HighPriestAmet highPriestAmet, Minion summonedMinion) {
 
     }
+
+    @Override
+    public void visit(LearnDarconic learnDarconic, ArrayList<Minion> battleGround, Cards playingCard) {
+
+    }
+
+    @Override
+    public void visit(StrengthInNumbers strengthInNumbers, ArrayList<Minion> battleGround, ArrayList<Cards> deckCards, Cards playingCard) {
+
+    }
+
+
 
 
 }

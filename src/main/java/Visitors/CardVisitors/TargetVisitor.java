@@ -79,6 +79,10 @@ public class TargetVisitor implements Visitor {
 
     }
 
+    @Override
+    public void visit(Dragon dragon) {
+
+    }
 
 
     @Override
@@ -108,4 +112,16 @@ public class TargetVisitor implements Visitor {
     public void visit(HighPriestAmet highPriestAmet, Minion summonedMinion) {
 
     }
+
+    @Override
+    public void visit(LearnDarconic learnDarconic, ArrayList<Minion> battleGround, Cards playingCard) {
+
+    }
+
+    @Override
+    public void visit(StrengthInNumbers strengthInNumbers, ArrayList<Minion> battleGround, ArrayList<Cards> deckCards, Cards playingCard) {
+
+    }
+
+
 }

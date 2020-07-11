@@ -1,18 +1,15 @@
 package View.Gui.Panels.GamePage;
 
 import Controller.Administer;
-import Logic.PlayLogic.Game;
 import Utility.Config2.ConfigLoader;
-import Utility.Constant;
 import Utility.MethodsOfShowCardsOnPanel;
 import View.CardView.CardImagePanel;
 import View.Gui.Animation.AnimationOfRotation;
+import View.Gui.Mapper;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.AffineTransform;
-import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -78,13 +75,16 @@ public class PlayPanel extends JPanel {
     private BufferedImage enemyHeroPowerImage;
     private BufferedImage enemyWeaponImage;
     private boolean needsToRepaint = true;
+    private boolean needTimer = false;
     private int typeOfBackOfCards = 1;
+    private boolean endTurn =false;
     private static PlayPanel playPanel = new PlayPanel();
 
     public static PlayPanel getInstance() {
         return playPanel;
     }
 
+    String time = "";
     boolean needAnimation = false;
 
     private PlayPanel() {
@@ -105,12 +105,12 @@ public class PlayPanel extends JPanel {
 //    }
 
 
-    public void showFriendlyHeroImage(){
+    public void showFriendlyHeroImage() {
 
         CardImagePanel cardImagePanel = null;
         try {
             cardImagePanel = new CardImagePanel(Administer.getNameOfFriendlyHeroOfGameState(),
-                    WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE, "hero","FRIENDLY");
+                    WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE, "hero", "FRIENDLY");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -120,13 +120,12 @@ public class PlayPanel extends JPanel {
     }
 
 
-
-    public void showEnemyHeroImage(){
+    public void showEnemyHeroImage() {
 
         CardImagePanel cardImagePanel = null;
         try {
             cardImagePanel = new CardImagePanel(Administer.getNameOfEnemyHeroOfGameState(),
-                    WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE, "hero","ENEMY");
+                    WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE, "hero", "ENEMY");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -193,6 +192,19 @@ public class PlayPanel extends JPanel {
         }
 
 
+        System.out.println(Thread.currentThread().getName());
+//        if (endTurn){
+//            Mapper.endTurn();
+//            this.endTurn=false;
+//        }
+
+        if (needTimer) {
+            graphics2D.setColor(Color.red);
+            graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 50));
+            graphics2D.drawString(time, 1050, 310);
+            graphics2D.setColor(Color.black);
+        }
+
         try {
             if (needsToRepaint) {
                 this.removeAll();
@@ -200,6 +212,7 @@ public class PlayPanel extends JPanel {
                 Administer.showFriendlyBattleGroundCardsInPlay(this, NUMBER_OF_CARDS_PER_ROW_GAME_PANEL);
                 Administer.showEnemyBattleGroundCardsInPlay(this, NUMBER_OF_CARDS_PER_ROW_GAME_PANEL);
                 Administer.showEnemyHandsCardInPlay(this, NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS, typeOfBackOfCards, Administer.getGameMode());
+
                 this.revalidate();
                 needsToRepaint = false;
             }
@@ -217,12 +230,11 @@ public class PlayPanel extends JPanel {
         Administer.showEnemyWeaponOfGameState(this, WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE,
                 X_COORDINATE_OF__ENEMY_WEAPON, Y_COORDINATE_OF_ENEMY_WEAPON);
 
-        Administer.showFriendlyHeroPower(this,WIDTH_OF_HERO_POWER_IMAGE,HEIGHT_OF_HERO_POWER_IMAGE,
-                X_COORDINATE_OF_HERO_POWER_IMAGE,Y_COORDINATE_OF_HERO_POWER_IMAGE);
+        Administer.showFriendlyHeroPower(this, WIDTH_OF_HERO_POWER_IMAGE, HEIGHT_OF_HERO_POWER_IMAGE,
+                X_COORDINATE_OF_HERO_POWER_IMAGE, Y_COORDINATE_OF_HERO_POWER_IMAGE);
 
-        Administer.showEnemyHeroPower(this,WIDTH_OF_HERO_POWER_IMAGE,HEIGHT_OF_HERO_POWER_IMAGE,
-                X_COORDINATE_OF_ENEMY_HERO_POWER_IMAGE,Y_COORDINATE_OF_ENEMY_HERO_POWER_IMAGE);
-
+        Administer.showEnemyHeroPower(this, WIDTH_OF_HERO_POWER_IMAGE, HEIGHT_OF_HERO_POWER_IMAGE,
+                X_COORDINATE_OF_ENEMY_HERO_POWER_IMAGE, Y_COORDINATE_OF_ENEMY_HERO_POWER_IMAGE);
 
 
         graphics2D.setColor(Color.red);
@@ -312,5 +324,28 @@ public class PlayPanel extends JPanel {
         return HEIGHT_OF_PLAY_PANEL;
     }
 
+    public boolean getNeedTimer() {
+        return needTimer;
+    }
 
+    public void setNeedTimer(boolean needTimer) {
+        this.needTimer = needTimer;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+
+    public boolean isEndTurn() {
+        return endTurn;
+    }
+
+    public void setEndTurn(boolean endTurn) {
+        this.endTurn = endTurn;
+    }
 }

@@ -29,6 +29,7 @@ public interface Visitor {
     void visit(Gearblade gearblade);
     void visit(SwarmOfLocusts swarmOfLocusts, ArrayList<Minion>battleGround);
     void visit(Locusts locusts, ArrayList<Minion>battleGround);
+    void visit(Dragon dragon);
 
     //Special
     //*********
@@ -36,18 +37,15 @@ public interface Visitor {
     void visit(FriendlySmith friendlySmith,ArrayList<Cards>deckCards);
     void visit(Dreadscale dreadscale);
     void visit(SwampKingDred swampKingDred);
+
     void visit(HighPriestAmet highPriestAmet,Minion summonedMinion);
 
+    //Quest And Reward
 
+    //******************
+    void visit(LearnDarconic learnDarconic, ArrayList<Minion> battleGround,Cards playingCard);
 
-
-
-
-
-
-
-
-
-
+    void visit(StrengthInNumbers strengthInNumbers, ArrayList<Minion> battleGround,
+               ArrayList<Cards> deckCards, Cards playingCard);
 
 }

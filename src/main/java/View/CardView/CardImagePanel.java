@@ -7,7 +7,6 @@ import Controller.ControllerOfMainComponents;
 import Logic.PlayLogic.Game;
 import Logic.Status;
 import Models.Cards.CardClasses.Minion;
-import Models.Heroes.Heroes;
 import View.Gui.Mapper;
 import View.Gui.Panels.GamePage.DiscoverCardsPage;
 import View.Gui.Panels.GamePage.PlayPanel;
@@ -18,8 +17,8 @@ import View.Gui.Panels.ShopPanel.BuySellPanel;
 import View.Gui.Panels.ShopPanel.PanelToShowCardInBuySellPanel;
 import View.Gui.Panels.ShopPanel.ShopPage;
 import Visitors.CardVisitors.AfterSelectVisitor;
-import Visitors.PowerVisitor.AfterSelectPowerVisitor;
-import Visitors.PowerVisitor.HeroPowerVisitor;
+import Visitors.PowerVisitor.HeroPowerVisitor.AfterSelectPowerVisitor;
+
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -183,6 +182,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
         this.cardName = cardName;
         setIsLock(cardName);
         if (this.isLock) {
+//            System.out.println(cardName);
             imageOfCard = ImageIO.read(new File("src/main/resources/Assets/GreyCardImage/" + cardName + ".png"));
         } else {
             imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
@@ -253,7 +253,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 Administer.setTargetOfSpell(number, alliance);
                 Administer.getPlyingCardOfGameState().accept(new AfterSelectVisitor(), Administer.getBattleGround(),
                         Administer.getHandCards(), Administer.getDeckCards(), Administer.getTargetOfSpell(),
-                        Administer.getTargetOfSpellWitchIsHero(), new Minion(), alliance);
+                        Administer.getTargetOfSpellWitchIsHero(), new Minion(),null, alliance);
 
 
                 ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
@@ -503,7 +503,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 Administer.getPlyingCardOfGameState().accept(new AfterSelectVisitor(),
                         Administer.getBattleGround(),
                         Administer.getHandCards(), Administer.getDeckCards(),
-                        new Minion(), null, new Minion(), alliance);
+                        new Minion(), null, new Minion(), null,alliance);
             }
         }
         if (ControllerOfMainComponents.getStatus().equals(Status.FIRST_THREE_CARDS_PAGE)) {

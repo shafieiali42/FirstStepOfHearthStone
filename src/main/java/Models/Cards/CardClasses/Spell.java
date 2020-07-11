@@ -9,6 +9,25 @@ public class Spell extends Cards {
     static ArrayList<Spell> questAndRewardCards = new ArrayList<Spell>();
 
 
+    private int manaSpendForQuest=0;
+    private int manaNeededForQuest=0;
+
+
+    public int getManaNeededForQuest() {
+        return manaNeededForQuest;
+    }
+
+    public void setManaNeededForQuest(int manaNeededForQuest) {
+        this.manaNeededForQuest = manaNeededForQuest;
+    }
+
+    public int getManaSpendForQuest() {
+        return manaSpendForQuest;
+    }
+    public void setManaSpendForQuest(int manaSpendForQuest) {
+        this.manaSpendForQuest = manaSpendForQuest;
+    }
+
     private ArrayList<SpellAbility> abilities=new ArrayList<>();
 
     public ArrayList<SpellAbility> getAbilities() {

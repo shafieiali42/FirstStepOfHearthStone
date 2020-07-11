@@ -38,7 +38,7 @@ public class HighPriestAmet extends Minion {
 
     @Override
     public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,
-                       ArrayList<Cards>deckCards, Minion target, Heroes targetHero, Minion summonedMinion,String alliance){
+                       ArrayList<Cards>deckCards, Minion target, Heroes targetHero, Minion summonedMinion,Cards playingCard,String alliance){
         visitor.visit(this,summonedMinion);
     }
 

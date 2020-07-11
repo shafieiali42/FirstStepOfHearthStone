@@ -5946,3 +5946,5 @@ Jul 10, 2020 4:34:08 AM View.Gui.Mapper playCard
 INFO: PlayMinion
 Jul 10, 2020 4:34:20 AM Controller.PlayerController logOut
 INFO: Log_out z
+Jul 10, 2020 7:40:32 PM Controller.PlayerController signIn
+INFO: sign_in z

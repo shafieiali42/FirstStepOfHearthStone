@@ -21,6 +21,36 @@ public class InGamePlayer {
     private Passive infoPassive;
     private ArrayList<Passive> passivesToChoose;
     private ArrayList<Cards> firstThreeCards;
+    private int numberOfDrawCard;
+    private int questImprovement;
+    private Spell questCard;
+
+
+
+
+    public Spell getQuestCard() {
+        return questCard;
+    }
+
+    public void setQuestCard(Spell questCard) {
+        this.questCard = questCard;
+    }
+
+    public int getQuestImprovement() {
+        return questImprovement;
+    }
+
+    public void setQuestImprovement(int questImprovement) {
+        this.questImprovement = questImprovement;
+    }
+
+    public int getNumberOfDrawCard() {
+        return numberOfDrawCard;
+    }
+
+    public void setNumberOfDrawCard(int numberOfDrawCard) {
+        this.numberOfDrawCard = numberOfDrawCard;
+    }
 
     public InGamePlayer(){
         this.handsCards = new ArrayList<>();

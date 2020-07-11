@@ -21,6 +21,8 @@ public class JsonReaderForSpells {
         map.put("Polymorph", Polymorph.class);
         map.put("Sprint", Sprint.class);
         map.put("SwarmOfLocusts", SwarmOfLocusts.class);
+        map.put("LearnDarconic", LearnDarconic.class);
+        map.put("StrengthInNumbers", StrengthInNumbers.class);
     }
 
     public static void main(String args[]) {

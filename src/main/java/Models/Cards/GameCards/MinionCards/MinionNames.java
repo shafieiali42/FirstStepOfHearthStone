@@ -8,5 +8,6 @@ public enum MinionNames {
     SecurityRover,
     SwampKingDred,
     TombWarden,
-    Locusts;
+    Locusts,
+    Dragon;
 }

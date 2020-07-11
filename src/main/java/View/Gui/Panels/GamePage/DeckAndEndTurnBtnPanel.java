@@ -95,15 +95,16 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
     }
 
 
+
     private void initSecondDeck() {
-        DeckViewerInPlay.getInstanceOfSecondDeck().setBounds(60, 50, DeckViewerInPlay.getWidthOfDeck(), DeckViewerInPlay.getHeightOfDeck());
+        DeckViewerInPlay.getInstanceOfSecondDeck().setBounds(60, 100, DeckViewerInPlay.getWidthOfDeck(), DeckViewerInPlay.getHeightOfDeck());
 
         DeckViewerInPlay.getInstanceOfSecondDeck().setToolTipText("There are 0 cards in this Models.Deck");//TODO needs to change in next phase:))
         add(DeckViewerInPlay.getInstanceOfSecondDeck());
     }
 
     private void initFirstDeck() {
-        DeckViewerInPlay.getInstanceOfFirstDeck().setBounds(60, 460, DeckViewerInPlay.getWidthOfDeck(), DeckViewerInPlay.getHeightOfDeck());
+        DeckViewerInPlay.getInstanceOfFirstDeck().setBounds(60, 550, DeckViewerInPlay.getWidthOfDeck(), DeckViewerInPlay.getHeightOfDeck());
 
         DeckViewerInPlay.getInstanceOfFirstDeck().setToolTipText("You have "+
                 Administer.getNumberOfFriendlyCardsOfDeckInGameState()+ "cards in your deck");
@@ -136,12 +137,20 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
         super.paintComponent(g);
         g.setFont(new Font("TimesRoman", Font.ITALIC, 30));
         g.drawString(Administer.getManaOfCurrentPlayer() + "/" + "10", 60, 700);
+        g.setFont(new Font("TimesRoman", Font.ITALIC, 15));
+//        g.drawString(Administer.getEnemyImprovementOfQuest(), 50, 295);
+        g.drawString(Administer.getFriendlyImprovementOfQuest(), 50, 495);
+
 
         DeckViewerInPlay.getInstanceOfFirstDeck().setToolTipText("You have "+
                 Administer.getNumberOfFriendlyCardsOfDeckInGameState()+ "cards in your deck");
 
         DeckViewerInPlay.getInstanceOfSecondDeck().setToolTipText("You have "+
                 Administer.getNumberOfEnemyCardsOfDeckInGameState()+ "cards in your deck");
+
+
+
+
     }
 
 }
@@ -157,7 +166,7 @@ class DeckViewerInPlay extends JPanel {
     }
 
     private static final int WIDTH_OF_DECK = 80;
-    private static final int HEIGHT_OF_DECK = 200;
+    private static final int HEIGHT_OF_DECK = 120;
     private int witchPanel;
     private static DeckViewerInPlay firstDeck = new DeckViewerInPlay(1);
 
@@ -184,11 +193,9 @@ class DeckViewerInPlay extends JPanel {
         super.paintComponent(g);
         Graphics2D graphics2D = (Graphics2D) g;
         if (witchPanel == 1) {
-            DrawRotate.drawRotate(graphics2D, WIDTH_OF_DECK / 2 - 10, 15, 90, "Player's Deck");
-
-
+            DrawRotate.drawRotate(graphics2D, WIDTH_OF_DECK / 2 - 10, 10, 90, "Friendly");
         } else if (witchPanel == 2) {
-            DrawRotate.drawRotate(graphics2D, WIDTH_OF_DECK / 2 - 10, 15, 90, "Enemy's Deck");
+            DrawRotate.drawRotate(graphics2D, WIDTH_OF_DECK / 2 - 10, 20, 90, "Enemy");
         }
     }
 

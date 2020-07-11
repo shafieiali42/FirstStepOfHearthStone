@@ -5,9 +5,9 @@ import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Heroes.Heroes;
 import Models.Player.InGamePlayer;
-import Visitors.CardVisitors.Visitor;
-import Visitors.PowerVisitor.HeroPowerVisitable;
-import Visitors.PowerVisitor.VisitorOfPowers;
+import Visitors.PowerVisitor.HeroPowerVisitor.HeroPowerVisitable;
+import Visitors.PowerVisitor.HeroPowerVisitor.VisitorOfPowers;
+
 
 import java.util.ArrayList;
 
@@ -18,9 +18,15 @@ public class HeroPower  implements HeroPowerVisitable {
     private int mana;
     private String name;
     private boolean needsTarget;
+    private int numberOfPermitUse=1;
 
+    public int getNumberOfPermitUse() {
+        return numberOfPermitUse;
+    }
 
-
+    public void setNumberOfPermitUse(int numberOfPermitUse) {
+        this.numberOfPermitUse = numberOfPermitUse;
+    }
 
     public int getMana() {
         return mana;
@@ -43,7 +49,7 @@ public class HeroPower  implements HeroPowerVisitable {
                        ArrayList<Minion> friendlyBattleGround, ArrayList<Minion> enemyBattleGround,
                        ArrayList<Cards> friendlyHandCards, ArrayList<Cards> enemyHandsCards,
                        ArrayList<Cards> friendlyDeckCards, ArrayList<Cards> enemyDeckCards,
-                       Minion target, Heroes targetHero,Minion summoned) {
+                       Minion target, Heroes targetHero, Minion summoned) {
 
     }
 
