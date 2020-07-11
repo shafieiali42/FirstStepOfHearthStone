@@ -1,1 +1,1 @@
-{"name":"TombWarden" , "type":"Minion" , "classOfCard":"Neutral" , "MoneyCost":10 , "manaCost":1 ,"rarity":"Rare" , "attackPower":3 ,"healthPower":6 , "description":"Taunt Battlecry: Summon a copy of this minion." }
+{"name":"TombWarden" , "type":"Minion" , "classOfCard":"Neutral" , "MoneyCost":10 , "manaCost":8 ,"rarity":"Rare" , "attackPower":3 ,"healthPower":6 , "description":"Taunt Battlecry: Summon a copy of this minion." }

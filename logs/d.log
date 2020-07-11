@@ -1,0 +1,28 @@
+Jul 11, 2020 6:27:27 PM Controller.PlayerController signUp
+INFO: USER: d
+Jul 11, 2020 6:27:27 PM Controller.PlayerController signUp
+INFO: CREATED_AT:2020/07/11 18:27:27
+Jul 11, 2020 6:27:27 PM Controller.PlayerController signUp
+INFO: PASSWORD: d
+Jul 11, 2020 6:27:27 PM Controller.PlayerController signUp
+INFO: sign_up d
+Jul 11, 2020 6:27:52 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 11, 2020 6:27:58 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 11, 2020 6:28:15 PM Controller.Administer selectMainDeck
+INFO: select test for main deck
+Jul 11, 2020 6:28:18 PM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 11, 2020 6:28:19 PM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 11, 2020 6:28:21 PM Controller.PlayerController logOut
+INFO: Log_out d
+Jul 11, 2020 6:36:22 PM Controller.PlayerController signIn
+INFO: sign_in d
+Jul 11, 2020 6:36:23 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 11, 2020 6:36:30 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 11, 2020 6:43:24 PM Controller.Administer selectMainDeck
+INFO: select scdss for main deck

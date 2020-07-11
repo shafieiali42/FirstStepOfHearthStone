@@ -141,13 +141,18 @@ public class QuestRewardVisitor implements Visitor {
                 ArrayList<Minion>minions=new ArrayList<>();
                 for (Cards card:deckCards){
                     if (card.getType().equalsIgnoreCase("Minion")){
-                        minions.add((Minion)card);
+                        System.out.println("///////////////////");
+                        System.out.println(card);
+                        Minion minion= (Minion) card;
+                        minions.add(minion);
                     }
                 }
 
                 Random random=new Random();
-                int randomIndex=random.nextInt(battleGround.size());
+                int randomIndex=random.nextInt(minions.size());
                 Minion minion=minions.get(randomIndex);
+                System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+                System.out.println(minion.getName());
                 battleGround.add(minion);
                 deckCards.remove(minion);
             }

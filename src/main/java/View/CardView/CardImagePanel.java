@@ -552,7 +552,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS);
                 Mapper.getInstance().executeRequests();
                 dragging = false;
-            } else if (Administer.canAddFriendlyMinionToBattleGround()) {
+            } else if (Administer.canAddMinionToBattleGround()) {
 //                if (!Administer.isPlayedBefore(this.cardName)) {
 //                System.out.println("X: " + e.getComponent().getX() + " Y: " + e.getComponent().getY());
                 if (e.getComponent().getX() < 50) {

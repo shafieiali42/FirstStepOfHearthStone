@@ -1,5 +1,6 @@
 package Models.Cards.GameCards.SpellCards.UnoptionalSpells;
 
+import Models.Cards.GameCards.MinionCards.UnoptionalMinions.CurioCollector;
 import Models.Heroes.Heroes;
 import Visitors.CardVisitors.Visitor;
 import Models.Cards.CardClasses.Cards;
@@ -10,6 +11,25 @@ import java.util.ArrayList;
 
 
 public class BookOfSpecters extends Spell {
+
+
+
+    @Override
+    public BookOfSpecters copy() {
+        System.out.println("Copy of BookOfSpecters:))");
+        BookOfSpecters copy = new BookOfSpecters();
+        copy.setName(this.getName());
+        copy.setManaCost(this.getManaCost());
+        copy.setRarity(this.getRarity());
+        copy.setDescription(this.getDescription());
+        copy.setClassOfCard(this.getClassOfCard());
+        copy.setType(this.getType());
+        copy.setRarity(this.getRarity());
+        copy.setIsPlayed(this.isPlayed());
+        copy.setAbilities(this.getAbilities());
+        copy.setManaNeededForQuest(this.getManaNeededForQuest());
+        return copy;
+    }
 
 
     @Override

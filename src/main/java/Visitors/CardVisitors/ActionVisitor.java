@@ -36,7 +36,6 @@ public class ActionVisitor implements Visitor {
     }
 
 
-
     @Override
     public void visit(SecurityRover securityRover) {
 
@@ -52,9 +51,10 @@ public class ActionVisitor implements Visitor {
 
         for (int i = 0; i < 3; i++) {
             Cards card = Mapper.drawOneCard();
-            assert card != null;
-            if (!card.getType().equalsIgnoreCase("Spell")) {
-                handsCards.add(card);
+            if (card != null) {
+                if (!card.getType().equalsIgnoreCase("Spell")) {
+                    handsCards.add(card);
+                }
             }
         }
 
@@ -164,8 +164,6 @@ public class ActionVisitor implements Visitor {
     public void visit(StrengthInNumbers strengthInNumbers, ArrayList<Minion> battleGround, ArrayList<Cards> deckCards, Cards playingCard) {
 
     }
-
-
 
 
 }

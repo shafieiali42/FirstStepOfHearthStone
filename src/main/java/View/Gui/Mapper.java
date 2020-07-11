@@ -309,6 +309,7 @@ public class Mapper {
 
     public static void endTurn() {
         ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
+        System.out.println(Game.getInstance().getCurrentPlayer().getBattleGroundCards());
         Iterator<Minion> itr = Game.getInstance().getCurrentPlayer().getBattleGroundCards().iterator();
 
         while (itr.hasNext()) {
@@ -326,6 +327,7 @@ public class Mapper {
     }
 
     public static void playMinion(Minion playingCard, int k) {
+        System.out.println(playingCard);
         boolean minionPlayed = false;
         if (k != 7) {
             if (Game.getInstance().getCurrentPlayer().getBattleGroundCards().size() >= k) {
@@ -351,7 +353,6 @@ public class Mapper {
             Game.getInstance().getCurrentPlayer().getBattleGroundCards().add(playingCard.copy());
             Mapper.getInstance().setAddedBeforeForBeingBetween(false);
             minionPlayed = true;
-            System.out.println("K: " + k + " Size:" + Game.getInstance().getCurrentPlayer().getBattleGroundCards().size());
 
             Game.getInstance().getFormerPlayer().getHero().getHeroPower().accept(new SummonVisitorOfHeroPowers(),
                     null, null, null,
@@ -386,6 +387,8 @@ public class Mapper {
                             Game.getInstance().getCurrentPlayer().getBattleGroundCards().get(k - 1));
                 }
             }
+
+
 
 //            playingCard.accept(new TargetVisitor(),Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
 //                    Game.getInstance().getCurrentPlayer().getHandsCards(),Game.getInstance().getCurrentPlayer().getDeckCards(),

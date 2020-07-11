@@ -1,21 +1,30 @@
 package Controller;
 
 
+import Logic.PlayLogic.Game;
+import Models.Cards.CardClasses.Cards;
+import Models.Cards.CardClasses.Minion;
+import Models.Deck.Deck;
 import Models.Heroes.*;
 import Models.Player.Player;
 import Models.Player.*;
 
 import View.Gui.Panels.LogInPanel.LogInPage;
 import View.Gui.Panels.MenuPanel.MainMenuPage;
+import Visitors.CardVisitors.EndTurnVisitor;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import javax.smartcardio.Card;
 import javax.swing.*;
 import java.io.*;
+import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Iterator;
 import java.util.List;
 
 public class PlayerController {
@@ -60,6 +69,29 @@ public class PlayerController {
                         ControllerOfMainComponents.currentPlayer.setCurrentHero(priest);
                         break;
                 }
+
+
+                ArrayList<Cards> cards=new ArrayList<>();
+                for (Cards cards1:ControllerOfMainComponents.currentPlayer.getCurrentDeck().getListOfCards()){
+                    for (Cards cards2:Cards.getAllCards()){
+                        if (cards1.getName().equalsIgnoreCase(cards2.getName())){
+                            cards.add(cards2);
+                        }
+                    }
+                }
+
+                ControllerOfMainComponents.currentPlayer.getCurrentDeck().setListOfCards(cards);
+
+//                for(Deck deck:ControllerOfMainComponents.currentPlayer.getAllDecksOfPlayer()){
+//                    for (Cards card:deck.getListOfCards()){
+//                        for (Cards cards1:Cards.getAllCards()){
+//                            if (card.getName().equalsIgnoreCase(cards1.getName())){
+//                                deck.getListOfCards().remove(card);
+//                                deck.getListOfCards().add(cards1);
+//                            }
+//                        }
+//                    }
+//                }
 
                 ControllerOfMainComponents.currentPlayer.setSigninOrSignup("Signin");
                 player.setSigninOrSignup("Signin");

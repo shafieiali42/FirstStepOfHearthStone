@@ -1162,3 +1162,1079 @@ Jul 11, 2020 6:09:32 AM View.Gui.Mapper endTurn
 INFO: End turn
 Jul 11, 2020 6:09:37 AM View.Gui.Mapper playCard
 INFO: PlaySpell
+Jul 11, 2020 3:58:08 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 3:58:12 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 3:58:21 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 3:58:24 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 3:58:28 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 3:58:31 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 3:58:36 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 3:58:50 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 3:59:18 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 3:59:19 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 3:59:22 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 3:59:37 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 3:59:39 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 3:59:43 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 3:59:56 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 4:00:03 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:00:12 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:00:20 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:00:24 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:00:41 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:00:49 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:00:53 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 4:00:57 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:01:52 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:01:54 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:02:10 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:02:25 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:02:43 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:02:57 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:03:09 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:03:12 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:08:26 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 4:08:28 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:08:36 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 4:08:51 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:08:58 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:09:02 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:09:15 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:09:25 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:09:29 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:09:42 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 4:10:04 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:10:11 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:10:13 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:10:22 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:10:31 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:13:56 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:18:36 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 4:18:37 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:18:47 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:18:53 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:18:56 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:18:59 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 4:19:11 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:19:56 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:19:58 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:20:01 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:20:21 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:20:39 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:20:43 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:20:55 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:21:07 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:21:21 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:21:25 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:21:28 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 4:21:38 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 4:21:49 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:21:51 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:22:08 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 4:22:13 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:22:20 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:22:29 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:22:47 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:22:48 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:22:51 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:23:21 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:23:31 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:23:33 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:24:06 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:24:19 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:24:43 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 4:24:59 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 4:25:07 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:25:16 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 4:25:28 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:25:35 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:25:38 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 4:32:48 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 4:32:50 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:33:03 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 4:33:12 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:33:15 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:34:56 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 4:34:58 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:35:07 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:35:17 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:35:28 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:35:34 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 4:35:41 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:35:50 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:35:59 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:36:12 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:36:16 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 4:38:28 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 4:38:30 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:38:44 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:39:03 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 4:40:24 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 4:40:26 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:40:38 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:40:48 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 4:40:52 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:40:57 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:41:00 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:41:12 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:41:21 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:41:25 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:41:29 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:41:42 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:41:55 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:41:59 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:42:03 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:42:13 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:42:17 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:42:22 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 4:42:26 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:42:43 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:42:49 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:42:58 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:43:36 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:43:51 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:44:11 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:44:15 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:44:34 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:45:12 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:45:23 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:45:47 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:45:51 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:46:00 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:46:03 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:46:11 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:46:36 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:46:51 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:46:59 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:47:08 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 4:47:09 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 4:47:14 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:47:17 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:47:18 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:47:53 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 4:47:55 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:48:07 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:48:18 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:48:19 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:48:24 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 4:48:28 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:48:39 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:48:45 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:48:49 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:48:53 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:48:56 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:49:00 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:49:04 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:49:08 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:49:15 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:49:19 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:49:29 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:49:35 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:49:39 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:49:54 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:50:00 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:53:15 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 4:53:17 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 4:53:29 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 4:53:41 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:53:42 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:53:46 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 4:53:52 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:54:20 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:54:21 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:54:24 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 4:54:44 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:54:46 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:54:56 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:55:01 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:55:09 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:55:15 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:55:21 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:55:25 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:55:33 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:55:38 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 4:59:24 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:00:00 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 5:00:01 PM Controller.Administer writeLog
+INFO: Navigate into setting page
+Jul 11, 2020 5:00:04 PM Controller.Administer writeLog
+INFO: Go back from setting page
+Jul 11, 2020 5:00:05 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:00:19 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 5:00:23 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:00:30 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:00:34 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:00:39 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:00:44 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:00:51 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:00:54 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:00:59 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:01:05 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:01:10 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:01:14 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:01:20 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:01:24 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:02:05 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 5:02:10 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:02:22 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:02:26 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:02:30 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:02:35 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:02:40 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:02:45 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:02:52 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:02:57 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:03:03 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:03:05 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:03:23 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:03:32 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:03:40 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:03:49 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:04:03 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:04:06 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:04:14 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:04:25 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:04:40 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:04:53 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:05:05 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:05:17 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 11, 2020 5:05:21 PM View.Gui.Panels.CollectionPages.DeckViewer done
+INFO: Changed deck 
+Jul 11, 2020 5:05:23 PM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 11, 2020 5:05:24 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:05:37 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:05:38 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:05:40 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:05:46 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:05:49 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:05:50 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:05:54 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:05:55 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:06:02 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:06:15 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 5:06:23 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:06:34 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:06:36 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:06:45 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:06:57 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:07:06 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:07:10 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:07:15 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:07:37 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:07:46 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:11:41 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 5:11:43 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:11:59 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:12:08 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:12:10 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:12:15 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:12:18 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:12:23 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:12:26 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:12:31 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:12:35 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:12:41 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:12:50 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:13:12 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:13:21 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:13:38 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:13:38 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:14:11 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:14:27 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:14:38 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:16:49 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 5:16:51 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:17:04 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:17:07 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:17:12 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:17:15 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:17:19 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:17:22 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:17:28 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:17:32 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:17:38 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:17:49 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:17:59 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:18:12 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:19:18 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 5:19:20 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:19:37 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:19:40 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:19:44 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:19:45 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:19:49 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:19:53 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:19:56 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:19:59 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:20:03 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:20:08 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:20:12 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:20:15 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:20:18 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:20:24 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:20:55 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:21:07 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:21:10 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:21:14 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 5:21:19 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:21:23 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:21:29 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:23:54 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:24:08 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 5:24:10 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:24:20 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:24:22 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:24:26 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:24:28 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:24:31 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:24:33 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:24:36 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:24:40 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:24:43 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 5:24:46 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:24:52 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:24:56 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:24:57 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:25:12 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 5:25:13 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 5:25:29 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:25:38 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:25:42 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:25:44 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:25:48 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:26:04 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:26:21 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:26:23 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:27:11 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:27:14 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:33:28 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 5:33:30 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:33:40 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 5:33:45 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:33:52 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:33:55 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:34:00 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:34:08 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:34:12 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:34:17 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:34:21 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:34:27 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:34:35 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:34:43 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:34:47 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:34:50 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:34:53 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:34:58 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:35:06 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:35:09 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:35:19 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:35:21 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:43:51 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 5:43:53 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:44:04 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:44:07 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:44:10 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:44:12 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:44:14 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 5:44:24 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:44:32 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:44:45 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:45:05 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:45:10 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:45:20 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:45:25 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:45:30 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 5:45:35 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:45:41 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:45:45 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:45:48 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:45:52 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:46:00 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:46:01 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:46:17 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:46:33 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:46:34 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 5:47:23 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:47:26 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:47:33 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:48:03 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:48:04 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 5:48:25 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:48:29 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 5:48:36 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:48:40 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:48:45 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:48:48 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:48:57 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:49:02 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:49:10 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:49:13 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:49:17 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:49:19 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:49:22 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:49:26 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 5:52:45 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 5:52:50 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 5:53:41 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 5:57:09 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 6:09:49 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 6:09:51 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 11, 2020 6:10:00 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 11, 2020 6:16:10 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 6:19:04 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 6:19:06 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 11, 2020 6:19:16 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 11, 2020 6:20:25 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 6:20:27 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 11, 2020 6:20:34 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 11, 2020 6:27:01 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 6:27:05 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 11, 2020 6:27:07 PM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 11, 2020 6:27:09 PM Controller.PlayerController logOut
+INFO: Log_out r
+Jul 11, 2020 6:28:40 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 6:28:42 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 6:29:33 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 7:10:42 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 7:11:26 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 7:11:30 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 7:11:40 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 7:13:44 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 7:13:46 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 7:13:53 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 7:15:03 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 7:15:04 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 7:15:18 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 7:17:46 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 7:17:48 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 7:59:35 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 8:01:40 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 8:08:31 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 8:08:34 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 8:08:45 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:08:49 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:09:03 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:09:05 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:09:09 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:09:10 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:09:14 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:09:17 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:09:28 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:09:34 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:09:46 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:09:48 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:09:56 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:09:58 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:10:01 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:10:02 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:10:05 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 8:10:10 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 8:10:16 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:10:52 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:10:54 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:10:56 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:12:39 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 8:12:40 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 8:12:56 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:13:08 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:13:12 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:13:17 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:13:20 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:13:23 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:13:26 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:13:30 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 8:13:39 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:13:48 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:13:50 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 8:13:56 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:14:26 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:14:33 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:14:36 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:14:40 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:14:43 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:14:47 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:14:49 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:15:02 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:15:09 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:15:12 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:15:54 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:16:11 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:18:25 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 8:18:27 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 8:18:42 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 8:18:53 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 8:18:57 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:19:04 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:19:07 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:19:11 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:19:15 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:19:20 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:19:31 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:19:40 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:19:42 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:19:44 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:19:48 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:19:55 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:19:58 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:20:06 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:20:10 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:20:14 PM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 11, 2020 8:20:18 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:20:29 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:20:33 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:21:41 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:23:22 PM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 11, 2020 8:23:24 PM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 11, 2020 8:23:40 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:23:47 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:23:52 PM View.Gui.Mapper playCard
+INFO: PlaySpell_QuestAndReward
+Jul 11, 2020 8:23:58 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:24:09 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:24:11 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:24:14 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:24:16 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:24:19 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:24:22 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:24:24 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:24:26 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:24:31 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:24:52 PM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 11, 2020 8:25:23 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:25:24 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:25:30 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:25:35 PM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 11, 2020 8:25:44 PM View.Gui.Mapper playCard
+INFO: PlayMinion

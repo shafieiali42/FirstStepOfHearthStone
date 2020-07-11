@@ -67,6 +67,7 @@ public class InGamePlayer {
     public InGamePlayer(Player player) {
         this.player = player;
         deckCards=new ArrayList<>();
+        System.out.println(player.getCurrentDeck().getListOfCards());
         for (Cards card:player.getCurrentDeck().getListOfCards()){
             deckCards.add(card.copy());
         }

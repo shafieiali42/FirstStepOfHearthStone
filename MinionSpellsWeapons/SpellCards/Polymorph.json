@@ -1,1 +1,10 @@
-{"name":"Polymorph" , "type":"Spell" , "classOfCard":"Mage" , "MoneyCost":10 , "manaCost":1 ,"rarity":"common" , "description": "Transform a minion into a 1/1 Sheep."}
+{
+  "name": "Polymorph",
+  "type": "Spell",
+  "classOfCard": "Mage",
+  "MoneyCost": 10,
+  "manaCost": 1,
+  "rarity": "common",
+  "description": "Transform a minion into a 1/1 Sheep.",
+  "manaNeededForQuest": 0
+}

@@ -20,7 +20,9 @@ public class main {
         Cards.setAllCards();
         Minion.initFirstAttackAndHp();
         Spell.defineQuestAndRewardCardList();
-        System.out.println(Spell.getSpells());
+        for (Spell spell:Spell.getSpells()){
+            System.out.println(spell.getManaNeededForQuest());
+        }
         Mage.setSpecialCardsOfMage();
         Warlock.setSpecialCardsOfWarlock();
         Rogue.setSpecialCardsOfRogue();

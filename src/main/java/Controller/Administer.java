@@ -51,7 +51,7 @@ public class Administer {
     public static String getFriendlyImprovementOfQuest() {
         if (Game.getInstance().getFriendlyPlayer().getQuestCard() != null) {
             return Game.getInstance().getFriendlyPlayer().getQuestCard().getManaSpendForQuest() +
-                    "/" + Game.getInstance().getFriendlyPlayer().getQuestCard().getManaSpendForQuest();
+                    "/" + Game.getInstance().getFriendlyPlayer().getQuestCard().getManaNeededForQuest();
         } else {
             return "NoActiveQuest";
         }
@@ -643,18 +643,18 @@ public class Administer {
         Game.getInstance().initGameState();
     }
 
-    public static boolean canAddFriendlyMinionToBattleGround() {
-        return Game.getInstance().getFriendlyPlayer().getBattleGroundCards().size() <= 7 - 1;
+    public static boolean canAddMinionToBattleGround() {
+        return Game.getInstance().getCurrentPlayer().getBattleGroundCards().size() <= 7 - 1;
     }
 
     public static boolean canAddEnemyMinionToBattleGround() {
-        return Game.getInstance().getEnemyPlayer().getBattleGroundCards().size() <= 7 - 1;
+        return Game.getInstance().getFormerPlayer().getBattleGroundCards().size() <= 7 - 1;
     }
 
     public static void setPlayingCardOfGameState(String cardName) {
         for (Cards cards : Cards.getAllCards()) {
             if (cards.getName().equals(cardName)) {
-                Game.getInstance().setPlayingCard(cards);
+                Game.getInstance().setPlayingCard(cards.copy());
             }
         }
     }
@@ -1155,6 +1155,7 @@ public class Administer {
     }
 
     public static void addGivenCardToCollectionDeck(String cardName, boolean isLock) throws IOException {//todo maybe needs to changeee
+
         Cards cards = null;
         for (Cards cards1 : Cards.getAllCards()) {
             if (cards1.getName().equals(cardName)) {
@@ -1165,10 +1166,11 @@ public class Administer {
 
 
         for (int i = 0; i < DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().size(); i++) {
-            if (cards.getName().equalsIgnoreCase(DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().get(i).getNameLabel().getText())) {
+            if (cards.getName().equalsIgnoreCase
+                    (DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().get(i).getNameLabel().getText())) {
                 if (Integer.parseInt(DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().get(i).getUsedLabel().getText()) < 2) {
                     if (!isLock) {
-                        CollectionState.getInstance().getDeckToChange().getListOfCards().add(cards);
+                        CollectionState.getInstance().getDeckToChange().getListOfCards().add(cards.copy());
                     }
                     DeckViewer.getInstance().showCardsInDecK();
                     int k = Integer.parseInt(DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().get(i).getUsedLabel().getText()) + 1;

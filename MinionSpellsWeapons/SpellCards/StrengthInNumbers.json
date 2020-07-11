@@ -1,1 +1,10 @@
-{"name":"StrengthInNumbers" , "type":"Spell_QuestAndReward" , "classOfCard":"Neutral" , "MoneyCost":10 , "manaCost":1 ,"rarity":"Common" , "description":"Sidequest: Spend 10 Mana on minions.Reward: Summon a minion from your deck." }
+{
+  "name": "StrengthInNumbers",
+  "type": "Spell_QuestAndReward",
+  "classOfCard": "Neutral",
+  "MoneyCost": 10,
+  "manaCost": 1,
+  "rarity": "Common",
+  "description": "Sidequest: Spend 10 Mana on minions.Reward: Summon a minion from your deck.",
+  "manaNeededForQuest": 10
+}

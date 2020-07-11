@@ -1,0 +1,18 @@
+Jul 11, 2020 6:58:17 PM Controller.PlayerController signUp
+INFO: USER: k
+Jul 11, 2020 6:58:17 PM Controller.PlayerController signUp
+INFO: CREATED_AT:2020/07/11 18:58:17
+Jul 11, 2020 6:58:17 PM Controller.PlayerController signUp
+INFO: PASSWORD: k
+Jul 11, 2020 6:58:17 PM Controller.PlayerController signUp
+INFO: sign_up k
+Jul 11, 2020 6:58:19 PM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 11, 2020 6:58:46 PM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 11, 2020 6:58:59 PM Controller.Administer selectMainDeck
+INFO: select k for main deck
+Jul 11, 2020 6:59:00 PM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 11, 2020 6:59:02 PM Controller.Administer writeLog
+INFO: Go back from collection page

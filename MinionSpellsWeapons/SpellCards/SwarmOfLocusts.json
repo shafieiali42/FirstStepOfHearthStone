@@ -1,1 +1,10 @@
-{"name":"SwarmOfLocusts" , "type":"Spell" , "classOfCard":"Neutral" , "MoneyCost":10 , "manaCost":1 ,"rarity":"Rare" , "description":"Summon seven 1/1 Locusts with Rush." }
+{
+  "name": "SwarmOfLocusts",
+  "type": "Spell",
+  "classOfCard": "Neutral",
+  "MoneyCost": 10,
+  "manaCost": 1,
+  "rarity": "Rare",
+  "description": "Summon seven 1/1 Locusts with Rush.",
+  "manaNeededForQuest": 0
+}
