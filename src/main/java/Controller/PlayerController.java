@@ -1,30 +1,23 @@
 package Controller;
 
 
-import Logic.PlayLogic.Game;
 import Models.Cards.CardClasses.Cards;
-import Models.Cards.CardClasses.Minion;
-import Models.Deck.Deck;
 import Models.Heroes.*;
 import Models.Player.Player;
 import Models.Player.*;
 
 import View.Gui.Panels.LogInPanel.LogInPage;
 import View.Gui.Panels.MenuPanel.MainMenuPage;
-import Visitors.CardVisitors.EndTurnVisitor;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import javax.smartcardio.Card;
 import javax.swing.*;
 import java.io.*;
-import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Iterator;
 import java.util.List;
 
 public class PlayerController {
@@ -93,8 +86,8 @@ public class PlayerController {
 //                    }
 //                }
 
-                ControllerOfMainComponents.currentPlayer.setSigninOrSignup("Signin");
-                player.setSigninOrSignup("Signin");
+                ControllerOfMainComponents.currentPlayer.setSignInOrSignup("Signin");
+                player.setSignInOrSignup("Signin");
                 ControllerOfMainComponents.currentPlayer.setLoggerOfMyPlayer();
                 ControllerOfMainComponents.currentPlayer.getLoggerOfMyPlayer().info("sign_in " + ControllerOfMainComponents.currentPlayer.getUserName());
                 ControllerOfMainComponents.secondPage();
@@ -118,8 +111,8 @@ public class PlayerController {
         if (canSignUp) {
             Player player = new Player(userName, passWord);
             ControllerOfMainComponents.currentPlayer = player;
-            ControllerOfMainComponents.currentPlayer.setSigninOrSignup("Signup");
-            player.setSigninOrSignup("Signup");
+            ControllerOfMainComponents.currentPlayer.setSignInOrSignup("Signup");
+            player.setSignInOrSignup("Signup");
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             Calendar cal = Calendar.getInstance();
             ControllerOfMainComponents.currentPlayer.getLoggerOfMyPlayer().info("USER: " + ControllerOfMainComponents.currentPlayer.getUserName());

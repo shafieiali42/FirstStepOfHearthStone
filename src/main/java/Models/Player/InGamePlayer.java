@@ -2,7 +2,6 @@ package Models.Player;
 
 import Models.Cards.CardClasses.*;
 import Models.Heroes.Heroes;
-import Models.Heroes.Mage;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -27,6 +26,70 @@ public class InGamePlayer {
 
 
 
+    public InGamePlayer(){
+        this.handsCards = new ArrayList<>();
+        this.battleGroundCards = new ArrayList<>();
+        passivesToChoose=new ArrayList<>();
+        deckCards=new ArrayList<>();
+        firstThreeCards=new ArrayList<>();
+        turn=1;
+        mana=1;
+//        deckCards= (ArrayList<Cards>) ControllerOfMainComponents.currentPlayer.getCurrentDeck().getListOfCards().clone();
+//        initHandsCards();
+    }
+
+    public InGamePlayer(Player player) {
+        this.player = player;
+        deckCards=new ArrayList<>();
+        for (Cards card:player.getCurrentDeck().getListOfCards()){
+            deckCards.add(card.copy());
+        }
+        hero=player.getCurrentHero();
+        Collections.shuffle(deckCards);
+        this.handsCards = new ArrayList<>();
+        this.battleGroundCards = new ArrayList<>();
+        passivesToChoose=new ArrayList<>();
+        firstThreeCards=new ArrayList<>();
+        turn=1;
+        mana=1;
+        initHandsCards();
+        initPassiveToChoose();
+
+
+    }
+
+
+
+    public void initPassiveToChoose() {
+        ArrayList<Integer> randomNumber = new ArrayList<Integer>();
+        for (int i = 0; i < Passive.NUMBER_OF_PASSIVES; i++) {
+            randomNumber.add(i);
+        }
+        Collections.shuffle(randomNumber);
+        passivesToChoose.add(Passive.getPassives().get(randomNumber.get(0)));
+        passivesToChoose.add(Passive.getPassives().get(randomNumber.get(1)));
+        passivesToChoose.add(Passive.getPassives().get(randomNumber.get(2)));
+    }
+
+    public void initHandsCards() {
+        handsCards.add(deckCards.get(0));
+        firstThreeCards.add(deckCards.get(0));
+        deckCards.remove(0);
+
+        handsCards.add(deckCards.get(0));
+        firstThreeCards.add(deckCards.get(0));
+        deckCards.remove(0);
+
+        handsCards.add(deckCards.get(0));
+        firstThreeCards.add(deckCards.get(0));
+        deckCards.remove(0);
+
+    }
+
+
+
+    //getter and setters
+    //********************
 
     public Spell getQuestCard() {
         return questCard;
@@ -51,77 +114,6 @@ public class InGamePlayer {
     public void setNumberOfDrawCard(int numberOfDrawCard) {
         this.numberOfDrawCard = numberOfDrawCard;
     }
-
-    public InGamePlayer(){
-        this.handsCards = new ArrayList<>();
-        this.battleGroundCards = new ArrayList<>();
-        passivesToChoose=new ArrayList<>();
-        deckCards=new ArrayList<>();
-        firstThreeCards=new ArrayList<>();
-        turn=1;
-        mana=1;
-//        deckCards= (ArrayList<Cards>) ControllerOfMainComponents.currentPlayer.getCurrentDeck().getListOfCards().clone();
-//        initHandsCards();
-    }
-
-    public InGamePlayer(Player player) {
-        this.player = player;
-        deckCards=new ArrayList<>();
-        System.out.println(player.getCurrentDeck().getListOfCards());
-        for (Cards card:player.getCurrentDeck().getListOfCards()){
-            deckCards.add(card.copy());
-        }
-//        this.deckCards = (ArrayList<Cards>) player.getCurrentDeck().getListOfCards().clone();
-        hero=player.getCurrentHero();
-        Collections.shuffle(deckCards);
-        this.handsCards = new ArrayList<>();
-        this.battleGroundCards = new ArrayList<>();
-        passivesToChoose=new ArrayList<>();
-        firstThreeCards=new ArrayList<>();
-        turn=1;
-        mana=1;
-        initHandsCards();
-        initPassiveToChoose();
-
-
-    }
-
-    public void initPassiveToChoose() {
-        ArrayList<Integer> randomNumber = new ArrayList<Integer>();
-        for (int i = 0; i < Passive.NUMBER_OF_PASSIVES; i++) {
-            randomNumber.add(i);
-        }
-        Collections.shuffle(randomNumber);
-        passivesToChoose.add(Passive.getPassives().get(randomNumber.get(0)));
-        passivesToChoose.add(Passive.getPassives().get(randomNumber.get(1)));
-        passivesToChoose.add(Passive.getPassives().get(randomNumber.get(2)));
-    }
-
-    public void reInitHandsCards(){
-        this.handsCards.clear();
-    }
-
-
-
-
-
-
-
-    public void initHandsCards() {
-        handsCards.add(deckCards.get(0));
-        firstThreeCards.add(deckCards.get(0));
-        deckCards.remove(0);
-
-        handsCards.add(deckCards.get(0));
-        firstThreeCards.add(deckCards.get(0));
-        deckCards.remove(0);
-
-        handsCards.add(deckCards.get(0));
-        firstThreeCards.add(deckCards.get(0));
-        deckCards.remove(0);
-
-    }
-
 
 
     public Player getPlayer() {

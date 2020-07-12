@@ -7,6 +7,7 @@ import Logic.PlayLogic.Alliance;
 import Logic.PlayLogic.Game;
 import Logic.Status;
 
+import Models.Player.*;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.CardClasses.Weapon;
 import Models.HeroPower.HeroPower;
@@ -49,7 +50,7 @@ public class Administer {
     //gameState
 
 
-    public static boolean showThreeCardsForChange(){
+    public static boolean showThreeCardsForChange() {
         System.out.println(Game.getInstance().getGameMode());
         return Game.getInstance().getGameMode() != 3;
     }
@@ -67,7 +68,7 @@ public class Administer {
         if (Game.getInstance().getFriendlyPlayer().getQuestCard() != null) {
             return Game.getInstance().getEnemyPlayer().getQuestCard().getManaSpendForQuest() +
                     "/" + Game.getInstance().getEnemyPlayer().getQuestCard().getManaSpendForQuest();
-        }else {
+        } else {
             return "NoActiveQuest";
         }
     }
@@ -108,8 +109,8 @@ public class Administer {
                             Game.getInstance().getEnemyPlayer().getDeckCards(),
                             minion, new Heroes(), null);
 
-                    minion.accept(new GetDamageVisitor(),Game.getInstance().getFormerPlayer().getBattleGroundCards(),
-                            null,null,minion,null,null,null,null);
+                    minion.accept(new GetDamageVisitor(), Game.getInstance().getFormerPlayer().getBattleGroundCards(),
+                            null, null, minion, null, null, null, null);
                     removeDeadCharacters();
 
 
@@ -126,8 +127,8 @@ public class Administer {
                             Game.getInstance().getEnemyPlayer().getDeckCards(),
                             minion, new Heroes(), null);
 
-                    minion.accept(new GetDamageVisitor(),Game.getInstance().getFormerPlayer().getBattleGroundCards(),
-                            null,null,minion,null,null,null,null);
+                    minion.accept(new GetDamageVisitor(), Game.getInstance().getFormerPlayer().getBattleGroundCards(),
+                            null, null, minion, null, null, null, null);
                     removeDeadCharacters();
                 }
                 //todo execute heroPower
@@ -155,8 +156,8 @@ public class Administer {
 
                 weapon.setDurability(weapon.getDurability() - 1);
 
-                minion.accept(new GetDamageVisitor(),Game.getInstance().getFormerPlayer().getBattleGroundCards(),
-                        null,null,minion,null,null,null,null);
+                minion.accept(new GetDamageVisitor(), Game.getInstance().getFormerPlayer().getBattleGroundCards(),
+                        null, null, minion, null, null, null, null);
 
                 removeDeadCharacters();
             }
@@ -189,8 +190,8 @@ public class Administer {
 //                        System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
 //                        System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
 
-                        minion2.accept(new GetDamageVisitor(),Game.getInstance().getFormerPlayer().getBattleGroundCards(),
-                                null,null,minion,null,null,null,null);
+                        minion2.accept(new GetDamageVisitor(), Game.getInstance().getFormerPlayer().getBattleGroundCards(),
+                                null, null, minion, null, null, null, null);
 
                     } else {
                         //TODO you first need to destroy Taunt OR you cant attack to this minion
@@ -436,9 +437,9 @@ public class Administer {
     }
 
     public static void ChangeThisCardFromHands(String cardName) {
-        System.out.println("First Three Cards: "+Game.getInstance().getFriendlyPlayer().getFirstThreeCards());
-        System.out.println("Hand: "+Game.getInstance().getFriendlyPlayer().getHandsCards());
-        System.out.println("Deck: "+Game.getInstance().getFriendlyPlayer().getDeckCards());
+        System.out.println("First Three Cards: " + Game.getInstance().getFriendlyPlayer().getFirstThreeCards());
+        System.out.println("Hand: " + Game.getInstance().getFriendlyPlayer().getHandsCards());
+        System.out.println("Deck: " + Game.getInstance().getFriendlyPlayer().getDeckCards());
         boolean changed = false;
         if (cardName.equals(FirstThreeCardsPage.getInstance().getFirstCard()) && FirstThreeCardsPage.getInstance().getCanChangeFirstCard()) {
             changed = true;
@@ -920,13 +921,13 @@ public class Administer {
     }
 
     public static void showLockCards(JPanel panel, int numberOfCardsPerRow) throws IOException {
-        ControllerOfMainComponents.currentPlayer.setLockCardsList();
+        ShopController.setLockCards(ControllerOfMainComponents.currentPlayer);
         MethodsOfShowCardsOnPanel.showCards(ControllerOfMainComponents.currentPlayer.getLockCards(), panel, numberOfCardsPerRow);
         ControllerOfMainComponents.currentPlayer.getLoggerOfMyPlayer().info("Show lock cards ");
     }
 
     public static void showUnLockCards(JPanel panel, int numberOfCardsPerRow) throws IOException {
-        ControllerOfMainComponents.currentPlayer.setAllCardsOfPlayer();
+        ControllerOfMainComponents.currentPlayer.defineFirstCardsForPlayer();
         MethodsOfShowCardsOnPanel.showCards(ControllerOfMainComponents.currentPlayer.getAllCardsOfPlayer(), panel, numberOfCardsPerRow);
         ControllerOfMainComponents.currentPlayer.getLoggerOfMyPlayer().info("Show unlock cards ");
 
@@ -1089,7 +1090,7 @@ public class Administer {
             if (card.getName().equalsIgnoreCase(littleCardPanel.getNameLabel().getText())) {
                 if (Integer.parseInt(littleCardPanel.getUsedLabel().getText()) == 1) {
                     itr.remove();
-//                    DeckViewer.getInstance().showCardsInDecK();//TODO MAYBE ITS WRONG
+//                    DeckViewer.getInstance().showCardsInDecK();
                     break;
                 } else if (Integer.parseInt(littleCardPanel.getUsedLabel().getText()) == 2) {
                     littleCardPanel.getUsedLabel().setText(1 + "");
@@ -1107,9 +1108,24 @@ public class Administer {
     //shopState
 
 
+    public static void showCantSellThisCard() {
+        JOptionPane.showMessageDialog(null, "You can't sell this card:((");
+    }
+
+    public static void showDontHaveMoney() {
+        JOptionPane.showMessageDialog(null, "You don't have enough money!");
+    }
+
+    public static void showSellSuccessfully() {
+        JOptionPane.showMessageDialog(null, "The sell was completed successfully");
+    }
+
+    public static void showPurchaseSuccessfully() {
+        JOptionPane.showMessageDialog(null, "The purchase was completed successfully");
+    }
+
     public static void setBuyableCard() {
-        ControllerOfMainComponents.currentPlayer.setBuyableCards();
-        System.out.println(ControllerOfMainComponents.currentPlayer.getBuyableCards());
+        ShopController.setBuyableCardsOfPlayer(ControllerOfMainComponents.currentPlayer);
     }
 
     public static int getMoneyOfShopStatesCard() {
@@ -1124,8 +1140,8 @@ public class Administer {
         ShopState.getInstance().setCardsToBuyOrSell(null);
     }
 
-    public static void buyShopStateCard() throws IOException {
-        ControllerOfMainComponents.currentPlayer.buy(ShopState.getInstance().getCardsToBuyOrSell());
+    public static void buyShopStateCard() {
+        ShopController.buyCard(ControllerOfMainComponents.currentPlayer, ShopState.getInstance().getCardsToBuyOrSell());
     }
 
     public static void showSalableCards(JPanel panel, int numberOfCardsPerRow) throws IOException {
@@ -1143,8 +1159,8 @@ public class Administer {
         MethodsOfShowCardsOnPanel.addPanel(cardImagePanel, panel, 0, 0, panel.getWidth(), panel.getHeight());
     }
 
-    public static void sellShopStateCard() throws IOException {
-        ControllerOfMainComponents.currentPlayer.sell(ShopState.getInstance().getCardsToBuyOrSell());
+    public static void sellShopStateCard() {
+        ShopController.sellCard(ControllerOfMainComponents.currentPlayer, ShopState.getInstance().getCardsToBuyOrSell());
     }
 
     public static boolean isShopStateCardInMyDecks() {
