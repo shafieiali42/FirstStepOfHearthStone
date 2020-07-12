@@ -199,11 +199,6 @@ public class GetDamageVisitor implements Visitor {
     }
 
     @Override
-    public void visit(Heal heal, ArrayList<Minion> battleGround) {
-
-    }
-
-    @Override
     public void visit(Caltrops caltrops, ArrayList<Minion> battleGround) {
 
     }

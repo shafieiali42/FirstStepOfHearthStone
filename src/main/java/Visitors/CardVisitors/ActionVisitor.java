@@ -218,62 +218,58 @@ public class ActionVisitor implements Visitor {
     @Override
     public void visit(TreeOfLife treeOfLife, ArrayList<Minion> battleGround) {
         for (Minion minion : battleGround) {
-            minion.setHealthPower(minion.getHealthPower() + 1);
+            minion.setHealthPower(minion.getHealthPower() + treeOfLife.getIncreaseHp());
         }
     }
 
     @Override
     public void visit(Starfire starfire, ArrayList<Minion> battleGround) {
         for (Minion minion : battleGround) {
-            minion.setHealthPower(minion.getHealthPower() + 1);
+            minion.setHealthPower(minion.getHealthPower() + starfire.getIncreaseHp());
         }
     }
 
     @Override
     public void visit(SinisterStrike sinisterStrike, ArrayList<Minion> battleGround) {
         for (Minion minion : battleGround) {
-            minion.setHealthPower(minion.getHealthPower() + 1);
+            minion.setHealthPower(minion.getHealthPower() + sinisterStrike.getIncreaseHp());
         }
     }
 
     @Override
     public void visit(Naturalize naturalize, ArrayList<Minion> battleGround) {
         for (Minion minion : battleGround) {
-            minion.setHealthPower(minion.getHealthPower() + 1);
+            minion.setHealthPower(minion.getHealthPower() + naturalize.getIncreaseHp());
         }
     }
 
     @Override
     public void visit(Moonfire moonfire, ArrayList<Minion> battleGround) {
-
         for (Minion minion : battleGround) {
-            minion.setHealthPower(minion.getHealthPower() + 1);
+            minion.setHealthPower(minion.getHealthPower() + moonfire.getIncreaseHp());
         }
     }
 
-    @Override
-    public void visit(Heal heal, ArrayList<Minion> battleGround) {//todo ....
 
-    }
 
     @Override
     public void visit(Caltrops caltrops, ArrayList<Minion> battleGround) {
         for (Minion minion : battleGround) {
-            minion.setHealthPower(minion.getHealthPower() + 1);
+            minion.setHealthPower(minion.getHealthPower() + caltrops.getIncreaseHp());
         }
     }
 
     @Override
     public void visit(BloodfuryPotion bloodfuryPotion, ArrayList<Minion> battleGround) {
         for (Minion minion : battleGround) {
-            minion.setHealthPower(minion.getHealthPower() + 1);
+            minion.setHealthPower(minion.getHealthPower() + bloodfuryPotion.getIncreaseHp());
         }
     }
 
     @Override
     public void visit(BlessingOfTheAncients blessingOfTheAncients, ArrayList<Minion> battleGround) {
         for (Minion minion : battleGround) {
-            minion.setHealthPower(minion.getHealthPower() + 1);
+            minion.setHealthPower(minion.getHealthPower() + blessingOfTheAncients.getIncreaseHp());
         }
     }
 
@@ -281,7 +277,7 @@ public class ActionVisitor implements Visitor {
     public void visit(BiologyProject biologyProject, ArrayList<Minion> battleGround) {
 
         for (Minion minion : battleGround) {
-            minion.setHealthPower(minion.getHealthPower() + 1);
+            minion.setHealthPower(minion.getHealthPower() + biologyProject.getIncreaseHp());
         }
 
     }

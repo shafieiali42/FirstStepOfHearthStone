@@ -11,6 +11,19 @@ import java.util.ArrayList;
 public class TournamentMedic extends Minion {
 
 
+
+
+    public TournamentMedic(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
+
+
+
+
     @Override
     public TournamentMedic  copy() {
 //        System.out.println("Copy of curioCollector:))");

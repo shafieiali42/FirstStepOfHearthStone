@@ -1,6 +1,10 @@
 package Models.Player;
 
+import Models.Cards.CardClasses.Cards;
+import Models.Heroes.Heroes;
+import Utility.JsonReaders.AbstractAdapter;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.*;
@@ -10,7 +14,11 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ParsePlayerObjectIntoJson {
+
         public static void serializePlayer(Player player) throws IOException {
+//            GsonBuilder gsonBuilder = new GsonBuilder();
+//            gsonBuilder.registerTypeAdapter(Heroes.class, new AbstractAdapter<>());
+//            Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().setPrettyPrinting().create();
             String jsonString = new Gson().toJson(player);
             PrintWriter pw = new PrintWriter(new File("MinionSpellsWeapons/"+"player"+player.getUserName()+"_"+player.getPassWord()+".json"));
             pw.write(jsonString);
@@ -39,13 +47,7 @@ public class ParsePlayerObjectIntoJson {
 
             Type type = new TypeToken<List<Player>>(){}.getType();
             List<Player> playerList = new Gson().fromJson(new FileReader("MinionSpellsWeapons/"+"AllPlayers.json"),type);
-            Iterator<Player> itr = playerList.iterator();
-            while (itr.hasNext()){
-                Player player1 = itr.next();
-                if (player1.getUserName().equals(player.getUserName())){
-                    itr.remove();
-                }
-            }
+            playerList.removeIf(player1 -> player1.getUserName().equals(player.getUserName()));
             String json =new Gson().toJson(playerList);
             PrintWriter pw1 =new PrintWriter(new File("MinionSpellsWeapons/"+"AllPlayers.json"));
             pw1.write(json);

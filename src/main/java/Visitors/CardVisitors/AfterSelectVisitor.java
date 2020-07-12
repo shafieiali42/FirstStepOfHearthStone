@@ -1,6 +1,5 @@
 package Visitors.CardVisitors;
 
-import Controller.Administer;
 import Controller.GamePartController;
 import Logic.PlayLogic.Alliance;
 import Models.Cards.CardClasses.Cards;
@@ -242,11 +241,6 @@ public class AfterSelectVisitor implements Visitor {
 
     @Override
     public void visit(Moonfire moonfire, ArrayList<Minion> battleGround) {
-
-    }
-
-    @Override
-    public void visit(Heal heal, ArrayList<Minion> battleGround) {
 
     }
 

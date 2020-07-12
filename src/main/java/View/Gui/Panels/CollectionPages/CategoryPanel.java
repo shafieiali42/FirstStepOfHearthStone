@@ -1,6 +1,8 @@
 package View.Gui.Panels.CollectionPages;
 
 import Controller.Administer;
+import Controller.CollectionController;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -66,7 +68,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Administer.showLockCards(CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
+                    CollectionController.showLockCards(CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -83,7 +85,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Administer.showUnLockCards(CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
+                    CollectionController.showUnLockCards(CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -99,7 +101,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Administer.showAllCards(CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
+                    CollectionController.showAllCards(CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
@@ -115,7 +117,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Administer.showCardsOnCardPanelWithSpecifiedClass("Neutral",
+                    CollectionController.showCardsOnCardPanelWithSpecifiedClass("Neutral",
                             CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
@@ -132,7 +134,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Administer.showCardsOnCardPanelWithSpecifiedClass("Priest",
+                    CollectionController.showCardsOnCardPanelWithSpecifiedClass("Priest",
                             CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
@@ -149,7 +151,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Administer.showCardsOnCardPanelWithSpecifiedClass("Hunter",
+                    CollectionController.showCardsOnCardPanelWithSpecifiedClass("Hunter",
                             CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
@@ -166,7 +168,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Administer.showCardsOnCardPanelWithSpecifiedClass("Warlock",
+                    CollectionController.showCardsOnCardPanelWithSpecifiedClass("Warlock",
                             CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
@@ -183,7 +185,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Administer.showCardsOnCardPanelWithSpecifiedClass("Rogue",
+                    CollectionController.showCardsOnCardPanelWithSpecifiedClass("Rogue",
                             CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
                 } catch (IOException ex) {
                     ex.printStackTrace();
@@ -200,7 +202,7 @@ public class CategoryPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Administer.showCardsOnCardPanelWithSpecifiedClass("Mage",
+                    CollectionController.showCardsOnCardPanelWithSpecifiedClass("Mage",
                             CardPanel.getInstanceOfCollectionPage(),CardPanel.getNumOfCardInEveryRow());
 //                    filterByClassOfCard("Mage");
                 } catch (IOException ex) {

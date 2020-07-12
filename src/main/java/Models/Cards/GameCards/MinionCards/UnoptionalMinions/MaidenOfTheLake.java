@@ -11,6 +11,16 @@ import java.util.ArrayList;
 public class MaidenOfTheLake extends Minion{
 
 
+
+    public MaidenOfTheLake(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
+
+
     @Override
     public MaidenOfTheLake  copy() {
 //        System.out.println("Copy of curioCollector:))");

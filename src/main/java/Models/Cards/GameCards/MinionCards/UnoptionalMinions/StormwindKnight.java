@@ -11,6 +11,21 @@ import java.util.ArrayList;
 public class StormwindKnight extends Minion{
 
 
+
+
+
+
+    public StormwindKnight(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
+
+
+
+
     @Override
     public StormwindKnight  copy() {
 //        System.out.println("Copy of curioCollector:))");

@@ -1,6 +1,7 @@
 package Models.Player;
 
 import Models.Cards.CardClasses.*;
+import Models.Deck.Deck;
 import Models.Heroes.Heroes;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class InGamePlayer {
     private int numberOfDrawCard;
     private int questImprovement;
     private Spell questCard;
+    private Deck deck;
 
 
 
@@ -191,6 +193,14 @@ public class InGamePlayer {
     }
     public void setFirstThreeCards(ArrayList<Cards> firstThreeCards) {
         this.firstThreeCards = firstThreeCards;
+    }
+
+    public Deck getDeck() {
+        return deck;
+    }
+
+    public void setDeck(Deck deck) {
+        this.deck = deck;
     }
 
 }

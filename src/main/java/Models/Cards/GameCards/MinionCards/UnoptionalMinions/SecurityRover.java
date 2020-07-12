@@ -12,6 +12,21 @@ public class SecurityRover extends Minion {
 
 
 
+
+
+
+    public SecurityRover(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
+
+
+
+
+
     @Override
     public SecurityRover  copy() {
 //        System.out.println("Copy of SecurityRover:))");

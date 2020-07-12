@@ -12,7 +12,13 @@ import java.util.ArrayList;
 public class HighPriestAmet extends Minion {
 
 
-
+    public HighPriestAmet(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
 
     @Override
     public HighPriestAmet  copy() {

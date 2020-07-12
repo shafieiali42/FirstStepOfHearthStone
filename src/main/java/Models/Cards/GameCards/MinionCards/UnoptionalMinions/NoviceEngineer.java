@@ -11,6 +11,16 @@ import java.util.ArrayList;
 public class NoviceEngineer extends Minion{
 
 
+    public NoviceEngineer(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
+
+
+
 
     @Override
     public NoviceEngineer  copy() {

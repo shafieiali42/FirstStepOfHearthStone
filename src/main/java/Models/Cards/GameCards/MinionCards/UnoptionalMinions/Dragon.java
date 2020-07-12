@@ -11,6 +11,17 @@ import java.util.ArrayList;
 public class Dragon extends Minion {
 
 
+
+    public Dragon(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
+
+
+
     @Override
     public Dragon  copy() {
 //        System.out.println("Copy of Dreadscale:))");

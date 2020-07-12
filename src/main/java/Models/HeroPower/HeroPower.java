@@ -17,6 +17,7 @@ public class HeroPower implements HeroPowerVisitable {
     private int mana;
     private String name;
     private boolean needsTarget;
+    private boolean hasAttackInThisTurn = false;
     private int numberOfPermitUse = 1;
 
 
@@ -54,5 +55,12 @@ public class HeroPower implements HeroPowerVisitable {
     public void setName(String name) {
         this.name = name;
     }
+    public boolean getHasAttackInThisTurn() {
+        return hasAttackInThisTurn;
+    }
+    public void setHasAttackInThisTurn(boolean hasAttackInThisTurn) {
+        this.hasAttackInThisTurn = hasAttackInThisTurn;
+    }
+
 
 }

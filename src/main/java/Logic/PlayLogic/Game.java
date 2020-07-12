@@ -3,6 +3,7 @@ package Logic.PlayLogic;
 import Controller.ControllerOfMainComponents;
 import Logic.MyTimer;
 import Models.Cards.CardClasses.Cards;
+import Models.Deck.Deck;
 import Models.Heroes.Mage;
 import Models.Player.InGamePlayer;
 import Visitors.PowerVisitor.SpVisitor.SpecialPowerVisitor;
@@ -19,6 +20,7 @@ public class Game {
     private Cards playingCard;
     private int gameMode;
     private MyTimer myTimer;
+
 
     private int attacker;
     private int target;
@@ -264,5 +266,6 @@ public class Game {
     public void setMyTimer(MyTimer myTimer) {
         this.myTimer = myTimer;
     }
+
 
 }

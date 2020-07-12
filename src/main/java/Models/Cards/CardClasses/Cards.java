@@ -121,7 +121,7 @@ public  class Cards implements Comparable<Cards> , Visitable, Cloneable {
         }else if (!card.type.equalsIgnoreCase("minion")&& this.type.equalsIgnoreCase("minion")){
             return -1;
         }else {
-            return 1;// todo every thing is equal:))
+            return 1;
         }
     }
 
@@ -174,9 +174,9 @@ public  class Cards implements Comparable<Cards> , Visitable, Cloneable {
 
     public void accept(Visitor visitor, ArrayList<Minion>battleGround, ArrayList<Cards> handsCards,
                        ArrayList<Cards>deckCards, Minion target, Heroes targetHero,
-                       Minion summonedMinion, Cards playingCard, Alliance alliance){
+                       Minion summonedMinion, Cards playingCard, Alliance alliance){}
 
-    }
+
 
 
 

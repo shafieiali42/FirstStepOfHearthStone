@@ -1,6 +1,7 @@
 package View.Gui.Panels.CollectionPages;
 
 import Controller.Administer;
+import Controller.CollectionController;
 import Models.Cards.CardClasses.Cards;
 import Controller.ControllerOfMainComponents;
 import Logic.Status;
@@ -75,7 +76,7 @@ public class DeckViewer extends JPanel {
     }
 
     private void done() {
-        if (Administer.getListOfCardsOfCollectionStatesDeck().size() < 15) {
+        if (CollectionController.getListOfCardsOfCollectionStatesDeck().size() < 15) {
 
             JOptionPane.showMessageDialog(null,
                     "You must select at least 15 cards.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -85,17 +86,17 @@ public class DeckViewer extends JPanel {
             DeckViewer.getInstance().revalidate();
             if (ControllerOfMainComponents.getStatus().equals(Status.CHANGE_DECK)) {
                 ControllerOfMainComponents.currentPlayer.getLoggerOfMyPlayer().info("Changed deck " + DeckPage.getInstance().getNameOfDeckToChange());
-                Administer.defineUsesHashMap();
-                Administer.makeCollectionStatesDeckToNull();
+                CollectionController.defineUsesHashMap();
+                CollectionController.makeCollectionStatesDeckToNull();
                 DeckPage.getInstance().setListOfLittleCardsPanelOfDeckToChange(LittleCardPanel.getAllLittleCardPanels());
 
                 ControllerOfMainComponents.setStatus(Status.COLLECTIONS_PAGE);
                 MyMainFrame.getInstance().setContentPane(CollectionPage.getInstance());
                 DeckPanel.getInstance().showDeckButtons();
             } else if (ControllerOfMainComponents.getStatus().equals(Status.MAKE_DECK)) {
-                Administer.defineUsesHashMap();
-                Administer.addCollectionStatesDeckToPlayersDecksList();
-                Administer.makeCollectionStatesDeckToNull();
+                CollectionController.defineUsesHashMap();
+                CollectionController.addCollectionStatesDeckToPlayersDecksList();
+                CollectionController.makeCollectionStatesDeckToNull();
                 DeckPage.getInstance().setListOfLittleCardsPanelOfDeckToChange(LittleCardPanel.getAllLittleCardPanels());
 
                 ControllerOfMainComponents.setStatus(Status.COLLECTIONS_PAGE);
@@ -111,11 +112,11 @@ public class DeckViewer extends JPanel {
         DeckViewer.getInstance().repaint();
         DeckViewer.getInstance().revalidate();
         int yCoordinate = 0;
-        for ( LittleCardPanel littleCardPanel : Administer.getLittleCardPanelOfDeckToChangeFromDeckPage()) {
-            for (Cards card : Administer.getListOfCardsOfCollectionStatesDeck()) {
+        for ( LittleCardPanel littleCardPanel : CollectionController.getLittleCardPanelOfDeckToChangeFromDeckPage()) {
+            for (Cards card : CollectionController.getListOfCardsOfCollectionStatesDeck()) {
                 if (littleCardPanel.getNameLabel().getText().equalsIgnoreCase(card.getName())) {
 
-                    Administer.showLittleCardPanelOnDeckViewer(littleCardPanel, this,
+                    CollectionController.showLittleCardPanelOnDeckViewer(littleCardPanel, this,
                             (WIDTH_OF_DECK_VIEWER - littleCardPanel.getWidth()) / 2, yCoordinate);
 
                     yCoordinate += littleCardPanel.getHeight() + 5;

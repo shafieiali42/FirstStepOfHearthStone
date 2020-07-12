@@ -2,6 +2,7 @@ package Visitors.PowerVisitor.HeroPowerVisitor;
 
 import Controller.Administer;
 import Controller.GamePartController;
+import Logic.PlayLogic.Game;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.HeroPower.*;
@@ -20,10 +21,14 @@ public class AfterSelectPowerVisitor implements VisitorOfPowers {
                       ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero) {
 
 
-        if (target !=null){
+
+
+        if (target !=null && target.getCanBeAttacked()&& !mageHeroPower.getHasAttackInThisTurn()){
             target.setHealthPower(target.getHealthPower()-2);
-        }else if (targetHero!=null){
+            mageHeroPower.setHasAttackInThisTurn(true);
+        }else if (targetHero!=null && targetHero.getCanBeAttacked() && !mageHeroPower.getHasAttackInThisTurn()){
             targetHero.setHealthPower(targetHero.getHealthPower()-2);
+            mageHeroPower.setHasAttackInThisTurn(true);
         }
 
         GamePartController.removeDeadCharacters();

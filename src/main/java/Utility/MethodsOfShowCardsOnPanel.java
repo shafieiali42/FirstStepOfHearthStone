@@ -115,7 +115,7 @@ public class MethodsOfShowCardsOnPanel {
     }
 
 
-    public static void showBattleGroundCards(ArrayList<Minion> cards, JPanel panel, int numOfCardInEveryRow, Alliance alliance) throws IOException { //TODO init X and Y coordinate:((
+    public static void showBattleGroundCards(ArrayList<Minion> cards, JPanel panel, int numOfCardInEveryRow, Alliance alliance) throws IOException {
         int counter = 0;
         int xCoordinate = 50;
         int yCoordinate = 0;

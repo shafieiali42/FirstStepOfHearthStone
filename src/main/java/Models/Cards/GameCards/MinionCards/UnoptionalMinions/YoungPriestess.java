@@ -11,6 +11,15 @@ import java.util.ArrayList;
 public class YoungPriestess extends Minion{
 
 
+    public YoungPriestess(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
+
+
 
     @Override
     public YoungPriestess  copy() {

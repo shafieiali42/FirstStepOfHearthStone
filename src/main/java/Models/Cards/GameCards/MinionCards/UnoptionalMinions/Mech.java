@@ -12,10 +12,12 @@ public class Mech extends Minion {
 
 
     public Mech(){
-        setTaunt(true);//todo taunt
-
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
     }
-
 
     @Override
     public Mech copy() {

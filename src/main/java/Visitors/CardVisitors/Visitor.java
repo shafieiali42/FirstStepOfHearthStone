@@ -82,8 +82,6 @@ public interface Visitor {
 
     void visit(Moonfire moonfire, ArrayList<Minion> battleGround);
 
-    void visit(Heal heal, ArrayList<Minion> battleGround);
-
     void visit(Caltrops caltrops, ArrayList<Minion> battleGround);
 
     void visit(BloodfuryPotion bloodfuryPotion, ArrayList<Minion> battleGround);

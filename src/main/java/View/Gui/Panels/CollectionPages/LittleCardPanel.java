@@ -1,6 +1,7 @@
 package View.Gui.Panels.CollectionPages;
 
 import Controller.Administer;
+import Controller.CollectionController;
 import Utility.Config2.ConfigLoader;
 
 import javax.swing.*;
@@ -73,7 +74,7 @@ public class LittleCardPanel extends JPanel implements MouseListener, Serializab
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (SwingUtilities.isLeftMouseButton(e)) {
-                    Administer.removeThisCardFromCollectionStatesDeck(LittleCardPanel.this);
+                    CollectionController.removeThisCardFromCollectionStatesDeck(LittleCardPanel.this);
                     DeckViewer.getInstance().showCardsInDecK();
 
                 }
@@ -112,14 +113,14 @@ public class LittleCardPanel extends JPanel implements MouseListener, Serializab
 
     public static void setAllLittleCardPanels() {
         allLittleCardPanels.clear();
-        Administer.initializeAllLittleCardPanels();
+        CollectionController.initializeAllLittleCardPanels();
     }
 
 
     @Override
     public void mouseClicked(MouseEvent e) {
         if (SwingUtilities.isLeftMouseButton(e)) {
-            Administer.removeThisCardFromCollectionStatesDeck(LittleCardPanel.this);
+            CollectionController.removeThisCardFromCollectionStatesDeck(LittleCardPanel.this);
             DeckViewer.getInstance().showCardsInDecK();
 
         }

@@ -1,10 +1,13 @@
 package Utility.JsonReaders;
 
 
+import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.GameCards.MinionCards.*;
 import Models.Cards.GameCards.MinionCards.UnoptionalMinions.*;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.JsonAdapter;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -12,6 +15,28 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class JsonReaderForMinions {
+
+
+    public static void main(String args[]) {
+        setMap();
+        JsonReaderForMinions tester = new JsonReaderForMinions();
+
+        try {
+            setMinionCards();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+//        try {
+//            Minion minion1 = tester.readJson();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+
+    }
+
 
 
     private static HashMap<String,Class> map=new HashMap<>();
@@ -38,28 +63,11 @@ public class JsonReaderForMinions {
         map.put("YoungPriestess",YoungPriestess.class);
     }
 
-    public static void main(String args[]) {
-        setMap();
-        JsonReaderForMinions tester = new JsonReaderForMinions();
-
-        try {
-            setMinionCards();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-//        try {
-//            Minion minion1 = tester.readJson();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-
-    }
-
 
     private static void setMinionCards() throws FileNotFoundException {
+
         Gson gson=new Gson();
+
         for (MinionNames minionNames:MinionNames.values()){
             Class classOfCard = map.get(minionNames.name());
 //            System.out.println(minionNames.name());

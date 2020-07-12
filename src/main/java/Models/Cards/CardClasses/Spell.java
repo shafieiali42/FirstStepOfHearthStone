@@ -11,7 +11,15 @@ public class Spell extends Cards {
 
     private int manaSpendForQuest=0;
     private int manaNeededForQuest=0;
+    private int increaseHp=0;
 
+    public int getIncreaseHp() {
+        return increaseHp;
+    }
+
+    public void setIncreaseHp(int increaseHp) {
+        this.increaseHp = increaseHp;
+    }
 
     public int getManaNeededForQuest() {
         return manaNeededForQuest;

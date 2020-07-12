@@ -12,6 +12,14 @@ public class Locusts extends Minion {
 
 
 
+    public Locusts(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
+
 
     @Override
     public Locusts  copy() {

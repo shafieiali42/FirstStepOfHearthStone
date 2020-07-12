@@ -12,7 +12,13 @@ import java.util.ArrayList;
 public class LeperGnome extends Minion {
 
 
-
+    public LeperGnome(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
 
 
 

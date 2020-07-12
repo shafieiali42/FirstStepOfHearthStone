@@ -7,6 +7,7 @@ public class Weapon extends Cards {
     public static final int NUMBER_OF_Weapons =3;
     private int attackPower;
     private int durability;
+    private boolean hasAttackInThisTurn = false;
     static ArrayList<Weapon> weapons=new ArrayList<Weapon>();
 
     public Weapon()  {
@@ -32,10 +33,12 @@ public class Weapon extends Cards {
     public static void setWeapons(ArrayList<Weapon> weapons) {
         Weapon.weapons = weapons;
     }
-
-
-
-
+    public boolean isHasAttackInThisTurn() {
+        return hasAttackInThisTurn;
+    }
+    public void setHasAttackInThisTurn(boolean hasAttackInThisTurn) {
+        this.hasAttackInThisTurn = hasAttackInThisTurn;
+    }
 
     @Override
     public String toString(){

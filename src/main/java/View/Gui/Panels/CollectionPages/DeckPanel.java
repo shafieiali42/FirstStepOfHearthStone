@@ -1,5 +1,6 @@
 package View.Gui.Panels.CollectionPages;
 
+import Controller.CollectionController;
 import Controller.ControllerOfMainComponents;
 import Logic.Status;
 import Controller.Administer;
@@ -80,7 +81,7 @@ public class DeckPanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 ControllerOfMainComponents.setStatus(Status.CHANGE_DECK);
                 LittleCardPanel.setAllLittleCardPanels();
-                Administer.setCollectionDeck(deckName);
+                CollectionController.setCollectionDeck(deckName);
                 showDeck();
             }
         });
@@ -109,7 +110,7 @@ public class DeckPanel extends JPanel {
         DeckViewer.getInstance().repaint();
         DeckViewer.getInstance().revalidate();
         LittleCardPanel.setAllLittleCardPanels();
-        Administer.makeCollectionStatesDeckToNull();
+        CollectionController.makeCollectionStatesDeckToNull();
         DeckPage.getInstance().setNameOfDeckToChange("");
 
         String name = JOptionPane.showInputDialog("Enter your favorite name!");
@@ -124,7 +125,7 @@ public class DeckPanel extends JPanel {
                 possibilities,
                 "Mage");
 
-        Administer.makeNewDeck(name, heroName);
+        CollectionController.makeNewDeck(name, heroName);
         DeckPage.getInstance().setNameOfDeckToChange(name);
 
         MyMainFrame.getInstance().setContentPane(DeckPage.getInstance());
@@ -135,8 +136,8 @@ public class DeckPanel extends JPanel {
         DeckPanel.getInstance().repaint();
         DeckPanel.getInstance().revalidate();
         this.add(newDeckBtn);
-        if (Administer.getListOfPlayersDeckNames().size()!=0) {
-            for (String deckName : Administer.getListOfPlayersDeckNames()) {
+        if (CollectionController.getListOfPlayersDeckNames().size()!=0) {
+            for (String deckName : CollectionController.getListOfPlayersDeckNames()) {
                 initButtonForDeck(deckName);
             }
         }

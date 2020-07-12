@@ -11,6 +11,17 @@ import java.util.ArrayList;
 public class RiverCrocolisk extends Minion{
 
 
+
+    public RiverCrocolisk(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
+
+
+
     @Override
     public RiverCrocolisk  copy() {
 //        System.out.println("Copy of curioCollector:))");

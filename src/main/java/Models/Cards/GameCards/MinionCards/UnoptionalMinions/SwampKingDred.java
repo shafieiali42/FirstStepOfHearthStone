@@ -12,6 +12,16 @@ public class SwampKingDred extends Minion {
 
 
 
+    public SwampKingDred(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
+
+
+
     @Override
     public SwampKingDred  copy() {
 //        System.out.println("Copy of swampKingDred:))");

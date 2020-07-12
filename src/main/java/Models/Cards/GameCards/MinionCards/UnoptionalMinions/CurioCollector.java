@@ -13,10 +13,12 @@ import java.util.ArrayList;
 public class CurioCollector extends Minion {
 
 
-    public CurioCollector() {
-        setIsTaunt(false);
+    public CurioCollector(){
+        setActive(true);
+        setTaunt(false);
         setCanBeAttacked(true);
-        setIsActive(true);
+        setDivineShield(false);
+        setRush(false);
     }
 
     @Override

@@ -80,18 +80,14 @@ public class SpecialPowerVisitor implements SpVisitor {
         for (Cards card:friendlyDeckCards){
             if (card.getType().equalsIgnoreCase("Spell")){
                 Spell spell=(Spell) card;
-                if (spell.getAbilities().contains(SpellAbility.RESTORE)){
-                                
-                }
+                spell.setIncreaseHp(spell.getIncreaseHp()*2);
             }
         }
 
         for (Cards card:friendlyHandCards){
             if (card.getType().equalsIgnoreCase("Spell")){
                 Spell spell=(Spell) card;
-                if (spell.getAbilities().contains(SpellAbility.RESTORE)){
-
-                }
+                spell.setIncreaseHp(spell.getIncreaseHp()*2);
             }
         }
 

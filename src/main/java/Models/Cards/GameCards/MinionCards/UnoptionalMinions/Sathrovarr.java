@@ -13,6 +13,17 @@ public class Sathrovarr extends Minion {
 
 
 
+    public Sathrovarr(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
+
+
+
+
     @Override
     public Sathrovarr  copy() {
 //        System.out.println("Copy of Sathrovarr:))");

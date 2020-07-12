@@ -29,12 +29,12 @@ public class Heal extends Spell {
         return copy;
     }
 
-
-    @Override
-    public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,
-                       ArrayList<Cards>deckCards, Minion target, Heroes targetHero, Minion summonedMinion,
-                       Cards playingCard, Alliance alliance){
-        visitor.visit(this,battleGround);
-    }
+//
+//    @Override
+//    public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,
+//                       ArrayList<Cards>deckCards, Minion target, Heroes targetHero, Minion summonedMinion,
+//                       Cards playingCard, Alliance alliance){
+//        visitor.visit(this,battleGround);
+//    }
 
 }

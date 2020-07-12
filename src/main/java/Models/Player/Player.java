@@ -43,7 +43,7 @@ public class Player {
     @Expose(serialize = true, deserialize = true)
     private ArrayList<Cards> BuyableCards = new ArrayList<Cards>();
     @Expose(serialize = true, deserialize = true)
-    private ArrayList<Cards> lockCards = new ArrayList<Cards>();//TODO needs to be init:))
+    private ArrayList<Cards> lockCards = new ArrayList<Cards>();
     @Expose(serialize = true, deserialize = true)
     private ArrayList<Deck> allDecksOfPlayer = new ArrayList<Deck>();
     @Expose(serialize = true, deserialize = true)

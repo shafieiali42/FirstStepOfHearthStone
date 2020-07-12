@@ -1,6 +1,5 @@
 package Visitors.CardVisitors;
 
-import Controller.Administer;
 import Controller.ControllerOfMainComponents;
 import Controller.GamePartController;
 import Logic.PlayLogic.Alliance;
@@ -219,11 +218,6 @@ public class BattleCryVisitor implements Visitor {
 
     @Override
     public void visit(Moonfire moonfire, ArrayList<Minion> battleGround) {
-
-    }
-
-    @Override
-    public void visit(Heal heal, ArrayList<Minion> battleGround) {
 
     }
 

@@ -533,8 +533,16 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     protected void paintComponent(Graphics g) {
         g.drawImage(imageOfCard, 0, 0, this.getWidth(), this.getHeight(), null);
         Graphics2D graphics2D = (Graphics2D) g;
+
+
+        
+
+
+
+
         if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)
-                || ControllerOfMainComponents.getStatus().equals(Status.CHOOSE_TARGET_FOR_SPELL)) {
+                || ControllerOfMainComponents.getStatus().equals(Status.CHOOSE_TARGET_FOR_SPELL)
+                || ControllerOfMainComponents.getStatus().equals(Status.CHOOSE_TARGET_FOR_HERO_POWERS)) {
             graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 20));
             graphics2D.setColor(Color.red);
             if (isInited) {

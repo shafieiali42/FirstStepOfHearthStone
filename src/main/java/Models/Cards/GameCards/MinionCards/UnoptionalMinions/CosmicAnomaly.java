@@ -12,6 +12,13 @@ public class CosmicAnomaly extends Minion {
 
 
 
+    public CosmicAnomaly(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
 
 
 

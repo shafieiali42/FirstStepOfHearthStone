@@ -125,7 +125,6 @@ public class Heroes implements SpVisitable {
     }
 
 
-
     @Override
     public String toString() {
         return "[ Name: " + this.getName() + ", healthPower: " + this.healthPower + "]";

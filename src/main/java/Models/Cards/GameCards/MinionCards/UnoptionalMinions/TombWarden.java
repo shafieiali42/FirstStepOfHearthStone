@@ -15,10 +15,11 @@ public class TombWarden extends Minion {
 
 
     public TombWarden(){
-        setIsTaunt(true);//todo needs to be True
+        setActive(true);
+        setTaunt(false);
         setCanBeAttacked(true);
-        setIsActive(false);
-
+        setDivineShield(false);
+        setRush(false);
     }
 
 

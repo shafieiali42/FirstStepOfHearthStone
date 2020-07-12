@@ -11,10 +11,14 @@ import java.util.ArrayList;
 
 public class Dreadscale extends Minion {
 
-    public Dreadscale() {
-        setIsTaunt(false);
+
+
+    public Dreadscale(){
+        setActive(true);
+        setTaunt(false);
         setCanBeAttacked(true);
-        setIsActive(true);
+        setDivineShield(false);
+        setRush(false);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package View.Gui.Panels.CollectionPages;
 
 import Controller.Administer;
+import Controller.CollectionController;
 import Controller.ControllerOfMainComponents;
 import Controller.GamePartController;
 import Logic.Status;
@@ -323,12 +324,12 @@ public class ManaPanel extends JPanel {
 
 
     private void searchInCards(String searchFieldText) throws IOException {
-        Administer.showSearchedCards(searchFieldText,CardPanel.getInstanceOfCollectionPage(),
+        CollectionController.showSearchedCards(searchFieldText,CardPanel.getInstanceOfCollectionPage(),
                 CardPanel.getInstanceOfDeckPage(),CardPanel.getNumOfCardInEveryRow());
     }
 
     public void filterByMana(int mana) throws IOException {
-        Administer.showCardsWithSpecifiedManaCost(mana,CardPanel.getInstanceOfCollectionPage(),
+        CollectionController.showCardsWithSpecifiedManaCost(mana,CardPanel.getInstanceOfCollectionPage(),
                 CardPanel.getInstanceOfDeckPage(),CardPanel.getNumOfCardInEveryRow());
     }
 

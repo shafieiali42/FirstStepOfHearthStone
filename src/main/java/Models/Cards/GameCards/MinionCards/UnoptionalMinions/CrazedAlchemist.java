@@ -13,7 +13,13 @@ public class CrazedAlchemist extends Minion {
 
 
 
-
+    public CrazedAlchemist(){
+        setActive(true);
+        setTaunt(false);
+        setCanBeAttacked(true);
+        setDivineShield(false);
+        setRush(false);
+    }
 
 
     @Override
