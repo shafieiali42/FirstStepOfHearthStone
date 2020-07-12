@@ -1,6 +1,7 @@
 package View.Gui.Panels.GamePage;
 
 import Controller.Administer;
+import Controller.GamePartController;
 import Utility.Config2.ConfigLoader;
 import View.Gui.Mapper;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
@@ -71,7 +72,7 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
 
                 if (result == JOptionPane.OK_OPTION) {
                     try {
-                        Administer.initializeGameState();
+                        GamePartController.initializeGameState();
 //                        GameState.getInstance().initGameState();
                     } catch (IOException ex) {
                         ex.printStackTrace();
@@ -107,7 +108,7 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
         DeckViewerInPlay.getInstanceOfFirstDeck().setBounds(60, 550, DeckViewerInPlay.getWidthOfDeck(), DeckViewerInPlay.getHeightOfDeck());
 
         DeckViewerInPlay.getInstanceOfFirstDeck().setToolTipText("You have "+
-                Administer.getNumberOfFriendlyCardsOfDeckInGameState()+ "cards in your deck");
+                GamePartController.getNumberOfFriendlyCardsOfDeckInGameState()+ "cards in your deck");
         add(DeckViewerInPlay.getInstanceOfFirstDeck());
     }
 
@@ -125,7 +126,7 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
                 Mapper.getInstance().addRequest(Mapper.RequestTypes.END_TURN);
                 Mapper.getInstance().executeRequests();
                 DeckViewerInPlay.getInstanceOfFirstDeck().setToolTipText("You have "+
-                        Administer.getNumberOfFriendlyCardsOfDeckInGameState()+ "cards in your deck");
+                        GamePartController.getNumberOfFriendlyCardsOfDeckInGameState()+ "cards in your deck");
 
             }
         });
@@ -136,17 +137,17 @@ public class DeckAndEndTurnBtnPanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setFont(new Font("TimesRoman", Font.ITALIC, 30));
-        g.drawString(Administer.getManaOfCurrentPlayer() + "/" + "10", 60, 700);
+        g.drawString(GamePartController.getManaOfCurrentPlayer() + "/" + "10", 60, 700);
         g.setFont(new Font("TimesRoman", Font.ITALIC, 15));
 //        g.drawString(Administer.getEnemyImprovementOfQuest(), 50, 295);
-        g.drawString(Administer.getFriendlyImprovementOfQuest(), 50, 495);
+        g.drawString(GamePartController.getFriendlyImprovementOfQuest(), 50, 495);
 
 
         DeckViewerInPlay.getInstanceOfFirstDeck().setToolTipText("You have "+
-                Administer.getNumberOfFriendlyCardsOfDeckInGameState()+ "cards in your deck");
+                GamePartController.getNumberOfFriendlyCardsOfDeckInGameState()+ "cards in your deck");
 
         DeckViewerInPlay.getInstanceOfSecondDeck().setToolTipText("You have "+
-                Administer.getNumberOfEnemyCardsOfDeckInGameState()+ "cards in your deck");
+                GamePartController.getNumberOfEnemyCardsOfDeckInGameState()+ "cards in your deck");
 
 
 

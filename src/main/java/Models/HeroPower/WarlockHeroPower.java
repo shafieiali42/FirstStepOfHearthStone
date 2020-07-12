@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class WarlockHeroPower extends HeroPower {
 
 
-    public WarlockHeroPower(){
+    public WarlockHeroPower() {
         this.setName("WarlockHeroPower");
         this.setMana(2);
     }
@@ -23,11 +23,10 @@ public class WarlockHeroPower extends HeroPower {
                        ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards,
                        ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero, Minion summoned) {
 
-        visitorOfPowers.visit(this,player,friendlyBattleGround,enemyBattleGround,friendlyHandCards,
-                enemyHandsCards,friendlyDeckCards,enemyDeckCards,target,targetHero);
+        visitorOfPowers.visit(this, player, friendlyBattleGround, enemyBattleGround, friendlyHandCards,
+                enemyHandsCards, friendlyDeckCards, enemyDeckCards, target, targetHero);
 
     }
-
 
 
 }

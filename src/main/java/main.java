@@ -23,9 +23,9 @@ public class main {
         for (Spell spell:Spell.getSpells()){
             System.out.println(spell.getManaNeededForQuest());
         }
-        Mage.setSpecialCardsOfMage();
-        Warlock.setSpecialCardsOfWarlock();
-        Rogue.setSpecialCardsOfRogue();
+        Mage.initSpecialCardsOfMage();
+        Warlock.initSpecialCardsOfWarlock();
+        Rogue.initSpecialCardsOfRogue();
         LittleCardPanel.setAllLittleCardPanels();
         Constant.getInstance().defineHeroImagesHashMap();
         Constant.getInstance().defineHeroPowerImagesHashMap();

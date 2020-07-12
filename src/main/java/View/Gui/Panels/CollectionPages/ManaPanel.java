@@ -2,6 +2,7 @@ package View.Gui.Panels.CollectionPages;
 
 import Controller.Administer;
 import Controller.ControllerOfMainComponents;
+import Controller.GamePartController;
 import Logic.Status;
 import Utility.Config2.ConfigLoader;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
@@ -310,7 +311,7 @@ public class ManaPanel extends JPanel {
         } else if (ControllerOfMainComponents.getStatus().equals(Status.MAKE_DECK) || ControllerOfMainComponents.getStatus().equals(Status.CHANGE_DECK)) {
             JOptionPane.showMessageDialog(null,"You should press done button","Error",JOptionPane.ERROR_MESSAGE);
         }else if (ControllerOfMainComponents.getStatus().equals(Status.COLLECTION_PAGE_FROM_PLAY)){
-            if (!Administer.isCurrentPlayersCurrentDeckNull()){
+            if (!GamePartController.isCurrentPlayersCurrentDeckNull()){
                 ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
             MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
             }else {

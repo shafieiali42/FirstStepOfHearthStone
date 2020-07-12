@@ -1,6 +1,7 @@
 package View.Gui.Animation;
 
 import Controller.Administer;
+import Controller.GamePartController;
 import View.CardView.CardImagePanel;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
 import javax.swing.*;
@@ -53,7 +54,7 @@ public class AnimationOfRotation extends JPanel  {
         }
         CardImagePanel back = null;
         try {
-            back = new CardImagePanel(Administer.getPlayingCardName(),100,100,true,1);
+            back = new CardImagePanel(GamePartController.getPlayingCardName(),100,100,true,1,null);
         } catch (IOException e) {
             e.printStackTrace();
         }

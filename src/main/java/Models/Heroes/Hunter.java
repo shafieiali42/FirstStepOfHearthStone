@@ -11,26 +11,29 @@ import Visitors.PowerVisitor.SpVisitor.SpVisitor;
 import java.util.ArrayList;
 
 public class Hunter extends Heroes {
-    private static ArrayList<Cards> specialCardsOfHunter = new ArrayList<Cards>();
+
+
+    private static final ArrayList<Cards> specialCardsOfHunter = new ArrayList<Cards>();
 
 
 
     public Hunter(){
         this.setName("Hunter");
         this.setHealthPower(30);
-        this.setDescription("");//TODO needs to be initialize
+        this.setDescription("");
         this.setIsLock(true);
         this.setHeroPower(new HunterHeroPower());
-        setSpecialCardsOfHunter();
+        initSpecialCardsOfHunter();
     }
 
 
-    public static void setSpecialCardsOfHunter() {
+    public static void initSpecialCardsOfHunter() {
         for (Cards card:Cards.getAllCards()){
             boolean isDuplicated=false;
             for (Cards cardInSpecialCardsOfHunter:specialCardsOfHunter){
-                if (card.getName().equals(cardInSpecialCardsOfHunter.getName())){
-                    isDuplicated=true;
+                if (card.getName().equals(cardInSpecialCardsOfHunter.getName())) {
+                    isDuplicated = true;
+                    break;
                 }
             }
             if (!isDuplicated){

@@ -76,7 +76,7 @@ public class JsonReaderForMinions {
         // 1. JSON file to Java object
 
         for (int i = 1; i <= Minion.NUMBER_OF_MINIONS; i++) {
-             minion1 = gson.fromJson(new FileReader("MinionSpellsWeapons/Minions\\minion" + i + ".json"), Minion.class);
+             minion1 = gson.fromJson(new FileReader("MinionSpellsWeapons/Minions/minion" + i + ".json"), Minion.class);
             Minion.getMinions().add(minion1);
         }
         return minion1;

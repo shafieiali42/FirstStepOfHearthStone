@@ -1,5 +1,6 @@
 package Visitors.CardVisitors;
 
+import Logic.PlayLogic.Alliance;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.GameCards.MinionCards.UnoptionalMinions.*;
@@ -17,13 +18,14 @@ public interface Visitor {
     //Neutrals
     //**********
     void visit(CurioCollector curioCollector);
-    void visit(Sathrovarr sathrovarr, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards, ArrayList<Cards>deckCards, Minion target);
+    void visit(Sathrovarr sathrovarr, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,
+               ArrayList<Cards>deckCards, Minion target);
 
     void visit(SecurityRover securityRover, ArrayList<Minion> battleGround, Minion target);
 
     void visit(TombWarden tombWarden, ArrayList<Minion> battleGround);
     void visit(BookOfSpecters bookOfSpecters, ArrayList<Minion>battleGround, ArrayList<Cards> handsCards);
-    void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target,String alliance);
+    void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target, Alliance alliance);
     void visit(Sprint sprint);
     void visit(Ashbringer ashbringer);
     void visit(BattleAxe battleAxe);
@@ -34,7 +36,7 @@ public interface Visitor {
 
     //Special
     //*********
-    void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target,String alliance);
+    void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target,Alliance alliance);
     void visit(FriendlySmith friendlySmith,ArrayList<Cards>deckCards);
     void visit(Dreadscale dreadscale);
     void visit(SwampKingDred swampKingDred,Minion playingCard);

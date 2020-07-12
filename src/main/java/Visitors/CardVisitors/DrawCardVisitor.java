@@ -1,5 +1,6 @@
 package Visitors.CardVisitors;
 
+import Logic.PlayLogic.Alliance;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.GameCards.MinionCards.UnoptionalMinions.*;
@@ -41,7 +42,7 @@ public class DrawCardVisitor implements Visitor {
     }
 
     @Override
-    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target, String alliance) {
+    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target, Alliance alliance) {
 
     }
 
@@ -85,7 +86,7 @@ public class DrawCardVisitor implements Visitor {
     }
 
     @Override
-    public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target, String alliance) {
+    public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target, Alliance alliance) {
 
     }
 

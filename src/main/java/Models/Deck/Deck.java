@@ -23,7 +23,7 @@ public class Deck implements Comparable<Deck> {
 
     private HashMap<String, Integer> usesHashMap =new HashMap<String, Integer>();
 
-    public void defineUsesHashMapFromArrayList(){
+    public void initUsesHashMapFromArrayList(){
         usesHashMap.clear();
         for (Cards card:listOfCards){
             boolean isInHashMap=false;
@@ -41,21 +41,7 @@ public class Deck implements Comparable<Deck> {
         }
     }
 
-    public static int getMaxCapacityOfDeck() {
-        return MAX_CAPACITY_OF_DECK;
-    }
 
-    public int getManaAvg() {
-        return manaAvg;
-    }
-
-    public void setManaAvg() {
-        int sum = 0;
-        for (Cards card : listOfCards) {
-            sum += card.getManaCost();
-        }
-        manaAvg = sum / listOfCards.size();
-    }
 
 
     public Deck() {
@@ -68,9 +54,33 @@ public class Deck implements Comparable<Deck> {
         this.numberOfWins = 0;
         this.numberOfUses = 0;
         this.listOfCards = new ArrayList<Cards>();
-
     }
 
+
+    public void defineManaAvg() {
+        int sum = 0;
+        for (Cards card : listOfCards) {
+            sum += card.getManaCost();
+        }
+        manaAvg = sum / listOfCards.size();
+    }
+
+    public void defineMostUsedCard(){
+        Collections.sort(listOfCards);
+        mostUsedCard=listOfCards.get(0);
+    }
+
+
+    //getter and setters
+    //*********************
+
+    public static int getMaxCapacityOfDeck() {
+        return MAX_CAPACITY_OF_DECK;
+    }
+
+    public int getManaAvg() {
+        return manaAvg;
+    }
 
     public String getName() {
         return name;
@@ -128,10 +138,11 @@ public class Deck implements Comparable<Deck> {
         this.mostUsedCard = mostUsedCard;
     }
 
-    public void defineMostUsedCard(){
-        Collections.sort(listOfCards);
-        mostUsedCard=listOfCards.get(0);
+    public HashMap<String, Integer> getUsesHashMap() {
+        return usesHashMap;
     }
+
+
 
 
     @Override
@@ -152,13 +163,13 @@ public class Deck implements Comparable<Deck> {
                     return 1;
                 } else if (this.numberOfUses > deck.numberOfUses) {
                     return -1;
-                } else if (this.numberOfUses == this.numberOfUses) {
+                } else {
                     if (this.manaAvg < deck.manaAvg) {
                         return 1;
                     } else if (this.manaAvg > deck.manaAvg) {
                         return -1;
-                    } else if (this.manaAvg == deck.manaAvg) {
-                        return 1; // todo every thing is equal:))
+                    } else {
+                        return 1;
                     }
                 }
             }
@@ -177,12 +188,5 @@ public class Deck implements Comparable<Deck> {
         return "Models.Deck Name: " + this.name + "Models.Deck Hero: " + this.hero + " cards: " + this.listOfCards;
     }
 
-//    @Override
-//    public Object clone() throws CloneNotSupportedException {
-//        return super.clone();
-//    }
 
-    public HashMap<String, Integer> getUsesHashMap() {
-        return usesHashMap;
-    }
 }

@@ -1,6 +1,8 @@
 package Visitors.CardVisitors;
 
 import Controller.Administer;
+import Controller.GamePartController;
+import Logic.PlayLogic.Alliance;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.CardClasses.Weapon;
@@ -43,7 +45,7 @@ public class AfterSelectVisitor implements Visitor {
             battleGround.add(minion3);
         }
 
-        Administer.refreshPlayPanel();
+        GamePartController.refreshPlayPanel();
 
     }
 
@@ -64,11 +66,11 @@ public class AfterSelectVisitor implements Visitor {
     }
 
     @Override
-    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target, String alliance) {
+    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target, Alliance alliance) {
 
-        if (alliance.equalsIgnoreCase("ENEMY")) {
+        if (alliance.equals(Alliance.ENEMY)) {
 
-            JOptionPane.showMessageDialog(Administer.getMyMainFrame(),
+            JOptionPane.showMessageDialog(GamePartController.getMyMainFrame(),
                     "you cant do it on enemy minions", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
             target.setAttackPower(target.getAttackPower() + 4);
@@ -116,11 +118,11 @@ public class AfterSelectVisitor implements Visitor {
     }
 
     @Override
-    public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target, String alliance) {
+    public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target, Alliance alliance) {
 
-        if (alliance.equalsIgnoreCase("FRIENDLY")) {
+        if (alliance.equals(Alliance.FRIENDLY)) {
 
-            JOptionPane.showMessageDialog(Administer.getMyMainFrame(),
+            JOptionPane.showMessageDialog(GamePartController.getMyMainFrame(),
                     "you cant do it on your friendly minion", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
             target.setHealthPower(1);
@@ -133,13 +135,13 @@ public class AfterSelectVisitor implements Visitor {
     @Override
     public void visit(FriendlySmith friendlySmith, ArrayList<Cards> deckCards) {
 
-        Weapon weapon = (Weapon) (Administer.getSelectedWeapon().copy());
+        Weapon weapon = (Weapon) (GamePartController.getSelectedWeapon().copy());
         weapon.setAttackPower(weapon.getAttackPower() + 2);
         weapon.setDurability(weapon.getDurability() + 2);
         deckCards.add(3, weapon);
-        Administer.setGamePageContentPane();
+        GamePartController.setGamePageContentPane();
         MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
-        Administer.reStartDiscoverPageSetting();
+        GamePartController.reStartDiscoverPageSetting();
     }
 
     @Override

@@ -23,14 +23,14 @@ public class Game {
     private int attacker;
     private int target;
 
-    private String attackerAlliance;
-    private String targetAlliance;
+    private Alliance attackerAlliance;
+    private Alliance targetAlliance;
 
     private int targetOfSpell;
-    private String allianceOfSpellsTarget;
+    private Alliance allianceOfSpellsTarget;
 
     private int targetOfHeroPower;
-    private String targetAllianceOfHeroPower;
+    private Alliance targetAllianceOfHeroPower;
 
     public int getTargetOfHeroPower() {
         return targetOfHeroPower;
@@ -40,36 +40,36 @@ public class Game {
         this.targetOfHeroPower = targetOfHeroPower;
     }
 
-    public String getTargetAllianceOfHeroPower() {
+    public Alliance getTargetAllianceOfHeroPower() {
         return targetAllianceOfHeroPower;
     }
 
-    public void setTargetAllianceOfHeroPower(String targetAllianceOfHeroPower) {
+    public void setTargetAllianceOfHeroPower(Alliance targetAllianceOfHeroPower) {
         this.targetAllianceOfHeroPower = targetAllianceOfHeroPower;
     }
 
-    public String getAttackerAlliance() {
+    public Alliance getAttackerAlliance() {
         return attackerAlliance;
     }
 
-    public void setAttackerAlliance(String attackerAlliance) {
+    public void setAttackerAlliance(Alliance attackerAlliance) {
         this.attackerAlliance = attackerAlliance;
     }
 
-    public String getTargetAlliance() {
+    public Alliance getTargetAlliance() {
         return targetAlliance;
     }
 
-    public void setTargetAlliance(String targetAlliance) {
+    public void setTargetAlliance(Alliance targetAlliance) {
         this.targetAlliance = targetAlliance;
     }
 
 
-    public String getAllianceOfSpellsTarget() {
+    public Alliance getAllianceOfSpellsTarget() {
         return allianceOfSpellsTarget;
     }
 
-    public void setAllianceOfSpellsTarget(String allianceOfSpellsTarget) {
+    public void setAllianceOfSpellsTarget(Alliance allianceOfSpellsTarget) {
         this.allianceOfSpellsTarget = allianceOfSpellsTarget;
     }
 

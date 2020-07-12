@@ -1,6 +1,7 @@
 package Visitors.PowerVisitor.HeroPowerVisitor;
 
 import Controller.Administer;
+import Controller.GamePartController;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.HeroPower.*;
@@ -40,14 +41,14 @@ public class HeroPowerVisitor implements VisitorOfPowers {
             enemyHandsCards.remove(randomIndexForHand);
             friendlyHandCards.add(cardInDeck);
             friendlyHandCards.add(cardsInHands);
-            Administer.refreshPlayPanel();
+            GamePartController.refreshPlayPanel();
         } else {
             if (enemyDeckCards.size() > 0) {
                 int randomIndex = random.nextInt(enemyDeckCards.size());
                 Cards card = enemyDeckCards.get(randomIndex);
                 enemyDeckCards.remove(randomIndex);
                 friendlyHandCards.add(card);
-                Administer.refreshPlayPanel();
+                GamePartController.refreshPlayPanel();
             }
         }
 

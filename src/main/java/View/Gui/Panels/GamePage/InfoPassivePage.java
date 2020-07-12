@@ -2,6 +2,7 @@ package View.Gui.Panels.GamePage;
 
 import Controller.Administer;
 import Controller.ControllerOfMainComponents;
+import Controller.GamePartController;
 import Logic.Status;
 import Utility.Config2.ConfigLoader;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
@@ -68,18 +69,18 @@ public class InfoPassivePage extends JPanel {
     }
 
     private void initThirdBtn() {
-        thirdPassiveBtn = new JButton(Administer.getNameOfFriendlyPassive(2));
+        thirdPassiveBtn = new JButton(GamePartController.getNameOfFriendlyPassive(2));
         thirdPassiveBtn.setBounds(3 * X_COORDINATE_OF_FIRST_BTN + 2 * WIDTH_OF_BTN, Y_COORDINATE_OF_FIRST_BTN, WIDTH_OF_BTN, HEIGHT_OF_BTN);//////////
         designBtn(thirdPassiveBtn);
         thirdPassiveBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Administer.setFriendlyInfoPassiveOfGameState(2);
+                GamePartController.setFriendlyInfoPassiveOfGameState(2);
 //                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(2));
                 ControllerOfMainComponents.setStatus(Status.FIRST_THREE_CARDS_PAGE);
-                if (Administer.showThreeCardsForChange()) {
+                if (GamePartController.showThreeCardsForChange()) {
                     MyMainFrame.getInstance().setContentPane(FirstThreeCardsPage.getInstance());
-                    Administer.setNameOfFirstFriendlyThreeCards();
+                    GamePartController.setNameOfFirstFriendlyThreeCards();
                 }else{
                     ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
                     MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
@@ -90,18 +91,18 @@ public class InfoPassivePage extends JPanel {
     }
 
     private void initSecondBtn() {
-        secondPassiveBtn = new JButton(Administer.getNameOfFriendlyPassive(1));
+        secondPassiveBtn = new JButton(GamePartController.getNameOfFriendlyPassive(1));
         secondPassiveBtn.setBounds(2 * X_COORDINATE_OF_FIRST_BTN + WIDTH_OF_BTN, Y_COORDINATE_OF_FIRST_BTN, WIDTH_OF_BTN, HEIGHT_OF_BTN);
         designBtn(secondPassiveBtn);
         secondPassiveBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Administer.setFriendlyInfoPassiveOfGameState(1);
+                GamePartController.setFriendlyInfoPassiveOfGameState(1);
 //                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(1));
                 ControllerOfMainComponents.setStatus(Status.FIRST_THREE_CARDS_PAGE);
-                if (Administer.showThreeCardsForChange()) {
+                if (GamePartController.showThreeCardsForChange()) {
                     MyMainFrame.getInstance().setContentPane(FirstThreeCardsPage.getInstance());
-                    Administer.setNameOfFirstFriendlyThreeCards();
+                    GamePartController.setNameOfFirstFriendlyThreeCards();
                 }else{
                     ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
                     MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
@@ -113,18 +114,18 @@ public class InfoPassivePage extends JPanel {
     }
 
     private void initFirstBtn() {
-        firstPassiveBtn = new JButton(Administer.getNameOfFriendlyPassive(0));
+        firstPassiveBtn = new JButton(GamePartController.getNameOfFriendlyPassive(0));
         firstPassiveBtn.setBounds(X_COORDINATE_OF_FIRST_BTN, Y_COORDINATE_OF_FIRST_BTN, WIDTH_OF_BTN, HEIGHT_OF_BTN);
         designBtn(firstPassiveBtn);
         firstPassiveBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Administer.setFriendlyInfoPassiveOfGameState(0);
+                GamePartController.setFriendlyInfoPassiveOfGameState(0);
 //                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(0));
                 ControllerOfMainComponents.setStatus(Status.FIRST_THREE_CARDS_PAGE);
-                if (Administer.showThreeCardsForChange()) {
+                if (GamePartController.showThreeCardsForChange()) {
                     MyMainFrame.getInstance().setContentPane(FirstThreeCardsPage.getInstance());
-                    Administer.setNameOfFirstFriendlyThreeCards();
+                    GamePartController.setNameOfFirstFriendlyThreeCards();
                 }else{
 
                     ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
@@ -139,9 +140,9 @@ public class InfoPassivePage extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {//todo maybe its better to do it by Administer
         super.paintComponent(g);
-        firstPassiveBtn.setText(Administer.getNameOfFriendlyPassive(0));
-        secondPassiveBtn.setText(Administer.getNameOfFriendlyPassive(1));
-        thirdPassiveBtn.setText(Administer.getNameOfFriendlyPassive(2));
+        firstPassiveBtn.setText(GamePartController.getNameOfFriendlyPassive(0));
+        secondPassiveBtn.setText(GamePartController.getNameOfFriendlyPassive(1));
+        thirdPassiveBtn.setText(GamePartController.getNameOfFriendlyPassive(2));
 
     }
 

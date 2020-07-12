@@ -2,6 +2,8 @@ package Visitors.CardVisitors;
 
 import Controller.Administer;
 import Controller.ControllerOfMainComponents;
+import Controller.GamePartController;
+import Logic.PlayLogic.Alliance;
 import Logic.Status;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
@@ -59,7 +61,7 @@ public class ActionVisitor implements Visitor {
     }
 
     @Override
-    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target, String alliance) {
+    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target, Alliance alliance) {
 
     }
 
@@ -69,7 +71,7 @@ public class ActionVisitor implements Visitor {
         System.out.println("Sprint visit");
         for (int i = 0; i < 4; i++) {
             Mapper.drawCard();
-            Administer.refreshPlayPanel();
+            GamePartController.refreshPlayPanel();
         }
     }
 
@@ -104,7 +106,7 @@ public class ActionVisitor implements Visitor {
     }
 
     @Override
-    public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target, String alliance) {
+    public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target, Alliance alliance) {
 
     }
 
@@ -132,8 +134,8 @@ public class ActionVisitor implements Visitor {
     @Override
     public void visit(FriendlySmith friendlySmith, ArrayList<Cards> deckCards) {
         ControllerOfMainComponents.setStatus(Status.DISCOVER_THREE_WEAPONS);
-        Administer.setThreeWeapon();
-        Administer.setDiscoverPageContentPane();
+        GamePartController.setThreeWeapon();
+        GamePartController.setDiscoverPageContentPane();
     }
 
 

@@ -1,5 +1,6 @@
 package Models.Cards.GameCards.MinionCards.UnoptionalMinions;
 
+import Logic.PlayLogic.Alliance;
 import Models.Heroes.Heroes;
 import Visitors.CardVisitors.Visitor;
 import Models.Cards.CardClasses.Cards;
@@ -38,7 +39,7 @@ public class SecurityRover extends Minion {
     @Override
     public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,
                        ArrayList<Cards>deckCards, Minion target, Heroes targetHero, Minion summonedMinion,
-                       Cards playingCard,String alliance){
+                       Cards playingCard, Alliance alliance){
         visitor.visit(this,battleGround,target);
     }
 

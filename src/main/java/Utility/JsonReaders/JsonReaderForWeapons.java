@@ -61,7 +61,7 @@ public class JsonReaderForWeapons {
         Weapon weapon1 = null;
         // 1. JSON file to Java object
         for (int i = 1; i <= Weapon.NUMBER_OF_Weapons; i++) {
-            weapon1 = gson.fromJson(new FileReader("MinionSpellsWeapons/Weapons\\Weapon" + i + ".json"), Weapon.class);
+            weapon1 = gson.fromJson(new FileReader("MinionSpellsWeapons/Weapons/Weapon" + i + ".json"), Weapon.class);
             Weapon.getWeapons().add(weapon1);
         }
         return weapon1;

@@ -2,6 +2,7 @@ package View.Gui.Panels.GamePage;
 
 import Controller.Administer;
 import Controller.ControllerOfMainComponents;
+import Controller.GamePartController;
 import Logic.Status;
 import Utility.Config2.ConfigLoader;
 import Utility.MethodsOfShowCardsOnPanel;
@@ -93,7 +94,7 @@ public class FirstThreeCardsPage extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         try {
-            MethodsOfShowCardsOnPanel.showCards(Administer.getFirstFriendlyThreeCards(),this,3,200,300);
+            MethodsOfShowCardsOnPanel.showCards(GamePartController.getFirstFriendlyThreeCards(),this,3,200,300);
         } catch (IOException e) {
             e.printStackTrace();
         }

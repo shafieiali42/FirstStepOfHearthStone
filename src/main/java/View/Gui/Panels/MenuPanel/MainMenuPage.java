@@ -2,6 +2,7 @@ package View.Gui.Panels.MenuPanel;
 
 
 import Controller.ControllerOfMainComponents;
+import Controller.GamePartController;
 import Controller.PlayerController;
 import Logic.Status;
 import Controller.Administer;
@@ -257,9 +258,9 @@ public class MainMenuPage extends JPanel {
                         break;
 
                 }
-                Administer.setGameMode(mode);
+                GamePartController.setGameMode(mode);
 
-                if (Administer.isCurrentPlayersCurrentDeckNull()) {
+                if (GamePartController.isCurrentPlayersCurrentDeckNull()) {
                     JOptionPane.showMessageDialog(null, "First you should select your deck",
                             "Error", JOptionPane.ERROR_MESSAGE);
                     ControllerOfMainComponents.setStatus(Status.COLLECTION_PAGE_FROM_PLAY);
@@ -274,7 +275,7 @@ public class MainMenuPage extends JPanel {
 //                GraphicLoop.getInstance().start();
                     InfoPassivePage.getInstance().repaint();
                     InfoPassivePage.getInstance().revalidate();
-                    Administer.reStartFirstThreeCardsSetting();
+                    GamePartController.reStartFirstThreeCardsSetting();
                     MyMainFrame.getInstance().setContentPane(InfoPassivePage.getInstance());
                 }
             }

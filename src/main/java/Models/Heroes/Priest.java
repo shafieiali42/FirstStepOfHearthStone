@@ -11,30 +11,28 @@ import java.util.ArrayList;
 
 public class Priest extends Heroes {
 
-    private static ArrayList<Cards> specialCardsOfPriest = new ArrayList<Cards>();
+    private static final ArrayList<Cards> specialCardsOfPriest = new ArrayList<Cards>();
 
-//    private static Priest instance = new Priest();
-//    public static Priest getInstance(){
-//        return instance;
-//    }
+
 
 
     public Priest(){
         this.setName("Priest");
         this.setHealthPower(30);
-        this.setDescription("");//TODO needs to be initialize
+        this.setDescription("");
         this.setIsLock( true);
         this.setHeroPower(new PriestHeroPower());
-        setSpecialCardsOfPriest();
+        initSpecialCardsOfPriest();
     }
 
 
-    public static void setSpecialCardsOfPriest() {
+    public static void initSpecialCardsOfPriest() {
         for (Cards card:Cards.getAllCards()){
             boolean isDuplicated=false;
             for (Cards cardInSpecialCardsOfPriest:specialCardsOfPriest){
-                if (card.getName().equals(cardInSpecialCardsOfPriest.getName())){
-                    isDuplicated=true;
+                if (card.getName().equals(cardInSpecialCardsOfPriest.getName())) {
+                    isDuplicated = true;
+                    break;
                 }
             }
             if (!isDuplicated){

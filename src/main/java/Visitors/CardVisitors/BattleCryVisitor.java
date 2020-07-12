@@ -2,6 +2,8 @@ package Visitors.CardVisitors;
 
 import Controller.Administer;
 import Controller.ControllerOfMainComponents;
+import Controller.GamePartController;
+import Logic.PlayLogic.Alliance;
 import Logic.Status;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
@@ -25,7 +27,7 @@ public class BattleCryVisitor implements Visitor {
         if (battleGround.size() < 7) {
             Minion minion = tombWarden.copy();
             battleGround.add(minion);
-            Administer.refreshPlayPanel();
+            GamePartController.refreshPlayPanel();
         } else {
             System.out.println("Battlecry of TombWarden cant execute because we have 7 cards in battleGround:))");
         }
@@ -39,7 +41,7 @@ public class BattleCryVisitor implements Visitor {
     }
 
     @Override
-    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target, String alliance) {
+    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target, Alliance alliance) {
 
     }
 
@@ -102,7 +104,7 @@ public class BattleCryVisitor implements Visitor {
     }
 
     @Override
-    public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target, String alliance) {
+    public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target, Alliance alliance) {
 
     }
 

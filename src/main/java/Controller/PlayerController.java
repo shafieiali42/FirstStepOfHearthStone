@@ -135,8 +135,8 @@ public class PlayerController {
 
     public static void deletePlayer(String password) throws IOException {
         if (password.equals(ControllerOfMainComponents.currentPlayer.getPassWord())) {
-            File temp = new File("logs\\"+"temp.txt");
-            FileReader fileReader = new FileReader("logs\\"+ ControllerOfMainComponents.currentPlayer.getUserName() + ".log");
+            File temp = new File("logs/"+"temp.txt");
+            FileReader fileReader = new FileReader("logs/"+ ControllerOfMainComponents.currentPlayer.getUserName() + ".log");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             FileWriter fileWriter = new FileWriter(temp);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
@@ -154,7 +154,7 @@ public class PlayerController {
             fileReader.close();
             fileWriter.close();
             FileReader fileReader1 = new FileReader(temp);
-            FileWriter fileWriter1 = new FileWriter("logs\\"+ ControllerOfMainComponents.currentPlayer.getUserName() + ".log");
+            FileWriter fileWriter1 = new FileWriter("logs/"+ ControllerOfMainComponents.currentPlayer.getUserName() + ".log");
             BufferedReader bufferedReader1 = new BufferedReader(fileReader1);
             BufferedWriter bufferedWriter1 = new BufferedWriter(fileWriter1);
             String string = new String();

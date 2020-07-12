@@ -1,6 +1,7 @@
 package Models.Cards.GameCards.SpellCards.UnoptionalSpells;
 
 
+import Logic.PlayLogic.Alliance;
 import Models.Heroes.Heroes;
 import Visitors.CardVisitors.Visitor;
 import Models.Cards.CardClasses.Cards;
@@ -33,7 +34,7 @@ public class Polymorph extends Spell {
 
     @Override
     public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards, ArrayList<Cards>deckCards,
-                       Minion target, Heroes targetHero, Minion summonedMinion,Cards playingCard,String alliance){
+                       Minion target, Heroes targetHero, Minion summonedMinion, Cards playingCard, Alliance alliance){
         visitor.visit(this,battleGround,target,alliance);
     }
 

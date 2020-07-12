@@ -11,23 +11,37 @@ import Visitors.PowerVisitor.HeroPowerVisitor.VisitorOfPowers;
 
 import java.util.ArrayList;
 
-public class HeroPower  implements HeroPowerVisitable {
-
+public class HeroPower implements HeroPowerVisitable {
 
 
     private int mana;
     private String name;
     private boolean needsTarget;
-    private int numberOfPermitUse=1;
+    private int numberOfPermitUse = 1;
+
+
+
+
+    @Override
+    public void accept(VisitorOfPowers visitorOfPowers, InGamePlayer player,
+                       ArrayList<Minion> friendlyBattleGround, ArrayList<Minion> enemyBattleGround,
+                       ArrayList<Cards> friendlyHandCards, ArrayList<Cards> enemyHandsCards,
+                       ArrayList<Cards> friendlyDeckCards, ArrayList<Cards> enemyDeckCards,
+                       Minion target, Heroes targetHero, Minion summoned) {}
+
+
+
+
+
+    //getter and setters
+    //********************
 
     public int getNumberOfPermitUse() {
         return numberOfPermitUse;
     }
-
     public void setNumberOfPermitUse(int numberOfPermitUse) {
         this.numberOfPermitUse = numberOfPermitUse;
     }
-
     public int getMana() {
         return mana;
     }
@@ -39,18 +53,6 @@ public class HeroPower  implements HeroPowerVisitable {
     }
     public void setName(String name) {
         this.name = name;
-    }
-
-
-
-
-    @Override
-    public void accept(VisitorOfPowers visitorOfPowers, InGamePlayer player,
-                       ArrayList<Minion> friendlyBattleGround, ArrayList<Minion> enemyBattleGround,
-                       ArrayList<Cards> friendlyHandCards, ArrayList<Cards> enemyHandsCards,
-                       ArrayList<Cards> friendlyDeckCards, ArrayList<Cards> enemyDeckCards,
-                       Minion target, Heroes targetHero, Minion summoned) {
-
     }
 
 }

@@ -9,7 +9,8 @@ import Visitors.PowerVisitor.SpVisitor.SpVisitor;
 import java.util.ArrayList;
 
 public class Mage extends Heroes {
-    private static ArrayList<Cards> specialCardsOfMage = new ArrayList<Cards>();
+
+    private static final ArrayList<Cards> specialCardsOfMage = new ArrayList<Cards>();
 
 
 
@@ -19,16 +20,17 @@ public class Mage extends Heroes {
         this.setDescription("She is a skilled wizard who has special skills in using spells.");
         this.setIsLock(false);
         this.setHeroPower(new MageHeroPower());
-        setSpecialCardsOfMage();
+        initSpecialCardsOfMage();
     }
 
 
-    public static void setSpecialCardsOfMage() {
+    public static void initSpecialCardsOfMage() {
         for (Cards card:Cards.getAllCards()){
             boolean isDuplicated=false;
             for (Cards cardInSpecialCardsOfMage:specialCardsOfMage){
-                if (card.getName().equals(cardInSpecialCardsOfMage.getName())){
-                    isDuplicated=true;
+                if (card.getName().equals(cardInSpecialCardsOfMage.getName())) {
+                    isDuplicated = true;
+                    break;
                 }
             }
             if (!isDuplicated){
@@ -39,6 +41,8 @@ public class Mage extends Heroes {
 
         }
     }
+
+
 
     public static ArrayList<Cards> getSpecialCardsOfMage() {
         return specialCardsOfMage;

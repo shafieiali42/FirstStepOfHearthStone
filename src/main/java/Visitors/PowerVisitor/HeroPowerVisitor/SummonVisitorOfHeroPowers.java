@@ -1,6 +1,7 @@
 package Visitors.PowerVisitor.HeroPowerVisitor;
 
 import Controller.Administer;
+import Controller.GamePartController;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.HeroPower.*;
@@ -29,7 +30,7 @@ public class SummonVisitorOfHeroPowers implements VisitorOfPowers {
     public void visit(HunterHeroPower hunterHeroPower, InGamePlayer player, ArrayList<Minion> friendlyBattleGround, ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards, ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards, ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero, Minion summoned) {
         System.out.println("Hunter summon Visitor");
         summoned.setHealthPower(summoned.getHealthPower()-1);
-        Administer.removeDeadCharacters();
+        GamePartController.removeDeadCharacters();
     }
 
 

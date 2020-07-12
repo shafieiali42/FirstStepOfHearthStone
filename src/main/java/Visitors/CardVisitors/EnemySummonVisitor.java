@@ -1,6 +1,8 @@
 package Visitors.CardVisitors;
 
 import Controller.Administer;
+import Controller.GamePartController;
+import Logic.PlayLogic.Alliance;
 import Logic.PlayLogic.Game;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
@@ -40,7 +42,7 @@ public class EnemySummonVisitor implements Visitor {
     }
 
     @Override
-    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target, String alliance) {
+    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target, Alliance alliance) {
 
     }
 
@@ -80,7 +82,7 @@ public class EnemySummonVisitor implements Visitor {
     }
 
     @Override
-    public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target, String alliance) {
+    public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target, Alliance alliance) {
 
     }
 
@@ -102,9 +104,9 @@ public class EnemySummonVisitor implements Visitor {
         swampKingDred.setHealthPower(swampKingDred.getHealthPower()-playingCard.getAttackPower());
         playingCard.setHealthPower(playingCard.getHealthPower()-swampKingDred.getAttackPower());
         System.out.println("After: "+playingCard.getHealthPower());
-        Administer.refreshPlayPanel();
+        GamePartController.refreshPlayPanel();
         System.out.println(Game.getInstance().getEnemyPlayer().getBattleGroundCards());
-        Administer.removeDeadCharacters();
+        GamePartController.removeDeadCharacters();
 
 
 

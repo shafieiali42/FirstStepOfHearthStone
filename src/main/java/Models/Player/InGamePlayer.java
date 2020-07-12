@@ -34,8 +34,6 @@ public class InGamePlayer {
         firstThreeCards=new ArrayList<>();
         turn=1;
         mana=1;
-//        deckCards= (ArrayList<Cards>) ControllerOfMainComponents.currentPlayer.getCurrentDeck().getListOfCards().clone();
-//        initHandsCards();
     }
 
     public InGamePlayer(Player player) {

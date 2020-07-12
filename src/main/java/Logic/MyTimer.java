@@ -1,6 +1,7 @@
 package Logic;
 
 import Controller.Administer;
+import Controller.GamePartController;
 import View.Gui.Mapper;
 import View.Gui.Panels.GamePage.PlayPanel;
 
@@ -27,15 +28,15 @@ public class MyTimer extends Thread {
 //                    System.out.println(secondPassed);
                     if (secondPassed >=40 && secondPassed<60) {
                         PlayPanel.getInstance().setTime((60-secondPassed)+"");
-                        Administer.setNeedTimer(true);
+                        GamePartController.setNeedTimer(true);
 //                        System.out.println("You Have Only 20 seconds:))");
                     }
 
                     if (secondPassed == 60) {
-                        Administer.setNeedTimer(false);
+                        GamePartController.setNeedTimer(false);
                         Mapper.endTurn();
 //                        PlayPanel.getInstance().setEndTurn(true);
-                        Administer.refreshPlayPanel();
+                        GamePartController.refreshPlayPanel();
 //                        System.out.println("End Turn:))");
                         isRunning = false;
                     }

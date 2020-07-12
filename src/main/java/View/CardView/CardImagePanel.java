@@ -29,6 +29,7 @@ import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 
 public class CardImagePanel extends JPanel implements MouseListener, MouseMotionListener {
 
@@ -37,7 +38,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     private String cardName;
     boolean dragging = false;
     private int numberOfCardInBattleGround;
-    private String alliance = "";
+    private Alliance alliance;
     private boolean firstTime = true;
     boolean entered = false;
     static boolean clicked = false;
@@ -61,7 +62,22 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     }
 
 
-    public CardImagePanel(Alliance alliance, int width, int height, int typeOfBackOfCard) throws IOException {
+    public CardImagePanel(String cardName) throws IOException {
+        setLayout(null);
+        setSize(150, 170);
+        this.addMouseListener(this);
+        this.addMouseMotionListener(this);
+        this.cardName = cardName;
+        setIsLock(cardName);
+        if (this.isLock) {
+//            System.out.println(cardName);
+            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/GreyCardImage/" + cardName + ".png"));
+        } else {
+            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
+        }
+    }
+
+    public CardImagePanel(int width, int height, int typeOfBackOfCard) throws IOException {
         setLayout(null);
         setSize(width, height);
         this.addMouseListener(this);
@@ -71,13 +87,12 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     }
 
-    public CardImagePanel(String cardName, int width, int height, boolean showLockCards, int type, String alliance) throws IOException {
+    public CardImagePanel(String cardName, int width, int height, boolean showLockCards, int type, Alliance alliance) throws IOException {
         if (showLockCards) {
             setLayout(null);
             setSize(width, height);
             this.addMouseListener(this);
             this.addMouseMotionListener(this);
-//        this.card = card;
             this.alliance = alliance;
             this.cardName = cardName;
             setIsLock(this.cardName);
@@ -90,14 +105,18 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     }
 
-    public CardImagePanel(String cardName, int width, int height, boolean showLockCards, int type) throws IOException {
+    public CardImagePanel(String cardName, int width, int height, boolean showLockCards, int type, Alliance alliance, int numberOfCardInBattleGround) throws IOException {
         if (showLockCards) {
             setLayout(null);
             setSize(width, height);
             this.addMouseListener(this);
             this.addMouseMotionListener(this);
-//        this.card = card;
+            this.alliance = alliance;
             this.cardName = cardName;
+            this.numberOfCardInBattleGround = numberOfCardInBattleGround;
+            this.hp = GamePartController.giveMinionHpWithName(numberOfCardInBattleGround, alliance);
+            this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround, alliance);
+            isInited = true;
             setIsLock(this.cardName);
             if (type == 1) {
                 imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
@@ -105,23 +124,9 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 imageOfCard = ImageIO.read(new File("src/main/resources/Assets/BattleGroundCardImage/" + cardName + ".png"));
             }
         }
-
     }
 
-    public CardImagePanel(String cardName, int width, int height, boolean showLockCards) throws IOException {
-
-        setLayout(null);
-        setSize(width, height);
-        this.addMouseListener(this);
-        this.addMouseMotionListener(this);
-//        this.card = card;
-        this.cardName = cardName;
-        imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
-    }
-
-    //for weapon and hero and
-    public CardImagePanel(String cardName, int width, int height, String typeOfCard, String alliance) throws IOException {
-
+    public CardImagePanel(String cardName, int width, int height, String typeOfCard, Alliance alliance) throws IOException {
         setLayout(null);
         setSize(width, height);
         this.addMouseListener(this);
@@ -156,61 +161,44 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
         }
     }
 
-    public CardImagePanel(String cardName, int width, int height) throws IOException {
 
-        setLayout(null);
-        setSize(width, height);
-        this.addMouseListener(this);
-        this.addMouseMotionListener(this);
-//        this.card = card;
-        this.cardName = cardName;
-        setIsLock(this.cardName);
-        if (this.isLock) {
-            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/GreyCardImage/" + cardName + ".png"));
+    public Alliance getAlliance(int yCoordinateOfCard) {
+
+        Alliance allianceOfSpellTarget;
+        if (yCoordinateOfCard <= 385) {
+            allianceOfSpellTarget = Alliance.ENEMY;
         } else {
-            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
+            allianceOfSpellTarget = Alliance.FRIENDLY;
         }
+        return allianceOfSpellTarget;
     }
 
-    public CardImagePanel(String cardName) throws IOException {
+    public int getNumber(int xCoordinateOfCard) {
+        int number = 0;
 
-        setLayout(null);
-        setSize(150, 170);
+        if (xCoordinateOfCard > 45 && xCoordinateOfCard < 150) {
+            number = 1;
 
-        this.addMouseListener(this);
-        this.addMouseMotionListener(this);
-        this.cardName = cardName;
-        setIsLock(cardName);
-        if (this.isLock) {
-//            System.out.println(cardName);
-            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/GreyCardImage/" + cardName + ".png"));
-        } else {
-            imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
+        } else if (xCoordinateOfCard > 190 && xCoordinateOfCard < 295) {
+            number = 2;
+
+        } else if (xCoordinateOfCard > 335 && xCoordinateOfCard < 440) {
+            number = 3;
+
+        } else if (xCoordinateOfCard > 480 && xCoordinateOfCard < 585) {
+            number = 4;
+
+        } else if (xCoordinateOfCard > 625 && xCoordinateOfCard < 730) {
+            number = 5;
+
+        } else if (xCoordinateOfCard > 770 && xCoordinateOfCard < 830) {
+            number = 6;
+
+        } else if (xCoordinateOfCard > 915 && xCoordinateOfCard < 1010) {
+            number = 7;
+
         }
-
-    }
-
-    public CardImagePanel(String cardName, int width, int height, boolean showLockCards, int type, String alliance, int numberOfCardInBattleGround) throws IOException {
-        if (showLockCards) {
-            setLayout(null);
-            setSize(width, height);
-            this.addMouseListener(this);
-            this.addMouseMotionListener(this);
-//        this.card = card;
-            this.alliance = alliance;
-            this.cardName = cardName;
-            this.numberOfCardInBattleGround = numberOfCardInBattleGround;
-            this.hp = GamePartController.giveMinionHpWithName(numberOfCardInBattleGround, alliance);
-            this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround, alliance);
-            isInited = true;
-            setIsLock(this.cardName);
-            if (type == 1) {
-                imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
-            } else if (type == 2) {
-                imageOfCard = ImageIO.read(new File("src/main/resources/Assets/BattleGroundCardImage/" + cardName + ".png"));
-            }
-        }
-
+        return number;
     }
 
 
@@ -220,107 +208,47 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
             if (SwingUtilities.isLeftMouseButton(e)) {
                 int xCoordinateOfCard = e.getComponent().getX();
                 int yCoordinateOfCard = e.getComponent().getY();
-                String allianceOfSpellTarget;
-                if (yCoordinateOfCard <= 385) {
-                    allianceOfSpellTarget = "ENEMY";
-                } else {
-                    allianceOfSpellTarget = "FRIENDLY";
-                }
-                int number = 0;
+                GamePartController.setTargetOfSpell(getNumber(xCoordinateOfCard), alliance);
 
-                if (xCoordinateOfCard > 45 && xCoordinateOfCard < 150) {
-                    number = 1;
-
-                } else if (xCoordinateOfCard > 190 && xCoordinateOfCard < 295) {
-                    number = 2;
-
-                } else if (xCoordinateOfCard > 335 && xCoordinateOfCard < 440) {
-                    number = 3;
-
-                } else if (xCoordinateOfCard > 480 && xCoordinateOfCard < 585) {
-                    number = 4;
-
-                } else if (xCoordinateOfCard > 625 && xCoordinateOfCard < 730) {
-                    number = 5;
-
-                } else if (xCoordinateOfCard > 770 && xCoordinateOfCard < 830) {
-                    number = 6;
-
-                } else if (xCoordinateOfCard > 915 && xCoordinateOfCard < 1010) {
-                    number = 7;
-
-                }
-                Administer.setTargetOfSpell(number, alliance);
-                Administer.getPlyingCardOfGameState().accept(new AfterSelectVisitor(), Administer.getBattleGround(),
-                        Administer.getHandCards(), Administer.getDeckCards(), Administer.getTargetOfSpell(),
-                        Administer.getTargetOfSpellWitchIsHero(), new Minion(),null, alliance);
-
+                GamePartController.getPlyingCardOfGameState().accept(new AfterSelectVisitor(),
+                        GamePartController.getBattleGround(),
+                        GamePartController.getHandCards(), GamePartController.getDeckCards(),
+                        GamePartController.getTargetOfSpell(),
+                        GamePartController.getTargetOfSpellWitchIsHero(),
+                        new Minion(), null, alliance);
 
                 ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
             }
-
-
         }
 
 
-
-
-
-
-        if (ControllerOfMainComponents.getStatus().equals(Status.CHOOSE_TARGET_FOR_HERO_POWERS)){
-            if (SwingUtilities.isLeftMouseButton(e)){
+        if (ControllerOfMainComponents.getStatus().equals(Status.CHOOSE_TARGET_FOR_HERO_POWERS)) {
+            if (SwingUtilities.isLeftMouseButton(e)) {
                 int xCoordinateOfCard = e.getComponent().getX();
                 int yCoordinateOfCard = e.getComponent().getY();
-                String allianceOfSpellTarget;
-                if (yCoordinateOfCard <= 385) {
-                    allianceOfSpellTarget = "ENEMY";
-                } else {
-                    allianceOfSpellTarget = "FRIENDLY";
-                }
-                int number = 0;
 
+
+                int number = 0;
 
                 if (this.typeOfCard.equalsIgnoreCase("hero")) {
                     number = -2;
                     numberOfCardInBattleGround = -2;
 
-                }else{
-                    if (xCoordinateOfCard > 45 && xCoordinateOfCard < 150) {
-                        number = 1;
-
-                    } else if (xCoordinateOfCard > 190 && xCoordinateOfCard < 295) {
-                        number = 2;
-
-                    } else if (xCoordinateOfCard > 335 && xCoordinateOfCard < 440) {
-                        number = 3;
-
-                    } else if (xCoordinateOfCard > 480 && xCoordinateOfCard < 585) {
-                        number = 4;
-
-                    } else if (xCoordinateOfCard > 625 && xCoordinateOfCard < 730) {
-                        number = 5;
-
-                    } else if (xCoordinateOfCard > 770 && xCoordinateOfCard < 830) {
-                        number = 6;
-
-                    } else if (xCoordinateOfCard > 915 && xCoordinateOfCard < 1010) {
-                        number = 7;
-
-                    }
+                } else {
+                    number = getNumber(xCoordinateOfCard);
                 }
 
-                Administer.setTargetForHeroPower(number, alliance);
+                GamePartController.setTargetForHeroPower(number, alliance);
 
-                Administer.getHeroPower().accept(new AfterSelectPowerVisitor(),Game.getInstance().getCurrentPlayer(),
+                GamePartController.getHeroPower().accept(new AfterSelectPowerVisitor(), Game.getInstance().getCurrentPlayer(),
                         Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                         Game.getInstance().getFormerPlayer().getBattleGroundCards(),
-                       Game.getInstance().getCurrentPlayer().getHandsCards(),
+                        Game.getInstance().getCurrentPlayer().getHandsCards(),
                         Game.getInstance().getFormerPlayer().getHandsCards(),
                         Game.getInstance().getCurrentPlayer().getDeckCards(),
                         Game.getInstance().getFormerPlayer().getDeckCards(),
-                        Administer.getTargetOfHeroPower(),
-                        Administer.getTargetOfHeroPowerWitchIsHero(),null);
-
+                        GamePartController.getTargetOfHeroPower(),
+                        GamePartController.getTargetOfHeroPowerWitchIsHero(), null);
 
                 ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
             }
@@ -331,11 +259,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 int xCoordinateOfCard = e.getComponent().getX();
                 int yCoordinateOfCard = e.getComponent().getY();
                 firstTime = false;
-                if (yCoordinateOfCard <= 385) {
-                    alliance = "ENEMY";
-                } else {
-                    alliance = "FRIENDLY";
-                }
+                alliance = getAlliance(yCoordinateOfCard);
 
                 int number = 0;
                 numberOfCardInBattleGround = 0;
@@ -354,66 +278,47 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                         numberOfCardInBattleGround = -2;
                         if (clicked) {
                             doubleClick = true;
-                            Administer.setTarget(number - 1);
-                            Administer.setAllianceOfTarget(alliance);
-                            Administer.attack(Administer.getAttacker(), Administer.getTarget(),
-                                    Administer.getAllianceOfAttacker(), Administer.getAllianceOfTarget());
+                            GamePartController.setTarget(number - 1);
+                            GamePartController.setAllianceOfTarget(alliance);
+                            GamePartController.attack(GamePartController.getAttacker(), GamePartController.getTarget(),
+                                    GamePartController.getAllianceOfAttacker(), GamePartController.getAllianceOfTarget());
 
                             this.hp = GamePartController.giveMinionHpWithName(numberOfCardInBattleGround, alliance);
                             this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround, alliance);
                             clicked = false;
                             doubleClick = false;
-                            Administer.setAttacker(-5);
-                            Administer.setTarget(-5);
+                            GamePartController.setAttacker(-5);
+                            GamePartController.setTarget(-5);
                         }
                     } else if (this.typeOfCard.equalsIgnoreCase("weapon")) {
                         number = -1;
                         numberOfCardInBattleGround = -1;
                     } else {
 
-                        if (xCoordinateOfCard > 45 && xCoordinateOfCard < 150) {
-                            number = 1;
-                            numberOfCardInBattleGround = 1;
-                        } else if (xCoordinateOfCard > 190 && xCoordinateOfCard < 295) {
-                            number = 2;
-                            numberOfCardInBattleGround = 2;
-                        } else if (xCoordinateOfCard > 335 && xCoordinateOfCard < 440) {
-                            number = 3;
-                            numberOfCardInBattleGround = 3;
-                        } else if (xCoordinateOfCard > 480 && xCoordinateOfCard < 585) {
-                            number = 4;
-                            numberOfCardInBattleGround = 4;
-                        } else if (xCoordinateOfCard > 625 && xCoordinateOfCard < 730) {
-                            number = 5;
-                            numberOfCardInBattleGround = 5;
-                        } else if (xCoordinateOfCard > 770 && xCoordinateOfCard < 830) {
-                            number = 6;
-                            numberOfCardInBattleGround = 6;
-                        } else if (xCoordinateOfCard > 915 && xCoordinateOfCard < 1010) {
-                            number = 7;
-                            numberOfCardInBattleGround = 7;
-                        }
+                        number = getNumber(xCoordinateOfCard);
+                        numberOfCardInBattleGround = number;
+
                         if (clicked) {
                             doubleClick = true;
-                            Administer.setTarget(number - 1);
-                            Administer.setAllianceOfTarget(alliance);
-                            Administer.attack(Administer.getAttacker(), Administer.getTarget(),
-                                    Administer.getAllianceOfAttacker(), Administer.getAllianceOfTarget());
+                            GamePartController.setTarget(number - 1);
+                            GamePartController.setAllianceOfTarget(alliance);
+                            GamePartController.attack(GamePartController.getAttacker(), GamePartController.getTarget(),
+                                    GamePartController.getAllianceOfAttacker(), GamePartController.getAllianceOfTarget());
 
                             this.hp = GamePartController.giveMinionHpWithName(numberOfCardInBattleGround, alliance);
                             this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround, alliance);
                             clicked = false;
                             doubleClick = false;
-                            Administer.setAttacker(-5);
-                            Administer.setTarget(-5);
+                            GamePartController.setAttacker(-5);
+                            GamePartController.setTarget(-5);
                         }
                     }
 
 
                     if (!clicked) {
                         clicked = true;
-                        Administer.setAttacker(number - 1);
-                        Administer.setAllianceAttacker(alliance);
+                        GamePartController.setAttacker(number - 1);
+                        GamePartController.setAllianceAttacker(alliance);
                     }
 
                 }
@@ -421,10 +326,10 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
             } else if (SwingUtilities.isRightMouseButton(e)) {
                 clicked = false;
                 doubleClick = false;
-                Administer.setAttacker(-5);
-                Administer.setTarget(-5);
-                Administer.setAllianceAttacker("");
-                Administer.setAllianceOfTarget("");
+                GamePartController.setAttacker(-5);
+                GamePartController.setTarget(-5);
+                GamePartController.setAllianceAttacker(null);
+                GamePartController.setAllianceOfTarget(null);
             }
         } else {
 
@@ -440,32 +345,24 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 UIManager.put("OptionPane.minimumSize", new Dimension(200, 80));
                 UIManager.put("OptionPane.minimumSize", UIManager.getDefaults().getDimension("OptionPane.minimumSize"));
             } else if (SwingUtilities.isLeftMouseButton(e)) {
-//                System.out.println("Moused Clicked");
                 if (ControllerOfMainComponents.getStatus().equals(Status.BUY_PAGE)) {
                     PanelToShowCardInBuySellPanel.getInstance().removeAll();
                     PanelToShowCardInBuySellPanel.getInstance().repaint();
                     PanelToShowCardInBuySellPanel.getInstance().revalidate();
                     BuySellPanel.getInstance().getPriceLabel().setText("");
-//                BuySellPanel.getInstance().setCard(this.card);
                     Administer.defineShopStateCard(cardName);
-//                BuySellPanel.getInstance().getPriceLabel().setText("Price " + this.card.getMoneyCost() + " $");
                     BuySellPanel.getInstance().getPriceLabel().setText("Price " + Administer.getMoneyOfShopStatesCard() + " $");
                     PanelToShowCardInBuySellPanel.getInstance().repaint();
                     PanelToShowCardInBuySellPanel.getInstance().revalidate();
-
                 } else if (ControllerOfMainComponents.getStatus().equals(Status.SELL_PAGE)) {
                     PanelToShowCardInBuySellPanel.getInstance().removeAll();
                     PanelToShowCardInBuySellPanel.getInstance().repaint();
                     PanelToShowCardInBuySellPanel.getInstance().revalidate();
                     BuySellPanel.getInstance().getPriceLabel().setText("");
-//                BuySellPanel.getInstance().setCard(this.card);
                     Administer.defineShopStateCard(cardName);
-//                BuySellPanel.getInstance().getPriceLabel().setText("Price " + this.card.getMoneyCost() + " $");
                     BuySellPanel.getInstance().getPriceLabel().setText("Price " + Administer.getMoneyOfShopStatesCard() + " $");
                     PanelToShowCardInBuySellPanel.getInstance().repaint();
                     PanelToShowCardInBuySellPanel.getInstance().revalidate();
-
-
                 } else if (ControllerOfMainComponents.getStatus().equals(Status.COLLECTIONS_PAGE)) {
                     if (this.isLock) {
                         ControllerOfMainComponents.setStatus(Status.BUY_PAGE_FROM_COLLECTION);
@@ -498,18 +395,17 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 DiscoverCardsPage.getInstance().setSelectedWeapon(this.cardName);
                 DiscoverCardsPage.getInstance().setWaiting(false);
 
-                Administer.getPlyingCardOfGameState().accept(new AfterSelectVisitor(),
-                        Administer.getBattleGround(),
-                        Administer.getHandCards(), Administer.getDeckCards(),
-                        new Minion(), null, new Minion(), null,alliance);
+                GamePartController.getPlyingCardOfGameState().accept(new AfterSelectVisitor(),
+                        GamePartController.getBattleGround(),
+                        GamePartController.getHandCards(), GamePartController.getDeckCards(),
+                        new Minion(), null, new Minion(), null, alliance);
             }
         }
         if (ControllerOfMainComponents.getStatus().equals(Status.FIRST_THREE_CARDS_PAGE)) {
-//            System.out.println("Change Deck:))");
-            Administer.ChangeThisCardFromHands(cardName);
+            GamePartController.ChangeThisCardFromHands(cardName);
         }
         if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
-            if (Administer.canDragCard(e.getComponent().getY())) {
+            if (GamePartController.canDragCard(e.getComponent().getY())) {
                 x = e.getX();
                 y = e.getY();
             } else {
@@ -526,7 +422,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
     @Override
 
-    public void mouseReleased(MouseEvent e) {//TODO can change better inorder to separate logic and GUI
+    public void mouseReleased(MouseEvent e) {
         if (!canReleased) {
 //            System.out.println("cant released");
             PlayPanel.getInstance().setNeedsToRepaint(true);
@@ -536,73 +432,63 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
         }
         if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE_MY_TURN) || ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)) {
 
-            if (!Administer.checkThatCanReleaseCard(e.getComponent().getX(), e.getComponent().getY())) {
+            if (!GamePartController.checkThatCanReleaseCard(e.getComponent().getX(), e.getComponent().getY())) {
                 JOptionPane.showMessageDialog(MyMainFrame.getInstance(), "Its Not Your Turn:))", "Error", JOptionPane.ERROR_MESSAGE);
                 PlayPanel.getInstance().setNeedsToRepaint(true);
                 return;
             }
             Mapper.getInstance().setAddedBeforeForBeingBetween(false);
 
-            if (!Administer.getTypeOfGivenCard(this.cardName).equalsIgnoreCase("minion")) {
-//                GameState.getInstance().setPlayingCard(this.card);
+            if (!Objects.requireNonNull(Administer.getTypeOfGivenCard(this.cardName)).equalsIgnoreCase("minion")) {
 
-                Administer.setPlayingCardOfGameState(this.cardName);
+                GamePartController.setPlayingCardOfGameState(this.cardName);
                 Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS);
                 Mapper.getInstance().executeRequests();
                 dragging = false;
-            } else if (Administer.canAddMinionToBattleGround()) {
-//                if (!Administer.isPlayedBefore(this.cardName)) {
-//                System.out.println("X: " + e.getComponent().getX() + " Y: " + e.getComponent().getY());
+            } else if (GamePartController.canAddMinionToBattleGround()) {
+
                 if (e.getComponent().getX() < 50) {
-//                    GamePartController.setFirstCard(cardName);
-//                    System.out.println("50");
-                    Administer.setPlayingCardOfGameState(this.cardName);
+                    GamePartController.setPlayingCardOfGameState(this.cardName);
                     Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS_ONE);
                     Mapper.getInstance().executeRequests();
 
                 } else if (e.getComponent().getX() > 125 && e.getComponent().getX() < 220) {
-//                    GamePartController.betweenOneAndTwo(cardName);
-//                    System.out.println("145");
-                    Administer.setPlayingCardOfGameState(this.cardName);
+
+                    GamePartController.setPlayingCardOfGameState(this.cardName);
                     Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS_TWO);
                     Mapper.getInstance().executeRequests();
 
                 } else if (e.getComponent().getX() > 265 && e.getComponent().getX() < 365) {
-//                    GamePartController.betweenTwoAndThree(cardName);
-                    Administer.setPlayingCardOfGameState(this.cardName);
+
+                    GamePartController.setPlayingCardOfGameState(this.cardName);
                     Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS_THREE);
                     Mapper.getInstance().executeRequests();
 
                 } else if (e.getComponent().getX() > 410 && e.getComponent().getX() < 510) {
-//                    GamePartController.betweenThreeAndFour(cardName);
-                    Administer.setPlayingCardOfGameState(this.cardName);
+
+                    GamePartController.setPlayingCardOfGameState(this.cardName);
                     Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS_FOUR);
                     Mapper.getInstance().executeRequests();
 
                 } else if (e.getComponent().getX() > 555 && e.getComponent().getX() < 655) {
-//                    GamePartController.betweenFourAndFive(cardName);
-                    Administer.setPlayingCardOfGameState(this.cardName);
+                    GamePartController.setPlayingCardOfGameState(this.cardName);
                     Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS_FIVE);
                     Mapper.getInstance().executeRequests();
                 } else if (e.getComponent().getX() > 700 && e.getComponent().getX() < 800) {
-//                    GamePartController.betweenFiveAndSix(cardName);
-                    Administer.setPlayingCardOfGameState(this.cardName);
+                    GamePartController.setPlayingCardOfGameState(this.cardName);
                     Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS_SIX);
                     Mapper.getInstance().executeRequests();
                 }
                 if (!Mapper.getInstance().isAddedBeforeForBeingBetween()) {
-                    Administer.setPlayingCardOfGameState(this.cardName);
+                    GamePartController.setPlayingCardOfGameState(this.cardName);
                     Mapper.getInstance().addRequest(Mapper.RequestTypes.PLAY_CARDS);
                     Mapper.getInstance().executeRequests();
                 }
                 dragging = false;
-//                }
             } else {
                 JOptionPane.showMessageDialog(null,
                         "It's illegal to have more than 7 cards in the battleGround.", "Error", JOptionPane.ERROR_MESSAGE);
             }
-
-//            }
         }
     }
 
@@ -613,8 +499,6 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
 
             dragging = true;
             e.getComponent().setLocation(e.getX() + e.getComponent().getX() - x, e.getY() + e.getComponent().getY() - y);
-//            repaint();
-//            revalidate();
         }
 
     }

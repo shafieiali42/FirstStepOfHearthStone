@@ -1,11 +1,13 @@
 package View.Gui.Panels.GamePage;
 
-import Controller.Administer;
+
+import Controller.GamePartController;
+import Logic.PlayLogic.Alliance;
 import Utility.Config2.ConfigLoader;
 import Utility.MethodsOfShowCardsOnPanel;
 import View.CardView.CardImagePanel;
 import View.Gui.Animation.AnimationOfRotation;
-import View.Gui.Mapper;
+
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -109,8 +111,8 @@ public class PlayPanel extends JPanel {
 
         CardImagePanel cardImagePanel = null;
         try {
-            cardImagePanel = new CardImagePanel(Administer.getNameOfFriendlyHeroOfGameState(),
-                    WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE, "hero", "FRIENDLY");
+            cardImagePanel = new CardImagePanel(GamePartController.getNameOfFriendlyHeroOfGameState(),
+                    WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE, "hero", Alliance.FRIENDLY);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -124,8 +126,8 @@ public class PlayPanel extends JPanel {
 
         CardImagePanel cardImagePanel = null;
         try {
-            cardImagePanel = new CardImagePanel(Administer.getNameOfEnemyHeroOfGameState(),
-                    WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE, "hero", "ENEMY");
+            cardImagePanel = new CardImagePanel(GamePartController.getNameOfEnemyHeroOfGameState(),
+                    WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE, "hero", Alliance.ENEMY);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -134,34 +136,6 @@ public class PlayPanel extends JPanel {
                 X_COORDINATE_OF_ENEMY_HERO_IMAGE, Y_COORDINATE_OF_ENEMY_HERO_IMAGE, WIDTH_OF_HERO_IMAGE, HEIGHT_OF_HERO_IMAGE);
     }
 
-//    public void defineImagesOfEnemyHeroAndHeroPower() throws IOException {
-//
-//
-//        enemyHeroImage = ImageIO.read(new File(
-//                Constant.getInstance().getHeroImages().get(Administer.getNameOfEnemyHeroOfGameState())));
-//        int w = enemyHeroImage.getWidth();
-//        int h = enemyHeroImage.getHeight();
-//        AffineTransform scaleTransform = new AffineTransform();
-//
-//        scaleTransform.scale(1, 1);
-//        scaleTransform.rotate(Math.PI, w / 2, h / 2);
-//        AffineTransformOp scaleOp = new AffineTransformOp(
-//                scaleTransform, AffineTransformOp.TYPE_BILINEAR);
-//        enemyHeroImage = scaleOp.filter(enemyHeroImage, null);
-//
-//        enemyHeroPowerImage = ImageIO.read(
-//                new File(Constant.getInstance().getHeroPowerImages().get(Administer.getNameOfEnemyHeroOfGameState())));
-//        int width = enemyHeroPowerImage.getWidth();
-//        int height = enemyHeroPowerImage.getHeight();
-//        AffineTransform scaleTransform2 = new AffineTransform();
-//
-//        scaleTransform2.scale(1, 1);
-//        scaleTransform2.rotate(Math.PI, width / 2, height / 2);
-//        AffineTransformOp scaleOp2 = new AffineTransformOp(
-//                scaleTransform2, AffineTransformOp.TYPE_BILINEAR);
-//        enemyHeroPowerImage = scaleOp2.filter(enemyHeroPowerImage, null);
-//
-//    }
 
 
     @Override
@@ -208,10 +182,11 @@ public class PlayPanel extends JPanel {
         try {
             if (needsToRepaint) {
                 this.removeAll();
-                Administer.showFriendlyHandsCardInPlay(this, NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS);
-                Administer.showFriendlyBattleGroundCardsInPlay(this, NUMBER_OF_CARDS_PER_ROW_GAME_PANEL);
-                Administer.showEnemyBattleGroundCardsInPlay(this, NUMBER_OF_CARDS_PER_ROW_GAME_PANEL);
-                Administer.showEnemyHandsCardInPlay(this, NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS, typeOfBackOfCards, Administer.getGameMode());
+                GamePartController.showFriendlyHandsCardInPlay(this, NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS);
+                GamePartController.showFriendlyBattleGroundCardsInPlay(this, NUMBER_OF_CARDS_PER_ROW_GAME_PANEL);
+                GamePartController.showEnemyBattleGroundCardsInPlay(this, NUMBER_OF_CARDS_PER_ROW_GAME_PANEL);
+                GamePartController.showEnemyHandsCardInPlay(this, NUMBER_OF_CARDS_PER_ROW_HANDS_CARDS,
+                        typeOfBackOfCards, GamePartController.getGameMode());
 
                 this.revalidate();
                 needsToRepaint = false;
@@ -224,16 +199,16 @@ public class PlayPanel extends JPanel {
         showFriendlyHeroImage();
         showEnemyHeroImage();
 
-        Administer.showFriendlyWeaponOfGameState(this, WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE,
+        GamePartController.showFriendlyWeaponOfGameState(this, WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE,
                 X_COORDINATE_OF_WEAPON, Y_COORDINATE_OF_WEAPON);
 
-        Administer.showEnemyWeaponOfGameState(this, WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE,
+        GamePartController.showEnemyWeaponOfGameState(this, WIDTH_OF_WEAPON_IMAGE, HEIGHT_OF_WEAPON_IMAGE,
                 X_COORDINATE_OF__ENEMY_WEAPON, Y_COORDINATE_OF_ENEMY_WEAPON);
 
-        Administer.showFriendlyHeroPower(this, WIDTH_OF_HERO_POWER_IMAGE, HEIGHT_OF_HERO_POWER_IMAGE,
+        GamePartController.showFriendlyHeroPower(this, WIDTH_OF_HERO_POWER_IMAGE, HEIGHT_OF_HERO_POWER_IMAGE,
                 X_COORDINATE_OF_HERO_POWER_IMAGE, Y_COORDINATE_OF_HERO_POWER_IMAGE);
 
-        Administer.showEnemyHeroPower(this, WIDTH_OF_HERO_POWER_IMAGE, HEIGHT_OF_HERO_POWER_IMAGE,
+        GamePartController.showEnemyHeroPower(this, WIDTH_OF_HERO_POWER_IMAGE, HEIGHT_OF_HERO_POWER_IMAGE,
                 X_COORDINATE_OF_ENEMY_HERO_POWER_IMAGE, Y_COORDINATE_OF_ENEMY_HERO_POWER_IMAGE);
 
 

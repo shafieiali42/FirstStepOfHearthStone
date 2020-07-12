@@ -1,6 +1,7 @@
 package Visitors.PowerVisitor.HeroPowerVisitor;
 
 import Controller.Administer;
+import Controller.GamePartController;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.HeroPower.*;
@@ -25,7 +26,7 @@ public class AfterSelectPowerVisitor implements VisitorOfPowers {
             targetHero.setHealthPower(targetHero.getHealthPower()-2);
         }
 
-        Administer.removeDeadCharacters();
+        GamePartController.removeDeadCharacters();
 
 
 

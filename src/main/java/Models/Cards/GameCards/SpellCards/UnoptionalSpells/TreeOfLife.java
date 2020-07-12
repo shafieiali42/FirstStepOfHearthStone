@@ -1,5 +1,6 @@
 package Models.Cards.GameCards.SpellCards.UnoptionalSpells;
 
+import Logic.PlayLogic.Alliance;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.CardClasses.Spell;
@@ -32,7 +33,7 @@ public class TreeOfLife extends Spell {
     @Override
     public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,
                        ArrayList<Cards>deckCards, Minion target, Heroes targetHero, Minion summonedMinion,
-                       Cards playingCard, String alliance){
+                       Cards playingCard, Alliance alliance){
         visitor.visit(this,battleGround);
     }
 }

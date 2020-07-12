@@ -23,16 +23,11 @@ public class MethodsOfShowCardsOnPanel {
         int yCoordinate = 10;
         int xSapce = 170;
         int ySpace = 10;
-
         for (Cards card : cards) {
-
             counter++;
             CardImagePanel cardImagePanel = new CardImagePanel(card.getName());
-
-//            CardPanel.getInstance().setBackground(Color.white);
             addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),
                     cardImagePanel.getHeight());
-
             if (counter % numOfCardInEveryRow == 0) {
                 xCoordinate = 10;
                 yCoordinate += cardImagePanel.getHeight() + ySpace;
@@ -51,22 +46,14 @@ public class MethodsOfShowCardsOnPanel {
         int yCoordinate = (770 - height) / 2;
         int xSpace = (1400 - 3 * width) / 4;
         int xCoordinate = xSpace;
-
-
-
         for (Cards card : cards) {
-
             counter++;
-            CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), width, height,true);
-
-//            CardPanel.getInstance().setBackground(Color.white);
-            addPanel(cardImagePanel, panel, xCoordinate, yCoordinate,width,
-                    height);
-
-            xCoordinate += xSpace+width;
-
+            CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), width, height, true,1,null);
+            addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, width,height);
+            xCoordinate += xSpace + width;
         }
     }
+
 
     public static void showBackOfEnemyHandsCards(ArrayList<Cards> cards, JPanel panel, int numOfCardInEveryRow, int typeOfBackOfCard) throws IOException {
         int counter = 0;
@@ -79,7 +66,7 @@ public class MethodsOfShowCardsOnPanel {
         yCoordinate = 10;
         for (Cards card : cards) {
             counter++;
-            CardImagePanel cardImagePanel = new CardImagePanel(Alliance.ENEMY, PlayPanel.getInstance().getWidthOfEachCardHandsCards(),
+            CardImagePanel cardImagePanel = new CardImagePanel(PlayPanel.getInstance().getWidthOfEachCardHandsCards(),
                     PlayPanel.getInstance().getHeightOfEachCardHandsCards(), typeOfBackOfCard);
 
             addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),
@@ -95,43 +82,23 @@ public class MethodsOfShowCardsOnPanel {
 
     }
 
-    public static void showEnemyHandsCards(ArrayList<Cards> cards, JPanel panel, int numOfCardInEveryRow) throws IOException {
+
+    public static void showHandsCards(ArrayList<Cards> cards, JPanel panel, int numOfCardInEveryRow, Alliance alliance) throws IOException {
         int counter = 0;
         int xCoordinate = 10;
         int yCoordinate = 0;
         int xSpace = 20;
         int ySpace = 10;
-        yCoordinate = 15;
-        for (Cards card : cards) {
-            counter++;
-            CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getInstance().getWidthOfEachCardHandsCards(),
-                    PlayPanel.getInstance().getHeightOfEachCardHandsCards(), true,1,"ENEMY");
-
-//            CardPanel.getInstance().setBackground(Color.white);
-            addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),
-                    cardImagePanel.getHeight());
-
-            if (counter % numOfCardInEveryRow == 0) {
-                xCoordinate = 10;
-                yCoordinate += cardImagePanel.getHeight() + ySpace;
-            } else {
-                xCoordinate += xSpace + PlayPanel.getInstance().getWidthOfEachCardHandsCards();
-            }
+        if (alliance.equals(Alliance.ENEMY)) {
+            yCoordinate = 15;
+        } else if (alliance.equals(Alliance.FRIENDLY)) {
+            yCoordinate = 690;
         }
-
-    }
-
-    public static void showFriendlyHandsCards(ArrayList<Cards> cards, JPanel panel, int numOfCardInEveryRow) throws IOException {
-        int counter = 0;
-        int xCoordinate = 10;
-        int yCoordinate = 0;
-        int xSpace = 20;
-        int ySpace = 10;
-        yCoordinate = 690;
         for (Cards card : cards) {
             counter++;
-            CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getInstance().getWidthOfEachCardHandsCards(),
-                    PlayPanel.getInstance().getHeightOfEachCardHandsCards(), true,1,"FRIENDLY");
+            CardImagePanel cardImagePanel = new CardImagePanel(card.getName(),
+                    PlayPanel.getInstance().getWidthOfEachCardHandsCards(),
+                    PlayPanel.getInstance().getHeightOfEachCardHandsCards(), true, 1, alliance);
 
 //            CardPanel.getInstance().setBackground(Color.white);
             addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),
@@ -148,41 +115,7 @@ public class MethodsOfShowCardsOnPanel {
     }
 
 
-    public static void showEnemyBattleGroundCards(ArrayList<Minion> cards, JPanel panel, int numOfCardInEveryRow, Alliance alliance) throws IOException { //TODO init X and Y coordinate:((
-
-        int counter = 0;
-        int xCoordinate = 50;
-        int yCoordinate = 0;
-        yCoordinate = 385 - 10 - PlayPanel.getInstance().getHeightOfEachCardGamePanel();
-
-        int xSapce = 50;
-        int ySpace = 10;
-
-        for (int i=0;i<cards.size();i++) {
-            Cards card = cards.get(i);
-            counter++;
-            CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getInstance().getWidthOfEachCardGamePanel(),
-                    PlayPanel.getInstance().getHeightOfEachCardGamePanel(), true,2,"ENEMY",i+1);
-            cardImagePanel.repaint();
-            cardImagePanel.revalidate();
-
-//            CardPanel.getInstance().setBackground(Color.white);
-            addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),
-                    cardImagePanel.getHeight());
-
-//            System.out.println("X: "+xCoordinate+" Y: "+yCoordinate);
-
-            if (counter % numOfCardInEveryRow == 0) {
-                xCoordinate = 100;
-                yCoordinate += cardImagePanel.getHeight() + ySpace;
-            } else {
-                xCoordinate += xSapce + PlayPanel.getInstance().getWidthOfEachCardGamePanel();
-            }
-        }
-    }
-
-    public static void showFriendlyBattleGroundCards(ArrayList<Minion> cards, JPanel panel, int numOfCardInEveryRow, Alliance alliance) throws IOException { //TODO init X and Y coordinate:((
-
+    public static void showBattleGroundCards(ArrayList<Minion> cards, JPanel panel, int numOfCardInEveryRow, Alliance alliance) throws IOException { //TODO init X and Y coordinate:((
         int counter = 0;
         int xCoordinate = 50;
         int yCoordinate = 0;
@@ -194,11 +127,13 @@ public class MethodsOfShowCardsOnPanel {
         int xSapce = 50;
         int ySpace = 10;
 
-        for (int i=0;i<cards.size();i++) {
-            Cards card =cards.get(i);
+        for (int i = 0; i < cards.size(); i++) {
+            Cards card = cards.get(i);
             counter++;
-            CardImagePanel cardImagePanel = new CardImagePanel(card.getName(), PlayPanel.getInstance().getWidthOfEachCardGamePanel(),
-                    PlayPanel.getInstance().getHeightOfEachCardGamePanel(), true,2,"FRIENDLY",i+1);
+            CardImagePanel cardImagePanel = new CardImagePanel(card.getName(),
+                    PlayPanel.getInstance().getWidthOfEachCardGamePanel(),
+                    PlayPanel.getInstance().getHeightOfEachCardGamePanel(),
+                    true, 2, alliance, i + 1);
             cardImagePanel.repaint();
             cardImagePanel.revalidate();
 

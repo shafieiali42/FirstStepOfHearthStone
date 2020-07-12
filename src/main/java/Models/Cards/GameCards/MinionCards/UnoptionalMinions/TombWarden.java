@@ -1,6 +1,7 @@
 package Models.Cards.GameCards.MinionCards.UnoptionalMinions;
 
 
+import Logic.PlayLogic.Alliance;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Heroes.Heroes;
@@ -9,6 +10,16 @@ import Visitors.CardVisitors.Visitor;
 import java.util.ArrayList;
 
 public class TombWarden extends Minion {
+
+
+
+
+    public TombWarden(){
+        setIsTaunt(true);//todo needs to be True
+        setCanBeAttacked(true);
+        setIsActive(false);
+
+    }
 
 
 
@@ -36,18 +47,13 @@ public class TombWarden extends Minion {
     }
 
 
-    public TombWarden(){
-        setIsTaunt(false);//todo needs to be True
-        setCanBeAttacked(true);
-        setIsActive(true);
 
-    }
 
 
     @Override
     public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,
                        ArrayList<Cards>deckCards, Minion target, Heroes targetHero, Minion summonedMinion,
-                       Cards playingCard,String alliance){
+                       Cards playingCard, Alliance alliance){
         visitor.visit(this,battleGround);
     }
 

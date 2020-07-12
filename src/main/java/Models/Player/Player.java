@@ -162,7 +162,7 @@ public class Player {
     }
 
     public void setLoggerOfMyPlayer() throws IOException {
-        this.loggerOfMyPlayer = LoggerOfProject.getMyLogger("logs\\" + this.getUserName() + ".log");
+        this.loggerOfMyPlayer = LoggerOfProject.getMyLogger("logs/" + this.getUserName() + ".log");
     }
 
     public void setMoney(int money) {

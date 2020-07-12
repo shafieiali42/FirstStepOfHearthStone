@@ -10,7 +10,7 @@ import Visitors.PowerVisitor.SpVisitor.SpVisitor;
 
 import java.util.ArrayList;
 
-public  class Heroes  implements SpVisitable {
+public class Heroes implements SpVisitable {
 
     public Heroes() {
 
@@ -29,6 +29,9 @@ public  class Heroes  implements SpVisitable {
     private HeroPower heroPower;
 
 
+    //getter and setters
+    //********************
+
     public int getFirstHealthPower() {
         return firstHealthPower;
     }
@@ -38,38 +41,38 @@ public  class Heroes  implements SpVisitable {
     }
 
     public HeroPower getHeroPower() {
-          return heroPower;
-     }
+        return heroPower;
+    }
 
-     public void setHeroPower(HeroPower heroPower) {
-          this.heroPower = heroPower;
-     }
+    public void setHeroPower(HeroPower heroPower) {
+        this.heroPower = heroPower;
+    }
 
-     public void setName(String name) {
-          this.name = name;
-     }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-     public String getDescription() {
-          return description;
-     }
+    public String getDescription() {
+        return description;
+    }
 
-     public void setDescription(String description) {
-          this.description = description;
-     }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-     public boolean isLock() {
-          return isLock;
-     }
+    public boolean isLock() {
+        return isLock;
+    }
 
-     public void setLock(boolean lock) {
-          isLock = lock;
-     }
+    public void setLock(boolean lock) {
+        isLock = lock;
+    }
 
-     public boolean isCanBeAttacked() {
-          return canBeAttacked;
-     }
+    public boolean isCanBeAttacked() {
+        return canBeAttacked;
+    }
 
-     public boolean getCanBeAttacked() {
+    public boolean getCanBeAttacked() {
         return canBeAttacked;
     }
 
@@ -113,11 +116,6 @@ public  class Heroes  implements SpVisitable {
         return name;
     }
 
-    @Override
-    public String toString() {
-        return "[ Name: " + this.getName() + ", healthPower: " + this.healthPower + "]";
-    }
-
     public int getHealthPower() {
         return healthPower;
     }
@@ -127,9 +125,19 @@ public  class Heroes  implements SpVisitable {
     }
 
 
-    @Override
-    public void accept(SpVisitor spVisitor, InGamePlayer player, ArrayList<Minion> friendlyBattleGround, ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards, ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards, ArrayList<Cards> enemyDeckCards, Minion target, Heroes targetHero, Minion summoned) {
 
+    @Override
+    public String toString() {
+        return "[ Name: " + this.getName() + ", healthPower: " + this.healthPower + "]";
+    }
+
+
+    @Override
+    public void accept(SpVisitor spVisitor, InGamePlayer player, ArrayList<Minion> friendlyBattleGround,
+                       ArrayList<Minion> enemyBattleGround, ArrayList<Cards> friendlyHandCards,
+                       ArrayList<Cards> enemyHandsCards, ArrayList<Cards> friendlyDeckCards,
+                       ArrayList<Cards> enemyDeckCards, Minion target,
+                       Heroes targetHero, Minion summoned) {
     }
 
 

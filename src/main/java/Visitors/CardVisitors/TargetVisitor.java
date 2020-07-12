@@ -1,6 +1,7 @@
 package Visitors.CardVisitors;
 
 import Controller.ControllerOfMainComponents;
+import Logic.PlayLogic.Alliance;
 import Logic.Status;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
@@ -43,7 +44,7 @@ public class TargetVisitor implements Visitor {
 
 
     @Override
-    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target,String alliance) {
+    public void visit(PharaohsBlessing pharaohsBlessing, ArrayList<Minion> battleGround, Minion target,Alliance alliance) {
         System.out.println("PharaohsBlessing targetVisitor ");
         ControllerOfMainComponents.setStatus(Status.CHOOSE_TARGET_FOR_SPELL);
     }
@@ -85,7 +86,7 @@ public class TargetVisitor implements Visitor {
 
 
     @Override
-    public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target,String alliance) {
+    public void visit(Polymorph polymorph, ArrayList<Minion> battleGround, Minion target, Alliance alliance) {
 
         ControllerOfMainComponents.setStatus(Status.CHOOSE_TARGET_FOR_SPELL);
 
