@@ -192,7 +192,7 @@ public class PlayPanel extends JPanel {
         }
 
 
-        System.out.println(Thread.currentThread().getName());
+//        System.out.println(Thread.currentThread().getName());
 //        if (endTurn){
 //            Mapper.endTurn();
 //            this.endTurn=false;

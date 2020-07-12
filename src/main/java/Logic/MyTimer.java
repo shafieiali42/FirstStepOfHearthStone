@@ -24,11 +24,11 @@ public class MyTimer extends Thread {
                     time1 = System.currentTimeMillis();
                     time2 = System.currentTimeMillis();
                     secondPassed++;
-                    System.out.println(secondPassed);
+//                    System.out.println(secondPassed);
                     if (secondPassed >=40 && secondPassed<60) {
                         PlayPanel.getInstance().setTime((60-secondPassed)+"");
                         Administer.setNeedTimer(true);
-                        System.out.println("You Have Only 20 seconds:))");
+//                        System.out.println("You Have Only 20 seconds:))");
                     }
 
                     if (secondPassed == 60) {
@@ -36,7 +36,7 @@ public class MyTimer extends Thread {
                         Mapper.endTurn();
 //                        PlayPanel.getInstance().setEndTurn(true);
                         Administer.refreshPlayPanel();
-                        System.out.println("End Turn:))");
+//                        System.out.println("End Turn:))");
                         isRunning = false;
                     }
                 }
@@ -53,7 +53,7 @@ public class MyTimer extends Thread {
     }
 
     public void reStart() {
-        System.out.println("reStart");
+//        System.out.println("reStart");
         isRunning = false;
         time1 = System.currentTimeMillis();
         time2 = System.currentTimeMillis();

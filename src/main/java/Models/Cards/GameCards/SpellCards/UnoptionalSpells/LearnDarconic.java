@@ -18,7 +18,7 @@ public class LearnDarconic extends Spell {
 
     @Override
     public LearnDarconic copy() {
-        System.out.println("Copy of LearnDarconic:))");
+//        System.out.println("Copy of LearnDarconic:))");
         LearnDarconic copy = new LearnDarconic();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

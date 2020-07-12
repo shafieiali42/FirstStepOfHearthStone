@@ -26,6 +26,7 @@ public class JsonReaderForMinions {
         map.put("TombWarden", TombWarden.class);
         map.put("Locusts",Locusts.class);
         map.put("Dragon",Dragon.class);
+        map.put("Mech",Mech.class);
     }
 
     public static void main(String args[]) {
@@ -52,7 +53,7 @@ public class JsonReaderForMinions {
         Gson gson=new Gson();
         for (MinionNames minionNames:MinionNames.values()){
             Class classOfCard = map.get(minionNames.name());
-            System.out.println(minionNames.name());
+//            System.out.println(minionNames.name());
             Minion minion =(Minion) gson.fromJson(new FileReader("MinionSpellsWeapons/MinionCards/"+minionNames.name()+".json"),classOfCard);
             Minion.getMinions().add(minion);
         }

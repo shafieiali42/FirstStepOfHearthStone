@@ -113,7 +113,7 @@ public class Minion extends Cards {
 
     @Override
     public Minion  copy() {
-        System.out.println("Copy of Minion:))");
+//        System.out.println("Copy of Minion:))");
         Minion copy = new Minion();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());
@@ -227,7 +227,9 @@ public class Minion extends Cards {
 
     @Override
     public String toString() {
-        return "[" + "Name: " + this.getName() + " ,  classOfCard: " + this.getClassOfCard() + " , Money" + this.getMoneyCost() + " ]";
+        return "[" + "Name: " + this.getName() + " ,  classOfCard: " + this.getClassOfCard() + " , Hp" + this.getHealthPower()+
+                "Attack: :"+this.attackPower+"]";
+
     }
 
     //    @Override

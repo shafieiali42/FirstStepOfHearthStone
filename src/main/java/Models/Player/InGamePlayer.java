@@ -108,32 +108,18 @@ public class InGamePlayer {
 
 
     public void initHandsCards() {
-
-        boolean hasQuestCard = false;
-        a:
-        for (Cards quest : Spell.getQuestAndRewardCards()) {
-            for (Cards card : deckCards) {
-                if (quest.equals(card)) {
-                    hasQuestCard = true;
-                    handsCards.add(quest);
-                    firstThreeCards.add(deckCards.get(0));
-                    deckCards.remove(card);
-                    break a;
-                }
-            }
-        }
+        handsCards.add(deckCards.get(0));
+        firstThreeCards.add(deckCards.get(0));
+        deckCards.remove(0);
 
         handsCards.add(deckCards.get(0));
         firstThreeCards.add(deckCards.get(0));
         deckCards.remove(0);
+
         handsCards.add(deckCards.get(0));
         firstThreeCards.add(deckCards.get(0));
         deckCards.remove(0);
-        if (!hasQuestCard) {
-            handsCards.add(deckCards.get(0));
-            firstThreeCards.add(deckCards.get(0));
-            deckCards.remove(0);
-        }
+
     }
 
 

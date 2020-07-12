@@ -15,7 +15,7 @@ public class HighPriestAmet extends Minion {
 
     @Override
     public HighPriestAmet  copy() {
-        System.out.println("Copy of Dreadscale:))");
+//        System.out.println("Copy of Dreadscale:))");
         HighPriestAmet copy = new HighPriestAmet();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

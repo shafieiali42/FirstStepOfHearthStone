@@ -6,7 +6,7 @@ public class Ashbringer extends Weapon {
 
     @Override
     public Ashbringer copy() {
-        System.out.println("Copy of Dreadscale:))");
+//        System.out.println("Copy of Dreadscale:))");
         Ashbringer copy = new Ashbringer();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

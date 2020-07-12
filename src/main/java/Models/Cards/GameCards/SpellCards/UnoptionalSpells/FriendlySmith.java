@@ -13,7 +13,7 @@ public class FriendlySmith extends Spell {
 
     @Override
     public FriendlySmith copy() {
-        System.out.println("Copy of FriendlySmith:))");
+//        System.out.println("Copy of FriendlySmith:))");
         FriendlySmith copy = new FriendlySmith();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

@@ -13,7 +13,7 @@ public class PharaohsBlessing extends Spell {
 
     @Override
     public PharaohsBlessing copy() {
-        System.out.println("Copy of PharaohsBlessing:))");
+//        System.out.println("Copy of PharaohsBlessing:))");
         PharaohsBlessing copy = new PharaohsBlessing();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

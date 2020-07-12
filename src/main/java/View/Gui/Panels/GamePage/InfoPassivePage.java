@@ -27,8 +27,8 @@ public class InfoPassivePage extends JPanel {
         }
     }
 
-    int X_COORDINATE_OF_FIRST_BTN=Integer.parseInt(properties.getProperty("X_COORDINATE_OF_FIRST_BTN"));
-    int Y_COORDINATE_OF_FIRST_BTN=Integer.parseInt(properties.getProperty("Y_COORDINATE_OF_FIRST_BTN"));
+    int X_COORDINATE_OF_FIRST_BTN = Integer.parseInt(properties.getProperty("X_COORDINATE_OF_FIRST_BTN"));
+    int Y_COORDINATE_OF_FIRST_BTN = Integer.parseInt(properties.getProperty("Y_COORDINATE_OF_FIRST_BTN"));
 
 
     private Color colorOfTextOfBtn = new Color(255, 0, 0);
@@ -77,8 +77,13 @@ public class InfoPassivePage extends JPanel {
                 Administer.setFriendlyInfoPassiveOfGameState(2);
 //                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(2));
                 ControllerOfMainComponents.setStatus(Status.FIRST_THREE_CARDS_PAGE);
-                MyMainFrame.getInstance().setContentPane(FirstThreeCardsPage.getInstance());
-                Administer.setNameOfFirstFriendlyThreeCards();
+                if (Administer.showThreeCardsForChange()) {
+                    MyMainFrame.getInstance().setContentPane(FirstThreeCardsPage.getInstance());
+                    Administer.setNameOfFirstFriendlyThreeCards();
+                }else{
+                    ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
+                    MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
+                }
             }
         });
         add(thirdPassiveBtn);
@@ -94,8 +99,13 @@ public class InfoPassivePage extends JPanel {
                 Administer.setFriendlyInfoPassiveOfGameState(1);
 //                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(1));
                 ControllerOfMainComponents.setStatus(Status.FIRST_THREE_CARDS_PAGE);
-                MyMainFrame.getInstance().setContentPane(FirstThreeCardsPage.getInstance());
-                Administer.setNameOfFirstFriendlyThreeCards();
+                if (Administer.showThreeCardsForChange()) {
+                    MyMainFrame.getInstance().setContentPane(FirstThreeCardsPage.getInstance());
+                    Administer.setNameOfFirstFriendlyThreeCards();
+                }else{
+                    ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
+                    MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
+                }
             }
         });
         add(secondPassiveBtn);
@@ -112,8 +122,15 @@ public class InfoPassivePage extends JPanel {
                 Administer.setFriendlyInfoPassiveOfGameState(0);
 //                GameState.getInstance().setInfoPassive(GameState.getInstance().getPassivesToChoose().get(0));
                 ControllerOfMainComponents.setStatus(Status.FIRST_THREE_CARDS_PAGE);
-                MyMainFrame.getInstance().setContentPane(FirstThreeCardsPage.getInstance());
-                Administer.setNameOfFirstFriendlyThreeCards();
+                if (Administer.showThreeCardsForChange()) {
+                    MyMainFrame.getInstance().setContentPane(FirstThreeCardsPage.getInstance());
+                    Administer.setNameOfFirstFriendlyThreeCards();
+                }else{
+
+                    ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
+                    MyMainFrame.getInstance().setContentPane(GamePage.getInstance());
+
+                }
             }
         });
         add(firstPassiveBtn);

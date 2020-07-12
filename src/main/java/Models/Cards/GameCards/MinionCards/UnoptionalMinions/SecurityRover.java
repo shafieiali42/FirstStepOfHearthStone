@@ -13,7 +13,7 @@ public class SecurityRover extends Minion {
 
     @Override
     public SecurityRover  copy() {
-        System.out.println("Copy of SecurityRover:))");
+//        System.out.println("Copy of SecurityRover:))");
         SecurityRover copy = new SecurityRover();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());
@@ -39,7 +39,7 @@ public class SecurityRover extends Minion {
     public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards,
                        ArrayList<Cards>deckCards, Minion target, Heroes targetHero, Minion summonedMinion,
                        Cards playingCard,String alliance){
-        visitor.visit(this);
+        visitor.visit(this,battleGround,target);
     }
 
 

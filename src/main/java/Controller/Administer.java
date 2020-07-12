@@ -29,6 +29,7 @@ import Utility.Sounds;
 import View.CardView.CardImagePanel;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
 import View.Gui.Panels.StatusPanel.ShowDeckInfoPanel;
+import Visitors.CardVisitors.GetDamageVisitor;
 import Visitors.PassiveVisitor.InfoPassiveVisitor;
 import Visitors.PowerVisitor.HeroPowerVisitor.HeroPowerVisitor;
 
@@ -47,6 +48,11 @@ public class Administer {
 
     //gameState
 
+
+    public static boolean showThreeCardsForChange(){
+        System.out.println(Game.getInstance().getGameMode());
+        return Game.getInstance().getGameMode() != 3;
+    }
 
     public static String getFriendlyImprovementOfQuest() {
         if (Game.getInstance().getFriendlyPlayer().getQuestCard() != null) {
@@ -101,6 +107,9 @@ public class Administer {
                             Game.getInstance().getFriendlyPlayer().getDeckCards(),
                             Game.getInstance().getEnemyPlayer().getDeckCards(),
                             minion, new Heroes(), null);
+
+                    minion.accept(new GetDamageVisitor(),Game.getInstance().getFormerPlayer().getBattleGroundCards(),
+                            null,null,minion,null,null,null,null);
                     removeDeadCharacters();
 
 
@@ -116,6 +125,9 @@ public class Administer {
                             Game.getInstance().getFriendlyPlayer().getDeckCards(),
                             Game.getInstance().getEnemyPlayer().getDeckCards(),
                             minion, new Heroes(), null);
+
+                    minion.accept(new GetDamageVisitor(),Game.getInstance().getFormerPlayer().getBattleGroundCards(),
+                            null,null,minion,null,null,null,null);
                     removeDeadCharacters();
                 }
                 //todo execute heroPower
@@ -142,6 +154,10 @@ public class Administer {
                         (Game.getInstance().getCurrentPlayer().getHero().getHealthPower() - minion.getAttackPower());
 
                 weapon.setDurability(weapon.getDurability() - 1);
+
+                minion.accept(new GetDamageVisitor(),Game.getInstance().getFormerPlayer().getBattleGroundCards(),
+                        null,null,minion,null,null,null,null);
+
                 removeDeadCharacters();
             }
         } else {
@@ -163,20 +179,24 @@ public class Administer {
 
                 if (minion.getIsActive() && !minion.getHasAttackInThisTurn()) {
                     if (minion2.getCanBeAttacked()) {
-                        System.out.println("Before attack:");
-                        System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
-                        System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
+//                        System.out.println("Before attack:");
+//                        System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
+//                        System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
                         minion.setHealthPower(minion.getHealthPower() - minion2.getAttackPower());
                         minion2.setHealthPower(minion2.getHealthPower() - minion.getAttackPower());
                         removeDeadCharacters();
-                        System.out.println("After attack:");
-                        System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
-                        System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
+//                        System.out.println("After attack:");
+//                        System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
+//                        System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
+
+                        minion2.accept(new GetDamageVisitor(),Game.getInstance().getFormerPlayer().getBattleGroundCards(),
+                                null,null,minion,null,null,null,null);
+
                     } else {
                         //TODO you first need to destroy Taunt OR you cant attack to this minion
                     }
                 } else {
-                    //TODO you cant attack with this minion in this turn
+                    //TODO you cant attack with this minion in this turn``````````````````````````````````````````````````````````````````````````````````````
                 }
             }
 
@@ -416,15 +436,25 @@ public class Administer {
     }
 
     public static void ChangeThisCardFromHands(String cardName) {
+        System.out.println("First Three Cards: "+Game.getInstance().getFriendlyPlayer().getFirstThreeCards());
+        System.out.println("Hand: "+Game.getInstance().getFriendlyPlayer().getHandsCards());
+        System.out.println("Deck: "+Game.getInstance().getFriendlyPlayer().getDeckCards());
         boolean changed = false;
         if (cardName.equals(FirstThreeCardsPage.getInstance().getFirstCard()) && FirstThreeCardsPage.getInstance().getCanChangeFirstCard()) {
             changed = true;
+
             FirstThreeCardsPage.getInstance().setCanChangeFirstCard(false);
+
             Game.getInstance().getFriendlyPlayer().getDeckCards().add(Game.getInstance().getFriendlyPlayer().getFirstThreeCards().get(0));
+
             Game.getInstance().getFriendlyPlayer().getFirstThreeCards().remove(0);
+
             Game.getInstance().getFriendlyPlayer().getFirstThreeCards().add(0, Game.getInstance().getFriendlyPlayer().getDeckCards().get(3));
+
             Game.getInstance().getFriendlyPlayer().getDeckCards().remove(3);
+
             Game.getInstance().getFriendlyPlayer().setHandsCards(Game.getInstance().getFriendlyPlayer().getFirstThreeCards());
+
 
         } else if (cardName.equals(FirstThreeCardsPage.getInstance().getSecondCard()) && FirstThreeCardsPage.getInstance().getCanChangeSecondCard()) {
             changed = true;
@@ -1170,7 +1200,7 @@ public class Administer {
                     (DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().get(i).getNameLabel().getText())) {
                 if (Integer.parseInt(DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().get(i).getUsedLabel().getText()) < 2) {
                     if (!isLock) {
-                        CollectionState.getInstance().getDeckToChange().getListOfCards().add(cards.copy());
+                        CollectionState.getInstance().getDeckToChange().getListOfCards().add(cards);
                     }
                     DeckViewer.getInstance().showCardsInDecK();
                     int k = Integer.parseInt(DeckPage.getInstance().getListOfLittleCardsPanelOfDeckToChange().get(i).getUsedLabel().getText()) + 1;

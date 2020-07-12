@@ -9,5 +9,6 @@ public enum MinionNames {
     SwampKingDred,
     TombWarden,
     Locusts,
-    Dragon;
+    Dragon,
+    Mech;
 }

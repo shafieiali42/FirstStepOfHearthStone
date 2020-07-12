@@ -5,7 +5,6 @@ import Logic.Status;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.GameCards.MinionCards.UnoptionalMinions.*;
-import Models.Cards.GameCards.SpellCards.*;
 import Models.Cards.GameCards.SpellCards.UnoptionalSpells.*;
 import Models.Cards.GameCards.WeaponCards.Ashbringer;
 import Models.Cards.GameCards.WeaponCards.BattleAxe;
@@ -28,7 +27,7 @@ public class TargetVisitor implements Visitor {
 
 
     @Override
-    public void visit(SecurityRover securityRover) {
+    public void visit(SecurityRover securityRover, ArrayList<Minion> battleGround, Minion target) {
 
     }
 
@@ -104,9 +103,10 @@ public class TargetVisitor implements Visitor {
     }
 
     @Override
-    public void visit(SwampKingDred swampKingDred) {
+    public void visit(SwampKingDred swampKingDred, Minion playingCard) {
 
     }
+
 
     @Override
     public void visit(HighPriestAmet highPriestAmet, Minion summonedMinion) {
@@ -120,6 +120,11 @@ public class TargetVisitor implements Visitor {
 
     @Override
     public void visit(StrengthInNumbers strengthInNumbers, ArrayList<Minion> battleGround, ArrayList<Cards> deckCards, Cards playingCard) {
+
+    }
+
+    @Override
+    public void visit(Mech mech, ArrayList<Minion> battleGround) {
 
     }
 

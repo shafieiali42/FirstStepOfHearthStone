@@ -1,1 +1,1 @@
-{"name":"SecurityRover" , "type":"Minion" , "classOfCard":"Neutral" , "MoneyCost":10 , "manaCost":1 ,"rarity":"Rare" , "attackPower":2 ,"healthPower":6 , "description":"Whenever this minion takes damage, summon a 2/3 Mech with Taunt." }
+{"name":"SecurityRover" , "type":"Minion" , "classOfCard":"Neutral" , "MoneyCost":10 , "manaCost":3 ,"rarity":"Rare" , "attackPower":2 ,"healthPower":6 , "description":"Whenever this minion takes damage, summon a 2/3 Mech with Taunt." }

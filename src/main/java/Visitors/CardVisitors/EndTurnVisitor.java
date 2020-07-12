@@ -4,9 +4,7 @@ import Controller.Administer;
 import Logic.PlayLogic.Game;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
-import Models.Cards.GameCards.MinionCards.*;
 import Models.Cards.GameCards.MinionCards.UnoptionalMinions.*;
-import Models.Cards.GameCards.SpellCards.*;
 import Models.Cards.GameCards.SpellCards.UnoptionalSpells.*;
 import Models.Cards.GameCards.WeaponCards.Ashbringer;
 import Models.Cards.GameCards.WeaponCards.BattleAxe;
@@ -30,7 +28,7 @@ public class EndTurnVisitor implements Visitor {
 
 
     @Override
-    public void visit(SecurityRover securityRover) {
+    public void visit(SecurityRover securityRover, ArrayList<Minion> battleGround, Minion target) {
 
     }
 
@@ -139,9 +137,11 @@ public class EndTurnVisitor implements Visitor {
     }
 
     @Override
-    public void visit(SwampKingDred swampKingDred) {
+    public void visit(SwampKingDred swampKingDred, Minion playingCard) {
 
     }
+
+
 
     @Override
     public void visit(HighPriestAmet highPriestAmet, Minion summonedMinion) {
@@ -158,7 +158,10 @@ public class EndTurnVisitor implements Visitor {
 
     }
 
+    @Override
+    public void visit(Mech mech, ArrayList<Minion> battleGround) {
 
+    }
 
 
 }

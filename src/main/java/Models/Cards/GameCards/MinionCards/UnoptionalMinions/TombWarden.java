@@ -14,7 +14,7 @@ public class TombWarden extends Minion {
 
     @Override
     public TombWarden  copy() {
-        System.out.println("Copy of TombWarden:))");
+//        System.out.println("Copy of TombWarden:))");
         TombWarden copy = new TombWarden();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

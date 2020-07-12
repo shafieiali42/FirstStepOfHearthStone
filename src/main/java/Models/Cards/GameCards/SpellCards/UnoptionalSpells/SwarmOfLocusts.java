@@ -13,7 +13,7 @@ public class SwarmOfLocusts extends Spell {
 
     @Override
     public SwarmOfLocusts copy() {
-        System.out.println("Copy of SwarmOfLocusts:))");
+//        System.out.println("Copy of SwarmOfLocusts:))");
         SwarmOfLocusts copy = new SwarmOfLocusts();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

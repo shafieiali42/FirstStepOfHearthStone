@@ -16,7 +16,7 @@ public class BookOfSpecters extends Spell {
 
     @Override
     public BookOfSpecters copy() {
-        System.out.println("Copy of BookOfSpecters:))");
+//        System.out.println("Copy of BookOfSpecters:))");
         BookOfSpecters copy = new BookOfSpecters();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

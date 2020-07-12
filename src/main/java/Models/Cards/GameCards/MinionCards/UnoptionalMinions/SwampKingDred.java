@@ -1,6 +1,11 @@
 package Models.Cards.GameCards.MinionCards.UnoptionalMinions;
 
+import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
+import Models.Heroes.Heroes;
+import Visitors.CardVisitors.Visitor;
+
+import java.util.ArrayList;
 
 public class SwampKingDred extends Minion {
 
@@ -8,7 +13,7 @@ public class SwampKingDred extends Minion {
 
     @Override
     public SwampKingDred  copy() {
-        System.out.println("Copy of swampKingDred:))");
+//        System.out.println("Copy of swampKingDred:))");
         SwampKingDred copy = new SwampKingDred();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());
@@ -27,5 +32,10 @@ public class SwampKingDred extends Minion {
         copy.setIsTaunt(this.getIsTaunt());
         copy.setHasAttackInThisTurn(this.getHasAttackInThisTurn());
         return copy;
+    }
+
+    @Override
+    public void accept(Visitor visitor, ArrayList<Minion> battleGround, ArrayList<Cards> handsCards, ArrayList<Cards> deckCards, Minion target, Heroes targetHero, Minion summonedMinion, Cards playingCard, String alliance) {
+        visitor.visit(this,summonedMinion);
     }
 }

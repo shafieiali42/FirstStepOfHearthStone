@@ -185,18 +185,17 @@ public class Mapper {
 
 
     public static void playCard(Cards playingCard) {
-        System.out.println("************************");
-        System.out.println(playingCard.getType());
+//        System.out.println(playingCard.getType());
         Game.getInstance().getCurrentPlayer().setMana(Game.getInstance().getCurrentPlayer().getMana() - playingCard.getManaCost());
-        if (playingCard.getType().contains("Quest")){
-            Game.getInstance().getCurrentPlayer().setQuestCard((Spell)playingCard);
-        }else{
-            if (Game.getInstance().getCurrentPlayer().getQuestCard()!=null){
+        if (playingCard.getType().contains("Quest")) {
+            Game.getInstance().getCurrentPlayer().setQuestCard((Spell) playingCard);
+        } else {
+            if (Game.getInstance().getCurrentPlayer().getQuestCard() != null) {
                 Game.getInstance().getCurrentPlayer().getQuestCard().accept(new QuestRewardVisitor(),
                         Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                         Game.getInstance().getCurrentPlayer().getHandsCards(),
-                        Game.getInstance().getCurrentPlayer().getDeckCards(),null,
-                        null,null,playingCard,null);
+                        Game.getInstance().getCurrentPlayer().getDeckCards(), null,
+                        null, null, playingCard, null);
             }
         }
 
@@ -251,6 +250,7 @@ public class Mapper {
 
 
     public static void drawCard() {
+//        System.out.println(Game.getInstance().getEnemyPlayer().getHandsCards());
         Game.getInstance().getFormerPlayer().getInfoPassive().accept(new PassiveEndTurnVisitor(),
                 Game.getInstance().getCurrentPlayer(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                 Game.getInstance().getCurrentPlayer().getHandsCards(), Game.getInstance().getCurrentPlayer().getDeckCards());
@@ -273,7 +273,7 @@ public class Mapper {
         for (Minion minion : Game.getInstance().getCurrentPlayer().getBattleGroundCards()) {
             minion.accept(new DrawCardVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                     Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(), minion, null, new Minion(),
-                    null,"");
+                    null, "");
         }
 
 
@@ -291,7 +291,6 @@ public class Mapper {
     }
 
     public static void nextTurn() {
-        System.out.println(Thread.currentThread().getName());
         Game.getInstance().getMyTimer().reStart();
         Game.getInstance().getCurrentPlayer().setTurn(Game.getInstance().getCurrentPlayer().getTurn() + 1);
         Game.getInstance().getCurrentPlayer().setMana((int) Math.min(Game.getInstance().getCurrentPlayer().getTurn(), 10));
@@ -309,14 +308,14 @@ public class Mapper {
 
     public static void endTurn() {
         ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
-        System.out.println(Game.getInstance().getCurrentPlayer().getBattleGroundCards());
+//        System.out.println(Game.getInstance().getCurrentPlayer().getBattleGroundCards());
         Iterator<Minion> itr = Game.getInstance().getCurrentPlayer().getBattleGroundCards().iterator();
 
         while (itr.hasNext()) {
             Minion minion = itr.next();
             minion.accept(new EndTurnVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                     Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(), minion, new Heroes(),
-                    new Minion(),null, "");
+                    new Minion(), null, "");
 
         }
 
@@ -327,7 +326,7 @@ public class Mapper {
     }
 
     public static void playMinion(Minion playingCard, int k) {
-        System.out.println(playingCard);
+//        System.out.println(playingCard);
         boolean minionPlayed = false;
         if (k != 7) {
             if (Game.getInstance().getCurrentPlayer().getBattleGroundCards().size() >= k) {
@@ -361,24 +360,42 @@ public class Mapper {
                     Game.getInstance().getCurrentPlayer().getBattleGroundCards().
                             get(Game.getInstance().getCurrentPlayer().getBattleGroundCards().size() - 1));
 
-        }
-        if (minionPlayed) {
-            playCard(playingCard);
-            playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-                    Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(), playingCard,
-                    new Heroes(), new Minion(),null, "");
+
+            for (Cards card : Game.getInstance().getFormerPlayer().getBattleGroundCards()) {
+                card.accept(new EnemySummonVisitor(), null, null, null,
+                        null, null,
+                        Game.getInstance().getCurrentPlayer().getBattleGroundCards().
+                                get(Game.getInstance().getCurrentPlayer().getBattleGroundCards().size() - 1),
+                        null, "");
+            }
+
 
             if (Game.getInstance().getCurrentPlayer().getBattleGroundCards().size() > (k - 1)) {
                 for (Minion minion : Game.getInstance().getCurrentPlayer().getBattleGroundCards()) {
                     minion.accept(new SummonVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                             Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(), new Minion(), new Heroes(),
-                            Game.getInstance().getCurrentPlayer().getBattleGroundCards().get(k - 1),null, "");
+                            Game.getInstance().getCurrentPlayer().getBattleGroundCards().get(k - 1), null, "");
                 }
             }
 
+        }
+        if (minionPlayed) {
+            playCard(playingCard);
+            playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                    Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(), playingCard,
+                    new Heroes(), new Minion(), null, "");
+
+
             if (k != 7) {
 
-                System.out.println("K: " + k + " Size:" + Game.getInstance().getCurrentPlayer().getBattleGroundCards().size());
+                if (Game.getInstance().getCurrentPlayer().getBattleGroundCards().size() > (k - 1)) {
+                    for (Minion minion : Game.getInstance().getCurrentPlayer().getBattleGroundCards()) {
+                        minion.accept(new SummonVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
+                                Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(), new Minion(), new Heroes(),
+                                Game.getInstance().getCurrentPlayer().getBattleGroundCards().get(k - 1), null, "");
+                    }
+                }
+
                 if (Game.getInstance().getCurrentPlayer().getBattleGroundCards().size() > (k - 1)) {
                     Game.getInstance().getFormerPlayer().getHero().getHeroPower().accept(new SummonVisitorOfHeroPowers(),
                             null, null, null,
@@ -386,13 +403,16 @@ public class Mapper {
                             null, null, null,
                             Game.getInstance().getCurrentPlayer().getBattleGroundCards().get(k - 1));
                 }
+
+                if (Game.getInstance().getCurrentPlayer().getBattleGroundCards().size() > (k - 1)) {
+                    for (Cards card : Game.getInstance().getFormerPlayer().getBattleGroundCards()) {
+                        card.accept(new EnemySummonVisitor(), null, null, null,
+                                null, null, Game.getInstance().getCurrentPlayer().getBattleGroundCards().get(k - 1), null, "");
+                    }
+                }
+
+
             }
-
-
-
-//            playingCard.accept(new TargetVisitor(),Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
-//                    Game.getInstance().getCurrentPlayer().getHandsCards(),Game.getInstance().getCurrentPlayer().getDeckCards(),
-//                    new Minion(),new Minion());
 
 
         }
@@ -403,20 +423,20 @@ public class Mapper {
 
         playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                 Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(), new Minion(),
-                null, new Minion(),null, "");
+                null, new Minion(), null, "");
 
         playingCard.accept(new DrawCardVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                 Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(), new Minion(),
-                null, new Minion(), null,"");
+                null, new Minion(), null, "");
 
         playingCard.accept(new ActionVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                 Game.getInstance().getCurrentPlayer().getHandsCards(),
                 Game.getInstance().getCurrentPlayer().getDeckCards(), new Minion(), null,
-                new Minion(),null, "");
+                new Minion(), null, "");
 
         playingCard.accept(new TargetVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                 Game.getInstance().getCurrentPlayer().getHandsCards(), Game.getInstance().getCurrentPlayer().getDeckCards(),
-                new Minion(), new Heroes(), new Minion(), null,"");//todo ...............
+                new Minion(), new Heroes(), new Minion(), null, "");//todo ...............
     }
 
     public static void playWeapon(Cards playingCard) {
@@ -424,7 +444,7 @@ public class Mapper {
         playCard(playingCard);
         playingCard.accept(new BattleCryVisitor(), Game.getInstance().getCurrentPlayer().getBattleGroundCards(),
                 Game.getInstance().getCurrentPlayer().getHandsCards(), new ArrayList<Cards>(), new Minion(),
-                null, new Minion(), null,"");
+                null, new Minion(), null, "");
 
 
     }

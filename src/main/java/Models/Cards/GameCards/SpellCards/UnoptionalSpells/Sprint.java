@@ -14,7 +14,7 @@ public class Sprint extends Spell {
 
     @Override
     public Sprint copy() {
-        System.out.println("Copy of Sprint:))");
+//        System.out.println("Copy of Sprint:))");
         Sprint copy = new Sprint();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

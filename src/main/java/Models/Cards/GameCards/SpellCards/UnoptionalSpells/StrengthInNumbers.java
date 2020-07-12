@@ -6,9 +6,21 @@ import Models.Cards.CardClasses.Spell;
 import Models.Heroes.Heroes;
 import Visitors.CardVisitors.Visitor;
 
+import javax.smartcardio.Card;
 import java.util.ArrayList;
 
 public class StrengthInNumbers extends Spell {
+
+
+    private Cards reward;
+
+    public Cards getReward() {
+        return reward;
+    }
+
+    public void setReward(Cards reward) {
+        this.reward = reward;
+    }
 
     public StrengthInNumbers() {
         setManaNeededForQuest(10);
@@ -17,7 +29,7 @@ public class StrengthInNumbers extends Spell {
 
     @Override
     public StrengthInNumbers copy() {
-        System.out.println("Copy of StrengthInNumbers:))");
+//        System.out.println("Copy of StrengthInNumbers:))");
         StrengthInNumbers copy = new StrengthInNumbers();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());
@@ -29,6 +41,7 @@ public class StrengthInNumbers extends Spell {
         copy.setIsPlayed(this.isPlayed());
         copy.setAbilities(this.getAbilities());
         copy.setManaNeededForQuest(this.getManaNeededForQuest());
+        copy.setReward(this.reward);
         return copy;
     }
 

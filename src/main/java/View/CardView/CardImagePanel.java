@@ -363,7 +363,6 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                             this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround, alliance);
                             clicked = false;
                             doubleClick = false;
-                            System.out.println("*********************" + hp);
                             Administer.setAttacker(-5);
                             Administer.setTarget(-5);
                         }
@@ -405,7 +404,6 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                             this.attackPower = GamePartController.giveMinionAttackWithName(numberOfCardInBattleGround, alliance);
                             clicked = false;
                             doubleClick = false;
-                            System.out.println("*********************" + hp);
                             Administer.setAttacker(-5);
                             Administer.setTarget(-5);
                         }

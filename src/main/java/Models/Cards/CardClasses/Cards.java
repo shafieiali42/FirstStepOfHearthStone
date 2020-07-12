@@ -85,7 +85,7 @@ public  class Cards implements Comparable<Cards> , Visitable, Cloneable {
 
 
     public Cards copy(){
-        System.out.println("Copy in Cards:))");
+//        System.out.println("Copy in Cards:))");
         Cards copy =new Cards();
         copy.name=this.name;
         copy.manaCost=this.manaCost;

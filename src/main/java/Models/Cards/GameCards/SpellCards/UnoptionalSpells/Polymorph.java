@@ -14,7 +14,7 @@ public class Polymorph extends Spell {
 
     @Override
     public Polymorph copy() {
-        System.out.println("Copy of Polymorph:))");
+//        System.out.println("Copy of Polymorph:))");
         Polymorph copy = new Polymorph();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());

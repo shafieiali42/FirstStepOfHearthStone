@@ -20,7 +20,7 @@ public class CurioCollector extends Minion {
 
     @Override
     public CurioCollector  copy() {
-        System.out.println("Copy of curioCollector:))");
+//        System.out.println("Copy of curioCollector:))");
         CurioCollector copy = new CurioCollector();
         copy.setName(this.getName());
         copy.setManaCost(this.getManaCost());
