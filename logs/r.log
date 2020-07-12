@@ -3218,3 +3218,19 @@ Jul 12, 2020 4:36:44 AM View.Gui.Mapper endTurn
 INFO: End turn
 Jul 12, 2020 4:36:46 AM View.Gui.Mapper playCard
 INFO: PlayMinion
+Jul 12, 2020 4:42:44 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 12, 2020 4:42:47 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 12, 2020 4:43:43 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 4:43:48 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 4:43:49 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 4:43:53 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 4:44:38 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 12, 2020 4:44:46 AM View.Gui.Mapper endTurn
+INFO: End turn

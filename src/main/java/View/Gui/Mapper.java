@@ -1,5 +1,6 @@
 package View.Gui;
 
+import Controller.Administer;
 import Interfaces.*;
 import Logic.PlayLogic.Alliance;
 import Logic.Status;
@@ -308,6 +309,7 @@ public class Mapper {
 
     public static void endTurn() {
         ControllerOfMainComponents.setStatus(Status.PLAY_PAGE);
+        Administer.setNeedTimer(false);
 //        System.out.println(Game.getInstance().getCurrentPlayer().getBattleGroundCards());
         Iterator<Minion> itr = Game.getInstance().getCurrentPlayer().getBattleGroundCards().iterator();
 
