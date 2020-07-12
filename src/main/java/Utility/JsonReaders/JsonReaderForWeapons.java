@@ -1,5 +1,6 @@
 package Utility.JsonReaders;
 
+import Interfaces.Serializer;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.CardClasses.Weapon;
 import Models.Cards.GameCards.MinionCards.*;
@@ -14,17 +15,16 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class JsonReaderForWeapons {
+public class JsonReaderForWeapons implements Serializer {
 
-    private static HashMap<String,Class> map=new HashMap<>();
 
-    private static void setMap(){
-        map.put("Gearblade", Gearblade.class);
-        map.put("Ashbringer", Ashbringer.class);
-        map.put("BattleAxe", BattleAxe.class);
-    }
 
-    public static void main(String args[]) {
+
+
+
+
+    @Override
+    public void serialize() {
         setMap();
         JsonReaderForWeapons tester = new JsonReaderForWeapons();
 
@@ -34,16 +34,39 @@ public class JsonReaderForWeapons {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-
-//            try {
-//                Weapon weapon1 = tester.readJSON();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-
-
     }
+
+
+
+
+    private static HashMap<String,Class> map=new HashMap<>();
+
+    private static void setMap(){
+        map.put("Gearblade", Gearblade.class);
+        map.put("Ashbringer", Ashbringer.class);
+        map.put("BattleAxe", BattleAxe.class);
+    }
+
+//    public static void main(String args[]) {
+//        setMap();
+//        JsonReaderForWeapons tester = new JsonReaderForWeapons();
+//
+//
+//        try {
+//            setWeaponCards();
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//
+//
+////            try {
+////                Weapon weapon1 = tester.readJSON();
+////            } catch (IOException e) {
+////                e.printStackTrace();
+////            }
+//
+//
+//    }
 
 
     private static void setWeaponCards() throws FileNotFoundException {
@@ -66,4 +89,6 @@ public class JsonReaderForWeapons {
         }
         return weapon1;
     }
+
+
 }

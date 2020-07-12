@@ -21,7 +21,6 @@ public class Game {
     private int gameMode;
     private MyTimer myTimer;
 
-
     private int attacker;
     private int target;
 
@@ -34,71 +33,9 @@ public class Game {
     private int targetOfHeroPower;
     private Alliance targetAllianceOfHeroPower;
 
-    public int getTargetOfHeroPower() {
-        return targetOfHeroPower;
-    }
-
-    public void setTargetOfHeroPower(int targetOfHeroPower) {
-        this.targetOfHeroPower = targetOfHeroPower;
-    }
-
-    public Alliance getTargetAllianceOfHeroPower() {
-        return targetAllianceOfHeroPower;
-    }
-
-    public void setTargetAllianceOfHeroPower(Alliance targetAllianceOfHeroPower) {
-        this.targetAllianceOfHeroPower = targetAllianceOfHeroPower;
-    }
-
-    public Alliance getAttackerAlliance() {
-        return attackerAlliance;
-    }
-
-    public void setAttackerAlliance(Alliance attackerAlliance) {
-        this.attackerAlliance = attackerAlliance;
-    }
-
-    public Alliance getTargetAlliance() {
-        return targetAlliance;
-    }
-
-    public void setTargetAlliance(Alliance targetAlliance) {
-        this.targetAlliance = targetAlliance;
-    }
 
 
-    public Alliance getAllianceOfSpellsTarget() {
-        return allianceOfSpellsTarget;
-    }
 
-    public void setAllianceOfSpellsTarget(Alliance allianceOfSpellsTarget) {
-        this.allianceOfSpellsTarget = allianceOfSpellsTarget;
-    }
-
-
-    public int getTargetOfSpell() {
-        return targetOfSpell;
-    }
-
-    public void setTargetOfSpell(int targetOfSpell) {
-        this.targetOfSpell = targetOfSpell;
-    }
-
-    public int getAttacker() {
-        return attacker;
-    }
-
-    public void setAttacker(int attacker) {
-        this.attacker = attacker;
-    }
-
-    public int getTarget() {
-        return target;
-    }
-
-    public void setTarget(int target) {
-        this.target = target;
-    }
 
     private static Game game;
 
@@ -203,69 +140,104 @@ public class Game {
     }
 
 
+    //getters and setters
+    //**********************
+
     public int getGameMode() {
         return gameMode;
     }
-
     public void setGameMode(int gameMode) {
         this.gameMode = gameMode;
     }
-
     public Cards getPlayingCard() {
         return playingCard;
     }
-
     public void setPlayingCard(Cards playingCard) {
         this.playingCard = playingCard;
     }
-
     public InGamePlayer getFriendlyPlayer() {
         return friendlyPlayer;
     }
-
     public void setFriendlyPlayer(InGamePlayer friendlyPlayer) {
         this.friendlyPlayer = friendlyPlayer;
     }
-
     public InGamePlayer getEnemyPlayer() {
         return enemyPlayer;
     }
-
     public void setEnemyPlayer(InGamePlayer enemyPlayer) {
         this.enemyPlayer = enemyPlayer;
     }
-
     public InGamePlayer getCurrentPlayer() {
         return currentPlayer;
     }
-
     public void setCurrentPlayer(InGamePlayer currentPlayer) {
         this.currentPlayer = currentPlayer;
     }
-
     public Alliance getCurrentAlliance() {
         return currentAlliance;
     }
-
     public InGamePlayer getFormerPlayer() {
         return formerPlayer;
     }
-
     public void setFormerPlayer(InGamePlayer formerPlayer) {
         this.formerPlayer = formerPlayer;
     }
-
     public void setCurrentAlliance(Alliance currentAlliance) {
         this.currentAlliance = currentAlliance;
     }
-
     public MyTimer getMyTimer() {
         return myTimer;
     }
-
     public void setMyTimer(MyTimer myTimer) {
         this.myTimer = myTimer;
     }
-
+    public int getTargetOfHeroPower() {
+        return targetOfHeroPower;
+    }
+    public void setTargetOfHeroPower(int targetOfHeroPower) {
+        this.targetOfHeroPower = targetOfHeroPower;
+    }
+    public Alliance getTargetAllianceOfHeroPower() {
+        return targetAllianceOfHeroPower;
+    }
+    public void setTargetAllianceOfHeroPower(Alliance targetAllianceOfHeroPower) {
+        this.targetAllianceOfHeroPower = targetAllianceOfHeroPower;
+    }
+    public Alliance getAttackerAlliance() {
+        return attackerAlliance;
+    }
+    public void setAttackerAlliance(Alliance attackerAlliance) {
+        this.attackerAlliance = attackerAlliance;
+    }
+    public Alliance getTargetAlliance() {
+        return targetAlliance;
+    }
+    public void setTargetAlliance(Alliance targetAlliance) {
+        this.targetAlliance = targetAlliance;
+    }
+    public Alliance getAllianceOfSpellsTarget() {
+        return allianceOfSpellsTarget;
+    }
+    public void setAllianceOfSpellsTarget(Alliance allianceOfSpellsTarget) {
+        this.allianceOfSpellsTarget = allianceOfSpellsTarget;
+    }
+    public int getTargetOfSpell() {
+        return targetOfSpell;
+    }
+    public void setTargetOfSpell(int targetOfSpell) {
+        this.targetOfSpell = targetOfSpell;
+    }
+    public int getAttacker() {
+        return attacker;
+    }
+    public void setAttacker(int attacker) {
+        this.attacker = attacker;
+    }
+    public int getTarget() {
+        return target;
+    }
+    public void setTarget(int target) {
+        this.target = target;
+    }
 
 }

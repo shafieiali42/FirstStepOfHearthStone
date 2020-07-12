@@ -18,12 +18,21 @@ public class InfoPassiveVisitor implements PassiveVisitor {
 
     @Override
     public void visit(OffCards offCards, InGamePlayer player, ArrayList<Minion> friendlyBattleGround, ArrayList<Cards> friendlyHandCards, ArrayList<Cards> friendlyDeckCards) {
+
         for (Cards card : friendlyDeckCards) {
-            card.setManaCost(card.getManaCost() - 1);
+            if (card.getManaCost() != 0) {
+                card.setManaCost(card.getManaCost() - 1);
+            }
         }
+
         for (Cards card : friendlyHandCards) {
-            card.setManaCost(card.getManaCost() - 1);
+            if (card.getManaCost() != 0) {
+                card.setManaCost(card.getManaCost() - 1);
+            }
         }
+
+
+
     }
 
 

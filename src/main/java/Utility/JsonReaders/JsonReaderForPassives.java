@@ -1,5 +1,6 @@
 package Utility.JsonReaders;
 
+import Interfaces.Serializer;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.CardClasses.Passive;
 import Models.Cards.GameCards.MinionCards.MinionNames;
@@ -12,7 +13,21 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class JsonReaderForPassives {
+public class JsonReaderForPassives implements Serializer {
+
+
+    @Override
+    public void serialize() {
+        setMap();
+        JsonReaderForPassives tester = new JsonReaderForPassives();
+
+        try {
+            setPassiveCards();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     private static HashMap<String,Class> map=new HashMap<>();
 
     private static void setMap() {
@@ -23,26 +38,26 @@ public class JsonReaderForPassives {
         map.put("TwiceDraw", TwiceDraw.class);
     }
 
-    public static void main(String args[]) {
-        setMap();
-        JsonReaderForPassives tester = new JsonReaderForPassives();
-
-
-        try {
-            setPassiveCards();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
+//    public static void main(String args[]) {
+//        setMap();
+//        JsonReaderForPassives tester = new JsonReaderForPassives();
+//
+//
 //        try {
-//            Passive passive1 = tester.readJSON();
-//        } catch (IOException e) {
+//            setPassiveCards();
+//        } catch (FileNotFoundException e) {
 //            e.printStackTrace();
 //        }
-
-
-
-    }
+//
+////        try {
+////            Passive passive1 = tester.readJSON();
+////        } catch (IOException e) {
+////            e.printStackTrace();
+////        }
+//
+//
+//
+//    }
 
 
     private static void setPassiveCards() throws FileNotFoundException {

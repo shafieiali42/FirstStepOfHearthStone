@@ -81,21 +81,32 @@ public class GamePartController {
                     weapon.setDurability(weapon.getDurability() - 1);
                     weapon.setHasAttackInThisTurn(true);
                     removeDeadCharacters();
+                    Mapper.writeOnLogPanel(weapon.getName() + " Attack " + hero.getName());
                 }
             } else {// weapon vs minion
                 Weapon weapon = Game.getInstance().getCurrentPlayer().getCurrentWeapon();
                 Minion minion = Game.getInstance().getFormerPlayer().getBattleGroundCards().get(target);
                 if (!weapon.isHasAttackInThisTurn() && minion.getCanBeAttacked()) {
-                    minion.setHealthPower(minion.getHealthPower() - weapon.getAttackPower());
-                    Game.getInstance().getCurrentPlayer().getHero().setHealthPower
-                            (Game.getInstance().getCurrentPlayer().getHero().getHealthPower() - minion.getAttackPower());
+                    if (!minion.isDivineShield()) {
+                        minion.setHealthPower(minion.getHealthPower() - weapon.getAttackPower());
+                        Game.getInstance().getCurrentPlayer().getHero().setHealthPower
+                                (Game.getInstance().getCurrentPlayer().getHero().getHealthPower() - minion.getAttackPower());
 
-                    weapon.setDurability(weapon.getDurability() - 1);
-                    weapon.setHasAttackInThisTurn(true);
+                        weapon.setDurability(weapon.getDurability() - 1);
+                        weapon.setHasAttackInThisTurn(true);
+
+                    }else {
+                        minion.setDivineShield(false);
+                        Game.getInstance().getCurrentPlayer().getHero().setHealthPower
+                                (Game.getInstance().getCurrentPlayer().getHero().getHealthPower() - minion.getAttackPower());
+                        weapon.setDurability(weapon.getDurability() - 1);
+                        weapon.setHasAttackInThisTurn(true);
+                    }
                     minion.accept(new GetDamageVisitor(), Game.getInstance().getFormerPlayer().getBattleGroundCards(),
                             null, null, minion, null, null, null, null);
 
                     removeDeadCharacters();
+                    Mapper.writeOnLogPanel(weapon.getName() + " Attack " + minion.getName());
                 }
             }
         } else {
@@ -107,11 +118,10 @@ public class GamePartController {
                     hero.setHealthPower(hero.getHealthPower() - minion.getAttackPower());
                     minion.setHasAttackInThisTurn(true);
                     removeDeadCharacters();
+                    Mapper.writeOnLogPanel(minion.getName() + " Attack " + hero.getName());
                 }
             } else {//minion vs minion
 
-//                System.out.println(attackerAlliance);
-//                System.out.println(targetAlliance);
                 if (attackerAlliance.equals(targetAlliance)) {
                     return;
                 }
@@ -121,16 +131,19 @@ public class GamePartController {
 
                 if (minion.getIsActive() && !minion.getHasAttackInThisTurn()) {
                     if (minion2.getCanBeAttacked()) {
-//                        System.out.println("Before attack:");
-//                        System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
-//                        System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
-                        minion.setHealthPower(minion.getHealthPower() - minion2.getAttackPower());
-                        minion2.setHealthPower(minion2.getHealthPower() - minion.getAttackPower());
+
+                        if (minion2.isDivineShield()) {
+                            minion2.setDivineShield(false);
+                            minion.setHealthPower(minion.getHealthPower() - minion2.getAttackPower());
+
+                        } else {
+                            minion.setHealthPower(minion.getHealthPower() - minion2.getAttackPower());
+                            minion2.setHealthPower(minion2.getHealthPower() - minion.getAttackPower());
+                        }
                         minion.setHasAttackInThisTurn(true);
                         removeDeadCharacters();
-//                        System.out.println("After attack:");
-//                        System.out.println(minion.getName() + " Attack: " + minion.getAttackPower() + " Hp: " + minion.getHealthPower());
-//                        System.out.println(minion2.getName() + " Attack: " + minion2.getAttackPower() + " Hp: " + minion2.getHealthPower());
+                        Mapper.writeOnLogPanel(minion.getName() + " Attack " + minion2.getName());
+
 
                         minion2.accept(new GetDamageVisitor(), Game.getInstance().getFormerPlayer().getBattleGroundCards(),
                                 null, null, minion, null, null, null, null);
@@ -165,33 +178,31 @@ public class GamePartController {
 
         if (Game.getInstance().getFriendlyPlayer().getHero().getHealthPower() <= 0) {
             Game.getInstance().getFriendlyPlayer().getDeck().
-                    setNumberOfUses( Game.getInstance().getFriendlyPlayer().getDeck().getNumberOfUses()+1);
+                    setNumberOfUses(Game.getInstance().getFriendlyPlayer().getDeck().getNumberOfUses() + 1);
 
             Game.getInstance().getEnemyPlayer().getDeck().
-                    setNumberOfUses( Game.getInstance().getEnemyPlayer().getDeck().getNumberOfUses()+1);
+                    setNumberOfUses(Game.getInstance().getEnemyPlayer().getDeck().getNumberOfUses() + 1);
 
             Game.getInstance().getFriendlyPlayer().getDeck().
-                    setNumberOfWins( Game.getInstance().getFriendlyPlayer().getDeck().getNumberOfWins()+1);
+                    setNumberOfWins(Game.getInstance().getFriendlyPlayer().getDeck().getNumberOfWins() + 1);
 
 
             JOptionPane.showMessageDialog(MyMainFrame.getInstance(),
-                    "Friendly Player wins!","End Match",JOptionPane.INFORMATION_MESSAGE);
+                    "Friendly Player wins!", "End Match", JOptionPane.INFORMATION_MESSAGE);
         } else if (Game.getInstance().getEnemyPlayer().getHero().getHealthPower() <= 0) {
 
             Game.getInstance().getFriendlyPlayer().getDeck().
-                    setNumberOfUses( Game.getInstance().getFriendlyPlayer().getDeck().getNumberOfUses()+1);
+                    setNumberOfUses(Game.getInstance().getFriendlyPlayer().getDeck().getNumberOfUses() + 1);
 
             Game.getInstance().getEnemyPlayer().getDeck().
-                    setNumberOfUses( Game.getInstance().getEnemyPlayer().getDeck().getNumberOfUses()+1);
+                    setNumberOfUses(Game.getInstance().getEnemyPlayer().getDeck().getNumberOfUses() + 1);
 
             Game.getInstance().getEnemyPlayer().getDeck().
-                    setNumberOfWins( Game.getInstance().getEnemyPlayer().getDeck().getNumberOfWins()+1);
-
-
+                    setNumberOfWins(Game.getInstance().getEnemyPlayer().getDeck().getNumberOfWins() + 1);
 
 
             JOptionPane.showMessageDialog(MyMainFrame.getInstance(),
-                    "Enemy Player wins!","End Match",JOptionPane.INFORMATION_MESSAGE);
+                    "Enemy Player wins!", "End Match", JOptionPane.INFORMATION_MESSAGE);
         }
         Game.getInstance().getFriendlyPlayer().getBattleGroundCards().removeIf(minion -> minion.getHealthPower() <= 0);
         Game.getInstance().getEnemyPlayer().getBattleGroundCards().removeIf(minion -> minion.getHealthPower() <= 0);
@@ -721,5 +732,18 @@ public class GamePartController {
         }
         return -66666666;
     }
+
+
+    public static int giveMinionManaWithName(int numberOfCardInHands, Alliance alliance) {
+
+        if (alliance.equals(Alliance.FRIENDLY)) {
+            return Game.getInstance().getFriendlyPlayer().getHandsCards().get(numberOfCardInHands - 1).getManaCost();
+
+        } else if (alliance.equals(Alliance.ENEMY)) {
+            return Game.getInstance().getEnemyPlayer().getHandsCards().get(numberOfCardInHands - 1).getManaCost();
+        }
+        return -66666666;
+    }
+
 
 }

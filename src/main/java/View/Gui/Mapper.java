@@ -135,10 +135,10 @@ public class Mapper {
     }
 
 
-    private static void writeOnLogPanel(String playingCardName) {
-        StringBuilder addToLog = new StringBuilder(LogPanel.getInstance().getLog() + "Play");
-        for (int i = 0; i < playingCardName.length(); i++) {
-            char c = playingCardName.charAt(i);
+    public static void writeOnLogPanel(String log) {
+        StringBuilder addToLog = new StringBuilder(LogPanel.getInstance().getLog());
+        for (int i = 0; i < log.length(); i++) {
+            char c = log.charAt(i);
             if (Character.isUpperCase(c)) {
                 addToLog.append("\n");
                 addToLog.append(c);
@@ -209,7 +209,7 @@ public class Mapper {
         PlayPanel.getInstance().revalidate();
         Game.getInstance().getCurrentPlayer().getHandsCards().remove(playingCard);
 
-        writeOnLogPanel(playingCard.getName());
+        writeOnLogPanel("Play "+playingCard.getName());
         Sounds.playActionSounds("src/main/resources/Sounds/ActionVoices/PlayCards.wav");
         ControllerOfMainComponents.currentPlayer.getLoggerOfMyPlayer().info("Play" + playingCard.getType());
     }

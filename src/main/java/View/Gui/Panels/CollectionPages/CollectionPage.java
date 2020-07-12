@@ -2,7 +2,7 @@ package View.Gui.Panels.CollectionPages;
 
 import Utility.Config2.ConfigLoader;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
-import Utility.Constant;
+
 
 import javax.swing.*;
 import java.awt.*;

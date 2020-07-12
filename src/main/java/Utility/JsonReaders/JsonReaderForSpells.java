@@ -1,5 +1,6 @@
 package Utility.JsonReaders;
 
+import Interfaces.Serializer;
 import Models.Cards.CardClasses.Spell;
 import Models.Cards.GameCards.SpellCards.*;
 import Models.Cards.GameCards.SpellCards.UnoptionalSpells.*;
@@ -10,7 +11,22 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class JsonReaderForSpells {
+public class JsonReaderForSpells implements Serializer {
+
+
+    @Override
+    public void serialize() {
+        setMap();
+        JsonReaderForSpells tester = new JsonReaderForSpells();
+
+        try {
+            setSpellCards();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
     private static HashMap<String,Class> map=new HashMap<>();
 
@@ -35,21 +51,21 @@ public class JsonReaderForSpells {
         map.put("TreeOfLife", TreeOfLife.class);
     }
 
-    public static void main(String args[]) {
-        setMap();
-        JsonReaderForSpells tester = new JsonReaderForSpells();
-
-        try {
-            setSpellCards();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+//    public static void main(String args[]) {
+//        setMap();
+//        JsonReaderForSpells tester = new JsonReaderForSpells();
+//
 //        try {
-//            Spell spell = tester.readJSON();
-//        } catch (IOException e) {
+//            setSpellCards();
+//        } catch (FileNotFoundException e) {
 //            e.printStackTrace();
 //        }
-    }
+////        try {
+////            Spell spell = tester.readJSON();
+////        } catch (IOException e) {
+////            e.printStackTrace();
+////        }
+//    }
 
     private static void setSpellCards() throws FileNotFoundException {
         Gson gson=new Gson();
@@ -73,6 +89,7 @@ public class JsonReaderForSpells {
         }
         return spell1;
     }
+
 
 
 }

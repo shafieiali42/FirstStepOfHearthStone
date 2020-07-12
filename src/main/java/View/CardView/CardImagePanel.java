@@ -45,6 +45,7 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
     static boolean doubleClick = false;
     private int hp;
     private int attackPower;
+    private int mana;
     private boolean isInited = false;
     private String typeOfCard = "minionOrSpell";
     int x, y;
@@ -95,6 +96,26 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
             this.addMouseMotionListener(this);
             this.alliance = alliance;
             this.cardName = cardName;
+            setIsLock(this.cardName);
+            if (type == 1) {
+                imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
+            } else if (type == 2) {
+                imageOfCard = ImageIO.read(new File("src/main/resources/Assets/BattleGroundCardImage/" + cardName + ".png"));
+            }
+        }
+
+    }
+
+    public CardImagePanel(String cardName, int width, int height, boolean showLockCards,
+                          int type, Alliance alliance,int counter,String s) throws IOException {
+        if (showLockCards) {
+            setLayout(null);
+            setSize(width, height);
+            this.addMouseListener(this);
+            this.addMouseMotionListener(this);
+            this.alliance = alliance;
+            this.cardName = cardName;
+            this.mana=GamePartController.giveMinionManaWithName(counter,alliance);
             setIsLock(this.cardName);
             if (type == 1) {
                 imageOfCard = ImageIO.read(new File("src/main/resources/Assets/CardsImage/" + cardName + ".png"));
@@ -534,15 +555,11 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
         g.drawImage(imageOfCard, 0, 0, this.getWidth(), this.getHeight(), null);
         Graphics2D graphics2D = (Graphics2D) g;
 
-
-        
-
-
-
-
         if (ControllerOfMainComponents.getStatus().equals(Status.PLAY_PAGE)
                 || ControllerOfMainComponents.getStatus().equals(Status.CHOOSE_TARGET_FOR_SPELL)
                 || ControllerOfMainComponents.getStatus().equals(Status.CHOOSE_TARGET_FOR_HERO_POWERS)) {
+
+
             graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 20));
             graphics2D.setColor(Color.red);
             if (isInited) {
@@ -559,16 +576,16 @@ public class CardImagePanel extends JPanel implements MouseListener, MouseMotion
                 graphics2D.setFont(new Font("TimesRoman", Font.ITALIC, 15));
                 graphics2D.drawString(this.hp + "", 68, 93);
                 graphics2D.drawString(this.attackPower + "", 7, 93);
-
+                graphics2D.drawString(this.mana+"",10,15);
             } else if (this.typeOfCard.equalsIgnoreCase("hero")) {
                 graphics2D.drawString(this.hp + "", 115, 98);
                 graphics2D.drawString(this.attackPower + "", 12, 98);
-
             } else if (typeOfCard.equalsIgnoreCase("heroPower")) {
                 //doesnt show eny Thing
             } else {
                 graphics2D.drawString(this.hp + "", 73, 98);
                 graphics2D.drawString(this.attackPower + "", 10, 98);
+                graphics2D.drawString(this.mana+"",10,15);
             }
 
 

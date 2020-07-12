@@ -1,6 +1,7 @@
 package Utility.JsonReaders;
 
 
+import Interfaces.Serializer;
 import Models.Cards.CardClasses.Cards;
 import Models.Cards.CardClasses.Minion;
 import Models.Cards.GameCards.MinionCards.*;
@@ -14,10 +15,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class JsonReaderForMinions {
+public class JsonReaderForMinions implements Serializer {
 
-
-    public static void main(String args[]) {
+    @Override
+    public void serialize() {
         setMap();
         JsonReaderForMinions tester = new JsonReaderForMinions();
 
@@ -26,16 +27,21 @@ public class JsonReaderForMinions {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-
-//        try {
-//            Minion minion1 = tester.readJson();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-
     }
+
+
+//    public static void main(String args[]) {
+//
+//
+//
+////        try {
+////            Minion minion1 = tester.readJson();
+////        } catch (IOException e) {
+////            e.printStackTrace();
+////        }
+//
+//
+//    }
 
 
 
@@ -89,5 +95,4 @@ public class JsonReaderForMinions {
         }
         return minion1;
     }
-
 }

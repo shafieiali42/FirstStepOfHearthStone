@@ -8,15 +8,25 @@ import View.Gui.Panels.CollectionPages.LittleCardPanel;
 import Models.Heroes.Mage;
 import Models.Heroes.Rogue;
 import Models.Heroes.Warlock;
-import Utility.Constant;
+
 import java.io.IOException;
 
 public class main {
     public static void main(String[] args) throws IOException {
-        JsonReaderForSpells.main(args);
-        JsonReaderForMinions.main(args);
-        JsonReaderForWeapons.main(args);
-        JsonReaderForPassives.main(args);
+
+
+        JsonReaderHandler minionJsonReaderHandler =new JsonReaderHandler(new JsonReaderForMinions());
+        JsonReaderHandler spellJsonReaderHandler =new JsonReaderHandler(new JsonReaderForSpells());
+        JsonReaderHandler weaponJsonReaderHandler =new JsonReaderHandler(new JsonReaderForWeapons());
+        JsonReaderHandler passiveJsonReaderHandler=new JsonReaderHandler(new JsonReaderForPassives());
+        minionJsonReaderHandler.serialize();
+        spellJsonReaderHandler.serialize();
+        weaponJsonReaderHandler.serialize();
+        passiveJsonReaderHandler.serialize();
+//        JsonReaderForSpells.main(args);
+//        JsonReaderForMinions.main(args);
+//        JsonReaderForWeapons.main(args);
+//        JsonReaderForPassives.main(args);
         Cards.setAllCards();
         Minion.initFirstAttackAndHp();
         Spell.defineQuestAndRewardCardList();
@@ -27,8 +37,8 @@ public class main {
         Warlock.initSpecialCardsOfWarlock();
         Rogue.initSpecialCardsOfRogue();
         LittleCardPanel.setAllLittleCardPanels();
-        Constant.getInstance().defineHeroImagesHashMap();
-        Constant.getInstance().defineHeroPowerImagesHashMap();
+//        Constant.getInstance().defineHeroImagesHashMap();
+//        Constant.getInstance().defineHeroPowerImagesHashMap();
         ControllerOfMainComponents controllerOfMainComponents = new ControllerOfMainComponents();
         GraphicLoop.getInstance().start();
         controllerOfMainComponents.FirstPage();

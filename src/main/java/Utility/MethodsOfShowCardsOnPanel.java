@@ -98,7 +98,7 @@ public class MethodsOfShowCardsOnPanel {
             counter++;
             CardImagePanel cardImagePanel = new CardImagePanel(card.getName(),
                     PlayPanel.getInstance().getWidthOfEachCardHandsCards(),
-                    PlayPanel.getInstance().getHeightOfEachCardHandsCards(), true, 1, alliance);
+                    PlayPanel.getInstance().getHeightOfEachCardHandsCards(), true, 1, alliance,counter,"");
 
 //            CardPanel.getInstance().setBackground(Color.white);
             addPanel(cardImagePanel, panel, xCoordinate, yCoordinate, cardImagePanel.getWidth(),

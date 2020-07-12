@@ -5,7 +5,7 @@ import Utility.Config2.ConfigLoader;
 import View.Gui.Panels.MyMainFrame.MyMainFrame;
 import View.Gui.Panels.GamePage.PlayPanel;
 import View.Gui.Panels.MenuPanel.MainMenuPage;
-import Utility.Constant;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,7 +14,7 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.Properties;
 
-import static Utility.Constant.*;
+
 
 public class SettingPage extends JPanel {
 
