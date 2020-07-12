@@ -27,6 +27,15 @@ public class JsonReaderForMinions {
         map.put("Locusts",Locusts.class);
         map.put("Dragon",Dragon.class);
         map.put("Mech",Mech.class);
+        map.put("CosmicAnomaly",CosmicAnomaly.class);
+        map.put("CrazedAlchemist",CrazedAlchemist.class);
+        map.put("LeperGnome",LeperGnome.class);
+        map.put("MaidenOfTheLake",MaidenOfTheLake.class);
+        map.put("NoviceEngineer",NoviceEngineer.class);
+        map.put("RiverCrocolisk",RiverCrocolisk.class);
+        map.put("StormwindKnight",StormwindKnight.class);
+        map.put("TournamentMedic",TournamentMedic.class);
+        map.put("YoungPriestess",YoungPriestess.class);
     }
 
     public static void main(String args[]) {

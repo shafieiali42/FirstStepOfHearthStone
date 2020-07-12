@@ -4,7 +4,10 @@
       <w>amet</w>
       <w>ashbringer</w>
       <w>battlecry</w>
+      <w>bloodfury</w>
       <w>buyable</w>
+      <w>caltrops</w>
+      <w>crocolisk</w>
       <w>darconic</w>
       <w>doesnt</w>
       <w>dreadscale</w>
@@ -13,8 +16,11 @@
       <w>mage</w>
       <w>mana</w>
       <w>mech</w>
+      <w>moonfire</w>
       <w>polymorph</w>
       <w>sathrovarr</w>
+      <w>starfire</w>
+      <w>stormwind</w>
       <w>strengh</w>
     </words>
   </dictionary>

@@ -1,28 +1,9 @@
 package Models.Cards.CardClasses;
 
-//import Models.Cards;
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
 
 import java.util.ArrayList;
-//@JsonSubTypes({
-//        @JsonSubTypes.Type(value = AghaHaghi.class, name = "aghahaghi"),
-//        @JsonSubTypes.Type(value = Ali.class, name = "ali"),
-//        @JsonSubTypes.Type(value = Benyamin.class, name = "benyamin"),
-//        @JsonSubTypes.Type(value = Cat.class, name = "cat"),
-//        @JsonSubTypes.Type(value = Faeze.class, name = "faeze"),
-//        @JsonSubTypes.Type(value = HighMasterSaman.class, name = "highmastersaman"),
-//        @JsonSubTypes.Type(value = HosseinHima.class, name = "hosseinhima"),
-//        @JsonSubTypes.Type(value = Hossein.class, name = "hossein"),
-//        @JsonSubTypes.Type(value = Javad.class, name = "javad"),
-//        @JsonSubTypes.Type(value = Khashayar.class, name = "khashayar"),
-//        @JsonSubTypes.Type(value = Lachin.class, name = "lachin"),
-//        @JsonSubTypes.Type(value = Matin.class, name = "matin"),
-//        @JsonSubTypes.Type(value = Mobin.class, name = "mobin"),
-//        @JsonSubTypes.Type(value = Nima.class, name = "nima"),
-//        @JsonSubTypes.Type(value = Shahryar.class, name = "shahryar"),
-//        @JsonSubTypes.Type(value = Yasaman.class, name = "yasaman"),
-//})
+
 public class Minion extends Cards {
 
     public static final int NUMBER_OF_MINIONS = 16;

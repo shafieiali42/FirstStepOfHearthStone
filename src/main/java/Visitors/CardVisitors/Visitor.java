@@ -52,5 +52,42 @@ public interface Visitor {
     void visit(Mech mech, ArrayList<Minion> battleGround);
 
 
+    void visit(CosmicAnomaly cosmicAnomaly);
+
+    void visit(CrazedAlchemist crazedAlchemist);
+
+    void visit(LeperGnome leperGnome);
+
+    void visit(MaidenOfTheLake maidenOfTheLake);
+
+    void visit(NoviceEngineer noviceEngineer);
+
+    void visit(RiverCrocolisk riverCrocolisk);
+
+    void visit(StormwindKnight stormwindKnight);
+
+    void visit(TournamentMedic tournamentMedic);
+
+    void visit(YoungPriestess youngPriestess);
+
+    void visit(TreeOfLife treeOfLife, ArrayList<Minion> battleGround);
+
+    void visit(Starfire starfire, ArrayList<Minion> battleGround);
+
+    void visit(SinisterStrike sinisterStrike, ArrayList<Minion> battleGround);
+
+    void visit(Naturalize naturalize, ArrayList<Minion> battleGround);
+
+    void visit(Moonfire moonfire, ArrayList<Minion> battleGround);
+
+    void visit(Heal heal, ArrayList<Minion> battleGround);
+
+    void visit(Caltrops caltrops, ArrayList<Minion> battleGround);
+
+    void visit(BloodfuryPotion bloodfuryPotion, ArrayList<Minion> battleGround);
+
+    void visit(BlessingOfTheAncients blessingOfTheAncients, ArrayList<Minion> battleGround);
+
+    void visit(BiologyProject biologyProject, ArrayList<Minion> battleGround);
 }
 

@@ -10,5 +10,16 @@ public enum MinionNames {
     TombWarden,
     Locusts,
     Dragon,
-    Mech;
+    Mech,
+
+    CosmicAnomaly,
+    CrazedAlchemist,
+    LeperGnome,
+    MaidenOfTheLake,
+    NoviceEngineer,
+    RiverCrocolisk,
+    StormwindKnight,
+    TournamentMedic,
+    YoungPriestess;
+
 }

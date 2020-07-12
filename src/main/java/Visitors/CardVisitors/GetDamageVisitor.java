@@ -126,4 +126,99 @@ public class GetDamageVisitor implements Visitor {
     public void visit(Mech mech, ArrayList<Minion> battleGround) {
 
     }
+
+    @Override
+    public void visit(CosmicAnomaly cosmicAnomaly) {
+
+    }
+
+    @Override
+    public void visit(CrazedAlchemist crazedAlchemist) {
+
+    }
+
+    @Override
+    public void visit(LeperGnome leperGnome) {
+
+    }
+
+    @Override
+    public void visit(MaidenOfTheLake maidenOfTheLake) {
+
+    }
+
+    @Override
+    public void visit(NoviceEngineer noviceEngineer) {
+
+    }
+
+    @Override
+    public void visit(RiverCrocolisk riverCrocolisk) {
+
+    }
+
+    @Override
+    public void visit(StormwindKnight stormwindKnight) {
+
+    }
+
+    @Override
+    public void visit(TournamentMedic tournamentMedic) {
+
+    }
+
+    @Override
+    public void visit(YoungPriestess youngPriestess) {
+
+    }
+
+    @Override
+    public void visit(TreeOfLife treeOfLife, ArrayList<Minion> battleGround) {
+
+    }
+
+    @Override
+    public void visit(Starfire starfire, ArrayList<Minion> battleGround) {
+
+    }
+
+    @Override
+    public void visit(SinisterStrike sinisterStrike, ArrayList<Minion> battleGround) {
+
+    }
+
+    @Override
+    public void visit(Naturalize naturalize, ArrayList<Minion> battleGround) {
+
+    }
+
+    @Override
+    public void visit(Moonfire moonfire, ArrayList<Minion> battleGround) {
+
+    }
+
+    @Override
+    public void visit(Heal heal, ArrayList<Minion> battleGround) {
+
+    }
+
+    @Override
+    public void visit(Caltrops caltrops, ArrayList<Minion> battleGround) {
+
+    }
+
+    @Override
+    public void visit(BloodfuryPotion bloodfuryPotion, ArrayList<Minion> battleGround) {
+
+    }
+
+    @Override
+    public void visit(BlessingOfTheAncients blessingOfTheAncients, ArrayList<Minion> battleGround) {
+
+    }
+
+    @Override
+    public void visit(BiologyProject biologyProject, ArrayList<Minion> battleGround) {
+
+    }
 }

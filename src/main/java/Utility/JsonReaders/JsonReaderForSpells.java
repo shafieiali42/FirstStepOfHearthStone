@@ -23,6 +23,16 @@ public class JsonReaderForSpells {
         map.put("SwarmOfLocusts", SwarmOfLocusts.class);
         map.put("LearnDarconic", LearnDarconic.class);
         map.put("StrengthInNumbers", StrengthInNumbers.class);
+        map.put("BiologyProject", BiologyProject.class);
+        map.put("BlessingOfTheAncients", BlessingOfTheAncients.class);
+        map.put("BloodfuryPotion", BloodfuryPotion.class);
+        map.put("Caltrops", Caltrops.class);
+        map.put("Heal", Heal.class);
+        map.put("Moonfire", Moonfire.class);
+        map.put("Naturalize", Naturalize.class);
+        map.put("SinisterStrike", SinisterStrike.class);
+        map.put("Starfire", Starfire.class);
+        map.put("TreeOfLife", TreeOfLife.class);
     }
 
     public static void main(String args[]) {

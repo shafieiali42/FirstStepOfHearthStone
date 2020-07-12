@@ -8,6 +8,20 @@ public enum SpellNames {
     Sprint,
     SwarmOfLocusts,
     LearnDarconic,
-    StrengthInNumbers;
+    StrengthInNumbers,
 
+
+
+    BiologyProject,
+    BlessingOfTheAncients,
+    BloodfuryPotion,
+    Caltrops,
+
+    Heal,
+
+    Moonfire,
+    Naturalize,
+    SinisterStrike,
+    Starfire,
+    TreeOfLife;
 }

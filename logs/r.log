@@ -3234,3 +3234,215 @@ Jul 12, 2020 4:44:38 AM View.Gui.Mapper playCard
 INFO: PlayMinion
 Jul 12, 2020 4:44:46 AM View.Gui.Mapper endTurn
 INFO: End turn
+Jul 12, 2020 6:00:38 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 12, 2020 6:00:39 AM Controller.Administer writeLog
+INFO: Navigate into shop page
+Jul 12, 2020 6:00:41 AM Controller.Administer writeLog
+INFO: Show buyable cards
+Jul 12, 2020 6:00:46 AM Models.Player.Player buy
+INFO: Buy: Mech
+Jul 12, 2020 6:00:47 AM Models.Player.Player buy
+INFO: Buy Mech
+Jul 12, 2020 6:00:53 AM Models.Player.Player buy
+INFO: Buy: CosmicAnomaly
+Jul 12, 2020 6:00:54 AM Models.Player.Player buy
+INFO: Buy CosmicAnomaly
+Jul 12, 2020 6:00:58 AM Models.Player.Player buy
+INFO: Buy: TournamentMedic
+Jul 12, 2020 6:00:59 AM Models.Player.Player buy
+INFO: Buy TournamentMedic
+Jul 12, 2020 6:01:03 AM Models.Player.Player buy
+INFO: Buy: BloodfuryPotion
+Jul 12, 2020 6:01:03 AM Models.Player.Player buy
+INFO: Buy BloodfuryPotion
+Jul 12, 2020 6:01:08 AM Models.Player.Player buy
+INFO: Buy: Caltrops
+Jul 12, 2020 6:01:08 AM Models.Player.Player buy
+INFO: Buy Caltrops
+Jul 12, 2020 6:01:12 AM Models.Player.Player buy
+INFO: Buy: Heal
+Jul 12, 2020 6:01:13 AM Models.Player.Player buy
+INFO: Buy Heal
+Jul 12, 2020 6:01:17 AM Models.Player.Player buy
+INFO: Buy: Naturalize
+Jul 12, 2020 6:01:18 AM Models.Player.Player buy
+INFO: Buy Naturalize
+Jul 12, 2020 6:01:22 AM Models.Player.Player buy
+INFO: Buy: Moonfire
+Jul 12, 2020 6:01:23 AM Models.Player.Player buy
+INFO: Buy Moonfire
+Jul 12, 2020 6:01:26 AM Models.Player.Player buy
+INFO: Buy: YoungPriestess
+Jul 12, 2020 6:01:27 AM Models.Player.Player buy
+INFO: Buy YoungPriestess
+Jul 12, 2020 6:01:33 AM Models.Player.Player buy
+INFO: Buy: Starfire
+Jul 12, 2020 6:01:33 AM Models.Player.Player buy
+INFO: Buy Starfire
+Jul 12, 2020 6:01:38 AM Models.Player.Player buy
+INFO: Buy: LeperGnome
+Jul 12, 2020 6:01:39 AM Models.Player.Player buy
+INFO: Buy LeperGnome
+Jul 12, 2020 6:01:44 AM Models.Player.Player buy
+INFO: Buy: BiologyProject
+Jul 12, 2020 6:01:44 AM Models.Player.Player buy
+INFO: Buy BiologyProject
+Jul 12, 2020 6:01:50 AM Models.Player.Player buy
+INFO: Buy: BattleAxe
+Jul 12, 2020 6:01:50 AM Models.Player.Player buy
+INFO: Buy BattleAxe
+Jul 12, 2020 6:01:55 AM Models.Player.Player buy
+INFO: Buy: NoviceEngineer
+Jul 12, 2020 6:01:56 AM Models.Player.Player buy
+INFO: Buy NoviceEngineer
+Jul 12, 2020 6:02:04 AM Models.Player.Player buy
+INFO: Buy: CrazedAlchemist
+Jul 12, 2020 6:02:05 AM Models.Player.Player buy
+INFO: Buy CrazedAlchemist
+Jul 12, 2020 6:02:07 AM Controller.Administer writeLog
+INFO: Back from shop page
+Jul 12, 2020 6:02:10 AM Controller.PlayerController logOut
+INFO: Log_out r
+Jul 12, 2020 6:02:27 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 12, 2020 6:02:28 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 12, 2020 6:02:33 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 12, 2020 6:02:34 AM Controller.Administer writeLog
+INFO: Navigate into shop page
+Jul 12, 2020 6:02:36 AM Controller.Administer writeLog
+INFO: Show buyable cards
+Jul 12, 2020 6:10:32 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 12, 2020 6:10:37 AM Controller.Administer writeLog
+INFO: Navigate into collection page
+Jul 12, 2020 6:10:45 AM Controller.Administer showCardsOnCardPanelWithSpecifiedClass
+INFO: Show Neutral cards
+Jul 12, 2020 6:11:09 AM Controller.Administer selectMainDeck
+INFO: select newCards for main deck
+Jul 12, 2020 6:11:16 AM Controller.Administer writeLog
+INFO: Make new Deck
+Jul 12, 2020 6:11:20 AM Controller.Administer writeLog
+INFO: Go back from collection page
+Jul 12, 2020 6:11:22 AM Controller.PlayerController logOut
+INFO: Log_out r
+Jul 12, 2020 6:11:47 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 12, 2020 6:11:49 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 12, 2020 6:12:05 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:12:08 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:12:11 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:12:14 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:12:22 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 12, 2020 6:12:32 AM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 12, 2020 6:12:36 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:12:44 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 12, 2020 6:12:51 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:12:56 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 12, 2020 6:13:02 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:13:14 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:13:18 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 12, 2020 6:13:30 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:13:34 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:13:38 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:13:42 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:13:44 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:13:45 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:13:47 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:13:49 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:13:52 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:13:56 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:13:59 AM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 12, 2020 6:14:10 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 12, 2020 6:14:17 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:14:23 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:14:27 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:14:32 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:14:36 AM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 12, 2020 6:14:46 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 12, 2020 6:15:22 AM Controller.PlayerController signIn
+INFO: sign_in r
+Jul 12, 2020 6:15:23 AM Controller.Administer writeLog
+INFO: Navigate into play page
+Jul 12, 2020 6:15:30 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:15:34 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:15:37 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:15:39 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:15:41 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:15:44 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:15:47 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:15:49 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:15:53 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:15:58 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:16:04 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:16:07 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:16:12 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:16:15 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:16:19 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:16:23 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:16:26 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:16:28 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:16:31 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:16:40 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:16:42 AM View.Gui.Mapper playCard
+INFO: PlaySpell
+Jul 12, 2020 6:16:45 AM View.Gui.Mapper playCard
+INFO: PlayMinion
+Jul 12, 2020 6:16:58 AM View.Gui.Mapper endTurn
+INFO: End turn
+Jul 12, 2020 6:17:00 AM View.Gui.Mapper playCard
+INFO: PlayMinion
